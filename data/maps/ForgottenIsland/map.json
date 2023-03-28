@@ -1,0 +1,41 @@
+{
+  "id": "MAP_FORGOTTEN_ISLAND",
+  "name": "ForgottenIsland",
+  "layout": "LAYOUT_FORGOTTEN_ISLAND",
+  "music": "MUS_LITTLEROOT_TEST",
+  "region_map_section": "MAPSEC_ROUTE_5",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_UNDERWATER_PACIFIDLOG_3",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 31,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    }
+  ]
+}

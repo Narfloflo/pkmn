@@ -1,0 +1,39 @@
+{
+  "id": "MAP_ROUTE118_119JUNCTION",
+  "name": "Route118_119Junction",
+  "layout": "LAYOUT_ROUTE118_119JUNCTION",
+  "music": "MUS_ROUTE119",
+  "region_map_section": "MAPSEC_ROUTE_7",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_OCEAN_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE118",
+      "offset": 1,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE119",
+      "offset": -107,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

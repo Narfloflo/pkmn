@@ -1,0 +1,77 @@
+{
+  "id": "MAP_SLATEPORT_DOCKS2",
+  "name": "SlateportDocks2",
+  "layout": "LAYOUT_SLATEPORT_DOCKS2",
+  "music": "MUS_SLATEPORT",
+  "region_map_section": "MAPSEC_ROUTE_9",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_SLATEPORT_CITY",
+      "offset": 0,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_SLATEPORT_CITY",
+      "offset": 0,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 34,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+      "x": 34,
+      "y": 37,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 32,
+      "y": 36,
+      "elevation": 0,
+      "dest_map": "MAP_SLATEDOCKCOPY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_SLATEPORT_DOCKS",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}
