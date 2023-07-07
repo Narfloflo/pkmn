@@ -1227,24 +1227,24 @@ const struct Item gItems[] =
 
     [ITEM_063] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("LINK STONE"),
+        .itemId = ITEM_063,
+        .price = 5000,
+        .description = sLeafStoneDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
     [ITEM_064] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("SEA STONE"),
+        .itemId = ITEM_064,
+        .price = 15000,
+        .description = sLeafStoneDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
     [ITEM_065] =
@@ -2438,8 +2438,8 @@ const struct Item gItems[] =
         .holdEffectParam = 10,
         .description = sMetalCoatDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
     [ITEM_LEFTOVERS] =
@@ -4536,5 +4536,20 @@ const struct Item gItems[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+        [ITEM_SANDWICH] =
+    {
+        .name = _("SANDWICH"),
+        .itemId = ITEM_SANDWICH,
+        .price = 150,
+        .holdEffect = HOLD_EFFECT_RESTORE_HP,
+        .holdEffectParam = 50,
+        .description = sSandwichDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = ITEM_B_USE_MEDICINE,
+        .battleUseFunc = ItemUseInBattle_Medicine,
     },
 };

@@ -9,10 +9,10 @@
   "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
   "allow_escaping": false,
-  "allow_running": false,
+  "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
@@ -41,7 +41,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+      "graphics_id": "OBJ_EVENT_GFX_WARRIOR_F",
       "x": 6,
       "y": 5,
       "elevation": 0,
@@ -76,6 +76,10 @@
       "dest_warp_id": "7"
     }
   ],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
 }

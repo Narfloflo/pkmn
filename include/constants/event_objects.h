@@ -241,6 +241,19 @@
 #define OBJ_EVENT_GFX_LUGIA                      237
 #define OBJ_EVENT_GFX_HOOH                       238
 
+#define OBJ_EVENT_GFX_POLICEMAN                  239
+
+#define OBJ_EVENT_GFX_SCIENTIST_F                240
+
+#define OBJ_EVENT_GFX_WARRIOR                    241
+#define OBJ_EVENT_GFX_WARRIOR_F                  242
+#define OBJ_EVENT_GFX_RANGER_F                   243
+#define OBJ_EVENT_GFX_RANGER_M                   244
+#define OBJ_EVENT_GFX_FARMER                     245
+#define OBJ_EVENT_GFX_GIRL_4                     246
+#define OBJ_EVENT_GFX_BEAUTY_2                   247
+
+
 // NOTE: By default, the max value for NUM_OBJ_EVENT_GFX is 239.
 //
 // Object event graphics ids are 1 byte in size (max value of 255), and the dynamic
@@ -250,13 +263,13 @@
 // object graphics that can be removed. If more graphics are needed, anything that
 // stores graphics ids will need to be increased in size. See wiki entry below:
 // https://github.com/pret/pokeemerald/wiki/Feature-Branches#overworld-expansion
-#define NUM_OBJ_EVENT_GFX                        239
+#define NUM_OBJ_EVENT_GFX                        248
 
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.
 // More info about them in include/constants/vars.h
-#define OBJ_EVENT_GFX_VARS   (NUM_OBJ_EVENT_GFX + 1)
+#define OBJ_EVENT_GFX_VARS   (NUM_OBJ_EVENT_GFX)
 #define OBJ_EVENT_GFX_VAR_0  (OBJ_EVENT_GFX_VARS + 0x0) // 240
 #define OBJ_EVENT_GFX_VAR_1  (OBJ_EVENT_GFX_VARS + 0x1)
 #define OBJ_EVENT_GFX_VAR_2  (OBJ_EVENT_GFX_VARS + 0x2)

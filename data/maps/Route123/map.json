@@ -22,6 +22,11 @@
       "map": "MAP_ROUTE118",
       "offset": 0,
       "direction": "left"
+    },
+    {
+      "map": "MAP_BEACH_SIDE",
+      "offset": 10,
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -261,8 +266,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "x": 129,
-      "y": 14,
+      "x": 128,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -299,7 +304,7 @@
       "flag": "FLAG_ITEM_ROUTE_123_CALCIUM"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_4",
       "x": 108,
       "y": 13,
       "elevation": 3,
@@ -352,8 +357,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 18,
-      "y": 9,
+      "x": 25,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_ROTATE_COUNTERCLOCKWISE",
       "movement_range_x": 0,
@@ -391,8 +396,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
-      "x": 138,
-      "y": 12,
+      "x": 136,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -456,7 +461,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
-      "x": 138,
+      "x": 102,
       "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_TREE_DISGUISE",
@@ -469,10 +474,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 138,
-      "y": 16,
+      "x": 122,
+      "y": 8,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -520,7 +525,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "graphics_id": "OBJ_EVENT_GFX_WARRIOR",
       "x": 49,
       "y": 19,
       "elevation": 3,
@@ -583,6 +588,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route123_EventScript_ItemRevivalHerb",
       "flag": "FLAG_ITEM_ROUTE_123_REVIVAL_HERB"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 127,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_TEMP_13"
     }
   ],
   "warp_events": [
@@ -591,6 +609,27 @@
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_ROUTE123_BERRY_MASTERS_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 127,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE123RUINS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 128,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE123RUINS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 26,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
       "dest_warp_id": "0"
     }
   ],
@@ -806,8 +845,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 12,
-      "y": 1,
+      "x": 25,
+      "y": 6,
       "elevation": 3,
       "item": "ITEM_REVIVE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_REVIVE"
@@ -822,16 +861,16 @@
     },
     {
       "type": "hidden_item",
-      "x": 139,
-      "y": 15,
+      "x": 45,
+      "y": 9,
       "elevation": 3,
       "item": "ITEM_PP_UP",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_PP_UP"
     },
     {
       "type": "hidden_item",
-      "x": 138,
-      "y": 18,
+      "x": 124,
+      "y": 8,
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY"

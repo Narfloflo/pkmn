@@ -24,8 +24,8 @@ Route101_EventScript_StartBirchRescue::
 	playbgm MUS_HELP, TRUE
 	msgbox Route101_Text_HelpMe, MSGBOX_DEFAULT
 	closemessage
-	setobjectxy LOCALID_BIRCH, 0, 15
-	setobjectxy LOCALID_ZIGZAGOON, 0, 16
+	setobjectxy LOCALID_BIRCH, 0, 45
+	setobjectxy LOCALID_ZIGZAGOON, 0, 46
 	applymovement OBJ_EVENT_ID_PLAYER, Route101_Movement_EnterScene
 	applymovement LOCALID_BIRCH, Route101_Movement_BirchRunAway1
 	applymovement LOCALID_ZIGZAGOON, Route101_Movement_ZigzagoonChase1
@@ -225,7 +225,7 @@ Route101_EventScript_BirchsBag::
 	setflag FLAG_RESCUED_BIRCH
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_ZIGZAGOON
-	setobjectxy OBJ_EVENT_ID_PLAYER, 6, 13
+	setobjectxy OBJ_EVENT_ID_PLAYER, 6, 43
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	special ChooseStarter
@@ -300,3 +300,34 @@ Route101_Text_RouteSign:
 	.string "ROUTE 101\n"
 	.string "{UP_ARROW} OLDALE TOWN$"
 
+Route101_Text_PondKid::
+	lock
+	faceplayer
+	msgbox Route101_Text_PondKid_Text_0
+	release
+	end
+
+
+Route101_Text_Jenkins::
+	lock
+	faceplayer
+	msgbox Route101_Text_Jenkins_Text_0
+	release
+	end
+
+
+Route101_Text_PondKid_Text_0:
+	.string "The existence is nothing but a mere\n"
+	.string "joke on which the Gods are playing our\l"
+	.string "fate as if it was a simple game...\p"
+	.string "{PLAYER} : How old are you ?!$"
+
+Route101_Text_Jenkins_Text_0:
+	.string "Look kid : Here are my crops. If you\n"
+	.string "don't get out here quickly, I'll spank\l"
+	.string "your ass so hard, you'll need surgery.\p"
+	.string "{PLAYER}: I have a creature call a\n"
+	.string "POKEMON. I don't think you scare me.\p"
+	.string "JENKINS: What? How dare you speak to\n"
+	.string "me like that !?\p"
+	.string "Dirty brat!...$"

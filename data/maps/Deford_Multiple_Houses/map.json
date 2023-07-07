@@ -1,0 +1,292 @@
+{
+  "id": "MAP_DEFORD_MULTIPLE_HOUSES",
+  "name": "Deford_Multiple_Houses",
+  "layout": "LAYOUT_DEFORD_MULTIPLE_HOUSES",
+  "music": "MUS_DEWFORD",
+  "region_map_section": "MAPSEC_DEWFORD_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WINGULL",
+      "x": 24,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route119_House_EventScript_Wingull",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WINGULL",
+      "x": 18,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route119_House_EventScript_Wingull",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
+      "x": 25,
+      "y": 1,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
+      "x": 41,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "x": 4,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+      "x": 4,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
+      "x": 3,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TWIN",
+      "x": 3,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BOY_1",
+      "x": 7,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_DOWN_AND_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+      "x": 23,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "x": 21,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WARRIOR_F",
+      "x": 19,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 36,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ARTIST",
+      "x": 41,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TOWN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TOWN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TOWN",
+      "dest_warp_id": "9"
+    },
+    {
+      "x": 21,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TOWN",
+      "dest_warp_id": "9"
+    },
+    {
+      "x": 38,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TOWN",
+      "dest_warp_id": "10"
+    },
+    {
+      "x": 39,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TOWN",
+      "dest_warp_id": "10"
+    },
+    {
+      "x": 3,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TOWN",
+      "dest_warp_id": "11"
+    },
+    {
+      "x": 4,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TOWN",
+      "dest_warp_id": "11"
+    },
+    {
+      "x": 20,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TOWN",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 21,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TOWN",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 38,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TOWN",
+      "dest_warp_id": "13"
+    },
+    {
+      "x": 39,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TOWN",
+      "dest_warp_id": "13"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

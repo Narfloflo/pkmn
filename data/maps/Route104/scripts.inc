@@ -458,6 +458,7 @@ Route104_Movement_SailToDewfordBeforeDadCalls:
 	walk_faster_right
 	walk_fast_right
 	walk_fast_right
+	walk_fast_right
 	walk_fast_down
 	walk_fast_down
 	walk_fast_down
@@ -601,7 +602,6 @@ Route104_Movement_SailToDewfordAfterDadCalls:
 	walk_fast_right
 	walk_fast_right
 	walk_right
-	walk_right
 	walk_down
 	walk_down
 	walk_fast_down
@@ -658,6 +658,7 @@ Route104_Movement_SailToDewford:
 	walk_faster_right
 	walk_fast_right
 	walk_fast_right
+	walk_fast_right
 	walk_fast_down
 	walk_fast_down
 	walk_fast_down
@@ -797,7 +798,6 @@ Route104_Movement_SailToDewford:
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right
-	walk_right
 	walk_right
 	walk_down
 	walk_down

@@ -1,0 +1,76 @@
+{
+  "id": "MAP_DEWFORD_TO_SLATEPORT_CAVE",
+  "name": "DewfordToSlateportCave",
+  "layout": "LAYOUT_DEWFORD_TO_SLATEPORT_CAVE",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TRAINING_FIELD",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 14,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TO_SLATEPORT_CAVE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 27,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TO_SLATEPORT_CAVE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 27,
+      "y": 38,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TO_SLATEPORT_CAVE",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TO_SLATEPORT_CAVE",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 14,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TO_SLATEPORT_CAVE2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 16,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TO_SLATEPORT_CAVE",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

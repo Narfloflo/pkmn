@@ -1645,6 +1645,7 @@ const struct Trainer gTrainers[] = {
         .party = ITEM_DEFAULT_MOVES(sParty_Winston1),
     },
 
+
     [TRAINER_MOLLIE] =
     {
         .trainerClass = TRAINER_CLASS_EXPERT,
@@ -3187,7 +3188,7 @@ const struct Trainer gTrainers[] = {
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_LEADER_ROXANNE,
         .trainerName = _("ROXANNE"),
-        .items = {ITEM_POTION, ITEM_POTION, ITEM_NONE, ITEM_NONE},
+        .items = {ITEM_SUPER_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = ITEM_CUSTOM_MOVES(sParty_Roxanne1),
@@ -4024,9 +4025,9 @@ const struct Trainer gTrainers[] = {
     [TRAINER_WALLACE] =
     {
         .trainerClass = TRAINER_CLASS_CHAMPION,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_CHAMPION_WALLACE,
-        .trainerName = _("WALLACE"),
+        .trainerName = _("MOM"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
@@ -10216,13 +10217,13 @@ const struct Trainer gTrainers[] = {
     [TRAINER_RED] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
         .trainerPic = TRAINER_PIC_RED,
         .trainerName = _("RED"),
-        .items = {},
+        .items =  {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
-        .aiFlags = 0,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_Red),
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Red),
     },
 
     [TRAINER_LEAF] =
@@ -10259,5 +10260,29 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_MayLinkPlaceholder),
+    },
+
+    [TRAINER_MOHA] =
+    {
+        .trainerClass = TRAINER_CLASS_RICH_BOY,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
+        .trainerPic = TRAINER_PIC_RICH_BOY,
+        .trainerName = _("MOHAMMED"),
+        .items = {ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_Moha),
+    },
+
+    [TRAINER_EXPERT_JUNCTION_CAVE] =
+    {
+        .trainerClass = TRAINER_CLASS_EXPERT,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_EXPERT_F,
+        .trainerName = _("ELGA"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_Elga),
     },
 };

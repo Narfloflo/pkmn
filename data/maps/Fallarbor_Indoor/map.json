@@ -1,0 +1,111 @@
+{
+  "id": "MAP_FALLARBOR_INDOOR",
+  "name": "Fallarbor_Indoor",
+  "layout": "LAYOUT_FALLARBOR_INDOOR",
+  "music": "MUS_FALLARBOR",
+  "region_map_section": "MAPSEC_FALLARBOR_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_FALLARBOR_TOWN",
+      "dest_warp_id": "11"
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_FALLARBOR_TOWN",
+      "dest_warp_id": "11"
+    },
+    {
+      "x": 20,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_FALLARBOR_TOWN",
+      "dest_warp_id": "12"
+    },
+    {
+      "x": 21,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_FALLARBOR_TOWN",
+      "dest_warp_id": "12"
+    },
+    {
+      "x": 38,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_FALLARBOR_TOWN",
+      "dest_warp_id": "13"
+    },
+    {
+      "x": 39,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_FALLARBOR_TOWN",
+      "dest_warp_id": "13"
+    },
+    {
+      "x": 3,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_FALLARBOR_TOWN",
+      "dest_warp_id": "14"
+    },
+    {
+      "x": 4,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_FALLARBOR_TOWN",
+      "dest_warp_id": "14"
+    },
+    {
+      "x": 20,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_FALLARBOR_TOWN",
+      "dest_warp_id": "15"
+    },
+    {
+      "x": 21,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_FALLARBOR_TOWN",
+      "dest_warp_id": "15"
+    },
+    {
+      "x": 38,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_FALLARBOR_TOWN",
+      "dest_warp_id": "16"
+    },
+    {
+      "x": 39,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_FALLARBOR_TOWN",
+      "dest_warp_id": "16"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

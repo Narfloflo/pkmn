@@ -1,0 +1,53 @@
+raw`Labs_MapScripts::
+	.byte 0
+`
+script Labs_Text_ScientistUpgrader{
+    if(flag(FLAG_SYS_POKEDEX_GET) && !(flag(FLAG_SYS_NATIONAL_DEX))){
+    lock
+    faceplayer
+    msgbox(format("Oh my ARCEUS ! Prof. BIRCH totally forgot to upgrade your POKEDEX. What a bad scientist. Let me do that for you...."))
+    call(UpgradeNationalDex)
+    release
+    end
+    }
+    else{
+    lock
+    faceplayer
+            msgbox(format("That should be better now. Go and catch them all {PLAYER} !"))
+        }
+    applymovement(2, Scientist_Mouvement2)
+    waitmovement(0)
+    release
+    return
+}
+
+script UpgradeNationalDex{
+    lock
+    playfanfare(MUS_OBTAIN_ITEM)
+	message(LittlerootTown_ProfessorBirchsLab_Text_PokedexUpgradedToNational)
+	waitmessage
+	waitfanfare
+	setflag(FLAG_SYS_NATIONAL_DEX)
+	special(EnableNationalPokedex)
+    closemessage
+    release
+    return
+}
+
+script Labs_Text_PrgmScientist {
+    lock
+    faceplayer
+    msgbox(format("So basically I'm developing a tool that can help TRAINERS to spot a specific POKEMON...... But it's not really working currently..."))
+    applymovement(1, Scientist_Mouvement)
+    waitmovement(0)
+    release
+    return
+}
+
+movement Scientist_Mouvement{
+    face_left
+}
+
+movement Scientist_Mouvement2{
+    face_up
+}

@@ -1,4 +1,5 @@
 #include "global.h"
+#include "string.h"
 
 const u32 gMonFrontPic_CircledQuestionMark[] = INCBIN_U32("graphics/pokemon/question_mark/circled/anim_front.4bpp.lz");
 

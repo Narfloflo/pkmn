@@ -1,0 +1,195 @@
+{
+  "id": "MAP_HOUSE",
+  "name": "House",
+  "layout": "LAYOUT_HOUSE",
+  "music": "MUS_RUSTBORO",
+  "region_map_section": "MAPSEC_DYNAMIC",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 43,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 25,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 43,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 7,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 25,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 43,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 8,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 21,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 39,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 38,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 4,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 3,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 21,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 39,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 38,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 4,
+      "y": 36,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 3,
+      "y": 36,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 36,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 36,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

@@ -1055,3 +1055,211 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+
+	.include "data/maps/LittlerootDocks/scripts.inc"
+
+	.include "data/maps/ForgottenIsland/scripts.inc"
+
+	.include "data/maps/UnderwaterPacifidlog_1/scripts.inc"
+
+	.include "data/maps/UnderwaterPacifidlog_2/scripts.inc"
+
+	.include "data/maps/UnderwaterPacifidlog_3/scripts.inc"
+
+	.include "data/maps/DewfordTrainingField/scripts.inc"
+
+	.include "data/maps/GraniteCave_ExitRoom/scripts.inc"
+
+	.include "data/maps/SlateportDocks/scripts.inc"
+
+	.include "data/maps/slatedockcopy/scripts.inc"
+
+	.include "data/maps/SlateportDocks2/scripts.inc"
+
+	.include "data/maps/Underwater_Route131/scripts.inc"
+
+	.include "data/maps/HoennAirport/scripts.inc"
+
+	.include "data/maps/BeachSide/scripts.inc"
+
+	.include "data/maps/BeachSide2/scripts.inc"
+
+	.include "data/maps/Route123Ruins/scripts.inc"
+
+	.include "data/maps/Route123Ruins_2/scripts.inc"
+
+	.include "data/maps/Route123Ruins_Underwater/scripts.inc"
+
+	.include "data/maps/Route123Ruines_Underwater2/scripts.inc"
+
+	.include "data/maps/VictoryRoad_2F/scripts.inc"
+
+	.include "data/maps/VictoryRoad_3F/scripts.inc"
+
+	.include "data/maps/Route120_BirdsNest/scripts.inc"
+
+	.include "data/maps/Route120_BirdsCave/scripts.inc"
+
+	.include "data/maps/Route118_119Junction/scripts.inc"
+
+	.include "data/maps/Mauville_BigMart/scripts.inc"
+
+	.include "data/maps/mauvillectrcomm1/scripts.inc"
+
+	.include "data/maps/mauvillectrcomm2/scripts.inc"
+
+	.include "data/maps/Route117Junction103/scripts.inc"
+
+	.include "data/maps/LavaridgeTown_Cave/scripts.inc"
+
+	.include "data/maps/LavaridgeTown_Cave2/scripts.inc"
+
+	.include "data/maps/Mossdeep_/scripts.inc"
+
+	.include "data/maps/MossdeepCity_Gate/scripts.inc"
+
+	.include "data/maps/Petalburg_Mines/scripts.inc"
+
+	.include "data/maps/FireIsland/scripts.inc"
+
+	.include "data/maps/NewMap3/scripts.inc"
+
+	.include "data/maps/IcePath/scripts.inc"
+
+	.include "data/maps/IceCave/scripts.inc"
+
+	.include "data/maps/IceCave1F/scripts.inc"
+
+	.include "data/maps/IceCave2F/scripts.inc"
+
+	.include "data/maps/IceCave3F/scripts.inc"
+
+	.include "data/maps/IceCave4F/scripts.inc"
+
+	.include "data/maps/IceCave5F/scripts.inc"
+
+	.include "data/maps/NewMap4/scripts.inc"
+
+	.include "data/maps/RouteToVolcano/scripts.inc"
+
+	.include "data/maps/MtChimneyInside/scripts.inc"
+
+	.include "data/maps/MtChimneyEntrance/scripts.inc"
+
+	.include "data/maps/FireIsland1F/scripts.inc"
+
+	.include "data/maps/FireIsland2F/scripts.inc"
+
+	.include "data/maps/FireIsland3F/scripts.inc"
+
+
+	.include "data/maps/Littleroot_Docks/scripts.inc"
+
+	.include "data/maps/TestMap/scripts.inc"
+
+	.include "data/maps/Desert/scripts.inc"
+
+	.include "data/maps/FallarborMarket/scripts.inc"
+
+	.include "data/maps/rustboroSewer/scripts.inc"
+
+	.include "data/maps/Route119Jungle/scripts.inc"
+
+	.include "data/maps/Jungle/scripts.inc"
+
+	.include "data/maps/Schools/scripts.inc"
+
+	.include "data/maps/NewChanel/scripts.inc"
+
+	.include "data/maps/Labs/scripts.inc"
+
+	.include "data/maps/NewIsland/scripts.inc"
+
+	.include "data/maps/LuxuriousMansion/scripts.inc"
+
+	.include "data/maps/TestMap2/scripts.inc"
+
+	.include "data/maps/House/scripts.inc"
+
+	.include "data/maps/SecretCity/scripts.inc"
+
+	.include "data/maps/Desertpkmn/scripts.inc"
+
+	.include "data/maps/Deserthouse/scripts.inc"
+
+	.include "data/maps/Secrethouse/scripts.inc"
+
+	.include "data/maps/SecretGym/scripts.inc"
+
+	.include "data/maps/NewMap1/scripts.inc"
+
+	.include "data/maps/Pub/scripts.inc"
+
+	.include "data/maps/Hotel/scripts.inc"
+
+	.include "data/maps/FishingClub/scripts.inc"
+
+	.include "data/maps/NewMap2/scripts.inc"
+
+	.include "data/maps/SeasideCyclingNew/scripts.inc"
+
+	.include "data/maps/Verdanturf_Hospital/scripts.inc"
+
+	.include "data/maps/FastFood/scripts.inc"
+
+	.include "data/maps/Verdanturf_Multiple_Houses/scripts.inc"
+
+	.include "data/maps/Deford_Multiple_Houses/scripts.inc"
+
+	.include "data/maps/Dewford_Hotel/scripts.inc"
+
+	.include "data/maps/Vermilion/scripts.inc"
+
+	.include "data/maps/Route6/scripts.inc"
+
+	.include "data/maps/Vermilion_Indoor/scripts.inc"
+
+	.include "data/maps/Fanclub_Vermilion/scripts.inc"
+
+	.include "data/maps/Vermilion_Center_Shop/scripts.inc"
+
+	.include "data/maps/Vermilion_Shop/scripts.inc"
+
+	.include "data/maps/Fallarbor_Indoor/scripts.inc"
+
+	.include "data/maps/NewChanelDungeon/scripts.inc"
+
+	.include "data/maps/NewChanelDungeon2/scripts.inc"
+
+	.include "data/maps/DesertPathtoSecretCity/scripts.inc"
+
+	.include "data/maps/SecretCitytoJunction/scripts.inc"
+
+	.include "data/maps/SlateportCity_Pub/scripts.inc"
+
+	.include "data/maps/SlateportCity_Multiple_Houses/scripts.inc"
+
+	.include "data/maps/SlateportCity_Wharehouse/scripts.inc"
+
+	.include "data/maps/Mossdeep_SeaGate1/scripts.inc"
+
+	.include "data/maps/Mossdeep_SeaGate2/scripts.inc"
+
+	.include "data/maps/DewfordToSlateportCave/scripts.inc"
+
+	.include "data/maps/DewfordToSlateportCave2/scripts.inc"
+
+	.include "data/maps/SootopolisCity_MultipleHouses/scripts.inc"
+
+	.include "data/maps/MauvilleCity_MultipleHouses/scripts.inc"
+
+	.include "data/maps/Junction103117_Cave/scripts.inc"
+
+	.include "data/maps/Junction103117_Cave_2/scripts.inc"
+
+	.include "data/maps/CelebiChamber/scripts.inc"
+
+	.include "data/maps/OlivineCityPort/scripts.inc"
+
+	.include "data/maps/OlivineCityMart/scripts.inc"

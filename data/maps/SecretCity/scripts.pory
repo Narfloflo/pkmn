@@ -1,0 +1,54 @@
+raw
+`SecretCity_MapScripts::
+	.byte 0`
+
+    script SecretCity_Text_LocationSign {
+        lock
+        msgbox(format("Village of...........\pLooks like time erase what was written here."))
+        release
+        end
+    }
+    script SecretCity_Text_OldWoman {
+        lock
+        faceplayer
+        msgbox(format("Oh ! I've never seen you before! Where are you from?.......\pI see, so that's how HOENN's been so far. That's interesting. Thanks child."))
+        release
+        end
+    }
+    script SecretCity_Text_OldMan {
+        lock
+        faceplayer
+        msgbox(format("Here is the wood that lead out of the village. We usually don't really leave this place.\pWe have all we need here."))
+        release
+        end
+    }
+    script SecretCity_Text_MountainMan {
+        lock
+        faceplayer
+        applymovement(4,SecretCity_Move_Hicker)
+        waitmovement(0)
+        msgbox(format("Oh ! You made it that far! You must be a strong TRAINER!\pHave you seen the ruins in the DESERT? We used to live here years ago."))
+        release
+        end
+    }
+    movement SecretCity_Move_Hicker {
+            emote_exclamation_mark
+            walk_in_place_left
+            face_player
+        }
+
+    script SecretCity_Text_Kid {
+        lock
+        faceplayer
+        msgbox(format("I'm one of the only kid here. It's boring to live with old guys, but somehow satisfying.\pI'm treating like a king here."))
+        release
+        end
+    }
+
+    script SecretCity_Text_Woman {
+        lock
+        faceplayer
+        msgbox(format("Oh hello. Here are the crops of the village. The weather is always good, and we have a few water. We are self sufficient. In a way we can say that we are a hippie community or some libertarians wankers.\pHahahahahaha!"))
+        release
+        end
+    }

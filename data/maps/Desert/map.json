@@ -1,0 +1,135 @@
+{
+  "id": "MAP_DESERT",
+  "name": "Desert",
+  "layout": "LAYOUT_DESERT",
+  "music": "MUS_ROUTE111",
+  "region_map_section": "MAPSEC_ROUTE_10",
+  "requires_flash": false,
+  "weather": "WEATHER_SANDSTORM",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE111",
+      "offset": -56,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "x": 57,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_StrengthBoulder",
+      "flag": "FLAG_TEMP_11"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 56,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_DESERT_PATHTO_SECRET_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 39,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_DESERTHOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 44,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_DESERTHOUSE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 34,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_DESERTHOUSE",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 28,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_DESERTHOUSE",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 34,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_DESERTHOUSE",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 39,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_DESERTHOUSE",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 44,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_DESERTHOUSE",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 28,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_DESERTHOUSE",
+      "dest_warp_id": "7"
+    },
+    {
+      "x": 36,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_DESERTHOUSE",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "secret_base",
+      "x": 36,
+      "y": 5,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_RED_CAVE3_1"
+    },
+    {
+      "type": "secret_base",
+      "x": 31,
+      "y": 5,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_RED_CAVE2_3"
+    },
+    {
+      "type": "secret_base",
+      "x": 33,
+      "y": 1,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_BROWN_CAVE1_1"
+    }
+  ]
+}

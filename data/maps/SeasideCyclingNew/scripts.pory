@@ -1,0 +1,34 @@
+raw`SeasideCyclingNew_MapScripts::
+	.byte 0`
+
+    script Ranch_Text_Farmer {
+        lock
+        faceplayer
+        msgbox(format("Welcome welcome to the RANCH! Wanna know more about this location?"),MSGBOX_YESNO)
+        if(var(VAR_RESULT) !=0){
+            msgbox(format("Well... We established this RANCH here and move a few MILTANK and TAUROS here to produce milk. I have a relatives doing that in JOHTO. I think it works well there.\pThis place is a little secluded but we manage with the authorities to build a CYCLING ROAD through here. We can expect a lot of customers!"))
+            release
+            end
+        }else{
+            msgbox(format("Humm I see. Well goodbye then."))
+            release
+            end
+        }
+    }
+
+    script Ranch_Text_Vendor {
+        lock
+        faceplayer
+        message("Hi there!\pPlease have a look at our goods.")
+        waitmessage
+        pokemart(Ranch)
+        msgbox(format("Have a good day!"))
+        release
+        end
+    }
+    
+    mart Ranch {
+        ITEM_MOOMOO_MILK
+        ITEM_BERRY_JUICE
+        ITEM_GREPA_BERRY
+    }

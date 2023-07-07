@@ -1,0 +1,57 @@
+mapscripts Route6_MapScripts {
+}
+
+script Route6_Text_RedBattle {
+    trainerbattle_single(TRAINER_RED, Red_Intro, Red_Outro, Mewtwo)
+    msgbox(PostbattleRed, MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+text Red_Intro{
+    "...................\p!!!"
+}
+
+text Red_Outro{
+    "?!"
+}
+
+text PostbattleRed {  
+    format("..........................")
+}
+
+script Mewtwo {
+    special(PlayerFaceTrainerAfterBattle)
+    waitmovement(0)
+    msgbox("{PLAYER}: Huh? I can have it ?")
+    call(GiveMewtwo)
+    release
+    end
+}
+
+script GiveMewtwo {
+    givemon(SPECIES_MEWTWO, 70)
+    playfanfare(MUS_OBTAIN_ITEM)
+    if(var(MON_GIVEN_TO_PARTY)){
+        msgbox("You received a POKéMON!")
+        
+    }elif(var(MON_GIVEN_TO_PC)){
+        msgbox(format("You received a POKéMON!\pIt was sent to the PC."))
+    }
+    return
+}
+
+script Route6_Text_Pika {
+    lock
+    faceplayer
+    playmoncry(SPECIES_PIKACHU, CRY_MODE_NORMAL)
+    msgbox(format("Pika! Pi-piii!\p{PLAYER}: This bastard look tough... I'm in deep shit..."))
+    release
+    end
+}
+
+script Route6_Remove_Pika {
+    if(defeated(TRAINER_RED)){
+        removeobject(2)
+    }
+}

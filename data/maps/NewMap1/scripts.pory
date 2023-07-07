@@ -1,0 +1,56 @@
+mapscripts NewMap1_MapScripts {}
+
+script NewMap1_Text_RestaurantKid {
+    lock
+    faceplayer
+    msgbox(format("So basically, I'm here everyday eating the same stuff\pI need a proper life..."))
+    release
+    end
+}
+
+script NewMap1_Text_GuyInSuit {
+    lock
+    msgbox(format("EMPLOYEE: Can I take your order please?\pGUY in the suit: I'll have Two number 9s, number 9 large. Number 6, extra dip ! Number 7, extra d-7. Two 45s, one 40 cheese. Extra extra large cheese soda. Number 9 dip, extra 6. 45 cheese, 69 aaah ! 7-Eleven, and a large soda!\p{PLAYER}: YUCK!"))
+    release
+    end
+}
+
+script NewMap1_Text_Cook {
+    lock
+    faceplayer
+    msgbox(format("Welcome in the one and only FAST FOOD chain of HOENN !\pOur restaurants are so similar that we can swear it's always the same location, but duplicated !\p{PLAYER}: I think it is. The developer is fucking lazy!"))
+    release
+    end
+}
+
+script NewMap1_Text_Vendor {
+	lock
+	message(format("Welcome to HOENN BURGER, what can I get you ?"))
+	waitmessage
+	pokemart(FoodItems)
+	msgbox("Come again soon.")
+	release
+}
+
+mart FoodItems {
+	ITEM_SANDWICH
+	ITEM_MOOMOO_MILK
+	ITEM_LEMONADE
+	ITEM_BERRY_JUICE
+}
+
+script NewMap1_Text_RestaurantKidF {
+    lock
+    faceplayer
+    msgbox(format("I don't care what people think. I'm here to gain the most weight possible and beat a SNORLAX.\p{PLAYER}: What the fuck ?"))
+    release
+    end
+}
+
+script NewMap1_Text_GameKid {
+    lock
+    faceplayer
+    msgbox(format("Kid: Humm yes ? You wanna try my brand new NINTENDO SWITCH ?\p{PLAYER}: Hell yeah !\pKid: Well no way I'm letting a dirty TRAINER like you touching my device. Screw you !\p{PLAYER}: Selfish bastard..."))
+    release
+    end
+}

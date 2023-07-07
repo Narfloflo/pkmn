@@ -58,10 +58,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 31,
-      "y": 24,
+      "x": 57,
+      "y": 36,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -83,9 +83,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 30,
-      "y": 50,
+      "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_F",
+      "x": 45,
+      "y": 62,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -97,10 +97,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
-      "x": 28,
-      "y": 74,
+      "x": 56,
+      "y": 46,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -136,10 +136,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 29,
-      "y": 8,
+      "x": 45,
+      "y": 28,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -188,8 +188,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 22,
-      "y": 41,
+      "x": 27,
+      "y": 49,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -201,8 +201,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 23,
-      "y": 41,
+      "x": 28,
+      "y": 49,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -214,8 +214,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 24,
-      "y": 41,
+      "x": 29,
+      "y": 49,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -228,7 +228,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
       "x": 37,
-      "y": 8,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
@@ -292,8 +292,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 39,
-      "y": 15,
+      "x": 59,
+      "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -305,8 +305,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
-      "x": 8,
-      "y": 19,
+      "x": 21,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 1,
@@ -318,8 +318,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TWIN",
-      "x": 27,
-      "y": 15,
+      "x": 52,
+      "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -331,8 +331,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TWIN",
-      "x": 28,
-      "y": 15,
+      "x": 53,
+      "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -344,10 +344,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_RICH_BOY",
-      "x": 21,
-      "y": 25,
+      "x": 7,
+      "y": 22,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_ROTATE_COUNTERCLOCKWISE",
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -357,10 +357,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 11,
-      "y": 44,
+      "x": 51,
+      "y": 73,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -396,8 +396,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 37,
-      "y": 22,
+      "x": 48,
+      "y": 70,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -409,8 +409,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "x": 35,
-      "y": 22,
+      "x": 43,
+      "y": 56,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -434,11 +434,11 @@
       "flag": "FLAG_ITEM_ROUTE_104_POTION"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 5,
-      "y": 26,
+      "graphics_id": "OBJ_EVENT_GFX_BOY_3",
+      "x": 24,
+      "y": 35,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -482,53 +482,116 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 5,
-      "y": 18,
+      "x": 50,
+      "y": 50,
       "elevation": 0,
       "dest_map": "MAP_ROUTE104_PRETTY_PETAL_FLOWER_SHOP",
       "dest_warp_id": "0"
     },
     {
-      "x": 10,
-      "y": 30,
+      "x": 24,
+      "y": 8,
       "elevation": 3,
       "dest_map": "MAP_PETALBURG_WOODS",
       "dest_warp_id": "0"
     },
     {
-      "x": 11,
-      "y": 30,
+      "x": 25,
+      "y": 8,
       "elevation": 3,
       "dest_map": "MAP_PETALBURG_WOODS",
       "dest_warp_id": "1"
     },
     {
-      "x": 10,
-      "y": 38,
+      "x": 24,
+      "y": 39,
       "elevation": 3,
       "dest_map": "MAP_PETALBURG_WOODS",
       "dest_warp_id": "2"
     },
     {
-      "x": 11,
-      "y": 38,
+      "x": 25,
+      "y": 39,
       "elevation": 3,
       "dest_map": "MAP_PETALBURG_WOODS",
       "dest_warp_id": "3"
     },
     {
       "x": 32,
-      "y": 42,
+      "y": 17,
       "elevation": 3,
       "dest_map": "MAP_PETALBURG_WOODS",
       "dest_warp_id": "4"
     },
     {
       "x": 33,
-      "y": 42,
+      "y": 17,
       "elevation": 3,
       "dest_map": "MAP_PETALBURG_WOODS",
       "dest_warp_id": "5"
+    },
+    {
+      "x": 27,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_PETALBURG_WOODS",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 26,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_PETALBURG_WOODS",
+      "dest_warp_id": "7"
+    },
+    {
+      "x": 40,
+      "y": 54,
+      "elevation": 0,
+      "dest_map": "MAP_PETALBURG_WOODS",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 41,
+      "y": 54,
+      "elevation": 0,
+      "dest_map": "MAP_PETALBURG_WOODS",
+      "dest_warp_id": "9"
+    },
+    {
+      "x": 5,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_LUXURIOUS_MANSION",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 49,
+      "y": 45,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 51,
+      "y": 71,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 29,
+      "y": 37,
+      "elevation": 0,
+      "dest_map": "MAP_PUB",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 44,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
+      "dest_warp_id": "10"
     }
   ],
   "coord_events": [
@@ -569,16 +632,16 @@
     },
     {
       "type": "sign",
-      "x": 7,
-      "y": 20,
+      "x": 54,
+      "y": 48,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route104_EventScript_FlowerShopSign"
     },
     {
       "type": "sign",
-      "x": 17,
-      "y": 23,
+      "x": 53,
+      "y": 32,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route104_EventScript_TrainerTipsDoubleBattles"
@@ -622,6 +685,20 @@
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_104_HEART_SCALE"
+    },
+    {
+      "type": "secret_base",
+      "x": 41,
+      "y": 30,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_TREE1_1"
+    },
+    {
+      "type": "secret_base",
+      "x": 40,
+      "y": 30,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_TREE1_2"
     }
   ]
 }

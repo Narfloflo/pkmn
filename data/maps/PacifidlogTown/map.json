@@ -22,6 +22,16 @@
       "map": "MAP_ROUTE131",
       "offset": 0,
       "direction": "right"
+    },
+    {
+      "map": "MAP_UNDERWATER_PACIFIDLOG_1",
+      "offset": 0,
+      "direction": "dive"
+    },
+    {
+      "map": "MAP_NEW_ISLAND",
+      "offset": 0,
+      "direction": "up"
     }
   ],
   "object_events": [
@@ -40,8 +50,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 11,
-      "y": 14,
+      "x": 19,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -63,6 +73,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PacifidlogTown_EventScript_NinjaBoy",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WARRIOR",
+      "x": 13,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_RIGHT_AND_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Watchman",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -74,8 +97,8 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 16,
-      "y": 13,
+      "x": 32,
+      "y": 16,
       "elevation": 0,
       "dest_map": "MAP_PACIFIDLOG_TOWN_HOUSE1",
       "dest_warp_id": "0"
@@ -95,21 +118,37 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 2,
-      "y": 12,
+      "x": 17,
+      "y": 21,
       "elevation": 0,
       "dest_map": "MAP_PACIFIDLOG_TOWN_HOUSE4",
       "dest_warp_id": "0"
     },
     {
-      "x": 17,
-      "y": 21,
+      "x": 37,
+      "y": 24,
       "elevation": 0,
       "dest_map": "MAP_PACIFIDLOG_TOWN_HOUSE5",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 21,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
+      "dest_warp_id": "22"
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_PACIFIDLOG_TOWN",
+      "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",

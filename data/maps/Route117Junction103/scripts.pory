@@ -1,0 +1,26 @@
+mapscripts Route117Junction103_MapScripts {
+    MAP_SCRIPT_ON_LOAD{
+        call_if_unset(FLAG_IS_CHAMPION, Route117Junction103_EventScript_CaveDoor)
+        end
+    }
+}
+
+script Route117Junction103_EventScript_CaveDoor {
+    setmetatile(32,9,METATILE_General_RockWall_GrassBase,TRUE)
+    setmetatile(32,8,METATILE_General_RockWall_RockBase,TRUE)
+    return
+}
+
+script Route117Junction103_Text_Sign {
+    lock
+    if(flag(FLAG_IS_CHAMPION)){
+        msgbox(format("“NO I'M NOT DIGGING INTO A CAVE!”\pBut it's written in a very poor language...")) 
+        release
+        end
+    }else{
+        msgbox(format("“IF YOU WANT TO SELL ME A SLOWPOKE TAIL, LEAVE! OTHERWISE LEAVE TOO!”\pLooks like a 10 years old kid wrote it."))
+        release
+        end
+    }    
+}
+

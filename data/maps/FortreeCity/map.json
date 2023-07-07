@@ -40,8 +40,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
-      "x": 32,
-      "y": 16,
+      "x": 33,
+      "y": 17,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -53,8 +53,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
-      "x": 32,
-      "y": 10,
+      "x": 47,
+      "y": 27,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 0,
@@ -79,8 +79,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
-      "x": 8,
-      "y": 10,
+      "x": 35,
+      "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -105,8 +105,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_KECLEON",
-      "x": 25,
-      "y": 8,
+      "x": 22,
+      "y": 31,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_INVISIBLE",
       "movement_range_x": 1,
@@ -115,12 +115,51 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FortreeCity_EventScript_Kecleon",
       "flag": "FLAG_HIDE_FORTREE_CITY_KECLEON"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "x": 8,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
+      "x": 39,
+      "y": 29,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 42,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Watchman",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 5,
-      "y": 6,
+      "x": 21,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_FORTREE_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
@@ -134,7 +173,7 @@
     },
     {
       "x": 22,
-      "y": 11,
+      "y": 26,
       "elevation": 0,
       "dest_map": "MAP_FORTREE_CITY_GYM",
       "dest_warp_id": "0"
@@ -180,9 +219,32 @@
       "elevation": 0,
       "dest_map": "MAP_FORTREE_CITY_DECORATION_SHOP",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_SCHOOLS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 36,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
+      "dest_warp_id": "10"
+    },
+    {
+      "x": 43,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
+      "dest_warp_id": "12"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",
@@ -194,8 +256,8 @@
     },
     {
       "type": "sign",
-      "x": 7,
-      "y": 6,
+      "x": 23,
+      "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
@@ -210,16 +272,16 @@
     },
     {
       "type": "sign",
-      "x": 26,
-      "y": 10,
+      "x": 25,
+      "y": 25,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "FortreeCity_EventScript_GymSign"
     },
     {
       "type": "sign",
-      "x": 6,
-      "y": 6,
+      "x": 22,
+      "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
@@ -231,6 +293,20 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "type": "secret_base",
+      "x": 45,
+      "y": 31,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_SHRUB4_1"
+    },
+    {
+      "type": "secret_base",
+      "x": 46,
+      "y": 31,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_SHRUB4_3"
     }
   ]
 }

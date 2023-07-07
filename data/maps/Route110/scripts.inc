@@ -517,15 +517,15 @@ Route110_EventScript_RivalExit3::
 	return
 
 Route110_EventScript_MoveRival1::
-	setobjectxyperm LOCALID_RIVAL_ON_BIKE, 33, 55
+	setobjectxyperm LOCALID_RIVAL_ON_BIKE, 33, 51
 	return
 
 Route110_EventScript_MoveRival2::
-	setobjectxyperm LOCALID_RIVAL_ON_BIKE, 34, 55
+	setobjectxyperm LOCALID_RIVAL_ON_BIKE, 34, 51
 	return
 
 Route110_EventScript_MoveRival3::
-	setobjectxyperm LOCALID_RIVAL_ON_BIKE, 35, 55
+	setobjectxyperm LOCALID_RIVAL_ON_BIKE, 35, 51
 	return
 
 Route110_Movement_RivalApproachPlayer1:

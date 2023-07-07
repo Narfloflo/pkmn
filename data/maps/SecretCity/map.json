@@ -1,0 +1,133 @@
+{
+  "id": "MAP_SECRET_CITY",
+  "name": "SecretCity",
+  "layout": "LAYOUT_SECRET_CITY",
+  "music": "MUS_RG_SEVII_45",
+  "region_map_section": "MAPSEC_PALLET_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_DROUGHT",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+      "x": 14,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SecretCity_Text_OldWoman",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "x": 33,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SecretCity_Text_OldMan",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 9,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SecretCity_Text_Kid",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 4,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SecretCity_Text_MountainMan",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 15,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SecretCity_Text_Woman",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 22,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_DESERTPKMN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_DESERT_PATHTO_SECRET_CITY",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 33,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_SECRET_CITYTO_JUNCTION",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_SECRETHOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 24,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_SECRET_GYM",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SecretCity_Text_LocationSign"
+    }
+  ]
+}

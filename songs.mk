@@ -190,7 +190,7 @@ $(MID_SUBDIR)/mus_encounter_intense.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G062 -V078
 
 $(MID_SUBDIR)/mus_weather_groudon.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G090 -V050
+	$(MID) $< $@ -E -R$(STD_REVERB) -G037 -V080
 
 $(MID_SUBDIR)/mus_dewford.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G073 -V078
@@ -604,7 +604,7 @@ $(MID_SUBDIR)/mus_link_contest_p4.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G042 -V090
 
 $(MID_SUBDIR)/mus_littleroot_test.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G034 -V099
+	$(MID) $< $@ -E -R$(STD_REVERB) -G006 -V100
 
 $(MID_SUBDIR)/mus_credits.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G101 -V100

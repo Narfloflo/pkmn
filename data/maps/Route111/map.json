@@ -27,6 +27,11 @@
       "map": "MAP_ROUTE112",
       "offset": 20,
       "direction": "left"
+    },
+    {
+      "map": "MAP_DESERT",
+      "offset": 56,
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -70,7 +75,7 @@
       "flag": "FLAG_HIDE_ROUTE_111_VIVI_WINSTRATE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+      "graphics_id": "OBJ_EVENT_GFX_WARRIOR_F",
       "x": 13,
       "y": 113,
       "elevation": 0,
@@ -123,8 +128,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 8,
-      "y": 91,
+      "x": 12,
+      "y": 92,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -188,8 +193,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMERAMAN",
-      "x": 14,
-      "y": 86,
+      "x": 16,
+      "y": 87,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -201,8 +206,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_REPORTER_F",
-      "x": 13,
-      "y": 86,
+      "x": 15,
+      "y": 87,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -266,7 +271,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 18,
+      "x": 20,
       "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
@@ -279,7 +284,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 19,
+      "x": 21,
       "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
@@ -292,8 +297,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_REPORTER_F",
-      "x": 13,
-      "y": 86,
+      "x": 15,
+      "y": 87,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -305,8 +310,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMERAMAN",
-      "x": 14,
-      "y": 86,
+      "x": 16,
+      "y": 87,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -318,8 +323,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_REPORTER_F",
-      "x": 13,
-      "y": 86,
+      "x": 15,
+      "y": 87,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -331,8 +336,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMERAMAN",
-      "x": 14,
-      "y": 86,
+      "x": 16,
+      "y": 87,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -357,8 +362,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 3,
-      "y": 114,
+      "x": 11,
+      "y": 109,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -396,8 +401,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 11,
-      "y": 71,
+      "x": 12,
+      "y": 74,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT",
       "movement_range_x": 0,
@@ -462,7 +467,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_4",
       "x": 20,
-      "y": 114,
+      "y": 107,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -474,10 +479,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 26,
-      "y": 132,
+      "x": 22,
+      "y": 129,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -487,10 +492,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 20,
-      "y": 132,
+      "x": 25,
+      "y": 135,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -514,7 +519,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
       "x": 16,
-      "y": 119,
+      "y": 118,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
@@ -627,6 +632,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route111_EventScript_RockSmashTipFatMan",
       "flag": "FLAG_HIDE_ROUTE_111_ROCK_SMASH_TIP_GUY"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "x": 15,
+      "y": 31,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_StrengthBoulder",
+      "flag": "FLAG_TEMP_16"
     }
   ],
   "warp_events": [
@@ -664,6 +682,27 @@
       "elevation": 0,
       "dest_map": "MAP_TRAINER_HILL_ENTRANCE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 112,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
+      "dest_warp_id": "10"
+    },
+    {
+      "x": 26,
+      "y": 133,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
+      "dest_warp_id": "14"
+    },
+    {
+      "x": 16,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE111_WINSTRATE_FAMILYS_HOUSE",
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [
@@ -787,7 +826,7 @@
     {
       "type": "trigger",
       "x": 10,
-      "y": 36,
+      "y": 37,
       "elevation": 3,
       "var": "TRIGGER_RUN_IMMEDIATELY",
       "var_value": "0",
@@ -977,8 +1016,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 16,
-      "y": 114,
+      "x": 10,
+      "y": 113,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route111_EventScript_WinstrateHouseSign"

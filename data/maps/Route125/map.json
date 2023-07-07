@@ -27,6 +27,11 @@
       "map": "MAP_UNDERWATER_ROUTE125",
       "offset": 0,
       "direction": "dive"
+    },
+    {
+      "map": "MAP_MOSSDEEP_",
+      "offset": 0,
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -135,7 +140,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "graphics_id": "OBJ_EVENT_GFX_WARRIOR",
       "x": 48,
       "y": 19,
       "elevation": 3,
@@ -170,19 +175,21 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "secret_base",
-      "x": 53,
-      "y": 10,
+      "x": 51,
+      "y": 8,
       "elevation": 0,
       "secret_base_id": "SECRET_BASE_RED_CAVE1_2"
     },
     {
       "type": "secret_base",
-      "x": 55,
-      "y": 11,
+      "x": 53,
+      "y": 9,
       "elevation": 0,
       "secret_base_id": "SECRET_BASE_RED_CAVE4_2"
     },

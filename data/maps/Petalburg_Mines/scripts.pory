@@ -1,0 +1,40 @@
+raw`Petalburg_Mines_MapScripts::
+	.byte 0
+`
+
+script PetalburMines_Text_Miner {
+    lock
+    faceplayer
+    message(format("Hello young TRAINER, need anything?"))
+    waitmessage
+    pokemart(PetalburgMinesVendor)
+    msgbox(format("Thanks you for your support!"))
+    release
+}
+
+mart PetalburgMinesVendor {
+    ITEM_CHARCOAL
+    ITEM_SOFT_SAND
+}
+script PetalburgMines_Text_WorkingMiner {
+    lock
+    msgbox(format("{PLAYER}: This man is digging. I should let him work."))
+    release
+    end
+}
+
+script PetalburgMines_Text_Man1 {
+    lock
+    faceplayer
+    msgbox(format("This mine used to employed a lot of person, but nowadays, we mostly use our POKéMON to work in accord with the environment."))
+    release
+    end
+}
+
+script PetalburgMines_Text_Man2 {
+    lock
+    faceplayer
+    msgbox(format("You can find some mushrooms here if you are lucky."))
+    release
+    end
+}

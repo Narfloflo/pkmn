@@ -1,0 +1,157 @@
+raw`Vermilion_MapScripts::
+	.byte 0
+`
+
+script SailorToHoenn{ 
+    lock
+    faceplayer
+        msgbox("Want to go Back to HOENN ?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) !=0){
+            msgbox("Here we go !")
+            call(WarpToHoenn)
+        } else{
+            msgbox("I'm standing right here !")
+        }
+    release
+    end
+}
+ 
+ script WarpToHoenn{
+    fadescreen(FADE_TO_BLACK)
+    delay(5)
+    warp(MAP_SLATEDOCKCOPY, 8, 10)
+    fadescreen(FADE_FROM_BLACK)
+ }
+
+ script KVermilion_Text_GrimerMultipliesInSludge {
+    lock
+    faceplayer
+    msgbox(format("We're careful about pollution here.\pWe've heard GRIMER multiplies in toxic sludge."))
+    release
+    end
+ }
+
+ script KVermilion_Text_DidYouSeeSSAnneInHarbor {
+    lock
+    faceplayer
+    msgbox(format("Wondering why the S.S. ANNE hasn't shored?\pShe'll be back in VERMILION in a few months now."))
+    release
+    end
+ }
+
+ script KVermilion_Text_BuildingOnThisLand {
+    lock
+    faceplayer
+    msgbox(format("I'm putting up a building on this plot of land. I own it all.\pMy MACHOP were helping me tamping the land, but TEAM ROCKET stole them..."))
+    release
+    end
+ }
+
+ script KVermilion_Text_Sailor {
+    lock
+    faceplayer
+    msgbox(format("I love VERMILION CITY. The docks are so relaxing.\pWhere are you from? HOENN? LILYCOVE CITY's harbors are fine as well!"))
+    release
+    end
+ }
+
+ script KVermilion_Text_CitySign {
+    lock
+    msgbox(format("VERMILION CITY\nThe Port of Exquisite Sunsets"))
+    release
+    end
+ }
+
+ script KVermilion_Text_VermilionHarbor {
+    lock
+    msgbox(format("VERMILION HARBOR"))
+    release
+    end
+ }
+
+ script KVermilion_Text_PokemonFanClubSign {
+     lock
+     msgbox(format("POKéMON FAN CLUB\nAll POKéMON fans welcome!"))
+     release
+     end
+ }
+
+ script KVermilion_Text_Shady {
+     lock
+     faceplayer
+     msgbox(format("There are some shady character here...\p They look likes TEAM ROCKET member, but version Pirate of the Caribbean.\pSo cheap!"))
+     release
+     end
+ }
+
+ script Vermilion_Text_Fisherman {
+     lock
+     msgbox(format("Hope I'll get something other than a MAGIKARP.."))
+     applymovement(11, Exclamation)
+     waitmovement(0)
+     msgbox(format("Oh ! another MAGIKARP..."))
+     release
+     end
+ }
+
+movement Exclamation {
+   emote_exclamation_mark
+   walk_in_place_down
+}
+
+script GetAway {
+   lock
+   applymovement(4, GuyUp)
+   applymovement(3, GuyDown)
+   waitmovement(0)
+   msgbox(format("The road here is closed. The DUGLETTS are making a mess.\pWe are investigating the place."))
+   applymovement(OBJ_EVENT_ID_PLAYER, ReturnLeft)
+   waitmovement(0)
+   release
+   end
+}
+
+movement ReturnLeft {
+    walk_left
+}
+
+script Vermilion_Text_GuyUp {
+    lock
+    faceplayer
+    msgbox(format("The road here is closed. The DUGLETTS are making a mess.\pWe are investigating the place."))
+    release
+    end
+}
+
+script Vermilion_Text_GuyDown {
+    lock
+    faceplayer
+    msgbox(format("The road here is closed. The DUGLETTS are making a mess.\pWe are investigating the place."))
+    release
+    end
+}
+
+script Vermilion_Text_Camper {
+    lock
+    faceplayer
+    msgbox(format("I heard that a guy here is giving free BIKE VOUCHER.\pBut we have to endure a speech about RAPIDASH for sooooo long..."))
+    release
+    end
+}
+
+movement GuyUp {
+    walk_in_place_up
+}
+
+movement GuyDown {
+    walk_in_place_down
+}
+
+script Watchman {
+    lock
+    faceplayer
+    msgbox(format("Humm... Oh you want the time? Here it is."))
+    call(PlayersHouse_2F_EventScript_WallClock)
+    release
+    end
+}

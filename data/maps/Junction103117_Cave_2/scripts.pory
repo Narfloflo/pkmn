@@ -1,0 +1,37 @@
+mapscripts Junction103117_Cave_2_MapScripts {}
+
+script MewCave_Expert_Text {
+    lock
+    faceplayer
+    msgbox(format("Who are you? What? Huh? Leave me alone!..."))
+    if(flag(FLAG_IS_CHAMPION)){
+       trainerbattle_single(TRAINER_EXPERT_JUNCTION_CAVE, Elga_Intro, Elga_Outro, MewMap)
+        msgbox(ElgaLost, MSGBOX_AUTOCLOSE)
+        release
+        end
+    }else{
+        release
+        end
+    }
+}
+
+text Elga_Intro {
+    format("What? You fought all the ELITE FOUR by yourself? Well........\pCOME AND GET ME!!")
+}
+
+text Elga_Outro {
+    "Ah.. Ah! Ahahaha!!"
+}
+
+text ElgaLost {
+    "Please Leave me..."
+}
+
+script MewMap {
+    special(PlayerFaceTrainerAfterBattle)
+    waitmovement(0)
+    msgbox(format("Take this, it's my curse!..."))
+    giveitem(ITEM_OLD_SEA_MAP)
+    release
+    end
+}

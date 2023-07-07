@@ -46,6 +46,7 @@
 #include "constants/moves.h"
 #include "constants/songs.h"
 #include "constants/trainers.h"
+#include "constants/region_map_sections.h"
 #include "constants/union_room.h"
 
 struct SpeciesItem
@@ -6379,6 +6380,8 @@ u16 GetBattleBGM(void)
                 return MUS_VS_RIVAL;
             if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleWallyName))
                 return MUS_VS_TRAINER;
+             if (gMapHeader.regionMapSectionId == MAPSEC_VERMILION_CITY)
+                return MUS_RG_VS_TRAINER;
             return MUS_VS_RIVAL;
         case TRAINER_CLASS_ELITE_FOUR:
             return MUS_VS_ELITE_FOUR;
@@ -6391,10 +6394,15 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_PYRAMID_KING:
             return MUS_VS_FRONTIER_BRAIN;
         default:
-            return MUS_VS_TRAINER;
+        if (gMapHeader.regionMapSectionId == MAPSEC_VERMILION_CITY)
+     return MUS_RG_VS_TRAINER;
+        else
+     return MUS_VS_TRAINER;
         }
     }
-    else
+    else if (gMapHeader.regionMapSectionId == MAPSEC_VERMILION_CITY)
+     return MUS_RG_VS_WILD;
+    else 
         return MUS_VS_WILD;
 }
 

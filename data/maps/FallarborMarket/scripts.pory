@@ -1,0 +1,84 @@
+raw`FallarborMarket_MapScripts::
+	.byte 0
+`
+
+script FallarborMarket_Text_Vendor1 {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemart(FallarborMarketVendor1)
+    msgbox(format("Please come again!"))
+    release
+}
+
+script FallarborMarket_Text_Vendor2 {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemart(FallarborMarketVendor2)
+    msgbox(format("Please come again!"))
+    release
+}
+
+script FallarborMarket_Text_Vendor3 {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemart(FallarborMarketVendor3)
+    msgbox(format("Please come again!"))
+    release
+}
+
+mart FallarborMarketVendor1 {
+    ITEM_MAGNET
+    ITEM_TWISTED_SPOON
+    ITEM_POISON_BARB
+    ITEM_SHARP_BEAK
+    ITEM_DRAGON_FANG
+}
+
+mart FallarborMarketVendor2 {
+    ITEM_TM27_RETURN
+    ITEM_TM48_SKILL_SWAP
+    ITEM_TM49_SNATCH
+    ITEM_TM02_DRAGON_CLAW
+    ITEM_TM46_THIEF
+}
+
+mart FallarborMarketVendor3 {
+    ITEM_CLEANSE_TAG
+    ITEM_LEFTOVERS
+    ITEM_LAVA_COOKIE
+    ITEM_BERRY_JUICE
+}
+
+script FallarborMarket_Text_Girl {
+    lock
+    faceplayer
+    msgbox(format("I'm glad we have a market here in FALLARBORTOWN.\pIt has nothing to do with the one in LILYCOVECITY, but it's fine."))
+    release
+    end
+}
+
+
+script FallarborMarket_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("Wahaha! Welcome kid, welcome! I'm the owner of the FALLARBORTOWN market! It opened recently, and we have some pretty rare ITEMS that are great for a TRAINER like you.\pHave a good look at our ITEMS!"))
+    release
+    end
+}
+
+script FallarborMarket_Text_Kirlia {
+    lock
+    faceplayer
+    waitse
+    playmoncry(SPECIES_KIRLIA, CRY_MODE_NORMAL)
+    msgbox(format("Lia! Li li!\p{PLAYER}: There is something strange between this POKEMON and the old man..."))
+    waitmoncry
+    release
+    end
+}

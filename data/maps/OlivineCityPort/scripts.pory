@@ -1,0 +1,25 @@
+mapscripts OlivineCityPort_MapScripts {}
+
+script OlivineCityPort_Text_Sidney {
+    lock
+    faceplayer
+    msgbox(format("Oh hello {PLAYER} how are you?..... Me? Well I'm exploring the lands of JOHTO and KANTO a little bit. The world is vast and I should not be limited to HOENN.\pSomehow the ship to KANTO is late... It's annoying."))
+    release
+    end
+}
+
+script OlivineCityPort_Text_Guy {
+    lock
+    faceplayer
+    msgbox(format("FAST SHIP S.S. AQUA sails to KANTO on Mondays and Fridays.\pBut it seems to be delayed..."))
+    release
+    end
+}
+
+script OlivineCityPort_Text_Girl {
+    lock
+    faceplayer
+    msgbox(format("There are a lot of POKEMON in KANTO. I wish I could go..."))
+    release
+    end
+}

@@ -1,0 +1,45 @@
+mapscripts Vermilion_Shop_MapScripts {}
+
+script Vendor_Vermilion {
+    lock
+    faceplayer
+	msgbox(format("Welcome!\p How may I serve you?"))
+	waitmessage
+	pokemart(MartItems)
+	msgbox("Please come again!")
+	release
+    end
+}
+
+mart MartItems {
+    ITEM_ULTRA_BALL
+	ITEM_SUPER_POTION
+	ITEM_HYPER_POTION
+	ITEM_REVIVE
+	ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+    ITEM_BURN_HEAL
+    ITEM_HARBOR_MAIL
+}
+script Vermilion_Mart_Rocket {
+    lock
+    faceplayer
+    msgbox(format("There were wicked people who used POKEMON for criminals acts.\pTEAM ROCKET used to traffic in rare POKEMON.\p But I heard some TRAINER called RED kicked them out of KANTO."))
+    release
+    end
+}
+script Vermilion_Mart_MonsBadorGood {
+    lock
+    faceplayer
+    msgbox(format("I think POKEMON can be good or bad. Depends on the TRAINER."))
+    release
+    end
+}
+
+script Vermilion_Mart_Wanderer {
+    lock
+    faceplayer
+    msgbox(format("Is there some SODA POP here ?"))
+    release
+    end
+}

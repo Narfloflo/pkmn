@@ -1,0 +1,50 @@
+mapscripts OlivineCityMart_MapScripts {}
+
+script OlivineCityMart_Text_Vendor {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemart(OlivineCityMartVendor)
+    msgbox(format("Please come again!"))
+    release
+}
+
+mart OlivineCityMartVendor {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_ULTRA_BALL
+    ITEM_NET_BALL
+    ITEM_POTION
+    ITEM_SUPER_POTION
+    ITEM_HYPER_POTION
+    ITEM_MAX_POTION
+    ITEM_FULL_RESTORE
+    ITEM_REVIVE
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+    ITEM_BURN_HEAL
+    ITEM_ICE_HEAL
+    ITEM_FULL_HEAL
+    ITEM_ESCAPE_ROPE
+    ITEM_REPEL
+    ITEM_SUPER_REPEL
+    ITEM_MAX_REPEL
+}
+
+script OlivineCityMart_Text_Girl1 {
+    lock
+    faceplayer
+    msgbox(format("My BUTTERFREE came from my boyfriend overseas.\pIt carried some MAIL from him. Want to know what it says?\pLet's see... Nope! It's a secret!"))
+    release
+    end
+}
+
+script OlivineCityMart_Text_Girl2 {
+    lock
+    faceplayer
+    msgbox(format("Do your POKEMON already know the move for carrying people on water?"))
+    release
+    end
+}

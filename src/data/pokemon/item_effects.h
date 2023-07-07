@@ -292,6 +292,10 @@ const u8 gItemEffect_WaterStone[6] = {
     [4] = ITEM4_EVO_STONE,
 };
 
+const u8 gItemEffect_MetalCoat[6] = {
+    [4] = ITEM4_EVO_STONE,
+};
+
 const u8 gItemEffect_LeafStone[6] = {
     [4] = ITEM4_EVO_STONE,
 };
@@ -453,5 +457,6 @@ const u8 *const gItemEffectTable[] =
     [ITEM_HONDEW_BERRY - ITEM_POTION]  = gItemEffect_HondewBerry,
     [ITEM_GREPA_BERRY - ITEM_POTION]   = gItemEffect_GrepaBerry,
     [ITEM_TAMATO_BERRY - ITEM_POTION]  = gItemEffect_TamatoBerry,
+    [ITEM_METAL_COAT - ITEM_POTION]  = gItemEffect_MetalCoat,
     [LAST_BERRY_INDEX - ITEM_POTION]   = NULL
 };

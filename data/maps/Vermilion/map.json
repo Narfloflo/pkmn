@@ -1,0 +1,414 @@
+{
+  "id": "MAP_VERMILION",
+  "name": "Vermilion",
+  "layout": "LAYOUT_VERMILION",
+  "music": "MUS_RG_VERMILLION",
+  "region_map_section": "MAPSEC_VERMILION_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE6",
+      "offset": 14,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 16,
+      "y": 46,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SailorToHoenn",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "x": 23,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Vermilion_Text_Camper",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "x": 40,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Vermilion_Text_GuyDown",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "x": 40,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Vermilion_Text_GuyUp",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "x": 33,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "KVermilion_Text_BuildingOnThisLand",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+      "x": 16,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "KVermilion_Text_GrimerMultipliesInSludge",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 22,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "KVermilion_Text_DidYouSeeSSAnneInHarbor",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
+      "x": 9,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "KVermilion_Text_Shady",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WINGULL",
+      "x": 8,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_LEFT_DOWN_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WINGULL",
+      "x": 45,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_LEFT_DOWN_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+      "x": 16,
+      "y": 29,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Vermilion_Text_Fisherman",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 35,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "KVermilion_Text_Sailor",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "x": 2,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 2,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Watchman",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TRUCK",
+      "x": 20,
+      "y": 49,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+      "x": 15,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Watchman",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 15,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_INDOOR",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_INDOOR",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 27,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_INDOOR",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_INDOOR",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 19,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_INDOOR",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 12,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_INDOOR",
+      "dest_warp_id": "10"
+    },
+    {
+      "x": 7,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_FANCLUB_VERMILION",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 15,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CENTER_SHOP",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 27,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_SHOP",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 40,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "GetAway"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 11,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 32,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 28,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "type": "sign",
+      "x": 29,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "type": "sign",
+      "x": 16,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "KVermilion_Text_CitySign"
+    },
+    {
+      "type": "sign",
+      "x": 26,
+      "y": 26,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "KVermilion_Text_VermilionHarbor"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "KVermilion_Text_PokemonFanClubSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 36,
+      "y": 12,
+      "elevation": 0,
+      "item": "ITEM_PP_MAX",
+      "flag": "FLAG_TEMP_2"
+    },
+    {
+      "type": "hidden_item",
+      "x": 11,
+      "y": 24,
+      "elevation": 0,
+      "item": "ITEM_BIG_PEARL",
+      "flag": "FLAG_TEMP_1"
+    }
+  ]
+}

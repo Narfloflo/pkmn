@@ -1,0 +1,35 @@
+{
+  "id": "MAP_CELEBI_CHAMBER",
+  "name": "CelebiChamber",
+  "layout": "LAYOUT_CELEBI_CHAMBER",
+  "music": "MUS_SEALED_CHAMBER",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_DROUGHT",
+  "map_type": "MAP_TYPE_UNKNOWN",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CelebiChamber_EventScript_Celebi"
+    }
+  ]
+}

@@ -27,13 +27,18 @@
       "map": "MAP_ROUTE124",
       "offset": -40,
       "direction": "left"
+    },
+    {
+      "map": "MAP_MOSSDEEP_",
+      "offset": 58,
+      "direction": "up"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 38,
-      "y": 12,
+      "x": 69,
+      "y": 9,
       "elevation": 5,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -84,8 +89,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
-      "x": 45,
-      "y": 18,
+      "x": 42,
+      "y": 15,
       "elevation": 7,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -97,8 +102,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 62,
-      "y": 35,
+      "x": 66,
+      "y": 31,
       "elevation": 5,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -110,7 +115,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 55,
+      "x": 52,
       "y": 5,
       "elevation": 7,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -123,10 +128,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
-      "x": 56,
-      "y": 21,
+      "x": 57,
+      "y": 18,
       "elevation": 7,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -250,6 +255,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MossdeepCity_EventScript_BlackBelt",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BOY_3",
+      "x": 57,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+      "x": 49,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Watchman",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -261,8 +292,8 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 38,
-      "y": 9,
+      "x": 12,
+      "y": 16,
       "elevation": 0,
       "dest_map": "MAP_MOSSDEEP_CITY_GYM",
       "dest_warp_id": "0"
@@ -282,7 +313,7 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 37,
+      "x": 45,
       "y": 18,
       "elevation": 0,
       "dest_map": "MAP_MOSSDEEP_CITY_MART",
@@ -304,17 +335,10 @@
     },
     {
       "x": 18,
-      "y": 16,
+      "y": 15,
       "elevation": 0,
       "dest_map": "MAP_MOSSDEEP_CITY_HOUSE4",
       "dest_warp_id": "1"
-    },
-    {
-      "x": 64,
-      "y": 15,
-      "elevation": 0,
-      "dest_map": "MAP_MOSSDEEP_CITY_SPACE_CENTER_1F",
-      "dest_warp_id": "0"
     },
     {
       "x": 36,
@@ -322,6 +346,48 @@
       "elevation": 0,
       "dest_map": "MAP_MOSSDEEP_CITY_GAME_CORNER_1F",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 56,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_MOSSDEEP_CITY_HOUSE1",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 51,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_SCHOOLS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 52,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_LUXURIOUS_MANSION",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 61,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_FAST_FOOD",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 36,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_PUB",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 62,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
+      "dest_warp_id": "10"
     }
   ],
   "coord_events": [
@@ -427,8 +493,8 @@
     },
     {
       "type": "sign",
-      "x": 34,
-      "y": 9,
+      "x": 8,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "MossdeepCity_EventScript_GymSign"
@@ -443,19 +509,11 @@
     },
     {
       "type": "sign",
-      "x": 38,
+      "x": 46,
       "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
-    },
-    {
-      "type": "sign",
-      "x": 66,
-      "y": 16,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "MossdeepCity_EventScript_SpaceCenterSign"
     },
     {
       "type": "sign",
@@ -467,7 +525,7 @@
     },
     {
       "type": "sign",
-      "x": 39,
+      "x": 47,
       "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
@@ -476,10 +534,82 @@
     {
       "type": "sign",
       "x": 57,
-      "y": 21,
+      "y": 17,
       "elevation": 7,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "MossdeepCity_EventScript_WhiteRock"
+    },
+    {
+      "type": "sign",
+      "x": 36,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 40,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 61,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 72,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 72,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 57,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 67,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 65,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 67,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
     }
   ]
 }

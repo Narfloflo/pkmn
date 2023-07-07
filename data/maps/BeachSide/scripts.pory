@@ -1,0 +1,28 @@
+raw`BeachSide_MapScripts::
+	.byte 0
+
+`
+script SailorToJohto{ 
+    lock
+    faceplayer
+    if(flag(FLAG_DEFEATED_MOSSDEEP_GYM)) {
+        msgbox("Wanna go to JOHTO ?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) !=0){
+            msgbox("Please, come in !")
+            call(WarpToJohto)
+        } else{
+            msgbox("Another time then !")
+        }
+     } else {
+        msgbox(format("Hmm, you didn't receive all the BADGES."))
+    }
+    release
+    end
+}
+ 
+ script WarpToJohto{
+    fadescreen(FADE_TO_BLACK)
+    delay(5)
+    warp(MAP_BEACH_SIDE2, 29, 46)
+    fadescreen(FADE_FROM_BLACK)
+ }

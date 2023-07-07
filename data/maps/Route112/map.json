@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE113",
-      "offset": -60,
+      "offset": -63,
       "direction": "up"
     },
     {
@@ -58,10 +58,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 29,
-      "y": 49,
+      "x": 41,
+      "y": 50,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -71,7 +71,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
-      "x": 22,
+      "x": 20,
       "y": 46,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_ROTATE_COUNTERCLOCKWISE",
@@ -84,8 +84,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 15,
-      "y": 40,
+      "x": 14,
+      "y": 39,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_RIGHT",
       "movement_range_x": 0,
@@ -162,10 +162,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 8,
-      "y": 50,
+      "x": 9,
+      "y": 51,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
+      "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -175,8 +175,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 14,
-      "y": 43,
+      "x": 10,
+      "y": 46,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -230,14 +230,14 @@
     },
     {
       "x": 6,
-      "y": 46,
+      "y": 48,
       "elevation": 3,
       "dest_map": "MAP_JAGGED_PASS",
       "dest_warp_id": "0"
     },
     {
       "x": 7,
-      "y": 46,
+      "y": 48,
       "elevation": 3,
       "dest_map": "MAP_JAGGED_PASS",
       "dest_warp_id": "1"
@@ -255,9 +255,32 @@
       "elevation": 0,
       "dest_map": "MAP_FIERY_PATH",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 14,
+      "y": 42,
+      "elevation": 0,
+      "dest_map": "MAP_LAVARIDGE_TOWN_CAVE2",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 36,
+      "y": 48,
+      "elevation": 0,
+      "dest_map": "MAP_PUB",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 45,
+      "y": 48,
+      "elevation": 0,
+      "dest_map": "MAP_FAST_FOOD",
+      "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",
@@ -282,6 +305,13 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route112_EventScript_RouteSignLavaridge"
+    },
+    {
+      "type": "secret_base",
+      "x": 47,
+      "y": 34,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_BLUE_CAVE2_1"
     }
   ]
 }

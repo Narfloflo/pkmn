@@ -1,0 +1,109 @@
+raw`BeachSide2_MapScripts::
+	.byte 0
+
+`
+script SailorToHoenn2{ 
+    lock
+    faceplayer
+        msgbox("Want to go Back to HOENN ?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) !=0){
+            msgbox("Here we go !")
+            call(WarpToHoenn2)
+        } else{
+            msgbox("I'm standing right here !")
+        }
+    release
+    end
+}
+ 
+ script WarpToHoenn2{
+    fadescreen(FADE_TO_BLACK)
+    delay(5)
+    warp(MAP_BEACH_SIDE, 76, 43)
+    fadescreen(FADE_FROM_BLACK)
+ }
+
+script OlivineCity_Text_SignHarbour {
+    lock
+    msgbox(format("OLIVINE PORT\pFAST SHIP PIER"))
+    release
+    end
+}
+
+script OlivineCity_Text_LighthouseSailor {
+    lock
+    faceplayer
+    msgbox(format("Dark roads are dangerouse at night.\pBut in the pitchblack of night, the sea is even more treacherous!\pWithout the beacon of the LIGHTHOUSE to guide it, no ship can sail."))
+    release
+    end
+}
+
+script OlivineCity_Text_LighthouseSign {
+    lock
+    msgbox(format("OLIVINE LIGHTHOUSE\nAlso known as the GLITTER LIGHTHOUSE"))
+    release
+    end
+}
+
+script OlivineCity_Text_PokedexBoy {
+    lock
+    faceplayer
+    msgbox(format("Wow, you have a POKéDEX!\pThat is just so awesome."))
+    release
+    end
+}
+
+script OlivineCity_Text_SignCity {
+    lock
+    msgbox(format("OLIVINE CITY\pThe Port Closest to Foreign Lands"))
+    release
+    end
+}
+
+script OlivineCity_Text_Artist {
+    lock
+    faceplayer
+    msgbox(format("I love the sea at sunset! I can paint it all day long."))
+    release
+    end
+}
+
+script OlivineCity_Text_Maniac {
+    lock
+    faceplayer
+    msgbox(format("Hummm yes? Oh you want to have access to this GYM? Sorry but it's still under construction."))
+    release
+    end
+}
+
+script OlivineCity_Text_LighthouseGuard {
+    lock
+    faceplayer
+    msgbox(format("Sorry but this area is restricted to authorized crew only."))
+    release
+    end
+}
+
+script OlivineCity_Text_Woman {
+    lock
+    faceplayer
+    msgbox(format("My little sister is a tough TRAINER. I bet one day she will be a CHAMPION."))
+    release
+    end
+}
+
+script OlivineCity_Text_Girl {
+    lock
+    faceplayer
+    msgbox(format("One of my friend is so strong, even STONE types POKEMON can't harm her."))
+    release
+    end
+ }
+
+script OlivineCity_Text_Fisherman {
+    lock
+    faceplayer
+    msgbox(format("Hmpfff! I went to the Restaurant and ate too much. I feel like a SNORLAX; i need to REST."))
+    release
+    end
+}

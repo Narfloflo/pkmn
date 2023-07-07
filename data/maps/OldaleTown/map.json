@@ -32,8 +32,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
-      "x": 16,
-      "y": 11,
+      "x": 27,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -81,6 +81,58 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "OldaleTown_EventScript_Rival",
       "flag": "FLAG_HIDE_OLDALE_TOWN_RIVAL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
+      "x": 17,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POOCHYENA",
+      "x": 7,
+      "y": 29,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BOY_2",
+      "x": 27,
+      "y": 20,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Watchman",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+      "x": 2,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_UP_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -93,14 +145,14 @@
     },
     {
       "x": 15,
-      "y": 16,
+      "y": 12,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_HOUSE2",
       "dest_warp_id": "0"
     },
     {
-      "x": 6,
-      "y": 16,
+      "x": 23,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
@@ -111,6 +163,34 @@
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_MART",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 24,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_OLDALE_TOWN_HOUSE2",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 6,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 18,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_PUB",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 29,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_HOUSE",
+      "dest_warp_id": "10"
     }
   ],
   "coord_events": [
@@ -162,8 +242,8 @@
     },
     {
       "type": "sign",
-      "x": 7,
-      "y": 16,
+      "x": 24,
+      "y": 14,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
@@ -178,8 +258,8 @@
     },
     {
       "type": "sign",
-      "x": 8,
-      "y": 16,
+      "x": 25,
+      "y": 14,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
@@ -191,6 +271,38 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 21,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 23,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 28,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
     }
   ]
 }

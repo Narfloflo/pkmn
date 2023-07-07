@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE112",
-      "offset": 60,
+      "offset": 63,
       "direction": "down"
     },
     {
@@ -27,6 +27,11 @@
       "map": "MAP_ROUTE111",
       "offset": 0,
       "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE_TO_VOLCANO",
+      "offset": 9,
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -58,14 +63,14 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 62,
-      "y": 8,
+      "x": 60,
+      "y": 11,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
+      "trainer_sight_or_berry_tree_id": "1",
       "script": "Route113_EventScript_Jaylen",
       "flag": "0"
     },
@@ -97,8 +102,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 53,
-      "y": 7,
+      "x": 52,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -187,19 +192,6 @@
       "flag": "FLAG_ITEM_ROUTE_113_HYPER_POTION"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MANIAC",
-      "x": 75,
-      "y": 3,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "Route113_EventScript_Wyatt",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
       "x": 71,
       "y": 4,
@@ -213,22 +205,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
-      "x": 7,
-      "y": 6,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
-      "movement_range_x": 1,
-      "movement_range_y": 3,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "6",
-      "script": "Route113_EventScript_Sophie",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
       "x": 7,
-      "y": 13,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
       "movement_range_x": 1,
@@ -260,6 +239,27 @@
       "elevation": 0,
       "dest_map": "MAP_TERRA_CAVE_ENTRANCE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 63,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_MAP4",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 51,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_MAP4",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 55,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_MAP4",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
@@ -416,8 +416,8 @@
     },
     {
       "type": "sign",
-      "x": 58,
-      "y": 4,
+      "x": 64,
+      "y": 11,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route113_EventScript_TrainerTipsRegisterKeyItems"
@@ -439,8 +439,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 66,
-      "y": 3,
+      "x": 63,
+      "y": 4,
       "elevation": 3,
       "item": "ITEM_ETHER",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_113_ETHER"

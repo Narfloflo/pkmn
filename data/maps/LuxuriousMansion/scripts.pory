@@ -1,0 +1,17 @@
+mapscripts LuxuriousMansion_MapScripts {}
+
+script LuxuriousMansion_Text_Maid1 {
+    lock
+    faceplayer
+    msgbox(format("Hello.\pThe masters are not here currently. You can wander around but please do not go upstairs."))
+    release
+    end
+}
+
+script LuxuriousMansion_Text_Maid2 {
+    lock
+    faceplayer
+    msgbox(format("Hi, it's really nice of you to come visit us. But we are really busy. I advise you to leave."))
+    release
+    end
+}

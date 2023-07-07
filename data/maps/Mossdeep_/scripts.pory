@@ -1,0 +1,68 @@
+raw`Mossdeep__MapScripts::
+	.byte 0
+`
+script Mossdeep__EventScript_SpaceStation {
+    lockall
+    msgbox("Space Stations.\nBe Aware of the wild Pokemons !")
+    releaseall
+}
+
+script Mossdeep__EventScript_MohaBattle {
+    
+    trainerbattle_single(TRAINER_MOHA, Moha_Intro, Moha_Outro)
+    msgbox(PostbattleMoha, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+
+}
+
+text Moha_Intro{
+    "I'm so fricking rich !"
+}
+
+text Moha_Outro{
+    "But I'm so weak..."
+}
+
+text PostbattleMoha{
+    "I'll ask my dad to buy me\na KYOGRE next time."
+}
+
+script Mossdeep__Text_Seagate {
+    lock
+    msgbox(format("Gate to the MOSSDEEP docks"))
+    release
+    end
+}
+
+script Mossdeep__Text_Guard {
+    lock
+    faceplayer
+    msgbox(format("Hello, this area is restricted. It's the residency of the SPACE STATION staff."))
+    release
+    end
+}
+
+script Mossdeep__Text_Lady {
+    lock
+    faceplayer
+    msgbox(format("I just arrived here in MOSSDEEP CITY with the FERRY.\pI came from far away to see the SPACE STATION."))
+    releaseall
+    end
+}
+
+script Mossdeep__Text_Sailor {
+    lock
+    faceplayer
+    msgbox(format("So they build a passage through the stone to get to the docks huh?\pImpressive!"))
+    releaseall
+    end
+}
+
+script Mossdeep__Text_Attendant {
+    lock
+    faceplayer
+    msgbox(format("Hello.\pThis ship is strictly reserved for none TRAINERS. We can't take you onboard.\pI'm sorry."))
+    releaseall
+    end
+}

@@ -139,6 +139,23 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanFish
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MayFishing;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HotSpringsOldWoman;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSTidal;
+
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Policeman;
+
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ScientistF;
+
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Warrior;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WarriorF;
+
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RangerF;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RangerM;
+
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Farmer;
+
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Girl4;
+
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Beauty2;
+
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SubmarineShadow;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PichuDoll;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PikachuDoll;
@@ -388,6 +405,18 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_MAY_FISHING] =              &gObjectEventGraphicsInfo_MayFishing,
     [OBJ_EVENT_GFX_HOT_SPRINGS_OLD_WOMAN] =    &gObjectEventGraphicsInfo_HotSpringsOldWoman,
     [OBJ_EVENT_GFX_SS_TIDAL] =                 &gObjectEventGraphicsInfo_SSTidal,
+
+    
+    [OBJ_EVENT_GFX_POLICEMAN] =                &gObjectEventGraphicsInfo_Policeman,
+    [OBJ_EVENT_GFX_SCIENTIST_F] =              &gObjectEventGraphicsInfo_ScientistF,
+    [OBJ_EVENT_GFX_WARRIOR] =                  &gObjectEventGraphicsInfo_Warrior,
+    [OBJ_EVENT_GFX_WARRIOR_F] =                &gObjectEventGraphicsInfo_WarriorF,
+    [OBJ_EVENT_GFX_RANGER_F] =                &gObjectEventGraphicsInfo_RangerF,
+    [OBJ_EVENT_GFX_RANGER_M] =                &gObjectEventGraphicsInfo_RangerM,
+    [OBJ_EVENT_GFX_FARMER] =                  &gObjectEventGraphicsInfo_Farmer,
+    [OBJ_EVENT_GFX_GIRL_4] =                  &gObjectEventGraphicsInfo_Girl4,
+    [OBJ_EVENT_GFX_BEAUTY_2] =                  &gObjectEventGraphicsInfo_Beauty2,
+
     [OBJ_EVENT_GFX_SUBMARINE_SHADOW] =         &gObjectEventGraphicsInfo_SubmarineShadow,
     [OBJ_EVENT_GFX_PICHU_DOLL] =               &gObjectEventGraphicsInfo_PichuDoll,
     [OBJ_EVENT_GFX_PIKACHU_DOLL] =             &gObjectEventGraphicsInfo_PikachuDoll,

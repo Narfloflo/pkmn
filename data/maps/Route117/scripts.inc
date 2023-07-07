@@ -10,7 +10,7 @@ Route117_OnTransition:
 
 Route117_EventScript_TryMoveDayCareMan::
 	goto_if_unset FLAG_PENDING_DAYCARE_EGG, Route117_EventScript_StopMoveDayCareMan
-	setobjectxyperm LOCALID_DAYCARE_MAN, 47, 6
+	setobjectxyperm LOCALID_DAYCARE_MAN, 40, 15
 Route117_EventScript_StopMoveDayCareMan::
 	return
 
@@ -206,3 +206,232 @@ Route117_Text_DayCareSign:
 	.string "POKéMON DAY CARE\n"
 	.string "“Let us raise your POKéMON.”$"
 
+Route117_EventScript_Prof::
+	lock
+	faceplayer
+	msgbox Route117_EventScript_Prof_Text_0
+	release
+	end
+
+
+Route117_EventScript_StudentM::
+	lock
+	faceplayer
+	msgbox Route117_EventScript_StudentM_Text_0
+	release
+	end
+
+
+Route117_EventScript_StudentF::
+	lock
+	faceplayer
+	msgbox Route117_EventScript_StudentF_Text_0
+	release
+	end
+
+
+Route117_Text_SchoolSign::
+	lock
+	msgbox Route117_Text_SchoolSign_Text_0
+	release
+	end
+
+
+Route117_EventScript_LostGuy::
+	lock
+	faceplayer
+	msgbox Route117_EventScript_LostGuy_Text_0
+	release
+	end
+
+
+Route117_EventScript_RunningWoman::
+	lock
+	faceplayer
+	msgbox Route117_EventScript_RunningWoman_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_ne Route117_EventScript_RunningWoman_1
+	msgbox Route117_EventScript_RunningWoman_Text_2
+	release
+	end
+
+Route117_EventScript_RunningWoman_1:
+	message Route117_EventScript_RunningWoman_Text_1
+	call Route117_EventScript_ChooseMonRand
+	release
+	end
+
+
+Route117_EventScript_ChooseMonRand::
+	random 3
+	switch VAR_RESULT
+	case 0, Route117_EventScript_ChooseMonRand_3
+	case 1, Route117_EventScript_ChooseMonRand_4
+	case 2, Route117_EventScript_ChooseMonRand_5
+Route117_EventScript_ChooseMonRand_1:
+	return
+
+Route117_EventScript_ChooseMonRand_3:
+	call Route117_EventScript_Medicham
+	goto Route117_EventScript_ChooseMonRand_1
+
+Route117_EventScript_ChooseMonRand_4:
+	call Route117_EventScript_Hariyama
+	goto Route117_EventScript_ChooseMonRand_1
+
+Route117_EventScript_ChooseMonRand_5:
+	call Route117_EventScript_Machamp
+	goto Route117_EventScript_ChooseMonRand_1
+
+
+Route117_EventScript_Medicham::
+	playmoncry SPECIES_MEDICHAM, CRY_MODE_ENCOUNTER
+	waitmoncry
+	setwildbattle SPECIES_MEDICHAM, 45
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_eq Route117_EventScript_Medicham_2
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq Route117_EventScript_Medicham_3
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq Route117_EventScript_Medicham_4
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq Route117_EventScript_Medicham_5
+Route117_EventScript_Medicham_1:
+	return
+
+Route117_EventScript_Medicham_2:
+	msgbox Route117_EventScript_Medicham_Text_0
+	goto Route117_EventScript_Medicham_1
+
+Route117_EventScript_Medicham_3:
+	msgbox Route117_EventScript_Medicham_Text_1
+	goto Route117_EventScript_Medicham_1
+
+Route117_EventScript_Medicham_4:
+	msgbox Route117_EventScript_Medicham_Text_2
+	goto Route117_EventScript_Medicham_1
+
+Route117_EventScript_Medicham_5:
+	msgbox Route117_EventScript_Medicham_Text_2
+	goto Route117_EventScript_Medicham_1
+
+
+Route117_EventScript_Hariyama::
+	playmoncry SPECIES_HARIYAMA, CRY_MODE_ENCOUNTER
+	waitmoncry
+	setwildbattle SPECIES_HARIYAMA, 45
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_eq Route117_EventScript_Hariyama_2
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq Route117_EventScript_Hariyama_3
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq Route117_EventScript_Hariyama_4
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq Route117_EventScript_Hariyama_5
+Route117_EventScript_Hariyama_1:
+	return
+
+Route117_EventScript_Hariyama_2:
+	msgbox Route117_EventScript_Hariyama_Text_0
+	goto Route117_EventScript_Hariyama_1
+
+Route117_EventScript_Hariyama_3:
+	msgbox Route117_EventScript_Medicham_Text_1
+	goto Route117_EventScript_Hariyama_1
+
+Route117_EventScript_Hariyama_4:
+	msgbox Route117_EventScript_Medicham_Text_2
+	goto Route117_EventScript_Hariyama_1
+
+Route117_EventScript_Hariyama_5:
+	msgbox Route117_EventScript_Medicham_Text_2
+	goto Route117_EventScript_Hariyama_1
+
+
+Route117_EventScript_Machamp::
+	playmoncry SPECIES_MACHAMP, CRY_MODE_ENCOUNTER
+	waitmoncry
+	setwildbattle SPECIES_MACHAMP, 45
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_eq Route117_EventScript_Machamp_2
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq Route117_EventScript_Machamp_3
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq Route117_EventScript_Machamp_4
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq Route117_EventScript_Machamp_5
+Route117_EventScript_Machamp_1:
+	return
+
+Route117_EventScript_Machamp_2:
+	msgbox Route117_EventScript_Machamp_Text_0
+	goto Route117_EventScript_Machamp_1
+
+Route117_EventScript_Machamp_3:
+	msgbox Route117_EventScript_Medicham_Text_1
+	goto Route117_EventScript_Machamp_1
+
+Route117_EventScript_Machamp_4:
+	msgbox Route117_EventScript_Medicham_Text_2
+	goto Route117_EventScript_Machamp_1
+
+Route117_EventScript_Machamp_5:
+	msgbox Route117_EventScript_Medicham_Text_2
+	goto Route117_EventScript_Machamp_1
+
+
+Route117_EventScript_Prof_Text_0:
+	.string "The students are all running around. I'm\n"
+	.string "kinda useless$"
+
+Route117_EventScript_StudentM_Text_0:
+	.string "If you are lucky enough, you can find a\n"
+	.string "EEVEE in the GRASS here.$"
+
+Route117_EventScript_StudentF_Text_0:
+	.string "I bet you've come across several\n"
+	.string "SCHOOLS during your journey? The\l"
+	.string "authorities thought it was a good idea\l"
+	.string "to build SCHOOLS everywhere to\l"
+	.string "prevent us to beat all the GYMS.\p"
+	.string "So lame!$"
+
+Route117_Text_SchoolSign_Text_0:
+	.string "MAUVILLE and VERDANTURF SCHOOL\p"
+	.string "“If you are tired of CASINOS, come and\n"
+	.string "learn a few moves.”$"
+
+Route117_EventScript_LostGuy_Text_0:
+	.string "Leave me, I'm meditating.$"
+
+Route117_EventScript_RunningWoman_Text_0:
+	.string "So you just think you can stop me from\n"
+	.string "my training? You have to pay for this!\l"
+	.string "Wanna try your strength?$"
+
+Route117_EventScript_RunningWoman_Text_1:
+	.string "Oh you are so dead!$"
+
+Route117_EventScript_RunningWoman_Text_2:
+	.string "Pfff you so weak, so weak!$"
+
+Route117_EventScript_Medicham_Text_0:
+	.string "YOU CHEATED! MEDICHAM IS THE BEST$"
+
+Route117_EventScript_Medicham_Text_1:
+	.string "... Yeah, you were just lucky...$"
+
+Route117_EventScript_Medicham_Text_2:
+	.string "AH! I knew you were weak!$"
+
+Route117_EventScript_Hariyama_Text_0:
+	.string "YOU CHEATED! HARIYAMA IS THE BEST$"
+
+Route117_EventScript_Machamp_Text_0:
+	.string "YOU CHEATED! MACHAMP IS THE BEST$"

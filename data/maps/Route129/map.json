@@ -27,13 +27,23 @@
       "map": "MAP_UNDERWATER_ROUTE129",
       "offset": 0,
       "direction": "dive"
+    },
+    {
+      "map": "MAP_NEW_MAP3",
+      "offset": -7,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_ICE_PATH",
+      "offset": 43,
+      "direction": "down"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
-      "x": 28,
-      "y": 16,
+      "x": 30,
+      "y": 12,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_LEFT_UP_RIGHT",
       "movement_range_x": 3,
@@ -45,8 +55,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
-      "x": 10,
-      "y": 14,
+      "x": 6,
+      "y": 8,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_RIGHT_DOWN_LEFT_UP",
       "movement_range_x": 5,
@@ -71,8 +81,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
-      "x": 35,
-      "y": 9,
+      "x": 49,
+      "y": 24,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_ROTATE_CLOCKWISE",
       "movement_range_x": 1,
@@ -96,7 +106,13 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
-  "coord_events": [],
-  "bg_events": []
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
 }

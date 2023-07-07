@@ -20,6 +20,7 @@
 #include "sound.h"
 #include "string_util.h"
 #include "strings.h"
+#include "string.h"
 #include "task.h"
 #include "text.h"
 #include "constants/battle_frontier.h"
@@ -1199,7 +1200,7 @@ static void SaveApprentice(void)
 static void SetSavedApprenticeTrainerGfxId(void)
 {
     u8 i;
-    u8 objectEventGfxId;
+    u16 objectEventGfxId;
     u8 class = gApprentices[gSaveBlock2Ptr->apprentices[0].id].facilityClass;
 
     for (i = 0; i < ARRAY_COUNT(gTowerMaleFacilityClasses) && gTowerMaleFacilityClasses[i] != class; i++)
@@ -1223,7 +1224,7 @@ static void SetSavedApprenticeTrainerGfxId(void)
 static void SetPlayerApprenticeTrainerGfxId(void)
 {
     u8 i;
-    u8 objectEventGfxId;
+    u16 objectEventGfxId;
     u8 class = gApprentices[PLAYER_APPRENTICE.id].facilityClass;
 
     for (i = 0; i < ARRAY_COUNT(gTowerMaleFacilityClasses) && gTowerMaleFacilityClasses[i] != class; i++)

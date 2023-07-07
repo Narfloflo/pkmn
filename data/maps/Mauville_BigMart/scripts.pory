@@ -1,0 +1,126 @@
+raw`Mauville_BigMart_MapScripts::
+	.byte 0
+
+    SCRIPT_SelfTrade_V1::
+	lock
+	faceplayer
+	msgbox SCRIPT_SelfTrade_Text_IllTradeIfYouWant, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq SCRIPT_SelfTrade_DeclineTrade
+	special ChoosePartyMon
+	waitstate
+	compare VAR_0x8004, 255
+	goto_if_eq SCRIPT_SelfTrade_DeclineTrade
+	copyvar VAR_0x8005, VAR_0x8004
+	setvar VAR_0x8004, 6
+	special CreateInGameTradePokemon
+	special DoInGameTradeScene
+	waitstate
+	msgbox SCRIPT_SelfTrade_Text_ComeBack, MSGBOX_DEFAULT
+	release
+	end
+
+SCRIPT_SelfTrade_V2::
+	lock
+	faceplayer
+	msgbox SCRIPT_SelfTrade_Text_IllTradeIfYouWant, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq SCRIPT_SelfTrade_DeclineTrade
+	special ChoosePartyMon
+	waitstate
+	compare VAR_0x8004, 255
+	goto_if_eq SCRIPT_SelfTrade_DeclineTrade
+	copyvar VAR_0x8005, VAR_0x8004
+	setvar VAR_0x8004, 7
+	special CreateInGameTradePokemon
+	special DoInGameTradeScene
+	waitstate
+	setvar VAR_0x8004, 8
+	special CreateInGameTradePokemon
+	special DoInGameTradeScene
+	waitstate
+	msgbox SCRIPT_SelfTrade_Text_ComeBack, MSGBOX_DEFAULT
+	release
+	end
+
+SCRIPT_SelfTrade_DeclineTrade::
+	msgbox SCRIPT_SelfTrade_Text_YouDontWantToThatsOkay, MSGBOX_DEFAULT
+	release
+	end
+
+SCRIPT_SelfTrade_Text_IllTradeIfYouWant:
+	.string "I will help you to trade a pokemon\n"
+	.string "with yourself!$"
+
+SCRIPT_SelfTrade_Text_ComeBack:
+	.string "Come back anytime.$"
+
+SCRIPT_SelfTrade_Text_YouDontWantToThatsOkay:
+	.string "You dont want to?\n"
+    .string "Okay come back anytime$"`
+
+script NewVendor1 {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemart(Vendor1)
+    msgbox(format("Please come again!"))
+    release
+}
+
+mart Vendor1 {
+    ITEM_TM35
+    ITEM_TM47
+    ITEM_TM23
+    ITEM_TM27
+}
+
+script NewVendor2 {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemart(Vendor2)
+    msgbox(format("Please come again!"))
+    release
+}
+
+mart Vendor2 {
+    ITEM_MOON_STONE
+    ITEM_SUN_STONE
+    ITEM_LEAF_STONE
+    ITEM_FIRE_STONE
+    ITEM_WATER_STONE
+    ITEM_063
+    ITEM_064
+}
+
+// script MartTutor {
+    // lock
+    // faceplayer
+    // msgbox(format("Hello, I can teach you a few MOVES for a few bucks.\pInterested?")MSGBOX_YESNO)
+    // showmoneybox(25,5)
+    // if(var(VAR_RESULT = NO)){
+    //     msgbox(format("It's okay. See you later then."))
+    //     hidemoneybox
+    // }else{
+    //     message(format("Which MOVE should be taught?"))
+    //     hidemoneybox
+    //     multichoice(25,5,SELECTMOVE,0)
+    //     closemessage
+    //         if(var(VAR_RESULT)==0){
+    //             call(MOVE)
+    //             removemoney(5000)
+    //             playbgm(SE_SHOP,false)
+    //     }
+    // }
+
+// }
+
+// script MOVE {
+//     setvar(VAR_0x8005, TUTOR_MOVE_FRENZY_PLANT)
+//     call(MoveTutor_EventScript_OpenPartyMenu)
+//     release
+//     end
+// }

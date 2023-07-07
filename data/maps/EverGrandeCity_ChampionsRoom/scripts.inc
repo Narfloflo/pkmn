@@ -224,51 +224,29 @@ EverGrandeCity_ChampionsRoom_Movement_BirchArrives:
 	step_end
 
 EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
-	.string "WALLACE: Welcome, {PLAYER}{KUN}.\p"
-	.string "That incident in SOOTOPOLIS CITY…\n"
-	.string "That was superb work, putting an end\l"
-	.string "to that crisis all by yourself.\p"
-	.string "Oops!\p"
-	.string "It wouldn't be fair to say that you\n"
-	.string "alone ended the crisis.\p"
-	.string "You overcame that difficult situation\n"
-	.string "by working as one with your POKéMON.\p"
-	.string "We TRAINERS raise POKéMON by giving\n"
-	.string "them items and by teaching them new\l"
-	.string "techniques for battle.\p"
-	.string "But we ourselves also learn many\n"
-	.string "things from POKéMON.\p"
-	.string "And this is where your achievements\n"
-	.string "are put to the test against what\l"
-	.string "others like you have achieved.\p"
-	.string "Now!\p"
-	.string "Who can most elegantly dance with\n"
-	.string "their POKéMON in HOENN?\p"
-	.string "Show me right here and now!$"
+	.string "MOM: Hi {PLAYER}! I hope you are well?\n"
+	.string "What, you didn't expect me here? \l"
+	.string "You though it would be WALLACE instead\l"
+	.string "of me? Hahaha, let me laugh!\p"
+	.string "What? You though we move to HOENN\n"
+	.string "because of your DAD's job in a GYM?\l"
+	.string "You are totally wrong. While you were\l"
+	.string "running around the world, I was beating\l"
+	.string "the shit out of all the TRAINERS.\p"
+	.string "Now I have to see if you deserve to be\n"
+	.string "my kid!$"
 
 EverGrandeCity_ChampionsRoom_Text_Defeat:
-	.string "I, the CHAMPION, fall in defeat…\p"
-	.string "That was wonderful work.\n"
-	.string "You were elegant, infuriatingly so.\l"
-	.string "And yet it was utterly glorious!\p"
-	.string "Kudos to you, {PLAYER}{KUN}!\p"
-	.string "You are a truly noble POKéMON\n"
-	.string "TRAINER!$"
+	.string "Ahahah! I was tough on you, but you\n"
+	.string "didn't back down. I proud of you.$"
 
 EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech:
-	.string "WALLACE: The POKéMON you sent into\n"
-	.string "battle…\p"
-	.string "At times they danced like a spring\n"
-	.string "breeze, and at times they struck\l"
-	.string "like lightning.\p"
-	.string "It was with light, yet surefooted,\n"
-	.string "elegance that you led your POKéMON.\p"
-	.string "Even I felt bedazzled by your\n"
-	.string "masterful performance!\p"
-	.string "You now stand at the glorious peak\n"
-	.string "of the POKéMON LEAGUE.\p"
-	.string "I now proclaim you to be the new\n"
-	.string "HOENN region…$"
+	.string "MOM: Such battle, I feel young again!\n"
+	.string "You really deserve to be our kid. Even\l"
+	.string "though I saw some flaws in your\l"
+	.string "strategy, it must be your DAD side.\p"
+	.string "Hahaha! I'm kidding!\p"
+	.string "Well, I now proclaim you the new HOENN...$"
 
 EverGrandeCity_ChampionsRoom_Text_MayAdvice:
 	.string "MAY: {PLAYER}{KUN}!\p"
@@ -314,17 +292,13 @@ EverGrandeCity_ChampionsRoom_Text_BirchCongratulations:
 	.string "Now, go proudly into the final room!$"
 
 EverGrandeCity_ChampionsRoom_Text_WallaceComeWithMe:
-	.string "WALLACE: {PLAYER}{KUN}…\p"
-	.string "No, let me rephrase that properly.\p"
-	.string "The new CHAMPION!\p"
-	.string "Come with me.$"
+	.string "MOM: So {PLAYER} you are now the new\n"
+	.string "CHAMPION of HOENN! Come with me.$"
 
 EverGrandeCity_ChampionsRoom_Text_WallaceWaitOutside:
-	.string "WALLACE: I'm sorry, but…\p"
-	.string "From here on, only those TRAINERS who\n"
-	.string "have become CHAMPIONS may enter.\p"
-	.string "You'll have to wait outside with\n"
-	.string "PROF. BIRCH.$"
+	.string "MOM: Hummm... Sorry but only the two of\n"
+	.string "us can go there. You will have to wait\l"
+	.string "outside with PROF. BIRCH.$"
 
 EverGrandeCity_ChampionsRoom_Text_MayCongratulations:
 	.string "MAY: Groan…\p"
@@ -341,4 +315,3 @@ EverGrandeCity_ChampionsRoom_Text_BrendanCongratulations:
 	.string "It can't be helped if that's the rule.\p"
 	.string "{PLAYER}, way to go!\n"
 	.string "Congratulations!$"
-

@@ -1,3 +1,4 @@
+#include "string.h"
 #ifndef GUARD_LINKMANAGER_H
 #define GUARD_LINKMANAGER_H
 

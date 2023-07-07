@@ -27,6 +27,11 @@
       "map": "MAP_UNDERWATER_ROUTE126",
       "offset": 0,
       "direction": "dive"
+    },
+    {
+      "map": "MAP_FIRE_ISLAND",
+      "offset": -38,
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -148,7 +153,13 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
-  "coord_events": [],
-  "bg_events": []
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
 }

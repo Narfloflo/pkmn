@@ -474,3 +474,47 @@ PetalburgWoods_Text_TrainerTipsPP:
 	.string "If a POKéMON runs out of PP, it must be\n"
 	.string "taken to a POKéMON CENTER.$"
 
+PetalburgWoods_EventScript_Tree::
+	lock
+	msgbox PetalburgWoods_EventScript_Tree_Text_0
+	call_if_set FLAG_DEFEATED_MOSSDEEP_GYM, PetalburgWoods_EventScript_TriggerCelebi
+	release
+	end
+
+
+PetalburgWoods_EventScript_TriggerCelebi::
+	lock
+	msgbox PetalburgWoods_EventScript_TriggerCelebi_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_ne PetalburgWoods_EventScript_TriggerCelebi_2
+	msgbox PetalburgWoods_EventScript_TriggerCelebi_Text_2
+PetalburgWoods_EventScript_TriggerCelebi_1:
+	release
+	end
+
+PetalburgWoods_EventScript_TriggerCelebi_2:
+	msgbox PetalburgWoods_EventScript_TriggerCelebi_Text_1
+	call WarpToCelebi
+	goto PetalburgWoods_EventScript_TriggerCelebi_1
+
+
+WarpToCelebi::
+	fadescreen FADE_TO_BLACK
+	delay 5
+	warp MAP_CELEBI_CHAMBER, 5, 4
+	fadescreen FADE_FROM_BLACK
+	return
+
+
+PetalburgWoods_EventScript_Tree_Text_0:
+	.string "This tree is odd...$"
+
+PetalburgWoods_EventScript_TriggerCelebi_Text_0:
+	.string "{PLAYER}: Huh? Something is shining\n"
+	.string "here... I can investigate a little more?$"
+
+PetalburgWoods_EventScript_TriggerCelebi_Text_1:
+	.string "{PLAYER}: What?!$"
+
+PetalburgWoods_EventScript_TriggerCelebi_Text_2:
+	.string "Humm... Not today so.$"

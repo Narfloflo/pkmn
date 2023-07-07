@@ -39,7 +39,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "graphics_id": "OBJ_EVENT_GFX_WARRIOR",
       "x": 5,
       "y": 15,
       "elevation": 3,
@@ -104,7 +104,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_4",
       "x": 15,
       "y": 50,
       "elevation": 3,
@@ -260,7 +260,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_4",
       "x": 15,
       "y": 7,
       "elevation": 3,
@@ -348,7 +348,9 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "secret_base",

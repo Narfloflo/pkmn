@@ -1,0 +1,30 @@
+raw`DewfordTrainingField_MapScripts::
+	.byte 0`
+
+    script DewfordTrainingField_Text_KarateGuard {
+        lock
+        faceplayer
+        if(flag(FLAG_DEFEATED_DEWFORD_GYM)){
+            applymovement(1,ExclamationSolo)
+            msgbox(format("Huh? You defeat BRAWLY?\p..................... Ok I'll let you go."))
+            applymovement(1,KarateMove)
+            waitmovement(0)
+            setflag(FLAG_UNUSED_0x020)
+            release
+            end
+        } else{
+            msgbox(format("Defeat BRAWLY and I'll let you go. Haha, a small fry like you will be smash!"))
+            release
+            end
+        }
+
+    }
+    movement KarateMove {
+        jump_up
+        walk_up 
+        face_down
+    }
+    movement ExclamationSolo {
+        emote_exclamation_mark
+    }
+

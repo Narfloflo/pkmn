@@ -15,7 +15,7 @@ Route116_OnTransition:
 	end
 
 Route116_EventScript_SetWandasBoyfriendPos::
-	setobjectxyperm LOCALID_WANDAS_BF_OUTSIDE, 38, 10
+	setobjectxyperm LOCALID_WANDAS_BF_OUTSIDE, 40, 10
 	return
 
 Route116_OnLoad:
@@ -470,4 +470,8 @@ Route116_Text_TrainerTipsBagHasPockets:
 	.string "placed in the appropriate POCKETS.\p"
 	.string "No TRAINER can afford to be without\n"
 	.string "a BAG of their own.$"
+
+Route116_EventScript_PositionGlassMen::
+	setobjectxy 21, 75, 13
+	return
 

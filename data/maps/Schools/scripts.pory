@@ -1,0 +1,72 @@
+raw`Schools_MapScripts::
+	.byte 0
+`
+
+script Schools_Text_Teacher {
+    lock
+    faceplayer
+    msgbox(format("I only wish the kids would pay attention in the class..."))
+    release
+    end
+}
+
+script Schools_Text_StudentF {
+    lock
+    faceplayer
+    msgbox(format("It's not that it's boring, but honestly, why would I pay attention to something I already know :\nWhen you are poisoned, you lose HP.\pOh come on, I want to catch a LENGENDARY POKEMON or something..."))
+    release
+    end
+}
+
+script Schools_Text_DisturbingGirl1 {
+    lock
+    msgbox(format("YEAH ! Smash that button and finish him !"))
+    release
+    end
+}
+
+script Schools_Text_DisturbingGirl2 {
+    lock
+    msgbox(format("Use fatality pleeeeeease, I want some blood !"))
+    release
+    end
+}
+
+script Schools_Text_Creep {
+    lock
+    faceplayer
+    msgbox(format("{PLAYER}: And I guess you are a student too ?\pCreepy guy : Hummm yes !... I want to know more about baby POKEMON.\p{PLAYER}: Degenerate..."))
+    release
+    end
+}
+
+script Schools_Text_GoodStudent {
+    lock
+    msgbox(format("And to cure a POKEMON from being poisoned, we can use an ANTIDOTE.\pSIR SIR ! Can I read about sleeping status ?"))
+    release
+    end
+}
+
+script Schools_Text_BugStudent {
+    lock
+    faceplayer
+    msgbox(format("The guy over there is such a sucker... Tomorrow, I'll beat him with my PINSIR. I'll see who's the best."))
+    release
+    end
+}
+
+script Schools_Text_StudentM {
+    lock
+    faceplayer
+    msgbox(format("I'm busy studying............................No I'm kidding, I'm bore as fuck. I want a cigarette.\p{PLAYER}: Excuse me ?!"))
+    release
+    end
+}
+
+script Schools_Text_StudentM2 {
+    lock
+    faceplayer
+    msgbox(format("When I'll grow up, I will ride a lot of GYARADOS and ravage the world.\pNobody would defy me.\p{PLAYER}: OKAY... Well I'm leaving..."))
+    release
+    end
+}

@@ -48,6 +48,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_WHITE_FLUTE] = {gItemIcon_Flute, gItemIconPalette_WhiteFlute},
     [ITEM_BERRY_JUICE] = {gItemIcon_BerryJuice, gItemIconPalette_BerryJuice},
     [ITEM_SACRED_ASH] = {gItemIcon_SacredAsh, gItemIconPalette_SacredAsh},
+    [ITEM_SANDWICH] = {gItemIcon_Sandwich, gItemIconPalette_Sandwich},
     // Collectibles
     [ITEM_SHOAL_SALT] = {gItemIcon_Powder, gItemIconPalette_ShoalSalt},
     [ITEM_SHOAL_SHELL] = {gItemIcon_ShoalShell, gItemIconPalette_Shell},
@@ -111,8 +112,8 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_WATER_STONE] = {gItemIcon_WaterStone, gItemIconPalette_WaterStone},
     [ITEM_LEAF_STONE] = {gItemIcon_LeafStone, gItemIconPalette_LeafStone},
     // ????????
-    [ITEM_063] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_064] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_063] = {gItemIcon_DeepSeaScale, gItemIconPalette_DeepSeaScale},
+    [ITEM_064] = {gItemIcon_DragonScale, gItemIconPalette_DragonScale},
     [ITEM_065] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_066] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // Valuables

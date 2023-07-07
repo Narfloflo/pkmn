@@ -1,0 +1,42 @@
+raw`slatedockcopy_MapScripts::
+	.byte 0
+`
+script SailorToKanto{ 
+    lock
+    faceplayer
+    if(flag(FLAG_DEFEATED_MOSSDEEP_GYM)) {
+        msgbox(format("So you beat all the CHAMPIONS of HOENN, good. I can take you to KANTO, only if you want."), MSGBOX_YESNO)
+        if(var(VAR_RESULT) !=0){
+            msgbox("Please, come in !")
+            applymovement(1, moveToShip)
+            applymovement(OBJ_EVENT_ID_PLAYER, MoveInShip)
+            waitmovement(0)
+
+            call(WarpToKanto)
+        } else{
+            msgbox("Another time then !")
+        }
+     } else {
+        msgbox(format("I'm sorry but I can't take you to KANTO. You haven't receive all the BADGES. Come once you have them all."))
+    }
+    release
+    end
+}
+ 
+ script WarpToKanto{
+    fadescreen(FADE_TO_BLACK)
+    playse(SE_RG_SS_ANNE_HORN)
+    delay(60)
+    warp(MAP_VERMILION, 16, 45)
+    fadescreen(FADE_FROM_BLACK)
+ }
+ movement moveToShip {
+    walk_left
+    face_right
+    step_end
+ }
+ movement MoveInShip {
+     walk_up *2
+     set_invisible
+     step_end
+ }

@@ -268,7 +268,6 @@ DewfordTown_Movement_SailToPetalburg:
 	walk_fast_left
 	walk_fast_left
 	walk_fast_left
-	walk_fast_left
 	walk_fast_up
 	walk_fast_up
 	walk_fast_up
@@ -368,6 +367,7 @@ DewfordTown_Movement_SailToPetalburg:
 	walk_faster_left
 	walk_faster_left
 	walk_faster_left
+	walk_fast_left
 	walk_fast_left
 	walk_fast_left
 	walk_fast_up
@@ -544,6 +544,36 @@ DewfordTown_Movement_SailToSlateport:
 	walk_faster_right
 	walk_faster_right
 	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right	
 	walk_fast_right
 	walk_fast_right
 	walk_fast_up
@@ -558,8 +588,8 @@ DewfordTown_Movement_SailToSlateport:
 	walk_faster_up
 	walk_faster_up
 	walk_faster_up
-	walk_fast_up
-	walk_fast_up
+	walk_faster_up
+	walk_faster_up
 	walk_fast_up
 	walk_fast_up
 	walk_fast_up
@@ -800,3 +830,189 @@ DewfordTown_Text_YeahDefinitionOfInRightNow:
 	.string "Yeah, absolutely right!\p"
 	.string "“{STR_VAR_1}” is the\n"
 	.string "definition of “in” right now.$"
+
+Dewford_Text_BeachVendor::
+	lock
+	message Dewford_Text_BeachVendor_Text_0
+	waitmessage
+	pokemart BeachItems
+	msgbox Dewford_Text_BeachVendor_Text_1
+	release
+	return
+
+
+	.align 2
+BeachItems:
+	.2byte ITEM_POTION
+	.2byte ITEM_DIVE_BALL
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_DREAM_MAIL
+	.2byte ITEM_BERRY_JUICE
+	.2byte ITEM_NONE
+
+Dewford_Text_Fisherman::
+	lock
+	faceplayer
+	msgbox Dewford_Text_Fisherman_Text_0
+	release
+	end
+
+
+Dewford_Text_School::
+	lock
+	msgbox Dewford_Text_School_Text_0
+	release
+	end
+
+
+Dewford_Text_Trainer1::
+	lock
+	msgbox Dewford_Text_Trainer1_Text_0
+	release
+	end
+
+
+Dewford_Text_Trainer2::
+	lock
+	msgbox Dewford_Text_Trainer2_Text_0
+	release
+	end
+
+
+Dewford_Text_Teacher::
+	lock
+	faceplayer
+	msgbox Dewford_Text_Teacher_Text_0
+	release
+	end
+
+
+Dewford_Text_Market::
+	lock
+	msgbox Dewford_Text_Market_Text_0
+	release
+	end
+
+
+Dewford_Text_WanderingFisherman::
+	lock
+	faceplayer
+	msgbox Dewford_Text_WanderingFisherman_Text_0
+	release
+	end
+
+
+Dewford_Text_TouristF::
+	lock
+	faceplayer
+	msgbox Dewford_Text_TouristF_Text_0
+	release
+	end
+
+
+Dewford_Text_TouristM::
+	lock
+	faceplayer
+	msgbox Dewford_Text_TouristM_Text_0
+	release
+	end
+
+
+Dewford_Text_TuberBoy::
+	lock
+	faceplayer
+	msgbox Dewford_Text_TuberBoy_Text_0
+	release
+	end
+
+
+Dewford_Text_TuberGirl::
+	lock
+	faceplayer
+	msgbox Dewford_Text_TuberGirl_Text_0
+	release
+	end
+
+
+Dewford_Text_Doll::
+	lock
+	msgbox Dewford_Text_Doll_Text_0
+	release
+	end
+
+
+Dewford_Text_TrainingGround::
+	lock
+	msgbox Dewford_Text_TrainingGround_Text_0
+	release
+	end
+
+
+Dewford_Text_BeachVendor_Text_0:
+	.string "Hello there, need anything ?$"
+
+Dewford_Text_BeachVendor_Text_1:
+	.string "Come again soon.$"
+
+Dewford_Text_Fisherman_Text_0:
+	.string "I'm here to fish a lot of POKEMON.\n"
+	.string "Unfortunately, I only found trashes so\l"
+	.string "far...$"
+
+Dewford_Text_School_Text_0:
+	.string "DEWFORD TOWN School. Just like the\n"
+	.string "other ones, but in DEWFORD TOWN !$"
+
+Dewford_Text_Trainer1_Text_0:
+	.string "Next I'll use my METAPOD and you'll be\n"
+	.string "doom !$"
+
+Dewford_Text_Trainer2_Text_0:
+	.string "Using my KAKUNA, I'm unbeatable !$"
+
+Dewford_Text_Teacher_Text_0:
+	.string "Kid here are really motivated to become\n"
+	.string "the best TRAINERS. But they really are\l"
+	.string "so bad.\p"
+	.string "Makes me want to quit my job.$"
+
+Dewford_Text_Market_Text_0:
+	.string "DEWFORD TOWN Market.\p"
+	.string "What you are looking for is not here.$"
+
+Dewford_Text_WanderingFisherman_Text_0:
+	.string "Life is good here. But sometimes there\n"
+	.string "are a lot of tourists.\p"
+	.string "I hate them, especially those from\n"
+	.string "JOHTO !\p"
+	.string "{PLAYER}: Well, I'll be gone so...$"
+
+Dewford_Text_TouristF_Text_0:
+	.string "What a nice place. But I feel like I'm\n"
+	.string "not welcome here.$"
+
+Dewford_Text_TouristM_Text_0:
+	.string "We used the ABRA TELEPORTER SERVICE\n"
+	.string "to get here. But I think that they left\l"
+	.string "the places without us. I guess we will\l"
+	.string "have to stay here for a while.\p"
+	.string "{PLAYER}: Wow life is so hard......\n"
+	.string "SIGH......\p"
+	.string "Boomer.$"
+
+Dewford_Text_TuberBoy_Text_0:
+	.string "Look at my SQUIRTLE. You can find one\n"
+	.string "if you really are lucky and talented.$"
+
+Dewford_Text_TuberGirl_Text_0:
+	.string "I swear to ARCEUS, he is so dumb with\n"
+	.string "his DOLL. I can't believe he trust what\l"
+	.string "he was told about SQUIRTLE.\p"
+	.string "Dumbass kid.$"
+
+Dewford_Text_Doll_Text_0:
+	.string "{PLAYER}: It's just a crappy DOLL.\n"
+	.string "Not even close from a SQUIRTLE.$"
+
+Dewford_Text_TrainingGround_Text_0:
+	.string "TRAINING GROUND at the left$"

@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
@@ -93,19 +93,6 @@
       "flag": "FLAG_ITEM_VICTORY_ROAD_1F_PP_UP"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WALLY",
-      "x": 31,
-      "y": 9,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "VictoryRoad_1F_EventScript_ExitWally",
-      "flag": "FLAG_HIDE_VICTORY_ROAD_EXIT_WALLY"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
       "x": 29,
       "y": 17,
@@ -141,11 +128,11 @@
       "dest_warp_id": "2"
     },
     {
-      "x": 39,
-      "y": 5,
+      "x": 31,
+      "y": 10,
       "elevation": 3,
-      "dest_map": "MAP_EVER_GRANDE_CITY",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_VICTORY_ROAD_2F",
+      "dest_warp_id": "0"
     },
     {
       "x": 21,

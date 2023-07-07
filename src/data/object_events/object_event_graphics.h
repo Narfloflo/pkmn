@@ -252,6 +252,19 @@ const u32 gObjectEventPic_CableCar[] = INCBIN_U32("graphics/object_events/pics/m
 const u16 gObjectEventPal_CableCar[] = INCBIN_U16("graphics/object_events/palettes/cable_car.gbapal");
 const u32 gObjectEventPic_SSTidal[] = INCBIN_U32("graphics/object_events/pics/misc/ss_tidal.4bpp");
 const u16 gObjectEventPal_SSTidal[] = INCBIN_U16("graphics/object_events/palettes/ss_tidal.gbapal");
+
+
+const u32 gObjectEventPic_Policeman[] = INCBIN_U32("graphics/object_events/pics/people/policeman.4bpp");
+const u32 gObjectEventPic_ScientistF[] = INCBIN_U32("graphics/object_events/pics/people/scientist_f.4bpp");
+const u32 gObjectEventPic_Warrior[] = INCBIN_U32("graphics/object_events/pics/people/old_warrior.4bpp");
+const u32 gObjectEventPic_WarriorF[] = INCBIN_U32("graphics/object_events/pics/people/old_warrior_f.4bpp");
+const u32 gObjectEventPic_RangerF[] = INCBIN_U32("graphics/object_events/pics/people/ranger_f.4bpp");
+const u32 gObjectEventPic_RangerM[] = INCBIN_U32("graphics/object_events/pics/people/ranger_m.4bpp");
+const u32 gObjectEventPic_Farmer[] = INCBIN_U32("graphics/object_events/pics/people/farmer.4bpp");
+const u32 gObjectEventPic_Girl4[] = INCBIN_U32("graphics/object_events/pics/people/girl_4.4bpp");
+const u32 gObjectEventPic_Beauty2[] = INCBIN_U32("graphics/object_events/pics/people/beauty_2.4bpp");
+
+
 const u32 gFieldEffectObjectPic_Sparkle[] = INCBIN_U32("graphics/field_effects/pics/sparkle.4bpp");
 const u32 gObjectEventPic_BerryTreeDirtPile[] = INCBIN_U32("graphics/object_events/pics/berry_trees/dirt_pile.4bpp");
 const u32 gObjectEventPic_BerryTreeSprout[] = INCBIN_U32("graphics/object_events/pics/berry_trees/sprout.4bpp");
