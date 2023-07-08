@@ -526,14 +526,14 @@
       "x": 52,
       "y": 21,
       "elevation": 0,
-      "dest_map": "MAP_RUSTBORO_CITY",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_RUSTOBORO_HALL_TOWN",
+      "dest_warp_id": "1"
     },
     {
       "x": 51,
       "y": 21,
       "elevation": 0,
-      "dest_map": "MAP_RUSTBORO_CITY",
+      "dest_map": "MAP_RUSTOBORO_HALL_TOWN",
       "dest_warp_id": "0"
     }
   ],

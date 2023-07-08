@@ -155,6 +155,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Farmer;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Girl4;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Beauty2;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Worker;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SubmarineShadow;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PichuDoll;
@@ -416,6 +417,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_FARMER] =                  &gObjectEventGraphicsInfo_Farmer,
     [OBJ_EVENT_GFX_GIRL_4] =                  &gObjectEventGraphicsInfo_Girl4,
     [OBJ_EVENT_GFX_BEAUTY_2] =                  &gObjectEventGraphicsInfo_Beauty2,
+    [OBJ_EVENT_GFX_WORKER] =                  &gObjectEventGraphicsInfo_Worker,
 
     [OBJ_EVENT_GFX_SUBMARINE_SHADOW] =         &gObjectEventGraphicsInfo_SubmarineShadow,
     [OBJ_EVENT_GFX_PICHU_DOLL] =               &gObjectEventGraphicsInfo_PichuDoll,

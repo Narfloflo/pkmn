@@ -5430,6 +5430,16 @@
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/OlivineCityMart/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCityMart/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUSTOBORO_HALL_TOWN",
+      "name": "Rustoboro_HallTown_Layout",
+      "width": 12,
+      "height": 40,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Rustoboro_HallTown/border.bin",
+      "blockdata_filepath": "data/layouts/Rustoboro_HallTown/map.bin"
     }
   ]
 }

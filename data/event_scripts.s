@@ -1263,3 +1263,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/OlivineCityPort/scripts.inc"
 
 	.include "data/maps/OlivineCityMart/scripts.inc"
+
+	.include "data/maps/Rustoboro_HallTown/scripts.inc"
