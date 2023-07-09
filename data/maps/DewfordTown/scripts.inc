@@ -1001,18 +1001,18 @@ Dewford_Text_TouristM_Text_0:
 	.string "Boomer.$"
 
 Dewford_Text_TuberBoy_Text_0:
-	.string "Look at my SQUIRTLE. You can find one\n"
-	.string "if you really are lucky and talented.$"
+	.string "Look at my WYNAUT. You can find one if\n"
+	.string "you really are lucky and talented.$"
 
 Dewford_Text_TuberGirl_Text_0:
 	.string "I swear to ARCEUS, he is so dumb with\n"
 	.string "his DOLL. I can't believe he trust what\l"
-	.string "he was told about SQUIRTLE.\p"
+	.string "he was told about WYNAUT.\p"
 	.string "Dumbass kid.$"
 
 Dewford_Text_Doll_Text_0:
 	.string "{PLAYER}: It's just a crappy DOLL.\n"
-	.string "Not even close from a SQUIRTLE.$"
+	.string "Not even close from a WYNAUT.$"
 
 Dewford_Text_TrainingGround_Text_0:
 	.string "TRAINING GROUND at the left$"

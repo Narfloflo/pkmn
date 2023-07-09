@@ -920,7 +920,7 @@ script Dewford_Text_TouristM {
 script Dewford_Text_TuberBoy {
     lock
     faceplayer
-    msgbox(format("Look at my SQUIRTLE. You can find one if you really are lucky and talented."))
+    msgbox(format("Look at my WYNAUT. You can find one if you really are lucky and talented."))
     release
     end
 }
@@ -928,14 +928,14 @@ script Dewford_Text_TuberBoy {
 script Dewford_Text_TuberGirl {
     lock
     faceplayer
-    msgbox(format("I swear to ARCEUS, he is so dumb with his DOLL. I can't believe he trust what he was told about SQUIRTLE.\pDumbass kid."))
+    msgbox(format("I swear to ARCEUS, he is so dumb with his DOLL. I can't believe he trust what he was told about WYNAUT.\pDumbass kid."))
     release
     end
 }
 
 script Dewford_Text_Doll {
     lock
-    msgbox(format("{PLAYER}: It's just a crappy DOLL. Not even close from a SQUIRTLE."))
+    msgbox(format("{PLAYER}: It's just a crappy DOLL. Not even close from a WYNAUT."))
     release
     end
 }

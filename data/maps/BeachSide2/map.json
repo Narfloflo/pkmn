@@ -15,7 +15,7 @@
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "graphics_id": "OBJ_EVENT_GFX_WORKER",
       "x": 41,
       "y": 28,
       "elevation": 0,
@@ -28,7 +28,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
       "x": 23,
       "y": 5,
       "elevation": 0,
@@ -41,7 +41,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
       "x": 20,
       "y": 5,
       "elevation": 0,

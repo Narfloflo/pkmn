@@ -94,6 +94,7 @@
 #define MAP_DEFORD_MULTIPLE_HOUSES (85 | (0 << 8))
 #define MAP_VERMILION              (86 | (0 << 8))
 #define MAP_ROUTE6                 (87 | (0 << 8))
+#define MAP_BURNED_TOWER           (88 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))

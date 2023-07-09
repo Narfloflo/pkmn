@@ -5440,6 +5440,16 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/Rustoboro_HallTown/border.bin",
       "blockdata_filepath": "data/layouts/Rustoboro_HallTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_BURNED_TOWER",
+      "name": "BurnedTower_Layout",
+      "width": 15,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MeteorFalls",
+      "border_filepath": "data/layouts/BurnedTower/border.bin",
+      "blockdata_filepath": "data/layouts/BurnedTower/map.bin"
     }
   ]
 }

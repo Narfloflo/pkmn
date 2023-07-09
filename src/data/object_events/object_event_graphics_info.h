@@ -1444,12 +1444,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldM
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedNatuDoll = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
+    .paletteTag = OBJ_EVENT_PAL_TAG_HO_OH,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,
     .height = 16,
-    .paletteSlot = PALSLOT_NPC_3,
+    .paletteSlot = PALSLOT_NPC_SPECIAL,
     .shadowSize = SHADOW_SIZE_S,
     .inanimate = TRUE,
     .disableReflectionPaletteLoad = FALSE,
@@ -1463,12 +1463,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedNatuDoll = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMagnemiteDoll = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,
     .height = 16,
-    .paletteSlot = PALSLOT_NPC_3,
+    .paletteSlot = PALSLOT_NPC_1,
     .shadowSize = SHADOW_SIZE_S,
     .inanimate = TRUE,
     .disableReflectionPaletteLoad = FALSE,
