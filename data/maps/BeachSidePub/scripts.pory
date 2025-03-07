@@ -1,0 +1,21 @@
+mapscripts BeachSidePub_MapScripts {}
+
+script BeachSidePub_Text_Vendor{
+    lock
+    faceplayer
+	message(format("Welcome!\nI only sell ICE CREAM. The best of\lHOENN!"))
+	waitmessage
+	pokemart(BeachSidePub_RestoPubItems)
+	msgbox("See you again!")
+	release
+	end
+}
+
+mart BeachSidePub_RestoPubItems {
+    ITEM_SANDWICH
+	ITEM_SODA_POP
+	ITEM_LEMONADE
+	ITEM_MOOMOO_MILK
+	ITEM_FRESH_WATER
+    ITEM_LAVA_COOKIE
+}

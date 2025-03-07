@@ -17,3 +17,14 @@ RustboroCity_Flat2_3F_Text_PresidentsSonAlsoCollectsRareStones:
 	.string "I think the PRESIDENT's son also\n"
 	.string "collects rare stones.$"
 
+RustboroCity_Flat2_3F_Text_Janitor::
+	lock
+	faceplayer
+	msgbox RustboroCity_Flat2_3F_Text_Janitor_Text_0
+	release
+	end
+
+
+RustboroCity_Flat2_3F_Text_Janitor_Text_0:
+	.string "Be careful around kid, I just mop\n"
+	.string "the floor, it's still slippery.$"

@@ -1,0 +1,44 @@
+mapscripts DarkCave_MapScripts {}
+
+script DarkCave_Text_Clair {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_NORMAN_3)){
+        msgbox(format("Who are you?\n.......................................\lOk {PLAYER}, so you are a tough TRAINER\lright?\lI need to verify that myself.\lAre you ready?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT)==1){
+            goto(DarkCave_Text_ClairFight)
+        }else{
+            msgbox(format("Pfff leave me alone then!"), MSGBOX_NPC)
+            end
+        }
+    }elif(defeated(TRAINER_NORMAN_3)){
+        goto(DarkCave_Text_ClairRematch)
+    }
+    
+    release
+    end
+}
+
+script DarkCave_Text_ClairFight {
+    trainerbattle_single(TRAINER_NORMAN_3, "I'll smash you, whimp!", "I need to keep training!")
+    release
+    end
+}
+
+script DarkCave_Text_ClairRematch {
+    msgbox(format("You were lucky the first time.\nI'll change my strategy you'll see\lthat!\lOk let's get started!"),MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        cleartrainerflag(TRAINER_NORMAN_3)
+        trainerbattle_single(TRAINER_NORMAN_3, "I'll smash you, whimp!", "I need to keep training!")
+    }else{
+        msgbox(format("Pfff leave me alone then!"))
+    }
+    release
+    end
+}
+
+script DarkCave_Text_Pokemaniac{
+    trainerbattle_single(TRAINER_TRENT_3,"Are you in a hurry?\nNo?\lWell, let's fight!", "Outch outch! Sorry..." )
+    msgbox("AZALEA is just a few miles away. You\ncan't really miss it.\lWhat's good to see?\lHmmm... The well and KURT I think?", MSGBOX_NPC)
+    end
+}

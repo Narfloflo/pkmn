@@ -78,16 +78,16 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FARMER",
-      "x": 36,
-      "y": 29,
+      "graphics_id": "OBJ_EVENT_GFX_RANCHER",
+      "x": 18,
+      "y": 27,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Watchman",
+      "script": "VerdanturfTown_Text_Farmer",
       "flag": "0"
     },
     {
@@ -100,7 +100,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "VerdandturfTown_Text_OldWoman",
       "flag": "0"
     },
     {
@@ -113,7 +113,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "VerdandturfTown_Text_SchoolBoyM",
       "flag": "0"
     },
     {
@@ -126,7 +126,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "VerdandturfTown_Text_Ninja",
       "flag": "0"
     },
     {
@@ -139,7 +139,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "VerdandturfTown_Text_Girl",
       "flag": "0"
     },
     {
@@ -152,7 +152,20 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "VerdandturfTown_Text_Gentleman",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AROMA",
+      "x": 35,
+      "y": 29,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VerdandturfTown_Text_Arome",
       "flag": "0"
     }
   ],
@@ -215,23 +228,9 @@
     },
     {
       "x": 30,
-      "y": 21,
-      "elevation": 0,
-      "dest_map": "MAP_LUXURIOUS_MANSION",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 31,
       "y": 34,
       "elevation": 0,
-      "dest_map": "MAP_FAST_FOOD",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 30,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_PUB",
+      "dest_map": "MAP_VERDANTURF_RESTO",
       "dest_warp_id": "0"
     },
     {
@@ -371,7 +370,7 @@
     {
       "type": "sign",
       "x": 30,
-      "y": 29,
+      "y": 28,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Verdanturf_Hospital_Door"
@@ -396,6 +395,30 @@
       "type": "sign",
       "x": 10,
       "y": 25,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VerdandturfTown_Text_HospitalSign"
+    },
+    {
+      "type": "sign",
+      "x": 30,
+      "y": 21,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 30,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 28,
+      "y": 35,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"

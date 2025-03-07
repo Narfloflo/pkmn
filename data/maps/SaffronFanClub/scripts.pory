@@ -1,0 +1,41 @@
+mapscripts SaffronFanClub_MapScripts {}
+
+script SaffronFanClub_Text_Gentleman {
+    msgbox("Do you know RED?\nI've had the pleasure of watching his\lbattles.\lIt brings back sweet memories of my\lown long-lost youth.\lMay you find success and reach RED's\llevel.", MSGBOX_NPC)
+    end
+}
+
+script SaffronFanClub_Text_BlackBelt {
+    msgbox("Hiyah! I respect my MASTER at the\nFIGHTING DOJO.\pI will never become a fan of\nanyone other than my MASTER!\pI will even sneak out of the DOJO\nto spread word of his greatness.\pHiyah!", MSGBOX_NPC)
+    end
+}
+
+script SaffronFanClub_Text_Youngster {
+    msgbox("…  …\p…  …\nI'm BROCK's fan!\pEven if I were his only fan,\nI swear it on my rock-hard will,\land on my shorts!\pI'll be his fan to the bitter end!", MSGBOX_NPC)
+    end
+}
+
+script SaffronFanClub_Text_Beauty {
+    msgbox("Hmm…\nAnd you are?\pWere you hoping to sign up for\na membership in our FAN CLUB?", MSGBOX_NPC)
+    end
+}
+
+script SaffronFanClub_Text_Woman {
+    msgbox("All of us gathered here are fans\nof POKéMON TRAINERS.\pThe way they look in battle…\nThey are the picture of coolness.\pPerhaps you will be talked about\nhere, too, if you keep winning.", MSGBOX_NPC)
+    end
+}
+
+script SaffronFanClub_Text_LittleGirl {
+    msgbox("Even if I'm the only one, I won't\nstop being SABRINA's fan.\pMy dream is to be like SABRINA,\ncute, but cool.\pI want to be a psychic girl just\nlike her!", MSGBOX_NPC)
+    end
+}
+
+script SaffronFanClub_Text_Rocker {
+    msgbox("I wonder if I can become a cool\nTRAINER one day?", MSGBOX_NPC)
+    end
+}
+
+script SaffronFanClub_Text_BattleGirl {
+    msgbox("Recently, LEAF has been on\nfire.\pThe way she battles… It's just \nthe way that I like it!", MSGBOX_NPC)
+    end
+}

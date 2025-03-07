@@ -1,0 +1,54 @@
+mapscripts Route39_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION
+            {
+                gettime
+                if (var(VAR_0x8003) == TIME_NIGHT || var(VAR_0x8003) == TIME_MIDNIGHT){
+                setflag(FLAG_TEMP_1)
+                call_if_set(FLAG_TEMP_1, Route39_Event_RemoveObjects)
+            }
+        }
+    }
+
+script Route39_Text_Girl{
+    lock
+    faceplayer
+    msgbox(format("Moomooh is the most productive MILTANK of the FARM, I hope she get well all her life."))
+    release
+    end
+}
+
+script Route39_Event_RemoveObjects {
+    removeobject(3)
+    removeobject(2)
+    removeobject(1)
+    removeobject(7)
+    end
+}
+
+script Route39_Text_Cooltrainer {
+    trainerbattle_single(TRAINER_JENNY_3, "Hey","Damn")
+    msgbox("You know how POKéMON have different\nabilities?\lYes?\lWell looks like you went to school...", MSGBOX_NPC)
+    end
+}
+
+script Route39_Text_Sailor {
+    trainerbattle_single(TRAINER_JENNY_4, "Hey","Damn")
+    msgbox("My POKéMON were caught and raised\noverseas.\lThey're my companions on those long\lvoyages.", MSGBOX_NPC)
+    end
+}
+
+script Route39_Text_PokefanF {
+    trainerbattle_single(TRAINER_DIANA_2, "Hey","Damn")
+    msgbox("Do you know about baby POKéMON? I bet\nthey're just adorable!", MSGBOX_NPC)
+    end
+}
+
+script Route39_Text_RouteSign{
+    msgbox("Route 39\nOLIVINE CITY - ECRUTEAK CITY", MSGBOX_NPC)
+    end
+}
+
+script Route39_Text_MoomooFarmSign{
+    msgbox("Moomoo Farm\nEnjoy Our Fresh and Tasty Milk", MSGBOX_NPC)
+    end
+}

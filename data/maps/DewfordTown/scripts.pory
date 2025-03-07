@@ -946,3 +946,17 @@ script Dewford_Text_TrainingGround {
     release
     end
 }
+
+script Dewford_Text_Battle {
+	lock
+	msgbox(format("HEY !\nGet out of here ! We are in a middle of a BATTLE !"))
+	applymovement(OBJ_EVENT_ID_PLAYER,DewfordBattleRun)
+	waitmovement(OBJ_EVENT_ID_PLAYER)
+	release
+	end
+}
+
+movement DewfordBattleRun {
+	walk_fast_down
+}
+

@@ -1,0 +1,42 @@
+mapscripts VraiRoute45_MapScripts {}
+
+script BlackthornInside_Text_RoadSign {
+    msgbox("ROUTE 45\nMOUNTAIN RD. Ahead", MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route45_Text_Hiker1{
+    trainerbattle_single(TRAINER_GABRIELLE_4,"Hey there young lad!\nWanna fight?", "I'm still weak..." )
+    msgbox("I'll head back to BLACKTHORN's ICE PATH\nand train some more.", MSGBOX_NPC)
+    end
+}
+
+script Route45_Text_Hiker2{
+    trainerbattle_single(TRAINER_CATHERINE_2,"Hey there young lad!\nWanna fight?", "I'm still weak..." )
+    msgbox("I'll head back to BLACKTHORN's ICE PATH\nand train some more.", MSGBOX_NPC)
+    end
+}
+
+script Route45_Text_Hiker3{
+    trainerbattle_single(TRAINER_CATHERINE_3,"Hey there young lad!\nWanna fight?", "I'm still weak..." )
+    msgbox("I'll head back to BLACKTHORN's ICE PATH\nand train some more.", MSGBOX_NPC)
+    end
+}
+
+script Route45_Text_Cooltrainer{
+    trainerbattle_single(TRAINER_CATHERINE_4,"Hey there young lad!\nWanna fight?", "I'm still weak..." )
+    msgbox("I'll head back to BLACKTHORN's ICE PATH\nand train some more.", MSGBOX_NPC)
+    end
+}
+
+script Route45_Text_Camper{
+    trainerbattle_single(TRAINER_JACKSON_2,"Hey there young lad!\nWanna fight?", "I'm still weak..." )
+    msgbox("I'll head back to BLACKTHORN's ICE PATH\nand train some more.", MSGBOX_NPC)
+    end
+}
+
+script Route45_Text_Blackbelt{
+    trainerbattle_single(TRAINER_JACKSON_3,"Hey there young lad!\nWanna fight?", "I'm still weak..." )
+    msgbox("I'll head back to BLACKTHORN's ICE PATH\nand train some more.", MSGBOX_NPC)
+    end
+}

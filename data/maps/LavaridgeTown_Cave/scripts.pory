@@ -1,0 +1,26 @@
+mapscripts LavaridgeTown_Cave_MapScripts {}
+
+script LavaridgeTown_Cave_TextSchoolKidM {
+    msgbox("If you go through this cave, you'll end\nin ROUTE 112.", MSGBOX_NPC)
+    end
+}
+
+script LavaridgeTown_Cave_TextSchoolKidF {
+    msgbox("Hayyah! I wanted to leave LAVARIDGE but\nI forgot to teach my POKéMON SMASH\lROCK...\lI should've taken the ABRA to teleport\lmyself...", MSGBOX_NPC)
+    end
+}
+
+script LavaridgeTown_Cave_TextScientist {
+    msgbox("Oh yes, I'm looking at the volcanics\nactivities around here.\lIt would be pretty bad if an earthquake\ldestroyed LAVARIDGE.", MSGBOX_NPC)
+    end
+}
+
+script LavaridgeTown_Cave_Text_Numel {
+	lock
+	faceplayer
+	playmoncry(SPECIES_NUMEL, CRY_MODE_NORMAL)
+	waitmoncry
+	msgbox("Nunu!", MSGBOX_DEFAULT)
+	release
+	end
+}

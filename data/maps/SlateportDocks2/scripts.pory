@@ -1,0 +1,42 @@
+mapscripts SlateportDocks2_MapScripts {}
+
+script SlateportDocks_Text_Worker {
+    lock
+    faceplayer
+    msgbox(format("I have to fix the warehouse. Somehow, they decide to build it close to a WILD POKéMON nest!"))
+    release
+    end
+}
+
+script SlateportDocks_Text_Sailor {
+    lock
+    faceplayer
+    msgbox(format("This extension of SLATEPORT CITY was built to assure international shipping!"))
+    release
+    end
+}
+
+script SlateportDocks_Text_Camper {
+    lock
+    faceplayer
+    msgbox(format("Mmmpf ! I was recruit to prevent WILD POKéMON from running into the CITY but all my TEAM is out..."))
+    release
+    end
+}
+
+script SlateportDocks_Text_Woman {
+    lock
+    faceplayer
+    msgbox(format("I really want to go to KANTO, but the SAILOR inside can't unless you are strong enough or have a TICKET. But They sold it all..."))
+    release
+    end
+}
+
+
+script SlateportDocks_Text_BlackBelt {
+    lock
+    faceplayer
+    msgbox(format("Here is one of the best place to train alone in all HOENN ! By the way, what are you doing here ? You disturb me!"))
+    release
+    end
+}

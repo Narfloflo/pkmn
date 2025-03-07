@@ -1,0 +1,30 @@
+mapscripts Route30Inside_MapScripts {}
+
+script Route30Inside_Text_BerryMaster {
+    lock
+    faceplayer
+    msgbox(format("You can find some BERRY on the floor sometimes. It's weird I always thought it came from trees, but I've never saw them myself..."))
+    release
+    end
+}
+
+script Route30Inside_Text_BugCatcher {
+    lock
+    faceplayer
+    msgbox(format("I'm pretty sure there is a TV program about BUG CATCHING CONTEST. At least we should have that !"))
+    release
+    end
+}
+
+script Route30Inside_Text_MrPokemon {
+    lock
+    faceplayer
+    msgbox(format("Hello I'm mister POKéMON. Do you know PROF. OAK ? He's an old friend."), MSGBOX_YESNO)
+    if(var(VAR_RESULT)== 1){
+        msgbox(format("Yeah, you should ask for a fight ! He may got rusty be he's still a good TRAINER !"))
+    }else{
+        msgbox(format("No ? Oh you are a disciple of PROF. BIRCH ? That lazy bastard you mean ?\pI don't know what he's specialization is about... Not the biggest fan here."))
+    }
+    release
+    end
+}

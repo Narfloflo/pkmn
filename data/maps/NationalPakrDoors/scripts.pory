@@ -1,0 +1,37 @@
+mapscripts NationalPakrDoors_MapScripts {}
+
+script NationalParkDoors_Text_Bugsy {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_WATTSON_3)){
+        msgbox(format("Hello, I'm currently dealing with this guy here because I want to create a contest in the NATIONAL PARK. I would be a bug catching contest. Sound great right ? So, you wanna fight against me while the guard is filling the papers ?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT)==1){
+            goto(NationalParkDoors_Text_BugsyFight)
+        }else{
+            msgbox(format("Arf, you are not funny !"))
+        }
+    }elif(defeated(TRAINER_WATTSON_3)){
+        goto(NationalParkDoors_Text_BugsyRematch)
+    }
+    
+    release
+    end
+}
+
+script NationalParkDoors_Text_BugsyFight {
+    trainerbattle_single(TRAINER_WATTSON_3, "Prepare yourself, it sting !", "Wow what a strength !")
+    release
+    end
+}
+
+script NationalParkDoors_Text_BugsyRematch {
+    msgbox(format("The guard still has a lot of papers to fill... I hate administrative stuff... Oh you wanna fight again ?"),MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        cleartrainerflag(TRAINER_WATTSON_3)
+        trainerbattle_single(TRAINER_WATTSON_3, "Prepare yourself, it sting !", "Wow what a strength !")
+    }else{
+        msgbox(format("You know where to find me if you change your mind."))
+    }
+    release
+    end
+}

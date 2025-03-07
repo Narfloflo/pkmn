@@ -1,5 +1,5 @@
 .set LOCALID_BRINEY, 11
-.set LOCALID_WANDAS_BF_OUTSIDE, 21
+.set LOCALID_WANDAS_BF_OUTSIDE, 20
 
 Route116_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route116_OnTransition
@@ -472,6 +472,6 @@ Route116_Text_TrainerTipsBagHasPockets:
 	.string "a BAG of their own.$"
 
 Route116_EventScript_PositionGlassMen::
-	setobjectxy 21, 75, 13
+	setobjectxy 21, 76, 13
 	return
 

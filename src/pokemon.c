@@ -2095,6 +2095,9 @@ static const s8 sFriendshipEventModifiers[][3] =
     [FRIENDSHIP_EVENT_FAINT_SMALL]     = {-1, -1, -1},
     [FRIENDSHIP_EVENT_FAINT_FIELD_PSN] = {-5, -5, -10},
     [FRIENDSHIP_EVENT_FAINT_LARGE]     = {-5, -5, -10},
+    [FRIENDSHIP_EVENT_OLDER_HAIRCUT_BROTHER_0]      = { 1,  1,  1},
+    [FRIENDSHIP_EVENT_OLDER_HAIRCUT_BROTHER_1]      = { 3,  3,  1},
+    [FRIENDSHIP_EVENT_OLDER_HAIRCUT_BROTHER_2]      = { 5,  5,  2},
 };
 
 #define HM_MOVES_END 0xFFFF
@@ -5488,12 +5491,12 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem)
                 break;
             case EVO_FRIENDSHIP_DAY:
                 RtcCalcLocalTime();
-                if (gLocalTime.hours >= 12 && gLocalTime.hours < 24 && friendship >= 220)
+                if (gLocalTime.hours >= 7 && gLocalTime.hours < 19 && friendship >= 220)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_FRIENDSHIP_NIGHT:
                 RtcCalcLocalTime();
-                if (gLocalTime.hours >= 0 && gLocalTime.hours < 12 && friendship >= 220)
+                if (gLocalTime.hours >= 19 && gLocalTime.hours < 7 && friendship >= 220)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_LEVEL:
@@ -6372,16 +6375,28 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_MAGMA_ADMIN:
             return MUS_VS_AQUA_MAGMA;
         case TRAINER_CLASS_LEADER:
+            if (gMapHeader.region == REGION_KANTO)
+            return MUS_RG_VS_GYM_LEADER;
+            else if (gMapHeader.regionMapSectionId == MAPSEC_SEVII_ISLE_9 ||
+                gMapHeader.regionMapSectionId == MAPSEC_SEVII_ISLE_6 ||
+                gMapHeader.regionMapSectionId == MAPSEC_SEVII_ISLE_24 ||
+                gMapHeader.regionMapSectionId == MAPSEC_SEVII_ISLE_23 ||
+                gMapHeader.region == REGION_JOHTO)
+            return MUS_VS_JOHTO_LEADER;
+            else
             return MUS_VS_GYM_LEADER;
         case TRAINER_CLASS_CHAMPION:
-            return MUS_VS_CHAMPION;
+            return MUS_VS_GIOGIO;
         case TRAINER_CLASS_RIVAL:
             if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
                 return MUS_VS_RIVAL;
             if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleWallyName))
                 return MUS_VS_TRAINER;
-             if (gMapHeader.regionMapSectionId == MAPSEC_VERMILION_CITY)
+            if (gMapHeader.region == REGION_KANTO)
                 return MUS_RG_VS_TRAINER;
+            if (gMapHeader.regionMapSectionId == MAPSEC_SEVII_ISLE_23||
+            gMapHeader.region == REGION_JOHTO)
+                return MUS_VS_JOHTO_TRAINER; 
             return MUS_VS_RIVAL;
         case TRAINER_CLASS_ELITE_FOUR:
             return MUS_VS_ELITE_FOUR;
@@ -6394,16 +6409,24 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_PYRAMID_KING:
             return MUS_VS_FRONTIER_BRAIN;
         default:
-        if (gMapHeader.regionMapSectionId == MAPSEC_VERMILION_CITY)
-     return MUS_RG_VS_TRAINER;
+        if (gMapHeader.region == REGION_KANTO)
+            return MUS_RG_VS_TRAINER;
+        if (gMapHeader.regionMapSectionId == MAPSEC_SEVII_ISLE_23 || gMapHeader.region == REGION_JOHTO)
+            return MUS_VS_JOHTO_TRAINER; 
         else
      return MUS_VS_TRAINER;
         }
     }
-    else if (gMapHeader.regionMapSectionId == MAPSEC_VERMILION_CITY)
-     return MUS_RG_VS_WILD;
+    else if (gMapHeader.region == REGION_KANTO)
+    return MUS_RG_VS_WILD;
+    else if (gMapHeader.regionMapSectionId == MAPSEC_SEVII_ISLE_9 ||
+         gMapHeader.regionMapSectionId == MAPSEC_SEVII_ISLE_6 ||
+         gMapHeader.regionMapSectionId == MAPSEC_SEVII_ISLE_24 ||
+         gMapHeader.regionMapSectionId == MAPSEC_SEVII_ISLE_23 ||
+         gMapHeader.region == REGION_JOHTO)
+    return MUS_GSC_WILD;
     else 
-        return MUS_VS_WILD;
+    return MUS_VS_WILD;
 }
 
 void PlayBattleBGM(void)

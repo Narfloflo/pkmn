@@ -1,0 +1,17 @@
+mapscripts LittlerootMultipleHouses_MapScripts {}
+
+script LittlerootMultipleHouses_Text_ScientistF {
+    lock
+    faceplayer
+    msgbox("Hello, you must be the new neighbor?\nWelcome in LITTLEROOT!\lI hope you will enjoy your life in\lHOENN!")
+    release
+    end
+}
+
+script LittlerootMultipleHouses_Text_Gentleman {
+    lock
+    faceplayer
+    msgbox("Oh you must be NORMAN's child?\nI hope you are not as mischievious as\lBIRCH's kid!\lI would have to break your neck.\l{PLAYER}: I would like to see you try,\lold man!")
+    release
+    end
+}

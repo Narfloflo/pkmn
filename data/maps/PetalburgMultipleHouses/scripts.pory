@@ -1,0 +1,76 @@
+mapscripts PetalburgMultipleHouses_MapScripts {}
+
+script PetalburgMultipleHouses_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("When I was younger, I used to be a\nreally good miner!\lI mined 102 tons of coal in less\lthan 6 hours!\lA recorded that a MACHAMP cannot\lachieve freely!"))
+    release
+    end
+}
+
+script PetalburgMultipleHouses_Text_Youngster {
+    lock
+    faceplayer
+    msgbox(format("My mom want me to go to SCHOOL.\nBut I have a bunch of ZIGZAGOON,\lso I should be fine in the wild\lright?"))
+    release
+    end
+}
+
+script PetalburgMultipleHouses_Text_PokefanF {
+    lock
+    faceplayer
+    msgbox(format("My son is dumb..."))
+    applymovement(1, PetalburgMultipleHouses_Move_Youngster)
+    waitmovement(1)
+    msgbox(format("He think he is safe with his\nlvl.5 team...\lBut he don't know that he will be\lcrush by some strategist TRAINERS\lwho will build a team in order to\lbe the very best!"))
+    release
+    end
+}
+
+movement PetalburgMultipleHouses_Move_Youngster {
+    emote_exclamation_mark
+    face_up
+    step_end
+}
+
+script PetalburgMultipleHouses_Text_Girl {
+    lock
+    faceplayer
+    msgbox(format("Some of my friends got a TM to\ncreate a SECRET BASE!\lI'm so jealous!"))
+    release
+    end
+}
+
+
+script PetalburgMultipleHouses_Trigger_Intruder {
+    lock
+    faceplayer
+    applymovement(5,PetalburgMultipleHouses_Move_Aroma)
+    waitmovement(5)
+    msgbox(format("Wow wow!\nWhat are you doing?\lYour mom didn't taught you to know\lon a door before entering?\lGet out!"))
+    applymovement(OBJ_EVENT_ID_PLAYER, PetalburgMultipleHouses_Move_Player)
+    waitmovement(0)
+    release
+    end
+}
+
+movement PetalburgMultipleHouses_Move_Aroma {
+    emote_exclamation_mark
+    face_down
+    step_end
+}
+
+movement PetalburgMultipleHouses_Move_Player {
+    walk_fast_down
+    step_end
+}
+
+script PetalburgMultipleHouses_Trigger_Stairs {
+    lock
+    faceplayer
+    msgbox("I better not go upstairs...", MSGBOX_DEFAULT)
+    applymovement(OBJ_EVENT_ID_PLAYER, PetalburgMultipleHouses_Move_Player)
+    waitmovement(0)
+    release
+    end
+}

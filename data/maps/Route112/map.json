@@ -162,10 +162,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 9,
-      "y": 51,
+      "x": 13,
+      "y": 48,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -175,8 +175,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 10,
-      "y": 46,
+      "x": 12,
+      "y": 48,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -187,7 +187,7 @@
       "flag": "FLAG_ITEM_ROUTE_112_NUGGET"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "graphics_id": "OBJ_EVENT_GFX_KINDLER",
       "x": 31,
       "y": 7,
       "elevation": 3,
@@ -200,7 +200,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
+      "graphics_id": "OBJ_EVENT_GFX_AROMA",
       "x": 31,
       "y": 11,
       "elevation": 3,
@@ -229,20 +229,6 @@
       "dest_warp_id": "1"
     },
     {
-      "x": 6,
-      "y": 48,
-      "elevation": 3,
-      "dest_map": "MAP_JAGGED_PASS",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 7,
-      "y": 48,
-      "elevation": 3,
-      "dest_map": "MAP_JAGGED_PASS",
-      "dest_warp_id": "1"
-    },
-    {
       "x": 11,
       "y": 36,
       "elevation": 0,
@@ -260,21 +246,14 @@
       "x": 14,
       "y": 42,
       "elevation": 0,
-      "dest_map": "MAP_LAVARIDGE_TOWN_CAVE2",
-      "dest_warp_id": "1"
-    },
-    {
-      "x": 36,
-      "y": 48,
-      "elevation": 0,
-      "dest_map": "MAP_PUB",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_LAVARIDGE_TOWN_CAVE",
+      "dest_warp_id": "3"
     },
     {
       "x": 45,
       "y": 48,
       "elevation": 0,
-      "dest_map": "MAP_FAST_FOOD",
+      "dest_map": "MAP_ROUTE112PUB",
       "dest_warp_id": "0"
     }
   ],
@@ -300,18 +279,34 @@
     },
     {
       "type": "sign",
-      "x": 4,
-      "y": 49,
+      "x": 8,
+      "y": 47,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route112_EventScript_RouteSignLavaridge"
     },
     {
       "type": "secret_base",
-      "x": 48,
-      "y": 34,
+      "x": 44,
+      "y": 39,
       "elevation": 0,
       "secret_base_id": "SECRET_BASE_BLUE_CAVE2_1"
+    },
+    {
+      "type": "sign",
+      "x": 36,
+      "y": 48,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 48,
+      "y": 48,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route112_Text_SignPub"
     }
   ]
 }

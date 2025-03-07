@@ -122,7 +122,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
+      "graphics_id": "OBJ_EVENT_GFX_TEACHER",
       "x": 8,
       "y": 40,
       "elevation": 0,
@@ -292,21 +292,14 @@
       "x": 7,
       "y": 34,
       "elevation": 0,
-      "dest_map": "MAP_SCHOOLS",
+      "dest_map": "MAP_DEWFORD_SCHOOL",
       "dest_warp_id": "0"
     },
     {
       "x": 39,
       "y": 43,
       "elevation": 0,
-      "dest_map": "MAP_FAST_FOOD",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 46,
-      "y": 43,
-      "elevation": 0,
-      "dest_map": "MAP_PUB",
+      "dest_map": "MAP_DEWFORD_PUB",
       "dest_warp_id": "0"
     },
     {
@@ -360,7 +353,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Dewford_Text_Battle"
     }
   ],
   "bg_events": [
@@ -464,6 +457,22 @@
       "type": "sign",
       "x": 2,
       "y": 25,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 46,
+      "y": 43,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 11,
+      "y": 43,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Verdanturf_Hospital_Door"

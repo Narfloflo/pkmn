@@ -1,0 +1,50 @@
+mapscripts Route44_MapScripts {}
+
+script Route44_Text_RouteSign {
+    lock
+    faceplayer
+    msgbox(format("ROUTE 44\pMAHOGANY TOWN - BLACKTHORN CITY"))
+    release
+    end
+}
+
+script Route44_Text_IcePath {
+    lock
+    faceplayer
+    msgbox(format("ROUTE 44\nICE PATH AHEAD"))
+    release
+    end
+}
+
+script Route44_Text_Cooltrainer{
+    trainerbattle_single(TRAINER_EDWIN_4,"Let me see how strong you are!", "Oh wow!" )
+    msgbox("Wow. You have a lot of BADGES.\nNo wonder you're so tough.\lI wonder if ECRUTEAK GYM's MORTY is\lstill in training?\lWhat? He's spending his time in the\lDANCING HALL?\lI'll get my revenge!", MSGBOX_YESNO)
+    end
+}
+
+script Route44_Text_Youngster{
+    trainerbattle_single(TRAINER_LYDIA_2,"I have the ambition of being the\nstrongest TRAINER!\lLet's fight!", "I still have a long way attending me." )
+    msgbox("It's important to have conviction on\nyour side.", MSGBOX_YESNO)
+    end
+}
+
+script Route44_Text_Camper{
+    trainerbattle_single(TRAINER_LYDIA_3,"Have you ever seen a SHINY POKéMON?", "I'm still weak..." )
+    msgbox("If a POKémON has different colors from\nusual, it's more valuable.\lWhat? You mean that's not true?", MSGBOX_YESNO)
+    end
+}
+
+script Route44_Text_Fisherman {
+    call_if_unset(FLAG_TEMP_1, Route44_Text_FishermanFight)
+    if(flag(FLAG_TEMP_1)== TRUE){
+    msgbox(format("I will go to LAKE of RAGE to catch more GYARADOS!"),MSGBOX_AUTOCLOSE)
+    end
+    }
+}
+
+script Route44_Text_FishermanFight {
+    trainerbattle_single(TRAINER_DYLAN_2, "What a chilly weather, right?", "Brrrr! You warmed the entire\nenvironment!")
+    setflag(FLAG_TEMP_1)
+    cleartrainerflag(TRAINER_DYLAN_2)
+    end
+}

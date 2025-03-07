@@ -1,0 +1,80 @@
+mapscripts Route3_MapScripts {}
+
+script Route3_Text_Lass {
+    trainerbattle_single(TRAINER_DALTON_4, "Hey what do you want, my picture ?", "Oh no...")
+    msgbox(format("Stop staring at me, I don't like that."),MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route3_Text_Youngster {
+    trainerbattle_single(TRAINER_BERNIE_2, "I LOVE SHORTS !!!!", "I DON'T WANT TO WEAR JEANS !")
+    msgbox(format("In a few years I'll open a shop to sell shorts. It will be called SHORTS !"),MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route3_Text_Youngster2 {
+    trainerbattle_single(TRAINER_BERNIE_3, "Hop hop, you have some minutes for a fight !", "Ah ! I'm out of here now...")
+    msgbox(format("Wilds POKéMON are weaker than POKéMON own by TRAINERS."),MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route3_Text_Picnicker {
+    trainerbattle_single(TRAINER_BERNIE_4, "Are you in a hurry ?", "Oh my ARCEUS...")
+    msgbox(format("MT. MOON is just a few step ahead. BROCK is leading an investigation there : He is looking for FOSSILS !"),MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route3_Text_Camper {
+    trainerbattle_single(TRAINER_ETHAN_2, "Hey, you look like a tough trainer!", "But I'm tough too...")
+    msgbox(format("Even though I lost, I'll continue my training !"),MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route3_Text_BugCatcher {
+    trainerbattle_single(TRAINER_ETHAN_3, "I love BUG Pokémon!\nLet's see which ones are stronger!", "My BUG Pokémon need more training!")
+    msgbox(format("Maybe I should catch more BUG Pokémon to build a stronger team !"),MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route3_Text_Youngster3 {
+    trainerbattle_single(TRAINER_ETHAN_4, "Hey, do you know what?\nI saw a RATTATA in the grass!", "Oh no! My RATTATA TEAM lost?!")
+    msgbox(format("I have to train more and become the greatest POKéMON TRAINER !"),MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route3_Text_Hiker {
+    lock
+    faceplayer
+    msgbox(format("I'm not a TRAINER just a happy HICKER, and totally not from the HIKERS club ! Huh you want me to convince all the TRAINERS to fight you again ?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1){
+        playse(SE_POKENAV_CALL)
+        waitse
+        playse(SE_POKENAV_HANG_UP)
+        waitse
+        cleartrainerflag(TRAINER_BERNIE_2)
+        cleartrainerflag(TRAINER_BERNIE_3)
+        cleartrainerflag(TRAINER_BERNIE_4)
+        cleartrainerflag(TRAINER_ETHAN_2)
+        cleartrainerflag(TRAINER_ETHAN_3)
+        cleartrainerflag(TRAINER_ETHAN_4)
+        msgbox(format("Well it's done. It's a great power we the HIKERS MAFI... I mean a simple HIKER wandering can do."))
+    }else{
+        msgbox(format("Well if you change your mind, I'm right here !"))
+    }
+    release
+    end
+}
+
+script Route3_Text_MtMoonSign {
+    lock
+    msgbox(format("MT. MOON entrance"))
+    release
+    end
+}
+
+script Route3_Text_RouteSign {
+    lock
+    msgbox(format("ROUTE 3\nPEWTER CITY - MT. MOON"))
+    release
+    end
+}

@@ -8,13 +8,6 @@ Mossdeep__EventScript_SpaceStation::
 	return
 
 
-Mossdeep__EventScript_MohaBattle::
-	trainerbattle_single TRAINER_MOHA, Moha_Intro, Moha_Outro
-	msgbox PostbattleMoha, MSGBOX_AUTOCLOSE
-	waitmessage
-	end
-
-
 Mossdeep__Text_Seagate::
 	lock
 	msgbox Mossdeep__Text_Seagate_Text_0
@@ -54,6 +47,13 @@ Mossdeep__Text_Attendant::
 	end
 
 
+Mossdeep__Text_School::
+	lock
+	msgbox Mossdeep__Text_School_Text_0
+	release
+	end
+
+
 Mossdeep__EventScript_SpaceStation_Text_0:
 	.string "Space Stations.\nBe Aware of the wild Pokemons !$"
 
@@ -81,11 +81,5 @@ Mossdeep__Text_Attendant_Text_0:
 	.string "TRAINERS. We can't take you onboard.\p"
 	.string "I'm sorry.$"
 
-Moha_Intro::
-	.string "I'm so fricking rich !$"
-
-Moha_Outro::
-	.string "But I'm so weak...$"
-
-PostbattleMoha::
-	.string "I'll ask my dad to buy me\na KYOGRE next time.$"
+Mossdeep__Text_School_Text_0:
+	.string "MOSSDEEP SCHOOL$"

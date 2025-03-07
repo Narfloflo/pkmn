@@ -1,0 +1,44 @@
+mapscripts SlateportDocks_MapScripts {}
+
+script EcruteakMart_Text_Vendor {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemart(EcruteakMartVendor)
+    msgbox(format("Please come again!"))
+    release
+}
+
+mart EcruteakMartVendor {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_ULTRA_BALL
+    ITEM_NET_BALL
+    ITEM_POTION
+    ITEM_SUPER_POTION
+    ITEM_HYPER_POTION
+    ITEM_MAX_POTION
+    ITEM_FULL_RESTORE
+    ITEM_REVIVE
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+    ITEM_BURN_HEAL
+    ITEM_ICE_HEAL
+    ITEM_FULL_HEAL
+    ITEM_ESCAPE_ROPE
+    ITEM_REPEL
+    ITEM_SUPER_REPEL
+    ITEM_MAX_REPEL
+}
+
+script EcruteakMart_Text_Man {
+    msgbox("I just hatched a EEVEE!\nBut now I don't know if I should let\lhim stay like this or use a STONE to\levolve him.", MSGBOX_NPC)
+    end
+}
+
+script EcruteakMart_Text_Lass {
+    msgbox("Do you think the MAGNET TRAIN will\nincrease the amount of stuff we have\lhere?\lI mean, it's pretty lowkey here...", MSGBOX_NPC)
+    end
+}

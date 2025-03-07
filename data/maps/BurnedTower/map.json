@@ -2,13 +2,13 @@
   "id": "MAP_BURNED_TOWER",
   "name": "BurnedTower",
   "layout": "LAYOUT_BURNED_TOWER",
-  "music": "MUS_WEATHER_GROUDON",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "music": "MUS_GSC_BURNED_TOWER",
+  "region_map_section": "MAPSEC_ECRUTEAK_CITY",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_SHADE",
   "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
-  "allow_escaping": false,
+  "allow_escaping": true,
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_UNUSED_0x021"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_UNUSED_SQUIRTLE_DOLL",
@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_UNUSED_0x021"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_UNUSED_NATU_DOLL",
@@ -51,14 +51,35 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_UNUSED_0x021"
     }
   ],
   "warp_events": [
-
+    {
+      "x": 5,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_BURNED_TOWER_TOP",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 8,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_BURNED_TOWER_TOP",
+      "dest_warp_id": "3"
+    }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_UNUSED_0x404E",
+      "var_value": "0",
+      "script": "BurnedTower_MapScripts_ThreeBeastTrigger"
+    }
   ],
   "bg_events": [
 

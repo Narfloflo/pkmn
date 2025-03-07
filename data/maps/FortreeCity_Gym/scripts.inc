@@ -315,3 +315,59 @@ FortreeCity_Gym_Text_WinonaRematchNeedTwoMons:
 	.string "POKéMON with you?\p"
 	.string "Please return with two POKéMON\n"
 	.string "at the very least.$"
+
+Fortree_Gym_Text_RematchGuy::
+	lock
+	faceplayer
+	msgbox Fortree_Gym_Text_RematchGuy_Text_0
+	goto_if_set FLAG_DEFEATED_FORTREE_GYM, Fortree_Gym_Text_RematchGuy_2
+	msgbox Fortree_Gym_Text_RematchGuy_Text_1
+Fortree_Gym_Text_RematchGuy_1:
+	release
+	end
+
+Fortree_Gym_Text_RematchGuy_2:
+	goto Fortree_Gym_Text_RematchGuyYesNo
+	goto Fortree_Gym_Text_RematchGuy_1
+
+
+Fortree_Gym_Text_RematchGuyYesNo::
+	msgbox Fortree_Gym_Text_RematchGuyYesNo_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq Fortree_Gym_Text_RematchGuyYesNo_1
+	msgbox Fortree_Gym_Text_RematchGuyYesNo_Text_1
+	release
+	end
+
+Fortree_Gym_Text_RematchGuyYesNo_1:
+	cleartrainerflag TRAINER_HUMBERTO
+	cleartrainerflag TRAINER_ASHLEY
+	cleartrainerflag TRAINER_JARED
+	cleartrainerflag TRAINER_FLINT
+	cleartrainerflag TRAINER_EDWARDO
+	cleartrainerflag TRAINER_DARIUS
+	fadescreen FADE_TO_BLACK
+	playse SE_SUCCESS
+	delay 60
+	warp MAP_FORTREE_CITY_GYM, 15, 24
+	fadescreen FADE_FROM_BLACK
+	release
+	end
+
+
+Fortree_Gym_Text_RematchGuy_Text_0:
+	.string "Hello, I'm the Rematch Man, I can ask all\n"
+	.string "the TRAINERS of the GYM to rematch\l"
+	.string "you if you want.$"
+
+Fortree_Gym_Text_RematchGuy_Text_1:
+	.string "Hummmm. Get the BADGE first and come to\n"
+	.string "see me after will you ?$"
+
+Fortree_Gym_Text_RematchGuyYesNo_Text_0:
+	.string "So {PLAYER}, should I ask the\n"
+	.string "TRAINERS to have a rematch with you ?$"
+
+Fortree_Gym_Text_RematchGuyYesNo_Text_1:
+	.string "Well I'm not moving if you change your\n"
+	.string "mind !$"

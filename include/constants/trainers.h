@@ -109,6 +109,41 @@
 #define TRAINER_PIC_LEAF                  90
 #define TRAINER_PIC_RS_BRENDAN            91
 #define TRAINER_PIC_RS_MAY                92
+#define TRAINER_PIC_WALLACE               93
+#define TRAINER_PIC_MISTY                 94
+#define TRAINER_PIC_LTSURGE               95
+#define TRAINER_PIC_POLICE                96
+#define TRAINER_PIC_KIMONO                97
+#define TRAINER_PIC_LASSKANTO             98
+#define TRAINER_PIC_CAMPERKANTO           99
+#define TRAINER_PIC_PICNICKERKANTO        100
+#define TRAINER_PIC_BROCK                 101
+#define TRAINER_PIC_YOUNGSTERKANTO        102
+#define TRAINER_PIC_THUG                  103
+#define TRAINER_PIC_BIKER                 104
+#define TRAINER_PIC_ERIKA                 105
+#define TRAINER_PIC_COOLTRAINERKANTOM     106
+#define TRAINER_PIC_COOLTRAINERKANTOF     107
+#define TRAINER_PIC_GAMBLER               108
+#define TRAINER_PIC_WHITNEY               109
+#define TRAINER_PIC_SABRINA               110
+#define TRAINER_PIC_KOGA                  111
+#define TRAINER_PIC_BLUE                  112
+#define TRAINER_PIC_BUGSY                 113
+#define TRAINER_PIC_BLAINE                114
+#define TRAINER_PIC_MORTY                 115
+#define TRAINER_PIC_CHUCK                 116
+#define TRAINER_PIC_JASMINE               117
+#define TRAINER_PIC_CLAIR                 118
+#define TRAINER_PIC_PROF_OAK              119
+#define TRAINER_PIC_BEAUTY_KANTO          120
+#define TRAINER_PIC_BIRDKEEPER_KANTO      121
+#define TRAINER_PIC_FALKNER               122
+#define TRAINER_PIC_ROCKET                123
+#define TRAINER_PIC_PRYCE                 124
+#define TRAINER_PIC_SAGE                  125
+#define TRAINER_PIC_FIREBREATHER          126
+#define TRAINER_PIC_POKEMANIAC_JOHTO      127
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
@@ -351,6 +386,14 @@
 #define TRAINER_CLASS_PIKE_QUEEN     0x3f
 #define TRAINER_CLASS_PYRAMID_KING   0x40
 #define TRAINER_CLASS_RS_PROTAG      0x41
+#define TRAINER_CLASS_POLICE         0x42
+#define TRAINER_CLASS_KIMONO         0x43
+#define TRAINER_CLASS_THUG           0x44
+#define TRAINER_CLASS_BIKER          0x45
+#define TRAINER_CLASS_SOME           0x46
+#define TRAINER_CLASS_PROF           0x47
+#define TRAINER_CLASS_SAGE           0x48
+#define TRAINER_CLASS_FIREBREATHER   0x49
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music
@@ -366,6 +409,11 @@
 #define TRAINER_ENCOUNTER_MUSIC_HIKER       11 // used for other trainer classes too
 #define TRAINER_ENCOUNTER_MUSIC_INTERVIEWER 12
 #define TRAINER_ENCOUNTER_MUSIC_RICH        13 // Rich Boys and Gentlemen
+#define TRAINER_ENCOUNTER_MUSIC_BOY_KANTO   14 // Boy Kanto
+#define TRAINER_ENCOUNTER_MUSIC_LASS_KANTO  15 // Lass Kanto
+#define TRAINER_ENCOUNTER_MUSIC_ROCKET      16 // Rocket and suspicious encounter from kanto
+#define TRAINER_ENCOUNTER_MUSIC_KIMONO      17 // Kimono encounter from JOHTO
+#define TRAINER_ENCOUNTER_MUSIC_SAGE        18 // Sage encounter from JOHTO
 
 #define F_TRAINER_FEMALE (1 << 7)
 

@@ -31,6 +31,7 @@
 #include "constants/metatile_behaviors.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "constants/region_map_sections.h"
 
 #define subsprite_table(ptr) {.subsprites = ptr, .subspriteCount = (sizeof ptr) / (sizeof(struct Subsprite))}
 
@@ -2979,13 +2980,30 @@ static void SpriteCB_FieldMoveMonSlideOffscreen(struct Sprite *sprite)
 #define tDestY data[2]
 #define tMonId data[15]
 
-u8 FldEff_UseSurf(void)
+u16 FldEff_UseSurf(void)
 {
     u8 taskId = CreateTask(Task_SurfFieldEffect, 0xff);
     gTasks[taskId].tMonId = gFieldEffectArguments[0];
-    Overworld_ClearSavedMusic();
-    Overworld_ChangeMusicTo(MUS_SURF);
-    return FALSE;
+    if (gMapHeader.region == REGION_KANTO )
+    {
+        Overworld_ClearSavedMusic();
+        Overworld_SetSavedMusic(MUS_RG_SURF);
+        Overworld_ChangeMusicTo(MUS_RG_SURF);
+        return FALSE; // Return the appropriate value if in Sevii Isle 6
+    }
+    else if (gMapHeader.region == REGION_JOHTO )
+    {
+        Overworld_ClearSavedMusic();
+        Overworld_SetSavedMusic(MUS_GSC_SURF);
+        Overworld_ChangeMusicTo(MUS_GSC_SURF);
+        return FALSE;
+    }
+    else
+    {
+        Overworld_ClearSavedMusic();
+        Overworld_ChangeMusicTo(MUS_SURF);
+        return FALSE;
+    }
 }
 
 static void (*const sSurfFieldEffectFuncs[])(struct Task *) = {

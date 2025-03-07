@@ -1,0 +1,103 @@
+mapscripts Route32_MapScripts {}
+
+script Route32_Text_LittleBoy {
+    lock
+    faceplayer
+    msgbox(format("The adults are planning to build a POKéCENTER right here. Strange isn't it ?"))
+    release
+    end
+}
+
+script Route32_Text_Nurse{
+    lock
+    faceplayer
+    msgbox(format("Oh hello young TRAINER. This place will be great in a few years but for now it's still empty."))
+    release
+    end
+}
+
+script Route32_Text_Worker{
+    lock
+    faceplayer
+    msgbox(format("It may take some time to build, especially if you keep disturbing us !"))
+    release
+    end
+}
+
+script Route32_Text_Scientist{
+    lock
+    faceplayer
+    msgbox(format("We've built a few POKéCENTER around, so it may be really quick to build. I don't know why the chief of operation is talking about a few years... Maybe he want to be paid for a big contract..."))
+    release
+    end
+}
+
+script Route32_Text_BaldMan {
+    lock
+    faceplayer
+    msgbox(format("I use to guide the rookies in VIOLET CITY if they didn't had the city BADGES. But since the LEADER is travelling and his son training, I'm unemployed..."))
+    release
+    end
+}
+
+script Route32_Text_CaveSign{
+    lock
+    msgbox(format("UNION CAVE Ahead"))
+    release
+    end
+}
+
+script Route32_Text_Fisherman {
+    call_if_unset(FLAG_TEMP_1, Route32_Text_FishermanFight)
+    if(flag(FLAG_TEMP_1)== TRUE){
+    msgbox(format("I know I know..."),MSGBOX_AUTOCLOSE)
+    end
+    }
+}
+
+script Route32_Text_FishermanFight {
+    trainerbattle_single(TRAINER_DYLAN_2, "Wanna see my fresh fishes ?", "Plouff !")
+    setflag(FLAG_TEMP_1)
+    cleartrainerflag(TRAINER_DYLAN_2)
+    end
+}
+
+script Route32_Text_Fisherman2 {
+    call_if_unset(FLAG_TEMP_2, Route32_Text_FishermanFight2)
+    if(flag(FLAG_TEMP_2)== TRUE){
+    msgbox(format("I know I know..."),MSGBOX_AUTOCLOSE)
+    end
+    }
+}
+
+script Route32_Text_FishermanFight2 {
+    trainerbattle_single(TRAINER_DYLAN_2, "Wanna see my fresh fishes ?", "Plouff !")
+    setflag(FLAG_TEMP_2)
+    cleartrainerflag(TRAINER_DYLAN_2)
+    end
+}
+
+script Route32_Text_Fisherman3 {
+    call_if_unset(FLAG_TEMP_3, Route32_Text_FishermanFight3)
+    if(flag(FLAG_TEMP_3)== TRUE){
+    msgbox(format("I know I know..."),MSGBOX_AUTOCLOSE)
+    end
+    }
+}
+
+script Route32_Text_FishermanFight3 {
+    trainerbattle_single(TRAINER_DYLAN_2, "Wanna see my fresh fishes ?", "Plouff !")
+    setflag(FLAG_TEMP_3)
+    cleartrainerflag(TRAINER_DYLAN_2)
+    end
+}
+script Route32_Text_Picnicker {
+    trainerbattle_single(TRAINER_GABRIELLE_2, "Are you going to UNION CAVE too?","Oh wow!")
+    msgbox("How can you be so tough?", MSGBOX_NPC)
+    end
+}
+script Route32_Text_Camper {
+    trainerbattle_single(TRAINER_GABRIELLE_3, "Hey! That's my spot!","Ok! Ok! I'll share it with you.")
+    msgbox("If you want to avoid the POKéMON, just\ndon't walk in the grass.", MSGBOX_NPC)
+    end
+}

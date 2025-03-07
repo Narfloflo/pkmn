@@ -21,85 +21,29 @@
       "x": 3,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_DYNAMIC",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_ROUTE104",
+      "dest_warp_id": "13"
     },
     {
       "x": 4,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_DYNAMIC",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_ROUTE104",
+      "dest_warp_id": "13"
     },
     {
-      "x": 43,
-      "y": 29,
-      "elevation": 0,
-      "dest_map": "MAP_DYNAMIC",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 8,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_HOUSE",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 25,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_HOUSE",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 43,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_HOUSE",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 7,
-      "y": 15,
-      "elevation": 0,
-      "dest_map": "MAP_HOUSE",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 25,
-      "y": 15,
-      "elevation": 0,
-      "dest_map": "MAP_HOUSE",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 43,
-      "y": 15,
-      "elevation": 0,
-      "dest_map": "MAP_HOUSE",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 8,
-      "y": 29,
-      "elevation": 0,
-      "dest_map": "MAP_HOUSE",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 21,
+      "x": 23,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_DYNAMIC",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_ROUTE104",
+      "dest_warp_id": "14"
     },
     {
-      "x": 20,
+      "x": 22,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_DYNAMIC",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_ROUTE104",
+      "dest_warp_id": "14"
     },
     {
       "x": 39,
@@ -187,7 +131,24 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "PetalburgMultipleHouses_Trigger_Stairs"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "PetalburgMultipleHouses_Trigger_Stairs"
+    }
   ],
   "bg_events": [
 

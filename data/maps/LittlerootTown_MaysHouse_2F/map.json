@@ -254,7 +254,15 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 1,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "LittlerootTown_Text_MayParentFloor"
+    }
   ],
   "bg_events": [
     {

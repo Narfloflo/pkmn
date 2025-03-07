@@ -1,0 +1,230 @@
+mapscripts KantoUndergrounds_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION{
+        
+        if(flag(FLAG_UNUSED_0x02C)== TRUE){
+            playbgm(MUS_RG_ROUTE1, TRUE)
+            setweather(WEATHER_NONE)
+            end
+            removeobject(1)
+            removeobject(2)
+            removeobject(3)
+            removeobject(4)
+            removeobject(5)
+            removeobject(6)
+            removeobject(7)
+            removeobject(8)
+            removeobject(9)
+            removeobject(10)
+            removeobject(11)
+        }
+    }
+}
+
+
+
+script KantoUndergrounds_Event_WestGate_CantGetThrough {
+    lockall
+    applymovement(8, KantoUndergrounds_Event_WestGate_PoliceStopYou)
+    waitmovement(0)
+    msgbox("Hey you! Please step back. The remnants\nof the TEAM ROCKET are crowded here.\lIf you want to help , go at the\lentrance in ROUTE 5.", MSGBOX_NPC)
+    applymovement(OBJ_EVENT_ID_PLAYER, KantoUndergrounds_Event_WestGate_Stepback)
+    waitmovement(0)
+    releaseall
+    end
+}
+
+movement KantoUndergrounds_Event_WestGate_PoliceStopYou {
+    emote_exclamation_mark
+    face_player
+    step_end
+}
+
+movement KantoUndergrounds_Event_WestGate_Stepback {
+    walk_left
+    step_end
+}
+
+script KantoUndergrounds_Event_EastGate_CantGetThrough {
+    lockall
+    applymovement(9, KantoUndergrounds_Event_EastGate_PoliceStopYou)
+    waitmovement(0)
+    msgbox("Hey you! Please step back. The remnants\nof the TEAM ROCKET are crowded here.\lIf you want to help , go at the\lentrance in ROUTE 5.", MSGBOX_NPC)
+    applymovement(OBJ_EVENT_ID_PLAYER, KantoUndergrounds_Event_EastGate_Stepback)
+    waitmovement(0)
+    releaseall
+    end
+}
+
+movement KantoUndergrounds_Event_EastGate_PoliceStopYou {
+    emote_exclamation_mark
+    face_player
+    step_end
+}
+
+movement KantoUndergrounds_Event_EastGate_Stepback {
+    walk_right
+    step_end
+}
+
+script KantoUndergrounds_Event_SouthGate_CantGetThrough {
+    lockall
+    applymovement(7, KantoUndergrounds_Event_SouthGate_PoliceStopYou)
+    waitmovement(0)
+    msgbox("Hey you! Please step back. The remnants\nof the TEAM ROCKET are crowded here.\lIf you want to help , go at the\lentrance in ROUTE 5.", MSGBOX_NPC)
+    applymovement(OBJ_EVENT_ID_PLAYER, KantoUndergrounds_Event_SouthGate_Stepback)
+    waitmovement(0)
+    releaseall
+    end
+}
+
+movement KantoUndergrounds_Event_SouthGate_PoliceStopYou {
+    emote_exclamation_mark
+    face_player
+    step_end
+}
+
+movement KantoUndergrounds_Event_SouthGate_Stepback {
+    walk_down
+    step_end
+}
+
+script KantoUndergrounds_Text_Policeman {
+    msgbox("A bunch of ROCKETS members are\ngathering here.\lUnfortunatly we don't have enough units\lavailable at the moment to fight them\lall...\lCan you give us a hand?",MSGBOX_YESNO)
+    if(var(VAR_RESULT)== TRUE){
+        msgbox("Thanks you young TRAINER!\nI hope you can beat them well!", MSGBOX_NPC)
+        end
+    }else{
+        msgbox("Me too I'm too scared and unprepared\nfor that...", MSGBOX_NPC)
+        end
+    }
+}
+
+script KantoUndergrounds_Text_Policeman2 {
+    
+}
+
+script KantoUndergrounds_Text_Rocket1 {
+    trainerbattle_single(TRAINER_ROCKET_1, "Well a kid!\nIt's gonna be my day if I beat you!", "What? Noooo!", KantoUndergrounds_Text_Rocket1PostBattle)
+    end  
+}
+
+script KantoUndergrounds_Text_Rocket1PostBattle {
+    msgbox("Hummf!\nI can't believe I've been beaten by a\lkid! Again!", MSGBOX_NPC)
+    applymovement(4, KantoUndergrounds_Move_Rocket1PostBattle)
+    waitmovement(0)
+    end   
+}
+
+movement KantoUndergrounds_Move_Rocket1PostBattle {
+    walk_up*5
+    step_end
+}
+
+script KantoUndergrounds_Text_Rocket2 {
+    trainerbattle_single(TRAINER_ROCKET_2, "What do you want brat?\nBeat us?\lAh ah! No!", "Seriously?!", KantoUndergrounds_Text_Rocket2PostBattle)
+    end  
+}
+
+script KantoUndergrounds_Text_Rocket2PostBattle {
+    msgbox("I'll never forget you for what you've\ndone.\lGIOVANNI! Save us!", MSGBOX_NPC)
+    applymovement(3, KantoUndergrounds_Move_Rocket2PostBattle)
+    waitmovement(0)
+    end
+}
+
+movement KantoUndergrounds_Move_Rocket2PostBattle {
+    walk_up*8
+    step_end
+}
+
+script KantoUndergrounds_Text_Rocket3 {
+    trainerbattle_single(TRAINER_ROCKET_3, "What?! We look like a team of hobbos?!\nI'll make you regret that!", "I may be a hobbo, but I'm giving you my\nmoney.\lMakes you thinks right?", KantoUndergrounds_Text_Rocket3PostBattle)
+    end  
+}
+
+script KantoUndergrounds_Text_Rocket3PostBattle {
+    msgbox("I used to be a BIRDKEEPER, but I a had\ngambling addiction and made the worst\lchoices...\lDon't ever EVER go to a GAME CORNER!\lI can't believe kids are allowed in\lthese places.", MSGBOX_NPC)
+    applymovement(1, KantoUndergrounds_Move_Rocket3PostBattle)
+    waitmovement(0)
+    end
+}
+movement KantoUndergrounds_Move_Rocket3PostBattle {
+    walk_up*17
+    step_end
+}
+
+script KantoUndergrounds_Text_Rocket4 {
+    trainerbattle_single(TRAINER_DYLAN_3, "Oh ARCEUS!\nOur retreat is under attack!", "Are we doomed to be defeated?", KantoUndergrounds_Text_Rocket4PostBattle)
+    end  
+}
+
+script KantoUndergrounds_Text_Rocket4PostBattle {
+    msgbox("I think I should move to JOHTO to\nretire.\lI'm sick of being a punchingball.\lI wish in an alternate dimension this\lkid RED was on our side.\lMay GIRATINA hear me...", MSGBOX_NPC)
+    applymovement(2, KantoUndergrounds_Move_Rocket_Leaving)
+    msgbox("Stop right there you criminal scum!", MSGBOX_NPC)
+    applymovement(11, KantoUndergrounds_Move_PolicetoPlayerNorth)
+    applymovement(10, KantoUndergrounds_Move_PolicetoPlayerNorth)
+    waitmovement(0)
+    msgbox("You are cornered ARCHIE! There is no\nway to escape now! Surrender!\lSince your HIDEOUT in SEVII's been shut\ldown by GREEN, there is no way for you\lto escape!\lGRUNT: Damn it! That's not fair!\lI'll be back, I swear on my name!", MSGBOX_NPC)
+    warp(MAP_KANTO_UNDERGROUNDS, 33, 5)
+    setvar(VAR_UNUSED_0x4091, 1)
+    setflag(FLAG_UNUSED_0x02C)
+    end
+}
+
+movement KantoUndergrounds_Move_Rocket_Leaving {
+    walk_fast_down*2
+    emote_exclamation_mark
+    step_end
+}
+
+movement KantoUndergrounds_Move_PolicetoPlayerNorth {
+    walk_up*5
+    face_player
+    step_end
+}
+
+script KantoUndergrounds_Event_NorthGateYesNo {
+       
+        call(KantoUndergrounds_Event_NorthGatePoliceCheckIn)
+        end
+    }
+
+script KantoUndergrounds_Event_Nope {
+    end
+}
+
+
+script KantoUndergrounds_Event_NorthGatePoliceCheckIn {
+    applymovement(5, KantoUndergrounds_Move_NorthGatePoliceCheckInMove)
+    waitmovement(0)
+    msgbox("Oh you came to give us a hand?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == TRUE) {
+        msgbox("Great!\nWell there are four ROCKETS leaving\lhere, but my TEAM is not strong enough\lto beat them all.\lYou have to defeat them in one row to\lbuy enough time for my colleagues to\larrest them all.", MSGBOX_NPC)
+        cleartrainerflag(TRAINER_DYLAN_3)
+        setvar(VAR_UNUSED_0x409B, 1)
+        release
+        end
+    } else {
+        msgbox("Oh ok I understand.\nWell we can manage to get them one way\lor another right?", MSGBOX_NPC)
+        applymovement(OBJ_EVENT_ID_PLAYER, KantoUndergrounds_Move_NorthGatePlayerRefuse)
+        waitmovement(0)
+        release
+        end
+    }
+}
+
+movement KantoUndergrounds_Move_NorthGatePoliceCheckInMove {
+    face_player
+    step_end
+}
+
+movement KantoUndergrounds_Move_NorthGatePlayerRefuse {
+    walk_up
+    step_end
+}
+
+script KantoUndergrounds_Text_PoliceGoBack{
+    msgbox("Hey you, it's not safe here. But if you\nreally want to help, go to the\lUNDERGROUND from ROUTE 5!", MSGBOX_NPC)
+    end
+}

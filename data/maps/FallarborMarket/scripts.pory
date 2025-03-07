@@ -41,11 +41,11 @@ mart FallarborMarketVendor1 {
 }
 
 mart FallarborMarketVendor2 {
-    ITEM_TM27_RETURN
-    ITEM_TM48_SKILL_SWAP
-    ITEM_TM49_SNATCH
-    ITEM_TM02_DRAGON_CLAW
-    ITEM_TM46_THIEF
+    ITEM_TM27
+    ITEM_TM48
+    ITEM_TM49
+    ITEM_TM02
+    ITEM_TM46
 }
 
 mart FallarborMarketVendor3 {

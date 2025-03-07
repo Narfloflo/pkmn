@@ -1,0 +1,282 @@
+{
+  "id": "MAP_ROCK_TUNNEL",
+  "name": "RockTunnel",
+  "layout": "LAYOUT_ROCK_TUNNEL",
+  "music": "MUS_RG_MT_MOON",
+  "region_map_section": "MAPSEC_ROCK_TUNNEL",
+  "requires_flash": true,
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
+      "x": 16,
+      "y": 39,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
+      "x": 15,
+      "y": 38,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HIKER_KANTO",
+      "x": 4,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_DOWN_AND_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "RockTunnel_Text_Hiker1",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PICKNICKER_KANTO",
+      "x": 47,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "RockTunnel_Text_Picnicker1",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PICKNICKER_KANTO",
+      "x": 44,
+      "y": 30,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "RockTunnel_Text_Picnicker2",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER_KANTO",
+      "x": 41,
+      "y": 63,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "RockTunnel_Text_Camper",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_KANTO",
+      "x": 13,
+      "y": 64,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "RockTunnel_Text_BlackBelt",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HIKER_KANTO",
+      "x": 42,
+      "y": 81,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "RockTunnel_Text_Hiker2",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ENGINEER",
+      "x": 22,
+      "y": 94,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "RockTunnel_Text_Worker1",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ENGINEER",
+      "x": 16,
+      "y": 103,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "RockTunnel_Text_Worker2",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 25,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE10",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 16,
+      "y": 41,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE10",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 47,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 42,
+      "y": 77,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 41,
+      "y": 51,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 24,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL",
+      "dest_warp_id": "7"
+    },
+    {
+      "x": 29,
+      "y": 57,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 5,
+      "y": 48,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL",
+      "dest_warp_id": "9"
+    },
+    {
+      "x": 46,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 37,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL",
+      "dest_warp_id": "11"
+    },
+    {
+      "x": 15,
+      "y": 94,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL",
+      "dest_warp_id": "10"
+    },
+    {
+      "x": 38,
+      "y": 103,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL",
+      "dest_warp_id": "15"
+    },
+    {
+      "x": 40,
+      "y": 105,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL",
+      "dest_warp_id": "15"
+    },
+    {
+      "x": 5,
+      "y": 106,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE10",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 34,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL",
+      "dest_warp_id": "13"
+    },
+    {
+      "x": 42,
+      "y": 107,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE8",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 35,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    }
+  ]
+}

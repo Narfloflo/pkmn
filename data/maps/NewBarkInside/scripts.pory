@@ -1,0 +1,25 @@
+mapscripts NewBarkInside_MapScripts {}
+
+script NewBarkTown_Text_GoldMom {
+    lock
+    faceplayer
+    msgbox(format("Hello you, you seem to be a little older than my son. He is studying POKéMON with the PROF. ELM. He is so dedicated to that. He is in our garden currently. Focus on strategy or something. Kids... Haha !"))
+    release
+    end
+}
+
+script NewBarkTown_Text_ElmWife {
+    lock
+    faceplayer
+    msgbox(format("Hello there ! My husband's always so busy. I hope he's OK. When he's caught up in his POKéMON research, he even forget to eat. Sometime he even go come home..."))
+    release
+    end
+}
+
+script NewBarkTown_Text_Girl {
+    lock
+    faceplayer
+    msgbox(format("Professor Elm field of research is EVOLUTION. He taught us a lot about EVOLUTION ! "))
+    release
+    end
+}

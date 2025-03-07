@@ -5,16 +5,16 @@ raw`BeachSide_MapScripts::
 script SailorToJohto{ 
     lock
     faceplayer
-    if(flag(FLAG_DEFEATED_MOSSDEEP_GYM)) {
-        msgbox("Wanna go to JOHTO ?", MSGBOX_YESNO)
-        if(var(VAR_RESULT) !=0){
+    if(flag(FLAG_IS_CHAMPION)) {
+        msgbox("Looks like you have everything in\norder.\lGood I can take you to JOHTO.\lAre you in ?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) ==1){
             msgbox("Please, come in !")
             call(WarpToJohto)
         } else{
             msgbox("Another time then !")
         }
      } else {
-        msgbox(format("Hmm, you didn't receive all the BADGES."))
+        msgbox(format("Hello there! Can I see your\nticket?\l........................\lWell looks you don't have it...\lCome back with it, I'll take you\lto JOHTO!"))
     }
     release
     end
@@ -23,6 +23,99 @@ script SailorToJohto{
  script WarpToJohto{
     fadescreen(FADE_TO_BLACK)
     delay(5)
-    warp(MAP_BEACH_SIDE2, 29, 46)
+    warp(MAP_OLIVINE_CITY_PORT, 6, 16)
+    fadescreen(FADE_FROM_BLACK)
+ }
+
+ script BeachSide_Text_Beauty {
+    lock
+    faceplayer
+    msgbox(format("Here is the BEACH SIDE in which everybody come to relax. There are also some WILD POKéMON around, but that's not a big deal. You are here to keep us safe right ?"))
+    release
+    end
+}
+
+ script BeachSide_Text_Sign {
+    lock
+    faceplayer
+    msgbox(format("BEACH SIDE\pPerfect place to bath and take a break."))
+    release
+    end
+}
+
+ script BeachSide_Text_TuberF {
+    lock
+    faceplayer
+    msgbox(format("I will build the biggest sandcastle and bring a CHARIZARD to be it's guardian. My parents are moving to JOHTO to meet Prof. TREE or something like that and ask for a POKéMON !"))
+    release
+    end
+}
+
+ script BeachSide_Text_Sailor {
+    lock
+    faceplayer
+    msgbox(format("I saw a SIREN I'm pretty sure about this ! Or maybe it was a WAILORD... I don't remember..."))
+    release
+    end
+}
+
+script BeachSide_Text_SwimmerF {
+    lock
+    faceplayer
+    msgbox(format("This place is so relaxing, nobody will disturb you. Hey ! Get out the sun, I can't tan properly !"))
+    release
+    end
+}
+
+script BeachSide_Text_Sailor2 {
+    lock
+    faceplayer
+    msgbox(format("The FERRY here takes you to OLIVINE CITY in JOHTO. I'm sure there was a way to buy tickets, but I don't remember how. Unless you are famous, there is no way to travel freely.\pYeah, capitalism is a bitch."))
+    release
+    end
+}
+
+script BeachSide_Text_SwimmerF2 {
+    lock
+    faceplayer
+    msgbox(format("Blmmbbll ! No I'm not drowning. Blmmblll !\p........................................\pOk I admit, I'm learning how to swim."))
+    release
+    end
+}
+
+script BeachSide_Text_TuberM {
+    lock
+    faceplayer
+    msgbox(format("I'm happy my grandpa brought me here instead of DEWFORD TOWN. There are way to much people, I hate that !"))
+    release
+    end
+}
+
+script BeachSide_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("My grandkid is happy I brought him here. I wanted to go to DEWFORD TOWN but when I saw the prices.\pSIGH..."))
+    release
+    end
+}
+
+script BeachSide_Text_BusDriver{ 
+    lock
+    faceplayer
+        msgbox("Hi, I can bring you to the AIRPORT\nDo you wanna take the bus?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) ==1){
+            msgbox("Please, come in !")
+            call(BeachSide_Event_WarpToAirport)
+        } else{
+            msgbox("Another time then !")
+        } 
+    release
+    end
+}
+ 
+ script BeachSide_Event_WarpToAirport{
+    fadescreen(FADE_TO_BLACK)
+    delay(5)
+    warp(MAP_HOENN_AIRPORT, 39, 19)
     fadescreen(FADE_FROM_BLACK)
  }

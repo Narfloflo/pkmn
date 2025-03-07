@@ -1,0 +1,50 @@
+mapscripts VioletMart_MapScripts {}
+
+script VioletCityMart_Text_Guy {
+    lock
+    faceplayer
+    msgbox(format("POKéMON can hold items like POTION and ANTIDOTE. Huh, you already knew about it ? Well sorry Einstein !"))
+    release
+    end
+}
+
+script VioletCityMart_Text_Oldwoman {
+    lock
+    faceplayer
+    msgbox(format("When you first catch a POKéMON, it may be weak. But it will eventually grow to be strong. Treat your POKéMON with love or become a ROCKET !"))
+    release
+    end
+}
+
+script VioletCityMart_Text_Vendor {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemart(VioletCityMartVendor)
+    msgbox(format("Please come again!"))
+    release
+}
+
+mart VioletCityMartVendor {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_ULTRA_BALL
+    ITEM_NET_BALL
+    ITEM_POTION
+    ITEM_SUPER_POTION
+    ITEM_HYPER_POTION
+    ITEM_MAX_POTION
+    ITEM_FULL_RESTORE
+    ITEM_REVIVE
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+    ITEM_BURN_HEAL
+    ITEM_ICE_HEAL
+    ITEM_FULL_HEAL
+    ITEM_ESCAPE_ROPE
+    ITEM_REPEL
+    ITEM_SUPER_REPEL
+    ITEM_MAX_REPEL
+}

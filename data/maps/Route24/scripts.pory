@@ -1,0 +1,114 @@
+mapscripts Route24_MapScripts {}
+
+
+script Route24_Text_BugCatcherBridge {
+    trainerbattle_single(TRAINER_RICKY_2, "Welcome on the NUGGET BRIDGE sucker !", "Damn it !")
+    msgbox(format("You are strong, but I'm just the first one !"),MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Route24_Text_LassBridge {
+    trainerbattle_single(TRAINER_RICKY_3, "I'm number two, it's gonna be\ntough !", "Ahah you are strong !")
+    msgbox(format("Keep going, let's see how far you can go."),MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Route24_Text_YoungsterBridge {
+    trainerbattle_single(TRAINER_RICKY_4, "Three, it's were trouble begins !", "You cheated I saw it !")
+    msgbox(format("I don't want to talk about it anymore..."),MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Route24_Text_PicnicBridge {
+    trainerbattle_single(TRAINER_DUSTY_2, "What are you looking four ?", "Oh what a mess you did.")
+    msgbox(format("I was too busy making puns..."),MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Route24_Text_CamperBridge {
+    trainerbattle_single(TRAINER_DUSTY_3, "I'm the last one. You ready ?", "Ah ! That's a good one !")
+    msgbox(format("Go talk to the guy there, he'll give you something."),MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Route24_Text_CamperShy {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_DUSTY_4)){
+        goto(Route24_Text_FightCamper)
+    }else{
+        goto(Route24_Text_CamperRematch)
+    }
+    release
+    end
+}
+script Route24_Text_FightCamper {
+    msgbox(format("... I'm shy but you want a BATTLE ?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        trainerbattle_single(TRAINER_DUSTY_4, "Well, humm... Ok !", "................")
+    }else{
+    msgbox(format("Leave me alone please..."))
+    }
+    release
+    end
+}
+
+script Route24_Text_CamperRematch {
+    msgbox(format("What you still want a BATTLE with me ? But I'm lame !"), MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+    cleartrainerflag(TRAINER_DUSTY_4)
+    trainerbattle_single(TRAINER_DUSTY_4, "I'll do my best", "SIGH...")
+    }else{
+        msgbox(format("Leave me alone please..."))
+    }
+    release
+    end
+}
+
+
+script Route24_Text_BridgeGuy {
+    lock
+    faceplayer
+    if(var(VAR_DEWFORD_TOWN_STATE)==0){
+    msgbox(format("Yo!\nLooks like you defeated all the\ltrainers of the bridge. I'm suppose to\lgive you a NUGGET but.. The mine that\lis furnishing us is deplete...\lInstead take this !"))
+    giveitem(ITEM_GANLON_BERRY, 3)
+    setvar(VAR_DEWFORD_TOWN_STATE,1) 
+    }else{
+    goto(Route24_Text_BridgeGuyRematch)   
+    }
+    release
+    end
+}
+
+script Route24_Text_BridgeGuyRematch {
+    msgbox(format("Hey I guess you enjoy challenge right ? Wanna rematch the trainers ?"),MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        msgbox(format("Perfect ! Well just go to the start of the bridge."))
+        cleartrainerflag(TRAINER_RICKY_2)
+        cleartrainerflag(TRAINER_RICKY_3)
+        cleartrainerflag(TRAINER_RICKY_4)
+        cleartrainerflag(TRAINER_DUSTY_2)
+        cleartrainerflag(TRAINER_DUSTY_3)
+        fadescreen(FADE_TO_BLACK)
+        delay(20)
+        warp(MAP_ROUTE24, 15, 38)
+        fadescreen(FADE_FROM_BLACK)
+    }else{
+        msgbox(format("Ahah, you are afraid right ?"))
+    }
+    release
+    end
+}
+
+script Route24_Text_Guy {
+    lock
+    faceplayer
+    msgbox(format("A few months ago, a guy named RED beat the trainers on the bridge and a ROCKET member tried to recruit him. I wonder what would have happened if he accepted..."))
+    release
+    end
+}

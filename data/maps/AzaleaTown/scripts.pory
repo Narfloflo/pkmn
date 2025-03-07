@@ -1,0 +1,66 @@
+mapscripts AzaleaTown_MapScripts {}
+
+
+script AzaleaTown_Text_Slowpoke {
+    lock
+    faceplayer
+    playmoncry(SPECIES_SLOWPOKE, CRY_MODE_NORMAL)
+    msgbox("SLOWPOKE: .............................\n... ... ...\l... ... ... Yamn?")
+    release
+    end
+}
+
+script AzaleaTown_Text_Lass {
+    lock
+    faceplayer
+    msgbox(format("I heard that the SLOWPOKE TAILS can be\nused to cure everything.\lBut that can't be right?\l......................\lRight?"))
+    release
+    end
+}
+
+script AzaleaTown_Text_Man {
+    lock
+    faceplayer
+    msgbox(format("This place is a little secluded\ncompare from others cities.\lBut it's a nice place right?\lWhat? About the GYM?\lThere is our famous guardian that will\lprevent you from entering inside.\lWhat it's an imbecile ?\lHa ha ha!\lOf course! It's a SLOWPOKE!"))
+    release
+    end
+}
+
+script AzaleaTown_Text_BugCatcher {
+    lock
+    faceplayer
+    msgbox(format("Have you ever heard about BUGSY?\nHe is a BUG CATCHER like us, but he\lis really strong!\lHe should be appointed as AZALEA's\lnew GYM LEADER soon.\lFinally BUG TYPE POKéMON will be\lrepresented!"))
+    release
+    end
+}
+
+script AzaleaTown_Text_BugCatcher2 {
+    lock
+    faceplayer
+    msgbox(format("I wonder if a BUG CATCHING CONTEST would be a nice thing..."))
+    release
+    end
+}
+
+script AzaleaTown_Sign_SlowpokeWell {
+    msgbox("SLOWPOKE WELL\nAlso known as the RAINMAKER WELL.\lLocals believe that a SLOWPOKE's yawn\lsummons rain.\lRecords show that a SLOWPOKE's yawn\lended a drought 400 years ago.", MSGBOX_SIGN)
+    end
+}
+
+script AzaleaTown_Sign_CharcoalKiln {
+    msgbox("CAHRCOAL KILN", MSGBOX_SIGN)
+    end
+}
+
+script AzaleaTown_Sign_KurtHouse {
+    msgbox("KURT'S HOUSE", MSGBOX_SIGN)
+    end
+}
+script AzaleaTown_Sign_IlexForest {
+    msgbox("ILEX FOREST\nEnter through the gate.", MSGBOX_SIGN)
+    end
+}
+script AzaleaTown_Sign_AzaleaDesc {
+    msgbox("AZALEA TOWN\nWhere People and POKéMON live in happy\lharmony", MSGBOX_SIGN)
+    end
+}

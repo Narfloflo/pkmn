@@ -1,0 +1,74 @@
+mapscripts LilycoveResto_MapScripts {
+	MAP_SCRIPT_ON_TRANSITION{
+		if(flag(FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE)== TRUE){
+			removeobject(3)
+			end
+		}
+	}
+}
+
+script LilycoveResto_Text_Vendor{
+    lock
+    faceplayer
+	message("Welcome!\nOh a kid! No booze for you.")
+	waitmessage
+	pokemart(LilycoveResto_PubItems)
+	msgbox("Don't forget to drink with moderation.")
+	release
+}
+
+mart LilycoveResto_PubItems {
+    ITEM_SANDWICH
+	ITEM_SODA_POP
+	ITEM_LEMONADE
+	ITEM_MOOMOO_MILK
+	ITEM_FRESH_WATER
+    ITEM_LAVA_COOKIE
+}
+
+script LilycoveResto_Text_OldMan {
+	msgbox("Eating this plate make me feel young\nagain!\lI can't stop eating!", MSGBOX_NPC)
+	applymovement(4, Exclamation)
+	waitmovement(0)
+	message("Arg! A heart attack!\n...................\l...................\lI'll be fine")
+	end
+}
+
+script LilycoveResto_Text_Sailor1 {
+	if(flag(FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE)== TRUE){
+		msgbox("My mate from KANTO is gone...\nI'm a bit sad, but that's the sailor\llife you know."MSGBOX_NPC)
+		end
+	}
+	msgbox("My mate here is going back to KANTO\nsoon!\lSo we're celebrating his last days here!", MSGBOX_NPC)
+	end
+}
+script LilycoveResto_Text_Sailor2 {
+	msgbox("Soon I'll be gone... hic\nI miss my land!... hic\lYou cannot understand... hic", MSGBOX_NPC)
+	end
+}
+
+script LilycoveResto_Text_LassJr {
+	checkplayergender
+	goto_if_eq(VAR_RESULT, MALE, LilycoveResto_Text_LassJrLeavemeAlone)
+    goto_if_eq(VAR_RESULT, FEMALE, LilycoveResto_Text_LassJrBastard)
+	
+}
+script LilycoveResto_Text_LassJrLeavemeAlone {
+	msgbox("Oh come on! You guys can't leave me\nalone?", MSGBOX_NPC)
+	end
+}
+
+script LilycoveResto_Text_LassJrBastard {
+	msgbox("Oh my ARCEUS.\nThe boy over there is such a prick!\lHe's so obsessed by me! I can't...\lI need a strong POKéMON to punch him.", MSGBOX_NPC)
+	end
+}
+
+script LilycoveResto_Text_Youngster {
+	msgbox("This girl over there is my waifu, but\nshe don't know that yet.", MSGBOX_NPC)
+	end
+}
+
+script LilycoveResto_Text_KidM {
+	msgbox("= I ate too much sugar! I can't stop\nrunning!", MSGBOX_NPC)
+	end
+}

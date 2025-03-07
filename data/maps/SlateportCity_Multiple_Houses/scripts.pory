@@ -1,1 +1,107 @@
 mapscripts SlateportCity_Multiple_Houses_MapScripts {}
+
+script SlateportCity_Multiple_Houses_Text_GBABoy {
+    lock
+    faceplayer
+    msgbox(format("You know what life is?\nHaving a good game, and a bunch of\lamazing dolls!\l{PLAYER}: Seems pretty depressing\lyeah!"))
+    release
+    end
+}
+
+script SlateportCity_Multiple_Houses_Text_Fisherman {
+    lock
+    faceplayer
+    msgbox(format("I'm so freaking hungry!\nI need some FEEBAS ragout!\lDid you ever taste that?"))
+    release
+    end
+}
+
+script SlateportCity_Multiple_Houses_Text_Wingull {
+    lock
+    faceplayer
+    playmoncry(SPECIES_WINGULL, CRY_MODE_NORMAL)
+    msgbox(format("Guul!\n{PLAYER}: I hope your trainer is\lgonna get something to eat.\lOtherwise, I've been happy to meet\lyou."))
+    release
+    end
+}
+
+script SlateportCity_Multiple_Houses_Text_Sailor {
+    lock
+    faceplayer
+    msgbox(format("You know, if you get eastward,\nyou'll find the docks of\lSLATEPORT.\lYou can take a ferry to KANTO.\lYeah I've already taken it!"))
+    release
+    end
+}
+
+script SlateportCity_Multiple_Houses_Text_SchoolBoyM {
+    lock
+    faceplayer
+    msgbox(format("My dad went overseas when he was\nyounger!\lHe even went to UNOVA!\lI wanna go there too when I grew\lhope!"))
+    release
+    end
+}
+
+script SlateportCity_Multiple_Houses_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("I used to be a famous sailor!\nYou know BRINEY? He used to be my\lnemesis!\lAfter a fight he was exil on ROUTE\l104. That's how we used to live as\lsailors!\lHahahahaha!"))
+    release
+    end
+}
+
+script SlateportCity_Multiple_Houses_Text_Azurill {
+    lock
+    faceplayer
+    playmoncry(SPECIES_AZURILL, CRY_MODE_NORMAL)
+    msgbox(format("Zu zu!"))
+    release
+    end
+}
+
+script SlateportCity_Multiple_Houses_Text_RichBoy {
+    lock
+    faceplayer
+    msgbox(format("Have you ever been to the BATTLE\nTENT?\lIt's so damn good!"))
+    release
+    end
+}
+
+script SlateportCity_Multiple_Houses_Text_Beauty {
+    lock
+    faceplayer
+    msgbox(format("I'm pretty sure there were some\nkind of CONTEST here...\l{PLAYER}: Maybe in an alternate\lreality were I'm dressed in red\linstead of green?"))
+    release
+    end
+}
+
+script SlateportCity_Multiple_Houses_Text_BaldMan {
+    lock
+    faceplayer
+    msgbox(format("I stayed in a inn for sometime,\nand I end up with three children!\lJust like when you let your\lPOKéMON in the DAY CARE for too\llong!!"))
+    release
+    end
+}
+
+script SlateportCity_Multiple_Houses_Text_LittleBoy {
+    lock
+    faceplayer
+    msgbox(format("My mom left my dad because she got\na career in KALOS.\lSometime we got to see her. We can\leat some croissant!\lThat's so nice!"))
+    release
+    end
+}
+
+script SlateportCity_Multiple_Houses_Text_LittleGirl {
+    lock
+    faceplayer
+    msgbox(format("You know that you can feed your\nPOKéMON with our food?\lLike SODA and pastries?\lI don't know if they would eat a\lsandwich made with POKéMON meat..."))
+    release
+    end
+}
+
+script SlateportCity_Multiple_Houses_Text_TuberBoy {
+    lock
+    faceplayer
+    msgbox(format("My POKéMON are ready to swim and\nso I am!"))
+    release
+    end
+}

@@ -1,0 +1,61 @@
+mapscripts SaffronInside_MapScripts {}
+
+script SaffronInside_Text_Sabrina {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_BRAWLY_4)){
+        msgbox(format("{PLAYER} right ? I forsaw you coming here. I'm a bit busy ordering stuff for my GYM, but I know what you are looking for. So you wanna fight me ?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT)==1){
+            goto(SaffronInside_Text_SabrinaFight)
+        }else{
+            msgbox(format("Yeah I forsaw that eventually..."))
+        }
+    }elif(defeated(TRAINER_BRAWLY_4)){
+        goto(SaffronInside_Text_SabrinaRematch)
+    }
+    
+    release
+    end
+}
+
+script SaffronInside_Text_SabrinaFight {
+    trainerbattle_single(TRAINER_BRAWLY_4, "I already know all your moves !", "I didn't paid attention...")
+    release
+    end
+}
+
+script SaffronInside_Text_SabrinaRematch {
+    msgbox(format("You know, administrative stuff can be really a waste of time. We can spend it with our POKéMON if you want ?"),MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        cleartrainerflag(TRAINER_BRAWLY_4)
+        trainerbattle_single(TRAINER_BRAWLY_4, "I already know all your moves !", "I didn't paid attention...")
+    }else{
+        msgbox(format("..."))
+    }
+    release
+    end
+}
+
+script SaffonInside_Text_OfficeLady {
+    lock
+    faceplayer
+    msgbox(format("Here in YAMABUKI CORP. we didn't suffer TEAM ROCKET mischieves that much. Ok some of our scientist are missing. But at least our offices didn't blew up !"))
+    release
+    end
+}
+
+script SaffonInside_Text_OfficeGuard {
+    lock
+    faceplayer
+    msgbox(format("Welcome to YAMABUKI CORP."))
+    playse(MUS_OBTAIN_ITEM)
+    waitse
+    message(format("Here is a flyer about what we do. What it's blank ? Well you get the idea..."))
+    release
+    end
+}
+
+script SaffronInside_Text_TrainerFanclubSign {
+    msgbox("POKéMON TRAINER FAN CLUB\pMany TRAINERS have scribbled their\nnames on this sign.", MSGBOX_SIGN)
+    end
+}

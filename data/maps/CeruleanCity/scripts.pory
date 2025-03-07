@@ -1,0 +1,160 @@
+mapscripts CeruleanCity_MapScripts {}
+
+script CeruleanCity_Text_Misty {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_ROXANNE_2)){
+        msgbox(format("Hello you. The GYM is closed ? Yes I know, I'm actually training my future troops here in the pool. They can barely know how to swim... I can have a small fight with you if you want ?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT)==1){
+            goto(CeruleanCity_Text_MistyFight)
+        }else{
+            msgbox(format("Well, I still have these lazy ass to train so..."))
+        }
+    }elif(defeated(TRAINER_ROXANNE_2)){
+        goto(CeruleanCity_Text_MistyRematch)
+    }
+    
+    release
+    end
+}
+
+script CeruleanCity_Text_MistyFight {
+    trainerbattle_single(TRAINER_ROXANNE_2, "I'm always ready for that !", "You really are strong !")
+    release
+    end
+}
+
+script CeruleanCity_Text_MistyRematch {
+    msgbox(format("Pfffiou, all these guys can't understand the basics of swimming. I give up. Oh {PLAYER} ! You want a rematch ?"),MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        cleartrainerflag(TRAINER_ROXANNE_2)
+        trainerbattle_single(TRAINER_ROXANNE_2, "I'm always ready for that !", "You really are strong !")
+    }else{
+        msgbox(format("You know where to find me if you change your mind."))
+    }
+    release
+    end
+}
+
+script CeruleanCity_Text_SwimmingPool {
+    lock
+    msgbox(format("{PLAYER} : This is a swimming pool, I don't think I can SURF here."))
+    release
+    end
+}
+
+script CeruleanCity_Text_Policeman {
+    lock
+    faceplayer
+    msgbox(format("This is the CERULEAN POLICE STATION. Since TEAM ROCKET was making a big ruckus here, the authorities thought it would be great to build a POLICE STATION. So if this lunatics are back, we are ready !"))
+    release
+    end
+}
+
+script CeruleanCave_Text_Camper {
+    lock
+    faceplayer
+    msgbox(format("This way lead to the ROUTE 9 and the ROCK TUNNEL. But this bush is blocking the way..."))
+    release
+    end
+}
+
+script CeruleanCave_Text_Youngster {
+    lock
+    faceplayer
+    msgbox(format("You're a TRAINER too ? Collecting, fighting, it's a tough life."))
+    release
+    end
+}
+
+script CeruleanCave_Text_Lass {
+    lock
+    msgbox(format("Ok !\nSLOWBRO ! Use SONICBOOM !\pCome on, SLOWBRO pay attention !"))
+    release
+    end
+}
+
+script CeruleanCave_Text_Slowbro {
+    lock
+    faceplayer
+    playmoncry(SPECIES_SLOWBRO, CRY_MODE_NORMAL)
+    msgbox(format("Guuh ?\n{PLAYER} : Admit that you can't use this move to your TRAINER..."))
+    release
+    end
+}
+
+script CeruleanCave_Text_Man {
+    lock
+    faceplayer
+    msgbox(format("You're making an encyclopedia on POKéMON ? Just like those trainers... GREEN and RED. Seems like the Profs give kids their jobs..."))
+    release
+    end
+}
+
+script CeruleanCave_Text_Oldman {
+    lock
+    faceplayer
+    msgbox(format("I use to teach TRAINERS the power of the BADGES. But I grew tired of this. Now I'm tending my garden. It's better."))
+    release
+    end
+}
+
+script CeruleanCave_Text_PoliceSign {
+    lock
+    msgbox(format("CERULEAN POLICE STATION"))
+    release
+    end
+}
+
+script CeruleanCave_Text_GymSign {
+    lock
+    msgbox(format("CERULEAN CITY GYM POKéMON GYM\nLeader : MISTY The tomboyish mermaid !"))
+    release
+    end
+}
+
+script CeruleanCave_Text_CitySign {
+    lock
+    msgbox(format("CERULEAN CITY\nA mysterious, blue aura surrounds it."))
+    release
+    end
+}
+
+script CeruleanCave_Text_BikeShopSign {
+    lock
+    msgbox(format("Grass and caves handled easily !\nBIKE SHOP"))
+    release
+    end
+}
+
+script CeruleanCave_Text_Gentleman {
+    lock
+    faceplayer
+    msgbox(format("This house was robbed by TEAM ROCKET. It was a few months ago. Then, we totally rebuilt CERULEAN CITY entirely."))
+    release
+    end
+}
+
+script CeruleanCave_Text_Hiker {
+    lock
+    faceplayer
+    msgbox(format("ROCK TUNNEL in the east, MT. MOON in the west : a paradise for a HIKER like me !"))
+    release
+    end
+}
+
+script CeruleanCave_Text_SwimmerF {
+    lock
+    faceplayer
+    msgbox(format("I wanted to become a GYM TRAINER, but MISTY told me I couldn't swim. That's wrong, she just jalouse because I won against her last month !"))
+    release
+    end
+}
+
+script CeruleanCave_Text_TuberF {
+    lock
+    faceplayer
+    msgbox(format("I'm gonna be a tough TRAINER thanks to MISTY training !"))
+    release
+    end
+}

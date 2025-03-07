@@ -1,0 +1,56 @@
+mapscripts BurnedTowerTop_MapScripts {
+    MAP_SCRIPT_ON_LOAD{
+        call_if_unset(FLAG_UNUSED_0x020, BurnedTowerTop_EventScript_Hole)
+        end
+    }
+}
+
+script BurnedTowerTop_EventScript_Hole {
+    setmetatile(7,11,METATILE_BurnedTower_Floor,FALSE)
+    setmetatile(3,19,METATILE_BurnedTower_Floor,FALSE)
+    removeobject(1)
+    end
+}
+
+script BurnedTower_Text_Leaf {
+    lock
+    faceplayer
+    trainerbattle_single(TRAINER_LEAF,".......... ?!", "....", BurnedTower_Text_LeafPostBattle, FALSE)
+}
+
+script BurnedTower_Text_LeafPostBattle {
+    setflag(FLAG_UNUSED_0x020)
+    msgbox("..............\n............",MSGBOX_AUTOCLOSE)
+    applymovement(OBJ_EVENT_ID_PLAYER, BurnedTower_Text_LeafPostBattleMove)
+    waitmovement(0)
+    playse(SE_BREAKABLE_DOOR)
+    call(BurnedTower_Text_RemoveFloor)
+    warphole(MAP_BURNED_TOWER)
+    release
+    end
+}
+
+script BurnedTower_Text_RemoveFloor {
+    setmetatile(7,11,METATILE_BurnedTower_CrackHole,FALSE)
+    return
+}
+
+movement  BurnedTower_Text_LeafPostBattleMove{
+    emote_question_mark
+}
+
+script BurnedTower_Text_PicnickGirl {
+    if(flag(FLAG_UNUSED_0x021) == TRUE){
+        msgbox("You are lucky I could find a ladder\naround! When I heard you fall I noticed\lthe ground was fragile so I was able to\lhelp you out!",MSGBOX_NPC)
+        end
+    }else{
+        msgbox("This place is shrouded with legends!\nA friend of mine is around mapping the\llocation.\lShe's a fierce TRAINER!",MSGBOX_NPC)
+        end
+    }
+}
+
+script BurnedTower_Text_Firebreather {
+    trainerbattle_single(TRAINER_MADELINE_2, "Hey","Damn")
+    msgbox("I lost!", MSGBOX_NPC)
+    end
+}

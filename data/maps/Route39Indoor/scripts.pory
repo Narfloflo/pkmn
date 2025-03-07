@@ -1,0 +1,39 @@
+mapscripts Route39Indoor_MapScripts {
+     MAP_SCRIPT_ON_TRANSITION
+        {
+            gettime
+            if (var(VAR_0x8003) == TIME_DAY || var(VAR_0x8003) == TIME_SUNSET || var(VAR_0x8003) == TIME_DAWN || var(VAR_0x8003) == TIME_NIGHTFALL){
+            setflag(FLAG_TEMP_1)
+            call_if_set(FLAG_TEMP_1, Route39Indoor_Event_RemoveObjects)
+        }
+    }
+}
+
+script Route39Indoor_Text_Man {
+    msgbox("Hello hello, welcome to the FARM!\nWhat you meet my cousin in HOENN?\lHaha nice!\lYou know I sell MILK during the day in\lOLIVINE. Come get a look once!", MSGBOX_NPC)
+    end
+}
+
+script Route39Indoor_Event_RemoveObjects {
+    removeobject(3)
+    removeobject(4)
+    removeobject(5)
+    removeobject(6)
+    removeobject(7)
+    end
+}
+
+script Route39Indoor_Text_Woman {
+    msgbox("We have a lot of MILTANK which assure\nus a lot of cash. But we are on a thin\lline, and if one of them get sick, it\lwould mean bankrupt for us.", MSGBOX_NPC)
+    end
+}
+
+script Route39Indoor_Text_Twin1 {
+    msgbox("I hope you treat you POKéMON well!", MSGBOX_NPC)
+    end
+}
+
+script Route39Indoor_Text_Twin2 {
+    msgbox("It's tiresome to run around the fields\nall days long.", MSGBOX_NPC)
+    end
+}

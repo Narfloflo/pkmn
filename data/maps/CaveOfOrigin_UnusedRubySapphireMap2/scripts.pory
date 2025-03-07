@@ -1,0 +1,46 @@
+mapscripts CaveOfOrigin_UnusedRubySapphireMap2_MapScripts {}
+
+script OlivinePub_Text_SwimmerF {
+    msgbox("There is absolutely no way this place\nis so good!\lIt looks garbage from the outside, but\lthe menu is the best!", MSGBOX_NPC)
+    end
+}
+
+script OlivinePub_Text_Sailor {
+    msgbox("OLIVINE'S CAFÉ is full of fresh fishes\nand good old steak!", MSGBOX_NPC)
+    end
+}
+
+script OlivineInside_Text_Fisherman {
+    msgbox("The sea is sweet!\nSunsets on the sea are marvelous!\lAnd that bring a lot of fishes!", MSGBOX_NPC)
+    end
+}
+
+script OlivineInside_Text_Youngster {
+    msgbox("Three orbs!\nOne light!\lExtinguish them all, and bring forth\lthe night!\lOh! It's a song I sing a lot to my\lsister.", MSGBOX_NPC)
+    end
+}
+
+script OlivineInside_Text_Man {
+    msgbox("A POKéMON with darkness in its heart is\na scary thing to think about.\lCould that happen?", MSGBOX_NPC)
+    end
+}
+
+script OlivineInside_Text_OldWoman {
+    msgbox("Oh {PLAYER}! You are back from HOENN\nalready?\lJASMINE is not around. I think she is\ltraining somewhere.", MSGBOX_NPC)
+    end
+}
+
+script OlivineInside_Text_OldMan {
+    msgbox("Wanna go to the four ISLANDS?\nI heard that during the night you can\lhear some voices.\lIt's said to be the voices of young\lbrats that died there.\lBrrrr!", MSGBOX_NPC)
+    end
+}
+
+script OlivineInside_Text_Gentleman {
+    msgbox("Hey {PLAYER}!\nSince you are a TRAINER now, you should\lknow about the legendary POKéMON living\lin the WHIRL ISLANDS?\lIt is said that a mythical creature\llive in the sea above the caves.\lYou can hear some song around the cave.\lMy brother thinks it's some ghost.\lBut he is a supersticious jerk!\lMy theory is that a POKéMON lives\lthere.", MSGBOX_NPC)
+    end
+}
+
+script OlivineCafe_Text_Cook {
+    msgbox("I'm sorry but I won't cook for you\nPOKéMON.\lThat's not how we do things here.", MSGBOX_NPC)
+    end
+}

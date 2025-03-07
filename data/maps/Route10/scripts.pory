@@ -1,0 +1,73 @@
+mapscripts Route10_MapScripts {}
+
+script Route10_Text_TunnelSign {
+    lock
+    msgbox(format("ROCK TUNNEL entrance"))
+    release
+    end
+}
+
+script Route10_Text_PwrPlantSign {
+    lock
+    msgbox(format("{PLAYER}: It's written KANTO POWER PLANT, but it's really decaying !"))
+    release
+    end
+}
+
+script Route10_Text_Scientist {
+    lock
+    faceplayer
+    msgbox(format("We are trying to renovate to old POWER PLANT. It's been abandonned for a few years, and a lot of POKéMON considered it home. But we also need a lot of energy for the MAGNET TRAIN."))
+    release
+    end
+}
+
+script Route10_Text_Worker1 {
+    lock
+    faceplayer
+    msgbox(format("We have a lot of work. It's a great construction site ! We need about two or three years to complete this project without disturbing the POKéMON !"))
+    release
+    end
+}
+
+script Route10_Text_Worker2 {
+    lock
+    faceplayer
+    msgbox(format("LT. SURGE is inside taking care of the wilds POKéMON living in the POWER PLANT. I'm pretty sure he'll find another place for them. But it will take some time ! And I heard that a powerful POKéMON is living inside !"))
+    release
+    end
+}
+
+script Route10_Text_Camper {
+    lock
+    faceplayer
+    msgbox(format("I'm looking for a PIKACHU. I'm pretty sure I can find one in here... Or not."))
+    release
+    end
+}
+
+script Route10_Text_Picnicker1 {
+    trainerbattle_single(TRAINER_JERRY_3,"Hop hop !\nYou won't get into the TUNNEL without\pfighting me ?", "I think you were in a hurry !")
+    msgbox(format("Beware, some TRAINERS are here to fight others TRAINERS, in the dark !"),MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route10_Text_Picnicker2 {
+    trainerbattle_single(TRAINER_JERRY_4,"Hey you went to LAVENDAR TOWN\nbecause you have a dying POKéMON ?", "Huh it wasn't supposed to be\na threat !")
+    msgbox(format("I heard a boy is weeping for his dead RATTATA. It's so sad !"),MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route10_Text_Hiker1 {
+    trainerbattle_single(TRAINER_JERRY_2,"You are invading my space !", "Oh no ! ")
+    msgbox(format("Ok I'll talk ! I was eating a good old sandwich and smoking a cigarette. I know it's not healthy. So what ?"),MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route10_Text_Hiker2 {
+    lock
+    faceplayer
+    msgbox(format("Have you seen that in the ROCK TUNNEL there are boulders that are blocking the exit ? I hate that ! I wish I had some dynamites."))
+    release
+    end
+}

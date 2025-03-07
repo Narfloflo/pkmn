@@ -305,7 +305,7 @@ RustboroCity_EventScript_StolenGoodsScene::
 	waitmovement 0
 	fadedefaultbgm
 	removeobject LOCALID_DEVON_EMPLOYEE
-	setobjectxyperm LOCALID_DEVON_EMPLOYEE, 30, 10
+	setobjectxyperm LOCALID_DEVON_EMPLOYEE, 50, 10
 	clearflag FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1
 	setflag FLAG_DEVON_GOODS_STOLEN
 	setvar VAR_RUSTBORO_CITY_STATE, 2
@@ -1297,3 +1297,205 @@ RustboroCity_Text_YouCanHave2On2Battle:
 	.string "they'll both challenge you.\p"
 	.string "Don't you think it'd be cool if you\n"
 	.string "could beat two TRAINERS by yourself?$"
+
+RustboroCity_EventScript_MiddleBattle::
+	lock
+	msgbox RustboroCity_EventScript_MiddleBattle_Text_0
+	fadescreen FADE_TO_BLACK
+	playse SE_M_THUNDER_WAVE
+	delay 30
+	applymovement OBJ_EVENT_ID_PLAYER, RustoboroCity_Move_StepBack
+	waitmovement OBJ_EVENT_ID_PLAYER
+	msgbox RustboroCity_EventScript_MiddleBattle_Text_1
+	applymovement 20, RustoboroCity_Move_TrainersDown
+	applymovement 21, RustoboroCity_Move_TrainersDown
+	waitmovement 20
+	waitmovement 21
+	fadescreen FADE_FROM_BLACK
+	msgbox RustboroCity_EventScript_MiddleBattle_Text_2
+	applymovement 21, RustoboroCity_Move_TrainerRight
+	applymovement 20, RustoboroCity_Move_TrainerLeft
+	waitmovement 20
+	waitmovement 21
+	release
+	end
+
+
+RustoboroCity_Move_StepBack:
+	walk_down
+	face_up
+	step_end
+
+RustoboroCity_Move_TrainersDown:
+	face_down
+	step_end
+
+RustoboroCity_Move_TrainerLeft:
+	face_left
+	step_end
+
+RustoboroCity_Move_TrainerRight:
+	face_right
+	step_end
+
+RustboroCity_Text_Trainer1::
+	lock
+	msgbox RustboroCity_Text_Trainer1_Text_0
+	applymovement 23, RustboroCity_Move_Pikachu
+	waitmovement 23
+	playse SE_M_THUNDERBOLT
+	waitse
+	release
+	end
+
+
+RustboroCity_Move_Pikachu:
+	jump_in_place_right
+	jump_in_place_right
+	step_end
+
+RustboroCity_Text_Trainer2::
+	lock
+	msgbox RustboroCity_Text_Trainer2_Text_0
+	applymovement 22, RustboroCity_Move_Zigzagoon
+	waitmovement 22
+	playse SE_M_SAND_ATTACK
+	waitse
+	release
+	end
+
+
+RustboroCity_Move_Zigzagoon:
+	jump_in_place_left
+	jump_in_place_left
+	step_end
+
+RustboroCity_Text_Salaryman::
+	lock
+	faceplayer
+	msgbox RustboroCity_Text_Salaryman_Text_0
+	release
+	end
+
+
+RustboroCity_Text_Policeman::
+	lock
+	faceplayer
+	msgbox RustboroCity_Text_Policeman_Text_0
+	release
+	end
+
+
+RustboroCity_Text_LassJR::
+	msgbox RustboroCity_Text_LassJR_Text_0, MSGBOX_NPC
+	end
+
+
+RustboroCity_Text_LassSR::
+	msgbox RustboroCity_Text_LassSR_Text_0, MSGBOX_NPC
+	end
+
+
+RustboroCity_Text_Pikachu::
+	lock
+	playmoncry SPECIES_PIKACHU, CRY_MODE_NORMAL
+	msgbox RustboroCity_Text_Pikachu_Text_0
+	release
+	end
+
+
+RustboroCity_Text_Zigzagoon::
+	lock
+	playmoncry SPECIES_ZIGZAGOON, CRY_MODE_NORMAL
+	msgbox RustboroCity_Text_Zigzagoon_Text_0
+	release
+	end
+
+
+RustboroCity_Text_CityHallSign::
+	msgbox RustboroCity_Text_CityHallSign_Text_0, MSGBOX_SIGN
+	end
+
+
+RustboroCity_Text_Artist::
+	msgbox RustboroCity_Text_Artist_Text_0, MSGBOX_NPC
+	end
+
+
+RustboroCity_Text_ScientistF::
+	lock
+	faceplayer
+	msgbox RustboroCity_Text_ScientistF_Text_0
+	release
+	end
+
+
+RustboroCity_Text_DevonGuy::
+	lock
+	faceplayer
+	msgbox RustboroCity_Text_DevonGuy_Text_0
+	release
+	end
+
+
+RustboroCity_EventScript_MiddleBattle_Text_0:
+	.string "Watchout !$"
+
+RustboroCity_EventScript_MiddleBattle_Text_1:
+	.string "You've been attacked by a POKéMON\n"
+	.string "attack.$"
+
+RustboroCity_EventScript_MiddleBattle_Text_2:
+	.string "STUDENT : You really are lucky my\n"
+	.string "PIKACHU wasn't full power ! You could\l"
+	.string "have died !\p"
+	.string "{PLAYER} : Pretty sure it's because\n"
+	.string "you PIKACHU is weak I didn't feel\l"
+	.string "something...$"
+
+RustboroCity_Text_Trainer1_Text_0:
+	.string "Haha !! Feel the might of my PIKACHU !$"
+
+RustboroCity_Text_Trainer2_Text_0:
+	.string "ZIGZAGOON, use SAND-ATTACK !$"
+
+RustboroCity_Text_Salaryman_Text_0:
+	.string "I have an appointment in a few hours.\n"
+	.string "There are a lot of things to do here.\p"
+	.string "{PLAYER} : Like what ? Healing your\n"
+	.string "POKéMON ?$"
+
+RustboroCity_Text_Policeman_Text_0:
+	.string "Here is the CITY HALL, the center of\n"
+	.string "power of HOENN.\p"
+	.string "You can meet the MAYOR here.$"
+
+RustboroCity_Text_LassJR_Text_0:
+	.string "Yeah I'm dropping out of SCHOOL to eat\nan ice cream.\lSo what?\lAre you my MOM?\lI don't think so.$"
+
+RustboroCity_Text_LassSR_Text_0:
+	.string "Some students prefere being outside\nand having real POKéMON battle instead\lof studying the WEAKNESS of the\lTYPES.\lNo wonder they are so weak!$"
+
+RustboroCity_Text_Pikachu_Text_0:
+	.string "Pika! Chu chu!$"
+
+RustboroCity_Text_Zigzagoon_Text_0:
+	.string "Goo goo!$"
+
+RustboroCity_Text_CityHallSign_Text_0:
+	.string "RUSTBORO CITY HALL, HOENN seat of POWER$"
+
+RustboroCity_Text_Artist_Text_0:
+	.string "This is a new Restaurant.\nI don't think I can see the\lmenu...$"
+
+RustboroCity_Text_ScientistF_Text_0:
+	.string "A lot of scientist are working for\n"
+	.string "DEVON. It's really tough to be\l"
+	.string "independant because it's hard to raise\l"
+	.string "funds for research.$"
+
+RustboroCity_Text_DevonGuy_Text_0:
+	.string "I need money to cut some trees in\n"
+	.string "PETALBURG WOOD, but I'm wondering if\l"
+	.string "it's safe for the POKéMON living\l"
+	.string "there...$"

@@ -1,0 +1,25 @@
+mapscripts CeruleanBikeShop_MapScripts {}
+
+script CeruleanBikeShop_Text_Woman {
+    msgbox("A plain city bike is good enough\n"
+             "for me.\p"
+             "After all, you can't put a shopping\n"
+             "basket on a mountain bike.", MSGBOX_NPC)
+    end
+}
+
+script CeruleanBikeShop_Text_Youngster {
+    msgbox("These bikes are cool, but they're\n"
+    "way expensive!", MSGBOX_NPC)
+    end
+}
+
+script CeruleanBikeShop_Text_Clerk {
+    msgbox("Oh hey!\nLooks like you have a pretty neat BIKE!\lMay I see it?\l...........\lDamn!\l...........\lAnd you can do even switch with another\lkind of BIKE?!\lI need to expand my market, otherwise\lI'm broke!", MSGBOX_NPC)
+    end
+}
+
+script CeruleanBikeShop_Text_Bike {
+    msgbox("A shiny new BICYCLE!", MSGBOX_SIGN)
+    end
+}

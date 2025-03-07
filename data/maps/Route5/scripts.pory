@@ -1,0 +1,17 @@
+mapscripts Route5_MapScripts {}
+
+script Route5_Text_Bikers {
+    lock
+    faceplayer
+    msgbox(format("Oh no ! I'm not a TRAINER. I don't want to be beaten by a kid. Sorry for you; You won't have my money !"))
+    release
+    end
+}
+
+script Route5_Text_BlackBelt {
+    lock
+    faceplayer
+    msgbox(format("You know I'm thinking about open a restaurant instead of studying martial arts on my own."))
+    release
+    end
+}

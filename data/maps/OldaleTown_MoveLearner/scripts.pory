@@ -1,0 +1,71 @@
+mapscripts OldaleTown_MoveLearner_MapScripts {}
+
+script OldaleTown_MoveLearner_Text_MoveRelearner{
+    lockall
+    applymovement(1, Common_Movement_FacePlayer)
+    waitmovement(0)
+	goto_if_set(FLAG_TEMP_1, OldaleTown_MoveLearner_EventScript_AskTeachMove)
+	msgbox("I'm the MOVE TUTOR MASTER.\nI know all the moves that POKéMON\llearn--every one of them--and I can\lteach POKéMON those moves.\lI can teach a move to a POKéMON of\lyours if you'd like.\lI'm doing it only if you are a rookie\lTRAINER though.", MSGBOX_DEFAULT)
+	setflag(FLAG_TEMP_1) 
+	goto(OldaleTown_MoveLearner_EventScript_AskTeachMove) 
+	end
+}
+
+
+script OldaleTown_MoveLearner_EventScript_AskTeachMove {
+   if(flag(FLAG_BADGE02_GET)== TRUE){
+        goto(OldaleTown_MoveLearner_EventScript_ComeBackWithHeartScale)
+    }else{
+        msgbox("Oh! You are a rookie TRAINER?\nLet me guess, you want me to teach\la move?",MSGBOX_YESNO)
+        if(var(VAR_RESULT)== YES){
+            goto(OldaleTown_MoveLearner_EventScript_ChooseMon)
+        }else{
+            goto(OldaleTown_MoveLearner_EventScript_ComeBackAgain)
+        }
+    }
+} 
+	
+
+script OldaleTown_MoveLearner_EventScript_ChooseMon {
+    msgbox("Which POKéMON needs tutoring?",MSGBOX_DEFAULT)
+	special(ChooseMonForMoveRelearner)
+	waitstate
+	goto_if_eq(VAR_0x8004, PARTY_NOTHING_CHOSEN, OldaleTown_MoveLearner_EventScript_ComeBackAgain) 
+	special(IsSelectedMonEgg)
+	goto_if_eq(VAR_RESULT, TRUE, OldaleTown_MoveLearner_EventScript_CantTeachEgg) 
+	goto_if_eq(VAR_0x8005, 0, OldaleTown_MoveLearner_EventScript_NoMoveToTeachMon) 
+	goto(OldaleTown_MoveLearner_EventScript_ChooseMove)
+	end 
+} 
+
+script OldaleTown_MoveLearner_EventScript_CantTeachEgg {
+    msgbox("Hunh? There isn't a single move that\nI can teach an EGG.")
+    goto(OldaleTown_MoveLearner_EventScript_ChooseMon)
+    end
+}
+	
+script OldaleTown_MoveLearner_EventScript_ChooseMove {
+  msgbox("Which move should I teach?", MSGBOX_DEFAULT)
+	special(TeachMoveRelearnerMove)
+	waitstate
+	goto_if_eq(VAR_0x8004, 0, OldaleTown_MoveLearner_EventScript_ChooseMon)
+	end  
+}
+	
+script OldaleTown_MoveLearner_EventScript_NoMoveToTeachMon {
+    msgbox("Sorry…\pIt doesn't appear as if I have any move\nI can teach that POKéMON.", MSGBOX_DEFAULT)
+	goto(OldaleTown_MoveLearner_EventScript_ChooseMon)
+	end
+}
+
+script OldaleTown_MoveLearner_EventScript_ComeBackWithHeartScale {
+    msgbox("If your POKéMON need to learn a move,\nyou should head to FALLARBOR and talk\lto my disciple.", MSGBOX_DEFAULT)
+    releaseall
+	end
+}
+
+script OldaleTown_MoveLearner_EventScript_ComeBackAgain {
+    msgbox("No?\nWell come back if you change your mind.", MSGBOX_DEFAULT)
+    releaseall
+	end
+}

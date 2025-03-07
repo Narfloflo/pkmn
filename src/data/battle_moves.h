@@ -2928,7 +2928,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DRAGON_BREATH] =
     {
         .effect = EFFECT_PARALYZE_HIT,
-        .power = 60,
+        .power = 80,
         .type = TYPE_DRAGON,
         .accuracy = 100,
         .pp = 20,
@@ -3240,7 +3240,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_ROCK_SMASH] =
     {
         .effect = EFFECT_DEFENSE_DOWN_HIT,
-        .power = 20,
+        .power = 50,
         .type = TYPE_FIGHTING,
         .accuracy = 100,
         .pp = 15,
@@ -4293,10 +4293,10 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_MUDDY_WATER] =
     {
         .effect = EFFECT_ACCURACY_DOWN_HIT,
-        .power = 95,
+        .power = 105,
         .type = TYPE_WATER,
         .accuracy = 85,
-        .pp = 10,
+        .pp = 15,
         .secondaryEffectChance = 30,
         .target = MOVE_TARGET_BOTH,
         .priority = 0,

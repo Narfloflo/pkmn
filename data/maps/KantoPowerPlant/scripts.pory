@@ -1,0 +1,87 @@
+mapscripts KantoPowerPlant_MapScripts {}
+
+script PowerPlant_Text_LtSurge {
+    lock
+    faceplayer
+    if(defeated(TRAINER_ROXANNE_3)){
+        goto(PowerPlant_Text_LtSurgeRematch)
+    }else{
+        msgbox(format("Howdie kid, who are you ? {PLAYER} ? Hummm... You know it's adult work here ?"),MSGBOX_YESNO)
+        if(var(VAR_RESULT)==1){
+            msgbox(format("Good, well leave us do the work here."))
+        }else{
+            goto(PowerPlant_Text_LtSurgeFight)
+        }
+    }
+    release
+    end
+}
+
+script PowerPlant_Text_LtSurgeFight {
+    playbgm(MUS_RG_ENCOUNTER_BOY, FALSE)
+    trainerbattle_single(TRAINER_ROXANNE_3, "Well don't cry after you get spanked.", "Really ?! Well you're not so bad...",PowerPlant_Text_LtSurgeAfterBattle, FALSE)
+}
+
+script PowerPlant_Text_LtSurgeAfterBattle {
+    msgbox(format("Ok I'll talk: We are renovating the POWER PLANT for the MAGNET TRAIN. But we have an issue. A lot of POKéMON are living here, so we have to be really careful. And I think there is a ZAPDOS around here. I hope our BATTLE didn't frightened them."))
+    playmoncry(SPECIES_ZAPDOS, CRY_MODE_NORMAL)
+    waitmoncry
+    applymovement(1, PowerPlant_Text_LtSurgeMovement)
+    waitmovement(30)
+    setflag(FLAG_UNUSED_0x863)
+    goto(PowerPlant_Text_LtSurgeDefeated)
+}
+
+script PowerPlant_Text_LtSurgeDefeated {
+    lock
+    faceplayer
+    msgbox(format("Looks like ZAPDOS flew away... He flew SOUTH. Pretty sure he went to HOENN. How do I know that ? I know WATTSON and his NEW MAUVILLE project. You should investigate there."))
+    release
+    end
+}
+
+script PowerPlant_Text_LtSurgeRematch {
+    lock
+    faceplayer
+    msgbox(format("Looks like ZAPDOS flew away... He flew SOUTH. Pretty sure he went to HOENN. How do I know that ? I know WATTSON and his NEW MAUVILLE project. You should investigate there. Anyway want a rematch?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1){
+        cleartrainerflag(TRAINER_ROXANNE_3)
+        trainerbattle_single(TRAINER_ROXANNE_3, "Oh yeah, that remind me the WAR !", "Good game kid, good game.")
+    }else{
+        msgbox("Humpf... Whimp...")
+    }
+    release
+    end
+}
+
+movement PowerPlant_Text_LtSurgeMovement {
+    emote_exclamation_mark
+    face_left
+    face_up
+    face_down
+    face_player
+}
+
+script PowerPlant_Text_Worker1 {
+    lock
+    faceplayer
+    msgbox(format("We have to be careful, some POKéMON are really pissed at us !"))
+    release
+    end
+}
+
+script PowerPlant_Text_Worker2 {
+    lock
+    faceplayer
+    msgbox(format("Fortunatly LT. SURGE is taking care of our security !"))
+    release
+    end
+}
+
+script PowerPlant_Text_Worker3 {
+    lock
+    faceplayer
+    msgbox(format("Hey kid ! We can't let you get around freely. It's dangerous."))
+    release
+    end
+}

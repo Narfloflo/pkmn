@@ -1,0 +1,219 @@
+mapscripts CeladonCity_MapScripts {}
+
+
+script CeladonCity_Text_CheckGender {
+    checkplayergender
+    goto_if_eq(VAR_RESULT, MALE, CeladonCity_Text_MenAreTrash)
+    goto_if_eq(VAR_RESULT, FEMALE, CeladonCity_Text_YoucanCome)
+    end
+}
+
+script CeladonCity_Text_MenAreTrash {
+    lock
+    msgbox(format("Oh no ! You get out of here, you criminal boy !!"))
+    applymovement(OBJ_EVENT_ID_PLAYER, CeladonCity_Move_MenAreTrash)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    release
+    end
+}
+
+movement CeladonCity_Move_MenAreTrash {
+    walk_fast_down
+    step_end
+}
+
+script CeladonCity_Text_YoucanCome {
+    release
+    end
+}
+
+script CeladonCity_Text_GymLass {
+    lock
+    faceplayer
+    msgbox(format("Oh my ARCEUS ! This old geezer is stalking us for so much months !"))
+    release
+    end
+}
+
+script CeladonCity_Text_GymGirl {
+    lock
+    faceplayer
+    msgbox(format("We had to sheltered ERIKA from this pervert. She couldn't even go to the DEPARTMENT STORE without being annoyed by him..."))
+    release
+    end
+}
+
+script CeladonCity_Text_GymBeauty {
+    lock
+    faceplayer
+    msgbox(format("I used to be part of a GANG. Back in those days I would have smashed this old guy properly in his POKéBALLS !"))
+    release
+    end
+}
+
+script CeladonCity_Text_Pervert {
+    lock
+    msgbox(format("Hum no, But... Noo... I didn't..."))
+    release
+    end
+}
+
+script CeladonCity_Text_PoliceLeft {
+    lock
+    msgbox(format("Dirty bastard ! It's been a while you've been stalking these girls !"))
+    release
+    end
+}
+
+script CeladonCity_Text_PoliceRight {
+    lock
+    msgbox(format("And to say that you came back after ERIKA smash your face... Degenerate !"))
+    release
+    end
+}
+
+script CeladonCity_Text_Erika {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_BRAWLY_2)){
+        msgbox(format("Gosh, this old pervert as been around for so long. I can't even walk around properly... Mmmmh, maybe I can try to relax with a quick battle. What do you think ?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT)==1){
+            goto(CeladonCity_Text_ErikaFight)
+        }else{
+            msgbox(format("I hope the police is gonna arrest this perv."))
+        }
+    }elif(defeated(TRAINER_BRAWLY_2)){
+        goto(CeladonCity_Text_ErikaRematch)
+    }
+    
+    release
+    end
+}
+
+script CeladonCity_Text_ErikaFight {
+    trainerbattle_single(TRAINER_BRAWLY_2, "I'll beat you !", "You really are strong !")
+    release
+    end
+}
+
+script CeladonCity_Text_ErikaRematch {
+    msgbox(format("I wonder how many time the police is gonna take to arrest the old geezer... Oh you want another battle ?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1){
+        cleartrainerflag(TRAINER_BRAWLY_2)
+        trainerbattle_single(TRAINER_BRAWLY_2, "I'll beat you this time !!", "You really are strong !")
+    }else{
+        msgbox(format("Well I'm hiding from the pervert, so I'm here if you want."))
+    }
+    release
+    end
+}
+
+script CeladonCity_Text_Policeman {
+    lock
+    faceplayer
+    msgbox(format("You know, KANTO was plagued by criminality. But a TRAINER beat the ROCKETS all alone ! Since I heard that, I wanted to join the police forces to keep KANTO from other lunatics who would try to take over the world !"))
+    release
+    end
+}
+
+script CeladonCity_Text_Salaryman {
+    lock
+    msgbox(format("Woooh ! So I can buy a POKéMON inside ??? This is some kind of slavery ? Wait ?..."))
+    release
+    end
+}
+
+script CeladonCity_Text_Fatman {
+    lock
+    faceplayer
+    msgbox(format("This is my trusted pal, Slowking ! It evolved from slowpoke when I traded it !"))
+    release
+    end
+}
+
+script CeladonCity_Text_Slowking {
+    lock
+    faceplayer
+    playmoncry(SPECIES_SLOWKING, CRY_MODE_NORMAL)
+    msgbox(format("Kiiiiiing !!"))
+    release
+    end
+}
+
+script CeladonCity_Text_Woman {
+    lock
+    faceplayer
+    msgbox(format("The Game Corner is bad for our city's image ! Look at what the ROCKETS did !"))
+    release
+    end
+}
+
+script CeladonCity_Text_Artist {
+    lock
+    faceplayer
+    msgbox(format("Ahh ! CELADON !\nSuch a wonderful place to paint\pWhat it's ramping with criminality ? I don't know about that..."))
+    release
+    end
+}
+
+script CeladonCity_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("Hello, there !\nI've seen you, but I never had a chance to talk !\pWhat you want a reward ? I don't have it, sorry. Have a good day !"))
+    release
+    end
+}
+
+script CeladonCity_Text_Cooltrainer {
+    lock
+    faceplayer
+    msgbox(format("I heard there is a great restaurant around here. But I can't find it..."))
+    release
+    end
+}
+
+script CeladonCity_Text_Scientist {
+    lock
+    faceplayer
+    msgbox(format("I used to serve TEAM ROCKET. They enrole me by force. What was I supposed to do ?"))
+    release
+    end
+}
+
+script CeladonCity_Text_Beauty {
+    lock
+    faceplayer
+    msgbox(format("There is an hotel here, but they hate POKéMON. So basically I don't have a roof today... Maybe in SAFFRON CITY there are places to stay ?"))
+    release
+    end
+}
+
+script CeladonCity_Text_LassHoenn1 {
+    msgbox("Hey! I think I saw you on TV!\nYeah you beat the ELITE FOUR in HOENN\lright?\lI'm impressed!",MSGBOX_NPC)
+    end
+}
+
+script CeladonCity_Text_LassHoenn2 {
+    msgbox("We came in CELADON throught the SHIP in\nVERMILION!\lFortunatly my dad could buy us a TICKET\lfor KANTO, it's really expensive!",MSGBOX_NPC)
+    end
+}
+
+script CeladonCity_Text_Fisherman {
+    msgbox("There are so much frogs around!\nYou should try SURFING around, you'll\lsee about it!",MSGBOX_NPC)
+    end
+}
+
+script CeladonCity_Text_Woman1 {
+    msgbox("I think there is a new place around\nhere.\lIt's unbelievable how much this place\lexpanded these last months after the\lROCKET left!",MSGBOX_NPC)
+    end
+}
+
+script CeladonCity_Text_OldWoman {
+    msgbox("You think this place is huge, well you\nbetter go to GOLDENROD in JOHTO.\lYou'll be amazed!",MSGBOX_NPC)
+    end
+}
+
+script CeladonCity_Text_Youngster {
+    msgbox("There were a lot of pollution around\nhere, but it looks like it was cleaned\lup recently!",MSGBOX_NPC)
+    end
+}

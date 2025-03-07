@@ -161,7 +161,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "graphics_id": "OBJ_EVENT_GFX_BIRD_KEEPER",
       "x": 5,
       "y": 22,
       "elevation": 3,
@@ -174,7 +174,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "graphics_id": "OBJ_EVENT_GFX_BIRD_KEEPER",
       "x": 33,
       "y": 13,
       "elevation": 3,
@@ -213,7 +213,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_MANIAC",
       "x": 43,
       "y": 71,
       "elevation": 5,
@@ -317,7 +317,7 @@
       "flag": "FLAG_ITEM_ROUTE_120_FULL_HEAL"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BEAUTY_2",
+      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
       "x": 25,
       "y": 94,
       "elevation": 5,
@@ -330,7 +330,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
+      "graphics_id": "OBJ_EVENT_GFX_PARASOL",
       "x": 44,
       "y": 91,
       "elevation": 3,
@@ -343,7 +343,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "graphics_id": "OBJ_EVENT_GFX_RUINS_MANIAC",
       "x": 9,
       "y": 60,
       "elevation": 3,
@@ -356,7 +356,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
+      "graphics_id": "OBJ_EVENT_GFX_PARASOL",
       "x": 16,
       "y": 6,
       "elevation": 3,
@@ -369,7 +369,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
+      "graphics_id": "OBJ_EVENT_GFX_PARASOL",
       "x": 42,
       "y": 59,
       "elevation": 3,
@@ -564,7 +564,7 @@
       "flag": "FLAG_HIDE_ROUTE_120_KECLEON_4"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_4",
+      "graphics_id": "OBJ_EVENT_GFX_BATTLEGIRL",
       "x": 22,
       "y": 34,
       "elevation": 3,
@@ -616,13 +616,6 @@
       "y": 23,
       "elevation": 1,
       "dest_map": "MAP_SCORCHED_SLAB",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 48,
-      "y": 89,
-      "elevation": 0,
-      "dest_map": "MAP_PUB",
       "dest_warp_id": "0"
     }
   ],
@@ -913,8 +906,8 @@
     },
     {
       "type": "secret_base",
-      "x": 26,
-      "y": 10,
+      "x": 44,
+      "y": 8,
       "elevation": 0,
       "secret_base_id": "SECRET_BASE_SHRUB3_2"
     },

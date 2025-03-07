@@ -40,8 +40,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
-      "x": 33,
-      "y": 17,
+      "x": 38,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -117,7 +117,7 @@
       "flag": "FLAG_HIDE_FORTREE_CITY_KECLEON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
       "x": 8,
       "y": 27,
       "elevation": 0,
@@ -126,7 +126,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "FortreeCity_Text_Director",
       "flag": "0"
     },
     {
@@ -139,20 +139,33 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "FortreeCity_Text_GirlOnTree",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 42,
-      "y": 24,
+      "x": 19,
+      "y": 10,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Watchman",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
+      "x": 20,
+      "y": 35,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FortreeCity_Text_SchoolboyM",
       "flag": "0"
     }
   ],
@@ -225,20 +238,62 @@
       "y": 26,
       "elevation": 0,
       "dest_map": "MAP_SCHOOLS",
-      "dest_warp_id": "0"
+      "dest_warp_id": "6"
     },
     {
       "x": 36,
       "y": 24,
       "elevation": 0,
-      "dest_map": "MAP_HOUSE",
+      "dest_map": "MAP_FORTREE_MULTIPLE_HOUSES",
+      "dest_warp_id": "14"
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_FORTREE_MULTIPLE_HOUSES",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 42,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_FORTREE_MULTIPLE_HOUSES",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 45,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_FORTREE_MULTIPLE_HOUSES",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 19,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_FORTREE_MULTIPLE_HOUSES",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 31,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_FORTREE_MULTIPLE_HOUSES",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 35,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_FORTREE_MULTIPLE_HOUSES",
       "dest_warp_id": "10"
     },
     {
-      "x": 43,
-      "y": 28,
+      "x": 18,
+      "y": 35,
       "elevation": 0,
-      "dest_map": "MAP_HOUSE",
+      "dest_map": "MAP_FORTREE_MULTIPLE_HOUSES",
       "dest_warp_id": "12"
     }
   ],
@@ -307,6 +362,14 @@
       "y": 31,
       "elevation": 0,
       "secret_base_id": "SECRET_BASE_SHRUB4_3"
+    },
+    {
+      "type": "sign",
+      "x": 43,
+      "y": 28,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
     }
   ]
 }

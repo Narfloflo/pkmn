@@ -83,7 +83,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_MANIAC",
       "x": 26,
       "y": 123,
       "elevation": 3,
@@ -96,7 +96,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_MANIAC",
       "x": 5,
       "y": 125,
       "elevation": 3,
@@ -122,7 +122,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_MANIAC",
       "x": 28,
       "y": 116,
       "elevation": 3,
@@ -200,7 +200,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "graphics_id": "OBJ_EVENT_GFX_BIRD_KEEPER",
       "x": 10,
       "y": 50,
       "elevation": 4,
@@ -499,7 +499,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "graphics_id": "OBJ_EVENT_GFX_KINDLER",
       "x": 16,
       "y": 52,
       "elevation": 3,
@@ -594,7 +594,7 @@
     },
     {
       "x": 6,
-      "y": 78,
+      "y": 77,
       "elevation": 0,
       "dest_map": "MAP_JUNGLE",
       "dest_warp_id": "0"
@@ -626,6 +626,20 @@
       "elevation": 0,
       "dest_map": "MAP_JUNGLE",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 7,
+      "y": 77,
+      "elevation": 0,
+      "dest_map": "MAP_JUNGLE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 77,
+      "elevation": 0,
+      "dest_map": "MAP_JUNGLE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -825,7 +839,7 @@
     {
       "type": "weather",
       "x": 6,
-      "y": 79,
+      "y": 78,
       "elevation": 0,
       "weather": "COORD_EVENT_WEATHER_ROUTE119_CYCLE"
     },
@@ -833,6 +847,20 @@
       "type": "weather",
       "x": 6,
       "y": 33,
+      "elevation": 0,
+      "weather": "COORD_EVENT_WEATHER_ROUTE119_CYCLE"
+    },
+    {
+      "type": "weather",
+      "x": 7,
+      "y": 78,
+      "elevation": 0,
+      "weather": "COORD_EVENT_WEATHER_ROUTE119_CYCLE"
+    },
+    {
+      "type": "weather",
+      "x": 5,
+      "y": 78,
       "elevation": 0,
       "weather": "COORD_EVENT_WEATHER_ROUTE119_CYCLE"
     }

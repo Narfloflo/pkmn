@@ -1,0 +1,180 @@
+mapscripts EcruteakKimono_MapScripts {}
+
+script EcruteakKimono_Text_Zuki {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_LOLA_2)){
+        goto(EcruteakKimono_Text_FightZuki)
+    }else{
+        goto(EcruteakKimono_Text_ZukiRematch)
+    }
+    release
+    end
+}
+script EcruteakKimono_Text_FightZuki {
+    msgbox(format("Hey, you mind if we have a small fight between two DANCES ?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        trainerbattle_single(TRAINER_LOLA_2, "Let's enjoy this !", "Good fight !")
+    }else{
+    msgbox(format("It's okay, I have people to entertain."))
+    }
+    release
+    end
+}
+
+script EcruteakKimono_Text_ZukiRematch {
+    msgbox(format("I keep dancing but I don't mind to take a break if you want a rematch."), MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+    cleartrainerflag(TRAINER_LOLA_2)
+    trainerbattle_single(TRAINER_LOLA_2, "Let's follow the rythme", "I had no chance !")
+    }else{
+        msgbox(format("It's okay, I have people to entertain."))
+    }
+    release
+    end
+}
+
+script EcruteakKimono_Text_Naoko {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_LOLA_3)){
+        goto(EcruteakKimono_Text_FightNaoko)
+    }else{
+        goto(EcruteakKimono_Text_NaokoRematch)
+    }
+    release
+    end
+}
+script EcruteakKimono_Text_FightNaoko {
+    msgbox(format("You think we should fight each other in front of the public ?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        trainerbattle_single(TRAINER_LOLA_3, "Yeah dance with me !", "Ahah good temper !")
+    }else{
+    msgbox(format("It's okay, I have people to entertain."))
+    }
+    release
+    end
+}
+
+script EcruteakKimono_Text_NaokoRematch {
+    msgbox(format("I have to say I'm confident in my dance skill but not in my TRAINER one. You still want a rematch ?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+    cleartrainerflag(TRAINER_LOLA_3)
+    trainerbattle_single(TRAINER_LOLA_3, "Admire my dance then !", "I'll have to dance more !")
+    }else{
+        msgbox(format("It's okay, I have people to entertain."))
+    }
+    release
+    end
+}
+
+script EcruteakKimono_Text_Miki {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_LOLA_4)){
+        goto(EcruteakKimono_Text_FightMiki)
+    }else{
+        goto(EcruteakKimono_Text_MikiRematch)
+    }
+    release
+    end
+}
+script EcruteakKimono_Text_FightMiki {
+    msgbox(format("Oh you want to ask for a private dancing lesson ?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        trainerbattle_single(TRAINER_LOLA_4, format("Come here kid, I'll teach you the basics !"), format("You are the one you taught me the basics of battle !"))
+    }else{
+    msgbox(format("It's okay, I have people to entertain."))
+    }
+    release
+    end
+}
+
+script EcruteakKimono_Text_MikiRematch {
+    msgbox(format("You need to improve your dancing skills ?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+    cleartrainerflag(TRAINER_LOLA_4)
+    trainerbattle_single(TRAINER_LOLA_4, "Stretch your legs and then fight !", "Be careful with sore muscles !")
+    }else{
+        msgbox(format("It's okay, I have people to entertain."))
+    }
+    release
+    end
+}
+
+script EcruteakDanceHall_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("Not only are the KIMONO GIRLS great dancers, they're also skilled at POKéMON. I always challenge them, but I've never even left a scratch... I wish my POKéMON were as elegant as the KIMONO GIRLS..."))
+    release
+    end
+}
+
+script EcruteakDanceHall_Text_Beauty {
+    lock
+    faceplayer
+    msgbox(format("I always though the man with his hat was the owner of the place, but no. He just enjoy being defeated by the KIMONO GIRLS. Such a strange kink."))
+    release
+    end
+}
+
+script EcruteakDanceHall_Text_Eevee {
+    lock
+    faceplayer
+    playmoncry(SPECIES_EEVEE, CRY_MODE_NORMAL)
+    msgbox(format("Veeeee !"))
+    release
+    end
+}
+
+script EcruteakDanceHall_Text_OldMan2 {
+    lock
+    faceplayer
+    msgbox(format("You know, there was a contest in the past for being a KIMONO DANCER ! Only the most talented girls could become one. Not only in term of dancing, but also in training !"))
+    release
+    end
+}
+
+script EcruteakDanceHall_Text_OldWoman {
+    lock
+    faceplayer
+    msgbox(format("Hum, these girls are good, but at my time, we were better ! Of course I was one of the best ! Every men wanted to go out with me ! Yeah it was the past..."))
+    release
+    end
+}
+
+script EcruteakDanceHall_Text_Morty {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_FLANNERY_3)){
+        msgbox(format("Humm yes? Oh the GYM is closed?\nWell yes, look I'm a little busy\lwatching the dance so I won't\lopen it just for you.\lAh you want to fight here instead?\lOk! I can do that!\lAre you ready?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT)==1){
+            goto(EcruteakDanceHall_Text_MortyFight)
+        }else{
+            msgbox(format("You serious?\nYou disturbed me for nothing?\lNot a good game lad!"))
+        }
+    }elif(defeated(TRAINER_FLANNERY_3)){
+        goto(EcruteakDanceHall_Text_MortyRematch)
+    }
+    
+    release
+    end
+}
+
+script EcruteakDanceHall_Text_MortyFight {
+    trainerbattle_single(TRAINER_FLANNERY_3, "Let the fog invade you!", "Humm...\nI'm the one who've been blured!")
+    release
+    end
+}
+
+script EcruteakDanceHall_Text_MortyRematch {
+    msgbox(format("Look this is my favourite dance!\nYou can't understand how peaceful\lthis is. It's a good way to\lappease the death!\lHumm... You want to fight again?"),MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        cleartrainerflag(TRAINER_FLANNERY_3)
+        trainerbattle_single(TRAINER_FLANNERY_3, "Let's hurry before the next dance begin!", "I was focus on the dances!")
+    }else{
+        msgbox(format("Anyway, the next dance is great too so I don't mind."))
+    }
+    release
+    end
+}

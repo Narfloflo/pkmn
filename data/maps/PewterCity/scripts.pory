@@ -1,0 +1,97 @@
+mapscripts PewterCity_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION{
+    setvar(VAR_VERDANTURF_TOWN_STATE, 0)
+    }
+}
+
+
+
+script PewterCity_Text_Lass {
+    lock
+    faceplayer
+    msgbox(format("It's rumored that CLEFAIRYS came from the moon ! They appeared after MOON STONES fell on MT. MOON."))
+    release
+    end
+}
+
+script PewterCity_Text_Fatman {
+    lock
+    faceplayer
+    msgbox(format("There aren't many serious POKéMON trainers here ! They're all like BUG CATCHERS, but BROCK'S GYM is a real deal. But he's not in the GYM currently."))
+    release
+    end
+}
+
+script PewterCity_Text_CitySign {
+    lock
+    msgbox(format("PEWTER CITY\nA stone grey city"))
+    release
+    end
+}
+
+script PewterCity_Text_MuseumSign {
+    lock
+    msgbox(format("PEWTER Museum of Science"))
+    release
+    end
+}
+
+script PewterCity_Text_NoticeSign {
+    lock
+    msgbox(format("NOTICE !\nThieves have been arrested in MT. MOON. Thanks for your cooperation. PEWTER CITY POLICE"))
+    release
+    end
+}
+
+script PewterCity_Text_PoliceStationSign {
+    lock
+    msgbox(format("PEWTER CITY POLICE STATION"))
+    release
+    end
+}
+
+script PewterCity_Text_Scientist {
+    lock
+    faceplayer
+    msgbox(format("We had some AMBER in the MUSEUM, but we gave it to some kid who destroyed the bush at the back. Go inside and check if they have some more AMBER if you want."))
+    release
+    end
+}
+
+script PewterCity_Text_Camper {
+    lock
+    faceplayer
+    msgbox(format("I should have followed BROCK in MT. MOON. Now I'm bored..."))
+    release
+    end
+}
+
+script PewterCity_Text_Youngster {
+    lock
+    msgbox(format("My MACHOP will crush your RATTATA !"))
+    release
+    end
+}
+
+script PewterCity_Text_BugCatcher {
+    lock
+    msgbox(format("RATTATA is undefeated !"))
+    release
+    end
+}
+
+script PewterCity_Text_Oldman {
+    lock
+    faceplayer
+    msgbox(format("My flowers have been ravaged by some wild POKéMON. So now I need more REPEL !"))
+    release
+    end
+}
+
+script PewterCity_Text_Hiker {
+    lock
+    faceplayer
+    msgbox("Hey you!\nBROCK is not here, so the GYM is\lclosed.\lYou better take a look in ROUTE 3 if\lyou are looking for him.")
+    release
+    end
+}

@@ -1,1 +1,27 @@
 mapscripts MauvilleCity_MultipleHouses_MapScripts {}
+
+script MauvilleCity_MultipleHouses_Text_LittleGirl {
+    lock
+    faceplayer
+    msgbox(format("MAUVILLE is one of the best town\nin HOENN!\lThere is the CYCLING ROAD south,\lthe DAY CARE west, north is the\lBATTLETOWER and east is were you\lcan find the AIRPORT and the BEACH\lSIDE!\lThat's so nice!"))
+    release
+    end
+}
+
+script MauvilleCity_MultipleHouses_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("Hey you!\nI saw you running inside the\lhouses!\lDon't you have no shame?!"))
+    release
+    end
+}
+
+script MauvilleCity_MultipleHouses_Text_Janitor {
+    msgbox("Wow wow! Be carefull I'm mopping the\nfloor", MSGBOX_NPC)
+    end
+}
+
+script MauvilleCity_MultipleHouses_Text_Man {
+    msgbox("Oh wait! Where did you come from?!\nThe door huh?\lI need to remove that...\lWell scram!", MSGBOX_NPC)
+    end
+}

@@ -200,3 +200,10 @@ Route114_Text_FossilManiacsHouseSign:
 Route114_Text_LanettesHouse:
 	.string "LANETTE'S HOUSE$"
 
+Route114_Text_PubSign::
+	msgbox Route114_Text_PubSign_Text_0, MSGBOX_SIGN
+	end
+
+
+Route114_Text_PubSign_Text_0:
+	.string "The good old pub\n“Come and get the best meals!”$"

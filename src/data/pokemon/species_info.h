@@ -1780,7 +1780,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     {
         .baseHP        = 90,
         .baseAttack    = 110,
-        .baseDefense   = 80,
+        .baseDefense   = 120,
         .baseSpeed     = 95,
         .baseSpAttack  = 100,
         .baseSpDefense = 80,
@@ -3848,7 +3848,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_TAUROS] =
     {
-        .baseHP        = 75,
+        .baseHP        = 95,
         .baseAttack    = 100,
         .baseDefense   = 95,
         .baseSpeed     = 110,

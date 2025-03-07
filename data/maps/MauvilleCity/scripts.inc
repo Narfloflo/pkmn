@@ -665,3 +665,57 @@ MauvilleCity_Text_ExplainTV:
 
 MauvilleCity_Text_BeenCheckingOutTV:
 	.string "Hi, have you been checking out TVs?$"
+
+MauvilleCity_Text_ScientistF::
+	msgbox MauvilleCity_Text_ScientistF_Text_0, MSGBOX_NPC
+	end
+
+
+MauvilleCity_Text_Aroma::
+	lock
+	faceplayer
+	msgbox MauvilleCity_Text_Aroma_Text_0
+	release
+	end
+
+
+MauvilleCity_Text_Youngster::
+	lock
+	faceplayer
+	msgbox MauvilleCity_Text_Youngster_Text_0
+	release
+	end
+
+
+MauvilleCity_Text_Camper::
+	lock
+	faceplayer
+	msgbox MauvilleCity_Text_Camper_Text_0
+	release
+	end
+
+
+MauvilleCity_Text_Girl::
+	msgbox MauvilleCity_Text_Girl_Text_0, MSGBOX_NPC
+	end
+
+
+MauvilleCity_Text_ScientistF_Text_0:
+	.string "I came here to study ELECTRIC POKéMON.\nThere are a lot of them in the old\lcentral, beneath the city.$"
+
+MauvilleCity_Text_Aroma_Text_0:
+	.string "This city is the avant-garde of\n"
+	.string "ECOLOGY in HOENN!\p"
+	.string "There are BIKES everywhere!$"
+
+MauvilleCity_Text_Youngster_Text_0:
+	.string "I'm playing in WATTSON's garden.\n"
+	.string "I was told not to, but rules are made to\l"
+	.string "be broken right?$"
+
+MauvilleCity_Text_Camper_Text_0:
+	.string "I plan to travel all around HOENN. But I\n"
+	.string "don't know where to go...$"
+
+MauvilleCity_Text_Girl_Text_0:
+	.string "You know there is a big MALL here?\nI heard someone inside can help you\levolve some POKéMON if you don't have a\lfriend to trade it.$"

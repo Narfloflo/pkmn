@@ -153,7 +153,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "graphics_id": "OBJ_EVENT_GFX_RUINS_MANIAC",
       "x": 27,
       "y": 69,
       "elevation": 3,
@@ -491,7 +491,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "graphics_id": "OBJ_EVENT_GFX_AROMA",
       "x": 25,
       "y": 135,
       "elevation": 3,
@@ -517,7 +517,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "graphics_id": "OBJ_EVENT_GFX_KINDLER",
       "x": 16,
       "y": 118,
       "elevation": 3,
@@ -530,7 +530,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "graphics_id": "OBJ_EVENT_GFX_RUINS_MANIAC",
       "x": 29,
       "y": 77,
       "elevation": 3,
@@ -687,22 +687,8 @@
       "x": 8,
       "y": 112,
       "elevation": 0,
-      "dest_map": "MAP_HOUSE",
-      "dest_warp_id": "10"
-    },
-    {
-      "x": 26,
-      "y": 133,
-      "elevation": 0,
-      "dest_map": "MAP_HOUSE",
-      "dest_warp_id": "14"
-    },
-    {
-      "x": 16,
-      "y": 9,
-      "elevation": 0,
       "dest_map": "MAP_ROUTE111_WINSTRATE_FAMILYS_HOUSE",
-      "dest_warp_id": "3"
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
@@ -1149,6 +1135,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route111_EventScript_TrainerHillSign"
+    },
+    {
+      "type": "sign",
+      "x": 26,
+      "y": 133,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 16,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
     }
   ]
 }

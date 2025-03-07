@@ -81,3 +81,23 @@ Route125_EventScript_Auron::
 	msgbox Route125_Text_AuronPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route125_Script_NorthCurrent::
+	lock
+	goto_if_unset FLAG_UNUSED_0x028, Route125_Script_NorthCurrent_1
+	return
+
+Route125_Script_NorthCurrent_1:
+	msgbox Route125_Script_NorthCurrent_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route125_Current
+	waitmovement 0
+	release
+	end
+
+
+Route125_Current:
+	walk_down
+	step_end
+
+Route125_Script_NorthCurrent_Text_0:
+	.string "The current are too strong to SURF\n"
+	.string "there...$"

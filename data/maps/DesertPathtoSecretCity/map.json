@@ -2,10 +2,10 @@
   "id": "MAP_DESERT_PATHTO_SECRET_CITY",
   "name": "DesertPathtoSecretCity",
   "layout": "LAYOUT_DESERT_PATHTO_SECRET_CITY",
-  "music": "MUS_PETALBURG_WOODS",
-  "region_map_section": "MAPSEC_ROUTE_10",
+  "music": "MUS_CAVE_OF_ORIGIN",
+  "region_map_section": "MAPSEC_SEVAULT_CANYON",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_SHADE",
   "map_type": "MAP_TYPE_UNDERGROUND",
   "allow_cycling": true,
   "allow_escaping": true,
@@ -33,114 +33,7 @@
     }
   ],
   "coord_events": [
-    {
-      "type": "trigger",
-      "x": 1,
-      "y": 14,
-      "elevation": 0,
-      "var": "TRIGGER_RUN_IMMEDIATELY",
-      "var_value": "0",
-      "script": "Route111_EventScript_SandstormTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 2,
-      "y": 14,
-      "elevation": 0,
-      "var": "TRIGGER_RUN_IMMEDIATELY",
-      "var_value": "0",
-      "script": "Route111_EventScript_SandstormTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 3,
-      "y": 14,
-      "elevation": 0,
-      "var": "TRIGGER_RUN_IMMEDIATELY",
-      "var_value": "0",
-      "script": "Route111_EventScript_SandstormTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 4,
-      "y": 14,
-      "elevation": 0,
-      "var": "TRIGGER_RUN_IMMEDIATELY",
-      "var_value": "0",
-      "script": "Route111_EventScript_SandstormTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 1,
-      "y": 13,
-      "elevation": 0,
-      "var": "TRIGGER_RUN_IMMEDIATELY",
-      "var_value": "0",
-      "script": "Route111_EventScript_SunTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 2,
-      "y": 13,
-      "elevation": 0,
-      "var": "TRIGGER_RUN_IMMEDIATELY",
-      "var_value": "0",
-      "script": "Route111_EventScript_SunTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 3,
-      "y": 13,
-      "elevation": 0,
-      "var": "TRIGGER_RUN_IMMEDIATELY",
-      "var_value": "0",
-      "script": "Route111_EventScript_SunTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 4,
-      "y": 13,
-      "elevation": 0,
-      "var": "TRIGGER_RUN_IMMEDIATELY",
-      "var_value": "0",
-      "script": "Route111_EventScript_SunTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 1,
-      "y": 15,
-      "elevation": 0,
-      "var": "VAR_TEMP_3",
-      "var_value": "0",
-      "script": "Route111_EventScript_ViciousSandstormTriggerLeft"
-    },
-    {
-      "type": "trigger",
-      "x": 2,
-      "y": 15,
-      "elevation": 0,
-      "var": "VAR_TEMP_3",
-      "var_value": "0",
-      "script": "Route111_EventScript_ViciousSandstormTriggerLeft"
-    },
-    {
-      "type": "trigger",
-      "x": 3,
-      "y": 15,
-      "elevation": 0,
-      "var": "VAR_TEMP_3",
-      "var_value": "0",
-      "script": "Route111_EventScript_ViciousSandstormTriggerLeft"
-    },
-    {
-      "type": "trigger",
-      "x": 4,
-      "y": 15,
-      "elevation": 0,
-      "var": "VAR_TEMP_3",
-      "var_value": "0",
-      "script": "Route111_EventScript_ViciousSandstormTriggerLeft"
-    }
+
   ],
   "bg_events": [
 

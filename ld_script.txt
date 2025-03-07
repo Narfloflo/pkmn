@@ -6,8 +6,8 @@ gMaxLines = 0;
 /* Modify the following load addresses as needed to make more room. Alternately, delete both the
    declarations below and their references further down to get rid of the gaps.                  */
 
-__anim_mon_load_address = 0x8b00000;
-__gfx_load_address = 0x8c00000;
+__anim_mon_load_address = 0x8d00000;
+__gfx_load_address = 0x8e00000;
 
 SECTIONS {
     . = 0x2000000;
@@ -343,6 +343,7 @@ SECTIONS {
         src/gym_leader_rematch.o(.text);
         src/battle_transition_frontier.o(.text);
         src/international_string_util.o(.text);
+		src/dns.o(.text);
     } =0
 
     script_data :
@@ -705,6 +706,7 @@ SECTIONS {
         data/mystery_gift.o(.rodata);
         src/m4a_tables.o(.rodata);
         data/sound_data.o(.rodata);
+		 src/dns.o(.rodata);
     } =0
 
     song_data :
@@ -1189,6 +1191,32 @@ SECTIONS {
         sound/songs/midi/mus_rg_trainer_tower.o(.rodata);
         sound/songs/midi/mus_rg_slow_pallet.o(.rodata);
         sound/songs/midi/mus_rg_teachy_tv_menu.o(.rodata);
+        sound/songs/midi/mus_gsc_ecruteak.o(.rodata);
+        sound/songs/midi/mus_route34.o(.rodata);
+        sound/songs/midi/mus_gsc_burned_tower.o(.rodata);
+        sound/songs/midi/mus_vs_johto_wild.o(.rodata);
+        sound/songs/midi/mus_gsc_surf.o(.rodata);
+        sound/songs/midi/mus_gsc_kimono.o(.rodata);
+        sound/songs/midi/mus_chrono_zeal.o(.rodata);
+        sound/songs/midi/mus_chrono_silent_light.o(.rodata);
+        sound/songs/midi/mus_gsc_goldenrod.o(.rodata);
+        sound/songs/midi/mus_gsc_ilex_forest.o(.rodata);
+        sound/songs/midi/mus_route30.o(.rodata);
+        sound/songs/midi/mus_gsc_cherrygrove.o(.rodata);
+        sound/songs/midi/mus_new_bark.o(.rodata);
+        sound/songs/midi/mus_gsc_route29.o(.rodata);
+        sound/songs/midi/mus_gsc_park.o(.rodata);
+        sound/songs/midi/mus_route27.o(.rodata);
+        sound/songs/midi/mus_intro_champion.o(.rodata);
+        sound/songs/midi/mus_vs_giogio.o(.rodata);
+        sound/songs/midi/mus_vs_johto_trainer.o(.rodata);
+        sound/songs/midi/mus_gsc_cycling.o(.rodata);
+        sound/songs/midi/mus_elms_lab.o(.rodata);
+        sound/songs/midi/mus_encounter_kimono.o(.rodata);
+        sound/songs/midi/mus_chrono_leene_square.o(.rodata);
+        sound/songs/midi/mus_sprout_tower.o(.rodata);
+        sound/songs/midi/mus_vs_johto_leader.o(.rodata);
+        sound/songs/midi/mus_encounter_sage.o(.rodata);
         sound/songs/midi/ph_trap_blend.o(.rodata);
         sound/songs/midi/ph_trap_held.o(.rodata);
         sound/songs/midi/ph_trap_solo.o(.rodata);
@@ -1240,6 +1268,7 @@ SECTIONS {
         sound/songs/midi/ph_nurse_blend.o(.rodata);
         sound/songs/midi/ph_nurse_held.o(.rodata);
         sound/songs/midi/ph_nurse_solo.o(.rodata);
+        
 
     } =0
 

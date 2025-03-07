@@ -97,3 +97,21 @@ FallarborTown_MoveRelearnersHouse_Text_CantTeachEgg:
 	.string "Hunh? There isn't a single move that\n"
 	.string "I can teach an EGG.$"
 
+FallarborTown_MoveRelearnersHouse_Text_Cook::
+	lock
+	faceplayer
+	msgbox FallarborTown_MoveRelearnersHouse_Text_Cook_Text_0
+	release
+	end
+
+
+FallarborTown_MoveRelearnersHouse_Text_Cook_Text_0:
+	.string "Gosh!\n"
+	.string "I went to GALAR to master my\l"
+	.string "cooking skills and I did a\l"
+	.string "soufflé. But the chief was so mad\l"
+	.string "at me because it was a bit raw\l"
+	.string "that I left here, living like an\l"
+	.string "hermit...\l"
+	.string "{PLAYER}: Yeah Gorgon Ramsay just\l"
+	.string "roast you, that's all.$"

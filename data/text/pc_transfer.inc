@@ -30,3 +30,7 @@ gText_NoMoreRoomForPokemon::
 gText_NicknameThisPokemon::
 	.string "Do you want to give a nickname to\n"
 	.string "this {STR_VAR_1}?$"
+
+gText_PlayerObtainedTheMon::
+    .string "{PLAYER} obtained\n"
+    .string "the {STR_VAR_1}!$"

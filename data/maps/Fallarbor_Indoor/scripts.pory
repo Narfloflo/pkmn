@@ -1,1 +1,61 @@
 mapscripts Fallarbor_Indoor_MapScripts {}
+
+script Fallarbor_Indoor_Text_Expert {
+    lock
+    faceplayer
+    msgbox(format("Heard about LANETTE?\nShe took BILL's Storage System and\limprove it a lot!\lBut she a total geek, living with\lher dolls.\lCreepy!"))
+    release
+    end
+}
+
+script Fallarbor_Indoor_Text_Abra {
+    lock
+    faceplayer
+    msgbox(format("{PLAYER}: Hope you won't just\nTELEPORT as I approach you."))
+    playmoncry(SPECIES_ABRA, CRY_MODE_NORMAL)
+    msgbox("Braa-a!")
+    release
+    end
+}
+
+script Fallarbor_Indoor_Text_Farmer {
+    lock
+    faceplayer
+    msgbox(format("A few years ago FALLARBOR was\nnothing but a small village with\ltwo shacks.\lNow we are the biggest producers\lof crops in HOENN!"))
+    release
+    end
+}
+
+script Fallarbor_Indoor_Text_Woman {
+    lock
+    faceplayer
+    msgbox(format("ZZzzzzzz...\n{PLAYER}: Well, looks like I have\lto let her sleep."))
+    release
+    end
+}
+
+script Fallarbor_Indoor_Text_Boy {
+    lock
+    faceplayer
+    msgbox(format("There are some houses ROUTE 115.\nLANETTE lives there also.\lAnd after that, there is the\lMETEOR FALLS.\lSome moon shaped POKéMON can be\lfound there!"))
+    release
+    end
+}
+
+
+script Fallarbor_Indoor_Text_ScientistF {
+    lock
+    faceplayer
+    msgbox(format("Time to drink a coffee and I'm\nback to work!\lWe are observing the sky to\lunderstand the future!\l{PLAYER}: You can admit you just\lhave no job and you are spending\lyour time doing nothing...\lI personally drop out of school to\lcatch wild creatures, so..."))
+    release
+    end
+}
+
+
+script Fallarbor_Indoor_Text_LassSr {
+    lock
+    faceplayer
+    msgbox(format("I really want to be graduate and\nleave this place...\lVolcanic ashes are making me sick,\lI have to shower every hour!\lIt's disgusting..."))
+    release
+    end
+}

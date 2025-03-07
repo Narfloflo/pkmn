@@ -1,0 +1,28 @@
+mapscripts EcruteakGates_MapScripts {}
+
+script IlexForestGates_Text_Policeman2 {
+    msgbox("The north gate will lead you to ROUTE\n34.\lThere are a few TRAINERS but also the\lDAYCARE.\lAn after is GOLDENROD CITY.", MSGBOX_NPC)
+    end
+}
+
+script IlexForestGates_Text_Woman {
+    msgbox("Wooh! My METAPOD just evolve in\nBUTTERFREE!\lI knew that in the end, a disgusting\lbug wasn't that useless!", MSGBOX_NPC)
+    end
+}
+
+script IlexForestGates_Text_Butterfree {
+    playmoncry(SPECIES_BUTTERFREE, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox("Teeee!", MSGBOX_NPC)
+    end
+}
+
+script IlexForestGates_Text_Policeman {
+    msgbox("ILEX FOREST is big!\nBig careful not to get lost!", MSGBOX_NPC)
+    end
+}
+
+script IlexForestGates_Text_OldWoman {
+    msgbox("The FOREST is watch over by its\nprotector.\lStay out of mischief!", MSGBOX_NPC)
+    end
+}

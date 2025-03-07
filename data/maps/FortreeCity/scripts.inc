@@ -154,3 +154,35 @@ FortreeCity_Text_GymSign:
 	.string "“The bird user taking flight into\n"
 	.string "the world.”$"
 
+FortreeCity_Text_Director::
+	lock
+	faceplayer
+	msgbox FortreeCity_Text_Director_Text_0
+	release
+	end
+
+
+FortreeCity_Text_SchoolboyM::
+	lock
+	faceplayer
+	msgbox FortreeCity_Text_SchoolboyM_Text_0
+	release
+	end
+
+
+FortreeCity_Text_GirlOnTree::
+	lock
+	faceplayer
+	msgbox FortreeCity_Text_GirlOnTree_Text_0
+	release
+	end
+
+
+FortreeCity_Text_Director_Text_0:
+	.string "Here is FORTREE's SCHOOL.\nThat's one of the only build built on\lthe floor in the entire city!$"
+
+FortreeCity_Text_SchoolboyM_Text_0:
+	.string "You cannot realize of strong we are in\nFORTREE!\lNo I'm not talking about POKéMON skill,\lbut real strength: I mean we are always\lclimbing on trees!$"
+
+FortreeCity_Text_GirlOnTree_Text_0:
+	.string "I'm totally lost on all those trees!\nI can figure where my houose is\lanymore...$"

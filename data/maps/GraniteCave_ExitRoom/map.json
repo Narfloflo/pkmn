@@ -42,6 +42,27 @@
       "elevation": 0,
       "dest_map": "MAP_DEWFORD_TRAINING_FIELD",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_GRANITE_CAVE_EXIT_ROOM",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 37,
+      "y": 38,
+      "elevation": 0,
+      "dest_map": "MAP_GRANITE_CAVE_EXIT_ROOM",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 33,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE105",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [

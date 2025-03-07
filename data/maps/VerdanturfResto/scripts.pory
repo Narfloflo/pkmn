@@ -1,0 +1,41 @@
+mapscripts VerdanturfResto_MapScripts {}
+
+script VerdanturfResto_Text_Vendor{
+    lock
+    faceplayer
+	message("Welcome to our Restaurant.\nWhat would you order?")
+	waitmessage
+	pokemart(VerdanturfResto_RestoPubItems)
+	msgbox("Don't forget to drink with moderation.")
+	release
+}
+
+mart VerdanturfResto_RestoPubItems {
+    ITEM_SANDWICH
+	ITEM_SODA_POP
+	ITEM_LEMONADE
+	ITEM_FRESH_WATER
+    ITEM_PEWTER_CRUNCHIES
+}
+
+script VerdanturfResto_Text_Employee {
+	msgbox("I heard that POKéMON loves eating\nhuman's food.\lWell I don't like POKéMON's food!", MSGBOX_NPC)
+	end
+}
+
+script VerdanturfResto_Text_Guy {
+	msgbox("You know, my SKITTY went mad because I\ndon't have any BADGES.\lNow it's runing wild in my house.\lThat's why I'm stuck here.", MSGBOX_NPC)
+	applymovement(3, VerdanturfResto_Text_ResetCharacter)
+	end
+}
+
+script VerdanturfResto_Text_Farmer {
+	msgbox("I wonder what's the meat is made of...\nActually no. Better not thinking about\lit!", MSGBOX_NPC)
+	applymovement(2, VerdanturfResto_Text_ResetCharacter)
+	end
+}
+
+movement VerdanturfResto_Text_ResetCharacter {
+	face_original_direction
+	step_end
+}

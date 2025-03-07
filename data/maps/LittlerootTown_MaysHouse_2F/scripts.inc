@@ -397,3 +397,62 @@ RivalsHouse_2F_Text_BrendanWhereShouldIGoNext:
 	.string "Hey, {PLAYER}, if I see you while I'm out\n"
 	.string "catching POKéMON, I can pitch you a\l"
 	.string "battle if you'd like.$"
+
+LittlerootTown_Text_MayParentFloor::
+	lock
+	checkplayergender
+	compare VAR_RESULT, 1
+	goto_if_eq LittlerootTown_Text_MayParentFloor_2
+	compare VAR_RESULT, 0
+	goto_if_eq LittlerootTown_Text_MayParentFloor_3
+LittlerootTown_Text_MayParentFloor_1:
+	applymovement OBJ_EVENT_ID_PLAYER, BedroomMove
+	waitmovement OBJ_EVENT_ID_PLAYER
+	release
+	end
+
+LittlerootTown_Text_MayParentFloor_2:
+	msgbox LittlerootTown_Text_MayParentFloor_Text_0
+	goto LittlerootTown_Text_MayParentFloor_1
+
+LittlerootTown_Text_MayParentFloor_3:
+	msgbox LittlerootTown_Text_MayParentFloor_Text_1
+	goto LittlerootTown_Text_MayParentFloor_1
+
+
+LittlerootTown_Text_BrendanParentFloor::
+	lock
+	checkplayergender
+	compare VAR_RESULT, 1
+	goto_if_eq LittlerootTown_Text_BrendanParentFloor_2
+	compare VAR_RESULT, 0
+	goto_if_eq LittlerootTown_Text_BrendanParentFloor_3
+LittlerootTown_Text_BrendanParentFloor_1:
+	applymovement OBJ_EVENT_ID_PLAYER, BedroomMove
+	waitmovement OBJ_EVENT_ID_PLAYER
+	release
+	end
+
+LittlerootTown_Text_BrendanParentFloor_2:
+	msgbox LittlerootTown_Text_MayParentFloor_Text_1
+	goto LittlerootTown_Text_BrendanParentFloor_1
+
+LittlerootTown_Text_BrendanParentFloor_3:
+	msgbox LittlerootTown_Text_MayParentFloor_Text_0
+	goto LittlerootTown_Text_BrendanParentFloor_1
+
+
+BedroomMove:
+	walk_down
+	step_end
+
+LittlerootTown_Text_MayParentFloor_Text_0:
+	.string "{PLAYER} : I better not move\n"
+	.string "upstairs...\p"
+	.string "I don't wanna know what my parents are\n"
+	.string "doing in their bedroom !$"
+
+LittlerootTown_Text_MayParentFloor_Text_1:
+	.string "{PLAYER} : I'm not even going into my\n"
+	.string "parents bedrooms. So in the neighbors'\l"
+	.string "one...$"

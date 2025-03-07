@@ -2,6 +2,7 @@
 #include "bg.h"
 #include "decompress.h"
 #include "landmark.h"
+#include "overworld.h"
 #include "main.h"
 #include "menu.h"
 #include "palette.h"
@@ -319,9 +320,13 @@ static u32 LoopedTask_OpenRegionMap(s32 taskState)
         LoadCityZoomViewGfx();
         return LT_INC_AND_PAUSE;
     case 1:
-        if (LoadRegionMapGfx())
-            return LT_PAUSE;
-
+       if(gMapHeader.region == REGION_SEVII || gMapHeader.region == REGION_KANTO){
+			if (LoadKantoRegionMapGfx())
+				return LT_PAUSE;
+		}else if(gMapHeader.region == REGION_HOENN){
+			if (LoadRegionMapGfx())
+				return LT_PAUSE;
+		}
         if (!GetZoomDisabled())
         {
             CreateRegionMapPlayerIcon(4, 9);

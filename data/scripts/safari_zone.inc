@@ -4,10 +4,24 @@ SafariZone_EventScript_OutOfBallsMidBattle::
 	setwarp MAP_ROUTE121_SAFARI_ZONE_ENTRANCE, 2, 5
 	end
 
+SafariZone_EventScript_OutOfBallsMidBattleKanto::
+	setvar VAR_MAUVILLE_CITY_STATE, 1
+	special ExitSafariMode
+	setwarp MAP_FUCHSIA_CITY_WARDEN_HOUSE, 4, 1
+	end
+
+
 SafariZone_EventScript_Exit::
 	setvar VAR_SAFARI_ZONE_STATE, 1
 	special ExitSafariMode
 	warp MAP_ROUTE121_SAFARI_ZONE_ENTRANCE, 2, 5
+	waitstate
+	end
+
+	SafariZone_EventScript_ExitKanto::
+	setvar VAR_MAUVILLE_CITY_STATE, 1
+	special ExitSafariMode
+	warp MAP_FUCHSIA_CITY_WARDEN_HOUSE, 4, 1
 	waitstate
 	end
 
@@ -18,8 +32,19 @@ SafariZone_EventScript_RetirePrompt::
 	releaseall
 	end
 
+SafariZone_EventScript_RetirePromptKanto::
+	lockall
+	msgbox SafariZone_Text_WouldYouLikeToExit, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, SafariZone_EventScript_RetireKanto
+	releaseall
+	end
+
+
 SafariZone_EventScript_Retire::
 	goto SafariZone_EventScript_Exit
+
+SafariZone_EventScript_RetireKanto::
+	goto SafariZone_EventScript_ExitKanto
 
 SafariZone_EventScript_TimesUp::
 	lockall
@@ -30,6 +55,16 @@ SafariZone_EventScript_TimesUp::
 	releaseall
 	goto SafariZone_EventScript_Exit
 
+
+SafariZone_EventScript_TimesUpKanto::
+	lockall
+	playse SE_DING_DONG
+	message SafariZone_Text_TimesUp
+	waitmessage
+	waitbuttonpress
+	releaseall
+	goto SafariZone_EventScript_ExitKanto
+
 SafariZone_EventScript_OutOfBalls::
 	lockall
 	playse SE_DING_DONG
@@ -38,6 +73,15 @@ SafariZone_EventScript_OutOfBalls::
 	waitbuttonpress
 	releaseall
 	goto SafariZone_EventScript_Exit
+
+SafariZone_EventScript_OutOfBallsKanto::
+	lockall
+	playse SE_DING_DONG
+	message SafariZone_Text_OutOfBalls
+	waitmessage
+	waitbuttonpress
+	releaseall
+	goto SafariZone_EventScript_ExitKanto
 
 EventScript_PokeBlockFeeder::
 	lockall

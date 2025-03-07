@@ -1,1 +1,27 @@
-mapscripts Vermilion_Center_Shop_MapScripts {}
+mapscripts Vermilion_Center_Shop_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Vermilion_Center_OnTransition
+}
+
+script Vermilion_Center_OnTransition {
+    setrespawn(HEAL_LOCATION_VERMILION)
+    end
+}
+
+script Vermilion_Center_Text_Nurse {
+    setvar(VAR_0x800B, 1)
+    call(Common_EventScript_PkmnCenterNurse)
+    waitmessage
+    waitbuttonpress
+    release
+    end
+}
+
+ 
+
+ script KantoCenter_Text_Chansey {
+    lock
+    playmoncry(SPECIES_CHANSEY, CRY_MODE_NORMAL)
+    msgbox("Chan Chan !")
+    release
+    end
+ }

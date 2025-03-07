@@ -1,0 +1,32 @@
+mapscripts SouthernPath_MapScripts {
+    MAP_SCRIPT_ON_RESUME:SouthernPath_OnResume
+}
+
+script SouthernPath_OnResume {
+    setdivewarp(MAP_JOHTO_HOENN_PATH,17,4)
+    end
+}
+
+
+script SouthernPath_Text_Whirlpool {
+    lock
+    checkitem(ITEM_MACH_BIKE, 1)
+    if(var(VAR_RESULT)== TRUE){
+        goto(SouthernPath_Text_RemoveWhirlpool)
+    }else{
+        msgbox(format("It's a vicious WHIRLPOOL, maybe we can remove it..."),MSGBOX_AUTOCLOSE)
+    }
+    release
+    end
+}
+
+script SouthernPath_Text_RemoveWhirlpool {
+    msgbox(format("It's a vicious WHIRLPOOL.\nWanna remove it ?"),MSGBOX_YESNO)
+    if(var(VAR_RESULT)== 1){
+        playse(SE_M_WHIRLPOOL)
+        waitse
+        removeobject(VAR_LAST_TALKED)
+    }
+    release
+    end
+}

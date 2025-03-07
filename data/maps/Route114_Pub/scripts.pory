@@ -1,0 +1,30 @@
+mapscripts Route114_Pub_MapScripts {}
+
+script Route114_Pub_Text_Vendor{
+    lock
+    faceplayer
+	message(format("Oh a kid ! No booze for you."))
+	waitmessage
+	pokemart(Route114PubItems)
+	msgbox("Don't forget to drink with moderation.")
+	release
+}
+
+mart Route114PubItems {
+    ITEM_BERRY_JUICE
+	ITEM_SODA_POP
+	ITEM_LEMONADE
+	ITEM_MOOMOO_MILK
+	ITEM_FRESH_WATER
+    ITEM_LAVA_COOKIE
+}
+
+script Route114_Pub_Text_Kindler {
+    msgbox("I asked for a spicy sauce, but turned\nout it's way too spicy for me!\lI can't handle it!", MSGBOX_NPC)
+    end
+}
+
+script Route114_Pub_Text_Hiker {
+    msgbox("I quick meal and I'm up on to the\nmountains again!\lYou should it too, you look thin.", MSGBOX_NPC)
+    end
+}

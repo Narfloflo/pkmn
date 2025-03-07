@@ -1,0 +1,115 @@
+mapscripts Route8_MapScripts {}
+
+script Route8_Text_Garcia {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_ROSE_3)){
+        goto(Route8_Text_GarciaFight)
+    }else{
+        goto(Route8_Text_GarciaRematch)
+    }
+    release
+    end
+}
+
+script Route8_Text_GarciaFight {
+    msgbox(format("There are a lots of PUNKS around here. Since TEAM ROCKET was disband, It's a real mayhem in KANTO. Anyway, wanna have a quick battle ?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        trainerbattle_single(TRAINER_ROSE_3, "You are defying the authorities ?", "I'll keep an eye on you punk !")
+    }else{
+        msgbox(format("Well I'm still on duty anyway."))
+    }
+    release
+    end
+}
+
+script Route8_Text_GarciaRematch {
+    msgbox(format("Hey you, I'm bored. The PUNKS around here are so dumb... Do you wanna fight ?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+    cleartrainerflag(TRAINER_ROSE_3)
+    trainerbattle_single(TRAINER_ROSE_3, "I can't lose again !", "I'll keep an eye on you punk !")  
+    }else{
+        msgbox(format("Yeah yeah, I still have these PUNKS to beat."))
+    }
+    release
+    end
+}
+
+script Route8_Text_Beauty {
+ lock
+ faceplayer
+ msgbox(format("I'm not gonna lie, I'm happy the TEAM ROCKET is disbanded since now the cops can take care of all these bastards !"))
+ release
+ end
+}
+
+script Route8_Text_Hiker {
+ lock
+ faceplayer
+ msgbox(format("I think this way leads to the ROCK TUNNEL. But I can't see a damn thing in the dark, so I haven't explore it yet."))
+ release
+ end
+}
+
+script Route8_Text_Thug {
+    trainerbattle_single(TRAINER_TIMOTHY_2, "Oh oh ! A young TRAINER\nI'll crush you !", "Wow wow ! Kid calm down !")
+    msgbox(format("I'm a real THUG, so I won't be pissed. You show me your strength. I respect that !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route8_Text_Biker {
+    trainerbattle_single(TRAINER_TIMOTHY_3, "Beep beep !\nMove around !", "My bike !!")
+    msgbox(format("Our fight was so intense, it broke my bike. So basically I gave you money because you won, and I have to pay to fix my shit ! Incredible !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route8_Text_Biker2 {
+    trainerbattle_single(TRAINER_TIMOTHY_4, "Oh my ARCEUS ! I hate kids so much\nI have to punch you !", "Huh what ? Beaten by a kid ?!")
+    msgbox(format("Leave my, I hate the way you talk, the way you look, the way you breath. Yeah I hate kids !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route8_Text_Thug2 {
+    trainerbattle_single(TRAINER_SHELBY_2, "I lost my POKéDOLL !\nI need to take out on you !", "AHHHHH ! My more mad now !")
+    msgbox(format("I really love CLEFAIRY. What you gonna do about it ?"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route8_Text_Lass {
+    trainerbattle_single(TRAINER_SHELBY_3, "Would you fight a nice girl like me ?", "Hey ! That's not nice !")
+    msgbox(format("I need to be stronger if I want to be part of CELADON GYM."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route8_Text_Gambler {
+    trainerbattle_single(TRAINER_SHELBY_4, "I bet you can't beat me !", "Arf ! Here is my money...")
+    msgbox(format("I wonder why so many kids are stronger than us adults. I mean, I'm TRAINING my POKéMON for 25 years ! What about you ? You started just last week right ?"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route8_Text_Scientist {
+   lock
+    faceplayer
+    msgbox(format("I developped a new device that makes the TRAINERS forgetting you just defeated them. It can work on this Route and the ROCK TUNNEL too. You want me to use it ?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1){
+        cleartrainerflag(TRAINER_TIMOTHY_2)
+        cleartrainerflag(TRAINER_TIMOTHY_3)
+        cleartrainerflag(TRAINER_TIMOTHY_4)
+        cleartrainerflag(TRAINER_SHELBY_2)
+        cleartrainerflag(TRAINER_SHELBY_3)
+        cleartrainerflag(TRAINER_SHELBY_4)
+        cleartrainerflag(TRAINER_ANNA_AND_MEG_2)
+        cleartrainerflag(TRAINER_ANNA_AND_MEG_3)
+        cleartrainerflag(TRAINER_ANNA_AND_MEG_4)
+        cleartrainerflag(TRAINER_MIGUEL_2)
+        cleartrainerflag(TRAINER_MIGUEL_3)
+        cleartrainerflag(TRAINER_MIGUEL_4)
+        playse(SE_POKENAV_CALL)
+        waitse
+        playse(SE_POKENAV_OFF)
+        waitse
+        msgbox(format("I love science ! Come see me if you want me to do it again !"))
+    }
+    release
+    end
+}

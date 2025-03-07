@@ -1,1 +1,55 @@
 mapscripts Fanclub_Vermilion_MapScripts {}
+
+script VermilionFanclub_Text_Chairman {
+    lock
+    faceplayer
+    msgbox("I chair the POKéMON Fan Club!\pI raise more than a hundred\nPOKéMON!\pI'm very fussy when it comes to\nPOKéMON! I surely am!\pSo...\pDid you come visit to hear about\nmy POKéMON?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) != 0){
+        msgbox(format("Good!\nThen listen up!\pMy favorite RAPIDASH... It's... cute... lovely... smart... plus... amazing... you think so?.. oh yes...it's...stunning... kindly... love it! Hug it... when... sleeping... warm and cuddly... spectacular... ravishing... ...Oops! Look at the time! I kept you too long! Thanks for hearing me out! I want you to have this!"))
+        playfanfare(MUS_OBTAIN_ITEM)
+        msgbox("{PLAYER} received a HANDSHAKE\nfrom the CHAIRMAN.")
+        waitbuttonpress
+        msgbox(format("CHAIRMAN : Haha that's all I can give you these days !"))
+        release
+        end
+    }else{
+        msgbox("Oh. Come back when you want to\nhear my story!")
+        release
+        end
+    }
+
+}
+
+script VermilionFanclub_Text_Woman {
+    lock
+    faceplayer
+    msgbox("Our CHAIRMAN is very vocal about\nPOKéMON.")
+    release
+    end
+}
+
+script VermilionFanclub_Text_Pikachu {
+    lock
+    faceplayer
+    playmoncry(SPECIES_PIKACHU, CRY_MODE_NORMAL)
+    msgbox("PIKACHU: Chu! Pikachu!")
+    waitmoncry
+    release
+    end
+}
+
+script VermilionFanclub_Text_Fatman {
+    lock
+    faceplayer
+    msgbox("Won't you admire my PIKACHU's\nadorable tail?")
+    release
+    end
+}
+
+script VermilionFanclub_Text_Woman2 {
+    lock
+    faceplayer
+    msgbox("I just adore my SEEL!\nIt's so lovable!\pIt squeals, “Kyuuuh”, when I\nhug it!")
+    release
+    end
+}

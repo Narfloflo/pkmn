@@ -301,7 +301,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_4",
+      "graphics_id": "OBJ_EVENT_GFX_BATTLEGIRL",
       "x": 51,
       "y": 60,
       "elevation": 0,
@@ -411,7 +411,7 @@
       "y": 61,
       "elevation": 0,
       "dest_map": "MAP_SCHOOLS",
-      "dest_warp_id": "0"
+      "dest_warp_id": "12"
     },
     {
       "x": 41,
@@ -429,7 +429,7 @@
     },
     {
       "x": 22,
-      "y": 71,
+      "y": 72,
       "elevation": 0,
       "dest_map": "MAP_SOOTOPOLIS_CITY_MULTIPLE_HOUSES",
       "dest_warp_id": "4"
@@ -477,10 +477,10 @@
       "dest_warp_id": "16"
     },
     {
-      "x": 21,
-      "y": 76,
+      "x": 23,
+      "y": 65,
       "elevation": 0,
-      "dest_map": "MAP_SOOTOPOLIS_CITY",
+      "dest_map": "MAP_SOOTOPOLIS_RESTO",
       "dest_warp_id": "0"
     }
   ],
@@ -535,6 +535,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "SootopolisCity_EventScript_CitySign"
+    },
+    {
+      "type": "sign",
+      "x": 24,
+      "y": 66,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    },
+    {
+      "type": "sign",
+      "x": 44,
+      "y": 62,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
     }
   ]
 }

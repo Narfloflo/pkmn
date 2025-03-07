@@ -111,15 +111,15 @@
       "x": 14,
       "y": 53,
       "elevation": 3,
-      "dest_map": "MAP_ROUTE112",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_LAVARIDGE_TOWN",
+      "dest_warp_id": "8"
     },
     {
       "x": 15,
       "y": 53,
       "elevation": 3,
-      "dest_map": "MAP_ROUTE112",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_LAVARIDGE_TOWN",
+      "dest_warp_id": "9"
     },
     {
       "x": 13,
@@ -167,8 +167,8 @@
     },
     {
       "type": "weather",
-      "x": 18,
-      "y": 17,
+      "x": 14,
+      "y": 53,
       "elevation": 3,
       "weather": "COORD_EVENT_WEATHER_SUNNY"
     },
@@ -223,6 +223,13 @@
       "var": "VAR_JAGGED_PASS_STATE",
       "var_value": "1",
       "script": "JaggedPass_EventScript_OpenMagmaHideout"
+    },
+    {
+      "type": "weather",
+      "x": 15,
+      "y": 53,
+      "elevation": 3,
+      "weather": "COORD_EVENT_WEATHER_SUNNY"
     }
   ],
   "bg_events": [

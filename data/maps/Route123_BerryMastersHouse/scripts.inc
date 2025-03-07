@@ -128,3 +128,10 @@ Route123_BerryMastersHouse_EventScript_GaveBerry::
 	release
 	end
 
+Route123_BerryMastersHouse_Text_Breeder::
+	msgbox Route123_BerryMastersHouse_Text_Breeder_Text_0, MSGBOX_NPC
+	end
+
+
+Route123_BerryMastersHouse_Text_Breeder_Text_0:
+	.string "Have you seen that in the night, there\nare some GHOST POKéMON wandering\loutside?\lIt's creepy...\lI should have known that a cheap house\lclose to a cemetery would be a bad\lthing...$"

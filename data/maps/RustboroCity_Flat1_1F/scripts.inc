@@ -16,3 +16,14 @@ RustboroCity_Flat1_1F_Text_EveryPokemonHasAbility:
 RustboroCity_Flat1_1F_Text_PokemonStrange:
 	.string "POKéMON are such strange creatures.$"
 
+RustboroCity_Flat1_1F_Text_Littlegirl::
+	lock
+	faceplayer
+	msgbox RustboroCity_Flat1_1F_Text_Littlegirl_Text_0
+	release
+	end
+
+
+RustboroCity_Flat1_1F_Text_Littlegirl_Text_0:
+	.string "Hey! Why are you coming inside the\n"
+	.string "flats? Are you homeless?$"

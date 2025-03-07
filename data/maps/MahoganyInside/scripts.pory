@@ -1,0 +1,108 @@
+mapscripts MahoganyInside_MapScripts {}
+
+
+
+script MahoganyInside_Text_Koga {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_WATTSON_2)){
+        msgbox(format("Who I am ? KOGA. Fifth generation of NINJA living in MAHOGANY TOWN. Yeah I live in FUSCHIA CITY, but it's my speech so... I meditating in my ancestors lands before moving to the ELITE FOUR. Whatever, I guess a young TRAINER like you is looking for a battle ?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT)==1){
+            goto(MahoganyInside_Text_KogaFight)
+        }else{
+            msgbox(format("Don't forget to get an ANTIDOTE when you get out !"))
+        }
+    }elif(defeated(TRAINER_WATTSON_2)){
+        goto(MahoganyInside_Text_KogaRematch)
+    }
+    
+    release
+    end
+}
+
+script MahoganyInside_Text_KogaFight {
+    trainerbattle_single(TRAINER_WATTSON_2, "A fine rehearsal before ELITE FOUR !", "Ahah ! Looks like I'm not\ngood enough !")
+    release
+    end
+}
+
+script MahoganyInside_Text_KogaRematch {
+    msgbox(format("You know LANCE sent me a letter about belonging to the ELITE FOUR. Apparently AGATHA is sick so they need someone else. Huh, you want another battle ?"),MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        cleartrainerflag(TRAINER_WATTSON_2)
+        trainerbattle_single(TRAINER_WATTSON_2, "A fine rehearsal before ELITE FOUR !", "Ahah ! Looks like I'm not\ngood enough !")
+    }else{
+        msgbox(format("..."))
+    }
+    release
+    end
+}
+
+script MahoganyTown_Text_BlackBelt1 {
+ lock
+ faceplayer
+ msgbox(format("Fuh ! I went to the LAKE of RAGE. I got so wet. It's so rainy out there !"))
+ release
+ end
+}
+
+script MahoganyTown_Text_Woman {
+ lock
+ faceplayer
+ msgbox(format("Are you looking for PRYCE ? I think he is in a frosty cave training."))
+ release
+ end
+}
+
+script MahoganyTown_Text_BlackBelt2 {
+ lock
+ faceplayer
+ msgbox(format("I wonder; if I train so much, will I be able to survive an HYPER BEAM attack ?"))
+ release
+ end
+}
+
+script MahoganyTown_Text_OldVendor{
+    lock
+    faceplayer
+	message(format("Fuh fuh fuh!\nWelcome kid !"))
+	waitmessage
+	pokemart(MahoganyVendor)
+	msgbox("Come back again fuh fuh !")
+	release
+}
+
+mart MahoganyVendor {
+    ITEM_GREAT_BALL
+	ITEM_RAGE_CANDY
+	ITEM_FULL_HEAL
+	ITEM_SUPER_REPEL
+    ITEM_REVIVE
+    ITEM_TROPIC_MAIL
+}
+
+script MahoganyTown_Script_Secret {
+    lock
+    msgbox(format("{PLAYER}: What a strange buffet. Looks like there is something..."))
+    applymovement(12, MahoganyOldWomanExclamation)
+    waitmovement(12)
+    call(MahoganyTown_Script_PlayerMove)
+}
+
+movement MahoganyOldWomanExclamation {
+    emote_exclamation_mark
+    jump_in_place_right
+    step_end
+}
+
+script MahoganyTown_Script_PlayerMove {
+    msgbox(format("Hey ! Don't you dare touching that ! It's... My precious heirloom from my grandma !"))
+    applymovement(OBJ_EVENT_ID_PLAYER, MahoganyPlayerMove)
+    waitmovement(0)
+    release
+    end
+}
+movement MahoganyPlayerMove {
+    walk_fast_down
+    step_end
+}

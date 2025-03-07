@@ -1,0 +1,10 @@
+raw`NewChanel_MapScripts::
+	.byte 0
+`
+script NewChanel_Text_AquaMemberF {
+    lock
+    faceplayer
+    msgbox(format("I'm lost in nowhere. What TEAM AQUA Disband ? What a relief, I hated these psycho !"))
+    release
+    end
+}

@@ -1,0 +1,10 @@
+raw`Desert_MapScripts::
+	.byte 0
+`
+script Desert_Text_Hiker {
+    lock
+    faceplayer
+    msgbox(format("Don't get me wrong, there are treasure here, I know it !"))
+    release
+    end
+}

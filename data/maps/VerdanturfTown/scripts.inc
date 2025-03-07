@@ -125,3 +125,101 @@ VerdanturfTown_Text_RusturfTunnelSign:
 	.string "“The tunnel project has been\n"
 	.string "canceled.”$"
 
+VerdanturfTown_Text_Farmer::
+	lock
+	faceplayer
+	msgbox VerdanturfTown_Text_Farmer_Text_0
+	release
+	end
+
+
+VerdandturfTown_Text_HospitalSign::
+	lock
+	msgbox VerdandturfTown_Text_HospitalSign_Text_0
+	release
+	end
+
+
+VerdandturfTown_Text_Arome::
+	lock
+	faceplayer
+	msgbox VerdandturfTown_Text_Arome_Text_0
+	release
+	end
+
+
+VerdandturfTown_Text_SchoolBoyM::
+	lock
+	msgbox VerdandturfTown_Text_SchoolBoyM_Text_0
+	release
+	end
+
+
+VerdandturfTown_Text_Girl::
+	lock
+	faceplayer
+	msgbox VerdandturfTown_Text_Girl_Text_0
+	release
+	end
+
+
+VerdandturfTown_Text_Gentleman::
+	lock
+	faceplayer
+	msgbox VerdandturfTown_Text_Gentleman_Text_0
+	release
+	end
+
+
+VerdandturfTown_Text_OldWoman::
+	lock
+	faceplayer
+	msgbox VerdandturfTown_Text_OldWoman_Text_0
+	release
+	end
+
+
+VerdandturfTown_Text_Ninja::
+	lock
+	faceplayer
+	msgbox VerdandturfTown_Text_Ninja_Text_0
+	release
+	end
+
+
+VerdanturfTown_Text_Farmer_Text_0:
+	.string "I'm taking care of the WILD POKéMON\n"
+	.string "coming here. They are not violent, so\l"
+	.string "it's OK for the TOWN.$"
+
+VerdandturfTown_Text_HospitalSign_Text_0:
+	.string "VERDANTURF TOWN HOSPITAL$"
+
+VerdandturfTown_Text_Arome_Text_0:
+	.string "VERDANTURF TOWN is really the best\n"
+	.string "place for my sensitive nose ! Such a\l"
+	.string "pure air !$"
+
+VerdandturfTown_Text_SchoolBoyM_Text_0:
+	.string "There is a new RESTAURANT here ??!\n"
+	.string "I should ask my mom for some pocket\l"
+	.string "money...$"
+
+VerdandturfTown_Text_Girl_Text_0:
+	.string "You know, before the TUNNEL was dug, we\n"
+	.string "all went to play inside and yeld with\l"
+	.string "the WHISMUR$"
+
+VerdandturfTown_Text_Gentleman_Text_0:
+	.string "I hope I can buy a house here for my\n"
+	.string "rainy days.$"
+
+VerdandturfTown_Text_OldWoman_Text_0:
+	.string "The BATTLE TENT bring so much\n"
+	.string "TRAINERS, we have so much money. We\l"
+	.string "could even open a restaurant !$"
+
+VerdandturfTown_Text_Ninja_Text_0:
+	.string "I heard that some bell shape POKéMON is\n"
+	.string "living here. But I haven't seen it\l"
+	.string "already.$"

@@ -1,0 +1,313 @@
+{
+  "id": "MAP_KANTO_UNDERGROUNDS",
+  "name": "KantoUndergrounds",
+  "layout": "LAYOUT_KANTO_UNDERGROUNDS",
+  "music": "MUS_RG_MT_MOON",
+  "region_map_section": "MAPSEC_UNDERGROUND_PATH",
+  "requires_flash": false,
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
+      "x": 36,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "KantoUndergrounds_Text_Rocket3",
+      "flag": "FLAG_UNUSED_0x02C"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
+      "x": 31,
+      "y": 29,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "KantoUndergrounds_Text_Rocket4",
+      "flag": "FLAG_UNUSED_0x02C"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
+      "x": 31,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "KantoUndergrounds_Text_Rocket2",
+      "flag": "FLAG_UNUSED_0x02C"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
+      "x": 36,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "KantoUndergrounds_Text_Rocket1",
+      "flag": "FLAG_UNUSED_0x02C"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "x": 32,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "KantoUndergrounds_Text_Policeman",
+      "flag": "FLAG_UNUSED_0x02C"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GROWLITHE",
+      "x": 31,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x02C"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "x": 36,
+      "y": 59,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "KantoUndergrounds_Text_PoliceGoBack",
+      "flag": "FLAG_UNUSED_0x02C"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "x": 5,
+      "y": 32,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "KantoUndergrounds_Text_PoliceGoBack",
+      "flag": "FLAG_UNUSED_0x02C"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "x": 73,
+      "y": 32,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "KantoUndergrounds_Text_PoliceGoBack",
+      "flag": "FLAG_UNUSED_0x02C"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GROWLITHE",
+      "x": 33,
+      "y": 37,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x02C"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "x": 34,
+      "y": 37,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x02C"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 34,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_KANTO_UNDERGROUND_DOORS",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 33,
+      "y": 60,
+      "elevation": 0,
+      "dest_map": "MAP_KANTO_UNDERGROUND_DOORS",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 76,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_KANTO_UNDERGROUND_DOORS",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 3,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_KANTO_UNDERGROUND_DOORS",
+      "dest_warp_id": "7"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 73,
+      "y": 31,
+      "elevation": 0,
+      "var": "VAR_UNUSED_0x4091",
+      "var_value": "0",
+      "script": "KantoUndergrounds_Event_EastGate_CantGetThrough"
+    },
+    {
+      "type": "trigger",
+      "x": 73,
+      "y": 30,
+      "elevation": 0,
+      "var": "VAR_UNUSED_0x4091",
+      "var_value": "0",
+      "script": "KantoUndergrounds_Event_EastGate_CantGetThrough"
+    },
+    {
+      "type": "trigger",
+      "x": 73,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_UNUSED_0x4091",
+      "var_value": "0",
+      "script": "KantoUndergrounds_Event_EastGate_CantGetThrough"
+    },
+    {
+      "type": "trigger",
+      "x": 73,
+      "y": 34,
+      "elevation": 0,
+      "var": "VAR_UNUSED_0x4091",
+      "var_value": "0",
+      "script": "KantoUndergrounds_Event_EastGate_CantGetThrough"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 31,
+      "elevation": 0,
+      "var": "VAR_UNUSED_0x4091",
+      "var_value": "0",
+      "script": "KantoUndergrounds_Event_WestGate_CantGetThrough"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 30,
+      "elevation": 0,
+      "var": "VAR_UNUSED_0x4091",
+      "var_value": "0",
+      "script": "KantoUndergrounds_Event_WestGate_CantGetThrough"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_UNUSED_0x4091",
+      "var_value": "0",
+      "script": "KantoUndergrounds_Event_WestGate_CantGetThrough"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 34,
+      "elevation": 0,
+      "var": "VAR_UNUSED_0x4091",
+      "var_value": "0",
+      "script": "KantoUndergrounds_Event_WestGate_CantGetThrough"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 59,
+      "elevation": 0,
+      "var": "VAR_UNUSED_0x4091",
+      "var_value": "0",
+      "script": "KantoUndergrounds_Event_SouthGate_CantGetThrough"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 59,
+      "elevation": 0,
+      "var": "VAR_UNUSED_0x4091",
+      "var_value": "0",
+      "script": "KantoUndergrounds_Event_SouthGate_CantGetThrough"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 59,
+      "elevation": 0,
+      "var": "VAR_UNUSED_0x4091",
+      "var_value": "0",
+      "script": "KantoUndergrounds_Event_SouthGate_CantGetThrough"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_UNUSED_0x409B",
+      "var_value": "0",
+      "script": "KantoUndergrounds_Event_NorthGateYesNo"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_UNUSED_0x409B",
+      "var_value": "0",
+      "script": "KantoUndergrounds_Event_NorthGateYesNo"
+    }
+  ],
+  "bg_events": [
+
+  ]
+}

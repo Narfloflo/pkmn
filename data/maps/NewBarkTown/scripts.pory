@@ -1,0 +1,59 @@
+mapscripts NewBarkTown_MapScripts {}
+
+
+script NewBarkTown_Text_Sign {
+    lock
+    faceplayer
+    msgbox(format("NEW BARK TOWN\pThe Town where the Winds of a New Beginning Blow"))
+    release
+    end
+}
+
+script NewBarkTown_Text_ElmHouse {
+    lock
+    faceplayer
+    msgbox(format("ELM's HOUSE"))
+    release
+    end
+}
+
+script NewBarkTown_Text_GoldHouse {
+    lock
+    faceplayer
+    msgbox(format("GOLD's HOUSE"))
+    release
+    end
+}
+
+script NewBarkTown_Text_Lab {
+    lock
+    faceplayer
+    msgbox(format("ELM POKéMON LAB"))
+    release
+    end
+}
+
+script NewBarkTown_Text_GoldFriend {
+    lock
+    faceplayer
+    msgbox(format("Me and my friend GOLD are going to be the next CHAMPION of the REGION !"))
+    release
+    end
+}
+
+script NewBarkTown_Text_LittleGirl {
+    lock
+    faceplayer
+    msgbox("..............\nI'm just shy...\l..............")
+    face_original_direction
+    release
+    end
+}
+
+script NewBarkTown_Text_LittleBoy {
+    lock
+    faceplayer
+    msgbox("If your POKéMON are injured, I think\nyou can heal them in ELM's LAB.")
+    release
+    end
+}

@@ -1,0 +1,55 @@
+mapscripts PacifidlogDungeon_Underwater_MapScripts {}
+
+script EcruteakCianwood_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("Hello kiddo. You did come here because you wanted to know more about ECRUTEAK CITY History ?"),MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        msgbox(format("Ok, listen then :\nIn ECRUTEAK, there were two towers. Each tower was the roost of powerful flying POKéMON. But one of the towers burned to the ground. The two POKéMON haven't been seen since... ECRUTEAK was also home to three POKéMON that raced around the town. They were said to have been born of water, lightning and fire. But they could not contain their excessive poser. So they say the three ran like the wind off into the grassland."))
+    }else{
+        msgbox(format("Humm I see. Well GET OUT MY HOUSE !"))
+    }
+    release
+    end
+}
+
+script EcruteakCianwood_Text_LittleGirl {
+    lock
+    faceplayer
+    msgbox(format("Grandpa knows a lot about ECRUTEAK History. But he is also really grumpy."))
+    release
+    end
+}
+
+script EcruteakCianwood_Text_Man1 {
+    lock
+    faceplayer
+    msgbox(format("Is there a POKéMON this big that can use the BELL TOWER as a perch ? If it's the case, it should be strong !"))
+    release
+    end
+}
+
+script EcruteakCianwood_Text_Man2 {
+    msgbox("I will always cherish the time I spent\nwith POKéMON.",MSGBOX_NPC)
+    end
+}
+
+script EcruteakCianwood_Text_Kimono {
+    msgbox("Fashions change over the years, but\nECRUTEAK remains as traditional as\lever.",MSGBOX_NPC)
+    end
+}
+
+script EcruteakCianwood_Text_ItemfinderMan {
+    msgbox("I wish I had an object to find objects\nlying on the ground.\lWhat? You have that? An ITEMFINDER?\lWell, I need to build that for me!",MSGBOX_NPC)
+    end
+}
+
+script EcruteakCianwood_Text_Kid {
+    msgbox("A TV program shows that the LAKE OF\nRAGE is full of MAGIKARP.\lBut sometime a GYARADOS can appear.\lI wish I could see that!",MSGBOX_NPC)
+    end
+}
+
+script EcruteakCianwood_Text_Monk {
+    msgbox("Hello child. I hope you'll behave well\nwith your POKéMON and cherish them.\lAmitabha.",MSGBOX_NPC)
+    end
+}

@@ -1,0 +1,20 @@
+mapscripts NewIsland_MapScripts {
+    MAP_SCRIPT_ON_LOAD{
+        call_if_set(FLAG_UNUSED_0x021,NewIsland_Text_Weather)
+        end
+    }
+}
+
+script NewIsland_Text_RuinManiac {
+    if(flag(FLAG_UNUSED_0x021)==TRUE){
+        msgbox("Oh my ARCEUS! I feel like there is more\nthunder now...\lSo strange!", MSGBOX_NPC)
+        end 
+    }
+    msgbox("There must be something here...\nI feel it!", MSGBOX_NPC)
+    end
+}
+
+script NewIsland_Text_Weather {
+    setweather(WEATHER_RAIN_THUNDERSTORM)
+    end
+}

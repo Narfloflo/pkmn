@@ -7,27 +7,6 @@ script Mossdeep__EventScript_SpaceStation {
     releaseall
 }
 
-script Mossdeep__EventScript_MohaBattle {
-    
-    trainerbattle_single(TRAINER_MOHA, Moha_Intro, Moha_Outro)
-    msgbox(PostbattleMoha, MSGBOX_AUTOCLOSE)
-    waitmessage
-    end
-
-}
-
-text Moha_Intro{
-    "I'm so fricking rich !"
-}
-
-text Moha_Outro{
-    "But I'm so weak..."
-}
-
-text PostbattleMoha{
-    "I'll ask my dad to buy me\na KYOGRE next time."
-}
-
 script Mossdeep__Text_Seagate {
     lock
     msgbox(format("Gate to the MOSSDEEP docks"))
@@ -64,5 +43,12 @@ script Mossdeep__Text_Attendant {
     faceplayer
     msgbox(format("Hello.\pThis ship is strictly reserved for none TRAINERS. We can't take you onboard.\pI'm sorry."))
     releaseall
+    end
+}
+
+script Mossdeep__Text_School {
+    lock
+    msgbox(format("MOSSDEEP SCHOOL"))
+    release
     end
 }

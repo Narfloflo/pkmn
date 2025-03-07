@@ -18,3 +18,17 @@ OldaleTown_House2_Text_YoullGoFurtherWithStrongPokemon:
 	.string "stronger, you'll be able to go farther\l"
 	.string "away from here.$"
 
+OldaleTown_House2_Oldman::
+	lock
+	faceplayer
+	msgbox OldaleTown_House2_Oldman_Text_0
+	release
+	end
+
+
+OldaleTown_House2_Oldman_Text_0:
+	.string "Some POKéMON can EVOLVE with a\n"
+	.string "specific object.\l"
+	.string "I heard that a place is selling those\l"
+	.string "objects. But I don't remember\l"
+	.string "where...$"

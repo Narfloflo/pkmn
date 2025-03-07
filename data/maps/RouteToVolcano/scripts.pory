@@ -1,0 +1,8 @@
+mapscripts RouteToVolcano_MapScripts {}
+
+script RouteToVolcano_Text_Hiker {
+    trainerbattle_single(TRAINER_WILTON_2, "Ah ! You too are looking for the\nvolcano ?", "You are burning like a volcano !")
+    msgbox(format("Mt. CHIMNEY can be access this way, but be careful it's really hot inside."))
+    release
+    end
+}

@@ -1,0 +1,53 @@
+mapscripts RockTunnel_MapScripts {}
+
+script RockTunnel_Text_Picnicker1 {
+    trainerbattle_single(TRAINER_ANNA_AND_MEG_2, "You mind if we fight a little ?", "That's, well, a big defeat !")
+    msgbox(format(""), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script RockTunnel_Text_Picnicker2 {
+    trainerbattle_single(TRAINER_ANNA_AND_MEG_3, "There is so much humidity here !", "Koff koff !")
+    msgbox(format("I'm pretty sure I got something stuck in tmy throat ! That's why I lost !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script RockTunnel_Text_Hiker1 {
+    trainerbattle_single(TRAINER_ANNA_AND_MEG_4, "Well well a fresh blood !", "My my ! I lost !")
+    msgbox(format("The HIKER CLUB sent me here to train my POKéMON. But I'm not strong enough yet !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script RockTunnel_Text_Hiker2 {
+    trainerbattle_single(TRAINER_MIGUEL_2, "AHHHH ! you scared me !", "I wet my pants...")
+    msgbox(format("I thought you were some kind of ghost or something. You aren't right ?"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script RockTunnel_Text_Camper {
+    trainerbattle_single(TRAINER_MIGUEL_3, "There's a lot of sand.\nToo bad for camping !", "Oh! I have sand in my shoes !")
+    msgbox(format("Don't think I'm camping in the ROCK TUNNEL just for fun, it's a challenge !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script RockTunnel_Text_BlackBelt {
+    trainerbattle_single(TRAINER_MIGUEL_4, "Will you help me improve my technics ?", "Mmmmh...\nI'm not good enough !")
+    msgbox(format("My master ask us to train all around KANTO, and to face the real world. Being in a DOJO is not good enough apparently."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script RockTunnel_Text_Worker1 {
+    lock
+    faceplayer
+    msgbox(format("We should build a dam here, so we are trying to see if that's a good spot !"))
+    release
+    end
+}
+
+script RockTunnel_Text_Worker2 {
+    lock
+    faceplayer
+    msgbox(format("You know being a worker in KANTO is really something : there is a lot of job to do since TEAM ROCKET was disband !"))
+    release
+    end
+}

@@ -1,3 +1,45 @@
 AquaHideout_UnusedRubyMap1_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, AquaHideout_UnusedRubyMap1_MapScripts_MAP_SCRIPT_ON_LOAD
 	.byte 0
+
+AquaHideout_UnusedRubyMap1_MapScripts_MAP_SCRIPT_ON_LOAD:
+	call_if_set FLAG_UNUSED_0x024, AquaHideout_UnusedRubyMap1_EventScript_EnteiGone
+	end
+
+
+AquaHideout_UnusedRubyMap1_EventScript_Entei::
+	lockall
+	playmoncry SPECIES_ENTEI, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	seteventmon SPECIES_ENTEI, 80, ITEM_CHARCOAL
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, AquaHideout_UnusedRubyMap1_EventScript_EnteiCaught
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, AquaHideout_UnusedRubyMap1_EventScript_EnteiCaught
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, AquaHideout_UnusedRubyMap1_EventScript_EnteiFlew
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, AquaHideout_UnusedRubyMap1_EventScript_EnteiFlew
+	waitmessage
+	releaseall
+	return
+
+
+AquaHideout_UnusedRubyMap1_EventScript_EnteiCaught::
+	setflag FLAG_UNUSED_0x024
+	goto Common_EventScript_RemoveStaticPokemon
+	return
+
+
+AquaHideout_UnusedRubyMap1_EventScript_EnteiFlew::
+	setflag FLAG_UNUSED_0x024
+	goto Common_EventScript_LegendaryFlewAway
+	return
+
+
+AquaHideout_UnusedRubyMap1_EventScript_EnteiGone::
+	removeobject 1
+	end
 

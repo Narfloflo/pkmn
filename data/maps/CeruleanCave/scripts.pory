@@ -1,0 +1,103 @@
+mapscripts CeruleanCave_MapScripts {
+    MAP_SCRIPT_ON_LOAD{
+        call_if_set(FLAG_UNUSED_0x029, CeruleanCave_Event_RemoveMewtwoandRed)
+        end
+    }
+        
+}
+
+script CeruleanCave_Text_RedBattle {
+    trainerbattle_single(TRAINER_RED, Red_Intro, Red_Outro, Mewtwo)
+    msgbox(PostbattleRed, MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+text Red_Intro{
+    "RED:...................................\n{PLAYER}:..............................\lRED:................................??!"
+}
+
+text Red_Outro{
+    "?!"
+}
+
+text PostbattleRed {  
+    format("..........................")
+}
+
+script Mewtwo {
+    special(PlayerFaceTrainerAfterBattle)
+    setflag(FLAG_UNUSED_0x029)
+    waitmovement(0)
+    msgbox("{PLAYER}: Huh? I can have it ?")
+    call(GiveMewtwo)
+    release
+    end
+}
+
+script GiveMewtwo {
+    givemon(SPECIES_MEWTWO, 70)
+    playfanfare(MUS_OBTAIN_ITEM)
+    if(var(MON_GIVEN_TO_PARTY)){
+        msgbox("You received a POKéMON!")
+        
+    }elif(var(MON_GIVEN_TO_PC)){
+        msgbox(format("You received a POKéMON!\pIt was sent to the PC."))
+    }
+    fadescreen(FADE_TO_BLACK)
+    removeobject(1)
+    removeobject(2)
+    fadescreen(FADE_FROM_BLACK)
+    msgbox("{PLAYER}: There is a picture:\nMT. SILVER... What is this place MT.\lSILVER?", MSGBOX_DEFAULT)
+    end
+}
+
+script CeruleanCave_Text_Pika {
+    lock
+    faceplayer
+    playmoncry(SPECIES_PIKACHU, CRY_MODE_NORMAL)
+    msgbox(format("Pika! Pi-piii!\p{PLAYER}: Never seen a PIKACHU so pumped up than\nthis one!"))
+    release
+    end
+}
+
+script CeruleanCave_Text_RedvsMewtwo {
+    if(defeated(TRAINER_RED)){
+        msgbox("...............",MSGBOX_NPC)
+        end
+    }else{
+        lock
+        special(SpawnCameraObject)
+        applymovement(OBJ_EVENT_ID_CAMERA, CeruleanCave_Text_CameraOnFight)
+        waitmovement(0)
+        fadeoutbgm(2)
+        playbgm(MUS_NONE, FALSE)
+        playmoncry(SPECIES_MEWTWO, CRY_MODE_NORMAL)
+        waitmoncry
+        playmoncry(SPECIES_PIKACHU, CRY_MODE_NORMAL)
+        waitmoncry
+        fadescreen(FADE_TO_BLACK)
+        playse(SE_M_EXPLOSION)
+        waitse
+        playse(SE_BALL_OPEN)
+        waitse
+        removeobject(10)
+        fadescreen(FADE_FROM_BLACK)
+        special(RemoveCameraObject)
+        goto(CeruleanCave_Text_RedBattle)
+    }
+    
+}
+
+movement CeruleanCave_Text_CameraOnFight {
+    walk_up
+    step_end
+}
+
+script CeruleanCave_Event_RemoveMewtwoandRed {
+    removeobject(2)
+    removeobject(1)
+    removeobject(10)
+    end
+}
+

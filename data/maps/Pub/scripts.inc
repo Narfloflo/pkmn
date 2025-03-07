@@ -1,60 +1,61 @@
 Pub_MapScripts::
 	.byte 0
 
-Pub_Text_Vendor::
+MauvillePub_Text_Vendor::
 	lock
-	message Pub_Text_Vendor_Text_0
+	faceplayer
+	message MauvillePub_Text_Vendor_Text_0
 	waitmessage
-	pokemart PubItems
-	msgbox Pub_Text_Vendor_Text_1
+	pokemart MauvillePubItems
+	msgbox MauvillePub_Text_Vendor_Text_1
 	release
 	return
 
 
 	.align 2
-PubItems:
-	.2byte ITEM_BERRY_JUICE
+MauvillePubItems:
 	.2byte ITEM_SODA_POP
 	.2byte ITEM_LEMONADE
 	.2byte ITEM_MOOMOO_MILK
 	.2byte ITEM_FRESH_WATER
 	.2byte ITEM_LAVA_COOKIE
+	.2byte ITEM_SANDWICH
 	.2byte ITEM_NONE
 
-Pub_Text_Man::
-	lock
-	faceplayer
-	msgbox Pub_Text_Man_Text_0
-	applymovement 8, Man_Mouvement
-	waitmovement 0
-	release
-	return
-
-
-Man_Mouvement:
-	face_right
-	step_end
-
-Pub_Text_Menu::
-	lock
-	faceplayer
-	msgbox Pub_Text_Menu_Text_0
-	release
+MauvillePub_Text_Lass::
+	msgbox MauvillePub_Text_Lass_Text_0, MSGBOX_NPC
 	end
 
 
-Pub_Text_Vendor_Text_0:
-	.string "Oh a kid ! No booze for you.$"
+MauvillePub_Text_Employee::
+	msgbox MauvillePub_Text_Employee_Text_0, MSGBOX_NPC
+	end
 
-Pub_Text_Vendor_Text_1:
+
+MauvillePub_Text_Worker::
+	msgbox MauvillePub_Text_Worker_Text_0, MSGBOX_NPC
+	end
+
+
+MauvillePub_Text_Cook::
+	msgbox MauvillePub_Text_Cook_Text_0, MSGBOX_NPC
+	end
+
+
+MauvillePub_Text_Vendor_Text_0:
+	.string "Oh a kid! No booze for you.$"
+
+MauvillePub_Text_Vendor_Text_1:
 	.string "Don't forget to drink with moderation.$"
 
-Pub_Text_Man_Text_0:
-	.string "I'm drinking my troubles... Get lost !$"
+MauvillePub_Text_Lass_Text_0:
+	.string "Oh wait!\nI'm finishing my spaghetti!$"
 
-Pub_Text_Menu_Text_0:
-	.string "{PLAYER} : Let's have a look at the\n"
-	.string "drinks : HEINEBLAZIKEN,\l"
-	.string "LUDICOL'HOEGAARDEN, STANGELA ARTOIS,\l"
-	.string "CORONATU Beer.... Wonder if they have\l"
-	.string "some PINECO GRIS wine.$"
+MauvillePub_Text_Employee_Text_0:
+	.string "Sigh!\nI have such a long work day...\lIt tiresome to sell POTIONS.$"
+
+MauvillePub_Text_Worker_Text_0:
+	.string "Heard about NEW MAUVILLE?\nIt was WATTSON's old project to fuel\lMAUVILLE with a brand new electricity.\lIt didn't really worked well.$"
+
+MauvillePub_Text_Cook_Text_0:
+	.string "I used to cook for the greatest!\nOn the SS ANNE, I could feed CYNTHIA,\lLANCE, RED etc.\lNow I'm just stuck in this CITY...$"

@@ -1,1 +1,53 @@
 mapscripts Vermilion_Indoor_MapScripts {}
+
+script VermilionIndoor_Text_Boy {
+    lock
+    faceplayer
+    msgbox(format("I'm getting my PIDGEY to fly a letter to SAFFRON in the north !"))
+    release
+    end
+}
+
+script VermilionIndoor_Text_Pidgey {
+    lock
+    faceplayer
+    playmoncry(SPECIES_PIDGEY, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox(format("Kukuroooo !"))
+    release
+    end
+}
+
+script VermilionIndoor_Text_Man1 {
+    lock
+    faceplayer
+    msgbox(format("My son is writing a letter to some girl in SAFFRON. I didn't know he was such a casanova..."))
+    release
+    end
+}
+
+script VermilionIndoor_Text_Gentleman {
+    lock
+    faceplayer
+    msgbox(format("This house belong to LT. SURGE. I think he is in the POWER PLANTS in ROUTE 10. Me ? I'm guarding his house. What about you, intruder ?"))
+    release
+    end
+}
+
+script VermilionIndoor_Text_Pikachu {
+    lock
+    faceplayer
+    playmoncry(SPECIES_PIKACHU, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox(format("Pika ! Chu-chu !"))
+    release
+    end
+}
+
+script VermilionIndoor_Text_Camper {
+    lock
+    faceplayer
+    msgbox(format("POKéBALLS, check\nHat, check\pPOKéMON, check\nCourage, missing... I'll start my journey tomorrow..."))
+    release
+    end
+}

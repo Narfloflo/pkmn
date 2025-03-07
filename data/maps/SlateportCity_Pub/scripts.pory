@@ -1,1 +1,20 @@
 mapscripts SlateportCity_Pub_MapScripts {}
+
+script SlateportPub_Text_Vendor{
+    lock
+    faceplayer
+	message(format("Ahoy kiddo! What you'd eat?"))
+	waitmessage
+	pokemart(SlateportPubItems)
+	msgbox("Don't forget to drink with moderation.")
+	release
+}
+
+mart SlateportPubItems {
+	ITEM_SODA_POP
+	ITEM_LEMONADE
+	ITEM_MOOMOO_MILK
+	ITEM_FRESH_WATER
+    ITEM_LAVA_COOKIE
+    ITEM_SANDWICH
+}

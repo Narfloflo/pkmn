@@ -1,0 +1,65 @@
+mapscripts Route9_MapScripts {}
+
+script Route9_Text_Picnicker {
+    trainerbattle_single(TRAINER_WALTER_2, "I'm ready for the ROCK TUNNEL !\nWould you check my team with me ?", "What but ?\nThat's not what I was asking for !")
+    msgbox(format("Well at least I know my team isn't prepare for the ROCK TUNNEL. But that didn't meant that you were supposed to destroyed them !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route9_Text_Camper {
+    trainerbattle_single(TRAINER_WALTER_3, "Oh wow a new face!\nReady for a lesson?", "I'm the student here...")
+    msgbox(format("I need to go back to school in VIRIDIAN."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route9_Text_Youngster {
+    trainerbattle_single(TRAINER_WALTER_4, "Where is he! WHERE IS HE !!!", "Grumbll!")
+    msgbox(format("My brother pissed me off! I need to find him right now! WHERE ARE YOU!"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route9_Text_BugCatcher {
+    trainerbattle_single(TRAINER_KAREN_2, "Wow! So much bugs around here !\nAre you a bug too ?", "Bzzzt bzzzt!")
+    msgbox(format("I think I spent too much time with bugs POKéMON..."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route9_Text_Hiker1 {
+    trainerbattle_single(TRAINER_KAREN_3, "Gotcha hahaha!", "Such a strength!")
+    msgbox(format("I love scaring people who jump here ! Don't look at me like this ! Only ARCEUS can judge me !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route9_Text_Lass {
+    trainerbattle_single(TRAINER_KAREN_4, "Hey ! You wanna go to the ROCK TUNNEL ?\nYou need FLASH you know ?", "I was giving you an advice !")
+    msgbox(format("Some POKéMON know naturally FLASH. It's a good thing, I won't have to teach this to one of my POKéMON !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route9_Text_Boy {
+    msgbox(format("I'm not a TRAINER. I'm hidding from my brother. I pet his favorite POKéMON, but now it is totally harmless. And my brother thinks only strong POKéMON count!"), MSGBOX_NPC)
+    end
+}
+
+script Route9_Text_Hiker2 {
+    lock
+    faceplayer
+    msgbox(format("Who I am ? Well just a happy, anonymous and not suspicious HIKER! Oh you want me to ask the TRAINER to fight you again?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1){
+        playse(SE_POKENAV_CALL)
+        waitse
+        cleartrainerflag(TRAINER_WALTER_2)
+        cleartrainerflag(TRAINER_WALTER_3)
+        cleartrainerflag(TRAINER_WALTER_4)
+        cleartrainerflag(TRAINER_KAREN_2)
+        cleartrainerflag(TRAINER_KAREN_3)
+        cleartrainerflag(TRAINER_KAREN_4)
+        playse(SE_POKENAV_HANG_UP)
+        waitse
+        msgbox(format("Well it's done! Happy to have a business with you. The HIKER CLU... I mean, me the random HIKER, wish you a goodbye !"))
+    }else{
+        msgbox(format("Really ? So you just wanted to greet a happy HIKER. So nice, ah ah ah ! Can you leave me now ?"))
+    }
+    release
+    end
+}

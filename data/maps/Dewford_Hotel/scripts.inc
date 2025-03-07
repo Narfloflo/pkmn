@@ -1,6 +1,7 @@
 Dewford_Hotel_MapScripts::
 	.byte 0
 
+
 Dewford_Hotel_Text_OldLady::
 	lock
 	faceplayer
@@ -37,6 +38,11 @@ Dewford_Hotel_Text_Maniac::
 	lock
 	msgbox Dewford_Hotel_Text_Maniac_Text_0
 	release
+	end
+
+
+Dewford_Hotel_Text_Fisherman::
+	msgbox Dewford_Hotel_Text_Fisherman_Text_0, MSGBOX_NPC
 	end
 
 
@@ -97,8 +103,10 @@ Dewford_Hotel_Text_Boy_Text_0:
 	.string "I need some fun !$"
 
 Dewford_Hotel_Text_Maniac_Text_0:
-	.string ".........What about this magazines....... Oh\n"
-	.string "dear !.......$"
+	.string ".........\nWhat about this magazines\l.......\lOh dear!.......$"
+
+Dewford_Hotel_Text_Fisherman_Text_0:
+	.string "I wish to see what kind of fish there\nare in HOENN!\lIs there some various forms of\lMAGIKARP?$"
 
 Dewford_Hotel_Text_Gentleman_Text_0:
 	.string "I booked this Hotel about three months\n"
@@ -109,9 +117,7 @@ Dewford_Hotel_Text_Painter_Text_0:
 	.string "final masterpiece here. So excited !$"
 
 Dewford_Hotel_Text_Azumarill_Text_0:
-	.string "AZUUUUU ZUUU ZUUUUU !\p"
-	.string "{PLAYER} : Oh my ARCEUS, what a bad\n"
-	.string "bitch you are !$"
+	.string "AZUUUUU ZUUU ZUUUUU!\n{PLAYER} : You really are a star right?$"
 
 Dewford_Hotel_Text_Woman_Text_0:
 	.string "I wonder what kind of room we will have.$"

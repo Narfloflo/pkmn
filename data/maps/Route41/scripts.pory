@@ -1,0 +1,43 @@
+mapscripts Route41_MapScripts {}
+
+script Route41_Text_Whirlpool {
+    lock
+    checkitem(ITEM_MACH_BIKE, 1)
+    if(var(VAR_RESULT)== TRUE){
+        goto(Route41_Text_RemoveWhirlpool)
+    }else{
+        msgbox(format("It's a vicious WHIRLPOOL, maybe we can remove it..."),MSGBOX_AUTOCLOSE)
+    }
+    release
+    end
+}
+
+script Route41_Text_RemoveWhirlpool {
+    msgbox(format("It's a vicious WHIRLPOOL.\nWanna remove it ?"),MSGBOX_YESNO)
+    if(var(VAR_RESULT)== 1){
+        playse(SE_M_WHIRLPOOL)
+        waitse
+        removeobject(VAR_LAST_TALKED)
+    }
+    release
+    end
+}
+
+script Route41_Text_LostBoy {
+    lock
+    faceplayer
+    msgbox(format("ARCEUS be praised ! I've been abandoned here by my father a few days ago. I thought nobody would come to save. But you came finally ! I can go home !.. What you are not here for me but for the LEGENDARY POKéMON in the cave ??? Well leave me alone you bastard !"))
+    release
+    end
+}
+
+script Route41_Text_SwimmerF {
+    trainerbattle_single(TRAINER_AMY_AND_LIV_5, "Hey","Damn")
+    msgbox("I lost!", MSGBOX_NPC)
+    end
+}
+script Route41_Text_SwimmerM {
+    trainerbattle_single(TRAINER_ERNEST_2, "Hey","Damn")
+    msgbox("I lost!", MSGBOX_NPC)
+    end
+}

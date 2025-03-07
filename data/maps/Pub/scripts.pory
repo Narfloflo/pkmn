@@ -2,42 +2,41 @@ raw`Pub_MapScripts::
 	.byte 0
 `
 
-script Pub_Text_Vendor{
+script MauvillePub_Text_Vendor{
     lock
-	message(format("Oh a kid ! No booze for you."))
+    faceplayer
+	message(format("Oh a kid! No booze for you."))
 	waitmessage
-	pokemart(PubItems)
+	pokemart(MauvillePubItems)
 	msgbox("Don't forget to drink with moderation.")
 	release
 }
 
-mart PubItems {
-    ITEM_BERRY_JUICE
+mart MauvillePubItems {
 	ITEM_SODA_POP
 	ITEM_LEMONADE
 	ITEM_MOOMOO_MILK
 	ITEM_FRESH_WATER
     ITEM_LAVA_COOKIE
+    ITEM_SANDWICH
 }
 
-script Pub_Text_Man {
-    lock
-    faceplayer
-    msgbox(format("I'm drinking my troubles... Get lost !"))
-    applymovement(8, Man_Mouvement)
-    waitmovement(0)
-    release
-    return
+
+script MauvillePub_Text_Lass {
+	msgbox("Oh wait!\nI'm finishing my spaghetti!", MSGBOX_NPC)
+	end
+}
+script MauvillePub_Text_Employee {
+	msgbox("Sigh!\nI have such a long work day...\lIt tiresome to sell POTIONS.", MSGBOX_NPC)
+	end
 }
 
-movement Man_Mouvement{
-    face_right
+script MauvillePub_Text_Worker {
+	msgbox("Heard about NEW MAUVILLE?\nIt was WATTSON's old project to fuel\lMAUVILLE with a brand new electricity.\lIt didn't really worked well.", MSGBOX_NPC)
+	end
 }
 
-script Pub_Text_Menu {
-    lock
-    faceplayer
-    msgbox(format("{PLAYER} : Let's have a look at the drinks : HEINEBLAZIKEN, LUDICOL'HOEGAARDEN, STANGELA ARTOIS, CORONATU Beer.... Wonder if they have some PINECO GRIS wine."))
-    release
-    end
+script MauvillePub_Text_Cook {
+	msgbox("I used to cook for the greatest!\nOn the SS ANNE, I could feed CYNTHIA,\lLANCE, RED etc.\lNow I'm just stuck in this CITY...", MSGBOX_NPC)
+	end
 }

@@ -1,0 +1,22 @@
+KantoUndergroundDoors_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, KantoUndergroundDoors_MapScripts_MAP_SCRIPT_ON_TRANSITION
+	.byte 0
+
+KantoUndergroundDoors_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+	goto_if_set FLAG_UNUSED_0x02C, KantoUndergroundDoors_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
+	return
+
+KantoUndergroundDoors_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
+	goto KantoUndergroundDoors_On_Load
+	return
+
+
+KantoUndergroundDoors_On_Load::
+	goto_if_set FLAG_UNUSED_0x02C, KantoUndergroundDoors_On_Load_1
+	return
+
+KantoUndergroundDoors_On_Load_1:
+	playbgm MUS_RG_PEWTER, TRUE
+	setweather WEATHER_NONE
+	end
+

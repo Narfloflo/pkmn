@@ -53,8 +53,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 8,
-      "y": 23,
+      "x": 9,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
@@ -131,41 +131,41 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
-      "x": 30,
-      "y": 18,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_DOWN_RIGHT_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 15,
-      "y": 19,
+      "x": 14,
+      "y": 31,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "LittlerootTown_Text_Littleboy",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 15,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LittlerootTown_Text_Woman",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
-      "x": 19,
-      "y": 15,
+      "x": 17,
+      "y": 16,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "LittlerootTown_Text_Littlegirl",
       "flag": "0"
     },
     {
@@ -178,20 +178,20 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "LittlerootTown_Text_Artist",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
-      "x": 20,
+      "x": 17,
       "y": 19,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "LittlerootTown_Text_Vendor",
       "flag": "0"
     },
     {
@@ -231,18 +231,18 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 14,
+      "x": 6,
       "y": 27,
       "elevation": 0,
-      "dest_map": "MAP_EVER_GRANDE_CITY_CHAMPIONS_ROOM",
+      "dest_map": "MAP_LITTLEROOT_MULTIPLE_HOUSES",
       "dest_warp_id": "0"
     },
     {
-      "x": 3,
-      "y": 27,
+      "x": 24,
+      "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_PUB",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_LITTLEROOT_MULTIPLE_HOUSES",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
@@ -311,8 +311,8 @@
     },
     {
       "type": "trigger",
-      "x": 28,
-      "y": 2,
+      "x": 18,
+      "y": 9,
       "elevation": 3,
       "var": "VAR_LITTLEROOT_TOWN_STATE",
       "var_value": "3",
@@ -320,8 +320,8 @@
     },
     {
       "type": "trigger",
-      "x": 29,
-      "y": 2,
+      "x": 19,
+      "y": 9,
       "elevation": 3,
       "var": "VAR_LITTLEROOT_TOWN_STATE",
       "var_value": "3",
@@ -334,7 +334,70 @@
       "elevation": 0,
       "var": "VAR_LITTLEROOT_TOWN_STATE",
       "var_value": "0",
-      "script": "LittlerootTown_EventScript_NeedPokemonTriggerLeft"
+      "script": "LittlerootTown_Event_HeadingtoRoute101"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_LITTLEROOT_TOWN_STATE",
+      "var_value": "0",
+      "script": "LittlerootTown_Event_HeadingtoRoute101"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_LITTLEROOT_TOWN_STATE",
+      "var_value": "3",
+      "script": "LittlerootTown_Event_Momcalling"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_LITTLEROOT_TOWN_STATE",
+      "var_value": "3",
+      "script": "LittlerootTown_Event_Momcalling"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_LITTLEROOT_TOWN_STATE",
+      "var_value": "3",
+      "script": "LittlerootTown_Event_Momcalling"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_LITTLEROOT_TOWN_STATE",
+      "var_value": "3",
+      "script": "LittlerootTown_Event_Momcalling"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_LITTLEROOT_TOWN_STATE",
+      "var_value": "3",
+      "script": "LittlerootTown_Event_Momcalling"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_LITTLEROOT_TOWN_STATE",
+      "var_value": "1",
+      "script": "LittlerootTown_Event_HeadingtoRoute101"
     },
     {
       "type": "trigger",
@@ -343,7 +406,25 @@
       "elevation": 0,
       "var": "VAR_LITTLEROOT_TOWN_STATE",
       "var_value": "1",
-      "script": "LittlerootTown_EventScript_GoSaveBirchTrigger"
+      "script": "LittlerootTown_Event_HeadingtoRoute101"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_LITTLEROOT_TOWN_STATE",
+      "var_value": "2",
+      "script": "LittlerootTown_Event_HeadingtoRoute101"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_LITTLEROOT_TOWN_STATE",
+      "var_value": "2",
+      "script": "LittlerootTown_Event_HeadingtoRoute101"
     }
   ],
   "bg_events": [
@@ -389,22 +470,6 @@
     },
     {
       "type": "sign",
-      "x": 33,
-      "y": 28,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Verdanturf_Hospital_Door"
-    },
-    {
-      "type": "sign",
-      "x": 24,
-      "y": 14,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Verdanturf_Hospital_Door"
-    },
-    {
-      "type": "sign",
       "x": 3,
       "y": 22,
       "elevation": 0,
@@ -418,6 +483,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 27,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LittlerootTown_Text_MarketSign"
     }
   ]
 }

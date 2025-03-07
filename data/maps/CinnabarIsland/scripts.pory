@@ -1,0 +1,47 @@
+mapscripts CinnabarIsland_MapScripts {}
+
+script CinnabarIsland_Text_Cooltrainer {
+    lock
+    faceplayer
+    msgbox(format("Huh, looks like BLAINE isn't in the GYM. I heard he is studying the SEAFOAM ISLANDS. I wonder why."))
+    release
+    end
+}
+
+script CinnabarIsland_Text_Oldman {
+    lock
+    faceplayer
+    msgbox(format("BLAINE has been living on this island for a few decades now. I was one of his companions, until we went SOUTH..."))
+    release
+    end
+}
+
+script CinnabarIsland_Text_CitySign {
+    lock
+    msgbox(format("CINNABAR ISLAND\nThe fiery town of burning desire."))
+    release
+    end
+}
+
+script CinnabarIsland_Text_LabSign {
+    lock
+    msgbox(format("POKéMON lab"))
+    release
+    end
+}
+
+script CinnabarIsland_Text_Scientist {
+    lock
+    faceplayer
+    msgbox(format("Here is the POKéMON LAB. We have a technology that revive FOSSILS. Yeah like DEVON ! (They stole everything from us...)"))
+    release
+    end
+}
+
+script CinnabarIsland_Text_Fisherman {
+    lock
+    faceplayer
+    msgbox(format("Some scientists are saying that the sea is getting a little hotter. But it can't be bad, like a volcano right ?"))
+    release
+    end
+}

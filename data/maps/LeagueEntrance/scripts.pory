@@ -1,0 +1,110 @@
+mapscripts LeagueEntrance_MapScripts {
+    MAP_SCRIPT_ON_LOAD{
+        call_if_set(FLAG_UNUSED_0x029, LeagueEntrance_Event_GuardToMtSilver)
+        end
+    }
+}
+
+script LeagueEntrance_Text_Scientist {
+    lock
+    faceplayer
+    msgbox(format("We are surveying a project that lead to a MOUNTAIN called MT. SILVER. It will take time !"))
+    release
+    end
+}
+
+script LeagueEntrance_Text_Police1 {
+    lock
+    faceplayer
+    msgbox(format("Welcome to the KANTO's POKéMON LEAGUE."))
+    release
+    end
+}
+
+script LeagueEntrance_Text_Police2 {
+    lock
+    faceplayer
+    msgbox(format("This way is closed. You can't challenge the KANTO's POKéMON LEAGUE. I don't really know where they all are..."))
+    release
+    end
+}
+
+script LeagueEntrance_Text_Police3 {
+    if(flag(FLAG_UNUSED_0x029)==TRUE){
+        msgbox("You there! You look strong!\nMaybe you can see what is going on\lhere!\lOur CHAMPION RED blasted this way into\lMT. SILVER! It's dangerous!\lCan you help us and see what's going\lon?", MSGBOX_NPC)
+        end
+    }else{
+        msgbox("The way throught MT. SILVER is closed.\nThe HIKERS CLUB is investigating the\lplace currently.", MSGBOX_NPC)
+        end
+    }
+}
+
+script LeagueEntrance_Text_Cooltrainer {
+    lock
+    faceplayer
+    msgbox(format("I was hired to secure the way to MT. SILVER. POKéMON there are really strong !"))
+    release
+    end
+}
+
+script LeagueEntrance_Text_Oldman {
+    lock
+    faceplayer
+    msgbox(format("I used to live close to MT. SILVER. It's an hard place to reach, so I'm guiding the crews safely."))
+    release
+    end
+}
+
+script LeagueEntrance_Event_CannotGoYet {
+    if(defeated(TRAINER_NORMAN_4) == FALSE){
+        lock
+        msgbox("Wait wait !")
+        applymovement(OBJ_EVENT_ID_PLAYER, LeagueEntrance_Move_FaceCounter)
+        waitmovement(0)
+        msgbox("Unfortunatly we can't let you go\nthere...\lYes we know, it's frustrating but\lthe entire mountain just erodes\land we are cleaning the path\lthanks to the HIKER CLUB !\lYou can come back later.")
+        applymovement(OBJ_EVENT_ID_PLAYER, LeagueEntrance_Move_Leaving)
+        waitmovement(0)
+        release
+        end
+    }else{
+        release
+        end
+    }
+}
+
+script LeagueEntrance_Event_CannotGoYet1 {
+    if(defeated(TRAINER_NORMAN_4) == FALSE){
+        lock
+        msgbox("Wait wait !")
+        applymovement(OBJ_EVENT_ID_PLAYER, LeagueEntrance_Move_WalktoCounter)
+        waitmovement(0)
+        msgbox("Unfortunatly we can't let you go\nthere...\lYes we know, it's frustrating but\lthe entire mountain just erodes\land we are cleaning the path\lthanks to the HIKER CLUB !\lYou can come back later.")
+        applymovement(OBJ_EVENT_ID_PLAYER, LeagueEntrance_Move_Leaving)
+        waitmovement(0)
+        release
+        end
+    }else{
+        release
+        end
+    }
+}
+
+movement LeagueEntrance_Move_FaceCounter {
+    face_left
+    step_end
+}
+
+movement LeagueEntrance_Move_WalktoCounter {
+    walk_left
+    step_end
+}
+
+movement LeagueEntrance_Move_Leaving {
+    walk_up
+    step_end
+}
+
+script LeagueEntrance_Event_GuardToMtSilver {
+    setobjectxyperm(7, 1, 5)
+    return
+}

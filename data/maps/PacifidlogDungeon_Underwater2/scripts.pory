@@ -1,0 +1,22 @@
+mapscripts PacifidlogDungeon_Underwater2_MapScripts {}
+
+script CeruleanCity_Text_Machoke {
+    playmoncry(SPECIES_MACHOKE, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox("Cho-Chooooke!\n{PLAYER}: The MACHOKE is preventing the\lprisoners from running away.",MSGBOX_NPC)
+    end
+}
+
+script CeruleanCity_Text_TVMan {
+    if(defeated(TRAINER_RED)){
+        msgbox("Oh, oh!\nTh-this news report!\lHmm...\lAmazing!\lSo you beat the famous TRAINER RED?\lThanks for sharing this fantastic news.\lHave a bunch of BERRIES!", MSGBOX_NPC)
+        giveitem(ITEM_STARF_BERRY, 4)
+        end
+    }
+    if(defeated(TRAINER_NORMAN_4)){
+        msgbox("Ah!\nA news report!\lHmmm...\lI see!\lThat was quite informative!\lThanks for beating the old OAK. This\lbastard owe me a few bucks for ages!\lAs my thanks for sharing the news with\lme, I want you to have this.",MSGBOX_NPC)
+        giveitem(ITEM_PETAYA_BERRY, 4)
+    }
+    msgbox("Sigh...\nToo much time, too little to do...\lIs nothing entertaining happening\lanywhere?",MSGBOX_NPC)
+    end
+}

@@ -63,7 +63,7 @@
 #define ITEM_BLUE_SHARD 49
 #define ITEM_YELLOW_SHARD 50
 #define ITEM_GREEN_SHARD 51
-#define ITEM_034 52
+#define ITEM_GS_BALL 52
 #define ITEM_035 53
 #define ITEM_036 54
 #define ITEM_037 55
@@ -110,23 +110,23 @@
 #define ITEM_THUNDER_STONE 96
 #define ITEM_WATER_STONE 97
 #define ITEM_LEAF_STONE 98
-#define ITEM_063 99
-#define ITEM_064 100
-#define ITEM_065 101
-#define ITEM_066 102
+#define ITEM_PEWTER_CRUNCHIES 99 //Pewter Crunchies
+#define ITEM_CASTELIACONE 100 //Ice Cream
+#define ITEM_STBRICECREAM 101
+#define ITEM_BLKICECREAM 102
 
 // Unusable
 #define ITEM_TINY_MUSHROOM 103
 #define ITEM_BIG_MUSHROOM 104
-#define ITEM_069 105
+#define ITEM_WHTICECREAM 105
 #define ITEM_PEARL 106
 #define ITEM_BIG_PEARL 107
 #define ITEM_STARDUST 108
 #define ITEM_STAR_PIECE 109
 #define ITEM_NUGGET 110
 #define ITEM_HEART_SCALE 111
-#define ITEM_070 112
-#define ITEM_071 113
+#define ITEM_RAGE_CANDY 112
+#define ITEM_HONEY 113
 #define ITEM_072 114
 #define ITEM_073 115
 #define ITEM_074 116
@@ -537,6 +537,6 @@
 #define ITEM_B_USE_OTHER    2
 
 // Check if the item is one that can be used on a Pokemon.
-#define ITEM_HAS_EFFECT(item) ((item) >= ITEM_POTION && (item) <= MAX_BERRY_INDEX)
+#define ITEM_HAS_EFFECT(item) ((item) >= ITEM_POTION && (item) <= ITEM_SANDWICH)
 
 #endif  // GUARD_CONSTANTS_ITEMS_H

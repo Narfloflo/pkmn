@@ -26,9 +26,9 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 18,
-      "y": 68,
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_2",
+      "x": 13,
+      "y": 63,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -104,9 +104,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_4",
+      "graphics_id": "OBJ_EVENT_GFX_BATTLEGIRL",
       "x": 15,
-      "y": 50,
+      "y": 51,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
@@ -260,7 +260,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_4",
+      "graphics_id": "OBJ_EVENT_GFX_BATTLEGIRL",
       "x": 15,
       "y": 7,
       "elevation": 3,
@@ -368,8 +368,8 @@
     },
     {
       "type": "sign",
-      "x": 16,
-      "y": 64,
+      "x": 20,
+      "y": 73,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route115_EventScript_RouteSignRustboro"

@@ -1,0 +1,198 @@
+mapscripts IceCave3F_MapScripts {}
+
+script PewterCity_Museum_1F_EventScript_EntranceTriggerLeft {
+    lockall
+    setvar(VAR_TEMP_1,0)
+    applymovement(OBJ_EVENT_ID_PLAYER, PewterMuseum_Movement_WalkInPlaceFasterRight)
+    waitmovement(0)
+    goto(PewterCity_Museum_1F_EventScript_EntranceTrigger)
+    end
+}
+
+script PewterCity_Museum_1F_EventScript_EntranceTriggerMid {
+    lockall
+	setvar(VAR_TEMP_1,1)
+	applymovement(OBJ_EVENT_ID_PLAYER, PewterMuseum_Movement_WalkInPlaceFasterRight) 
+	waitmovement(0)
+	goto(PewterCity_Museum_1F_EventScript_EntranceTrigger)
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_EntranceTriggerRight {
+    lockall
+	setvar(VAR_TEMP_1,2)
+	applymovement(OBJ_EVENT_ID_PLAYER, PewterMuseum_Movement_WalkInPlaceFasterRight) 
+	waitmovement(0) 
+	goto(PewterCity_Museum_1F_EventScript_EntranceTrigger)
+	end
+}
+
+movement PewterMuseum_Movement_WalkInPlaceFasterRight {
+    walk_in_place_faster_right
+	step_end
+}
+
+script PewterCity_Museum_1F_EventScript_EntranceTrigger {
+    showmoneybox(0, 0)
+	msgbox("Yes, yes.\nIt's ¥50 for a child's ticket.\pWould you like to come in?", MSGBOX_YESNO)
+	goto_if_eq(VAR_RESULT, YES, PewterCity_Museum_1F_EventScript_TryPayForTicket)
+	msgbox("Come again!")
+	closemessage
+	hidemoneybox
+	applymovement(OBJ_EVENT_ID_PLAYER, PewterCity_Museum_1F_Movement_ForcePlayerExit)
+	waitmovement(0)
+	releaseall
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_TryPayForTicket {
+    checkmoney(50)
+	goto_if_eq(VAR_RESULT, FALSE, PewterCity_Museum_1F_EventScript_NotEnoughMoney)
+	closemessage
+	call_if_eq(VAR_TEMP_1, 0, PewterCity_Museum_1F_EventScript_PlayerApproachCounterLeft)
+	call_if_eq(VAR_TEMP_1, 1, PewterCity_Museum_1F_EventScript_PlayerApproachCounterMid)
+	call_if_eq(VAR_TEMP_1, 2, PewterCity_Museum_1F_EventScript_PlayerApproachCounterRight)
+	playse(SE_SHOP)
+	removemoney(50)
+	updatemoneybox
+	waitse
+	msgbox("Right, ¥50!\nThank you!")
+	setvar(VAR_VERDANTURF_TOWN_STATE, 1)
+	hidemoneybox
+	releaseall
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_PlayerApproachCounterLeft {
+    applymovement(OBJ_EVENT_ID_PLAYER, PewterCity_Museum_1F_Movement_ApproachCounterLeft) 
+	waitmovement(0)
+	return
+
+}
+
+script PewterCity_Museum_1F_EventScript_PlayerApproachCounterMid {
+    applymovement(OBJ_EVENT_ID_PLAYER, PewterCity_Museum_1F_Movement_ApproachCounterMid) 
+	waitmovement(0)
+	return
+}
+
+script PewterCity_Museum_1F_EventScript_PlayerApproachCounterRight {
+    applymovement(OBJ_EVENT_ID_PLAYER, PewterCity_Museum_1F_Movement_ApproachCounterRight) 
+	waitmovement(0) 
+	return
+}
+
+script PewterCity_Museum_1F_EventScript_NotEnoughMoney {
+    msgbox("No money, no friend!") 
+	closemessage
+	hidemoneybox
+	applymovement(OBJ_EVENT_ID_PLAYER, PewterCity_Museum_1F_Movement_ForcePlayerExit) 
+	waitmovement (0)
+	releaseall
+	end
+}
+
+movement PewterCity_Museum_1F_Movement_ForcePlayerExit {
+    walk_down
+	step_end
+}
+
+movement PewterCity_Museum_1F_Movement_ApproachCounterLeft {
+    walk_right
+	walk_right
+	delay_8
+	walk_in_place_right
+	step_end
+}
+
+movement PewterCity_Museum_1F_Movement_ApproachCounterMid {
+    walk_right
+	delay_8
+	walk_in_place_right
+	step_end
+}
+
+movement PewterCity_Museum_1F_Movement_ApproachCounterRight {
+    delay_8
+	walk_in_place_right
+	step_end
+}
+
+script PewterCity_Museum_1F_EventScript_Scientist1 {
+    lock
+	faceplayer
+	goto_if_eq(VAR_FACING, DIR_WEST, PewterCity_Museum_1F_EventScript_Scientist1BehindCounter) 
+	goto_if_eq(VAR_FACING, DIR_SOUTH, PewterCity_Museum_1F_EventScript_Scientist1BehindCounter) 
+	goto_if_eq(VAR_FACING, DIR_NORTH, PewterCity_Museum_1F_EventScript_Scientist1BehindCounter) 
+	msgbox("Please enjoy yourself.")
+	release
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_Scientist1BehindCounter {
+    msgbox("You can't sneak in the back way!\nNice try, kid, but no.\pOh, whatever!\nDo you know what AMBER is?", MSGBOX_YESNO)
+	goto_if_eq(VAR_RESULT, YES, PewterCity_Museum_1F_EventScript_AmberHasGeneticMatter) 
+	goto_if_eq(VAR_RESULT, NO, PewterCity_Museum_1F_EventScript_ExplainAmber) 
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_AmberHasGeneticMatter {
+    msgbox("AMBER contains the genetic matter\nof ancient POKéMON.\pThere's a LAB somewhere trying to\nresurrect POKéMON from AMBER.") 
+	applymovement(1, PewterMuseum_Movement_FaceOriginalDirection) 
+	waitmovement(0)
+	release
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_ExplainAmber {
+    msgbox("AMBER is actually sap, that gooey\nstuff that oozes from trees.\pThe ancient sap fossilized over\ntime to become rock-hard AMBER.") 
+	applymovement(1, PewterMuseum_Movement_FaceOriginalDirection) 
+	waitmovement(0)
+	release
+	end
+}
+
+movement PewterMuseum_Movement_FaceOriginalDirection {
+    face_original_direction
+	step_end
+}
+
+script PewterCity_Museum_1F_EventScript_OldMan {
+    msgbox("I should be grateful for my long\nlife.\pNever did I think I would get to\nsee the bones of a dragon!",MSGBOX_NPC)
+    end
+}
+
+script PewterCity_Museum_2F_EventScript_Man {
+    msgbox("MOON STONE, huh?\pWhat's so special about it?\nLooks like an ordinary rock to me.",MSGBOX_NPC)
+    end
+}
+
+script PewterCity_Museum_2F_EventScript_OldMan {
+    msgbox("July 20, 1969!\pHumankind first set foot on the\nmoon that day.\pI bought a color TV just so I\ncould watch that news.",MSGBOX_NPC)
+	end
+}
+
+script PewterCity_Museum_2F_EventScript_MoonStone {
+    msgbox("A meteorite that fell on MT. MOON.\nIt is thought to be a MOON STONE." , MSGBOX_SIGN)
+	end
+}
+
+script PewterCity_Museum_2F_EventScript_Scientist {
+    msgbox("This month, we're running a space\nexhibit.",MSGBOX_NPC)
+	end
+}
+
+script PewterCity_Museum_2F_EventScript_SpaceShuttle {
+    msgbox("Space Shuttle", MSGBOX_SIGN)
+	end
+}
+
+script PewterCity_Museum_2F_EventScript_BaldingMan {
+    msgbox("I promise my daughter I'll get her a\nPIKACHU.\lEver since that moment she want to come\lin the MUSEUM and run around...",MSGBOX_NPC)
+	end
+}
+
+script PewterCity_Museum_2F_EventScript_LittleGirl {
+    msgbox("I want a PIKACHU!\nIt's so cute!\pI asked my daddy to catch me one!",MSGBOX_NPC)
+	end
+}

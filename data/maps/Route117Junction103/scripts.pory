@@ -24,3 +24,124 @@ script Route117Junction103_Text_Sign {
     }    
 }
 
+script Route117Junction103_EventScript_RunningWoman {
+	lock
+	faceplayer
+	msgbox(format("So you just think you can stop me from my training? You have to pay for this! Wanna try your strength?"), MSGBOX_YESNO)
+	if(var(VAR_RESULT) != 0){
+		message(format("Oh you are so dead!"))
+		call(Route117Junction103_EventScript_ChooseMonRand)
+		release
+		end
+	}else{
+		msgbox(format("Pfff you so weak, so weak!"))
+		release
+		end
+	}
+}
+
+script Route117Junction103_EventScript_ChooseMonRand {
+	random(3)
+		switch(var(VAR_RESULT)){
+			case 0: call(Route117Junction103_EventScript_Medicham)
+			case 1: call(Route117Junction103_EventScript_Hariyama)
+			case 2: call(Route117Junction103_EventScript_Machamp)
+		}
+	return
+}
+
+script Route117Junction103_EventScript_Medicham{
+	playmoncry(SPECIES_MEDICHAM, CRY_MODE_ENCOUNTER)
+	waitmoncry
+	setwildbattle(SPECIES_MEDICHAM, 45)
+	dowildbattle
+	specialvar(VAR_RESULT, GetBattleOutcome)
+	if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+		msgbox(format("YOU CHEATED! MEDICHAM IS THE BEST"))
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_WON){
+		msgbox(format("... Yeah, you were just lucky..."))
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_RAN){
+		msgbox(format("AH! I knew you were weak!"))
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_PLAYER_TELEPORTED){
+		msgbox(format("AH! I knew you were weak!"))
+	}
+	return
+}
+
+script Route117Junction103_EventScript_Hariyama{
+	playmoncry(SPECIES_HARIYAMA, CRY_MODE_ENCOUNTER)
+	waitmoncry
+	setwildbattle(SPECIES_HARIYAMA, 45)
+	dowildbattle
+	specialvar(VAR_RESULT, GetBattleOutcome)
+	if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+		msgbox(format("YOU CHEATED! HARIYAMA IS THE BEST"))
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_WON){
+		msgbox(format("... Yeah, you were just lucky..."))
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_RAN){
+		msgbox(format("AH! I knew you were weak!"))
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_PLAYER_TELEPORTED){
+		msgbox(format("AH! I knew you were weak!"))
+	}
+	return
+}
+
+script Route117Junction103_EventScript_Machamp{
+	playmoncry(SPECIES_MACHAMP, CRY_MODE_ENCOUNTER)
+	waitmoncry
+	setwildbattle(SPECIES_MACHAMP, 45)
+	dowildbattle
+	specialvar(VAR_RESULT, GetBattleOutcome)
+	if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+		msgbox(format("YOU CHEATED! MACHAMP IS THE BEST"))
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_WON){
+		msgbox(format("... Yeah, you were just lucky..."))
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_RAN){
+		msgbox(format("AH! I knew you were weak!"))
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_PLAYER_TELEPORTED){
+		msgbox(format("AH! I knew you were weak!"))
+	}
+	return
+}
+
+script Route117Junction103_Text_Machamp {
+    lock
+    faceplayer
+    playmoncry(SPECIES_MACHAMP, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox("Chu chu!", MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route117Junction103_Text_Medicham {
+   lock
+    faceplayer
+    playmoncry(SPECIES_MEDICHAM, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox("Di di!", MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route117Junction103_Text_Hariyama {
+    lock
+    faceplayer
+    playmoncry(SPECIES_HARIYAMA, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox("Ya ya! Riii!", MSGBOX_AUTOCLOSE)
+    end
+}

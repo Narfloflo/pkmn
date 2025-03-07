@@ -1,1 +1,42 @@
-mapscripts Mossdeep_SeaGate2_MapScripts {}
+mapscripts Mossdeep_SeaGate2_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION
+        {
+            gettime
+            if (var(VAR_0x8003) == TIME_DAY){
+            setflag(FLAG_TEMP_1)
+            call_if_set(FLAG_TEMP_1, MossdeepCityIndoor_Event_Worker)
+        }
+    }
+}
+
+script MossdeepCityIndoor_Text_Worker {
+    msgbox("I work in the SPACE STATION.\nI'm not in the house during the day.\lThere is so much work to do there!", MSGBOX_NPC)
+    end
+    }
+
+    script MossdeepCityIndoor_Event_Worker {
+        removeobject(3)
+        end
+    }
+
+    script MossdeepCityIndoor_Text_Medicham {
+        playmoncry(SPECIES_MEDICHAM, CRY_MODE_NORMAL)
+        msgbox("Cha chamm!", MSGBOX_NPC)
+        end
+    }
+
+    script MossdeepCityIndoor_Text_Boy {
+        if(flag(FLAG_BADGE07_GET)){
+            msgbox("So you beat LIZA & TATE right?\nI know my clues led you to victory!\l{PLAYER}: Actually I know my Types\lChart so...", MSGBOX_NPC)
+            end
+        }else{
+            msgbox("You want tips to beat LIZA & TATE?\nBe a sneaky beast, or try to ghost\lthem.\lThey hate that!", MSGBOX_NPC)
+            end
+        }
+       
+    }
+
+script MossdeepCityIndoor_Text_Man {
+    msgbox("This island is very peaceful.\nLot of flowers, a few kids around.\lBut sometime, in the middle of the\lnight:\lKABOOM!\lThey launch their rocket into space\lwithout warning.\lI'm pretty sure I have PTSD because of\lthat...", MSGBOX_NPC)
+    end
+}

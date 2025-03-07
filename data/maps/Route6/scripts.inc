@@ -2,80 +2,231 @@ Route6_MapScripts::
 	.byte 0
 
 
-Route6_Text_RedBattle::
-	trainerbattle_single TRAINER_RED, Red_Intro, Red_Outro, Mewtwo
-	msgbox PostbattleRed, MSGBOX_AUTOCLOSE
+Route6_Text_Door::
+	lock
+	msgbox Route6_Text_Door_Text_0
 	release
 	end
 
 
-Mewtwo::
-	special PlayerFaceTrainerAfterBattle
-	waitmovement 0
-	msgbox Mewtwo_Text_0
-	call GiveMewtwo
-	release
+Route6_Text_BugCatcher1::
+	trainerbattle_single TRAINER_ABIGAIL_2, Route6_Text_BugCatcher1_Text_0, Route6_Text_BugCatcher1_Text_1
+	msgbox Route6_Text_BugCatcher1_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
-GiveMewtwo::
-	givemon SPECIES_MEWTWO, 70
-	playfanfare MUS_OBTAIN_ITEM
-	compare MON_GIVEN_TO_PARTY, 0
-	goto_if_ne GiveMewtwo_2
-	compare MON_GIVEN_TO_PC, 0
-	goto_if_ne GiveMewtwo_3
-GiveMewtwo_1:
-	return
-
-GiveMewtwo_2:
-	msgbox GiveMewtwo_Text_0
-	goto GiveMewtwo_1
-
-GiveMewtwo_3:
-	msgbox GiveMewtwo_Text_1
-	goto GiveMewtwo_1
-
-
-Route6_Text_Pika::
+Route6_Text_BugCatcher2::
 	lock
 	faceplayer
-	playmoncry SPECIES_PIKACHU, CRY_MODE_NORMAL
-	msgbox Route6_Text_Pika_Text_0
+	goto_if_set FLAG_TEMP_1, Route6_Text_BugCatcher2_2
+	msgbox Route6_Text_BugCatcher2_Text_1
+	call Route6_EventScript_ChooseMonRand
+	end
+
+Route6_Text_BugCatcher2_2:
+	msgbox Route6_Text_BugCatcher2_Text_0
 	release
 	end
 
 
-Route6_Remove_Pika::
-	checktrainerflag TRAINER_RED
-	goto_if 1, Route6_Remove_Pika_1
-	return
+Route6_EventScript_ChooseMonRand::
+	random 3
+	switch VAR_RESULT
+	case 0, Route6_EventScript_ChooseMonRand_3
+	case 1, Route6_EventScript_ChooseMonRand_4
+Route6_EventScript_ChooseMonRand_1:
+	end
 
-Route6_Remove_Pika_1:
-	removeobject 2
-	return
+Route6_EventScript_ChooseMonRand_3:
+	call Route6_EventScript_Butterfree
+	goto Route6_EventScript_ChooseMonRand_1
+
+Route6_EventScript_ChooseMonRand_4:
+	call Route6_EventScript_Beedrill
+	goto Route6_EventScript_ChooseMonRand_1
 
 
-Mewtwo_Text_0:
-	.string "{PLAYER}: Huh? I can have it ?$"
+Route6_EventScript_Butterfree::
+	playmoncry SPECIES_BUTTERFREE, CRY_MODE_ENCOUNTER
+	waitmoncry
+	setwildbattle SPECIES_BUTTERFREE, 65
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_eq Route6_EventScript_Butterfree_2
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq Route6_EventScript_Butterfree_3
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq Route6_EventScript_Butterfree_4
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq Route6_EventScript_Butterfree_5
+Route6_EventScript_Butterfree_1:
+	end
 
-GiveMewtwo_Text_0:
-	.string "You received a POKéMON!$"
+Route6_EventScript_Butterfree_2:
+	setflag FLAG_TEMP_1
+	applymovement 2, Route6_Move_BugCatcher
+	waitmovement 0
+	msgbox Route6_Text_BugCatcher2_Text_0
+	release
+	goto Route6_EventScript_Butterfree_1
 
-GiveMewtwo_Text_1:
-	.string "You received a POKéMON!\p"
-	.string "It was sent to the PC.$"
+Route6_EventScript_Butterfree_3:
+	setflag FLAG_TEMP_1
+	applymovement 2, Route6_Move_BugCatcher
+	waitmovement 0
+	msgbox Route6_Text_BugCatcher2_Text_0
+	release
+	goto Route6_EventScript_Butterfree_1
 
-Route6_Text_Pika_Text_0:
-	.string "Pika! Pi-piii!\p"
-	.string "{PLAYER}: This bastard look tough...\n"
-	.string "I'm in deep shit...$"
+Route6_EventScript_Butterfree_4:
+	setflag FLAG_TEMP_1
+	applymovement 2, Route6_Move_BugCatcher
+	waitmovement 0
+	msgbox Route6_EventScript_Butterfree_Text_0
+	release
+	goto Route6_EventScript_Butterfree_1
 
-Red_Intro::
-	.string "...................\p!!!$"
+Route6_EventScript_Butterfree_5:
+	setflag FLAG_TEMP_1
+	applymovement 2, Route6_Move_BugCatcher
+	waitmovement 0
+	msgbox Route6_EventScript_Butterfree_Text_0
+	release
+	goto Route6_EventScript_Butterfree_1
 
-Red_Outro::
-	.string "?!$"
 
-PostbattleRed::
-	.string "..........................$"
+Route6_EventScript_Beedrill::
+	playmoncry SPECIES_BEEDRILL, CRY_MODE_ENCOUNTER
+	waitmoncry
+	setwildbattle SPECIES_BEEDRILL, 65
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_eq Route6_EventScript_Beedrill_2
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq Route6_EventScript_Beedrill_3
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq Route6_EventScript_Beedrill_4
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq Route6_EventScript_Beedrill_5
+Route6_EventScript_Beedrill_1:
+	end
+
+Route6_EventScript_Beedrill_2:
+	setflag FLAG_TEMP_1
+	applymovement 2, Route6_Move_BugCatcher
+	waitmovement 0
+	msgbox Route6_Text_BugCatcher2_Text_0
+	release
+	goto Route6_EventScript_Beedrill_1
+
+Route6_EventScript_Beedrill_3:
+	setflag FLAG_TEMP_1
+	applymovement 2, Route6_Move_BugCatcher
+	waitmovement 0
+	msgbox Route6_Text_BugCatcher2_Text_0
+	release
+	goto Route6_EventScript_Beedrill_1
+
+Route6_EventScript_Beedrill_4:
+	setflag FLAG_TEMP_1
+	applymovement 2, Route6_Move_BugCatcher
+	waitmovement 0
+	msgbox Route6_EventScript_Butterfree_Text_0
+	release
+	goto Route6_EventScript_Beedrill_1
+
+Route6_EventScript_Beedrill_5:
+	setflag FLAG_TEMP_1
+	applymovement 2, Route6_Move_BugCatcher
+	waitmovement 0
+	msgbox Route6_EventScript_Butterfree_Text_0
+	release
+	goto Route6_EventScript_Beedrill_1
+
+
+Route6_Move_BugCatcher:
+	face_player
+	step_end
+
+Route6_Text_Camper::
+	trainerbattle_single TRAINER_ABIGAIL_3, Route6_Text_Camper_Text_0, Route6_Text_Camper_Text_1
+	msgbox Route6_Text_Camper_Text_2, MSGBOX_AUTOCLOSE
+	end
+
+
+Route6_Text_Picnicker::
+	trainerbattle_single TRAINER_ABIGAIL_4, Route6_Text_Picnicker_Text_0, Route6_Text_Picnicker_Text_1
+	msgbox Route6_Text_Picnicker_Text_2, MSGBOX_AUTOCLOSE
+	end
+
+
+Route6_Text_UndergroundSign::
+	lock
+	msgbox Route6_Text_UndergroundSign_Text_0
+	release
+	end
+
+
+Route6_Text_Fisherman::
+	lock
+	faceplayer
+	msgbox Route6_Text_Fisherman_Text_0
+	release
+	end
+
+
+Route6_Text_Door_Text_0:
+	.string "The UNDERGROUND is close until further\n"
+	.string "notice. Thanks.$"
+
+Route6_Text_BugCatcher1_Text_0:
+	.string "hey ! Wanna see some bugs ?$"
+
+Route6_Text_BugCatcher1_Text_1:
+	.string "Oh wow !$"
+
+Route6_Text_BugCatcher1_Text_2:
+	.string "I'm trying to find something good\n"
+	.string "that's not a BUG POKéMON, but...$"
+
+Route6_Text_BugCatcher2_Text_0:
+	.string "Thanks you ! I will be careful now !$"
+
+Route6_Text_BugCatcher2_Text_1:
+	.string "Oh no some POKéMON is running after me !\n"
+	.string "HELP !$"
+
+Route6_EventScript_Butterfree_Text_0:
+	.string "Well, at least it leave me alone !$"
+
+Route6_Text_Camper_Text_0:
+	.string "I eat a lot of vitamins.\nIt makes me strong !$"
+
+Route6_Text_Camper_Text_1:
+	.string "Seems like it's not enough...$"
+
+Route6_Text_Camper_Text_2:
+	.string "I should bring more POKéMON with\n"
+	.string "me. I'll feel safer that way.$"
+
+Route6_Text_Picnicker_Text_0:
+	.string "You look weak.\nI'll beat you !$"
+
+Route6_Text_Picnicker_Text_1:
+	.string "Oh wait don't hit me !$"
+
+Route6_Text_Picnicker_Text_2:
+	.string "I want to get stronger.\n"
+	.string "What's your secret ?$"
+
+Route6_Text_UndergroundSign_Text_0:
+	.string "UNDERGROUND PATH\n"
+	.string "CERULEAN CITY - VERMILION CITY$"
+
+Route6_Text_Fisherman_Text_0:
+	.string "Oh yeah I'm fishing.\p"
+	.string "What you thought I had something more\n"
+	.string "interesting to say ? I have a proper\l"
+	.string "life, I'm not a random NPC !$"

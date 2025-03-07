@@ -1383,3 +1383,126 @@ SlateportCity_Text_TakingBattleTentChallenge:
 	.string "After all, a tough TRAINER is\n"
 	.string "the perfect fit for the BATTLE TENT!\p"
 	.string "Give it your best effort!$"
+
+SlateportCity_Text_SchoolBoyM::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_SchoolBoyM_Text_0
+	release
+	end
+
+
+SlateportCity_Text_Fisherman::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_Fisherman_Text_0
+	release
+	end
+
+
+SlateportCity_Text_OldWomanTeacher::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_OldWomanTeacher_Text_0
+	release
+	end
+
+
+SlateportCity_Text_Girl::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_Girl_Text_0
+	release
+	end
+
+
+SlateportCity_Text_Artist::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_Artist_Text_0
+	release
+	end
+
+
+SlateportCity_Text_DevonMan::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_DevonMan_Text_0
+	release
+	end
+
+
+SlateportCity_Text_Sailor::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_Sailor_Text_0
+	release
+	end
+
+
+SlateportCity_Text_Boy::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_Boy_Text_0
+	release
+	end
+
+
+SlateportCity_Text_LittleGirl::
+	lock
+	msgbox SlateportCity_Text_LittleGirl_Text_0
+	playmoncry SPECIES_AZURILL, CRY_MODE_NORMAL
+	waitmoncry
+	msgbox SlateportCity_Text_LittleGirl_Text_1
+	release
+	end
+
+
+SlateportCity_Text_SchoolBoyM_Text_0:
+	.string "I wish one day I'll be able to swim on my\n"
+	.string "POKéMON back and move in some tropical\l"
+	.string "place.$"
+
+SlateportCity_Text_Fisherman_Text_0:
+	.string "My fishes are fresh from the morning,\n"
+	.string "every morning ! I have TUNA, SALMONS\l"
+	.string "and all !\p"
+	.string "{PLAYER} : TUNA ? What is that$"
+
+SlateportCity_Text_OldWomanTeacher_Text_0:
+	.string "Here is SLATEPORT CITY SCHOOL.\n"
+	.string "Looking at you, I don't think you need\l"
+	.string "basics teachings.$"
+
+SlateportCity_Text_Girl_Text_0:
+	.string "You know that this SHIPYARD is famous\n"
+	.string "even in KANTO and JOHTO ? We can\l"
+	.string "thanks CAPT. STERN for that !$"
+
+SlateportCity_Text_Artist_Text_0:
+	.string "I sell paintings for those who can truly\n"
+	.string "recognize my creativity. I don't think\l"
+	.string "you can. Youu don't have that.. SPARK in\l"
+	.string "your eyes.$"
+
+SlateportCity_Text_DevonMan_Text_0:
+	.string "I'm here for an errand. But there are\n"
+	.string "too much stalls on this MARKET. And I\l"
+	.string "don't remember what I had to buy...$"
+
+SlateportCity_Text_Sailor_Text_0:
+	.string "These DOCKS are restricted. You know\n"
+	.string "that it's here that we SAILORS sail\l"
+	.string "from REGION to REGION ?$"
+
+SlateportCity_Text_Boy_Text_0:
+	.string "There is a small LABORATORY somewhere\n"
+	.string "here. I heard they update you POKéDEX.\l"
+	.string "I don't have one so I'm not sure...$"
+
+SlateportCity_Text_LittleGirl_Text_0:
+	.string "One day we will swim throught the\n"
+	.string "currents !$"
+
+SlateportCity_Text_LittleGirl_Text_1:
+	.string "Ri-rill !$"

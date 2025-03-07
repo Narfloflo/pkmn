@@ -1,0 +1,94 @@
+raw`rustboroSewer_MapScripts::
+	.byte 0
+`
+script RustoboroSewer_Text_Policeman {
+    lock
+    faceplayer
+    msgbox(format("Be careful out there. Some wilds POKéMON won't hesitate to attack you, even if there are people working there."))
+    release
+    end
+}
+
+script RustoboroSewer_Text_Rattata1 {
+    lock
+    faceplayer
+    playmoncry(SPECIES_RATTATA, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox(format("Tattta!"))
+    setwildbattle(SPECIES_RATTATA, 15)
+    dowildbattle
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+		removeobject(9)
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_WON){
+		removeobject(9)
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_RAN){
+		removeobject(9)
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_PLAYER_TELEPORTED){
+		removeobject(9)
+	}
+	return
+}
+
+script RustoboroSewer_Text_Rattata2 {
+    lock
+    faceplayer
+    playmoncry(SPECIES_RATTATA, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox(format("Tattta!"))
+    setwildbattle(SPECIES_RATTATA, 15)
+    dowildbattle
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+		removeobject(8)
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_WON){
+		removeobject(8)
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_RAN){
+		removeobject(8)
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_PLAYER_TELEPORTED){
+		removeobject(8)
+	}
+	return
+}
+
+script RustoboroSewer_Text_Scientist {
+    lock
+    faceplayer
+    msgbox(format("Hey, we are cleaning the water here. Some wilds POKéMON are running around, but some TRAINERS are around and keep us safe."))
+    release
+    end
+}
+
+script RustoboroSewer_Text_Worker {
+    lock
+    faceplayer
+    msgbox(format("Sometimes there are some GRIMER in the water, and that's a good indicator of the quality of water."))
+    release
+    end
+}
+
+script RustoboroSewer_Text_Hiker {
+    lock
+    faceplayer
+    msgbox(format("My team of MACHOP can crush every RATTATA around there. The city is paying me a few bucks to protect the cleaning team out there."))
+    release
+    end
+}
+
+script RustoboroSewer_Text_SchoolBoy {
+    lock
+    faceplayer
+    msgbox(format("I went to the sewer to train my team, but they all fainted... I need to move to the POKéMON CENTER, but every step is a nightmare! I get attacked everytime!"))
+    release
+    end
+}

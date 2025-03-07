@@ -1,1 +1,97 @@
 mapscripts Deford_Multiple_Houses_MapScripts {}
+
+script Dewford_MultipleHouse_Text_WingullGirl {
+    lock
+    faceplayer
+    msgbox(format("The WINGULLS invades my house!\nI'm too afraid to move and\lmyparents are outside...\l{PLAYER}: I'm sorry for you. Too\lbad I don't have a POKéMON to\ldefeat them right?"))
+    release
+    end
+}
+
+script Dewford_MultipleHouse_Text_Camper {
+    lock
+    faceplayer
+    msgbox(format("You know DEWFORD is very famous\nfor the fighting GYM?\lThere is a training ground where\leverybody trained westward!\lWhy don't you check that place?"))
+    release
+    end
+}
+
+script Dewford_MultipleHouse_Text_Fisherman {
+    lock
+    faceplayer
+    msgbox(format("My brother spent his time looking\nfor the best place to camp.\lHe found that the training grounds\lare a good place, so we move in\lDEWFORD."))
+    release
+    end
+}
+
+script Dewford_MultipleHouse_Text_Man {
+    lock
+    faceplayer
+    msgbox(format("I'm afraid the kids outside are\nplotting something nasty!\lWait! Who told you to come in my\lhouse?!"))
+    release
+    end
+}
+
+script Dewford_MultipleHouse_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("My sister came from LAVARIDGE to\nsee us.\lBut she and my wife turned me into\la dishwasher!\lBack in my day...\lGrumbl..!"))
+    release
+    end
+}
+
+script Dewford_MultipleHouse_Text_OldWoman {
+    lock
+    faceplayer
+    msgbox(format("My husband asked me to prepare a\ndish. I said ok but he had to wash\lafter that.\lNow he is pissed.\lWhat a kid!"))
+    release
+    end
+}
+
+script Dewford_MultipleHouse_Text_WarriorF {
+    lock
+    faceplayer
+    msgbox(format("I came to see my brother and his\nwife, but I'm in the middle of a\lfight.\lI just wanted to show him the EGG\lI got in LAVARIDGE...\lBut hey! With all that wrath, the\lEGG is gonna natch soon!"))
+    release
+    end
+}
+
+script Dewford_MultipleHouse_Text_Ninja {
+    lock
+    faceplayer
+    msgbox(format("Sorry, but here is my secret\nplace!\lI can't let you in pal!"))
+    release
+    end
+}
+
+script Dewford_MultipleHouse_Text_Artist {
+    lock
+    faceplayer
+    msgbox(format("I'm supposed to watch this kid but\nI think he locked a POKéMON behind\lthe door, but I'm too scare to do\lsomething! Look at his face!!"))
+    release
+    end
+}
+
+script Dewford_MultipleHouse_Text_Boy {
+    lock
+    faceplayer
+    msgbox(format("My parents went to the sea to\ncatch some fishes.\lBut they aren't back..."))
+    release
+    end
+}
+
+script Dewford_MultipleHouse_Text_LittleBoy {
+    lock
+    faceplayer
+    msgbox(format("Yeah! Our parents aren't home!\nI'm gonna be on the beach everyday\leating ice cream!"))
+    release
+    end
+}
+
+script Dewford_MultipleHouse_Text_LittleGirl {
+    lock
+    faceplayer
+    msgbox(format("I'm scared because our parents\naren't back home yet. I hope\lnothing happened to them..."))
+    release
+    end
+}

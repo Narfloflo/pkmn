@@ -1,0 +1,6 @@
+mapscripts MahoganyToRoute43_MapScripts {}
+
+script MahoganyToRoute43_Text_Policeman {
+    msgbox("LAKE of RAGE is quite famous.\nIt is said that it used to be a city,\lbut a GYARADOS rampaged the place.", MSGBOX_NPC)
+    end
+}

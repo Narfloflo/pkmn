@@ -1,0 +1,20 @@
+mapscripts LavaridgeResto_MapScripts {}
+
+script LavaridgeRest_Text_Vendor{
+    lock
+    faceplayer
+	message(format("Oh a kid ! No booze for you."))
+	waitmessage
+	pokemart(LavaridgeRest_RestoPubItems)
+	msgbox("Don't forget to drink with moderation.")
+	release
+}
+
+mart LavaridgeRest_RestoPubItems {
+    ITEM_SANDWICH
+	ITEM_SODA_POP
+	ITEM_LEMONADE
+	ITEM_MOOMOO_MILK
+	ITEM_FRESH_WATER
+    ITEM_LAVA_COOKIE
+}

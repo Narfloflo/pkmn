@@ -1,0 +1,52 @@
+mapscripts PetalburgResto_MapScripts {}
+
+script PetalburgResto_Text_Man {
+    lock
+    faceplayer
+    msgbox(format("I'm drinking my troubles... Get lost !"))
+    applymovement(8, PetalburgResto_Man_Mouvement)
+    waitmovement(0)
+    release
+    return
+}
+
+movement PetalburgResto_Man_Mouvement{
+    face_right
+}
+
+script PetalburgResto_Text_Miner {
+    lock
+    faceplayer
+    msgbox(format("I love having a big plate of\nspaghetti after a long day in the\lmine!"))
+    applymovement(4, PetalburgResto_Man_Mouvement)
+    waitmovement(0)
+    release
+    return
+}
+
+script PetalburgResto_Text_OldWoman {
+    lock
+    faceplayer
+    msgbox(format("You know there is several places\nlike this in all the other cities.\lYou can also find some restaurants\lin the various routes of HOENN.\lKeep your eyes opened kid!"))
+    release
+    return
+}
+
+script PetalburgResto_Text_Vendor{
+    lock
+    faceplayer
+	message(format("Oh a kid ! No booze for you."))
+	waitmessage
+	pokemart(PetalburgResto_PubItems)
+	msgbox("Don't forget to drink with moderation.")
+	release
+}
+
+mart PetalburgResto_PubItems {
+    ITEM_BERRY_JUICE
+	ITEM_SODA_POP
+	ITEM_LEMONADE
+	ITEM_MOOMOO_MILK
+	ITEM_FRESH_WATER
+    ITEM_LAVA_COOKIE
+}

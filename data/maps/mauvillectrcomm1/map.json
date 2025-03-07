@@ -2,7 +2,7 @@
   "id": "MAP_MAUVILLECTRCOMM1",
   "name": "mauvillectrcomm1",
   "layout": "LAYOUT_MAUVILLECTRCOMM1",
-  "music": "MUS_WEATHER_GROUDON",
+  "music": "MUS_B_FACTORY",
   "region_map_section": "MAPSEC_MAUVILLE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "MauvilleUnderground_Text_Roberto",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "MauvilleUnderground_Text_Worker2",
       "flag": "0"
     },
     {
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "MauvilleUnderground_Text_Worker",
       "flag": "0"
     },
     {
@@ -63,7 +63,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "MauvilleUnderground_Text_Roberta",
       "flag": "0"
     },
     {
@@ -76,7 +76,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "MauvilleUnderground_Text_ScientistF",
       "flag": "0"
     },
     {
@@ -89,7 +89,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "MauvilleUnderground_Text_ScientistM",
       "flag": "0"
     },
     {
@@ -130,6 +130,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
       "flag": "FLAG_TEMP_13"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MACHOP",
+      "x": 23,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MauvilleUnderground_Text_Machop",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -141,18 +154,11 @@
       "dest_warp_id": "7"
     },
     {
-      "x": 14,
-      "y": 17,
-      "elevation": 0,
-      "dest_map": "MAP_MAUVILLECTRCOMM2",
-      "dest_warp_id": "0"
-    },
-    {
       "x": 2,
       "y": 37,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE110",
-      "dest_warp_id": "6"
+      "dest_map": "MAP_ROUTE117JUNCTION103",
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [

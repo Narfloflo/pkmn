@@ -1,0 +1,152 @@
+raw`HoennAirport_MapScripts::
+	.byte 0
+`
+
+script HoennAirport_Text_AirportSign {
+    lock
+    msgbox(format("HOENN AIRPORT\pABRA TELEPORTER SERVICE will take you to any place!"))
+    release
+    end
+}
+
+script HoennAirport_Text_HotelSign {
+    lock
+    msgbox(format("AIRPORT HOTEL\p One of the best place in HOENN!"))
+    release
+    end
+}
+
+script HoennAirport_Text_BusDriver {
+    lock
+    faceplayer
+    msgbox(format("I'm driving buses all around\nHOENN for the people who are not\lTRAINER.\l..............................\lWhat you haven't seen any of\lthose bus anywhere? Well, I'm\lvery busy! Scram!"))
+    release
+    end
+}
+
+script HoennAirport_Text_ShipReceptionist {
+    lock
+    faceplayer
+    if(flag(FLAG_CAUGHT_MEW)==TRUE){
+        goto(HoennAirport_Text_MewCaught)
+    }
+    checkitem(ITEM_OLD_SEA_MAP, 1)
+    if(var(VAR_RESULT)==1){
+        msgbox(format("Oh my ARCEUS! This is the OLD SEA MAP ?! Please come in !"))
+        applymovement(4, HoennAirport_Move_Sailor)
+        waitmovement(4)
+        delay(15)
+        applymovement(OBJ_EVENT_ID_PLAYER, HoennAirport_Move_Player)
+        waitmovement(0)
+        call(HoennAirport_Text_MoveBoat)
+    }
+    msgbox(format("Hello!\p......................\nHuh, I don't think you have a TICKET for using the SHIP. Sorry."))
+    release
+    end
+}
+
+movement HoennAirport_Move_Sailor {
+    walk_down
+    set_invisible
+    step_end
+}
+
+movement HoennAirport_Move_Player {
+    walk_down *2
+    set_invisible
+    step_end
+}
+
+script HoennAirport_Text_MoveBoat {
+    fadescreen(FADE_TO_BLACK)
+    playse(SE_RG_SS_ANNE_HORN)
+    delay(60)
+    warp(MAP_FARAWAY_ISLAND_ENTRANCE, 13, 38)
+    fadescreen(FADE_FROM_BLACK)
+}
+
+    script HoennAirport_Text_MewCaught {
+    lock
+    faceplayer
+    msgbox(format("What a trip we had, right ?"))
+    release
+    end
+    }
+    
+
+script HoennAirport_Text_Judge{
+    lock
+    faceplayer
+    msgbox(format("I love the fact that even if the HOTEL is close to the AIRPORT STATION we are not disturbed by any plane."))
+    release
+    end
+}
+
+script HoennAirport_Text_Sailor{
+    lock
+    faceplayer
+    msgbox(format("Yet another great day to ship !"))
+    release
+    end
+}
+
+script HoennAirport_Text_PokefanF{
+    lock
+    faceplayer
+    msgbox(format("I hope the BUS can take us to LILYCOVE CITY. I want to see a contest !"))
+    release
+    end
+}
+
+script HoennAirport_Text_Beauty3{
+    lock
+    faceplayer
+    msgbox(format("I came here but I don't know what to do...\nIs there a SPA or something ?"))
+    release
+    end
+}
+
+script HoennAirport_Text_Salaryman{
+    lock
+    faceplayer
+    msgbox(format("What's the best way to go to RUSTOBORO CITY ? Going through a tunnel in a mountain ? Arf !"))
+    release
+    end
+}
+
+script HoennAirport_Text_Man{
+    lock
+    faceplayer
+    msgbox(format("There is a kid here, she's unsupervised.\nI'm sure her parents are going to take her back."))
+    release
+    end
+}
+
+script HoennAirport_Text_LittleGirl{
+    lock
+    faceplayer
+    msgbox(format("I think my dad left me here...\pNevermind, I don't want to see his wife ever again !\nPlus the HOTEL gave me free stuff."))
+    release
+    end
+}
+
+script HoennAirport_Text_BusDriver2{ 
+    lock
+    faceplayer
+        msgbox("Hi, I can bring you to the BEACH\nRESORT.\lDo you wanna take the bus?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) ==1){
+            msgbox("Please, come in !")
+            call(HoennAirport_Event_WarpToAirport)
+        } else{
+            msgbox("Another time then !")
+        } 
+    release
+    end
+}
+ 
+ script HoennAirport_Event_WarpToAirport{
+    fadescreen(FADE_TO_BLACK)
+    delay(5)
+    warp(MAP_BEACH_SIDE, 14, 22)
+    fadescreen(FADE_FROM_BLACK)
+ }

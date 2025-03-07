@@ -105,3 +105,10 @@ Route111_WinstrateFamilysHouse_Text_GrandsonStrongShort:
 	.string "Knowing my grandson, he could be the\n"
 	.string "CHAMPION already!$"
 
+Route111InsideHouse_Text_Camper::
+	msgbox Route111InsideHouse_Text_Camper_Text_0, MSGBOX_NPC
+	end
+
+
+Route111InsideHouse_Text_Camper_Text_0:
+	.string "Oh boy!\nYou know who my neighbors are?\lThe bloody WINSTRATE Family!\lI can't stand them, beating the shit\lout of me everytime!$"

@@ -1,0 +1,19 @@
+mapscripts Route19_MapScripts {}
+
+script Route19_Text_Picnicker {
+    trainerbattle_single(TRAINER_TONY_2, "I didn't took my swimsuit...", "Oupsss !")
+    msgbox(format("I wanted to go to SEAFOAM ISLANDS but none of my POKéMON know how to SURF and I don't have a swimsuit either. Do you think you can accompagne me there ? No ? Too bad..."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route19_Text_SwimmerM {
+    trainerbattle_single(TRAINER_TONY_3, "One more lap and I'm done.", "Glummbl...")
+    msgbox(format("I'm training myself for the GYM of CERULEAN CITY. MISTY is really crazy about swimming."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route19_Text_SwimmerF {
+    trainerbattle_single(TRAINER_TONY_4, "The water is cold around here don't you think ?", "Attchewww !")
+    msgbox(format("The SEAFOAM ISLANDS are just ahead. It's full of ICE POKéMON."), MSGBOX_AUTOCLOSE)
+    end
+}

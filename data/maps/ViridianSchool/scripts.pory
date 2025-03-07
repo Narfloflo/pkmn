@@ -1,0 +1,46 @@
+mapscripts ViridianSchool_MapScripts {}
+
+
+script ViridianSchool_Text_Lass {
+    msgbox("Pfouh! I'm trying to learn my lessons.", MSGBOX_NPC)
+    end
+}
+
+script ViridianSchool_Text_Teacher {
+    msgbox("Alright!\nYou need to read carefully the board\lbefore leaving!\lHuh?\lSorry, you looked like a rookie\lTRAINER, but looks like I was wrong...", MSGBOX_NPC)
+    end
+}
+
+script ViridianSchool_Text_Boy {
+    checkplayergender
+    goto_if_eq(VAR_RESULT, MALE, ViridianSchool_Text_BoyJealous)
+    goto_if_eq(VAR_RESULT, FEMALE, ViridianSchool_Text_BoyInterested)
+    end
+}
+
+script ViridianSchool_Text_BoyInterested {
+    msgbox("Oh hello there!\nDid anybody ever told you your eyes are\lblue as a LAPRAS?", MSGBOX_NPC)
+    applymovement(5, ViridianSchool_Move_Girl)
+    waitmovement(0)
+    end
+}
+
+script ViridianSchool_Text_BoyJealous {
+    msgbox("Hey you!\nDon't get close to my girlfriend!\lMy RATTATA will bite you to death!", MSGBOX_NPC)
+    end
+}
+
+movement ViridianSchool_Move_Girl {
+    emote_exclamation_mark
+    face_player
+}
+
+script ViridianSchool_Text_Girl {
+    msgbox("The boy on my left is soooo anoying...\nHe spend his time saying I'm his wife,\lbut everytime he see a girl, he has to\lflirt!\lI can't believe it...", MSGBOX_NPC)
+    end
+}
+
+script ViridianSchool_Text_Youngster {
+    msgbox("Tomorrow we have an exam about types\nweaknesses!\lYou can't deal with me!", MSGBOX_NPC)
+    end
+}

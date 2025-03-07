@@ -1,1 +1,200 @@
 mapscripts Rustoboro_HallTown_MapScripts {}
+
+script RustoboroHallTown_Text_Checking {
+    lock
+    if(flag(FLAG_IS_CHAMPION) == TRUE){
+       end
+    }else{
+        goto(RustoboroHallTown_Text_CheckingKO)
+    }
+    release
+    end
+}
+
+script RustoboroHallTown_Text_CheckingKO {
+    lock
+    msgbox(format("Excuse me, but you are not an authorized person."))
+    applymovement(OBJ_EVENT_ID_PLAYER, RustoboroHallTown_Move_Refuse)
+    waitmovement(0)
+    release
+    end
+}
+
+movement RustoboroHallTown_Move_Refuse {
+    walk_right
+    step_end
+}
+
+script RustoboroHallTown_Text_Reception {
+    msgbox("Welcome to RUSTOBORO CITY HALL.\nOn the left is the meeting room.\lOn the right is the waiting room and\lthe administrative wing.", MSGBOX_NPC)
+    end
+}
+script RustoboroHallTown_Text_Scientist1F {
+    msgbox("Can you believe it?\nDEVON's building is greater that the\lCity Hall!\lThe seat of power of HOENN's citizen is\lnothing compare to a big company.\lI can't believe it!", MSGBOX_NPC)
+    end
+}
+
+script RustoboroHallTown_Text_1FPolice {
+    msgbox("Please, remain calm in this area.\pGood day to you.", MSGBOX_NPC)
+    end
+}
+
+script RustoboroHallTown_Text_1FGuard {
+    lock
+    faceplayer
+    msgbox(format("This area is restricted to unauthorized person."))
+    release
+    end
+}
+
+script RustoboroHallTown_Text_2FPolice {
+    lock
+    faceplayer
+    msgbox(format("Excuse me, but I'm working. Please proceed to your occupation and leave me."))
+    release
+    end
+}
+
+script RustoboroHallTown_Text_OldWoman {
+    lock
+    faceplayer
+    if(flag(FLAG_IS_CHAMPION)){
+        msgbox(format("I've been here for so much time that I forgot were I lived... SIGH...\pBeing old is bad."))
+    } else{
+       msgbox(format("I'm suppose to have a meeting with the MAYOR, but apparently he is busy...")) 
+    }
+    release
+    end
+}
+
+script RustoboroHallTown_Text_Salaryman {
+    lock
+    faceplayer
+    msgbox(format("I think the MAYOR was a GYM LEADER, but I'm not sure..."))
+    release
+    end
+}
+
+script RustoboroHallTown_Text_Wallace {
+    goto_if_defeated(TRAINER_MOHA, RustoboroHallTown_Text_WallaceDefeated)
+    goto_if_not_defeated(TRAINER_MOHA, RustoboroHallTown_Text_WallaceUndefeated)
+}
+
+script RustoboroHallTown_Text_WallaceUndefeated {
+    goto_if_set(FLAG_DEFEATED_RUSTBORO_GYM, RustoboroHallTown_Text_WallaceYes)
+    goto_if_unset(FLAG_DEFEATED_RUSTBORO_GYM, RustoboroHallTown_Text_WallaceNo)
+}
+
+script RustoboroHallTown_Text_WallaceNo {
+    lock
+    msgbox(format("WALLACE : ...And what about the others CITIES ?..."))
+    release
+    end 
+}
+
+script RustoboroHallTown_Text_WallaceYes{
+    lock
+    faceplayer
+    msgbox(format("Oh hello {PLAYER}. I've heard about you after the SOOTOPOLIS CITY incident. It seems you are the new CHAMPION of HOENN ? I'm the former CHAMPION, then came your MOM... She beat me hard...\pAnyway, talking about this makes me want to BATTLE. Are you ready ?"),MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, RustoboroHallTown_Text_WallaceBattle)
+    goto_if_eq(VAR_RESULT, NO, RustoboroHallTown_Text_WallaceNoAnswer)
+    release
+    end 
+}
+
+script RustoboroHallTown_Text_WallaceDefeated {
+    lock
+    faceplayer
+    msgbox(format("I hope you can hatch this EGG. Some shady guy gave it to me in RHODES."))
+    release
+    end
+}
+
+script RustoboroHallTown_Text_WallaceBattle {
+   trainerbattle_single(TRAINER_MOHA, RustoboroHallTown_Text_WallaceIntro, RustoboroHallTown_Text_WallaceDefeat, RustoboroHallTown_Text_WallaceGiveEgg)
+}
+
+script RustoboroHallTown_Text_WallaceNoAnswer {
+    msgbox(format("No ? Well don't worry, I'm a bit busy anyway."))
+    release
+    end
+}
+
+text RustoboroHallTown_Text_WallaceIntro{
+    "Yeah I love this spirit !"
+}
+
+text RustoboroHallTown_Text_WallaceDefeat{
+    "Just what I expect from a CHAMPION !"
+}
+
+script RustoboroHallTown_Text_WallaceGiveEgg {
+    special(PlayerFaceTrainerAfterBattle)
+    waitmovement(0)
+    msgbox("WALLACE : I really enjoy this fight. Please have this, I don't have the time to take care of it.")
+    call(RustoboroHallTown_Text_GiveJirachi)
+    release
+    end
+}
+
+script RustoboroHallTown_Text_GiveJirachi {
+    giveegg(SPECIES_JIRACHI)
+    playfanfare(MUS_OBTAIN_ITEM)
+    if(var(MON_GIVEN_TO_PARTY)){
+        msgbox("You received an EGG!")
+        
+    }elif(var(MON_GIVEN_TO_PC)){
+        msgbox(format("You received an EGG!\pIt was sent to the PC."))
+    }
+    return
+}
+
+script RustoboroHallTown_Text_Woman {
+    lock
+    faceplayer
+    msgbox(format("My report concern the FAUNA in HOENN, and specifically the water POKéMON."))
+    release
+    end
+}
+
+script RustoboroHallTown_Text_ScientistF {
+    lock
+    faceplayer
+    msgbox(format("You know there are a lot of SCIENTIST all around the REGION, but we are not slacking around like PROF. BIRCH does !\pWe actually write reports and don't charges kids some errands..."))
+    release
+    end
+}
+
+script RustoboroHallTown_Text_OldMan {
+    if(flag(FLAG_DEFEATED_SOOTOPOLIS_GYM)== TRUE){
+        lock
+        faceplayer
+        msgbox(format("Now that the incident with the LEGENDARY POKéMON is closed we can talk about business again !"))
+        release
+        end
+    }else{
+    lock
+    faceplayer
+    msgbox(format("Kid, we are in the middle of an important discussion involving DEVON !"))
+    release
+    end 
+    }
+    
+}
+
+script RustoboroHallTown_Text_Gentleman {
+    lock
+    faceplayer
+    msgbox(format("The MAYOR always have the best advices regarding HOENN interests !"))
+    release
+    end
+}
+
+script RustoboroHallTown_Text_Azumarill {
+    lock
+    faceplayer
+    playmoncry(SPECIES_AZUMARILL, CRY_MODE_NORMAL)
+    msgbox(format("Azu-zuu !\n{PLAYER} : Yeah I know the HUMAN WORLD is boring..."))
+    release
+    end
+}

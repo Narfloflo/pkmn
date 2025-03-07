@@ -1,0 +1,46 @@
+mapscripts Route20_MapScripts {}
+
+script Route20_Text_Picnicker {
+    trainerbattle_single(TRAINER_NOB_2, "I'm planning to have a little snack around here.\nWanna join me ?", "We were supposed to eat !!")
+    msgbox(format("My lunch is a mess because of you... Thanks !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route20_Text_Camper {
+    trainerbattle_single(TRAINER_NOB_3, "My girlfriend is somewhere else. But I have to\ncross the SEAFOAM ISLANDS", "Brrrr... It's so cold here !")
+    msgbox(format("I lost because I was cold and I couldn't focus."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route20_Text_Swimmer1 {
+    trainerbattle_single(TRAINER_NOB_4, "I swim every morning to train my body !", "Oh ! A cramp !")
+    msgbox(format("I should've been buffing up my POKéMON, not me !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route20_Text_Swimmer2 {
+    trainerbattle_single(TRAINER_KOJI_2, "Oh oh ! You're approaching me ?", "I'm drowning now !")
+    msgbox(format("SEAFOAM used to be one Island !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route20_Text_Fisherman {
+    if(flag(FLAG_TEMP_1)== TRUE){
+        lock
+        faceplayer
+        msgbox(format("I doesn't matter if I lost. With the power of friendship I'll be the best fisherman ever !"),MSGBOX_AUTOCLOSE)
+        release
+        end
+    }else{
+        goto(Route20_Text_FishermanFight)
+    }
+    release
+    end
+}
+
+script Route20_Text_FishermanFight {
+    trainerbattle_single(TRAINER_DYLAN_2, "I got a beautiful POKéMON.\nWanna see it ?", "NIGERUNDAYOOOO !")
+    setflag(FLAG_TEMP_1)
+    cleartrainerflag(TRAINER_DYLAN_2)
+    end
+}

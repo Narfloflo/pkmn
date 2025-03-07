@@ -70,3 +70,9 @@ script Schools_Text_StudentM2 {
     release
     end
 }
+
+script Schools101_Text_Girl {
+    lock
+    msgbox("You know, some POKéMON only appear at\nnight!\lSo you better keep your eyes opened if\lyou wanna catch them all!", MSGBOX_NPC)
+    end
+}

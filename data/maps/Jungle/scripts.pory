@@ -1,0 +1,38 @@
+mapscripts Jungle_MapScripts {}
+
+script Jungle_Text_RangerF {
+    trainerbattle_single(TRAINER_BROOKE_2, "Hey you ! I hope you are not a poacher !", "I think I mistake you...")
+    msgbox(format("We rangers have to keep an eye on the poachers and every person who want to be really bad with POKéMON."), MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Jungle_Text_BugCatcher {
+    trainerbattle_single(TRAINER_BROOKE_3, "The JUNGLE is a good place to train POKéMON.", "Gassssp... !")
+    msgbox(format("I think I need to keep training."), MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Jungle_Text_Scientist {
+    lock
+    faceplayer
+    msgbox(format("I'm studying the POKéMON around here. Oh you have a POKéDEX ? So you are a scientist like me in a way ? It's good to see young ones interested in the scientific field of work."))
+    release
+    end
+}
+
+script Jungle_Text_RangerM {
+    trainerbattle_single(TRAINER_BROOKE_4, "Are you here to mistreat wild POKéMON ?", "Hummm... You're not bad.")
+    msgbox(format("We rangers have to keep an eye on the poachers and every person who want to be really bad with POKéMON."), MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Jungle_Text_BugManiac {
+    lock
+    faceplayer
+    msgbox(format("I'm looking for BUGS, so please\nstop disturbing me!"))
+    release
+    end
+}

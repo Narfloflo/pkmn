@@ -1,0 +1,11 @@
+mapscripts NewMap2_MapScripts {}
+
+script HoennRanch_Text_Sign {
+    msgbox("HOENN's RANCH\nThe very best of MILK!", MSGBOX_SIGN)
+    end
+}
+
+script HoennRanch_Text_Farmer {
+    msgbox("Oh a visitor!\nWelcome to our dairy!\lYou came to see our MILTANKS?", MSGBOX_NPC)
+    end
+}

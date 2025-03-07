@@ -317,3 +317,62 @@ SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons:
 	.string "I wish that you would return with\n"
 	.string "two, perhaps more, POKéMON, please.$"
 
+Sootopolis_Gym_Text_RematchGuy::
+	lock
+	faceplayer
+	msgbox Sootopolis_Gym_Text_RematchGuy_Text_0
+	goto_if_set FLAG_DEFEATED_SOOTOPOLIS_GYM, Sootopolis_Gym_Text_RematchGuy_2
+	msgbox Sootopolis_Gym_Text_RematchGuy_Text_1
+Sootopolis_Gym_Text_RematchGuy_1:
+	release
+	end
+
+Sootopolis_Gym_Text_RematchGuy_2:
+	goto Sootopolis_Gym_Text_RematchGuyYesNo
+	goto Sootopolis_Gym_Text_RematchGuy_1
+
+
+Sootopolis_Gym_Text_RematchGuyYesNo::
+	msgbox Sootopolis_Gym_Text_RematchGuyYesNo_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq Sootopolis_Gym_Text_RematchGuyYesNo_1
+	msgbox Sootopolis_Gym_Text_RematchGuyYesNo_Text_1
+	release
+	end
+
+Sootopolis_Gym_Text_RematchGuyYesNo_1:
+	cleartrainerflag TRAINER_CRISSY
+	cleartrainerflag TRAINER_TIFFANY
+	cleartrainerflag TRAINER_BETHANY
+	cleartrainerflag TRAINER_OLIVIA
+	cleartrainerflag TRAINER_BRIDGET
+	cleartrainerflag TRAINER_BRIANNA
+	cleartrainerflag TRAINER_DAPHNE
+	cleartrainerflag TRAINER_ANNIKA
+	cleartrainerflag TRAINER_ANDREA
+	cleartrainerflag TRAINER_CONNIE
+	fadescreen FADE_TO_BLACK
+	playse SE_SUCCESS
+	delay 60
+	warp MAP_SOOTOPOLIS_CITY_GYM_1F, 8, 25
+	fadescreen FADE_FROM_BLACK
+	release
+	end
+
+
+Sootopolis_Gym_Text_RematchGuy_Text_0:
+	.string "Hello, I'm the Rematch Man, I can ask all\n"
+	.string "the TRAINERS of the GYM to rematch\l"
+	.string "you if you want.$"
+
+Sootopolis_Gym_Text_RematchGuy_Text_1:
+	.string "Hummmm. Get the BADGE first and come to\n"
+	.string "see me after will you ?$"
+
+Sootopolis_Gym_Text_RematchGuyYesNo_Text_0:
+	.string "So {PLAYER}, should I ask the\n"
+	.string "TRAINERS to have a rematch with you ?$"
+
+Sootopolis_Gym_Text_RematchGuyYesNo_Text_1:
+	.string "Well I'm not moving if you change your\n"
+	.string "mind !$"

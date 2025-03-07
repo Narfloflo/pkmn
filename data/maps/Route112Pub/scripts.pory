@@ -1,0 +1,40 @@
+mapscripts Route112Pub_MapScripts {}
+
+script Route112_Pub_Text_Vendor{
+    lock
+    faceplayer
+	message(format("Oh a kid ! No booze for you."))
+	waitmessage
+	pokemart(Route112PubItems)
+	msgbox("Don't forget to drink with moderation.")
+	release
+}
+
+mart Route112PubItems {
+    ITEM_BERRY_JUICE
+	ITEM_SODA_POP
+	ITEM_LEMONADE
+	ITEM_MOOMOO_MILK
+	ITEM_FRESH_WATER
+    ITEM_LAVA_COOKIE
+}
+
+script Route11_Pub_Text_Picnicker {
+    msgbox("Wow that's really hot!\nMy NUMEL is having trouble eating this!", MSGBOX_NPC)
+    end
+}
+
+script Route11_Pub_Text_Camper {
+    msgbox("You know that you can't run into\nLAVARIDGE like that?\lIf you wanna go inside, you need to go\lontop of MT. CHIMNEY. And if you wanna\lgo outside, you need to take a cave.", MSGBOX_NPC)
+    end
+}
+
+script Route11_Pub_Text_Numel {
+	lock
+	faceplayer
+	playmoncry(SPECIES_NUMEL, CRY_MODE_NORMAL)
+	waitmoncry
+	msgbox("Melllo!\p{PLAYER}: I've never seen a POKémON\nstuffing so much spice sauce in its\lmouth!", MSGBOX_DEFAULT)
+	release
+	end
+}

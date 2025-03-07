@@ -1,0 +1,55 @@
+mapscripts Blackthorne_MapScripts {}
+
+script Blackthorne_Text_Vendor {
+        lock
+    faceplayer
+	msgbox(format("Welcome!\p How may I serve you?"))
+	waitmessage
+	pokemart(Blackthorne_MartItems)
+	msgbox("Please come again!")
+	release
+    end
+}
+
+mart Blackthorne_MartItems {
+    ITEM_GREAT_BALL
+    ITEM_ULTRA_BALL
+	ITEM_SUPER_POTION
+	ITEM_HYPER_POTION
+    ITEM_MAX_POTION
+    ITEM_FULL_RESTORE
+	ITEM_REVIVE
+    ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+    ITEM_ICE_HEAL
+    ITEM_BURN_HEAL
+    ITEM_ESCAPE_ROPE
+    ITEM_SUPER_REPEL
+    ITEM_MAX_REPEL
+}
+
+script BlackthornInside_Text_OldLady {
+    msgbox("A clan of TRAINERS who can freely\ncommand DRAGONS live right here in\lBLACKTHORN.\lAs a result, there are many legends\labout DRAGONS in this town.", MSGBOX_NPC)
+    end
+}
+
+script BlackthornInside_Text_BlackBelt {
+    msgbox("Max Repel keeps weak POKéMON away from\nyou.\lI need a lot of that to cross the ICE\lPATH.", MSGBOX_NPC)
+    end
+}
+
+script BlackthornInside_Text_Man {
+    msgbox("The towns in JOHTO are all named after\nplants.\lDid you ever notice?", MSGBOX_NPC)
+    end
+}
+
+script BlackthornInside_Text_Lass {
+    msgbox("I wish I had a JYNX.\nBut I don't even have a POKéMON to\ltrade...", MSGBOX_NPC)
+    end
+}
+
+script BlackthornInside_Text_Lady {
+    msgbox("We are all a descendants of various\nDRAGON clans.\lBut CLAIR belongs to the strongest one.\lShe used to train in DRAGON DEN. But\lnow she is not around.\lTry maybe the DARK CAVE?", MSGBOX_NPC)
+    end
+}

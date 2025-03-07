@@ -1,30 +1,58 @@
-raw`DewfordTrainingField_MapScripts::
-	.byte 0`
+mapscripts DewfordTrainingField_MapScripts {}
 
-    script DewfordTrainingField_Text_KarateGuard {
-        lock
-        faceplayer
-        if(flag(FLAG_DEFEATED_DEWFORD_GYM)){
-            applymovement(1,ExclamationSolo)
-            msgbox(format("Huh? You defeat BRAWLY?\p..................... Ok I'll let you go."))
-            applymovement(1,KarateMove)
-            waitmovement(0)
-            setflag(FLAG_UNUSED_0x020)
-            release
-            end
-        } else{
-            msgbox(format("Defeat BRAWLY and I'll let you go. Haha, a small fry like you will be smash!"))
-            release
-            end
-        }
 
-    }
-    movement KarateMove {
-        jump_up
-        walk_up 
-        face_down
-    }
-    movement ExclamationSolo {
-        emote_exclamation_mark
+script DewfordTrainingField_Text_KarateGuard {
+    lock
+    faceplayer
+    if(flag(FLAG_DEFEATED_DEWFORD_GYM)){
+        applymovement(1,ExclamationSolo)
+        msgbox(format("Huh? You defeat BRAWLY?\p..................... Ok I'll let you go."))
+        applymovement(1,KarateMove)
+        waitmovement(0)
+        release
+        end
+    } else{
+        msgbox(format("Defeat BRAWLY and I'll let you go. Haha, a small fry like you will be smash!"))
+        release
+        end
     }
 
+}
+movement KarateMove {
+    jump_up
+    walk_up 
+    face_down
+}
+movement ExclamationSolo {
+    emote_exclamation_mark
+}
+
+script DewfordTrainingField_Text_BlackBelt{
+    lock
+    faceplayer
+    msgbox(format("BRAWLY recommend me this training !\pI'm starting to feel my muscles getting bigger. Or It's because I'm tired."))
+    release
+    end
+}
+
+script DewfordTrainingField_Text_RunningWoman{
+    lock
+    faceplayer
+    msgbox(format("I trained myself here since I'm a kid. After 15 years, I'm certain I can beat BRAWLY !"))
+    release
+    end
+}
+
+script DewfordTrainingField_Text_RunningMan{
+    lock
+    faceplayer
+    msgbox(format("Please I'm training !! Move !"))
+    release
+    end
+}
+
+script DewfordTrainingField_Text_Meditite {
+    playmoncry(SPECIES_MEDITITE, CRY_MODE_NORMAL)
+    msgbox("Medidi!", MSGBOX_NPC)
+    end
+}

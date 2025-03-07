@@ -1,0 +1,88 @@
+mapscripts CaveOfOrigin_UnusedRubySapphireMap3_MapScripts {}
+
+script CherrygroveInside_Text_Vendor {
+    lockall
+    faceplayer
+    message(format("What ! I have something on my face ? Buy something or scram !"))
+    waitmessage
+    pokemart(CherrygroveInside_IceCream)
+    msgbox(format("Yeah yeah see you later..."))
+    releaseall
+    end
+}
+
+mart CherrygroveInside_IceCream {
+    ITEM_CASTELIACONE
+    ITEM_STBRICECREAM
+    ITEM_BLKICECREAM
+    ITEM_WHTICECREAM
+    ITEM_SANDWICH
+    ITEM_PEWTER_CRUNCHIES
+    ITEM_NONE
+}
+
+script CherrygroveInside_Text_LassinResto {
+    lock
+    faceplayer
+    msgbox(format("The patron here is and old BIKER member. But left KANTO and open this restaurant. He is scary but I know he has a good heart."))
+    release
+    end
+}
+
+script CherrygroveInside_Text_YoungsterinResto {
+    lock
+    faceplayer
+    msgbox(format("I came here yesterday, but I couldn't finish my dish... So the patron made me come here to wash dishes... Oh my ARCEUS ! He's looking at me !"))
+    release
+    end
+}
+
+script CherrygroveInside_Text_Guide {
+    lock
+    faceplayer
+    msgbox(format("When I was a wee lad, I was a hotshot trainer ! Here's a word of advice : Catch lots of POKéMON ! Treat them all with kindness !"))
+    release
+    end
+}
+
+script CherrygroveInside_Text_Littlekid {
+    lock
+    faceplayer
+    msgbox(format("When a POKéMON gain experience, it may change ! {PLAYER} : I know that..."))
+    release
+    end
+}
+
+script CherrygroveInside_Text_Woman {
+    lock
+    faceplayer
+    msgbox(format("{PLAYER} : So what are you going to teach me ? If I walk into the grass I may find some wild POKéMON ? Come on, why are you here if you don't have anything to say ?"))
+    release
+    end
+}
+
+script CherrygroveInside_Text_Meowth {
+    lock
+    faceplayer
+    playmoncry(SPECIES_MEOWTH, CRY_MODE_NORMAL)
+    msgbox(format("Miuuuuuuuu !"))
+    release
+    end
+}
+
+script CherrygroveInside_Text_Pikachu {
+    lock
+    faceplayer
+    playmoncry(SPECIES_PIKACHU, CRY_MODE_NORMAL)
+    msgbox(format("Pi pika !"))
+    release
+    end
+}
+
+script CherrygroveInside_Text_Birdkeeper {
+    lock
+    faceplayer
+    msgbox(format("I use to have a lot of BIRD POKéMON, they all flew away. Now I just have a mouse and a cat... I feel like I belong to a cartoon..."))
+    release
+    end
+}

@@ -147,12 +147,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "LavaridgeTown_Text_WarriorF",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
-      "x": 27,
+      "x": 26,
       "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -160,11 +160,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "LavaridgeTown_Text_SchoolBoy",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_F",
       "x": 27,
       "y": 23,
       "elevation": 0,
@@ -173,7 +173,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "LavaridgeTown_Text_SchoolGirl",
       "flag": "0"
     },
     {
@@ -190,7 +190,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BEAUTY_2",
+      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
       "x": 28,
       "y": 26,
       "elevation": 0,
@@ -199,7 +199,33 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "LavaridgeTown_Text_Beauty",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ABRA",
+      "x": 31,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LavaridgeTown_Text_Abra",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "x": 32,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LavaridgeTown_Text_AbraOwner",
       "flag": "0"
     }
   ],
@@ -219,8 +245,8 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 15,
-      "y": 5,
+      "x": 23,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_LAVARIDGE_TOWN_MART",
       "dest_warp_id": "0"
@@ -258,6 +284,27 @@
       "y": 21,
       "elevation": 0,
       "dest_map": "MAP_SCHOOLS",
+      "dest_warp_id": "18"
+    },
+    {
+      "x": 19,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_JAGGED_PASS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_JAGGED_PASS",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 30,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_LAVARIDGE_RESTO",
       "dest_warp_id": "0"
     }
   ],
@@ -291,8 +338,8 @@
     },
     {
       "type": "sign",
-      "x": 17,
-      "y": 5,
+      "x": 25,
+      "y": 14,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
@@ -315,8 +362,8 @@
     },
     {
       "type": "sign",
-      "x": 16,
-      "y": 5,
+      "x": 24,
+      "y": 14,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
@@ -336,6 +383,20 @@
       "elevation": 3,
       "item": "ITEM_ICE_HEAL",
       "flag": "FLAG_HIDDEN_ITEM_LAVARIDGE_TOWN_ICE_HEAL"
+    },
+    {
+      "type": "secret_base",
+      "x": 13,
+      "y": 27,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_TREE3_1"
+    },
+    {
+      "type": "secret_base",
+      "x": 14,
+      "y": 27,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_TREE3_2"
     }
   ]
 }

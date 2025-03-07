@@ -419,3 +419,57 @@ MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons:
 	.string "Come see me with two or more\n"
 	.string "POKéMON, all right?$"
 
+Mauville_Gym_Text_RematchGuy::
+	lock
+	faceplayer
+	msgbox Mauville_Gym_Text_RematchGuy_Text_0
+	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, Mauville_Gym_Text_RematchGuy_2
+	msgbox Mauville_Gym_Text_RematchGuy_Text_1
+Mauville_Gym_Text_RematchGuy_1:
+	release
+	end
+
+Mauville_Gym_Text_RematchGuy_2:
+	goto Mauville_Gym_Text_RematchGuyYesNo
+	goto Mauville_Gym_Text_RematchGuy_1
+
+
+Mauville_Gym_Text_RematchGuyYesNo::
+	msgbox Mauville_Gym_Text_RematchGuyYesNo_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq Mauville_Gym_Text_RematchGuyYesNo_1
+	msgbox Mauville_Gym_Text_RematchGuyYesNo_Text_1
+	release
+	end
+
+Mauville_Gym_Text_RematchGuyYesNo_1:
+	cleartrainerflag TRAINER_VIVIAN
+	cleartrainerflag TRAINER_KIRK
+	cleartrainerflag TRAINER_BEN
+	cleartrainerflag TRAINER_ANGELO
+	cleartrainerflag TRAINER_SHAWN
+	fadescreen FADE_TO_BLACK
+	playse SE_SUCCESS
+	delay 60
+	warp MAP_MAUVILLE_CITY_GYM, 4, 20
+	fadescreen FADE_FROM_BLACK
+	release
+	end
+
+
+Mauville_Gym_Text_RematchGuy_Text_0:
+	.string "Hello, I'm the Rematch Man, I can ask all\n"
+	.string "the TRAINERS of the GYM to rematch\l"
+	.string "you if you want.$"
+
+Mauville_Gym_Text_RematchGuy_Text_1:
+	.string "Hummmm. Get the BADGE first and come to\n"
+	.string "see me after will you ?$"
+
+Mauville_Gym_Text_RematchGuyYesNo_Text_0:
+	.string "So {PLAYER}, should I ask the\n"
+	.string "TRAINERS to have a rematch with you ?$"
+
+Mauville_Gym_Text_RematchGuyYesNo_Text_1:
+	.string "Well I'm not moving if you change your\n"
+	.string "mind !$"

@@ -45,11 +45,11 @@ FallarborMarketVendor1:
 
 	.align 2
 FallarborMarketVendor2:
-	.2byte ITEM_TM27_RETURN
-	.2byte ITEM_TM48_SKILL_SWAP
-	.2byte ITEM_TM49_SNATCH
-	.2byte ITEM_TM02_DRAGON_CLAW
-	.2byte ITEM_TM46_THIEF
+	.2byte ITEM_TM27
+	.2byte ITEM_TM48
+	.2byte ITEM_TM49
+	.2byte ITEM_TM02
+	.2byte ITEM_TM46
 	.2byte ITEM_NONE
 
 	.align 2

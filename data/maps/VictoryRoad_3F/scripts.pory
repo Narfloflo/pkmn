@@ -1,0 +1,7 @@
+mapscripts VictoryRoad_3F_MapScripts {}
+
+script VictoryRoad_3F_Text_Kindler {
+    trainerbattle_single(TRAINER_CRISTIN_4, "It's so hot here ! Let's sweat\na little", "Sweating doesn't changed anything...")
+    msgbox(format("I don't know why I'm not moving from here..."), MSGBOX_AUTOCLOSE)
+    end
+}

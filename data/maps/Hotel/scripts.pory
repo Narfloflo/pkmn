@@ -1,0 +1,42 @@
+raw`Hotel_MapScripts::
+	.byte 0
+`
+
+script Hotel_Text_Receptionnist {
+    lock
+    faceplayer
+    msgbox(format("Oh you are a TRAINER ? Sorry but the POKéMON are not allowed in this HOTEL. You can stay in the lobby but can't move upstairs."))
+    release
+    end
+}
+
+script Hotel_Text_Salaryman {
+    lock
+    msgbox(format("There is no more room for me ?! But I booked two weeks ago a room ! I'm so frustrated I can lift a SNORLAX !"))
+    release
+    end
+}
+
+script Hotel_Text_Gentleman {
+    lock
+    faceplayer
+    msgbox(format("Hello youngster, I guess you are a TRAINER ? I will give you an advice then : LEAVE THE PEOPLE ALONE !"))
+    release
+    end
+}
+
+script Hotel_Text_OldWoman {
+    lock
+    faceplayer
+    msgbox(format("This is the most luxious place in HOENN. I'll take my time in the jacuzzi and the sauna today."))
+    release
+    end
+}
+
+script Hotel_Text_Artist {
+    lock
+    faceplayer
+    msgbox(format("Two exhibitions in two days ! One in KANTO, another one here in HOENN. I'm exhausted..."))
+    release
+    end
+}

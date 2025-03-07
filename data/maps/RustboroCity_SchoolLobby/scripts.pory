@@ -1,0 +1,75 @@
+mapscripts RustboroCity_SchoolLobby_MapScripts {}
+
+script RustboroCitySchoolLobby_Text_Teacher {
+    lock
+    faceplayer
+    msgbox(format("The stairs lead to the ADMINISTRATIVE floor. It is obviously forbidden for you and every students."))
+    release
+    end
+}
+
+script RustboroCitySchoolLobby_Text_Lass {
+    lock
+    faceplayer
+    msgbox(format("I can't wait to study every forms of POKéMON there are.\pI heard that in some REGIONS a same specie have a different form than our."))
+    release
+    end
+}
+
+script RustboroCitySchoolLobby_Text_SchoolKidF {
+    lock
+    faceplayer
+    msgbox(format("It's the BREEDING classroom. I heard that a specialist of POKéMON EGGS should come. What's his name again ? ELM I guess ?\pI can't wait !"))
+    release
+    end
+}
+
+script RustboroCitySchoolLobby_Text_Youngster {
+    lock
+    msgbox(format("DRAGON TYPE is the best, except DRAGON and ICE MOVES, nothing can harm them !"))
+    release
+    end
+}
+
+script RustboroCitySchoolLobby_Text_LassJR {
+    lock
+    msgbox(format("Forget DRAGON TYPE. I'm pretty sure another TYPE that we don't even know can crush these beasts."))
+    release
+    end
+}
+
+script RustboroCitySchoolLobby_Trigger_SchoolKidM {
+    lock
+    applymovement(6, RustboroCitySchoolLobby_Move_SchoolKidM)
+    waitmovement(6)
+    msgbox(format("Wait! This classroom isn't open yet. We can't go inside for the moment."))
+    applymovement(OBJ_EVENT_ID_PLAYER, RustboroCitySchoolLobby_Move_Player)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    release
+    end
+}
+
+movement RustboroCitySchoolLobby_Move_Player {
+    walk_down
+    step_end
+}
+movement RustboroCitySchoolLobby_Move_SchoolKidM {
+    face_original_direction
+    jump_in_place_left
+    step_end
+}
+
+script RustboroCitySchoolLobby_Text_SchoolKidM {
+    lock
+    faceplayer
+    msgbox(format("This classroom isn't open yet. A specialist of POKéBALL crafting should intervene. but when..."))
+    release
+    end
+}
+
+script RustboroCitySchoolLobby_Text_ClassSign {
+    lock
+    msgbox(format("GENERAL TEACHINGS CLASSROOM"))
+    release
+    end
+}

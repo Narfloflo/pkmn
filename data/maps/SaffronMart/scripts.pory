@@ -1,0 +1,31 @@
+mapscripts SaffronMart_MapScripts {}
+
+script SaffronMart_Text_Gentleman {
+    lock
+    faceplayer
+    msgbox(format("Revive is costly but it revives fainted POKéMON!"))
+    release
+    end
+}
+
+script SaffronMart_Vendor {
+    lock
+    faceplayer
+	msgbox(format("Welcome!\p How may I serve you?"))
+	waitmessage
+	pokemart(SaffronMartItems)
+	msgbox("Please come again!")
+	release
+    end
+}
+
+mart SaffronMartItems {
+    ITEM_GREAT_BALL
+    ITEM_ULTRA_BALL
+	ITEM_HYPER_POTION
+	ITEM_REVIVE
+	ITEM_FULL_HEAL
+    ITEM_ESCAPE_ROPE
+    ITEM_MAX_REPEL
+    ITEM_MECH_MAIL
+}

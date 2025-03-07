@@ -7,55 +7,43 @@ CelebiChamber_EventScript_Celebi::
 	playmoncry SPECIES_CELEBI, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_CELEBI, 15, ITEM_LUCKY_EGG
-	dowildbattle
+	seteventmon SPECIES_CELEBI, 80, ITEM_LUCKY_EGG
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_CAUGHT
-	goto_if_eq CelebiChamber_EventScript_Celebi_2
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq CelebiChamber_EventScript_Celebi_3
-	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq CelebiChamber_EventScript_Celebi_4
-	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq CelebiChamber_EventScript_Celebi_5
-CelebiChamber_EventScript_Celebi_1:
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, CelebiChamber_EventScript_Won_or_Caught
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, CelebiChamber_EventScript_RanAway
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, CelebiChamber_EventScript_RanAway
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, CelebiChamber_EventScript_RanAway
 	waitmessage
 	releaseall
 	return
 
-CelebiChamber_EventScript_Celebi_2:
-	call CelebiChamber_EventScript_Won_or_Caught
-	goto CelebiChamber_EventScript_Celebi_1
-
-CelebiChamber_EventScript_Celebi_3:
-	call CelebiChamber_EventScript_RanAway
-	goto CelebiChamber_EventScript_Celebi_1
-
-CelebiChamber_EventScript_Celebi_4:
-	call CelebiChamber_EventScript_RanAway
-	goto CelebiChamber_EventScript_Celebi_1
-
-CelebiChamber_EventScript_Celebi_5:
-	call CelebiChamber_EventScript_RanAway
-	goto CelebiChamber_EventScript_Celebi_1
-
 
 CelebiChamber_EventScript_Won_or_Caught::
+	setflag FLAG_UNUSED_0x026
 	fadescreen FADE_TO_BLACK
-	warp MAP_PETALBURG_WOODS, 56, 46
+	warp MAP_ILEX_FOREST, 17, 36
 	fadescreen FADE_FROM_BLACK
 	msgbox CelebiChamber_EventScript_Won_or_Caught_Text_0
+	waitbuttonpress
 	delay 50
 	return
 
 
 CelebiChamber_EventScript_RanAway::
+	removeobject 1
+	setflag FLAG_UNUSED_0x026
 	playmoncry SPECIES_CELEBI, CRY_MODE_ENCOUNTER
-	msgbox CelebiChamber_EventScript_RanAway_Text_0, MSGBOX_AUTOCLOSE
+	waitmoncry
+	msgbox CelebiChamber_EventScript_RanAway_Text_0
 	fadescreen FADE_TO_BLACK
-	warp MAP_PETALBURG_WOODS, 56, 46
+	warp MAP_ILEX_FOREST, 17, 36
 	fadescreen FADE_FROM_BLACK
 	msgbox CelebiChamber_EventScript_RanAway_Text_1
+	waitbuttonpress
 	delay 50
 	return
 
@@ -64,7 +52,7 @@ CelebiChamber_EventScript_Won_or_Caught_Text_0:
 	.string "There is a warm feeling above yourself.$"
 
 CelebiChamber_EventScript_RanAway_Text_0:
-	.string "{PLAYER}: Damn it!$"
+	.string "{PLAYER}: Damn it! How can I be that bad!$"
 
 CelebiChamber_EventScript_RanAway_Text_1:
 	.string "A celestial voice is fadding away.$"

@@ -759,3 +759,82 @@ LilycoveCity_Text_HoneymoonVowToSeeRarePokemon:
 	.string "POKéMON as soon as we arrived.\p"
 	.string "I mean, we are totally happy!$"
 
+LilycoveCity_Text_SchoolSign::
+	msgbox LilycoveCity_Text_SchoolSign_Text_0, MSGBOX_SIGN
+	end
+
+
+LilycoveCity_Text_Teacher::
+	msgbox LilycoveCity_Text_Teacher_Text_0, MSGBOX_NPC
+	end
+
+
+LilycoveCity_Text_Lass::
+	msgbox LilycoveCity_Text_Lass_Text_0, MSGBOX_NPC
+	end
+
+
+LilycoveCity_Text_LassSr::
+	msgbox LilycoveCity_Text_LassSr_Text_0, MSGBOX_SIGN
+	end
+
+
+LilycoveCity_Text_LassJr::
+	msgbox LilycoveCity_Text_LassJr_Text_0, MSGBOX_SIGN
+	end
+
+
+LilycoveCity_Text_Sailor::
+	msgbox LilycoveCity_Text_Sailor_Text_0, MSGBOX_NPC
+	end
+
+
+LilycoveCity_Text_RestoSign::
+	msgbox LilycoveCity_Text_RestoSign_Text_0, MSGBOX_SIGN
+	end
+
+
+LilycoveCity_Text_Expert::
+	msgbox LilycoveCity_Text_Expert_Text_0, MSGBOX_NPC
+	end
+
+
+LilycoveCity_Text_Beauty::
+	msgbox LilycoveCity_Text_Beauty_Text_0, MSGBOX_NPC
+	end
+
+
+LilycoveCity_Text_Painter::
+	msgbox LilycoveCity_Text_Painter_Text_0, MSGBOX_NPC
+	end
+
+
+LilycoveCity_Text_SchoolSign_Text_0:
+	.string "LILYCOVE CITY's SCHOOL$"
+
+LilycoveCity_Text_Teacher_Text_0:
+	.string "Here is LILYCOVE's SCHOOL.\nWe teach you to become the very best!$"
+
+LilycoveCity_Text_Lass_Text_0:
+	.string "I don't know if I should go relax to\nthe beach or not...$"
+
+LilycoveCity_Text_LassSr_Text_0:
+	.string "We should go to the big MART!\nThey sell DOLLS!$"
+
+LilycoveCity_Text_LassJr_Text_0:
+	.string "We should go to the BEAUTY CONTEST!\nI want {POKEBLOCK}S!$"
+
+LilycoveCity_Text_Sailor_Text_0:
+	.string "The restaurant here is quick has quite\ngood stuff.\lI usually give some of their food to my\lPOKéMON. They really like it!$"
+
+LilycoveCity_Text_RestoSign_Text_0:
+	.string "LILYCOVE CITY's Restaurant$"
+
+LilycoveCity_Text_Expert_Text_0:
+	.string "I'm taking a break from my training.\nAfter that, I think I'll challenge the\lGYM LEADERS of MOSSDEEP!$"
+
+LilycoveCity_Text_Beauty_Text_0:
+	.string "I came from MAUVILLE just to go to the\nMUSEUM.\lBut now I'm really exhausted!$"
+
+LilycoveCity_Text_Painter_Text_0:
+	.string "Hey! You don't know me?\nI'm the famous VORNET! The painter!\lYou don't know me? I come from KALOS.\lCome on! you surely know me!\lKids nowadays..$"

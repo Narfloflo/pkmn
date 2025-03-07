@@ -23,3 +23,24 @@ script OlivineCityPort_Text_Girl {
     release
     end
 }
+
+script OlivineCityPort_Text_SailorToHoenn2{ 
+    lock
+    faceplayer
+        msgbox("Want to go Back to HOENN ?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) !=0){
+            msgbox("Here we go!")
+            call(OlivineCityPort_Text_WarpToHoenn)
+        } else{
+            msgbox("I'm standing right here !")
+        }
+    release
+    end
+}
+ 
+ script OlivineCityPort_Text_WarpToHoenn{
+    fadescreen(FADE_TO_BLACK)
+    delay(5)
+    warp(MAP_BEACH_SIDE, 69, 21)
+    fadescreen(FADE_FROM_BLACK)
+ }

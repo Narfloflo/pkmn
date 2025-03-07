@@ -1,0 +1,6 @@
+mapscripts EcruteakToRoute38_MapScripts {}
+
+script EcruteakToRoute38_Text_Police{
+    msgbox("This ROUTE leads to OLIVINE and also\nthe MOOMOO FARM!\lBut I think you already know that.", MSGBOX_NPC)
+    end
+}

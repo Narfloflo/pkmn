@@ -52,3 +52,57 @@ PacifidlogTown_Text_TownSign:
 	.string "“Where the morning sun smiles upon\n"
 	.string "the waters.”$"
 
+PacifidlogTown_Text_Boy::
+	lock
+	faceplayer
+	msgbox PacifidlogTown_Text_Boy_Text_0
+	release
+	end
+
+
+PacifidlogTown_Text_Fisherman::
+	lock
+	faceplayer
+	msgbox PacifidlogTown_Text_Fisherman_Text_0
+	release
+	end
+
+
+PacifidlogTown_Text_Vendor::
+	lock
+	faceplayer
+	message PacifidlogTown_Text_Vendor_Text_0
+	waitmessage
+	pokemart PacifidlogTown_Vendor
+	msgbox PacifidlogTown_Text_Vendor_Text_1
+	release
+	end
+
+
+	.align 2
+PacifidlogTown_Vendor:
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_DIVE_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_REVIVE
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_NONE
+
+PacifidlogTown_Text_Boy_Text_0:
+	.string "Have you seen the DEEP WATERS all\n"
+	.string "around? I wonder what is inside.$"
+
+PacifidlogTown_Text_Fisherman_Text_0:
+	.string "A long time ago PACIFIDLOG was\nconnected to the lands.\lBut one day a big earthquake\lobliterated everything around here.\lKABOOOM!!!\lAnd now we live on the sea.\lI'm pretty sure the rest of the old\lPACIFIDLOG must lie somewhere.\lBut hey! I'm just a FISHERMAN, what do\lI know!$"
+
+PacifidlogTown_Text_Vendor_Text_0:
+	.string "Welcome!\p"
+	.string "How may I serve you?$"
+
+PacifidlogTown_Text_Vendor_Text_1:
+	.string "Please come again!$"

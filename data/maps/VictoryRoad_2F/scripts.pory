@@ -1,0 +1,31 @@
+mapscripts VictoryRoad_2F_MapScripts {} 
+
+script VictoryRoad2F_Text_CooltrainerF {
+    trainerbattle_single(TRAINER_LILA_AND_ROY_2, "I'm lost but I'm strong.", "Well you were stronger !")
+    msgbox(format("You should but careful, I've heard that some guys are pissed because they are lost. So they want to smash every TRAINER they see."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script VictoryRoad2F_Text_CooltrainerM {
+    trainerbattle_single(TRAINER_LILA_AND_ROY_3, "I'm pissed, I need to punch something !", "Ahhhhhhhhhhhh !!!")
+    msgbox(format("Yeah whatever, I don't care if I lost. I need to get out of here."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script VictoryRoad2F_Text_ExpertM {
+    trainerbattle_single(TRAINER_LILA_AND_ROY_4, "Kid ! Admire the might of my friends !", "Well I'm the one admiring your strenght.")
+    msgbox(format("I'm trying to meditate, but this chump is following me. I can't stand him..."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script VictoryRoad2F_Text_CooltrainerM2 {
+    trainerbattle_single(TRAINER_CRISTIN_2, "A punk ! Let's fight !", "I think I'm the punk...")
+    msgbox(format("What can I do now that a brat taught me a good lesson..."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script VictoryRoad2F_Text_ExpertF {
+    trainerbattle_single(TRAINER_CRISTIN_3, "Hello dear, you have some time for a\nlady ?", "Ah ! An heart attack !")
+    msgbox(format("Fortunatly I have my pacemaker on me everyday."), MSGBOX_AUTOCLOSE)
+    end
+}

@@ -312,6 +312,7 @@ OldaleTown_Movement_RivalApproachPlayer3:
 
 OldaleTown_Movement_RivalExit:
 	walk_down
+	jump_down
 	walk_down
 	walk_down
 	walk_down
@@ -398,3 +399,174 @@ OldaleTown_Text_BrendanLetsGoBack:
 OldaleTown_Text_TownSign:
 	.string "OLDALE TOWN\n"
 	.string "“Where things start off scarce.”$"
+
+OldaleTown_Text_Poochyena::
+	lock
+	faceplayer
+	playmoncry SPECIES_POOCHYENA, CRY_MODE_NORMAL
+	waitmoncry
+	msgbox OldaleTown_Text_Poochyena_Text_0
+	release
+	end
+
+
+OldaleTown_Text_FatGuy::
+	lock
+	faceplayer
+	msgbox OldaleTown_Text_FatGuy_Text_0
+	release
+	end
+
+
+OldaleTown_Text_ExpertM::
+	lock
+	faceplayer
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, OldaleTown_Text_ExpertM_GonnafightMay
+	goto_if_eq VAR_RESULT, FEMALE, OldaleTown_Text_ExpertM_GonnafightBrendan
+	end
+
+
+OldaleTown_Text_ExpertM_GonnafightMay::
+	goto_if_unset FLAG_ADVENTURE_STARTED, OldaleTown_Text_ExpertM_GonnafightMay_1
+	msgbox OldaleTown_Text_ExpertM_GonnafightMay_Text_0, MSGBOX_NPC
+	end
+
+OldaleTown_Text_ExpertM_GonnafightMay_1:
+	switch VAR_STARTER_MON
+	case 0, OldaleTown_Text_ExpertM_GonnafightMay_6
+	case 1, OldaleTown_Text_ExpertM_GonnafightMay_7
+	case 2, OldaleTown_Text_ExpertM_GonnafightMay_8
+OldaleTown_Text_ExpertM_GonnafightMay_4:
+	end
+
+OldaleTown_Text_ExpertM_GonnafightMay_6:
+	call OldaleTown_Text_ExpertM_GonnafightMayTreecko
+	goto OldaleTown_Text_ExpertM_GonnafightMay_4
+
+OldaleTown_Text_ExpertM_GonnafightMay_7:
+	call OldaleTown_Text_ExpertM_GonnafightMayTorchic
+	goto OldaleTown_Text_ExpertM_GonnafightMay_4
+
+OldaleTown_Text_ExpertM_GonnafightMay_8:
+	call OldaleTown_Text_ExpertM_GonnafightMayMudkip
+	goto OldaleTown_Text_ExpertM_GonnafightMay_4
+
+
+OldaleTown_Text_ExpertM_GonnafightMayTreecko::
+	msgbox OldaleTown_Text_ExpertM_GonnafightMayTreecko_Text_0, MSGBOX_NPC
+	end
+
+
+OldaleTown_Text_ExpertM_GonnafightMayTorchic::
+	msgbox OldaleTown_Text_ExpertM_GonnafightMayTorchic_Text_0, MSGBOX_NPC
+	end
+
+
+OldaleTown_Text_ExpertM_GonnafightMayMudkip::
+	msgbox OldaleTown_Text_ExpertM_GonnafightMayMudkip_Text_0, MSGBOX_NPC
+	end
+
+
+OldaleTown_Text_ExpertM_GonnafightBrendan::
+	goto_if_unset FLAG_ADVENTURE_STARTED, OldaleTown_Text_ExpertM_GonnafightBrendan_1
+	msgbox OldaleTown_Text_ExpertM_GonnafightMay_Text_0, MSGBOX_NPC
+	end
+
+OldaleTown_Text_ExpertM_GonnafightBrendan_1:
+	switch VAR_STARTER_MON
+	case 0, OldaleTown_Text_ExpertM_GonnafightBrendan_6
+	case 1, OldaleTown_Text_ExpertM_GonnafightBrendan_7
+	case 2, OldaleTown_Text_ExpertM_GonnafightBrendan_8
+OldaleTown_Text_ExpertM_GonnafightBrendan_4:
+	end
+
+OldaleTown_Text_ExpertM_GonnafightBrendan_6:
+	call OldaleTown_Text_ExpertM_GonnafightBrendanTreecko
+	goto OldaleTown_Text_ExpertM_GonnafightBrendan_4
+
+OldaleTown_Text_ExpertM_GonnafightBrendan_7:
+	call OldaleTown_Text_ExpertM_GonnafightBrendanTorchic
+	goto OldaleTown_Text_ExpertM_GonnafightBrendan_4
+
+OldaleTown_Text_ExpertM_GonnafightBrendan_8:
+	call OldaleTown_Text_ExpertM_GonnafightBrendanMudkip
+	goto OldaleTown_Text_ExpertM_GonnafightBrendan_4
+
+
+OldaleTown_Text_ExpertM_GonnafightBrendanTreecko::
+	msgbox OldaleTown_Text_ExpertM_GonnafightBrendanTreecko_Text_0, MSGBOX_NPC
+	end
+
+
+OldaleTown_Text_ExpertM_GonnafightBrendanTorchic::
+	msgbox OldaleTown_Text_ExpertM_GonnafightBrendanTorchic_Text_0, MSGBOX_NPC
+	end
+
+
+OldaleTown_Text_ExpertM_GonnafightBrendanMudkip::
+	msgbox OldaleTown_Text_ExpertM_GonnafightBrendanMudkip_Text_0, MSGBOX_NPC
+	end
+
+
+OldaleTown_Text_Boy::
+	goto_if_set FLAG_IS_CHAMPION, OldaleTown_Text_Boy_1
+	goto_if_set FLAG_BADGE05_GET, OldaleTown_Text_Boy_2
+	msgbox OldaleTown_Text_Boy_Text_2, MSGBOX_NPC
+	end
+
+OldaleTown_Text_Boy_1:
+	msgbox OldaleTown_Text_Boy_Text_0, MSGBOX_NPC
+	end
+
+OldaleTown_Text_Boy_2:
+	msgbox OldaleTown_Text_Boy_Text_1, MSGBOX_NPC
+	end
+
+
+OldaleTown_Text_MoveLearnerSign::
+	msgbox OldaleTown_Text_MoveLearnerSign_Text_0, MSGBOX_SIGN
+	end
+
+
+OldaleTown_Text_Poochyena_Text_0:
+	.string "Booh!\n"
+	.string "{PLAYER}: This POOCHYENA is GROWLING\l"
+	.string "to scare the WILD POKéMON.$"
+
+OldaleTown_Text_FatGuy_Text_0:
+	.string "Hey you ! I, had a beautiful POKéMON but\n"
+	.string "it left... I can't give it to you then.$"
+
+OldaleTown_Text_ExpertM_GonnafightMay_Text_0:
+	.string "Hello {PLAYER}!\nHope you enjoy your life in LITTLEROOT!$"
+
+OldaleTown_Text_ExpertM_GonnafightMayTreecko_Text_0:
+	.string "Oh you are {PLAYER}? You want an\nadvice?\lYour TREECKO won't last long against\lTORCHIC and MUDKIP MAY has in her team.\lYeah, it's great to be BIRCH's\ldaughter.$"
+
+OldaleTown_Text_ExpertM_GonnafightMayTorchic_Text_0:
+	.string "Oh you are {PLAYER}? You want an\nadvice?\lYour TORCHIC won't last long against\lthe TREECKO and MUDKIP MAY has in her\lteam.\lYeah, it's great to be BIRCH's\ldaughter.$"
+
+OldaleTown_Text_ExpertM_GonnafightMayMudkip_Text_0:
+	.string "Oh you are {PLAYER}? You want an\nadvice?\lI think you can fight MAY without\ldifficulties with your MUDKIP\lagainst her TORCHIC and TREECKO.\lYeah,it's great to be BIRCH's\ldaughter.\lBut I hope you'll beat this spoiled\lbrat!$"
+
+OldaleTown_Text_ExpertM_GonnafightBrendanTreecko_Text_0:
+	.string "Oh you are {PLAYER}? You want an\nadvice?\lYour TREECKO won't last long against\lTORCHIC and MUDKIP BRENDAN has in his team.\lYeah, it's great to be BIRCH's son .$"
+
+OldaleTown_Text_ExpertM_GonnafightBrendanTorchic_Text_0:
+	.string "Oh you are {PLAYER}? You want an\nadvice?\lYour TORCHIC won't last long against\lthe TREECKO and MUDKIP BRENDAN has in his\lteam.\lYeah, it's great to be BIRCH's son.$"
+
+OldaleTown_Text_ExpertM_GonnafightBrendanMudkip_Text_0:
+	.string "Oh you are {PLAYER}? You want an\nadvice?\lI think you can fight BRENDAN without\ldifficulties with your MUDKIP\lagainst her TORCHIC and TREECKO.\lYeah,it's great to be BIRCH's son.\lBut I hope you'll beat this spoiled\lbrat!$"
+
+OldaleTown_Text_Boy_Text_0:
+	.string "Hey! Heard about the old lady who lives\na bit north from here? I heard she left\lher home finally to dig somewhere...$"
+
+OldaleTown_Text_Boy_Text_1:
+	.string "Hey! You got PETALBURG's BADGE?\nThat means now you can use SURF!\lWhy don't you check a bit north, there\lis a river that leads to ROUTE 117!$"
+
+OldaleTown_Text_Boy_Text_2:
+	.string "Hey! Oldale is a pretty boring city.\nBut it's at the junction bitween ROUTE\l102 and 103. There are a few places\laround that are not reachable yet!\lI won't tell you more now haha!$"
+
+OldaleTown_Text_MoveLearnerSign_Text_0:
+	.string "MOVE LEARNER's HOUSE$"

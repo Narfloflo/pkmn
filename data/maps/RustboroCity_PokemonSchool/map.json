@@ -111,15 +111,15 @@
       "x": 5,
       "y": 10,
       "elevation": 0,
-      "dest_map": "MAP_RUSTBORO_CITY",
-      "dest_warp_id": "4"
+      "dest_map": "MAP_RUSTBORO_CITY_SCHOOL_LOBBY",
+      "dest_warp_id": "2"
     },
     {
       "x": 6,
       "y": 10,
       "elevation": 0,
-      "dest_map": "MAP_RUSTBORO_CITY",
-      "dest_warp_id": "4"
+      "dest_map": "MAP_RUSTBORO_CITY_SCHOOL_LOBBY",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [

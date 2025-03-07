@@ -107,3 +107,96 @@ Route102_Text_RouteSignOldale:
 Route102_Text_RouteSignPetalburg:
 	.string "ROUTE 102\n"
 	.string "{LEFT_ARROW} PETALBURG CITY$"
+
+Route102_Text_Farmer::
+	lock
+	faceplayer
+	switch VAR_STARTER_MON
+	case 0, Route102_Text_Farmer_3
+	case 1, Route102_Text_Farmer_4
+	case 2, Route102_Text_Farmer_5
+Route102_Text_Farmer_1:
+	end
+
+Route102_Text_Farmer_3:
+	call Route102_Text_FarmerTreecko
+	goto Route102_Text_Farmer_1
+
+Route102_Text_Farmer_4:
+	call Route102_Text_FarmerTorchic
+	goto Route102_Text_Farmer_1
+
+Route102_Text_Farmer_5:
+	call Route102_Text_FarmerMudkip
+	goto Route102_Text_Farmer_1
+
+
+Route102_Text_FarmerTreecko::
+	msgbox Route102_Text_FarmerTreecko_Text_0, MSGBOX_NPC
+	end
+
+
+Route102_Text_FarmerTorchic::
+	msgbox Route102_Text_FarmerTorchic_Text_0, MSGBOX_NPC
+	end
+
+
+Route102_Text_FarmerMudkip::
+	msgbox Route102_Text_FarmerMudkip_Text_0, MSGBOX_NPC
+	end
+
+
+Route102_Text_Farmer2::
+	msgbox Route102_Text_Farmer2_Text_0, MSGBOX_NPC
+	end
+
+
+Route102_Text_Baldman::
+	lock
+	faceplayer
+	msgbox Route102_Text_Baldman_Text_0
+	release
+	end
+
+
+Route102_Text_Aroma::
+	lock
+	faceplayer
+	msgbox Route102_Text_Aroma_Text_0
+	release
+	end
+
+
+Route102_Text_MineSign::
+	msgbox Route102_Text_MineSign_Text_0, MSGBOX_SIGN
+	end
+
+
+Route102_Text_FarmerTreecko_Text_0:
+	.string "Oh! I can see in your POKéDEX you have\na TREECKO?\lPretty sure you found it in PETALBURG\lWOOD.\lYou know here and in ROUTE 103 you can\lfind a TORCHIC and a\lMUDKIP?$"
+
+Route102_Text_FarmerTorchic_Text_0:
+	.string "Oh! I can see in your POKéDEX you have\na TORCHIC?\lPretty sure you found it around here.\lYou know in PETALBURG WOOD and in ROUTE\l103 you can find a TREECKO and a\lMUDKIP?$"
+
+Route102_Text_FarmerMudkip_Text_0:
+	.string "Oh! I can see in your POKéDEX you have\na MUDKIP?\lPretty sure you found it around in\lROUTE 103.\lYou know in PETALBURG WOOD\land around here you can find a TREECKO\land a TORCHIC?$"
+
+Route102_Text_Farmer2_Text_0:
+	.string "= Not everybody left their doors opened.\nSomething you'll see that some houses\lare unreachable.\lButhey, what do you want? We are not\lall dumb to let kids enter our\lhouses freely!$"
+
+Route102_Text_Baldman_Text_0:
+	.string "You can find the mine here. Some\n"
+	.string "POKéMON only live in this kind of\l"
+	.string "area. But I suppose you already\l"
+	.string "know this.$"
+
+Route102_Text_Aroma_Text_0:
+	.string "There are two ways to come into\n"
+	.string "PETALBURG :\l"
+	.string "Here in the south, and another one\l"
+	.string "north.\l"
+	.string "It doesn't change anything but\l"
+	.string "that just fun!$"
+
+Route102_Text_MineSign_Text_0:
+	.string "PETALBURG COALMINE$"

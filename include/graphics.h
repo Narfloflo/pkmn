@@ -2962,6 +2962,41 @@ extern const u32 gTrainerFrontPic_Red[];
 extern const u32 gTrainerFrontPic_Leaf[];
 extern const u32 gTrainerFrontPic_RubySapphireBrendan[];
 extern const u32 gTrainerFrontPic_RubySapphireMay[];
+extern const u32 gTrainerFrontPic_MayorWallace[];
+extern const u32 gTrainerFrontPic_Misty[];
+extern const u32 gTrainerFrontPic_LtSurge[];
+extern const u32 gTrainerFrontPic_Police[];
+extern const u32 gTrainerFrontPic_Kimono[];
+extern const u32 gTrainerFrontPic_LassKanto[];
+extern const u32 gTrainerFrontPic_CamperKanto[];
+extern const u32 gTrainerFrontPic_PicnickerKanto[];
+extern const u32 gTrainerFrontPic_Brock[];
+extern const u32 gTrainerFrontPic_YoungsterKanto[];
+extern const u32 gTrainerFrontPic_Thug[];
+extern const u32 gTrainerFrontPic_Biker[];
+extern const u32 gTrainerFrontPic_Erika[];
+extern const u32 gTrainerFrontPic_CooltrainerKanto_M[];
+extern const u32 gTrainerFrontPic_CooltrainerKanto_F[];
+extern const u32 gTrainerFrontPic_Gambler[];
+extern const u32 gTrainerFrontPic_Whitney[];
+extern const u32 gTrainerFrontPic_Sabrina[];
+extern const u32 gTrainerFrontPic_Koga[];
+extern const u32 gTrainerFrontPic_Blue[];
+extern const u32 gTrainerFrontPic_Bugsy[];
+extern const u32 gTrainerFrontPic_Blaine[];
+extern const u32 gTrainerFrontPic_Morty[];
+extern const u32 gTrainerFrontPic_Chuck[];
+extern const u32 gTrainerFrontPic_Jasmine[];
+extern const u32 gTrainerFrontPic_Clair[];
+extern const u32 gTrainerFrontPic_ProfOak[];
+extern const u32 gTrainerFrontPic_BeautyKanto[];
+extern const u32 gTrainerFrontPic_BirdKeeperKanto[];
+extern const u32 gTrainerFrontPic_Falkner[];
+extern const u32 gTrainerFrontPic_Rocket[];
+extern const u32 gTrainerFrontPic_Pryce[];
+extern const u32 gTrainerFrontPic_Sage[];
+extern const u32 gTrainerFrontPic_Firebreather[];
+extern const u32 gTrainerFrontPic_PokemaniacJohto[];
 
 extern const u32 gTrainerPalette_Hiker[];
 extern const u32 gTrainerPalette_AquaGruntM[];
@@ -3056,6 +3091,41 @@ extern const u32 gTrainerPalette_Red[];
 extern const u32 gTrainerPalette_Leaf[];
 extern const u32 gTrainerPalette_RubySapphireBrendan[];
 extern const u32 gTrainerPalette_RubySapphireMay[];
+extern const u32 gTrainerPalette_MayorWallace[];
+extern const u32 gTrainerPalette_Misty[];
+extern const u32 gTrainerPalette_LtSurge[];
+extern const u32 gTrainerPalette_Police[];
+extern const u32 gTrainerPalette_Kimono[];
+extern const u32 gTrainerPalette_LassKanto[];
+extern const u32 gTrainerPalette_CamperKanto[];
+extern const u32 gTrainerPalette_PicnickerKanto[];
+extern const u32 gTrainerPalette_Brock[];
+extern const u32 gTrainerPalette_YoungsterKanto[];
+extern const u32 gTrainerPalette_Thug[];
+extern const u32 gTrainerPalette_Biker[];
+extern const u32 gTrainerPalette_Erika[];
+extern const u32 gTrainerPalette_CooltrainerKanto_M[];
+extern const u32 gTrainerPalette_CooltrainerKanto_F[];
+extern const u32 gTrainerPalette_Gambler[];
+extern const u32 gTrainerPalette_Whitney[];
+extern const u32 gTrainerPalette_Sabrina[];
+extern const u32 gTrainerPalette_Koga[];
+extern const u32 gTrainerPalette_Blue[];
+extern const u32 gTrainerPalette_Bugsy[];
+extern const u32 gTrainerPalette_Blaine[];
+extern const u32 gTrainerPalette_Morty[];
+extern const u32 gTrainerPalette_Chuck[];
+extern const u32 gTrainerPalette_Jasmine[];
+extern const u32 gTrainerPalette_Clair[];
+extern const u32 gTrainerPalette_ProfOak[];
+extern const u32 gTrainerPalette_BeautyKanto[];
+extern const u32 gTrainerPalette_BirdKeeperKanto[];
+extern const u32 gTrainerPalette_Falkner[];
+extern const u32 gTrainerPalette_Rocket[];
+extern const u32 gTrainerPalette_Pryce[];
+extern const u32 gTrainerPalette_Sage[];
+extern const u32 gTrainerPalette_Firebreather[];
+extern const u32 gTrainerPalette_PokemaniacJohto[];
 
 extern const u8 gTrainerBackPic_Brendan[];
 extern const u8 gTrainerBackPic_May[];
@@ -3850,9 +3920,29 @@ extern const u32 gItemIcon_MagmaEmblem[];
 extern const u32 gItemIconPalette_MagmaEmblem[];
 extern const u32 gItemIcon_OldSeaMap[];
 extern const u32 gItemIconPalette_OldSeaMap[];
-
+// New objects
 extern const u32 gItemIcon_Sandwich[];
 extern const u32 gItemIconPalette_Sandwich[];
+
+extern const u32 gItemIcon_RageCandy[];
+extern const u32 gItemIconPalette_RageCandy[];
+
+extern const u32 gItemIcon_Honey[];
+extern const u32 gItemIconPalette_Honey[];
+
+extern const u32 gItemIcon_Casteliacone[];
+extern const u32 gItemIconPalette_Casteliacone[];
+extern const u32 gItemIconPalette_VanillaIceCream[];
+extern const u32 gItemIconPalette_ChocolateIceCream[];
+extern const u32 gItemIconPalette_StrawberryIceCream[];
+
+extern const u32 gItemIcon_Crisps[];
+extern const u32 gItemIconPalette_Crisps[];
+
+extern const u32 gItemIcon_GsBall[];
+extern const u32 gItemIconPalette_GsBall[];
+
+//end new objects
 
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u32 gItemIconPalette_ReturnToFieldArrow[];

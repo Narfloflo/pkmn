@@ -12,7 +12,7 @@ Ranch_Text_Farmer::
 	end
 
 Ranch_Text_Farmer_1:
-	msgbox Ranch_Text_Farmer_Text_1
+	msgbox Ranch_Text_Farmer_Text_1, MSGBOX_NPC
 	release
 	end
 
@@ -35,20 +35,22 @@ Ranch:
 	.2byte ITEM_GREPA_BERRY
 	.2byte ITEM_NONE
 
+Ranch_Text_Miltank::
+	lock
+	faceplayer
+	playmoncry SPECIES_MILTANK, CRY_MODE_NORMAL
+	waitmoncry
+	msgbox Ranch_Text_Miltank_Text_0
+	release
+	end
+
+
 Ranch_Text_Farmer_Text_0:
 	.string "Welcome welcome to the RANCH! Wanna\n"
 	.string "know more about this location?$"
 
 Ranch_Text_Farmer_Text_1:
-	.string "Well... We established this RANCH here\n"
-	.string "and move a few MILTANK and TAUROS\l"
-	.string "here to produce milk. I have a relatives\l"
-	.string "doing that in JOHTO. I think it works\l"
-	.string "well there.\p"
-	.string "This place is a little secluded but we\n"
-	.string "manage with the authorities to build a\l"
-	.string "CYCLING ROAD through here. We can\l"
-	.string "expect a lot of customers!$"
+	.string "Well...\nWe established this RANCH here\land move a few MILTANK and TAUROS to\lproduce milk. I have a relatives\ldoing that in JOHTO. I think it works\lwell for him.\lThis place is a little secluded but we\lmanage with the authorities to build a\lCYCLING ROAD through here. We are\lsupplying every restaurant in HOENN.\lYou probably saw that already right?$"
 
 Ranch_Text_Farmer_Text_2:
 	.string "Humm I see. Well goodbye then.$"
@@ -58,3 +60,6 @@ Ranch_Text_Vendor_Text_0:
 
 Ranch_Text_Vendor_Text_1:
 	.string "Have a good day!$"
+
+Ranch_Text_Miltank_Text_0:
+	.string "Moooh$"

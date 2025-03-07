@@ -1,0 +1,21 @@
+mapscripts Route4_MapScripts {}
+
+script Route4_Text_Picnicker {
+    trainerbattle_single(TRAINER_CAMERON_2, "Hey, let's have a picnic and a battle !", "Oh, I guess my picnic was too distracting !")
+    msgbox(format("Thanks for the battle! Let's enjoy the rest of the day with some snacks."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route4_Text_BlackBelt {
+    trainerbattle_single(TRAINER_CAMERON_3, "I'm in the middle of a KATA\nLet's have a break to destroy you !", "Ahhhhh !!!!")
+    msgbox(format("I'm from the SAFFRON DOJO ! Our master have been defeated by a kid. So we all went out for training."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route4_Text_BlackBelt2 {
+    lock
+    faceplayer
+    msgbox(format("I'm not a TRAINER anymore. I've been beaten so hard that I quit POKéMON to train myself here."))
+    release
+    end
+}

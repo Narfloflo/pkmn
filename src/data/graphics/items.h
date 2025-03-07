@@ -38,6 +38,9 @@ const u32 gItemIcon_TimerBall[] = INCBIN_U32("graphics/items/icons/timer_ball.4b
 const u32 gItemIcon_LuxuryBall[] = INCBIN_U32("graphics/items/icons/luxury_ball.4bpp.lz");
 const u32 gItemIconPalette_LuxuryBall[] = INCBIN_U32("graphics/items/icon_palettes/luxury_ball.gbapal.lz");
 
+const u32 gItemIcon_GsBall[] = INCBIN_U32("graphics/items/icons/gs_ball.4bpp.lz");
+const u32 gItemIconPalette_GsBall[] = INCBIN_U32("graphics/items/icon_palettes/gs_ball.gbapal.lz");
+
 const u32 gItemIcon_PremierBall[] = INCBIN_U32("graphics/items/icons/premier_ball.4bpp.lz");
 
 // Medicine
@@ -739,3 +742,18 @@ const u32 gItemIconPalette_OldSeaMap[] = INCBIN_U32("graphics/items/icon_palette
 
 const u32 gItemIcon_Sandwich[] = INCBIN_U32("graphics/items/icons/sandwich.4bpp.lz");
 const u32 gItemIconPalette_Sandwich[] = INCBIN_U32("graphics/items/icon_palettes/sandwich.gbapal.lz");
+
+const u32 gItemIcon_RageCandy[] = INCBIN_U32("graphics/items/icons/rage_candy_bar.4bpp.lz");
+const u32 gItemIconPalette_RageCandy[] = INCBIN_U32("graphics/items/icon_palettes/rage_candy_bar.gbapal.lz");
+
+const u32 gItemIcon_Honey[] = INCBIN_U32("graphics/items/icons/honey.4bpp.lz");
+const u32 gItemIconPalette_Honey[] = INCBIN_U32("graphics/items/icon_palettes/honey.gbapal.lz");
+
+const u32 gItemIcon_Casteliacone[] = INCBIN_U32("graphics/items/icons/casteliacone.4bpp.lz");
+const u32 gItemIconPalette_Casteliacone[] = INCBIN_U32("graphics/items/icon_palettes/casteliacone.gbapal.lz");
+const u32 gItemIconPalette_StrawberryIceCream[] = INCBIN_U32("graphics/items/icon_palettes/strawberryIceCream.gbapal.lz");
+const u32 gItemIconPalette_ChocolateIceCream[] = INCBIN_U32("graphics/items/icon_palettes/chocolateIceCream.gbapal.lz");
+const u32 gItemIconPalette_VanillaIceCream[] = INCBIN_U32("graphics/items/icon_palettes/vanillaIceCream.gbapal.lz");
+
+const u32 gItemIcon_Crisps[] = INCBIN_U32("graphics/items/icons/pewter_crunchies.4bpp.lz");
+const u32 gItemIconPalette_Crisps[] = INCBIN_U32("graphics/items/icon_palettes/pewter_crunchies.gbapal.lz");

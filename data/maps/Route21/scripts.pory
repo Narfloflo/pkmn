@@ -1,0 +1,42 @@
+mapscripts Route21_MapScripts {}
+
+script Route21_Text_Fisherman {
+    call_if_unset(FLAG_TEMP_1, Route21_Text_FishermanFight)
+    if(flag(FLAG_TEMP_1)== TRUE){
+        faceplayer
+        msgbox(format("I Was just angry that I couldn't catch anything."))
+        release
+        end
+    }
+}
+
+script Route21_Text_FishermanFight {
+    trainerbattle_single(TRAINER_DYLAN_2, "Wanna see my fresh fishes ?", "Plouff !")
+    setflag(FLAG_TEMP_1)
+    cleartrainerflag(TRAINER_DYLAN_2)
+    end
+}
+
+script Route21_Text_Fisherman2 {
+    call_if_unset(FLAG_TEMP_2, Route21_Text_FishermanFight2)
+    if(flag(FLAG_TEMP_2)== TRUE){
+        faceplayer
+        msgbox(format("Oh wait ! I got a bite ! Yeah !"),MSGBOX_AUTOCLOSE)
+        end
+    }
+}
+
+script Route21_Text_FishermanFight2 {
+    trainerbattle_single(TRAINER_DYLAN_2, "Wanna see my fresh fishes ?", "Plouff !")
+    setflag(FLAG_TEMP_2)
+    cleartrainerflag(TRAINER_DYLAN_2)
+    end
+}
+
+script Route21_Text_SwimmerF {
+    lock
+    faceplayer
+    msgbox(format("Where did you caught you POKéMON ? I caught all my mine at sea !"))
+    release
+    end
+}

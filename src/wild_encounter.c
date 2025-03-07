@@ -21,6 +21,7 @@
 #include "constants/items.h"
 #include "constants/layouts.h"
 #include "constants/weather.h"
+#include "rtc.h"
 
 extern const u8 EventScript_RepelWoreOff[];
 
@@ -323,6 +324,23 @@ static u16 GetCurrentMapWildMonHeaderId(void)
         if (gWildMonHeaders[i].mapGroup == gSaveBlock1Ptr->location.mapGroup &&
             gWildMonHeaders[i].mapNum == gSaveBlock1Ptr->location.mapNum)
         {
+            
+            RtcCalcLocalTime();
+            if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(ALTERING_CAVE) &&
+               gSaveBlock1Ptr->location.mapNum != MAP_NUM(ALTERING_CAVE))
+           {
+               if (gLocalTime.hours >= 6 && gLocalTime.hours <= 19)
+               {
+                   i += 0; // day
+               }
+               
+              else if (gWildMonHeaders[i + 1].mapGroup == gSaveBlock1Ptr->location.mapGroup &&
+               gWildMonHeaders[i + 1].mapNum == gSaveBlock1Ptr->location.mapNum)
+               {
+                   i += 1; // Night
+               }
+           }
+
             if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ALTERING_CAVE) &&
                 gSaveBlock1Ptr->location.mapNum == MAP_NUM(ALTERING_CAVE))
             {

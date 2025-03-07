@@ -1,0 +1,21 @@
+mapscripts MahoganyInn_MapScripts {}
+
+script MahoganyInn_Text_Monk {
+    msgbox("Welcome young TRAINER.\nAlas, you won't be able to rest here.\lIt's full.", MSGBOX_NPC)
+    end
+}
+
+script MahoganyInn_Text_Hiker {
+    msgbox("I'm thinking of going through the ICE\nPATH.\lI need some extreme preparation!\lI really hate coldness.", MSGBOX_NPC)
+    end
+}
+
+script MahoganyInn_Text_Camper {
+    msgbox("I don't really like the fact of resting\nin a INN.\lI prefere being surround by nature!", MSGBOX_NPC)
+    end
+}
+
+script MahoganyInn_Text_Picnicker {
+    msgbox("If you had the chance to eat some RAGE\nCANDY, you'd be shocked by the taste!\lIt taste a bit like fish, but in a good\lway.", MSGBOX_NPC)
+    end
+}

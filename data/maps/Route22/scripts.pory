@@ -1,0 +1,23 @@
+mapscripts Route22_MapScripts {}
+
+script Route22_Text_Cooltrainer {
+    trainerbattle_single(TRAINER_JESSICA_3, "I have to check if I'm ready for the\nPOKéMON LEAGUE", "Looks like I'm not strong enough")
+    msgbox(format("Are you a CHAMPION or something ? Because you totally destroyed me."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+
+script Route22_Text_Youngster {
+    lock
+    faceplayer
+    msgbox(format("I went to the building over there, but they kick me off because I have no BADGES. But for some reasons, the GYM are closed..."))
+    release
+    end
+}
+
+script Route22_Text_LeagueSign {
+    lock
+    msgbox(format("POKéMON LEAGUE\nFront Gate"))
+    release
+    end
+}

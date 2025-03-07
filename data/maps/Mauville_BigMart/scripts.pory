@@ -59,43 +59,135 @@ SCRIPT_SelfTrade_Text_YouDontWantToThatsOkay:
 	.string "You dont want to?\n"
     .string "Okay come back anytime$"`
 
-script NewVendor1 {
+script MauvilleBigMart_Text_NewVendor1 {
     lock
     faceplayer
     message(format("Welcome!\pHow may I serve you?"))
     waitmessage
-    pokemart(Vendor1)
+    pokemart(MauvilleBigMart_Mart_NewVendor1)
     msgbox(format("Please come again!"))
     release
 }
 
-mart Vendor1 {
+mart MauvilleBigMart_Mart_NewVendor1 {
     ITEM_TM35
     ITEM_TM47
     ITEM_TM23
     ITEM_TM27
 }
 
-script NewVendor2 {
+script MauvilleBigMart_Text_NewVendor2 {
     lock
     faceplayer
     message(format("Welcome!\pHow may I serve you?"))
     waitmessage
-    pokemart(Vendor2)
+    pokemart(MauvilleBigMart_Mart_NewVendor2)
     msgbox(format("Please come again!"))
     release
 }
 
-mart Vendor2 {
+mart MauvilleBigMart_Mart_NewVendor2 {
     ITEM_MOON_STONE
     ITEM_SUN_STONE
     ITEM_LEAF_STONE
     ITEM_FIRE_STONE
     ITEM_WATER_STONE
-    ITEM_063
-    ITEM_064
+    ITEM_NONE
 }
 
+script MauvilleBigMart_Text_NewVendor3 {
+    lock
+    faceplayer
+    msgbox(format("Welcome!\n Let me check your BADGES\pHow may I serve you?"))
+	if(flag(FLAG_BADGE08_GET) == TRUE){
+		pokemart(Bagde8Vendor)
+		
+	}elif(flag(FLAG_BADGE07_GET) == TRUE){
+		pokemart(Bagde7Vendor)
+		
+	}elif(flag(FLAG_BADGE06_GET) == TRUE){
+		pokemart(Bagde6Vendor)
+		
+	}elif(flag(FLAG_BADGE05_GET) == TRUE){
+		pokemart(Bagde5Vendor)
+		
+	}elif(flag(FLAG_BADGE04_GET) == TRUE){
+		pokemart(Bagde4Vendor)
+		
+	}elif(flag(FLAG_BADGE03_GET) == TRUE){
+		pokemart(Bagde3Vendor)
+		
+	}else{
+		pokemart(Badge2Vendor)
+	}
+    msgbox(format("Please come again!"))
+    release
+	end
+}
+
+mart Badge2Vendor{
+	ITEM_TM39_ROCK_TOMB
+	ITEM_TM08_BULK_UP
+}
+
+mart Bagde3Vendor {
+	ITEM_TM39_ROCK_TOMB
+	ITEM_TM08_BULK_UP
+	ITEM_TM34_SHOCK_WAVE
+}
+
+mart Bagde4Vendor {
+	ITEM_TM39_ROCK_TOMB
+	ITEM_TM08_BULK_UP
+	ITEM_TM34_SHOCK_WAVE
+	ITEM_TM50_OVERHEAT
+}
+
+mart Bagde5Vendor {
+	ITEM_TM39_ROCK_TOMB
+	ITEM_TM08_BULK_UP
+	ITEM_TM34_SHOCK_WAVE
+	ITEM_TM50_OVERHEAT
+	ITEM_TM42_FACADE
+}
+
+mart Bagde6Vendor {
+	ITEM_TM39_ROCK_TOMB
+	ITEM_TM08_BULK_UP
+	ITEM_TM34_SHOCK_WAVE
+	ITEM_TM50_OVERHEAT
+	ITEM_TM42_FACADE
+	ITEM_TM40_AERIAL_ACE
+}
+
+mart Bagde7Vendor {
+	ITEM_TM39_ROCK_TOMB
+	ITEM_TM08_BULK_UP
+	ITEM_TM34_SHOCK_WAVE
+	ITEM_TM50_OVERHEAT
+	ITEM_TM42_FACADE
+	ITEM_TM40_AERIAL_ACE
+	ITEM_TM04_CALM_MIND
+}
+
+mart Bagde8Vendor {
+	ITEM_TM39_ROCK_TOMB
+	ITEM_TM08_BULK_UP
+	ITEM_TM34_SHOCK_WAVE
+	ITEM_TM50_OVERHEAT
+	ITEM_TM42_FACADE
+	ITEM_TM40_AERIAL_ACE
+	ITEM_TM04_CALM_MIND
+	ITEM_TM03_WATER_PULSE
+}
+
+script MauvilleNewMart_Text_Artist {
+	lock
+	faceplayer
+	msgbox(format("Yo ! I want a SODA, but my bill is stuck in the machine !"))
+	release
+	end
+}
 // script MartTutor {
     // lock
     // faceplayer

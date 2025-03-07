@@ -102,3 +102,34 @@ VerdanturfTown_FriendshipRatersHouse_Text_DetestsYou:
 VerdanturfTown_FriendshipRatersHouse_Text_Pikachu:
 	.string "PIKACHU: Pika pika!$"
 
+VerdanturfTown_FriendshipRatersHouse_Text_BirdKeeper::
+	lock
+	faceplayer
+	goto_if_set FLAG_IS_CHAMPION, VerdanturfTown_FriendshipRatersHouse_Text_BirdKeeper_2
+	msgbox VerdanturfTown_FriendshipRatersHouse_Text_BirdKeeper_Text_1
+	release
+	end
+
+VerdanturfTown_FriendshipRatersHouse_Text_BirdKeeper_2:
+	msgbox VerdanturfTown_FriendshipRatersHouse_Text_BirdKeeper_Text_0
+	release
+	end
+
+
+VerdanturfTown_FriendshipRatersHouse_Text_BirdKeeper_Text_0:
+	.string "I come from KANTO. I flew here with my\n"
+	.string "POKéMON.\l"
+	.string "I have to admit that life here is\l"
+	.string "pretty nice!\l"
+	.string "In KANTO we were plagued by some\l"
+	.string "criminal organisation...\l"
+	.string "But I heard a strong TRAINER beat them\l"
+	.string "so they disbanded.$"
+
+VerdanturfTown_FriendshipRatersHouse_Text_BirdKeeper_Text_1:
+	.string "I come from KANTO. I flew here with my\n"
+	.string "POKéMON.\l"
+	.string "I have to admit that life here is\l"
+	.string "pretty nice!\l"
+	.string "In KANTO we were plagued by some\l"
+	.string "criminal organisation...$"

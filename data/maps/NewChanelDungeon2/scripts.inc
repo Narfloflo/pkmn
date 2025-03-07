@@ -1,3 +1,56 @@
 NewChanelDungeon2_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, NewChanelDungeon2_MapScripts_MAP_SCRIPT_ON_LOAD
 	.byte 0
+
+NewChanelDungeon2_MapScripts_MAP_SCRIPT_ON_LOAD:
+	call_if_unset FLAG_UNUSED_0x021, NewChanelDungeon2_Event_NoRaikou
+	call_if_unset FLAG_UNUSED_0x023, NewChanelDungeon2_Event_RaikouGone
+	end
+
+
+NewChanelDungeon2_Event_NoRaikou::
+	setmetatile 16, 49, METATILE_Cave_EntranceCover, TRUE
+	setmetatile 17, 49, METATILE_Cave_EntranceCover, TRUE
+	setmetatile 18, 49, METATILE_Cave_EntranceCover, TRUE
+	setmetatile 16, 50, METATILE_Cave_EntranceCover, TRUE
+	setmetatile 17, 50, METATILE_Cave_EntranceCover, TRUE
+	setmetatile 18, 50, METATILE_Cave_EntranceCover, TRUE
+	end
+
+
+NewChanelDungeon2_EventScript_Raikou::
+	lockall
+	playmoncry SPECIES_RAIKOU, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	seteventmon SPECIES_RAIKOU, 80, ITEM_MAGNET
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, NewChanelDungeon2_EventScript_RaikouCaught
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewChanelDungeon2_EventScript_RaikouCaught
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewChanelDungeon2_EventScript_RaikouFlew
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewChanelDungeon2_EventScript_RaikouFlew
+	waitmessage
+	releaseall
+	return
+
+
+NewChanelDungeon2_EventScript_RaikouCaught::
+	setflag FLAG_UNUSED_0x023
+	goto Common_EventScript_RemoveStaticPokemon
+	return
+
+
+NewChanelDungeon2_EventScript_RaikouFlew::
+	setflag FLAG_UNUSED_0x023
+	goto Common_EventScript_LegendaryFlewAway
+	return
+
+
+NewChanelDungeon2_Event_RaikouGone::
+	removeobject 1
+	end
 

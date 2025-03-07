@@ -1,0 +1,218 @@
+raw`FallarborTown_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, FallarborTown_OnTransition
+	.byte 0
+
+FallarborTown_OnTransition:
+	setflag FLAG_VISITED_FALLARBOR_TOWN
+	setvar VAR_CONTEST_HALL_STATE, 0
+	clearflag FLAG_CONTEST_SKETCH_CREATED
+	end
+
+FallarborTown_EventScript_ExpertM::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY, FallarborTown_EventScript_ExpertMNormal
+	msgbox FallarborTown_Text_ShadyCharactersCozmosHome, MSGBOX_DEFAULT
+	release
+	end
+
+FallarborTown_EventScript_ExpertMNormal::
+	msgbox FallarborTown_Text_RegionKnownForMeteors, MSGBOX_DEFAULT
+	release
+	end
+
+FallarborTown_EventScript_Girl::
+	msgbox FallarborTown_Text_MyPreciousAzurill, MSGBOX_NPC
+	end
+
+FallarborTown_EventScript_Gentleman::
+	msgbox FallarborTown_Text_HaveYouChallengedFlannery, MSGBOX_NPC
+	end
+
+FallarborTown_EventScript_Azurill::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_AZURILL, CRY_MODE_NORMAL
+	msgbox FallarborTown_Text_Azurill, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+FallarborTown_EventScript_BattleTentSign::
+	msgbox FallarborTown_Text_BattleTentSign, MSGBOX_SIGN
+	end
+
+FallarborTown_EventScript_TownSign::
+	msgbox FallarborTown_Text_TownSign, MSGBOX_SIGN
+	end
+
+FallarborTown_EventScript_MoveTutorSign::
+	msgbox FallarborTown_Text_MoveTutorSign, MSGBOX_SIGN
+	end
+
+FallarborTown_Text_ShadyCharactersCozmosHome:
+	.string "Something's happening,\n"
+	.string "and I don't like it!\p"
+	.string "I've seen shady characters wandering\n"
+	.string "in and out of PROF. COZMO's home…$"
+
+FallarborTown_Text_RegionKnownForMeteors:
+	.string "This region's been known for meteors\n"
+	.string "since the olden days.\p"
+	.string "They say METEOR FALLS was gouged out\n"
+	.string "by a falling meteorite long ago.$"
+
+FallarborTown_Text_MyPreciousAzurill:
+	.string "See! Take a look!\n"
+	.string "This is my precious AZURILL!\p"
+	.string "It's slick and smooth and plushy, too!$"
+
+FallarborTown_Text_Azurill:
+	.string "AZURILL: Rooreelooo.$"
+
+FallarborTown_Text_HaveYouChallengedFlannery:
+	.string "Have you already challenged FLANNERY,\n"
+	.string "the LEADER of LAVARIDGE GYM?\p"
+	.string "The girl's grandfather was famous.\n"
+	.string "He was one of the ELITE FOUR in the\l"
+	.string "POKéMON LEAGUE at one point.\p"
+	.string "It wouldn't surprise me to see FLANNERY\n"
+	.string "become a great TRAINER in her own\l"
+	.string "right.$"
+
+FallarborTown_Text_BattleTentSign:
+	.string "BATTLE TENT FALLARBOR SITE\n"
+	.string "“May the Greatest Teams Gather!”$"
+
+FallarborTown_Text_TownSign:
+	.string "FALLARBOR TOWN\n"
+	.string "“A farm community with small gardens.”$"
+
+FallarborTown_Text_MoveTutorSign:
+	.string "MOVE TUTOR'S HOUSE\n"
+	.string "“New moves taught to POKéMON.”$"
+
+`
+
+script FallarborTown_Text_Farmer {
+    lock
+    faceplayer
+    msgbox(format("The soil is so rich here. We have all the best crops of HOENN.\pIt's all thanks to the volcanic ashes !"))
+    release
+    end
+}
+
+script FallarborTown_Text_Lady {
+    lock
+    faceplayer
+    msgbox(format("I'm bored of farming. I want to move somewhere else. But I have no POKéMON..."))
+    release
+    end
+}
+
+script FallarborTown_Text_Farmer2 {
+    lock
+    faceplayer
+    msgbox(format("Wanna taste some LOCAL PRODUCTS ? Here have it !"))
+    playfanfare(MUS_OBTAIN_ITEM)
+    giveitem(ITEM_MENTAL_HERB, 1)
+    waitfanfare
+    msgbox("{PLAYER} received a MENTAL HERB.")
+    release
+    end
+}
+
+script FallarborTown_Text_LassSr {
+    lock
+    faceplayer
+    msgbox(format("Hello, you are a student too ? No ?\nLucky bastard..."))
+    release
+    end
+}
+
+script FallarborTown_Text_LassJr {
+    lock
+    faceplayer
+    msgbox(format("I'm suppose to run some errands :\nA new eyelash, some shoes, a ribbon and a sandwich.\pIt doesn't look like SCHOOL material..."))
+    release
+    end
+}
+
+script FallarborTown_Text_BreederF {
+    lock
+    faceplayer
+    msgbox(format("It looks like you are taking care of your POKéMON correctly. I like it !"))
+    release
+    end
+}
+
+script FallarborTown_Text_Judge {
+    lock
+    faceplayer
+    msgbox(format("I'm pretty sure there is a CONTEST HALL here no ?\pWhat it's in LILYCOVE CITY ??! I'm totally lost then..."))
+    release
+    end
+}
+
+script FallarborTown_Text_BugCatcher {
+    lock
+    faceplayer
+    msgbox(format("No I'm not taking care of crops here, I'm digging for GOLD NUGGET !"))
+    release
+    end
+}
+
+script FallarborTown_Text_Man {
+    lock
+    faceplayer
+    msgbox(format("La la-la, my cabbages are the best ! NOTHING TO DO WITH MY NEIGHBORS !"))
+    release
+    end
+}
+
+script FallarborTown_Text_Man2 {
+    lock
+    faceplayer
+    msgbox(format("My cabbages are big and delicious ! Nobody is complaining about it."))
+    release
+    end
+}
+
+script FallarborTown_Text_PokefanM {
+    lock
+    faceplayer
+    msgbox(format("Have you seen, there is this small COMMERCIAL PLACE that just opened.\pI hope we will have some tourist with it."))
+    release
+    end
+}
+
+script FallarborTown_Text_Aroma {
+    lock
+    faceplayer
+    msgbox(format("I love the smell of this town. So refreashing ! And the vegetables are the best !"))
+    release
+    end
+}
+
+script FallarborTown_Text_SchoolSign {
+    lock
+    msgbox(format("FALLARBOR TOWN SCHOOL"))
+    release
+    end
+}
+
+script FallarborTown_Text_PokefanF {
+    lock
+    faceplayer
+    msgbox(format("My kids are in SCHOOL so I can be all day with my PIKACHU."))
+    release
+    end
+}
+
+script FallarborTown_Text_ScientistManDialogue {
+    lock
+    msgbox(format("... Yes obviously... We can invest into that technology... What about this processor?... DEVON can grant you some funds..."))
+    release
+    end
+}

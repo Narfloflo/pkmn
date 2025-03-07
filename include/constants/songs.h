@@ -541,6 +541,34 @@
 #define PH_NURSE_HELD               608
 #define PH_NURSE_SOLO               609
 
+#define MUS_GSC_ECRUTEAK            610
+#define MUS_GSC_ROUTE34             611
+#define MUS_GSC_BURNED_TOWER        612
+#define MUS_GSC_WILD                613
+#define MUS_GSC_SURF                614
+#define MUS_GSC_KIMONO              615
+#define MUS_CHRONO_ZEAL             616
+#define MUS_CHRONO_SILENT_LIGHT     617
+#define MUS_GSC_GOLDENROD           618
+#define MUS_GSC_ILEX_FOREST         619
+#define MUS_GSC_ROUTE30             620
+#define MUS_GSC_CHERRYGROVE         621
+#define MUS_GSC_NEW_BARK            622
+#define MUS_GSC_ROUTE29             623
+#define MUS_GSC_PARK                624
+#define MUS_GSC_ROUTE27             625
+#define MUS_INTRO_CHAMPION          626
+#define MUS_VS_GIOGIO               627
+#define MUS_VS_JOHTO_TRAINER        628
+#define MUS_GSC_CYCLING             629
+#define MUS_ELM_LAB                 630
+#define MUS_ENCOUNTER_KIMONO        631
+#define MUS_CHRONO_LEENE_SQUARE     632
+#define MUS_GSC_SPROUT_TOWER        633
+#define MUS_VS_JOHTO_LEADER         634
+#define MUS_ENCOUNTER_SAGE          635
+
+
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 
 #define MUS_NONE                    0xFFFF

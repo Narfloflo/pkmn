@@ -1,1 +1,100 @@
 mapscripts Verdanturf_Multiple_Houses_MapScripts {}
+
+script Verdanturf_Multiple_Houses_Text_Skitty {
+    lock
+    faceplayer
+    msgbox(format("{PLAYER}: I wonder where this POKéMON's trainer is..."))
+    playmoncry(SPECIES_SKITTY, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox("{PLAYER}: Urgh!I feel like it's trying\nto kill me!")
+    setwildbattle(SPECIES_SKITTY, 100)
+    dowildbattle
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+		removeobject(10)
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_WON){
+		removeobject(10)
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_RAN){
+		removeobject(10)
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_PLAYER_TELEPORTED){
+		removeobject(10)
+	}
+	return
+}
+
+script Verdanturf_Multiple_Houses_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("There is nothing that interesting to do\nin VERDANTURF.\lAll the kids are moving to MAUVILLE\lafter they are graduated.\lSo there are only older people here.\lBut it's fine!"))
+    release
+    end
+}
+
+script Verdanturf_Multiple_Houses_Text_PokefanF {
+    lock
+    faceplayer
+    msgbox(format("Ah, the aroma of flowers in Verdanturf\nis simply delightful. You know that\lthe FLOWER SHOP in ROUTE 104 is taking\lflowers from here?\lA bouquet from there can convey more\lthan words!"))
+    release
+    end
+}
+
+script Verdanturf_Multiple_Houses_Text_AthleteM {
+    lock
+    faceplayer
+    msgbox(format("When I was a famous athlete, I was\nsponsored by RYDEL!\lBut I took an arrow in the knee...\l{PLAYER}: What the what?!"))
+    release
+    end
+}
+
+script Verdanturf_Multiple_Houses_Text_Woman {
+    lock
+    faceplayer
+    msgbox(format("My husband was an athlete but he got\ninjured during a marathon on MT.\lCHIMNEY.\lSince that day, he still wear his\lathlete clothes.\lI'm afraid his nostalgic..."))
+    release
+    end
+}
+
+script Verdanturf_Multiple_Houses_Text_BaldMan {
+    lock
+    faceplayer
+    msgbox(format("My daughter's husband is a total\nparasite!\lHe can't cook, wash things because he\lsaid he has to train outside.\lBut this idiot is just delusional about\lhimself.\lSo I'm doing all the domestics tasks\lbecause my daughter cannot!\lI'm so pissed..."))
+    release
+    end
+}
+
+script Verdanturf_Multiple_Houses_Text_Boy {
+    lock
+    faceplayer
+    msgbox(format("I wonder if there are other POKéMON\noutside?\lDo you think that in others REGIONS\lsome POKéMON are unknown by us in\lHOENN?"))
+    release
+    end
+}
+
+script Verdanturf_Multiple_Houses_Text_WarriorF {
+    lock
+    faceplayer
+    msgbox(format("If I were a few decades younger, I\nwould explore the world with my\lPOKéMON.\lToday the only thing I'm capable of is\lto climb MT. CHIMNEY to get into\lLAVARIDGE's HOT BATH!"))
+    release
+    end
+}
+
+script Verdanturf_Multiple_Houses_Text_PokefanM {
+    lock
+    faceplayer
+    msgbox(format("A few time ago there were a CONTEST\nHALL in VERDANTURF.\lIt was replace by a BATTLE TENT, which\lis pretty nice too.\lIt brings us a few tourists. That's not\lso bad!"))
+    release
+    end
+}
+
+script Verdanturf_Multiple_Houses_Text_Fatman {
+    lock
+    faceplayer
+    msgbox(format("I have a cousin in KANTO.\nHe spend his time napping in his\ltown...\lHe told me his dreams were eaten.\lHe is so weird!"))
+    release
+    end
+}

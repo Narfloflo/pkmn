@@ -312,6 +312,7 @@ OldaleTown_Movement_RivalApproachPlayer3:
 
 OldaleTown_Movement_RivalExit:
 	walk_down
+	jump_down
 	walk_down
 	walk_down
 	walk_down
@@ -400,3 +401,107 @@ OldaleTown_Text_TownSign:
 	.string "“Where things start off scarce.”$"
 
 `
+
+script OldaleTown_Text_Poochyena {
+	lock
+	faceplayer
+	playmoncry(SPECIES_POOCHYENA, CRY_MODE_NORMAL)
+	waitmoncry
+	msgbox(format("Booh!\n{PLAYER}: This POOCHYENA is GROWLING to scare the WILD POKéMON."))
+	release
+	end
+}
+
+script OldaleTown_Text_FatGuy {
+	lock
+	faceplayer
+	msgbox(format("Hey you ! I, had a beautiful POKéMON but it left... I can't give it to you then."))
+	release
+	end
+}
+
+script OldaleTown_Text_ExpertM {
+	lock
+	faceplayer
+	checkplayergender
+	goto_if_eq(VAR_RESULT, MALE, OldaleTown_Text_ExpertM_GonnafightMay)
+	goto_if_eq(VAR_RESULT, FEMALE, OldaleTown_Text_ExpertM_GonnafightBrendan)
+	end
+}
+
+script OldaleTown_Text_ExpertM_GonnafightMay {
+	if(flag(FLAG_ADVENTURE_STARTED) == FALSE){
+		switch(var(VAR_STARTER_MON)){
+			case 0: call(OldaleTown_Text_ExpertM_GonnafightMayTreecko)
+			case 1: call(OldaleTown_Text_ExpertM_GonnafightMayTorchic)
+			case 2: call(OldaleTown_Text_ExpertM_GonnafightMayMudkip)
+		}
+		end
+	}else{
+		msgbox("Hello {PLAYER}!\nHope you enjoy your life in LITTLEROOT!",MSGBOX_NPC)
+		end
+	}
+}
+
+script OldaleTown_Text_ExpertM_GonnafightMayTreecko {
+	msgbox("Oh you are {PLAYER}? You want an\nadvice?\lYour TREECKO won't last long against\lTORCHIC and MUDKIP MAY has in her team.\lYeah, it's great to be BIRCH's\ldaughter.", MSGBOX_NPC)
+	end
+}
+
+script OldaleTown_Text_ExpertM_GonnafightMayTorchic {
+	msgbox("Oh you are {PLAYER}? You want an\nadvice?\lYour TORCHIC won't last long against\lthe TREECKO and MUDKIP MAY has in her\lteam.\lYeah, it's great to be BIRCH's\ldaughter.", MSGBOX_NPC)
+	end
+}
+
+script OldaleTown_Text_ExpertM_GonnafightMayMudkip {
+	msgbox("Oh you are {PLAYER}? You want an\nadvice?\lI think you can fight MAY without\ldifficulties with your MUDKIP\lagainst her TORCHIC and TREECKO.\lYeah,it's great to be BIRCH's\ldaughter.\lBut I hope you'll beat this spoiled\lbrat!", MSGBOX_NPC)
+	end
+}
+
+script OldaleTown_Text_ExpertM_GonnafightBrendan {
+	if(flag(FLAG_ADVENTURE_STARTED) == FALSE){
+		switch(var(VAR_STARTER_MON)){
+			case 0: call(OldaleTown_Text_ExpertM_GonnafightBrendanTreecko)
+			case 1: call(OldaleTown_Text_ExpertM_GonnafightBrendanTorchic)
+			case 2: call(OldaleTown_Text_ExpertM_GonnafightBrendanMudkip)
+		}
+		end
+	}else{
+		msgbox("Hello {PLAYER}!\nHope you enjoy your life in LITTLEROOT!",MSGBOX_NPC)
+		end
+	}
+}
+
+script OldaleTown_Text_ExpertM_GonnafightBrendanTreecko {
+	msgbox("Oh you are {PLAYER}? You want an\nadvice?\lYour TREECKO won't last long against\lTORCHIC and MUDKIP BRENDAN has in his team.\lYeah, it's great to be BIRCH's son .", MSGBOX_NPC)
+	end
+}
+
+script OldaleTown_Text_ExpertM_GonnafightBrendanTorchic {
+	msgbox("Oh you are {PLAYER}? You want an\nadvice?\lYour TORCHIC won't last long against\lthe TREECKO and MUDKIP BRENDAN has in his\lteam.\lYeah, it's great to be BIRCH's son.", MSGBOX_NPC)
+	end
+}
+
+script OldaleTown_Text_ExpertM_GonnafightBrendanMudkip {
+	msgbox("Oh you are {PLAYER}? You want an\nadvice?\lI think you can fight BRENDAN without\ldifficulties with your MUDKIP\lagainst her TORCHIC and TREECKO.\lYeah,it's great to be BIRCH's son.\lBut I hope you'll beat this spoiled\lbrat!", MSGBOX_NPC)
+	end
+}
+
+script OldaleTown_Text_Boy{
+	if(flag(FLAG_IS_CHAMPION) == TRUE){
+	msgbox("Hey! Heard about the old lady who lives\na bit north from here? I heard she left\lher home finally to dig somewhere...", MSGBOX_NPC)
+	end	
+	}elif(flag(FLAG_BADGE05_GET)){
+		msgbox("Hey! You got PETALBURG's BADGE?\nThat means now you can use SURF!\lWhy don't you check a bit north, there\lis a river that leads to ROUTE 117!",MSGBOX_NPC)
+		end
+	}else{
+		msgbox("Hey! Oldale is a pretty boring city.\nBut it's at the junction bitween ROUTE\l102 and 103. There are a few places\laround that are not reachable yet!\lI won't tell you more now haha!",MSGBOX_NPC)
+		end
+	}
+	
+}
+
+script OldaleTown_Text_MoveLearnerSign {
+	msgbox("MOVE LEARNER's HOUSE", MSGBOX_SIGN)
+	end
+}

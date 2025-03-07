@@ -948,6 +948,19 @@ Dewford_Text_TrainingGround::
 	end
 
 
+Dewford_Text_Battle::
+	lock
+	msgbox Dewford_Text_Battle_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, DewfordBattleRun
+	waitmovement OBJ_EVENT_ID_PLAYER
+	release
+	end
+
+
+DewfordBattleRun:
+	walk_fast_down
+	step_end
+
 Dewford_Text_BeachVendor_Text_0:
 	.string "Hello there, need anything ?$"
 
@@ -1016,3 +1029,8 @@ Dewford_Text_Doll_Text_0:
 
 Dewford_Text_TrainingGround_Text_0:
 	.string "TRAINING GROUND at the left$"
+
+Dewford_Text_Battle_Text_0:
+	.string "HEY !\n"
+	.string "Get out of here ! We are in a middle of a\l"
+	.string "BATTLE !$"

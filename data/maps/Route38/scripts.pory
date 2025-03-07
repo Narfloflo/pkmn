@@ -1,0 +1,42 @@
+mapscripts Route38_MapScripts {}
+
+script Route38_Text_Sailor {
+    trainerbattle_single(TRAINER_MADELINE_3, "I explore the seven seas with my\nPOKéMON.\lWe are unmatch!","What a formidable battle!")
+    msgbox("All kinds of people around the world\nlive happily with POKéMON.", MSGBOX_NPC)
+    end
+}
+
+script Route38_Text_Beauty {
+    trainerbattle_single(TRAINER_MADELINE_4, "Are you going to MOOMOO FARM too?","Oh wow, I need a break.")
+    msgbox("MOOMOO MILK is good for beauty and\nhealth.\lAnd it's cheaper than plastic surgery!", MSGBOX_NPC)
+    end
+}
+
+script Route38_Text_Lass {
+    trainerbattle_single(TRAINER_JENNY_2, "Wanna see my POKéMON before I return to\nschool?","I lost because I didn't listen in\nschool...")
+    msgbox("When I see a POKéMON, it soothes my\nnerves.", MSGBOX_NPC)
+    end
+}
+
+script Route38_Text_RematchBoy{
+    lock
+    faceplayer
+    msgbox("Oh hello!\nYou want me to ask all the TRAINERS in\lRoute 38 and 39 to rematch you?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1){
+        playse(SE_POKENAV_CALL)
+        waitse
+        cleartrainerflag(TRAINER_MADELINE_3)
+        cleartrainerflag(TRAINER_MADELINE_4)
+        cleartrainerflag(TRAINER_JENNY_2)
+        cleartrainerflag(TRAINER_JENNY_3)
+        cleartrainerflag(TRAINER_JENNY_4)
+        cleartrainerflag(TRAINER_DIANA_2)
+        playse(SE_POKENAV_HANG_UP)
+        waitse
+        msgbox("It's done! Fresh as new.", MSGBOX_NPC)
+    }else{
+        msgbox("Oh huh okay!\nI'll get back to my homework then.", MSGBOX_NPC)
+    }
+    release
+    end
+}

@@ -1,0 +1,83 @@
+mapscripts OakLab_MapScripts {}
+
+
+script OakLab_Text_ScientistF {
+    lock
+    faceplayer
+    msgbox(format("We are the top class of Scientist in\nthe world. Yet we are only a team of\lfour...\l{PLAYER}: Like GAMEFREAK?"))
+    release
+    end
+}
+
+script OakLab_Text_Scientist1 {
+    lock
+    faceplayer
+    msgbox(format("We sent a POKéDEX to PROF. BIRCH a few month ago. Hummm... Looks like he gave it to you ? Seriously ?"))
+    release
+    end
+}
+
+script OakLab_Text_Scientist2 {
+    lock
+    faceplayer
+    msgbox(format("You know PROF. OAK's grandchildren are really adventurous: DAISY is mapping the whole REGIONS. And BLUE was KANTO's CHAMPION for five minutes. I heard he kept crying somewhere..."))
+    release
+    end
+}
+
+script OakLab_Text_ProfOak {
+    lock
+    faceplayer
+    if(defeated(TRAINER_NORMAN_4)){
+        msgbox(format("Well {PLAYER}, how is your quest\ndoing?"))
+    }else{
+        msgbox(format("Hello, who are you?\n.........................\lSo {PLAYER}, BIRCH gave you a POKéDEX?\l You know it's my device?\lWhat you are HOENN's CHAMPION?\lI can probably help you in your\lquest!\lBut before that did you fought\lagainst all the GYM LEADER?"))
+        checkplayergender
+        goto_if_eq(VAR_RESULT, MALE, OakLab_Text_ProfOakMalePlayer)
+        goto_if_eq(VAR_RESULT, FEMALE, OakLab_Text_ProfOakFemalePlayer)   
+    }
+    release
+    end
+}
+
+script OakLab_Text_ProfOakMalePlayer {
+   if(defeated(TRAINER_ROXANNE_2) && defeated(TRAINER_ROXANNE_2) && defeated(TRAINER_ROXANNE_4) && defeated(TRAINER_BRAWLY_4) && defeated(TRAINER_WATTSON_4) && defeated(TRAINER_FLANNERY_2)){
+        msgbox(format("Ahah you couldn't fought against\nERIKA? Well I've heard that she\ldon't let boys coming in her GYM,\lso it doesn't matter.\lAnyway, since you came here, I\lneed to test you myself!\lAre you ready?"),MSGBOX_YESNO)
+        if(var(VAR_RESULT)== 1){
+            goto(OakLab_Text_ProfOakProperBattle)
+        }else{
+            msgbox(format("Get ready and come back to me then\n{PLAYER}!"))
+        }
+    }else{
+        msgbox("Looks like you haven't fought\nagainst the GYM LEADERS...\lI think if you go to their CITIES,\lyou'll have some clue about their\llocation.")  
+    }
+    release
+        end
+}
+
+script OakLab_Text_ProfOakFemalePlayer {
+   if(defeated(TRAINER_ROXANNE_2) && defeated(TRAINER_ROXANNE_2) && defeated(TRAINER_ROXANNE_4) && defeated(TRAINER_BRAWLY_2) && defeated(TRAINER_BRAWLY_4) && defeated(TRAINER_WATTSON_4) && defeated(TRAINER_FLANNERY_2)){
+        msgbox(format("Ah! Perfect!\nYou really are a skilled TRAINER!\lWell, since you came here, I\lneed to test you myself!\lAre you ready?"),MSGBOX_YESNO)
+        if(var(VAR_RESULT)== 1){
+            goto(OakLab_Text_ProfOakProperBattle)
+        }else{
+            msgbox(format("Get ready and come back to me then\n{PLAYER}!"))
+        }
+    }else{
+        msgbox("Looks like you haven't fought\nagainst the GYM LEADERS...\lI think if you go to their CITIES,\lyou'll have some clue about their\llocation.")
+    }
+     release
+        end
+}
+
+script OakLab_Text_ProfOakProperBattle {
+    trainerbattle_single(TRAINER_NORMAN_4, "It feel revigorating!", "Great great!",OakLab_Text_ProfOakPostBattle)
+}
+
+script OakLab_Text_ProfOakPostBattle {
+    msgbox("You are strong enough to get this\nobject.")
+    giveitem(ITEM_OAKS_PARCEL)
+    msgbox(format("Urh... I don't really like asking you\nto do errands, but can you bring that\lto my old friend KURT in AZALEA?\lYes it's in JOHTO; you should be able\lto reach the REGION through the gates\lin ROUTE 22."))
+    release
+    end
+}

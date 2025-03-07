@@ -1,0 +1,100 @@
+raw`mauvillectrcomm1_MapScripts::
+	.byte 0
+`
+
+script MauvilleUnderground_Text_Roberto {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_ISABEL_2)){
+        trainerbattle_single(TRAINER_ISABEL_2, "You know, a kid is not suppose to run\naround here ?", "Oh damn !")
+    }if(defeated(TRAINER_ISABEL_2)){
+        goto (MauvilleUnderground_Text_RobertoRematch)
+    }
+    release
+    end
+}
+
+script MauvilleUnderground_Text_RobertoRematch {
+    lock
+    faceplayer
+    msgbox("Want a rematch kiddo ?", MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        cleartrainerflag(TRAINER_ISABEL_2)
+        trainerbattle_single(TRAINER_ISABEL_2,"This time I'll get you", "Damn it, again !")
+    }else{
+        msgbox("Oh I see.")
+    }
+    release
+    end
+}
+
+script MauvilleUnderground_Text_Roberta {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_ISABEL_3)){
+        trainerbattle_single(TRAINER_ISABEL_3, "I need to keep the wild POKéMON away\nfrom the workers.\pBut I have some time for a battle !", "Well, thanks for the break !")
+    }if(defeated(TRAINER_ISABEL_3)){
+        goto (MauvilleUnderground_Text_RobertaRematch)
+    }
+    release
+    end
+}
+
+script MauvilleUnderground_Text_RobertaRematch {
+    lock
+    faceplayer
+    msgbox("Want a rematch ?", MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        cleartrainerflag(TRAINER_ISABEL_3)
+        trainerbattle_single(TRAINER_ISABEL_3,"I can't lose again !", "Oh my ARCEUS...")
+    }else{
+        msgbox("I don't have the time either.")
+    }
+    release
+    end
+}
+
+script MauvilleUnderground_Text_Worker {
+    lock
+    faceplayer
+    msgbox(format("You know the daft WATTSON guy wanted\nto improve the capacities of MAUVILLE\lCITY with an underground GENERATOR. It\lwas before his NEW MAUVILLE Project."))
+    release
+    end
+}
+
+script MauvilleUnderground_Text_ScientistF {
+    lock
+    faceplayer
+    msgbox(format("WATTSON gave us the job to maintained\nthe electricity flowing in MAUVILLE.\lThis place is taking the electricity\lgenerated in NEW MAUVILLE and\ldistribute it in the entire city!"))
+    release
+    end
+}
+
+script MauvilleUnderground_Text_ScientistM {
+    lock
+    faceplayer
+    msgbox(format("This place is decaying really fast!\nI wish we could have a modern way to\lgenerate electricity, like a wind\lturbine for example.\lA friend of mine in SINNOH told me they\lhave that!"))
+    release
+    end
+}
+
+script MauvilleUnderground_Text_Worker2 {
+    lock
+    faceplayer
+    msgbox(format("This turbine is totally rusty.\nWe need the strength of a hundred\lperson, so my MACHOP is helping me!"))
+    release
+    end
+}
+
+script MauvilleUnderground_Text_Machop {
+    lock
+    faceplayer
+    playmoncry(SPECIES_MACHOP, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox(format("Chooo Chammm!"))
+    playse(SE_EFFECTIVE)
+    waitse
+    msgbox("This POKéMON is taking all his strength\nto activate the turbine")
+    release
+    end
+}

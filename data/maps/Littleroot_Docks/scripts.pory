@@ -1,0 +1,50 @@
+raw`Littleroot_Docks_MapScripts::
+	.byte 0
+`
+script LittleRootDocks_Text_Sailor {
+    lock
+    faceplayer
+    msgbox(format("No I can't let you in. It is restricted to authorized people only.\pWhat's inside ? Well basically this is the commercial docks for all the REGION. I'm pretty sure that theTRUCK you came from at the beggining of the GAME came from here.\p{PLAYER} : What the... ?"))
+    release
+    end
+}
+
+script LittleRootDocks_Text_Sailor2 {
+    lock
+    faceplayer
+    msgbox(format("I have to move a few things in the warehouse, but I don't know where to start !"))
+    release
+    end
+}
+
+script LittleRootDocks_Text_Woman {
+    lock
+    faceplayer
+    msgbox(format("The guy around is moving all around and basically wasting time. I think I should call someone to fire him.\nWhat a useless man..."))
+    release
+    end
+}
+
+script LittleRootDocks_Text_Worker {
+    lock
+    faceplayer
+    msgbox(format("There are a few things to do here, but honestly that's a lazy job !"))
+    release
+    end
+}
+
+script LittleRootDocks_Text_Truck {
+    lock
+    faceplayer
+    msgbox(format("{PLAYER} : Looks like the TRUCK that brought me to LITTLEROOT TOWN."))
+    release
+    end
+}
+
+script LittleRootDocks_Text_Girl {
+    lock
+    faceplayer
+    msgbox(format("I love this BEACH just a little south from LITTLEROOT TOWN. I come fishing everydays !"))
+    release
+    end
+}

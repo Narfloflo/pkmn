@@ -1,0 +1,31 @@
+mapscripts Route1_MapScripts {}
+
+script Route1_Text_MartVendor {
+    lock
+    faceplayer
+    msgbox(format("I had some free samples to give to rookies, but I'm out of POTIONS."))
+    release
+    end
+}
+
+script Route1_Text_Guy {
+    lock
+    faceplayer
+    msgbox(format("Hey young lad ! Nowadays there are more and more TRAINERS around here. PALLET TOWN is becoming famous thanks to the three colors prodigies !"))
+    release
+    end
+}
+
+script Route1_Text_RouteSign {
+    lock
+    faceplayer
+    msgbox(format("ROUTE 1\nPALLET TOWN - VIRIDIAN CITY"))
+    release
+    end
+}
+
+script Route1_Text_BugCatcher {
+    trainerbattle_single(TRAINER_KOJI_3, "Hey ! Can we fight please ?", "Terrible !")
+    msgbox(format("I'm glad I could battle you ! Now I'm improving my skill !"), MSGBOX_AUTOCLOSE)
+    end
+}

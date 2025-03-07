@@ -1,0 +1,8 @@
+mapscripts NorthernPath_MapScripts {
+    MAP_SCRIPT_ON_RESUME:NorthernPath_OnResume
+}
+
+script NorthernPath_OnResume {
+    setdivewarp(MAP_HOENN_JOHTO_PATH,9,47)
+    end
+}
