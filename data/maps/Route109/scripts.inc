@@ -592,3 +592,28 @@ Route109_Text_TrainerTipsSign:
 	.string "always have identical stats.\p"
 	.string "POKéMON raised by TRAINERS are said\n"
 	.string "to grow stronger than wild POKéMON.$"
+
+Route109_Text_SwimmerF_1::
+	lock
+	faceplayer
+	msgbox Route109_Text_SwimmerF_1_Text_0
+	release
+	end
+
+
+Route109_Text_SwimmerF_2::
+	lock
+	msgbox Route109_Text_SwimmerF_2_Text_0
+	release
+	end
+
+
+Route109_Text_SwimmerF_1_Text_0:
+	.string "Wow!\n"
+	.string "Get out my sun!$"
+
+Route109_Text_SwimmerF_2_Text_0:
+	.string "ZZZZZZZzzzz...\n"
+	.string "{PLAYER}: I know someone who's\l"
+	.string "gonna be a crisp in a few\l"
+	.string "moments...$"

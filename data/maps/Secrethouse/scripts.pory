@@ -1,0 +1,16 @@
+mapscripts Secrethouse_MapScripts {}
+
+script Secrethouse_Text_Man {
+    msgbox("I've never seen you before.\nWho are you? A HOENN citizen?\lPlease don't spread the word that we\llive here.\lI don't want to see tourists...", MSGBOX_NPC)
+    end
+}
+script Secrethouse_Text_OldMan {
+    msgbox("Do you want to know more about the\nhistory of this place?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == TRUE){
+        msgbox("This town used to be a major city a\nlong time ago.\lIt was a really long time ago.\lThe ancient civilization who built the\lMIRAGE TOWER was settled here.\lThe desert was a very fertile place\lwith a guardian living in a cave,\lwatching over these people.\lBut at some point a tragedy occured.\lThe guardian was locked in his cave and\lthe environment became harsh.\lThe civilization collapsed, but we\lstay here.\lWe are not a lot, but we can survive.\lThat's more than enough!", MSGBOX_NPC)
+        end   
+    }else{
+        msgbox("Alright, have a good day kiddo!", MSGBOX_NPC)
+        end
+    }
+}

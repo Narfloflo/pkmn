@@ -1,0 +1,15 @@
+mapscripts PacifidlogDungeon_MapScripts {}
+
+script ViridianSongs_EventMove_Upstairs {
+    lock
+    faceplayer
+    msgbox(format("{PLAYER}: I shouldn't go upstairs..."))
+    applymovement(OBJ_EVENT_ID_PLAYER,ViridianSongs_Movement_Upstairs)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    release
+    end
+}
+
+movement ViridianSongs_Movement_Upstairs {
+    walk_left
+}

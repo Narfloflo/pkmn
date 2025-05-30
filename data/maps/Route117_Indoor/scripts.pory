@@ -1,0 +1,25 @@
+mapscripts Route117_Indoor_MapScripts {}
+
+script Route117_Indoor_Text_Aroma {
+    msgbox("You know that my LINOONE found a RARE\nCANDY in the grass?\lMy ZIGZAGOON couldn't. I wonder why?\l", MSGBOX_NPC)
+    end
+}
+
+
+script Route117_Indoor_Text_Zigzagoon {
+    playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_NORMAL)
+    msgbox("Ziggy?", MSGBOX_NPC)
+    end
+}
+
+
+script Route117_Indoor_Text_SchoolGirl {
+    msgbox("I fought against WHISMUR, and my\nPOKéMON now have a lot of HP!", MSGBOX_NPC)
+    end
+}
+
+
+script Route117_Indoor_Text_SchoolBoy {
+    msgbox("If you train you POKéMON earlier,\nthey'll have better EV.", MSGBOX_NPC)
+    end
+}

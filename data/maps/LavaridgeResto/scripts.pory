@@ -1,0 +1,33 @@
+mapscripts LavaridgeResto_MapScripts {}
+
+script LavaridgeRest_Text_Vendor{
+    lock
+    faceplayer
+	message("Welcome, What can I do for you?")
+	waitmessage
+	pokemart(LavaridgeRest_RestoPubItems)
+	msgbox("Be careful in the VOLCANO.")
+	release
+}
+
+mart LavaridgeRest_RestoPubItems {
+    ITEM_WHTICECREAM
+	ITEM_LAVA_COOKIE
+	ITEM_SANDWICH
+	ITEM_SODA_POP
+	ITEM_LEMONADE
+	ITEM_FRESH_WATER
+}
+
+script LavaridgeRest_Text_Scientist1 {
+	msgbox("This place is the best to study\nvolcanic activity.\lBut you have to be ready for the heat.\lAnd I hate that...", MSGBOX_NPC)
+	end
+}
+script LavaridgeRest_Text_Scientist2 {
+	msgbox("You should eat an ICE CREAM if you are\nwarm.\lMe? No, I'm fine, I just enjoy ICE\lCREAM because it's tasty!", MSGBOX_NPC)
+	end
+}
+script LavaridgeRest_Text_Kindler {
+	msgbox("I'm fed up with the GYM's temperature. So\nI'm resting here.", MSGBOX_NPC)
+	end
+}

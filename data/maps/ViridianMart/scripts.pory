@@ -1,0 +1,39 @@
+mapscripts ViridianMart_MapScripts {}
+
+script ViridianMart_Vendor {
+    lock
+    faceplayer
+	msgbox(format("Welcome!\p How may I serve you?"))
+	waitmessage
+	pokemart(ViridianMartItems)
+	msgbox("Please come again!")
+	release
+    end
+}
+
+mart ViridianMartItems {
+    ITEM_POKE_BALL
+	ITEM_SUPER_POTION
+	ITEM_REVIVE
+	ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+    ITEM_ESCAPE_ROPE
+    ITEM_REPEL
+    ITEM_HARBOR_MAIL
+}
+
+script ViridianMart_Text_BugCatcher {
+    lock
+    faceplayer
+    msgbox(format("This shop sells many ANTIDOTES! Great because I need to go throught VIRIDIAN FOREST!"))
+    release
+    end
+}
+
+script ViridianMart_Text_Oldman {
+    lock
+    faceplayer
+    msgbox(format("They refilled the stocks!\nWe now have a lot of POTIONS"))
+    release
+    end
+}

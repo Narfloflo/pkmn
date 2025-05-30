@@ -1,0 +1,30 @@
+mapscripts CianwoodInside_MapScripts {}
+
+script CianwoodInside_Text_Photografer {
+    msgbox("Hum... I'm sorry but I can't take any\npicture now.\lI need to fix my camera.",MSGBOX_NPC)
+    end
+}
+
+script CianwoodInside_Text_Blackbelt {
+    msgbox("I need to train really hard to earn my\nplace at the GYM.\lBut I also want to start a family...\lDamn!",MSGBOX_NPC)
+    end
+}
+
+script CianwoodInside_Text_Vendor {
+    lock
+    faceplayer
+    message(format("Oh hello, I sell medicines. Have a\nlook."))
+    waitmessage
+    pokemart(CianwoodInsideVendor)
+    msgbox(format("Please come again!"))
+    release
+}
+
+mart CianwoodInsideVendor {
+    ITEM_BERRY_JUICE
+    ITEM_HEAL_POWDER
+    ITEM_ENERGY_ROOT
+    ITEM_ENERGY_POWDER
+    ITEM_REVIVAL_HERB
+    ITEM_SACRED_ASH
+}

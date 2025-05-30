@@ -1,0 +1,86 @@
+mapscripts BlackthornCity_MapScripts {}
+
+script BlackthornCity_Text_TownSign {
+    lock
+    faceplayer
+    msgbox(format("BLACKTHORN CITY\pA Quiet Mountain Retreat"))
+    release
+    end
+}
+
+script BlackthornCity_Text_BlackBelt {
+    lock
+    faceplayer
+    msgbox(format("I'm waiting for a signal for my RADIO..."))
+    release
+    end
+}
+
+script BlackthornCity_Text_Woman {
+    lock
+    faceplayer
+    msgbox(format("Wow, you came all the way here ? You must be a real hotshot TRAINER !"))
+    release
+    end
+}
+
+script BlackthornCity_Text_Man {
+    lock
+    faceplayer
+    msgbox(format("Are you going to make your POKéMON forget some MOVES ?"))
+    release
+    end
+}
+
+script BlackthornCity_Text_Youngster {
+    lock
+    faceplayer
+    msgbox(format("Got to prove my skill to get in the DRAGON's DEN... If only I had 8 BADGES... Or maybe I could just beat CLAIRE ?"))
+    release
+    end
+}
+
+script BlackthornCity_Text_GymSign {
+    lock
+    faceplayer
+    msgbox(format("BLACKTHORN CITY POKéMON GYM LEADER: CLAIR\n The Blessed User of Dragon PokéMon"))
+    release
+    end
+}
+
+script BlackthornCity_Text_DragonDenSign {
+    lock
+    faceplayer
+    msgbox(format("DRAGON's DEN AHEAD"))
+    release
+    end
+}
+
+script BlackthornCity_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("Only those who have prove themselves can enter here.\p{PLAYER}: I rode a fucking RAYQUAZA, what do you want ?"))
+    release
+    end
+}
+
+script BlackthornCity_Text_Man2 {
+    if(defeated(TRAINER_NORMAN_3)){
+        msgbox("You defeated CLAIR?\nThat's amazing!\lI've never heard of her losing to\lanyone other than LANCE, her cousin.\lHeard about him?\lHe was beaten recently. I think he went\lto exil...", MSGBOX_NPC)
+        end  
+    }else{
+        msgbox("Are you looking for CLAIR?\nI think she went to a CAVE somewhere to\ltrain.\lShe's so strong and fierce. Actually\lshe scares me a lot!", MSGBOX_NPC)
+        end
+    }
+    
+}
+
+script BlackthornCity_Text_Dratini{
+    lock
+    faceplayer
+    playmoncry(SPECIES_DRATINI, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox("Graaor!", MSGBOX_NPC)
+    release
+    end
+}

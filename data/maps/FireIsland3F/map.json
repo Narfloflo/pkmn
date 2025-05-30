@@ -2,7 +2,7 @@
   "id": "MAP_FIRE_ISLAND3F",
   "name": "FireIsland3F",
   "layout": "LAYOUT_FIRE_ISLAND3F",
-  "music": "MUS_RG_VIRIDIAN_FOREST",
+  "music": "MUS_CHRONO_ZEAL",
   "region_map_section": "MAPSEC_MT_EMBER",
   "requires_flash": false,
   "weather": "WEATHER_FOG_HORIZONTAL",
@@ -24,8 +24,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "FireIsland3F_Event_Moltres",
+      "flag": "FLAG_UNUSED_0x02B"
     }
   ],
   "warp_events": [

@@ -1,0 +1,20 @@
+mapscripts Route16_MapScripts {}
+
+script Route16_Text_Biker1 {
+    trainerbattle_single(TRAINER_ELLIOT_3, "That's a wonderful BIKE here !\nCan I have it ?", "It was for my sick sister !")
+    msgbox(format("It's the second time I try to racket some kid's BIKE, and it didn't went well for me..."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route16_Text_Biker2 {
+    trainerbattle_single(TRAINER_ELLIOT_4, "Everybody says I should create a gang.\nWanna be part of it ?", "Well I would be the underling of my gang\nif I hired you !")
+    msgbox(format("We, the BIKERS, are not all a bunch of jerks. Some are, some are less. But in the end we all are enjoying freedom !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route16_Text_NoticeSign {
+    lock
+    msgbox(format("NOTICE !\nSome adjustments have been done on the ROUTE 16 and 17 : The slope has been reduced. You should bike happily."))
+    release
+    end
+}

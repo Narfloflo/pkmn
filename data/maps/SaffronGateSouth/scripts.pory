@@ -1,0 +1,37 @@
+mapscripts SaffronGateSouth_MapScripts {}
+
+script SaffronGateSouth_Text_Guard {
+    lock
+    msgbox("I'm on guard duty.\nBut I think I'm a terrible guard since\lTEAM ROCKET could raid SAFFRON CITY.\lFortunatly a TRAINER kick them out!\lI guess I have\lno worry about my career!")
+    release
+    end
+}
+
+script SaffronGateSouth_Text_GuardRoute7 {
+    lock
+    if(defeated(TRAINER_WINSTON_3 || TRAINER_WINSTON_4)){
+       call(SaffronGateSouth_Text_GuardRoute7YesNo) 
+    }else{
+    msgbox(format("I'm on guard duty.\nBut I think I'm a terrible guard since\lTEAM ROCKET could raid SAFFRON CITY.\lFortunatly a TRAINER kick them out!\lI guess I have\lno worry about my career!"))
+    release
+    end  
+    }
+    
+}
+
+script SaffronGateSouth_Text_GuardRoute7YesNo {
+    msgbox("I'm on guard duty.\nBut you know I really enjoy watching\lyou beat the TRAINERS on ROUTE 7.\lWanna rematch them?", MSGBOX_YESNO)
+        if(var(VAR_RESULT)==1){
+            cleartrainerflag(TRAINER_WINSTON_3)
+            cleartrainerflag(TRAINER_WINSTON_4)
+            playse(SE_POKENAV_CALL)
+            waitse
+            msgbox("Alright!\nYou can now go back to ROUTE 7!\lThey'll pretend they've never seen you.")
+            release
+            end
+        }else{
+            msgbox("So boring...")
+            release
+            end
+        }
+}

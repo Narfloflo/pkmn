@@ -141,3 +141,151 @@ EverGrandeCity_PokemonLeague_1F_Text_GoForth:
 	.string "TRAINER! Believe in yourself and your\n"
 	.string "POKéMON, and go forth!$"
 
+EverGrandeCity_PokemonLeague_1F_Text_Hiker::
+	goto_if_set FLAG_IS_CHAMPION, EverGrandeCity_PokemonLeague_1F_Text_Hiker_1
+	lock
+	msgbox EverGrandeCity_PokemonLeague_1F_Text_Hiker_Text_1
+	release
+	end
+
+EverGrandeCity_PokemonLeague_1F_Text_Hiker_1:
+	lock
+	faceplayer
+	msgbox EverGrandeCity_PokemonLeague_1F_Text_Hiker_Text_0
+	release
+	end
+
+
+EverGrandeCity_PokemonLeague_1F_Text_PoliceUP::
+	lock
+	faceplayer
+	msgbox EverGrandeCity_PokemonLeague_1F_Text_PoliceUP_Text_0
+	release
+	end
+
+
+EverGrandeCity_PokemonLeague_1F_Text_PoliceDown::
+	lock
+	faceplayer
+	msgbox EverGrandeCity_PokemonLeague_1F_Text_PoliceDown_Text_0
+	release
+	end
+
+
+EverGrandeCity_PokemonLeague_1F_Text_TVSign::
+	lock
+	msgbox EverGrandeCity_PokemonLeague_1F_Text_TVSign_Text_0
+	release
+	end
+
+
+EverGrandeCity_PokemonLeague_1F_Text_Warrior::
+	lock
+	faceplayer
+	msgbox EverGrandeCity_PokemonLeague_1F_Text_Warrior_Text_0
+	release
+	end
+
+
+EverGrandeCity_PokemonLeague_1F_Text_Man::
+	goto_if_set FLAG_IS_CHAMPION, EverGrandeCity_PokemonLeague_1F_Text_Man_1
+	lock
+	msgbox EverGrandeCity_PokemonLeague_1F_Text_Man_Text_1
+	release
+	end
+
+EverGrandeCity_PokemonLeague_1F_Text_Man_1:
+	lock
+	faceplayer
+	msgbox EverGrandeCity_PokemonLeague_1F_Text_Man_Text_0
+	release
+	end
+
+
+EverGrandeCity_PokemonLeague_1F_Text_Woman::
+	goto_if_set FLAG_IS_CHAMPION, EverGrandeCity_PokemonLeague_1F_Text_Woman_1
+	lock
+	msgbox EverGrandeCity_PokemonLeague_1F_Text_Woman_Text_1
+	release
+	end
+
+EverGrandeCity_PokemonLeague_1F_Text_Woman_1:
+	lock
+	faceplayer
+	msgbox EverGrandeCity_PokemonLeague_1F_Text_Woman_Text_0
+	release
+	end
+
+
+EverGrandeCity_PokemonLeague_1F_Text_Aroma::
+	goto_if_set FLAG_IS_CHAMPION, EverGrandeCity_PokemonLeague_1F_Text_Aroma_1
+	lock
+	msgbox EverGrandeCity_PokemonLeague_1F_Text_Aroma_Text_1
+	release
+	end
+
+EverGrandeCity_PokemonLeague_1F_Text_Aroma_1:
+	lock
+	faceplayer
+	msgbox EverGrandeCity_PokemonLeague_1F_Text_Aroma_Text_0
+	release
+	end
+
+
+EverGrandeCity_PokemonLeague_1F_Text_Hiker_Text_0:
+	.string "Your BATTLE against GLACIA was so\n"
+	.string "thriving ! I hope you will give us\l"
+	.string "another round like this !$"
+
+EverGrandeCity_PokemonLeague_1F_Text_Hiker_Text_1:
+	.string "Ahah ! The opponent was totally\n"
+	.string "destroyed by DRAKES' TEAM !$"
+
+EverGrandeCity_PokemonLeague_1F_Text_PoliceUP_Text_0:
+	.string "This ELEVATOR is where the way the\n"
+	.string "LOSERS takes when they are smash by\l"
+	.string "the ELITE FOUR.\p"
+	.string "I'll see you there in a few minutes I\n"
+	.string "guess.\n"
+	.string "Wahahahaha !$"
+
+EverGrandeCity_PokemonLeague_1F_Text_PoliceDown_Text_0:
+	.string "This ELEVATOR lead to a SHIP. The public\n"
+	.string "is taking it whenever they want to see\l"
+	.string "the ELITE FOUR destroyed everybody.\p"
+	.string "Since you are a TRAINER no have no use\n"
+	.string "of this.$"
+
+EverGrandeCity_PokemonLeague_1F_Text_TVSign_Text_0:
+	.string "{PLAYER} : This is an ELITE FOUR\n"
+	.string "member fighting against a TRAINER.\n"
+	.string "... ... ... ... ... ... ... ... ... ... Great strategy.$"
+
+EverGrandeCity_PokemonLeague_1F_Text_Warrior_Text_0:
+	.string "This HALL is where we can see you\n"
+	.string "against the ELITE FOUR. Give us some\l"
+	.string "entertainment kid !$"
+
+EverGrandeCity_PokemonLeague_1F_Text_Man_Text_0:
+	.string "Hey {PLAYER} ! Are you here to give us\n"
+	.string "some blood again ?$"
+
+EverGrandeCity_PokemonLeague_1F_Text_Man_Text_1:
+	.string "What a MOVE ! What was that ?$"
+
+EverGrandeCity_PokemonLeague_1F_Text_Woman_Text_0:
+	.string "{PLAYER}, if you fight again, please\n"
+	.string "don't do this thing like the other time.\l"
+	.string "Lame MOVE...$"
+
+EverGrandeCity_PokemonLeague_1F_Text_Woman_Text_1:
+	.string "Why did he used a FULL RESTORE now ?\n"
+	.string "You will get destroyed !$"
+
+EverGrandeCity_PokemonLeague_1F_Text_Aroma_Text_0:
+	.string "You gave us a good fight the other time\n"
+	.string "! I hope you will keep beating them with\l"
+	.string "style !$"
+
+EverGrandeCity_PokemonLeague_1F_Text_Aroma_Text_1:
+	.string "Where are PLANT TYPES TRAINERS ?$"

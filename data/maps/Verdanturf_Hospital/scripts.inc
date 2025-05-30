@@ -89,13 +89,13 @@ Verdanturf_Hospital_Cook_Text_0:
 Verdanturf_Hospital_OldWoman_Text_0:
 	.string "The Nurse owe my a few bucks. I can wait\n"
 	.string "all day long to have it back.\p"
-	.string "What a bitch !$"
+	.string "What a MIGHTYENA she is!$"
 
 Verdanturf_Hospital_SecondNurse_Text_0:
 	.string "Sigh...This is what happened to trainers\n"
 	.string "who are rumbling in the wild with an\l"
 	.string "under trained team.\p"
-	.string "Pathetic !$"
+	.string "Pathetic!$"
 
 Verdanturf_Hospital_Sick_Text_0:
 	.string "...I'm dying...$"

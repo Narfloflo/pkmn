@@ -1,0 +1,88 @@
+mapscripts NewMap4_MapScripts {}
+
+script Route113_Cave_Text_Rocker {
+    msgbox("Hmmmm?\nNo I'm not a TRAINER, I'm just\lpracticing my guitar skills here alone.", MSGBOX_NPC)
+    end
+}
+
+script Route113_Cave_Text_Hiker {
+    msgbox("Arrrrg\nI'm lost here!\lI want to go to FALLARBOR but I don't\lknow where the exit is!\lSouth? East?\lArrrgg!", MSGBOX_NPC)
+    end
+}
+
+script Route113_Text_Whismur {
+    lock
+    faceplayer
+    playmoncry(SPECIES_WHISMUR, CRY_MODE_ENCOUNTER)
+    msgbox(format("Muuuuu!"))
+    waitmoncry
+    setwildbattle(SPECIES_WHISMUR, 25)
+	dowildbattle
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+		removeobject(4)
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_WON){
+		removeobject(4)
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_RAN){
+		removeobject(4)
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_PLAYER_TELEPORTED){
+		removeobject(4)
+	}
+	return
+}
+
+script Route113_Text_Loudred1 {
+    lock
+    faceplayer
+    playmoncry(SPECIES_LOUDRED, CRY_MODE_ENCOUNTER)
+    msgbox(format("LOUUUUU!"))
+    waitmoncry
+    setwildbattle(SPECIES_LOUDRED, 25)
+	dowildbattle
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+		removeobject(5)
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_WON){
+		removeobject(5)
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_RAN){
+		removeobject(5)
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_PLAYER_TELEPORTED){
+		removeobject(5)
+	}
+	return
+}
+script Route113_Text_Loudred2 {
+    lock
+    faceplayer
+    playmoncry(SPECIES_LOUDRED, CRY_MODE_ENCOUNTER)
+    msgbox(format("DREEEEE!"))
+    waitmoncry
+    setwildbattle(SPECIES_LOUDRED, 25)
+	dowildbattle
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+		removeobject(6)
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_WON){
+		removeobject(6)
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_RAN){
+		removeobject(6)
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_PLAYER_TELEPORTED){
+		removeobject(6)
+	}
+	return
+}

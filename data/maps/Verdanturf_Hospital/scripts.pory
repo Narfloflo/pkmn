@@ -23,7 +23,7 @@ script Verdanturf_Hospital_Cook {
 script Verdanturf_Hospital_OldWoman {
     lock
     faceplayer
-    msgbox(format("The Nurse owe my a few bucks. I can wait all day long to have it back.\pWhat a bitch !"))
+    msgbox(format("The Nurse owe my a few bucks. I can wait all day long to have it back.\pWhat a MIGHTYENA she is!"))
     release
     end
 }
@@ -31,7 +31,7 @@ script Verdanturf_Hospital_OldWoman {
 script Verdanturf_Hospital_SecondNurse {
     lock
     faceplayer
-    msgbox(format("Sigh...This is what happened to trainers who are rumbling in the wild with an under trained team.\pPathetic !"))
+    msgbox(format("Sigh...This is what happened to trainers who are rumbling in the wild with an under trained team.\pPathetic!"))
     release
     end
 }
@@ -45,7 +45,7 @@ script Verdanturf_Hospital_Sick {
 script Verdanturf_Hospital_ChanseyGuy {
     lock
     faceplayer
-    msgbox(format("I'm looking for a book about a POKEMON that help and take care of the people.\pIt's a fat pink stuff. "))
+    msgbox(format("I'm looking for a book about a POKEMON that help and take care of the people.\pIt's a fat pink stuff."))
     showmonpic(SPECIES_CHANSEY, 10,3)
     delay(100)
     hidemonpic

@@ -1,0 +1,31 @@
+mapscripts UnionCave_MapScripts {}
+
+script UnionCave_Text_Hiker1 {
+    trainerbattle_single(TRAINER_LAO_3, "Wanna see some bulky POKéMON?","Oh! Your POKéMON as strong as steel!")
+    msgbox("All right, then!\nI've decided.\lI'm not leaving until my POKéMON get\ltougher!", MSGBOX_NPC)
+    end
+}
+
+script UnionCave_Text_Firebreather {
+    trainerbattle_single(TRAINER_LAO_4, "My POKéMON help me see in the dark.\nWanna see them?","How will I see in the dark now?!")
+    msgbox("Sometimes you can hear strange roars\nfrom deep in the cave.", MSGBOX_NPC)
+    end
+}
+
+script UnionCave_Text_Hiker2 {
+    trainerbattle_single(TRAINER_CYNDY_2, "I'll go out to investigate old secrets\nand legends.","What is the secret of you power?")
+    msgbox("The Ruins are hiding something...\nI just know it!", MSGBOX_NPC)
+    end
+}
+
+script UnionCave_Text_Camper {
+    trainerbattle_single(TRAINER_CYNDY_3, "I don't think that's a good place to\ncamp here.","Oh wow!")
+    msgbox("I think there is a RARE POKéMON\nsomewhere here.", MSGBOX_NPC)
+    end
+}
+
+script UnionCave_Text_Pokemaniac {
+    trainerbattle_single(TRAINER_CYNDY_4, "Who's there?\nLeave me and my POKéMON alone!","Go...\nGo away!")
+    msgbox("Just me and my POKéMON. I'm delirious\nwith joy.", MSGBOX_NPC)
+    end
+}

@@ -1,0 +1,74 @@
+mapscripts LakeofRage_MapScripts {}
+
+script LakeofRage_Text_FishingGuruSign {
+    lock
+    faceplayer
+    msgbox(format("Fishing Guru's HOUSE\pWe except a list of RECORDS here !"))
+    release
+    end
+}
+
+script LakeofRage_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("Hahaha ! The MAGIKARP are bitting !"))
+    release
+    end
+}
+
+script LakeofRage_Text_Man {
+    lock
+    faceplayer
+    msgbox(format("There is a strange guy inside this house. He says things like HIDDEN POWER or stuff like that..."))
+    release
+    end
+}
+
+script LakeofRage_Text_Lass {
+    lock
+    faceplayer
+    msgbox(format("I'm pretty sure you can encounter GYARADOS in the water. Legends says that. But I can only see MAGIKARP..."))
+    release
+    end
+}
+
+script LakeofRage_Text_Camper {
+    lock
+    faceplayer
+    msgbox(format("I heard that there were a real place here with houses and stuff. But some GYARADOS went mad and destroyed this place. The RAIN that came after flood the place and create the LAKE OF RAGE. Maybe if we could DIVE we could see some ruins..."))
+    release
+    end
+}
+
+script LakeofRage_Text_Fisherman {
+    if(flag(FLAG_TEMP_A) == TRUE){
+    msgbox(format("Yeah I used SURF to get here.\nLike you did actually no?"),MSGBOX_NPC)
+    end
+    }
+    else{
+       call_if_unset(FLAG_TEMP_A, LakeofRage_Text_FishermanFight)
+    }
+    
+}
+
+script LakeofRage_Text_FishermanFight {
+    trainerbattle_single(TRAINER_DYLAN_2, "How did I get here?\nWell...\lMagic?", "I'm drowning!")
+    setflag(FLAG_TEMP_A)
+    cleartrainerflag(TRAINER_DYLAN_2)
+    end
+}
+
+script LakeofRage_Text_Fisherman2 {
+    call_if_unset(FLAG_TEMP_B, LakeofRage_Text_FishermanFight2)
+    if(flag(FLAG_TEMP_B)== TRUE){
+    msgbox(format("I know I know..."),MSGBOX_NPC)
+    end
+    }
+}
+
+script LakeofRage_Text_FishermanFight2 {
+    trainerbattle_single(TRAINER_DYLAN_2, "Wanna see my fresh fishes ?", "Plouff !")
+    setflag(FLAG_TEMP_B)
+    cleartrainerflag(TRAINER_DYLAN_2)
+    end
+}

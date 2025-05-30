@@ -1,0 +1,6 @@
+mapscripts SecretGym_MapScripts{}
+
+script CinnabarVolcano_Text_Scientist{
+    msgbox("I'm here to study sismography.\nIt's more or less stable currently.\lSometimes we have some peaks, but it's\lnothing.\lMT. PYRE for example is much more\lunstable than this volcano.", MSGBOX_NPC)
+    end
+}

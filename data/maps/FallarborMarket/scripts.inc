@@ -61,18 +61,12 @@ FallarborMarketVendor3:
 	.2byte ITEM_NONE
 
 FallarborMarket_Text_Girl::
-	lock
-	faceplayer
-	msgbox FallarborMarket_Text_Girl_Text_0
-	release
+	msgbox FallarborMarket_Text_Girl_Text_0, MSGBOX_NPC
 	end
 
 
 FallarborMarket_Text_OldMan::
-	lock
-	faceplayer
-	msgbox FallarborMarket_Text_OldMan_Text_0
-	release
+	msgbox FallarborMarket_Text_OldMan_Text_0, MSGBOX_NPC
 	end
 
 
@@ -81,7 +75,7 @@ FallarborMarket_Text_Kirlia::
 	faceplayer
 	waitse
 	playmoncry SPECIES_KIRLIA, CRY_MODE_NORMAL
-	msgbox FallarborMarket_Text_Kirlia_Text_0
+	msgbox FallarborMarket_Text_Kirlia_Text_0, MSGBOX_NPC
 	waitmoncry
 	release
 	end
@@ -95,20 +89,10 @@ FallarborMarket_Text_Vendor1_Text_1:
 	.string "Please come again!$"
 
 FallarborMarket_Text_Girl_Text_0:
-	.string "I'm glad we have a market here in\n"
-	.string "FALLARBORTOWN.\p"
-	.string "It has nothing to do with the one in\n"
-	.string "LILYCOVECITY, but it's fine.$"
+	.string "I'm glad we have a market here in\nFALLARBOR.\lIt has nothing to do with the one in\lLILYCOVE, but it's fine.$"
 
 FallarborMarket_Text_OldMan_Text_0:
-	.string "Wahaha! Welcome kid, welcome! I'm the\n"
-	.string "owner of the FALLARBORTOWN market! It\l"
-	.string "opened recently, and we have some\l"
-	.string "pretty rare ITEMS that are great for a\l"
-	.string "TRAINER like you.\p"
-	.string "Have a good look at our ITEMS!$"
+	.string "Wahaha!\nWelcome kid, welcome! I'm the\lowner of the FALLARBOR market!\lIt opened recently, and we have some\lpretty rare ITEMS that are great for a\lTRAINER like you.\lHave a good look at our ITEMS!$"
 
 FallarborMarket_Text_Kirlia_Text_0:
-	.string "Lia! Li li!\p"
-	.string "{PLAYER}: There is something strange\n"
-	.string "between this POKEMON and the old man...$"
+	.string "Lia! Li li!\n{PLAYER}: There is something strange\lbetween this POKEMON and the old man...$"

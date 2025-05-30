@@ -1,0 +1,6 @@
+mapscripts AlphRuins_MapScripts {}
+
+script AlphRuinsInside_Text_Scientist {
+    msgbox("Have you been inside the Ruins already?\nHave you seen the symbol on the walls?\l.......................................\l.......................................\lI have absolutly no clue about what it\lis...", MSGBOX_NPC)
+    end
+}

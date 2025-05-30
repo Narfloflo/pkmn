@@ -84,8 +84,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 8,
-      "y": 73,
+      "x": 4,
+      "y": 29,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -96,11 +96,11 @@
       "flag": "FLAG_ITEM_ROUTE_105_IRON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 9,
-      "y": 26,
+      "graphics_id": "OBJ_EVENT_GFX_RUINS_MANIAC",
+      "x": 7,
+      "y": 46,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 7,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -109,11 +109,11 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 9,
-      "y": 55,
+      "graphics_id": "OBJ_EVENT_GFX_BIRD_KEEPER",
+      "x": 14,
+      "y": 58,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_RIGHT_AND_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -122,9 +122,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 12,
-      "y": 16,
+      "graphics_id": "OBJ_EVENT_GFX_RUINS_MANIAC",
+      "x": 7,
+      "y": 21,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -144,10 +144,17 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 12,
-      "y": 13,
+      "x": 6,
+      "y": 33,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE105",
+      "dest_map": "MAP_ROUTE105_CAVE_ENTRANCE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE105_CAVE_EXIT",
       "dest_warp_id": "0"
     }
   ],
@@ -165,8 +172,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 7,
-      "y": 42,
+      "x": 13,
+      "y": 56,
       "elevation": 3,
       "item": "ITEM_BIG_PEARL",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL"

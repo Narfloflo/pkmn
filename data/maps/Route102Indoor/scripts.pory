@@ -1,0 +1,36 @@
+mapscripts Route102Indoor_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION{
+        gettime
+            if (var(VAR_0x8003) == TIME_DAY){
+            setflag(FLAG_TEMP_1)
+            call_if_set(FLAG_TEMP_1, Route102Indoor_Text_FarmerHidden)
+        }
+    }
+}
+
+script Route102Indoor_Text_FarmerHidden {
+    removeobject(4)
+    end
+}
+
+script Route102Indoor_Text_Farmer {
+    msgbox("I'm tired, but working as a farmer is\nthe best!", MSGBOX_NPC)
+    end
+}
+
+script Route102Indoor_Text_Woman {
+    msgbox("My husband own a field outside.\nHe's really busy!", MSGBOX_NPC)
+    end
+}
+
+script Route102Indoor_Text_Man {
+    msgbox("You need a POKéMON when you live in\nROUTE like here.\lI mean, I can get attacked when I want\lto go shopping in the nearby cities.", MSGBOX_NPC)
+    end
+}
+
+script Route102Indoor_Text_Skitty {
+    playmoncry(SPECIES_SKITTY, CRY_MODE_NORMAL)
+    msgbox("Graou!", MSGBOX_NPC)
+    waitmoncry
+    end
+}

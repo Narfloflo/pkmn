@@ -759,3 +759,123 @@ LilycoveCity_Text_HoneymoonVowToSeeRarePokemon:
 	.string "POKéMON as soon as we arrived.\p"
 	.string "I mean, we are totally happy!$"
 
+LilycoveCity_Text_SchoolSign::
+	msgbox LilycoveCity_Text_SchoolSign_Text_0, MSGBOX_SIGN
+	end
+
+
+LilycoveCity_Text_Teacher::
+	msgbox LilycoveCity_Text_Teacher_Text_0, MSGBOX_NPC
+	end
+
+
+LilycoveCity_Text_Lass::
+	msgbox LilycoveCity_Text_Lass_Text_0, MSGBOX_NPC
+	end
+
+
+LilycoveCity_Text_LassSr::
+	msgbox LilycoveCity_Text_LassSr_Text_0, MSGBOX_SIGN
+	end
+
+
+LilycoveCity_Text_LassJr::
+	msgbox LilycoveCity_Text_LassJr_Text_0, MSGBOX_SIGN
+	end
+
+
+LilycoveCity_Text_Sailor::
+	msgbox LilycoveCity_Text_Sailor_Text_0, MSGBOX_NPC
+	end
+
+
+LilycoveCity_Text_RestoSign::
+	msgbox LilycoveCity_Text_RestoSign_Text_0, MSGBOX_SIGN
+	end
+
+
+LilycoveCity_Text_Expert::
+	msgbox LilycoveCity_Text_Expert_Text_0, MSGBOX_NPC
+	end
+
+
+LilycoveCity_Text_Beauty::
+	msgbox LilycoveCity_Text_Beauty_Text_0, MSGBOX_NPC
+	end
+
+
+LilycoveCity_Text_Painter::
+	msgbox LilycoveCity_Text_Painter_Text_0, MSGBOX_NPC
+	end
+
+
+LilycoveCity_Event_SchoolClosed::
+	gettime
+	compare VAR_0x8003, TIME_NIGHT
+	goto_if_eq LilycoveCity_Event_SchoolClosed_2
+	compare VAR_0x8003, TIME_MIDNIGHT
+	goto_if_eq LilycoveCity_Event_SchoolClosed_2
+	release
+	end
+
+LilycoveCity_Event_SchoolClosed_2:
+	lock
+	lock
+	applymovement 23, LilycoveCity_Move_DirectorTriggered
+	msgbox LilycoveCity_Event_SchoolClosed_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, LilycoveCity_Move_Stepback
+	waitmovement 0
+	release
+	end
+
+
+LilycoveCity_Move_DirectorTriggered:
+	emote_exclamation_mark
+	jump_in_place_left
+	step_end
+
+LilycoveCity_Move_Stepback:
+	walk_down
+	step_end
+
+LilycoveCity_Text_Wailmer::
+	playmoncry SPECIES_WAILMER, CRY_MODE_NORMAL
+	msgbox LilycoveCity_Text_Wailmer_Text_0, MSGBOX_NPC
+	end
+
+
+LilycoveCity_Text_SchoolSign_Text_0:
+	.string "LILYCOVE CITY's SCHOOL$"
+
+LilycoveCity_Text_Teacher_Text_0:
+	.string "Here is LILYCOVE's SCHOOL.\nWe teach you to become the very best!$"
+
+LilycoveCity_Text_Lass_Text_0:
+	.string "I don't know if I should go relax to\nthe beach or not...$"
+
+LilycoveCity_Text_LassSr_Text_0:
+	.string "We should go to the big MART!\nThey sell DOLLS!$"
+
+LilycoveCity_Text_LassJr_Text_0:
+	.string "We should go to the BEAUTY CONTEST!\nI want {POKEBLOCK}S!$"
+
+LilycoveCity_Text_Sailor_Text_0:
+	.string "The restaurant here is quick has quite\ngood stuff.\lI usually give some of their food to my\lPOKéMON. They really like it!$"
+
+LilycoveCity_Text_RestoSign_Text_0:
+	.string "LILYCOVE CITY's Restaurant$"
+
+LilycoveCity_Text_Expert_Text_0:
+	.string "I'm taking a break from my training.\nAfter that, I think I'll challenge the\lGYM LEADERS of MOSSDEEP!$"
+
+LilycoveCity_Text_Beauty_Text_0:
+	.string "I came from MAUVILLE just to go to the\nMUSEUM.\lBut now I'm really exhausted!$"
+
+LilycoveCity_Text_Painter_Text_0:
+	.string "Hey! You don't know me?\nI'm the famous VORNET! The painter!\lYou don't know me? I come from KALOS.\lCome on! you surely know me!\lKids nowadays..$"
+
+LilycoveCity_Event_SchoolClosed_Text_0:
+	.string "Humm... The SCHOOL is closed during the\nnight...\lCome back later.$"
+
+LilycoveCity_Text_Wailmer_Text_0:
+	.string "Wahuuu!$"

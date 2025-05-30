@@ -147,6 +147,24 @@ Route103_EventScript_RivalEnd::
 	clearflag FLAG_HIDE_OLDALE_TOWN_RIVAL
 	savebgm MUS_DUMMY
 	fadedefaultbgm
+	setflag FLAG_UNUSED_0x02C
+	setflag FLAG_UNUSED_0x02D
+	goto_if_eq Route103_EventScript_OldaleQuest_2
+	compare VAR_FORTREE_CITY_STATE, 3
+	goto_if_eq Route103_EventScript_OldaleQuest_3
+	setvar VAR_FORTREE_CITY_STATE, 4
+	releaseall
+	end
+
+Route103_EventScript_OldaleQuest_1:
+	releaseall
+	end
+
+Route103_EventScript_OldaleQuest_2:
+	setvar VAR_FORTREE_CITY_STATE, 4
+	goto Route103_EventScript_OldaleQuest_1
+
+Route103_EventScript_OldaleQuest_3:
 	releaseall
 	end
 
@@ -353,3 +371,11 @@ Route103_Text_RouteSign:
 	.string "ROUTE 103\n"
 	.string "{DOWN_ARROW} OLDALE TOWN$"
 
+Route103_Text_Mudkip::
+	playmoncry SPECIES_MUDKIP, CRY_MODE_NORMAL
+	msgbox Route103_Text_Mudkip_Text_0, MSGBOX_NPC
+	end
+
+
+Route103_Text_Mudkip_Text_0:
+	.string "Wadaboo?$"

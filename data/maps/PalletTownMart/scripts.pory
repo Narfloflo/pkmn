@@ -1,0 +1,31 @@
+mapscripts PalletTownMart_MapScripts {}
+
+script PalletMart_Text_Woman {
+    lock
+    faceplayer
+    msgbox(format("Wow this QUESTIONNAIRE is really hard... Four words, a random question... What am I able to do?"))
+    release
+    end
+}
+
+script PalletMart_Vendor {
+    lock
+    faceplayer
+	msgbox(format("Welcome!\p How may I serve you?"))
+	waitmessage
+	pokemart(PalletMartItems)
+	msgbox("Please come again!")
+	release
+    end
+}
+
+mart PalletMartItems {
+    ITEM_POKE_BALL
+	ITEM_SUPER_POTION
+	ITEM_REVIVE
+	ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+    ITEM_ESCAPE_ROPE
+    ITEM_REPEL
+    ITEM_HARBOR_MAIL
+}

@@ -946,3 +946,35 @@ script Dewford_Text_TrainingGround {
     release
     end
 }
+
+script Dewford_Text_Battle {
+	lock
+	msgbox(format("HEY !\nGet out of here ! We are in a middle of a BATTLE !"))
+	applymovement(OBJ_EVENT_ID_PLAYER,DewfordBattleRun)
+	waitmovement(OBJ_EVENT_ID_PLAYER)
+	release
+	end
+}
+
+movement DewfordBattleRun {
+	walk_fast_down
+}
+
+script Dewford_Event_SchoolClosed {
+	gettime
+	if (var(VAR_0x8003) == TIME_NIGHT || var(VAR_0x8003) == TIME_MIDNIGHT){
+		lock
+		msgbox("{PLAYER}: The SCHOOL is closed during\nthe night...")
+		applymovement(OBJ_EVENT_ID_PLAYER, Dewford_Move_Stepback)
+		waitmovement(0)
+		release
+		end
+	}
+	release
+	end
+}
+
+movement Dewford_Move_Stepback {
+	walk_right
+	step_end
+}

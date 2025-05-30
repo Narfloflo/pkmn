@@ -1,0 +1,27 @@
+mapscripts VioletCitydoors_MapScripts {}
+
+script VioletCitydoors_Text_Lass {
+    lock
+    faceplayer
+    msgbox("Hey! Looks like you beat all my friend\non ROUTE 30 and 31?\lYou want me to call them to have a\lrematch?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1){
+        playse(SE_POKENAV_CALL)
+        waitse
+        cleartrainerflag(TRAINER_KATELYN_2)
+        cleartrainerflag(TRAINER_KATELYN_3)
+        cleartrainerflag(TRAINER_KATELYN_4)
+        cleartrainerflag(TRAINER_BENJAMIN_2)
+        playse(SE_POKENAV_HANG_UP)
+        waitse
+        msgbox("It's done!\nThey'll pretend they've never fought\lwith you. Teehee!\l{PLAYER}: Urgh!")
+    }else{
+        msgbox("No? Ok no worry.\nThey should train some more anyway and\llearn the basics of battle in school.")
+    }
+    release
+    end
+}
+
+script VioletCitydoors_Text_Police {
+    msgbox("You are entering VIOLET CITY.\nYou can visit the SPROUT TOWER and the\lSCHOOL.\lOh yeah, the GYM is closed.\lVIOLET's LEADER left for a journey.\lBut his son, FALKNER, should be in\lcharge. He is training I think.", MSGBOX_NPC)
+    end
+}

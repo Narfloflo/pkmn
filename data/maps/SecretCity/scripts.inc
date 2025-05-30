@@ -74,7 +74,7 @@ SecretCity_Text_OldMan_Text_0:
 	.string "We have all we need here.$"
 
 SecretCity_Text_MountainMan_Text_0:
-	.string "Oh ! You made it that far! You must be a\n"
+	.string "Oh! You made it that far! You must be a\n"
 	.string "strong TRAINER!\p"
 	.string "Have you seen the ruins in the DESERT?\n"
 	.string "We used to live here years ago.$"

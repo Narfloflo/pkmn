@@ -1,0 +1,25 @@
+mapscripts Route43Gate_MapScripts {}
+
+script Route43Gate_Text_RematchGuy{
+    msgbox("Who am I?\nJust your friendly neighborhood\lRematch guy!\lIf you want I can ask all the TRAINERS\lin ROUTE 43 to offer\lyou a rematch.\lWhat do you think?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1){
+        playse(SE_POKENAV_CALL)
+        waitse
+        cleartrainerflag(TRAINER_LYDIA_4)
+        cleartrainerflag(TRAINER_ISAAC_2)
+        cleartrainerflag(TRAINER_ISAAC_3)
+        cleartrainerflag(TRAINER_ISAAC_4)
+        playse(SE_POKENAV_HANG_UP)
+        waitse
+        msgbox("Alright done! I asked them to pretend\nthey've never seen you before.", MSGBOX_NPC)
+    }else{
+        msgbox("Well if you can't train, don't blame\nme!", MSGBOX_NPC)
+    }
+    release
+    end
+}
+
+script Route43Gate_Text_Policeman {
+    msgbox("Use this gate to avoid walking in the\ngrass.", MSGBOX_NPC)
+    end
+}

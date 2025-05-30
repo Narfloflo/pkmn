@@ -154,3 +154,67 @@ FortreeCity_Text_GymSign:
 	.string "“The bird user taking flight into\n"
 	.string "the world.”$"
 
+FortreeCity_Text_Director::
+	lock
+	faceplayer
+	msgbox FortreeCity_Text_Director_Text_0
+	release
+	end
+
+
+FortreeCity_Text_SchoolboyM::
+	lock
+	faceplayer
+	msgbox FortreeCity_Text_SchoolboyM_Text_0
+	release
+	end
+
+
+FortreeCity_Text_GirlOnTree::
+	lock
+	faceplayer
+	msgbox FortreeCity_Text_GirlOnTree_Text_0
+	release
+	end
+
+
+FortreeCity_Event_SchoolClosed::
+	gettime
+	compare VAR_0x8003, TIME_NIGHT
+	goto_if_eq FortreeCity_Event_SchoolClosed_2
+	compare VAR_0x8003, TIME_MIDNIGHT
+	goto_if_eq FortreeCity_Event_SchoolClosed_2
+	release
+	end
+
+FortreeCity_Event_SchoolClosed_2:
+	lock
+	lock
+	applymovement 8, FortreeCity_Move_DirectorTriggered
+	msgbox FortreeCity_Event_SchoolClosed_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, FortreeCity_Move_Stepback
+	waitmovement 0
+	release
+	end
+
+
+FortreeCity_Move_DirectorTriggered:
+	emote_exclamation_mark
+	jump_in_place_right
+	step_end
+
+FortreeCity_Move_Stepback:
+	walk_down
+	step_end
+
+FortreeCity_Text_Director_Text_0:
+	.string "Here is FORTREE's SCHOOL.\nThat's one of the only build built on\lthe floor in the entire city!$"
+
+FortreeCity_Text_SchoolboyM_Text_0:
+	.string "You cannot realize of strong we are in\nFORTREE!\lNo I'm not talking about POKéMON skill,\lbut real strength: I mean we are always\lclimbing on trees!$"
+
+FortreeCity_Text_GirlOnTree_Text_0:
+	.string "I'm totally lost on all those trees!\nI can figure where my houose is\lanymore...$"
+
+FortreeCity_Event_SchoolClosed_Text_0:
+	.string "Humm... The SCHOOL is closed during the\nnight...\lCome back later.$"

@@ -1,0 +1,45 @@
+mapscripts Route15_MapScripts {}
+
+script Route15_Text_Teacher {
+    lock
+    faceplayer
+    msgbox(format("Hello do you want me to ask the TRAINERS in ROUTE 15 and 13 to fight you again ?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1){
+        cleartrainerflag(TRAINER_VALERIE_2)
+        cleartrainerflag(TRAINER_VALERIE_3)
+        cleartrainerflag(TRAINER_VALERIE_4)
+        cleartrainerflag(TRAINER_CINDY_2)
+        cleartrainerflag(TRAINER_CINDY_3)
+        cleartrainerflag(TRAINER_CINDY_4)
+        cleartrainerflag(TRAINER_CINDY_5)
+        cleartrainerflag(TRAINER_THALIA_2)
+        cleartrainerflag(TRAINER_THALIA_3)
+        cleartrainerflag(TRAINER_THALIA_4)
+        cleartrainerflag(TRAINER_JESSICA_2)
+        playse(SE_POKENAV_CALL)
+        waitse
+        playse(SE_POKENAV_OFF)
+        waitse
+        msgbox(format("It's done, just a quick call, it's like you never met them. That's my teacher job !"))
+    }
+    release
+    end
+}
+
+script Route15_Text_Picnicker {
+    trainerbattle_single(TRAINER_VALERIE_2, "Let see how strong you are.", "I'm totally wasted...")
+    msgbox(format("I'll go train with weaker people."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route15_Text_Youngster {
+    trainerbattle_single(TRAINER_VALERIE_3, "Hey you, yeah you ! Battle !", "Noooo ! Total disaster...")
+    msgbox(format("I don't think I'm fit for battles..."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route15_Text_Camper {
+    trainerbattle_single(TRAINER_VALERIE_4, "Let's have a little battle shall we ?", "Ah come on !")
+    msgbox(format("Winning, losing, it doesn't matter in the long run !"), MSGBOX_AUTOCLOSE)
+    end
+}

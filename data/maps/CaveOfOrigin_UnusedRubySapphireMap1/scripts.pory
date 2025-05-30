@@ -1,0 +1,66 @@
+mapscripts CaveOfOrigin_UnusedRubySapphireMap1_MapScripts {}
+
+script CeladonResto_Text_Hiker {
+    lock
+    faceplayer
+    msgbox(format("Pssst ! There were a basement under the GAME CORNER."))
+    release
+    end
+}
+
+script CeladonResto_Text_GymGuy {
+    lock
+    faceplayer
+    msgbox(format("I always thought I was going to get the three 7 ! Damn it  GAME CORNER ! Damn it !"))
+    release
+    end
+}
+
+script CeladonResto_Text_Fatman {
+    lock
+    faceplayer
+    msgbox(format("Munch... The man at that table lost it all at the slots. He even gave his COIN CASE to some kid. He is dangerous !"))
+    release
+    end
+}
+
+script CeladonResto_Text_Woman {
+    lock
+    faceplayer
+    msgbox(format("My POKéMON are weak, so I often have to go to the Dug Store."))
+    release
+    end
+}
+
+script CeladonResto_Text_Cook {
+    lock
+    faceplayer
+    msgbox(format("Huh ? What you want a SANDWICH ? We are taking a break so maybe later. Or not..."))
+    release
+    end
+}
+
+script CeladonHotel_Text_Hostess {
+    msgbox("POKéMON?\nNo, this is a hotel for people.\lWe're full up, unfortunately.", MSGBOX_NPC)
+    end
+}
+
+script CeladonHotel_Text_Beauty {
+    msgbox("I was on wvacation with my brother and\nboyfriend.\lHe dumped me, and I let my brother go\lback home.\lI can finally relax alone.", MSGBOX_NPC)
+    end
+}
+
+script CeladonCondominium_Text_OldLady {
+    msgbox("My dear POKéMON keep me company.\nMEOWTH even brings money home!", MSGBOX_NPC)
+    end
+}
+
+script CeladonCondominium_Text_Meowth {
+    playmoncry(SPECIES_MEOWTH, CRY_MODE_NORMAL)
+    msgbox("MEOWTH: Meow!", MSGBOX_NPC)
+    end
+}
+script CeladonCondominium_Text_OfficeLandLord {
+    msgbox("What you are looking for GAME FREAK\nTeam?\lWell they left a few months ago.\lThe left for HOENN...\lApparently my rent is too high!", MSGBOX_NPC)
+    end
+}

@@ -25,7 +25,7 @@
     },
     {
       "map": "MAP_DEWFORD_TRAINING_FIELD",
-      "offset": 26,
+      "offset": 30,
       "direction": "left"
     }
   ],
@@ -58,8 +58,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 23,
-      "y": 19,
+      "x": 27,
+      "y": 17,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 1,
@@ -84,8 +84,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_1",
-      "x": 1,
-      "y": 6,
+      "x": 19,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -122,9 +122,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
-      "x": 8,
-      "y": 40,
+      "graphics_id": "OBJ_EVENT_GFX_TEACHER",
+      "x": 11,
+      "y": 38,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -174,9 +174,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
-      "x": 24,
-      "y": 46,
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_7",
+      "x": 23,
+      "y": 39,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -187,9 +187,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
-      "x": 29,
-      "y": 45,
+      "graphics_id": "OBJ_EVENT_GFX_MAN_6",
+      "x": 43,
+      "y": 38,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -239,8 +239,8 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 5,
+      "graphics_id": "OBJ_EVENT_GFX_WARRIOR",
+      "x": 10,
       "y": 21,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -250,19 +250,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Watchman",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WINGULL",
+      "x": 26,
+      "y": 29,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 3,
-      "y": 3,
+      "x": 23,
+      "y": 22,
       "elevation": 0,
       "dest_map": "MAP_DEWFORD_TOWN_HALL",
       "dest_warp_id": "0"
     },
     {
-      "x": 16,
-      "y": 22,
+      "x": 3,
+      "y": 21,
       "elevation": 0,
       "dest_map": "MAP_DEWFORD_TOWN_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
@@ -282,8 +295,8 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 8,
-      "y": 8,
+      "x": 18,
+      "y": 45,
       "elevation": 0,
       "dest_map": "MAP_DEWFORD_TOWN_HOUSE2",
       "dest_warp_id": "0"
@@ -292,26 +305,19 @@
       "x": 7,
       "y": 34,
       "elevation": 0,
-      "dest_map": "MAP_SCHOOLS",
+      "dest_map": "MAP_DEWFORD_SCHOOL",
       "dest_warp_id": "0"
     },
     {
       "x": 39,
       "y": 43,
       "elevation": 0,
-      "dest_map": "MAP_FAST_FOOD",
+      "dest_map": "MAP_DEWFORD_PUB",
       "dest_warp_id": "0"
     },
     {
-      "x": 46,
-      "y": 43,
-      "elevation": 0,
-      "dest_map": "MAP_PUB",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 6,
-      "y": 17,
+      "x": 9,
+      "y": 16,
       "elevation": 0,
       "dest_map": "MAP_DEFORD_MULTIPLE_HOUSES",
       "dest_warp_id": "8"
@@ -338,7 +344,7 @@
       "dest_warp_id": "6"
     },
     {
-      "x": 5,
+      "x": 6,
       "y": 44,
       "elevation": 0,
       "dest_map": "MAP_DEFORD_MULTIPLE_HOUSES",
@@ -346,7 +352,7 @@
     },
     {
       "x": 24,
-      "y": 43,
+      "y": 45,
       "elevation": 0,
       "dest_map": "MAP_DEWFORD_HOTEL",
       "dest_warp_id": "0"
@@ -360,7 +366,16 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Dewford_Text_Battle"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 35,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Dewford_Event_SchoolClosed"
     }
   ],
   "bg_events": [
@@ -382,24 +397,24 @@
     },
     {
       "type": "sign",
-      "x": 18,
-      "y": 22,
+      "x": 5,
+      "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
     },
     {
       "type": "sign",
-      "x": 17,
-      "y": 22,
+      "x": 4,
+      "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
     },
     {
       "type": "sign",
-      "x": 2,
-      "y": 4,
+      "x": 26,
+      "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "DewfordTown_EventScript_HallSign"
@@ -431,7 +446,7 @@
     {
       "type": "sign",
       "x": 33,
-      "y": 44,
+      "y": 45,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Verdanturf_Hospital_Door"
@@ -442,11 +457,19 @@
       "y": 39,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Dewford_Text_TrainingGround"
+    },
+    {
+      "type": "sign",
+      "x": 4,
+      "y": 29,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Verdanturf_Hospital_Door"
     },
     {
       "type": "sign",
-      "x": 17,
+      "x": 46,
       "y": 43,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -454,19 +477,19 @@
     },
     {
       "type": "sign",
-      "x": 0,
-      "y": 31,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Dewford_Text_TrainingGround"
-    },
-    {
-      "type": "sign",
-      "x": 2,
-      "y": 25,
+      "x": 12,
+      "y": 45,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 40,
+      "y": 44,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Dewford_Text_Market"
     }
   ]
 }

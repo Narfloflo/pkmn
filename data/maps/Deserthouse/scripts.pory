@@ -1,0 +1,64 @@
+raw`Deserthouse_MapScripts::
+	.byte 0
+`
+
+script DesertHouse_Text_Dusclops {
+    lock
+    faceplayer
+    playmoncry(SPECIES_DUSCLOPS, CRY_MODE_ENCOUNTER)
+    msgbox(format("Looooops !"))
+    waitmoncry
+    setwildbattle(SPECIES_DUSCLOPS, 55)
+	dowildbattle
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+		removeobject(1)
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_WON){
+		removeobject(1)
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_RAN){
+		removeobject(1)
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_PLAYER_TELEPORTED){
+		removeobject(1)
+	}
+	return
+}
+
+script DesertHouse_Text_Haunter {
+    lock
+    faceplayer
+    playmoncry(SPECIES_BANETTE, CRY_MODE_ENCOUNTER)
+    msgbox(format("Booo!"))
+    waitmoncry
+    setwildbattle(SPECIES_BANETTE, 55)
+	dowildbattle
+   specialvar(VAR_RESULT, GetBattleOutcome)
+    if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+		removeobject(2)
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_WON){
+		removeobject(2)
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_RAN){
+		removeobject(2)
+
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_PLAYER_TELEPORTED){
+		removeobject(2)
+	}
+	return
+}
+
+script DesertHouse_Text_Scientist1 {
+	msgbox("It's been a while we are exploring this\nplace.\lBut we are not POKéMON TRAINERS  and I\lheard some ghosts are wandering...", MSGBOX_NPC)
+	end
+}
+script DesertHouse_Text_Scientist2 {
+	msgbox("One of our colleague is outside\ninvestigating something.\lHe said that he's close to IT.\lI don't know what it means...", MSGBOX_NPC)
+	end
+}

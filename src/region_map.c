@@ -122,6 +122,11 @@ static const u32 sRegionMapCursorLargeGfxLZ[] = INCBIN_U32("graphics/pokenav/reg
 static const u16 sRegionMapBg_Pal[] = INCBIN_U16("graphics/pokenav/region_map/map.gbapal");
 static const u32 sRegionMapBg_GfxLZ[] = INCBIN_U32("graphics/pokenav/region_map/map.8bpp.lz");
 static const u32 sRegionMapBg_TilemapLZ[] = INCBIN_U32("graphics/pokenav/region_map/map.bin.lz");
+
+//static const u16 sRegionMapBg_KantoPal[] = INCBIN_U16("graphics/pokenav/region_map/map.gbapal");
+//static const u32 sRegionMapBg_KantoTilemapLZ[] = INCBIN_U32("graphics/pokenav/region_map/kanto - Copie.bin.lz");
+
+
 static const u16 sRegionMapPlayerIcon_BrendanPal[] = INCBIN_U16("graphics/pokenav/region_map/brendan_icon.gbapal");
 static const u8 sRegionMapPlayerIcon_BrendanGfx[] = INCBIN_U8("graphics/pokenav/region_map/brendan_icon.4bpp");
 static const u16 sRegionMapPlayerIcon_MayPal[] = INCBIN_U16("graphics/pokenav/region_map/may_icon.gbapal");
@@ -609,6 +614,23 @@ bool8 LoadRegionMapGfx(void)
             SetBgAttribute(sRegionMap->bgNum, BG_ATTR_WRAPAROUND, 1);
             SetBgAttribute(sRegionMap->bgNum, BG_ATTR_PALETTEMODE, 1);
         }
+       // break;
+    //case 8:
+    //if (gMapHeader.region == REGION_KANTO)
+    //{
+     //   if (sRegionMap->bgManaged)
+       // {
+         //   DecompressAndCopyTileDataToVram(sRegionMap->bgNum, sRegionMapCursorSmallGfxLZ, 0, 0, 0);
+           //     if (!FreeTempTileDataBuffersIfPossible())
+             //   DecompressAndCopyTileDataToVram(sRegionMap->bgNum, sRegionMapBg_KantoTilemapLZ, 0, 0, 1);
+        //}
+        //else
+          //  {
+                // Load background tilemap for the new region map
+            //    LZ77UnCompVram(sRegionMapNewBg_TilemapLZ, (u16 *)BG_SCREEN_ADDR(28));
+            //}
+    //}
+        
         sRegionMap->initStep++;
         return FALSE;
     default:

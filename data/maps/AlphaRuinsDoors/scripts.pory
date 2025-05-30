@@ -1,0 +1,11 @@
+mapscripts AlphaRuinsDoors_MapScripts {}
+
+script AlphaRuinsDoors_Text_Scientist {
+    msgbox("You came to investigate the RUINS with\nus?\lWell, glad to see a future archeologist\lthen!", MSGBOX_NPC)
+    end
+}
+
+script AlphaRuinsDoors_Text_Police {
+    msgbox("Here are the RUINS of ALPH.\nThe air is so odd here. It's like we\lare constantly watch...", MSGBOX_NPC)
+    end
+}

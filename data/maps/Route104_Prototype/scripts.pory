@@ -1,0 +1,102 @@
+raw`Route104_Prototype_MapScripts::
+	.byte 0
+
+`
+
+script CianwoodCave_Text_WarriorM{
+    lock
+    faceplayer
+    msgbox(format("CHUCK is in a incredible shape. Pretty sure he can fight against a MACHOKE and probably win !"))
+    release
+    end
+}
+
+script CianwoodCave_Text_WarriorF{
+    lock
+    faceplayer
+    msgbox(format("I'm amazed of how CHUCK managed to move from his defeat against BLUE. He is now motivated like never !"))
+    release
+    end
+}
+
+script CianwoodCave_Text_BlackBelt{
+    lock
+    msgbox(format("Such strength ! I'm voiceless"))
+    release
+    end
+}
+
+script CianwoodCave_Text_BlackBelt2{
+    lock
+    msgbox(format("I wish I could do the same..."))
+    release
+    end
+}
+
+script CianwoodCave_Text_WarriorF2{
+    lock
+    faceplayer
+    msgbox(format("Humpff... At his age I could do much more. Ask PROF. OAK and KURT, they can tell you.\p{PLAYER} : No thank you...."))
+    release
+    end
+}
+
+script CianwoodCave_Text_LittleGirl{
+    lock
+    faceplayer
+    msgbox(format("We are suppose to train ourself against the POKéMON of the area... WITH OUR BARE HANDS !"))
+    release
+    end
+}
+
+script CianwoodCave_Text_LittleBoy{
+    lock
+    faceplayer
+    msgbox(format("I'm dizzy, a GEODUDE slapped me because I try to throw it away."))
+    release
+    end
+}
+
+script CianwoodCave_Text_LittleBoy2{
+    lock
+    faceplayer
+    msgbox(format("We are suppose to SURVIVE HERE ! I'm 5 !! Who am I ? SON GOHAN ???! "))
+    release
+    end
+}
+
+script CianwoodCave_Text_Chuck {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_FLANNERY_4)){
+        msgbox(format("Wahhhhhh!\nI'm training really hard! My\lmaster BRUNO taught me that a\ldaily training is the only way to\limprove yourself!\lWhat they told you I've been\lbeaten by a kid?!!\lOh come on! I'll show you that I'm\lnot that weak!"), MSGBOX_YESNO)
+        if(var(VAR_RESULT)==1){
+            goto(CianwoodCave_Text_ChuckFight)
+        }else{
+            msgbox(format("Yeah! go train yourself and when\nyou are stronger come back to me!"))
+        }
+    }elif(defeated(TRAINER_FLANNERY_4)){
+        goto(CianwoodCave_Text_ChuckRematch)
+    }
+    
+    release
+    end
+}
+
+script CianwoodCave_Text_ChuckFight {
+    trainerbattle_single(TRAINER_FLANNERY_4, "You'll know who is the champion\nhere!", "What what what?!!!")
+    release
+    end
+}
+
+script CianwoodCave_Text_ChuckRematch {
+    msgbox(format("Are you a bully? You want to\ndisturb my training again?!"),MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        cleartrainerflag(TRAINER_FLANNERY_4)
+        trainerbattle_single(TRAINER_FLANNERY_4, "Seriously, I'll kick your ass!!!", "Damn it?!!")
+    }else{
+        msgbox(format("Grumbl, you are like BLUE...\nAnnoying brat!"))
+    }
+    release
+    end
+}

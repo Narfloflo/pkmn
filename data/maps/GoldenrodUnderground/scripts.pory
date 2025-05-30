@@ -1,0 +1,126 @@
+mapscripts GoldenrodUnderground_MapScripts {}
+
+script GoldenrodCity_Underground_EventScript_OlderHaircutBrother {
+	lock
+	faceplayer	
+		if (flag(FLAG_UNUSED_0x920))
+		{
+			msgbox("I do only one haircut a day.\n"
+				   "I'm done for today.")
+		}
+		else
+		{
+			showmoneybox(0, 0, FALSE)
+			msgbox("Welcome!\n"
+				   "I run the POKéMON SALON!\p"
+				   "I'm the older and better of the two\n"
+				   "HAIRCUT BROTHERS.\p"
+				   "I can make your POKéMON beautiful\n"
+				   "for just ¥500.\p"
+				   "Would you like me to do that?", MSGBOX_YESNO)
+			if (var(VAR_RESULT) == YES)
+			{
+				checkmoney(500, FALSE)
+				if (var(VAR_RESULT) == TRUE)
+				{
+					msgbox("Which POKéMON should I work on?")
+					special(ChoosePartyMon)
+					waitstate
+					if (var(VAR_0x8004) != 0xFF)
+            		{
+						removemoney(500, FALSE)
+						showmoneybox(0, 0, FALSE)
+                    	playse(SE_RG_SHOP)
+						msgbox("Okay!\n"
+							   "Watch it become beautiful!")
+						closemessage
+						hidemoneybox
+						fadescreen(FADE_TO_BLACK)
+						special(OlderHaircutBrother)
+						playfanfare(MUS_HEAL)
+						waitfanfare
+						fadescreen(FADE_FROM_BLACK)
+						msgbox("There!\n"
+							   "All done!")
+						call(GoldenrodCity_Underground_EventScript_Haircut_Result)
+						setflag(FLAG_UNUSED_0x920)
+					}
+					else
+					{
+						call(GoldenrodCity_Underground_EventScript_OlderHaircutBrother_Rejected)
+					}
+				}
+				else
+				{
+					msgbox("You'll need more money than that.")
+				}
+			}
+			else
+			{
+				call(GoldenrodCity_Underground_EventScript_OlderHaircutBrother_Rejected)
+			}
+			hidemoneybox
+		}
+	release
+}
+
+script GoldenrodCity_Underground_EventScript_OlderHaircutBrother_Rejected {
+	msgbox("Is that right?\n"
+		   "That's a shame!")
+}
+
+script GoldenrodCity_Underground_EventScript_YoungerHaircutBrother {
+	msgbox("My brother is the best at massaging\nPOKéMON!\lI'm learning the job because being here\lall the time is a real pain.\lMy bro is counting on me!", MSGBOX_NPC)
+    end
+}
+
+
+
+script GoldenrodCity_Underground_EventScript_Haircut_Result {
+	bufferpartymonnick(0, VAR_0x8004)
+	special(PlayChosenMonCry)
+	switch (var(VAR_RESULT))
+	{
+	case 0:
+		msgbox("{STR_VAR_1} looks a little happier.")
+	case 1:
+		msgbox("{STR_VAR_1} looks happy.")
+	case 2:
+		msgbox("{STR_VAR_1} looks delighted!")
+	}
+	waitmoncry
+}
+
+script GoldenrodCity_Underground_EventScript_HerbMerchant {
+    lock
+    faceplayer
+	msgbox("Hello, dear.\n"
+			   "I sell inexpensive herbal medicine.\p"
+			   "They're good but a trifle bitter.\n"
+			   "Your POKéMON may not like them.\l"
+			   "Hehehehe…")
+	waitmessage
+	pokemart(HerbMerchantItems)
+	msgbox("Come again, dear.\n"
+			   "Hehehehe…")
+	release
+    end
+}
+
+mart HerbMerchantItems {
+    ITEM_ENERGY_POWDER
+    ITEM_ENERGY_ROOT
+    ITEM_HEAL_POWDER
+    ITEM_REVIVAL_HERB
+    ITEM_NONE
+}
+
+script GoldenrodCity_Underground_EventScript_Gambler {
+	msgbox("I'm still thinking about my business\nmodel...\lSo yeah, not open!", MSGBOX_NPC)
+    end
+}
+
+script GoldenrodCity_Underground_Sign_HerbMerchant {
+    msgbox("HERB MERCHANT\n“We don't refunds!”", MSGBOX_SIGN)
+    end
+}

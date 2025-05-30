@@ -219,7 +219,7 @@ script Route117_EventScript_Prof {
 script Route117_EventScript_StudentM {
 	lock
 	faceplayer
-	msgbox(format("If you are lucky enough, you can find a EEVEE in the GRASS here."))
+	msgbox("I wish I had an EEVEE!\nIt so fluffy and beautiful!")
 	release
 	end
 }
@@ -247,97 +247,46 @@ script Route117_EventScript_LostGuy {
 	end
 }
 
-script Route117_EventScript_RunningWoman {
+
+script Route117_Text_Beauty {
 	lock
 	faceplayer
-	msgbox(format("So you just think you can stop me from my training? You have to pay for this! Wanna try your strength?"), MSGBOX_YESNO)
-	if(var(VAR_RESULT) != 0){
-		message(format("Oh you are so dead!"))
-		call(Route117_EventScript_ChooseMonRand)
+	msgbox(format("You know, a bit south, there is a\nhouse where a old lady is living.\lShe's\lbeen living all alone for a\lwhile, and I think she's really\ldisturbed..."))
+	release
+	end
+}
+
+script Route117_Text_Fatman {
+	lock
+	faceplayer
+	msgbox(format("VERDANTURF's hospital is really\nfamous!\lThey take care of people AND\lPOKéMON!\lSo amazing!"))
+	release
+	end
+}
+
+script Route117_Event_SchoolClosed {
+	gettime
+	if (var(VAR_0x8003) == TIME_NIGHT || var(VAR_0x8003) == TIME_MIDNIGHT){
+		lock
+		applymovement(25, Route117_Move_DirectorTriggered)
+		msgbox("Humm... The SCHOOL is closed during the\nnight...\lCome back later.")
+		applymovement(OBJ_EVENT_ID_PLAYER, Route117_Move_Stepback)
+		waitmovement(0)
 		release
 		end
-	}else{
-		msgbox(format("Pfff you so weak, so weak!"))
-		release
-		end
 	}
+	release
+	end
 }
 
-script Route117_EventScript_ChooseMonRand {
-	random(3)
-		switch(var(VAR_RESULT)){
-			case 0: call(Route117_EventScript_Medicham)
-			case 1: call(Route117_EventScript_Hariyama)
-			case 2: call(Route117_EventScript_Machamp)
-		}
-	return
+movement Route117_Move_DirectorTriggered {
+	emote_exclamation_mark
+	face_original_direction
+	jump_in_place_left
+	step_end
 }
 
-script Route117_EventScript_Medicham{
-	playmoncry(SPECIES_MEDICHAM, CRY_MODE_ENCOUNTER)
-	waitmoncry
-	setwildbattle(SPECIES_MEDICHAM, 45)
-	dowildbattle
-	specialvar(VAR_RESULT, GetBattleOutcome)
-	if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
-		msgbox(format("YOU CHEATED! MEDICHAM IS THE BEST"))
-	}
-	elif(var(VAR_RESULT) == B_OUTCOME_WON){
-		msgbox(format("... Yeah, you were just lucky..."))
-
-	}
-	elif(var(VAR_RESULT) == B_OUTCOME_RAN){
-		msgbox(format("AH! I knew you were weak!"))
-
-	}
-	elif(var(VAR_RESULT) == B_OUTCOME_PLAYER_TELEPORTED){
-		msgbox(format("AH! I knew you were weak!"))
-	}
-	return
-}
-
-script Route117_EventScript_Hariyama{
-	playmoncry(SPECIES_HARIYAMA, CRY_MODE_ENCOUNTER)
-	waitmoncry
-	setwildbattle(SPECIES_HARIYAMA, 45)
-	dowildbattle
-	specialvar(VAR_RESULT, GetBattleOutcome)
-	if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
-		msgbox(format("YOU CHEATED! HARIYAMA IS THE BEST"))
-	}
-	elif(var(VAR_RESULT) == B_OUTCOME_WON){
-		msgbox(format("... Yeah, you were just lucky..."))
-
-	}
-	elif(var(VAR_RESULT) == B_OUTCOME_RAN){
-		msgbox(format("AH! I knew you were weak!"))
-
-	}
-	elif(var(VAR_RESULT) == B_OUTCOME_PLAYER_TELEPORTED){
-		msgbox(format("AH! I knew you were weak!"))
-	}
-	return
-}
-
-script Route117_EventScript_Machamp{
-	playmoncry(SPECIES_MACHAMP, CRY_MODE_ENCOUNTER)
-	waitmoncry
-	setwildbattle(SPECIES_MACHAMP, 45)
-	dowildbattle
-	specialvar(VAR_RESULT, GetBattleOutcome)
-	if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
-		msgbox(format("YOU CHEATED! MACHAMP IS THE BEST"))
-	}
-	elif(var(VAR_RESULT) == B_OUTCOME_WON){
-		msgbox(format("... Yeah, you were just lucky..."))
-
-	}
-	elif(var(VAR_RESULT) == B_OUTCOME_RAN){
-		msgbox(format("AH! I knew you were weak!"))
-
-	}
-	elif(var(VAR_RESULT) == B_OUTCOME_PLAYER_TELEPORTED){
-		msgbox(format("AH! I knew you were weak!"))
-	}
-	return
+movement Route117_Move_Stepback {
+	walk_down
+	step_end
 }

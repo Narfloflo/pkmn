@@ -1,0 +1,24 @@
+mapscripts Route37_MapScripts {}
+
+script Route37_Text_Blackbelt {
+    trainerbattle_single(TRAINER_NICOLAS_2, "Hey! Are you going to CIANWOOD ISLAND\nto see CHUCK?","Guooooh!")
+    msgbox("I came from SAFFRON's DOJO just to see\nCHUCK.\lI wanna improve myself greatly!", MSGBOX_NPC)
+    end
+}
+
+script Route37_Text_SchoolKid {
+    trainerbattle_single(TRAINER_NICOLAS_3, "I was taught a few things at EARL'S\nSCHOOL.\lI'll show you.","Wow! You should be a teacher!")
+    msgbox("I'm too scare to jump. But if I stay\nhere, nothing would happen.\lSo, I'm block...", MSGBOX_NPC)
+    end
+}
+
+script Route37_Text_Youngster {
+    trainerbattle_single(TRAINER_NICOLAS_4, "Be quiet!\nI'm looking for a STANTLER!","Oh no! We made to much noises!")
+    msgbox("I'm looking for a few POKéMON.\nStantler is the next on my list. But\lthey are too fast for me.\lI should ask KURT for a FAST BALL!", MSGBOX_NPC)
+    end
+}
+
+script Route37_Sign_Ecruteak {
+    msgbox("ECRUTEAK CITY ahead", MSGBOX_SIGN)
+    end
+}

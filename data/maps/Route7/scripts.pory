@@ -1,0 +1,17 @@
+mapscripts Route7_MapScripts {}
+
+script Route7_Text_Picnicker {
+   trainerbattle_single(TRAINER_WINSTON_3, "The UNDERGROUND are closed ? Why ?", "Oh blasted !")
+    msgbox(format("The UNDERGROUND have been closed because some ROCKET and shady criminals found refugees inside."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route7_Text_BugCatcher {
+   trainerbattle_single(TRAINER_WINSTON_4, "I like bugs POKéMON, what you\ngonna do about it ?", "Oh but, they were so cool !")
+    msgbox(format("I want to be the toughest BUG CATCHER in KANTO. I heard some BUGSY guy from JOHTO is quite a genius about this type..."), MSGBOX_AUTOCLOSE)
+    end
+}
+script Route7_Text_UndergroundSign {
+    msgbox("UNDERGROUND PATH\nCELADON CITY - LAVENDER TOWN",MSGBOX_SIGN)
+    end
+}

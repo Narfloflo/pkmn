@@ -992,3 +992,19 @@ Route110_Text_KeepAnEyeOutForRival:
 	.string "Well, I had better get going.\n"
 	.string "See you again, {PLAYER}{KUN}!$"
 
+Route110_Text_Worker::
+	goto_if_set FLAG_GOT_TM24_FROM_WATTSON, Route110_Text_Worker_2
+	msgbox Route110_Text_Worker_Text_1, MSGBOX_NPC
+Route110_Text_Worker_1:
+	end
+
+Route110_Text_Worker_2:
+	msgbox Route110_Text_Worker_Text_0, MSGBOX_NPC
+	goto Route110_Text_Worker_1
+
+
+Route110_Text_Worker_Text_0:
+	.string "Oh!\nThe generator has been shut off!\lhave you seen the stairs inside?\lI think it lead to the mountains behind\lus.\lI wonder what's inside.$"
+
+Route110_Text_Worker_Text_1:
+	.string "This village here was built\nby WATTSON.\lIt should have been an expansion of\lMAUVILLE, powered with NEW MAUVILLE.\lBut since the project was abandoned,\lthere is only those empty lots...\lBut somehow, the generator inside is\lstill on.\lELECTRIC POKéMON are really fond of\lthis place!$"

@@ -765,3 +765,302 @@ PetalburgCity_Text_ImLookingForTalentedTrainers:
 	.string "I'm roaming the land in search of\n"
 	.string "talented TRAINERS.\p"
 	.string "I'm sorry to have taken your time.$"
+
+PetalbugCity_Text_OldWoman::
+	lock
+	faceplayer
+	msgbox PetalbugCity_Text_OldWoman_Text_0
+	release
+	end
+
+
+PetalbugCity_Text_Salaryman::
+	lock
+	faceplayer
+	msgbox PetalbugCity_Text_Salaryman_Text_0
+	release
+	end
+
+
+PetalbugCity_Text_Boy2::
+	lock
+	faceplayer
+	msgbox PetalbugCity_Text_Boy2_Text_0
+	release
+	end
+
+
+PetalbugCity_Text_Girl::
+	lock
+	faceplayer
+	msgbox PetalbugCity_Text_Girl_Text_0
+	release
+	end
+
+
+PetalbugCity_Text_OldMan::
+	lock
+	faceplayer
+	msgbox PetalbugCity_Text_OldMan_Text_0
+	release
+	end
+
+
+PetalbugCity_Text_SecretBaseGirl1::
+	lock
+	faceplayer
+	applymovement 11, PetalbugCity_Move_SecretBaseGirl1Exclamation
+	waitmovement 11
+	msgbox PetalbugCity_Text_SecretBaseGirl1_Text_0
+	applymovement 11, PetalbugCity_Move_SecretBaseGirl1
+	waitmovement 11
+	playse SE_EXIT
+	removeobject 11
+	applymovement 10, PetalbugCity_Move_SecretBaseGirlOtherOne1
+	waitmovement 10
+	playse SE_EXIT
+	removeobject 10
+	fadescreen FADE_TO_BLACK
+	setmetatile 16, 53, METATILE_General_SecretBase_TreeRight, TRUE
+	fadescreen FADE_FROM_BLACK
+	setvar VAR_TEMP_1, 1
+	release
+	end
+
+
+PetalbugCity_Move_SecretBaseGirl1Exclamation:
+	emote_exclamation_mark
+	step_end
+
+PetalbugCity_Move_SecretBaseGirl1:
+	jump_in_place_down
+	jump_in_place_down
+	walk_fast_up
+	step_end
+
+PetalbugCity_Move_SecretBaseGirlOtherOne1:
+	walk_fast_down
+	walk_fast_left
+	walk_fast_up
+	step_end
+
+PetalbugCity_Text_SecretBaseGirl2::
+	lock
+	faceplayer
+	applymovement 11, PetalbugCity_Move_SecretBaseGirl1Exclamation
+	waitmovement 11
+	msgbox PetalbugCity_Text_SecretBaseGirl1_Text_0
+	applymovement 11, PetalbugCity_Move_SecretBaseGirl2
+	waitmovement 11
+	playse SE_EXIT
+	removeobject 11
+	applymovement 10, PetalbugCity_Move_SecretBaseGirlOtherOne1
+	waitmovement 10
+	playse SE_EXIT
+	removeobject 10
+	setmetatile 16, 53, METATILE_General_SecretBase_TreeRight, TRUE
+	setvar VAR_TEMP_1, 1
+	release
+	end
+
+
+PetalbugCity_Move_SecretBaseGirl2:
+	jump_in_place_left
+	jump_in_place_left
+	walk_fast_up
+	step_end
+
+PetalbugCity_Text_SecretBaseGirl3::
+	lock
+	faceplayer
+	applymovement 11, PetalbugCity_Move_SecretBaseGirl1Exclamation
+	waitmovement 11
+	msgbox PetalbugCity_Text_SecretBaseGirl1_Text_0
+	applymovement 11, PetalbugCity_Move_SecretBaseGirl3
+	waitmovement 11
+	playse SE_EXIT
+	removeobject 11
+	applymovement OBJ_EVENT_ID_PLAYER, PetalbugCity_Move_SecretBasePlayer
+	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement 10, PetalbugCity_Move_SecretBaseGirlOtherOne2
+	waitmovement 10
+	playse SE_EXIT
+	removeobject 10
+	setmetatile 16, 53, METATILE_General_SecretBase_TreeRight, TRUE
+	setvar VAR_TEMP_1, 1
+	release
+	end
+
+
+PetalbugCity_Move_SecretBaseGirl3:
+	jump_in_place_right
+	jump_in_place_right
+	walk_fast_up
+	step_end
+
+PetalbugCity_Move_SecretBaseGirlOtherOne2:
+	walk_fast_down
+	walk_fast_left
+	walk_fast_up
+	step_end
+
+PetalbugCity_Move_SecretBasePlayer:
+	walk_down
+	step_end
+
+PetalbugCity_Text_SecretBaseGirl4::
+	lock
+	faceplayer
+	applymovement 10, PetalbugCity_Move_SecretBaseGirl1Exclamation
+	waitmovement 10
+	msgbox PetalbugCity_Text_SecretBaseGirl1_Text_0
+	applymovement 11, PetalbugCity_Move_SecretBaseGirl3
+	waitmovement 11
+	playse SE_EXIT
+	removeobject 11
+	applymovement OBJ_EVENT_ID_PLAYER, PetalbugCity_Move_SecretBasePlayer
+	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement 10, PetalbugCity_Move_SecretBaseGirlOtherOne2
+	waitmovement 10
+	playse SE_EXIT
+	removeobject 10
+	setmetatile 16, 53, METATILE_General_SecretBase_TreeRight, TRUE
+	setvar VAR_TEMP_1, 1
+	release
+	end
+
+
+PetalbugCity_Text_SecretBaseGirl5::
+	lock
+	faceplayer
+	applymovement 10, PetalbugCity_Move_SecretBaseGirl1Exclamation
+	waitmovement 10
+	msgbox PetalbugCity_Text_SecretBaseGirl1_Text_0
+	applymovement 11, PetalbugCity_Move_SecretBaseGirl4
+	waitmovement 11
+	playse SE_EXIT
+	removeobject 11
+	applymovement OBJ_EVENT_ID_PLAYER, PetalbugCity_Move_SecretBasePlayer
+	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement 10, PetalbugCity_Move_SecretBaseGirlOtherOne2
+	waitmovement 10
+	playse SE_EXIT
+	removeobject 10
+	setmetatile 16, 53, METATILE_General_SecretBase_TreeRight, TRUE
+	setvar VAR_TEMP_1, 1
+	release
+	end
+
+
+PetalbugCity_Move_SecretBaseGirl4:
+	jump_in_place_up
+	jump_in_place_up
+	walk_fast_up
+	step_end
+
+PetalbugCity_Text_SchoolBoy::
+	lock
+	faceplayer
+	msgbox PetalbugCity_Text_SchoolBoy_Text_0
+	release
+	end
+
+
+PetalbugCity_Text_Director::
+	lock
+	faceplayer
+	msgbox PetalbugCity_Text_Director_Text_0
+	release
+	end
+
+
+PetalburgCity_Text_RestoSign::
+	msgbox PetalburgCity_Text_RestoSign_Text_0, MSGBOX_SIGN
+	end
+
+
+PetalburgCity_Text_SchoolSign::
+	msgbox PetalburgCity_Text_SchoolSign_Text_0, MSGBOX_SIGN
+	end
+
+
+PetalburgCity_Event_SchoolClosed::
+	gettime
+	compare VAR_0x8003, TIME_NIGHT
+	goto_if_eq PetalburgCity_Event_SchoolClosed_2
+	compare VAR_0x8003, TIME_MIDNIGHT
+	goto_if_eq PetalburgCity_Event_SchoolClosed_2
+	release
+	end
+
+PetalburgCity_Event_SchoolClosed_2:
+	lock
+	applymovement 12, PetalbugCity_Move_DirectorTriggered
+	msgbox PetalburgCity_Event_SchoolClosed_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, PetalbugCity_Move_Stepback
+	waitmovement 0
+	release
+	end
+
+
+PetalbugCity_Move_DirectorTriggered:
+	emote_exclamation_mark
+	face_original_direction
+	jump_in_place_right
+	step_end
+
+PetalbugCity_Move_Stepback:
+	walk_right
+	step_end
+
+PetalbugCity_Text_OldWoman_Text_0:
+	.string "You know that PETALBURG CITY is a\n"
+	.string "miner's city ?\p"
+	.string "You can find the MINES on the ROUTE\n"
+	.string "102.$"
+
+PetalbugCity_Text_Salaryman_Text_0:
+	.string "I wish there were a way to go to\n"
+	.string "RUSTBORO CITY without going into\l"
+	.string "PETALBURG WOOD.\p"
+	.string "So much BUGS... Brrrrr !$"
+
+PetalbugCity_Text_Boy2_Text_0:
+	.string "My sisters are so proud of their SECRET\n"
+	.string "BASE in the city.\p"
+	.string "But every time I approach them to have\n"
+	.string "a look inside, they flew away !...$"
+
+PetalbugCity_Text_Girl_Text_0:
+	.string "There is a SCHOOL here, and also in\n"
+	.string "RUSTBORO CITY, which is the biggest\l"
+	.string "one !$"
+
+PetalbugCity_Text_OldMan_Text_0:
+	.string "The new GYM LEADER is a bit of a prick.\n"
+	.string "He came from nowhere and give order to\l"
+	.string "every TRAINERS in the GYM !\p"
+	.string "In my time... Grumbl...$"
+
+PetalbugCity_Text_SecretBaseGirl1_Text_0:
+	.string "Oh no ! An intruder !$"
+
+PetalbugCity_Text_SchoolBoy_Text_0:
+	.string "I hope that I will move to RUSTBORO\n"
+	.string "CITY's School !\p"
+	.string "The very best of HOENN!$"
+
+PetalbugCity_Text_Director_Text_0:
+	.string "This is PETALBURG's SCHOOL.\n"
+	.string "We all hope to send our pupils to\l"
+	.string "RUSTBORO's SCHOOL after they are\l"
+	.string "graduated!$"
+
+PetalburgCity_Text_RestoSign_Text_0:
+	.string "PETALBURG Restaurant$"
+
+PetalburgCity_Text_SchoolSign_Text_0:
+	.string "PETALBURG SCHOOL\n“Last school before la creme de la\lcreme in RUSTBORO”$"
+
+PetalburgCity_Event_SchoolClosed_Text_0:
+	.string "Humm... The SCHOOL is closed during the\nnight...\lCome back later.$"

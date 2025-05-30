@@ -1,0 +1,9 @@
+mapscripts HoennJohtoPath_MapScripts {
+    MAP_SCRIPT_ON_RESUME:HoennJohtoPath_OnResume
+}
+
+
+script HoennJohtoPath_OnResume {
+    setdivewarp(MAP_NORTHERN_PATH,9,9)
+    end
+}

@@ -1,0 +1,62 @@
+mapscripts PetalburgResto_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION
+        {
+            gettime
+            if (var(VAR_0x8003) == TIME_DAY){
+            setflag(FLAG_TEMP_1)
+            call_if_set(FLAG_TEMP_1, PetalburgResto_Event_Worker)
+        }
+    }
+}
+
+script PetalburgResto_Event_Worker {
+    removeobject(2)
+    end
+}
+
+script PetalburgResto_Text_Man {
+    msgbox("My problems are in my glass. And I'm\ndrinking them all.\lLeave me alone, it's a real man's task!", MSGBOX_NPC)
+    applymovement(8, PetalburgResto_Man_Mouvement)
+    waitmovement(0)
+    release
+    end
+}
+
+movement PetalburgResto_Man_Mouvement{
+    face_right
+}
+
+script PetalburgResto_Text_Miner {
+    lock
+    faceplayer
+    msgbox(format("I love having a big plate of\nspaghetti after a long day in the\lmine!"))
+    applymovement(4, PetalburgResto_Man_Mouvement)
+    waitmovement(0)
+    release
+    end
+}
+
+script PetalburgResto_Text_OldWoman {
+    lock
+    faceplayer
+    msgbox(format("You know there is several places\nlike this in all the other cities.\lYou can also find some restaurants\lin the various routes of HOENN.\lKeep your eyes opened kid!"))
+    release
+    end
+}
+
+script PetalburgResto_Text_Vendor{
+    lock
+    faceplayer
+	message("Welcome,\nDo you want a snack?")
+	waitmessage
+	pokemart(PetalburgResto_PubItems)
+	msgbox("Don't mind the old drunk on the corner.\nSee you again!")
+	release
+    end
+}
+
+mart PetalburgResto_PubItems {
+    ITEM_SANDWICH
+	ITEM_FRESH_WATER
+    ITEM_NONE
+}

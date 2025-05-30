@@ -1,0 +1,55 @@
+mapscripts IlexForest_MapScripts {}
+
+
+script IlexForest_Text_Farfetchd {
+    lock
+    faceplayer
+    playmoncry(SPECIES_FARFETCHD, CRY_MODE_NORMAL)
+    msgbox(format("Kwaa!"))
+    release
+    end
+}
+
+
+script IlexForest_EventScript_Tree {
+	lock
+    if(flag(FLAG_UNUSED_0x026)==TRUE){
+        msgbox(format("This is the SHRINE of the guardian of\nthe FOREST.\lWell I should say it was the shrine of\lCELEBI huhu!"))
+        release
+        end
+    }
+    checkitem(ITEM_GS_BALL, 1)
+    if(var(VAR_RESULT)== TRUE){
+        goto(IlexForest_EventScript_TriggerCelebi)
+    }else{
+	msgbox(format("This is the SHRINE of the guardian of the FOREST."))
+    }
+	release
+	end
+}
+
+script IlexForest_EventScript_TriggerCelebi {
+	lock
+    msgbox(format("{PLAYER}: Huh?\nLooks like the GS BALL can fit here.\lMaybe I can try to put it in?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) !=0){
+            msgbox("{PLAYER}: What?!")
+            call(WarpToCelebi)
+        }else{
+            msgbox("Humm... Not today so.")
+        }
+	release
+	end
+}
+
+script WarpToCelebi{
+    fadescreen(FADE_TO_BLACK)
+    delay(5)
+    warp(MAP_CELEBI_CHAMBER, 5, 4)
+    fadescreen(FADE_FROM_BLACK)
+}
+
+
+script IlexForest_Text_CutMaster {
+    msgbox("I'm cutting trees with my FARFETCH'D.\nBut I try not to cut to much.\lMy disciples are growing trees.\lSo we respect the balance of the\lforest.", MSGBOX_NPC)
+    end
+}

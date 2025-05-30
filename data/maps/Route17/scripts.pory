@@ -1,0 +1,100 @@
+mapscripts Route17_MapScripts {}
+
+script Route17_Text_CafeSign {
+    lock
+    msgbox(format("CYCLING ROAD CAFÉ\n“We brew the la cream de la cream\linside with love!”"))
+    release
+    end
+}
+
+script Route17_Text_Biker1 {
+    trainerbattle_single(TRAINER_ISAIAH_2, "Wow wow kid !\nThis place is for adult only !", "Outch !\n You are a tough one !")
+    msgbox(format("We don't fight in the Café. Yet... It's just a question of time before one of my boy get pissed about how classy the things are inside !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route17_Text_Biker2 {
+    trainerbattle_single(TRAINER_ISAIAH_3, "Hey, punk!\nThis route ain't for the weak!", "Gah! You're tougher than you look!")
+    msgbox(format("Watch out, kid! This route's no walk in the park."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route17_Text_Biker3 {
+    trainerbattle_single(TRAINER_ISAIAH_4, "Oi, you think you can handle\nthe speed of my BIKE ?", "Whoa, slow down!\nYou're too fast for me!")
+    msgbox(format("Biking on Route 17 requires speed and skill. You've got potential."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route17_Text_Biker4 {
+    trainerbattle_single(TRAINER_MARIA_2, "Buenos dias kid.\nMeet my friend.\pThey love punching kids !", "That's no good !")
+    msgbox(format("You've been to the Café already ? Hard to sip some liquor when you can't get off your bike ?"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route17_Text_TriathleteF {
+    trainerbattle_single(TRAINER_MARIA_3, "Looking for a challenge, huh?\nLet's battle!", "Impressive!\nYou've got some serious skills.")
+    msgbox(format("Since they reduce the slope here, it's easier to ride around."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route17_Text_TriathleteM {
+    trainerbattle_single(TRAINER_MARIA_4, "Ready for a triathlon battle?\nLet's dive in!", "You're a strong competitor!\nGreat race!")
+    msgbox(format("The POLICE made quite the effort to tame the GANGS of BIKERS. It became safe to take your BIKE here !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route17_Text_RedoBiker {
+     lock
+    faceplayer
+    msgbox(format("Hold on ! I saw you beating my friends ! I'm not really good at POKéMON battles. Anyway. If you want I can call them for a rematch ?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1){
+        cleartrainerflag(TRAINER_ISAIAH_2)
+        cleartrainerflag(TRAINER_ISAIAH_3)
+        cleartrainerflag(TRAINER_ISAIAH_4)
+        cleartrainerflag(TRAINER_MARIA_2)
+        cleartrainerflag(TRAINER_MARIA_3)
+        cleartrainerflag(TRAINER_MARIA_4)
+        cleartrainerflag(TRAINER_ELLIOT_3)
+        cleartrainerflag(TRAINER_ELLIOT_4)
+        playse(SE_POKENAV_CALL)
+        waitse
+        playse(SE_POKENAV_OFF)
+        waitse
+        msgbox(format("Go on and kick their ass again. That will teach them to not mess with the kids. (What is this world...)"))
+    }
+    release
+    end  
+}
+
+script Route17_Text_CheckBike {
+    lockall
+    specialvar(VAR_RESULT, GetPlayerAvatarBike)
+    goto_if_eq(VAR_RESULT, 0, Route17_Text_NoBike)
+    setflag(FLAG_SYS_CYCLING_ROAD)
+    setvar(VAR_TEMP_1, 1)
+    releaseall
+    end
+}
+
+script Route17_Text_NoBike {
+    lock
+    applymovement(8, ExclamationSolo)
+    waitmovement(0)
+    msgbox(format("Hey kid!\nGet back on your BIKE or you'll get\lhurt !\lGeez, I swear kids nowadays..."))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, Route17_Move_NoBike)
+    waitmovement(0)
+    releaseall
+    end
+}
+
+movement Route17_Move_NoBike {
+    walk_up
+    step_end
+}
+
+script Route17_Text_ThugOnFoot {
+    lock
+    msgbox("It's a pedestrian area here.\nYou can leave your bike and get inside\lthe café without your bike.",MSGBOX_NPC)
+    end
+}

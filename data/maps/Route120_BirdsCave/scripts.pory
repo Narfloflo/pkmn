@@ -1,0 +1,261 @@
+mapscripts Route120_BirdsCave_MapScripts {}
+
+script CeladonCenter_Text_AnnounceSign {
+    lock
+    msgbox(format("1F: Service Counter\n2F: Trainer's Market\p3F: TV Game Shop\n4F: Wiseman Gifts\p5F: Drug Store\nRooftop Square: Vending Machines"))
+    release
+    end
+}
+
+script CeladonDept_Text_1fHostess {
+    lock
+    faceplayer
+    msgbox(format("Hello ! Welcome to CELADON DEPT.\nSTORE. The board on the right\ldescribes the store layout."))
+    release
+    end
+}
+
+script CeladonDept_Text_2FVendor1 {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemart(CeladonDept_Mart_2FVendor1)
+    msgbox(format("Please come again!"))
+    release
+}
+
+mart CeladonDept_Mart_2FVendor1 {
+    ITEM_GREAT_BALL
+    ITEM_ULTRA_BALL
+    ITEM_SUPER_POTION
+    ITEM_HYPER_POTION
+    ITEM_REVIVE
+    ITEM_SUPER_REPEL
+    ITEM_MAX_REPEL
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+    ITEM_BURN_HEAL
+    ITEM_ICE_HEAL
+    ITEM_FULL_HEAL
+    ITEM_ESCAPE_ROPE    
+}
+
+script CeladonDept_Text_2FVendor2 {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemart(CeladonDept_Mart_2FVendor2)
+    msgbox(format("Please come again!"))
+    release
+}
+
+mart CeladonDept_Mart_2FVendor2 {
+    ITEM_TM05_ROAR
+    ITEM_TM24_THUNDERBOLT
+    ITEM_TM28_DIG
+    ITEM_TM31_BRICK_BREAK
+    ITEM_TM02_DRAGON_CLAW
+}
+
+
+script CeladonDept_Text_2fLass {
+    lock
+    faceplayer
+    msgbox(format("For long outings, you should buy REVIVE."))
+    release
+    end
+}
+script CeladonDept_Text_2fWoman {
+    lock
+    faceplayer
+    msgbox(format("I'm not a TRAINER but I really enjoy wandering in this floor, looking for some item. I really wish I could be a TRAINER..."))
+    release
+    end
+}
+
+script CeladonDept_Text_3FVendor {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemart(CeladonDept_Mart_3FVendor)
+    msgbox(format("Please come again!"))
+    release
+}
+
+mart CeladonDept_Mart_3FVendor {
+    ITEM_SCOPE_LENS
+    ITEM_UP_GRADE
+    ITEM_SMOKE_BALL
+    ITEM_METAL_POWDER
+}
+script CeladonDept_Text_3fGBAKid1 {
+    lock
+    faceplayer
+    msgbox(format("Captured POKéMON are registered\nwith an ID No. and OT, the name of\lthe Original Trainer that caught\lit !"))
+    release
+    end
+}
+script CeladonDept_Text_3fSNES {
+    lock
+    faceplayer
+    msgbox(format("{PLAYER}: Why is there an SNES here ? What era are they living in ? Is this the RETRO convention ?"))
+    release
+    end
+}
+script CeladonDept_Text_3fTV1 {
+    lock
+    faceplayer
+    msgbox(format("{PLAYER}: Oh that's CHRONO TRIGGER ! Best RPG ever. Won't change my mind !"))
+    release
+    end
+}
+script CeladonDept_Text_3fTV2 {
+    lock
+    faceplayer
+    msgbox(format("{PLAYER}: Wow this kid basically beat Mr. Sandman like it was nothing !"))
+    release
+    end
+}
+script CeladonDept_Text_3fTV3 {
+    lock
+    faceplayer
+    msgbox(format("{PLAYER}: Super Mario... I remember using YOSHI to make a super jump above a pit. Poor dino..."))
+    release
+    end
+}
+script CeladonDept_Text_3fTV4 {
+    lock
+    faceplayer
+    msgbox(format("{PLAYER}: Ahah ! You forgot to get the Moon Pearl. You'll live like a bunny all your life ! Haha !"))
+    release
+    end
+}
+
+script CeladonDept_Text_3FKidPlaying {
+    lock
+    faceplayer
+    msgbox(format("I need to stay focus ! I'll get to the third DUNGEON soon !"))
+    release
+    end
+}
+script CeladonDept_Text_3FKidPlaying2 {
+    lock
+    faceplayer
+    msgbox(format("I entered my nickname when I got the best score : MUK, but in reverse. It sound fun !"))
+    release
+    end
+}
+script CeladonDept_Text_3FGirl {
+    lock
+    faceplayer
+    msgbox(format("I wanted to play some ARCADE, but there is only SNES here. That's lame !"))
+    release
+    end
+}
+
+script CeladonDept_Text_4FVendor {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemart(CeladonDept_Mart_4FVendor)
+    msgbox(format("Please come again!"))
+    release
+}
+
+mart CeladonDept_Mart_4FVendor {
+    ITEM_POKE_DOLL
+    ITEM_FIRE_STONE
+    ITEM_THUNDER_STONE
+    ITEM_WATER_STONE
+    ITEM_LEAF_STONE
+    ITEM_SUN_STONE
+    
+}
+
+script CeladonDept_Text_4FGuy {
+    lock
+    faceplayer
+    msgbox(format("I've got a POKéDOLL for my girlfriend. But when I came back to her in SAFFRON, some boy already gave her her favourite doll ! I'm so pissed !"))
+    release
+    end
+}
+script CeladonDept_Text_4FYoungster {
+    lock
+    faceplayer
+    msgbox(format("You know you can distracted a POKéMON and running from a Battle by throwing a POKéDOLL to a wild POKéMON?"))
+    release
+    end
+}
+
+script CeladonDept_Text_5FVendor {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemart(CeladonDept_Mart_5FVendor)
+    msgbox(format("Please come again!"))
+    release
+}
+
+mart CeladonDept_Mart_5FVendor {
+    ITEM_X_ACCURACY
+    ITEM_GUARD_SPEC
+    ITEM_DIRE_HIT
+    ITEM_X_ATTACK
+    ITEM_X_DEFEND
+    ITEM_X_SPEED
+    ITEM_X_SPECIAL
+}
+script CeladonDept_Text_5FVendor2 {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemart(CeladonDept_Mart_5FVendor2)
+    msgbox(format("Please come again!"))
+    release
+}
+
+mart CeladonDept_Mart_5FVendor2 {
+    ITEM_HP_UP
+    ITEM_PROTEIN
+    ITEM_IRON
+    ITEM_CARBOS
+    ITEM_CALCIUM
+    ITEM_PP_UP
+}
+script CeladonDept_Text_5FSailor {
+    lock
+    faceplayer
+    msgbox(format("I'm here for POKéMON ability enhancers. I wonder if I eat some PROTEIN, will I be able to lift 1000lb like a MACHOP?"))
+    release
+    end
+}
+script CeladonDept_Text_5FGentleman {
+    lock
+    faceplayer
+    msgbox(format("POkéMON Ability enhancers can be purchase only here.\n{PLAYER}: Well I can buy some in SLATEPORT CITY Market. So you're wrong !"))
+    release
+    end
+}
+
+script CeladonDept_Text_RoofGuy {
+    lock
+    faceplayer
+    msgbox(format("My sister is a genius... She trade TM for cheap drinks... She drives me nuts because I bought it for her !"))
+    release
+    end
+}
+
+script CeladonDept_Text_RoofGirl {
+    lock
+    faceplayer
+    msgbox(format("BURP !!\nI drank too much SODA I think !"))
+    release
+    end
+}

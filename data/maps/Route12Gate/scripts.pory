@@ -1,0 +1,18 @@
+mapscripts Route12Gate_MapScripts {}
+
+script Route12Gate_Text_Lass {
+    msgbox("My POKéMON's ashes are stored in\nPOKéMON TOWER.\pI saw the former CHAMPION, BLUE there.", MSGBOX_NPC)
+    end
+}
+script Route12Gate_Text_TheresManFishing {
+    msgbox("Let's see what the binoculars have\nto show…\pThere's a man fishing!", MSGBOX_NPC)
+    end
+}
+script Route12Gate_Text_ItsPokemonTower {
+    msgbox("Let's see what the binoculars have\nto show…\pIt's POKéMON TOWER!", MSGBOX_NPC)
+    end
+}
+script Route12Gate_Text_Police {
+    msgbox("There's a lookout spot upstairs.\nThe view is magnificent.", MSGBOX_NPC)
+    end
+}

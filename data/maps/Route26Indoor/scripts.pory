@@ -1,0 +1,12 @@
+mapscripts Route26Indoor_MapScripts {}
+
+script Route26_Text_WomanHeal {
+    lock
+    faceplayer
+    msgbox("Your POKéMON look a little tired.\nYou should rest them a while.")
+    closemessage
+    call(Common_EventScript_OutOfCenterPartyHeal)
+    msgbox("There!\nYour POKéMON are looking good!\lKeep at it!")
+    release
+    end
+}

@@ -1,0 +1,45 @@
+mapscripts seafoamIslands_MapScripts {}
+
+
+script seafoamIslands_Text_Blaine {
+    lock
+    faceplayer
+    if(defeated(TRAINER_FLANNERY_2)){
+        goto(seafoamIslands_Text_BlaineRematch)
+    }else{
+        msgbox(format("I'm BLAINE.\nI'm CINNABAR Gym Leader.\lI'm investigating this\lcave because I heard some strong\lPOKéMON is living here. But it\lseems it left for another frosty\lcave. Maybe south... Oh you wanna\lfight me ?"),MSGBOX_YESNO)
+        if(var(VAR_RESULT)==0){
+            msgbox(format("I'm pretty sure I'll find more clue about this POKéMON."))
+        }else{
+            goto(seafoamIslands_Text_BlaineFight)
+        }
+    }
+    release
+    end
+}
+
+script seafoamIslands_Text_BlaineFight {
+    playbgm(MUS_RG_ENCOUNTER_BOY, FALSE)
+    trainerbattle_single(TRAINER_FLANNERY_2, "Let's warm this place up !", "Ahah! such a burning desire !",seafoamIslands_Text_BlaineAfterBattle, FALSE)
+}
+
+script seafoamIslands_Text_BlaineAfterBattle {
+    msgbox(format("Oh look at this feather! I'm sure an ARTICUNO has a nest here! Maybe it's not here because of its seasonal migration? I don't really know much about birds, but they tend to flew south. I'm pretty sure you'll find this POKéMON there... What me ? No I'm a FIRE TYPE master. I don't care about an ICE POKéMON. I'm more interested in that place actually than in ARTICUNO. I'll let you hunt it if you want."))
+    setflag(FLAG_UNUSED_0x025)
+    release
+    end
+}
+
+script seafoamIslands_Text_BlaineRematch {
+    lock
+    faceplayer
+    msgbox(format("I hope your investigation are doing well. Oh! You want another fight?"),MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1){
+        cleartrainerflag(TRAINER_FLANNERY_2)
+        trainerbattle_single(TRAINER_FLANNERY_2, "Let's burn this place up!", "Remind me when I was in the jungle south...")
+    }else{
+        msgbox(format("All right, well don't freeze here!"))
+    }
+    release
+    end
+}

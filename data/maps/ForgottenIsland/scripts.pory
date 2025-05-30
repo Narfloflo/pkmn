@@ -1,0 +1,87 @@
+mapscripts ForgottenIsland_MapScripts {
+    MAP_SCRIPT_ON_LOAD{
+        call_if_set(FLAG_UNUSED_0x021,ForgottenIsland_Event_DoorEntei)
+        end
+    }
+}
+
+script ForgottenIsland_Event_DoorEntei {
+    setmetatile(60,40,METATILE_Pacifidlog_SkyPillar_DoorOpen_Top,TRUE)
+    setmetatile(60,41,METATILE_Pacifidlog_SkyPillar_DoorOpen_Bottom,FALSE)
+    end
+}
+
+script ForgottenIsland_Text_BlackBelt1 {
+    lock
+    faceplayer
+    if(flag(FLAG_UNUSED_0x021)== TRUE){
+        msgbox(format("Woooh! An incredible POKéMON just blast into the tower at such speed, it destroyed the door !"))
+    }else{
+        msgbox(format("This tower has been here for so long, I don't even know when it was built and by whom."))
+    } 
+    release
+    end
+}
+
+script ForgottenIsland_Text_CityTown {
+    lock
+    msgbox(format("The time erase what was written here... L...G...M..A B...L..L..S ?"))
+    release
+    end
+}
+
+script ForgottenIsland_Text_Woman {
+    lock
+    faceplayer
+    msgbox(format("This is a well. We's been using it for ages. The water is so pure anyway."))
+    release
+    end
+}
+
+script ForgottenIsland_Text_Woman2 {
+    lock
+    faceplayer
+    msgbox(format("The village is surrounded by tall grass. Perfect for training POKéMON."))
+    release
+    end
+}
+
+
+script ForgottenIsland_Text_BlackBelt2 {
+    msgbox("Oh you have a devices to capture\nPOKéMON?\lHere we have to chase them using our\lstrength only!", MSGBOX_NPC)
+    end
+}
+
+
+script ForgottenIsland_Text_NinjaKid {
+    lock
+    faceplayer
+    checkitem(ITEM_POKE_BALL)
+    if(var(VAR_RESULT)== TRUE){
+        goto(ForgottenIsland_Text_NinjaKidYesNo)
+    }else{
+        msgbox("You know that I cannot leave the\nvillage, otherwise I can be attacked by\lsome wild POKéMON.", MSGBOX_NPC)
+        release
+        end  
+    }
+    
+}
+
+script ForgottenIsland_Text_NinjaKidYesNo {
+    msgbox("Can you give me some of these BALLS?\nI want to capture one! Grandpa will be\lamazed!", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == TRUE){
+        removeitem(ITEM_POKE_BALL, 1)
+        msgbox("Thanks you!! I'm gonna be the toughest\nguy in here!\lThe'll cry for mercy!\l{PLAYER}: I don't know if it was a good\lidea...")
+        release
+        end
+    }else{
+        msgbox("Oh I'm the saddest boy in the world...")
+        release
+        end
+    }
+}
+
+script ForgottenIsland_Text_LittleGirl {
+    msgbox("Grandpa is so strong! He took down\nTROPIUS all by himself!", MSGBOX_NPC)
+    end
+}

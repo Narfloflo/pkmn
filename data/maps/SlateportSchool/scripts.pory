@@ -1,0 +1,41 @@
+mapscripts SlateportSchool_MapScripts {}
+
+script SlateportSchool_Text_GoodStudent {
+    lock
+    msgbox("And to cure a POKEMON from being\npoisoned, we can use an ANTIDOTE.\lPlease! Can I read about sleeping\lstatus ?")
+    release
+    end
+}
+
+script SlateportSchool_Text_DisturbingGirl1 {
+    lock
+    msgbox(format("YEAH! Smash that button and finish him!"))
+    release
+    end
+}
+
+script SlateportSchool_Text_DisturbingGirl2 {
+    lock
+    msgbox(format("Use fatality pleeeeeease, I want some blood!"))
+    release
+    end
+}
+
+script SlateportSchool_Text_StudentF {
+    msgbox("It's not that it's boring, but\nhonestly, why would I pay attention to\lsomething I already know :\lWhen you are poisoned, you lose HP.\lOh come on, I want to catch a LEGENDARY\lPOKEMON or something...", MSGBOX_NPC)
+    end
+}
+script SlateportSchool_Text_StudentM {
+    msgbox("When I'll grow up, I will ride a lot\nof GYARADOS and ravage the\lworld. Nobody would defy\lme.\l{PLAYER}: OKAY... Well I'm leaving...", MSGBOX_NPC)
+    end
+}
+
+script SlateportSchool_Text_Teacher {
+    msgbox("Want to become a Pokémon Champion?\nLearn how to control the weather.\lThere's more than just rain and sun\ltry sandstorms or hail too!", MSGBOX_NPC)
+    end
+}
+
+script SlateportSchool_Text_Blackboard {
+    msgbox("{PLAYER}: Hmmm...\nNothing valuable is written on the\lblackboard.", MSGBOX_NPC)
+    end
+}

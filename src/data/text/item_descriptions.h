@@ -1501,8 +1501,8 @@ static const u8 sTeachyTVDesc[] = _(
 
 static const u8 sTriPassDesc[] = _(
     "A pass for ferries\n"
-    "between ONE, TWO,\n"
-    "and THREE ISLAND.");
+    "between HOENN and\n"
+    "JOHTO.");
 
 static const u8 sRainbowPassDesc[] = _(
     "For ferries serving\n"
@@ -1553,4 +1553,24 @@ static const u8 sOldSeaMapDesc[] = _(
 static const u8 sSandwichDesc[] = _(
     "A Sandwich made\n"
     "with the best\n"
-    "BLAZIKEN meat.");
+    "meat.");
+
+static const u8 sGsBallDesc[] = _(
+    "A mysterious ball\n"
+    "with two symbols\n"
+    "carved on it.");    
+
+static const u8 sCasteliaconeDesc[] = _(
+    "A soft ice cream.\n"
+    "It heals the status\n"
+    "of a POKéMON.");    
+
+static const u8 sCrunchiesDesc[] = _(
+    "PEWTER CITY's\n"
+    "famous snack.\n"
+    "Very tasty!");   
+
+static const u8 sRageCandyDesc[] = _(
+    "MAHOGANY TOWN's\n"
+    "famous candy bar.\n"
+    "Tourists like it.");     

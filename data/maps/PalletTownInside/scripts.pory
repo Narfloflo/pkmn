@@ -1,0 +1,25 @@
+mapscripts PalletTownInside_MapScripts {}
+
+script PalletTownInside_Text_Mom {
+    lock
+    faceplayer
+    msgbox(format("Hi !\nRED's been away for a few months. I heard he beat BLUE in the POKéMON LEAGUE. I think he is seeking for some powerful POKéMON."))
+    release
+    end
+}
+
+script PalletTownInside_Text_Daisy {
+    lock
+    faceplayer
+    msgbox(format("DAISY : HI ! My kid brother is weaping somewhere. I don't think he got throught his DEFEA against RED."))
+    release
+    end
+}
+
+script PalletTownInside_Text_LeafGrandma {
+    lock
+    faceplayer
+    msgbox(format("My grand daughter must be outside. I heard she is helping DAISY mapping all the REGIONS. She told me she would move in JOHTO. But I don't know where."))
+    release
+    end
+}

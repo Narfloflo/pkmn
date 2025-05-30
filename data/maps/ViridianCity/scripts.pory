@@ -1,0 +1,100 @@
+mapscripts ViridianCity_MapScripts {}
+
+script ViridianCity_Text_Youngster {
+    lock
+    faceplayer
+    msgbox(format("This is my friend RATTATA ! I found him in my attic. I fed him and now he follow me everywere ! That 's a real pal !"))
+    release
+    end
+}
+
+script ViridianCity_Text_Rattata {
+    lock
+    faceplayer
+    playmoncry(SPECIES_RATTATA, CRY_MODE_NORMAL)
+    msgbox(format("Rattti !\n{PLAYER}: I can see in it's eyes that this RATTATA is only here for free food."))
+    release
+    end
+}
+
+script ViridianCity_Text_Fatman {
+    lock
+    faceplayer
+    msgbox(format("I just want to sleep, but my dream have been eaten ! I'm so pissed right now !"))
+    release
+    end
+}
+
+script ViridianCity_Text_Teacher {
+    lock
+    faceplayer
+    msgbox(format("Here is the VIRIDIAN SCHOOL ! You are welcome young... Oh ! so much BADGES ! Sorry mylord."))
+    release
+    end
+}
+
+script ViridianCity_Text_Man {
+    lock
+    faceplayer
+    msgbox(format("Those POKéBALLS at your waist ! You have POKéMON ! It's great that you can carry and use POKéMON anytime, anywhere ! {PLAYER}: Even if they have the power to destroy the world ?"))
+    release
+    end
+}
+
+script ViridianCity_Text_Oldman {
+    lock
+    faceplayer
+    msgbox(format("I have such a hangover... You are in a hurry right ? Well time is money..."))
+    release
+    end
+}
+
+script ViridianCity_Text_Worker {
+    lock
+    faceplayer
+    msgbox(format("Well, since the previous GYM LEADER vanished, this GYM is closed..."))
+    release
+    end
+}
+
+script ViridianCity_Text_CitySign {
+    lock
+    msgbox(format("VIRIDIAN CITY\nThe Eternally Green Paradise"))
+    release
+    end
+}
+
+script ViridianCity_Text_ToIndigoSign {
+    lock
+    msgbox(format("Welcome to VIRIDIAN CITY, The gateway to INDIGO PLATEAU"))
+    release
+    end
+}
+
+script ViridianCity_Text_SchoolSign {
+    lock
+    msgbox(format("VIRIDIAN CITY School"))
+    release
+    end
+}
+
+script ViridianCity_Text_GymSign {
+    lock
+    msgbox(format("VIRIDIAN CITY GYM\nBut the rest is paint in black"))
+    release
+    end
+}
+
+script ViridianCity_Text_Camper {
+    lock
+    msgbox(format("So if GIOVANNI is not the LEADER, we still have no LEADER, again !"))
+    release
+    end
+}
+
+script ViridianCity_Text_Picnicker {
+    lock
+    msgbox(format("I'm so frustrated about having no LEADER. I mean, I'm suppose to take the VIRIDIAN FOREST to get my first BADGE ?"))
+    release
+    end
+}

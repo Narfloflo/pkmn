@@ -1,0 +1,94 @@
+mapscripts LavendarTownCemetery_MapScripts {}
+
+script LaverdarpkmnTower_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("I came to pray for my CLEFAIRY. Sniff ! I can't stop crying..."))
+    release
+    end
+}
+
+script LaverdarpkmnTower_Text_Woman {
+    lock
+    faceplayer
+    msgbox(format("Did you come to pay respects? Bless you !"))
+    release
+    end
+}
+
+script LaverdarpkmnTower_Text_Channeler {
+    lock
+    faceplayer
+    msgbox(format("I am a Channeler ! There are spirits up to mischief ! Oh yeah by the way you can't go upstairs because of what the ROCKET did..."))
+    release
+    end
+}
+
+script LaverdarpkmnTower_Text_Rocket {
+    lock
+    faceplayer
+    msgbox(format("I know that I've been a bad person. Now I want to amend myself..."))
+    release
+    end
+}
+
+script LaverdarpkmnTower_Text_Sage {
+    lock
+    faceplayer
+    msgbox(format("I'm praying for the tormented spirits. I help them to stop suffering."))
+    release
+    end
+}
+
+script LaverdarpkmnTower_Text_Youngster {
+    lock
+    faceplayer
+    msgbox(format("..."))
+    release
+    end
+}
+
+script LaverdarpkmnTower_Text_RattataTomb {
+    lock
+    msgbox(format("Here lies the remains of BLUE OAK's RATTATA"))
+    release
+    end
+}
+
+script LaverdarpkmnTower_Text_Blue {
+    lock
+    faceplayer
+    playbgm(MUS_RG_ENCOUNTER_RIVAL, FALSE)
+    if(!defeated(TRAINER_WATTSON_4)){
+        msgbox(format("Snif... Huh what do you want ? Yeah I'm crying so what ? Because I lost to RED ? Pffff ! I don't care ! So you wanna fight ?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT)==1){
+            goto(LaverdarpkmnTower_Text_BlueFight)
+        }else{
+            msgbox(format("Yeah yeah smell ya later..."))
+        }
+    }elif(defeated(TRAINER_WATTSON_4)){
+        goto(LaverdarpkmnTower_Text_BlueRematch)
+    }
+    playbgm(MUS_RG_POKE_TOWER, FALSE)
+    release
+    end
+}
+
+script LaverdarpkmnTower_Text_BlueFight {
+    trainerbattle_single(TRAINER_WATTSON_4, "I'll kick you hard !", "Tssst !")
+    release
+    end
+}
+
+script LaverdarpkmnTower_Text_BlueRematch {
+    msgbox(format("I'm pretty sure you won because you were lucky. You want a revenge ?"),MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        cleartrainerflag(TRAINER_WATTSON_4)
+        trainerbattle_single(TRAINER_WATTSON_4, "Oh oh you are so not ready !", "What ? Again ?")
+    }else{
+        msgbox(format("Yeah yeah smell ya later..."))
+    }
+    playbgm(MUS_RG_POKE_TOWER, FALSE)
+    release
+    end
+}

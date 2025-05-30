@@ -317,6 +317,7 @@ OldaleTown_Movement_RivalExit:
 	walk_down
 	walk_down
 	walk_down
+	walk_down
 	step_end
 
 OldaleTown_Movement_WatchRivalExit:
@@ -398,3 +399,337 @@ OldaleTown_Text_BrendanLetsGoBack:
 OldaleTown_Text_TownSign:
 	.string "OLDALE TOWN\n"
 	.string "“Where things start off scarce.”$"
+
+OldaleTown_Text_Poochyena::
+	lock
+	faceplayer
+	playmoncry SPECIES_POOCHYENA, CRY_MODE_NORMAL
+	waitmoncry
+	msgbox OldaleTown_Text_Poochyena_Text_0
+	release
+	end
+
+
+OldaleTown_Text_Farmer::
+	goto_if_eq VAR_FORTREE_CITY_STATE, 5, OldaleTown_Text_FarmerQuestFailed
+	goto_if_eq VAR_FORTREE_CITY_STATE, 4, OldaleTown_Text_FarmerTamed
+	goto_if_eq VAR_FORTREE_CITY_STATE, 3, OldaleTown_Text_FarmerGavePokemon
+	goto_if_eq VAR_FORTREE_CITY_STATE, 2, OldaleTown_Text_FarmerDoneQuest
+	goto_if_eq VAR_FORTREE_CITY_STATE, 1, OldaleTown_Text_FarmerAcceptQuest
+	goto_if_eq VAR_FORTREE_CITY_STATE, 0, OldaleTown_Text_FarmerAskingforHelp
+	return
+
+
+OldaleTown_Text_FarmerAskingforHelp::
+	lock
+	faceplayer
+	msgbox OldaleTown_Text_FarmerAskingforHelp_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq OldaleTown_Text_FarmerAskingforHelp_2
+	msgbox OldaleTown_Text_FarmerAskingforHelp_Text_2, MSGBOX_NPC
+	end
+
+OldaleTown_Text_FarmerAskingforHelp_1:
+	release
+	end
+
+OldaleTown_Text_FarmerAskingforHelp_2:
+	msgbox OldaleTown_Text_FarmerAskingforHelp_Text_1
+	setvar VAR_FORTREE_CITY_STATE, 1
+	goto OldaleTown_Text_FarmerAskingforHelp_1
+
+
+OldaleTown_Text_FarmerAcceptQuest::
+	msgbox OldaleTown_Text_FarmerAcceptQuest_Text_0, MSGBOX_NPC
+	end
+
+
+OldaleTown_Text_FarmerDoneQuest::
+	msgbox OldaleTown_Text_FarmerDoneQuest_Text_0, MSGBOX_NPC
+	clearflag FLAG_UNUSED_0x02C
+	setflag FLAG_UNUSED_0x02D
+	switch VAR_STARTER_MON
+	case 0, OldaleTown_Text_FarmerDoneQuest_3
+	case 1, OldaleTown_Text_FarmerDoneQuest_4
+	case 2, OldaleTown_Text_FarmerDoneQuest_5
+OldaleTown_Text_FarmerDoneQuest_1:
+	end
+
+OldaleTown_Text_FarmerDoneQuest_3:
+	call OldaleTown_Text_FarmerGiveTorchic
+	goto OldaleTown_Text_FarmerDoneQuest_1
+
+OldaleTown_Text_FarmerDoneQuest_4:
+	call OldaleTown_Text_FarmerGiveMudkip
+	goto OldaleTown_Text_FarmerDoneQuest_1
+
+OldaleTown_Text_FarmerDoneQuest_5:
+	call OldaleTown_Text_FarmerGiveTreecko
+	goto OldaleTown_Text_FarmerDoneQuest_1
+
+
+OldaleTown_Text_FarmerGiveTreecko::
+	givemon SPECIES_TREECKO, 10
+	setvar VAR_FORTREE_CITY_STATE, 3
+	msgbox OldaleTown_Text_FarmerGiveTreecko_Text_0, MSGBOX_NPC
+	playfanfare MUS_OBTAIN_ITEM
+	message OldaleTown_Text_FarmerGiveTreecko_Text_1
+	waitfanfare
+	release
+	end
+
+
+OldaleTown_Text_FarmerGiveTorchic::
+	givemon SPECIES_TORCHIC, 10
+	setvar VAR_FORTREE_CITY_STATE, 3
+	msgbox OldaleTown_Text_FarmerGiveTreecko_Text_0, MSGBOX_NPC
+	playfanfare MUS_OBTAIN_ITEM
+	message OldaleTown_Text_FarmerGiveTreecko_Text_1
+	waitfanfare
+	release
+	end
+
+
+OldaleTown_Text_FarmerGiveMudkip::
+	givemon SPECIES_MUDKIP, 10
+	setvar VAR_FORTREE_CITY_STATE, 3
+	msgbox OldaleTown_Text_FarmerGiveTreecko_Text_0, MSGBOX_NPC
+	playfanfare MUS_OBTAIN_ITEM
+	message OldaleTown_Text_FarmerGiveTreecko_Text_1
+	waitfanfare
+	release
+	end
+
+
+OldaleTown_Text_FarmerGavePokemon::
+	msgbox OldaleTown_Text_FarmerGavePokemon_Text_0, MSGBOX_NPC
+	end
+
+
+OldaleTown_Text_FarmerTamed::
+	msgbox OldaleTown_Text_FarmerTamed_Text_0, MSGBOX_NPC
+	end
+
+
+OldaleTown_Text_FarmerQuestFailed::
+	msgbox OldaleTown_Text_FarmerQuestFailed_Text_0, MSGBOX_NPC
+	end
+
+
+OldaleTown_Text_QuestFailedWontReturn::
+	msgbox OldaleTown_Text_QuestFailedWontReturn_Text_0, MSGBOX_NPC
+	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_Move_QuestFailedWontReturn
+	waitmovement 0
+	end
+
+
+OldaleTown_Move_QuestFailedWontReturn:
+	walk_down
+	step_end
+
+OldaleTown_Text_ExpertM::
+	lock
+	faceplayer
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, OldaleTown_Text_ExpertM_GonnafightMay
+	goto_if_eq VAR_RESULT, FEMALE, OldaleTown_Text_ExpertM_GonnafightBrendan
+	end
+
+
+OldaleTown_Text_ExpertM_GonnafightMay::
+	goto_if_unset FLAG_ADVENTURE_STARTED, OldaleTown_Text_ExpertM_GonnafightMay_1
+	msgbox OldaleTown_Text_ExpertM_GonnafightMay_Text_0, MSGBOX_NPC
+	end
+
+OldaleTown_Text_ExpertM_GonnafightMay_1:
+	switch VAR_STARTER_MON
+	case 0, OldaleTown_Text_ExpertM_GonnafightMay_6
+	case 1, OldaleTown_Text_ExpertM_GonnafightMay_7
+	case 2, OldaleTown_Text_ExpertM_GonnafightMay_8
+OldaleTown_Text_ExpertM_GonnafightMay_4:
+	end
+
+OldaleTown_Text_ExpertM_GonnafightMay_6:
+	call OldaleTown_Text_ExpertM_GonnafightMayTreecko
+	goto OldaleTown_Text_ExpertM_GonnafightMay_4
+
+OldaleTown_Text_ExpertM_GonnafightMay_7:
+	call OldaleTown_Text_ExpertM_GonnafightMayTorchic
+	goto OldaleTown_Text_ExpertM_GonnafightMay_4
+
+OldaleTown_Text_ExpertM_GonnafightMay_8:
+	call OldaleTown_Text_ExpertM_GonnafightMayMudkip
+	goto OldaleTown_Text_ExpertM_GonnafightMay_4
+
+
+OldaleTown_Text_ExpertM_GonnafightMayTreecko::
+	msgbox OldaleTown_Text_ExpertM_GonnafightMayTreecko_Text_0, MSGBOX_NPC
+	end
+
+
+OldaleTown_Text_ExpertM_GonnafightMayTorchic::
+	msgbox OldaleTown_Text_ExpertM_GonnafightMayTorchic_Text_0, MSGBOX_NPC
+	end
+
+
+OldaleTown_Text_ExpertM_GonnafightMayMudkip::
+	msgbox OldaleTown_Text_ExpertM_GonnafightMayMudkip_Text_0, MSGBOX_NPC
+	end
+
+
+OldaleTown_Text_ExpertM_GonnafightBrendan::
+	goto_if_unset FLAG_ADVENTURE_STARTED, OldaleTown_Text_ExpertM_GonnafightBrendan_1
+	msgbox OldaleTown_Text_ExpertM_GonnafightMay_Text_0, MSGBOX_NPC
+	end
+
+OldaleTown_Text_ExpertM_GonnafightBrendan_1:
+	switch VAR_STARTER_MON
+	case 0, OldaleTown_Text_ExpertM_GonnafightBrendan_6
+	case 1, OldaleTown_Text_ExpertM_GonnafightBrendan_7
+	case 2, OldaleTown_Text_ExpertM_GonnafightBrendan_8
+OldaleTown_Text_ExpertM_GonnafightBrendan_4:
+	end
+
+OldaleTown_Text_ExpertM_GonnafightBrendan_6:
+	call OldaleTown_Text_ExpertM_GonnafightBrendanTreecko
+	goto OldaleTown_Text_ExpertM_GonnafightBrendan_4
+
+OldaleTown_Text_ExpertM_GonnafightBrendan_7:
+	call OldaleTown_Text_ExpertM_GonnafightBrendanTorchic
+	goto OldaleTown_Text_ExpertM_GonnafightBrendan_4
+
+OldaleTown_Text_ExpertM_GonnafightBrendan_8:
+	call OldaleTown_Text_ExpertM_GonnafightBrendanMudkip
+	goto OldaleTown_Text_ExpertM_GonnafightBrendan_4
+
+
+OldaleTown_Text_ExpertM_GonnafightBrendanTreecko::
+	msgbox OldaleTown_Text_ExpertM_GonnafightBrendanTreecko_Text_0, MSGBOX_NPC
+	end
+
+
+OldaleTown_Text_ExpertM_GonnafightBrendanTorchic::
+	msgbox OldaleTown_Text_ExpertM_GonnafightBrendanTorchic_Text_0, MSGBOX_NPC
+	end
+
+
+OldaleTown_Text_ExpertM_GonnafightBrendanMudkip::
+	msgbox OldaleTown_Text_ExpertM_GonnafightBrendanMudkip_Text_0, MSGBOX_NPC
+	end
+
+
+OldaleTown_Text_Boy::
+	goto_if_set FLAG_IS_CHAMPION, OldaleTown_Text_Boy_1
+	goto_if_set FLAG_BADGE05_GET, OldaleTown_Text_Boy_2
+	msgbox OldaleTown_Text_Boy_Text_2, MSGBOX_NPC
+	end
+
+OldaleTown_Text_Boy_1:
+	msgbox OldaleTown_Text_Boy_Text_0, MSGBOX_NPC
+	end
+
+OldaleTown_Text_Boy_2:
+	msgbox OldaleTown_Text_Boy_Text_1, MSGBOX_NPC
+	end
+
+
+OldaleTown_Text_MoveLearnerSign::
+	msgbox OldaleTown_Text_MoveLearnerSign_Text_0, MSGBOX_SIGN
+	end
+
+
+OldaleTown_EventScript_FarmerQuestnotComplete::
+	compare VAR_FORTREE_CITY_STATE, 2
+	goto_if_eq OldaleTown_EventScript_FarmerQuestnotComplete_2
+	release
+	end
+
+	release
+	end
+
+OldaleTown_EventScript_FarmerQuestnotComplete_2:
+	lock
+	msgbox OldaleTown_EventScript_FarmerQuestnotComplete_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_EventScript_FarmerQuestnotCompleteMovePlayer
+	waitmovement 0
+	releaseall
+	end
+
+
+OldaleTown_EventScript_FarmerQuestnotCompleteMovePlayer:
+	walk_left
+	step_end
+
+OldaleTown_Text_Poochyena_Text_0:
+	.string "Booh!\p"
+	.string "{PLAYER}: This POOCHYENA is GROWLING\n"
+	.string "to scare the WILD POKéMON.$"
+
+OldaleTown_Text_FarmerAskingforHelp_Text_0:
+	.string "Hey you! I, had a beautiful POKéMON\nbut it went crazy in my house!\lCan you go and calm it please?$"
+
+OldaleTown_Text_FarmerAskingforHelp_Text_1:
+	.string "Oh thanks you!\nIt should help a rookie like you!$"
+
+OldaleTown_Text_FarmerAskingforHelp_Text_2:
+	.string "Ah ok, well I think it could help a\nrookie like you but anyway...$"
+
+OldaleTown_Text_FarmerAcceptQuest_Text_0:
+	.string "My house is just here above.$"
+
+OldaleTown_Text_FarmerDoneQuest_Text_0:
+	.string "Oh! You beat my ZIGZAGOON?\nThanks you!\lOh wait here is a reward for you!$"
+
+OldaleTown_Text_FarmerGiveTreecko_Text_0:
+	.string "I found this one around, but I'm not a\ngood TRAINER, so you should have it.$"
+
+OldaleTown_Text_FarmerGiveTreecko_Text_1:
+	.string "{PLAYER} received a POKéMON$"
+
+OldaleTown_Text_FarmerGavePokemon_Text_0:
+	.string "Hey {PLAYER}! How is my little guy?\nI'm sure he is stronger with you now.$"
+
+OldaleTown_Text_FarmerTamed_Text_0:
+	.string "My POKéMON went wild but I finally\ncould calm him down!$"
+
+OldaleTown_Text_FarmerQuestFailed_Text_0:
+	.string "What you ran away?\nYou left my Ziggy? But it was a simple\ltask!\lAnyway. I'll do it myself...$"
+
+OldaleTown_Text_QuestFailedWontReturn_Text_0:
+	.string "{PLAYER}: I better not go back there\nyet...$"
+
+OldaleTown_Text_ExpertM_GonnafightMay_Text_0:
+	.string "Hello {PLAYER}!\nHope you enjoy your life in LITTLEROOT!$"
+
+OldaleTown_Text_ExpertM_GonnafightMayTreecko_Text_0:
+	.string "Oh you are {PLAYER}? You want an\nadvice?\lYour TREECKO won't last long against\lTORCHIC and MUDKIP MAY has in her team.\lYeah, it's great to be BIRCH's\ldaughter.$"
+
+OldaleTown_Text_ExpertM_GonnafightMayTorchic_Text_0:
+	.string "Oh you are {PLAYER}? You want an\nadvice?\lYour TORCHIC won't last long against\lthe TREECKO and MUDKIP MAY has in her\lteam.\lYeah, it's great to be BIRCH's\ldaughter.$"
+
+OldaleTown_Text_ExpertM_GonnafightMayMudkip_Text_0:
+	.string "Oh you are {PLAYER}? You want an\nadvice?\lI think you can fight MAY without\ldifficulties with your MUDKIP\lagainst her TORCHIC and TREECKO.\lYeah, it's great to be BIRCH's\ldaughter.\lBut I hope you'll beat this spoiled\lbrat!$"
+
+OldaleTown_Text_ExpertM_GonnafightBrendanTreecko_Text_0:
+	.string "Oh you are {PLAYER}? You want an\nadvice?\lYour TREECKO won't last long against\lTORCHIC and MUDKIP BRENDAN has in his team.\lYeah, it's great to be BIRCH's son .$"
+
+OldaleTown_Text_ExpertM_GonnafightBrendanTorchic_Text_0:
+	.string "Oh you are {PLAYER}? You want an\nadvice?\lYour TORCHIC won't last long against\lthe TREECKO and MUDKIP BRENDAN has in his\lteam.\lYeah, it's great to be BIRCH's son.$"
+
+OldaleTown_Text_ExpertM_GonnafightBrendanMudkip_Text_0:
+	.string "Oh you are {PLAYER}? You want an\nadvice?\lI think you can fight BRENDAN without\ldifficulties with your MUDKIP\lagainst her TORCHIC and TREECKO.\lYeah, it's great to be BIRCH's son.\lBut I hope you'll beat this spoiled\lbrat!$"
+
+OldaleTown_Text_Boy_Text_0:
+	.string "Hey! Heard about the old lady who lives\na bit north from here? I heard she left\lher home finally to dig somewhere...$"
+
+OldaleTown_Text_Boy_Text_1:
+	.string "Hey! You got PETALBURG's BADGE?\nThat means now you can use SURF!\lWhy don't you check a bit north, there\lis a river that leads to ROUTE 117!$"
+
+OldaleTown_Text_Boy_Text_2:
+	.string "Hey! Oldale is a pretty boring city.\nBut it's at the junction bitween ROUTE\l102 and 103. There are a few places\laround that are not reachable yet!\lI won't tell you more now haha!$"
+
+OldaleTown_Text_MoveLearnerSign_Text_0:
+	.string "MOVE LEARNER's HOUSE$"
+
+OldaleTown_EventScript_FarmerQuestnotComplete_Text_0:
+	.string "{PLAYER}: Oh wait, I should get back to\nthe farmer!$"

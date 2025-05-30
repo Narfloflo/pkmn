@@ -679,13 +679,13 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_034] =
+    [ITEM_GS_BALL] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
+        .name = _("GS BALL"),
+        .itemId = ITEM_GS_BALL,
         .price = 0,
-        .description = sDummyDesc,
-        .pocket = POCKET_ITEMS,
+        .description = sGsBallDesc,
+        .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -1225,48 +1225,56 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
-    [ITEM_063] =
+    [ITEM_PEWTER_CRUNCHIES] =
     {
-        .name = _("LINK STONE"),
-        .itemId = ITEM_063,
-        .price = 5000,
-        .description = sLeafStoneDesc,
+        .name = _("CRUNCHIES"),
+        .itemId = ITEM_PEWTER_CRUNCHIES,
+        .price = 250,
+        .description = sCrunchiesDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = ITEM_B_USE_MEDICINE,
+        .battleUseFunc = ItemUseInBattle_Medicine,
     },
 
-    [ITEM_064] =
+    [ITEM_CASTELIACONE] =
     {
-        .name = _("SEA STONE"),
-        .itemId = ITEM_064,
-        .price = 15000,
-        .description = sLeafStoneDesc,
+        .name = _("CASTELIACONE"),
+        .itemId = ITEM_CASTELIACONE,
+        .price = 2000,
+        .description = sCasteliaconeDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = ITEM_B_USE_MEDICINE,
+        .battleUseFunc = ItemUseInBattle_Medicine,
     },
 
-    [ITEM_065] =
+    [ITEM_STBRICECREAM] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("PNKICECREAM"),
+        .itemId = ITEM_STBRICECREAM,
+        .price = 2000,
+        .description = sCasteliaconeDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = ITEM_B_USE_MEDICINE,
+        .battleUseFunc = ItemUseInBattle_Medicine,
     },
 
-    [ITEM_066] =
+    [ITEM_BLKICECREAM] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("BLKICECREAM"),
+        .itemId = ITEM_BLKICECREAM,
+        .price = 2000,
+        .description = sCasteliaconeDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = ITEM_B_USE_MEDICINE,
+        .battleUseFunc = ItemUseInBattle_Medicine,
     },
 
 // Valuable items
@@ -1293,15 +1301,17 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_069] =
+    [ITEM_WHTICECREAM] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("WHTICECREAM"),
+        .itemId = ITEM_WHTICECREAM,
+        .price = 2000,
+        .description = sCasteliaconeDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = ITEM_B_USE_MEDICINE,
+        .battleUseFunc = ItemUseInBattle_Medicine,
     },
 
     [ITEM_PEARL] =
@@ -1370,22 +1380,25 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_070] =
+    [ITEM_RAGE_CANDY] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("RAGE CANDY"),
+        .itemId = ITEM_RAGE_CANDY,
+        .price = 300,
+        .holdEffectParam = 20,
+        .description = sRageCandyDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = ITEM_B_USE_MEDICINE,
+        .battleUseFunc = ItemUseInBattle_Medicine,
     },
 
-    [ITEM_071] =
+    [ITEM_HONEY] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
+        .name = _("HONEY"),
+        .itemId = ITEM_HONEY,
+        .price = 100,
         .description = sDummyDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -4551,5 +4564,6 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
+        .secondaryId = 0,
     },
 };

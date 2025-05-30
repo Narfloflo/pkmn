@@ -6,7 +6,7 @@ raw`SeasideCyclingNew_MapScripts::
         faceplayer
         msgbox(format("Welcome welcome to the RANCH! Wanna know more about this location?"),MSGBOX_YESNO)
         if(var(VAR_RESULT) !=0){
-            msgbox(format("Well... We established this RANCH here and move a few MILTANK and TAUROS here to produce milk. I have a relatives doing that in JOHTO. I think it works well there.\pThis place is a little secluded but we manage with the authorities to build a CYCLING ROAD through here. We can expect a lot of customers!"))
+            msgbox("Well...\nWe established this RANCH here\land move a few MILTANK and TAUROS to\lproduce milk. I have a relatives\ldoing that in JOHTO. I think it works\lwell for him.\lThis place is a little secluded but we\lmanage with the authorities to build a\lCYCLING ROAD through here. We are\lsupplying every restaurant in HOENN.\lYou probably saw that already right?", MSGBOX_NPC)
             release
             end
         }else{
@@ -32,3 +32,13 @@ raw`SeasideCyclingNew_MapScripts::
         ITEM_BERRY_JUICE
         ITEM_GREPA_BERRY
     }
+
+script Ranch_Text_Miltank {
+    lock
+    faceplayer
+    playmoncry(SPECIES_MILTANK, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox(format("Moooh"))
+    release
+    end
+}    

@@ -1,0 +1,31 @@
+mapscripts FuchsiaCityMart_MapScripts {}
+
+script FuchsiaCityMart_Text_Lass {
+    lock
+    faceplayer
+    msgbox("Did you try X SPEED ? It speeds up a\nPOKéMON in battle !")
+    release
+    end
+}
+
+script FuchsiaCityMart_Vendor {
+    lock
+    faceplayer
+	msgbox(format("Welcome!\p How may I serve you?"))
+	waitmessage
+	pokemart(FuchsiaCityMartItems)
+	msgbox("Please come again!")
+	release
+    end
+}
+
+mart FuchsiaCityMartItems {
+    ITEM_ULTRA_BALL
+    ITEM_GREAT_BALL
+	ITEM_SUPER_POTION
+	ITEM_HYPER_POTION
+	ITEM_REVIVE
+	ITEM_FULL_HEAL
+	ITEM_SUPER_REPEL
+    ITEM_HARBOR_MAIL
+}

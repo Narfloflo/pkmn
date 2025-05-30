@@ -1,0 +1,115 @@
+mapscripts VioletCity_MapScripts {}
+
+script VioletCity_Text_Lass {
+    lock
+    faceplayer
+    msgbox(format("Ghosts are rumored to appear in SPROUT TOWER. They said normal Type POKéMON moves had no effect on Ghosts."))
+    release
+    end
+}
+
+script VioletCity_Text_TownSign {
+    lock
+    faceplayer
+    msgbox(format("VIOLET CITY\pThe City of Nostalgic Scents"))
+    release
+    end
+}
+
+script VioletCity_Text_Youngster {
+    lock
+    faceplayer
+    msgbox(format("Hey, you're a POKéMON TRAINER ? If you want to check the CITY's GYM LEADER, he's travelling. I heard his son FALKNER is going to be the next LEADER, but he is training in the SPROUT TOWER."))
+    release
+    end
+}
+
+script VioletCity_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("I'm EARL and This is VIOLET CITY's ACADEMY. We teach the basic for the future TRAINERS !"))
+    release
+    end
+}
+
+script VioletCity_Text_SproutTowerSign {
+    lock
+    faceplayer
+    msgbox(format("SPROUT TOWER\pExperience the Way of the POKéMON"))
+    release
+    end
+}
+
+script VioletCity_Text_Lass2 {
+    lock
+    faceplayer
+    msgbox(format("Look at those PIDGEY !"))
+    release
+    end
+}
+
+script VioletCity_Text_Sage1 {
+    lock
+    faceplayer
+    msgbox(format("We are all waiting for FALKNER to finish his training in the SPROUT TOWER to open the GYM."))
+    release
+    end
+}
+
+script VioletCity_Text_Sage2 {
+    lock
+    faceplayer
+    msgbox(format("Here is the SPROUT TOWER. Please pay respect to my colleague inside and the wild POKéMON."))
+    release
+    end
+}
+
+script VioletCity_Text_Camper {
+    lock
+    faceplayer
+    msgbox(format("Head south and you'll reach the RUIN OF ALPH."))
+    release
+    end
+}
+
+script VioletCity_Text_GymSign {
+    lock
+    faceplayer
+    msgbox(format("VIOLET TOWN POKéMON Gym LEADER: FALKNER\nThe Elegant Master of Flying POKéMON"))
+    release
+    end
+}
+
+script VioletCity_Text_SchoolSign {
+    lock
+    faceplayer
+    msgbox(format("EARL's POKéMON Academy"))
+    release
+    end
+}
+
+script VioletCity_Text_Pidgey {
+    lock
+    faceplayer
+    playmoncry(SPECIES_PIDGEY, CRY_MODE_NORMAL)
+    msgbox(format("Piii !"))
+    release
+    end
+}
+
+script VioletCity_Text_Pidgeotto {
+    lock
+    faceplayer
+    playmoncry(SPECIES_PIDGEOTTO, CRY_MODE_NORMAL)
+    msgbox(format("Tooo Piii !"))
+    release
+    end
+}
+
+script VioletCity_Text_KrisSign {
+    lock
+    faceplayer
+    msgbox(format("KRIS' HOUSE"))
+    release
+    end
+}

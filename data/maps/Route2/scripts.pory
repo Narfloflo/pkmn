@@ -1,0 +1,13 @@
+mapscripts Route2_MapScripts {}
+
+script Route2_Text_Picnicker {
+    trainerbattle_single(TRAINER_KOJI_4, "I cut all the trees, I hate the forest.", "I'm out of energy")
+    msgbox(format("We can skip the VIRIDIAN FOREST thanks to me. You're welcome."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route2_Text_Youngster {
+    trainerbattle_single(TRAINER_FERNANDO_2, "I'm on my way to DIGLETTS CAVE !", "I'm out of energy")
+    msgbox(format("My friends are all in VIRIDIAN FOREST. But the real deal is in the DIGLETTS CAVE !"), MSGBOX_AUTOCLOSE)
+    end
+}

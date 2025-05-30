@@ -190,3 +190,10 @@ Route121_Text_SafariZoneSign:
 	.string "“Filled with rare POKéMON!”\n"
 	.string "SAFARI ZONE$"
 
+Route121_Text_Aroma::
+	msgbox Route121_Text_Aroma_Text_0, MSGBOX_NPC
+	end
+
+
+Route121_Text_Aroma_Text_0:
+	.string "You know, this place is supposed to be\nLILYCOVE OUTSKIRT.\lA lot of people live there.\lDon't try to break into there home\lplease...$"

@@ -1,0 +1,205 @@
+mapscripts GoldenRodMart_MapScripts {}
+
+script GoldenRodMart_Text_Vendor5F {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemartdecoration(GoldenRodMartDecorVendor)
+    msgbox(format("Please come again!"), MSGBOX_DEFAULT)
+    release
+}
+
+mart GoldenRodMartDecorVendor {
+    DECOR_MUD_BALL
+    DECOR_FENCE_LENGTH
+    DECOR_FENCE_WIDTH
+    DECOR_TIRE
+    DECOR_BREAKABLE_DOOR
+    DECOR_SOLID_BOARD
+    DECOR_SAND_ORNAMENT
+    DECOR_STAND
+    DECOR_SLIDE
+    DECOR_TV
+    DECOR_ROUND_TV
+    DECOR_CUTE_TV
+    DECOR_WAILMER_DOLL
+    DECOR_RHYDON_DOLL
+}
+
+script GoldenRodMart_Text_Boy {
+    msgbox("My mom is upstairs trying to bargains.\nShe always have good deals!", MSGBOX_NPC)
+    end
+}
+
+script GoldenRodMart_Text_ReceptionLady {
+    msgbox("Welcome to GOLDENROD Dept. Store.", MSGBOX_NPC)
+    end
+}
+
+script GoldenRodMart_Text_3FGentleman {
+    msgbox("This Dept. Store makes me realize that\nGOLDENROD is a big city.\lThe selection here is unmatched\lanywhere else.\l{PLAYER}: Not even in HOENN or\lKANTO?...", MSGBOX_NPC)
+    end
+}
+
+script GoldenRodMart_Text_3FCooltrainer {
+    msgbox("You know that the best prizes are at\nthe GAME CORNER?\lTMs and POKéMON also!", MSGBOX_NPC)
+    end
+}
+
+script GoldenRodMart_Text_Beauty {
+    msgbox("Yes... huh huh... Wait!\nYou can't see I on the phone?\lOh ARCEUS!", MSGBOX_NPC)
+    end
+}
+
+script GoldenRodMart_Text_OldMan {
+    msgbox("Hum.. The elevator is broken?\nArf...", MSGBOX_NPC)
+    end
+}
+
+script GoldenRodMart_Text_2FSpeedBugManiac {
+    msgbox("I, I, I'm really impatient!\nI use X SPEED in battle to speed up my\lPOKéMON.", MSGBOX_NPC)
+    end
+}
+
+script GoldenRodMart_Text_2FSpecialBugManiac {
+    msgbox("= Hey! When you battle, do you use X\nSPECIAL?\lIt's awesome. It really jack up SPECIAL\lATTACK!", MSGBOX_NPC)
+    end
+}
+
+script GoldenRodMart_Text_6FMan {
+    msgbox("If you're tired, try the vending\nmachine's drinks.\lYour POKéMON will love them too.", MSGBOX_NPC)
+    end
+}
+
+script GoldenRodMart_Text_6FLass {
+    msgbox("Do you listen to LUCKY CHANNEL?\nNo? You don't have a RADIO? Seriously?!", MSGBOX_NPC)
+    end
+}
+
+script GoldenRodMart_Text_6FGBAKid {
+    msgbox("I'm playing with a friend who's on the\nFirst floor. But the connexion is\lreally aweful.", MSGBOX_NPC)
+    end
+}
+
+script GoldenRodMart_Text_5FYoungster {
+    msgbox("I come from HOENN to visit some family.\nSo we can buy some stuff here.", MSGBOX_NPC)
+    end
+}
+
+script GoldenRodMart_Text_5FMan {
+    msgbox("I hate going shopping... But my\ndaughter will kill me if I don't bring\lhere some stuff.", MSGBOX_NPC)
+    end
+}
+
+script GoldenRodMart_Text_4FSailor {
+    msgbox("You can't rename a POKéMON you get in a\ntrade.\lSo I have a POKéMON called JIJI and\lBABY.\lIt's cringe...", MSGBOX_NPC)
+    end
+}
+
+script GoldenRodMart_Text_1FSign {
+    msgbox("1F Service Counter\n2F Trainer's Market\l3F Battle Collection\l4F Medicine Box\l5F Decoration Corner\l6F Tranquil Square", MSGBOX_NPC)
+    end
+}
+script GoldenRodMart_Text_2FSign {
+    msgbox("Your Travel Companion\n2F Trainer's Market", MSGBOX_NPC)
+    end
+}
+script GoldenRodMart_Text_3FSign {
+    msgbox("For Victory Seekers\n3F Battle Collection", MSGBOX_NPC)
+    end
+}
+script GoldenRodMart_Text_4FSign {
+    msgbox("Let Us Pump Up Your POKéMON!\n4F Medicine Box", MSGBOX_NPC)
+    end
+}
+script GoldenRodMart_Text_5FSign {
+    msgbox("Decorate your Home\n5F Decoration Corner", MSGBOX_NPC)
+    end
+}
+script GoldenRodMart_Text_6FSign {
+    msgbox("Take a Break from Shopping!\n6F Tranquil Square", MSGBOX_NPC)
+    end
+}
+
+script GoldenRodMart_Text_Vendor2F {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemartdecoration(GoldenRodMart2FVendor)
+    msgbox(format("Please come again!"), MSGBOX_DEFAULT)
+    release
+}
+
+mart GoldenRodMart2FVendor {
+    ITEM_SUPER_POTION
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+    ITEM_BURN_HEAL
+    ITEM_ICE_HEAL
+    ITEM_FULL_HEAL
+    ITEM_REVIVE
+}
+
+script GoldenRodMart_Text_Vendor2F2 {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemartdecoration(GoldenRodMart2F2Vendor)
+    msgbox(format("Please come again!"), MSGBOX_DEFAULT)
+    release
+}
+
+mart GoldenRodMart2F2Vendor {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_LUXURY_BALL
+    ITEM_TIMER_BALL
+    ITEM_NET_BALL
+    ITEM_ESCAPE_ROPE
+    ITEM_MAX_REPEL
+    ITEM_POKE_DOLL
+    ITEM_FAB_MAIL
+}
+
+script GoldenRodMart_Text_Vendor3F {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemartdecoration(GoldenRodMart3FVendor)
+    msgbox(format("Please come again!"), MSGBOX_DEFAULT)
+    release
+}
+
+mart GoldenRodMart3FVendor {
+    ITEM_X_ATTACK
+    ITEM_X_DEFEND
+    ITEM_X_SPEED
+    ITEM_X_SPECIAL
+    ITEM_X_ACCURACY
+    ITEM_DIRE_HIT
+    ITEM_GUARD_SPEC
+}
+script GoldenRodMart_Text_Vendor4F {
+    lock
+    faceplayer
+    message(format("Welcome!\pHow may I serve you?"))
+    waitmessage
+    pokemartdecoration(GoldenRodMart4FVendor)
+    msgbox(format("Please come again!"), MSGBOX_DEFAULT)
+    release
+}
+
+mart GoldenRodMart4FVendor {
+    ITEM_PROTEIN
+    ITEM_IRON
+    ITEM_CARBOS
+    ITEM_CALCIUM
+    ITEM_ZINC
+    ITEM_HP_UP
+
+}

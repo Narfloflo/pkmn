@@ -1,0 +1,16 @@
+mapscripts KantoUndergroundDoors_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION{
+         if(flag(FLAG_UNUSED_0x02C)== TRUE){
+            goto(KantoUndergroundDoors_On_Load)
+        }
+    }
+}
+
+
+script KantoUndergroundDoors_On_Load {
+    if(flag(FLAG_UNUSED_0x02C)== TRUE){
+        playbgm(MUS_RG_PEWTER, TRUE)
+        setweather(WEATHER_NONE)
+        end
+    }
+}

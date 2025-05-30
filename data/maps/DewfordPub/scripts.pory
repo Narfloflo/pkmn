@@ -1,0 +1,39 @@
+mapscripts DewfordPub_MapScripts {}
+
+script DewfordPub_Text_Fisherman {
+    lock
+    faceplayer
+    msgbox(format("I'm supplying this place, so I got\nto eat for free!"))
+    release
+    return
+}
+
+script DewfordPub_Text_Vendor{
+    lock
+    faceplayer
+	message(format("Oh a kid! No booze for you."))
+	waitmessage
+	pokemart(DewfordPubItems)
+	msgbox("Don't forget to drink with moderation.")
+	release
+}
+
+mart DewfordPubItems {
+    ITEM_SANDWICH
+	ITEM_LEMONADE
+	ITEM_CASTELIACONE
+    ITEM_STBRICECREAM
+    ITEM_BLKICECREAM
+	ITEM_FRESH_WATER
+    ITEM_PEWTER_CRUNCHIES
+}
+
+script DewfordPub_Text_TuberM {
+    msgbox("I love having a date here. It's such a\nromantic place.\l{PLAYER}: ?!", MSGBOX_NPC)
+    end   
+}
+
+script DewfordPub_Text_TuberF {
+    msgbox("I wish they had sundaes here!\nAll this place is providing is fish...", MSGBOX_NPC)
+    end   
+}

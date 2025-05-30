@@ -1,1 +1,35 @@
 mapscripts Mossdeep_SeaGate1_MapScripts {}
+
+script Mossdeep_SeaGate1_Attendant {
+    msgbox("Go through this gate to end up in the\ndocks.", MSGBOX_NPC)
+    end   
+}
+script Mossdeep_SeaGate1_Gentleman {
+    msgbox("I'm travelling the world with my\nPOKéMON.\lI'm came from KANTO with the SS ANNE.\lI'll stay around for a few moment and\lthen probably move to UNOVA.", MSGBOX_NPC)
+    end   
+}
+script Mossdeep_SeaGate1_Growlithe {
+    playmoncry(SPECIES_GROWLITHE, CRY_MODE_NORMAL)
+    msgbox("Graou!", MSGBOX_NPC)
+    end   
+}
+script Mossdeep_SeaGate1_Policeman {
+    msgbox("I'm here just in case something happen.\n{PLAYER}: Like an attack on the space\lstation?", MSGBOX_NPC)
+    end   
+}
+script Mossdeep_SeaGate1_Beauty {
+    msgbox("I don't know how the ferry system is\nworking here. It's a bit confusing.\lShouldn't we simply use FLY?", MSGBOX_NPC)
+    end   
+}
+script Mossdeep_SeaGate1_Woman {
+    msgbox("My brother is living in LILYCOVE. I\nheard there is a great contest place.\lI can't wait!", MSGBOX_NPC)
+    end   
+}
+script Mossdeep_SeaGate1_Man {
+    msgbox("I'm representing a company from\nSINNOH.\lWe are working on a watch. I have an\lappointment with the DEVON company. We\lare sharing innovations!", MSGBOX_NPC)
+    end   
+}
+script Mossdeep_SeaGate1_Artist {
+    msgbox("The landscape is awesome.\nI wish I could go on the roof of the\lspace center to capture the light!", MSGBOX_NPC)
+    end   
+}

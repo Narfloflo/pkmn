@@ -100,7 +100,7 @@ void SetPlayerGotFirstFans(void);
 u16 GetNumFansOfPlayerInTrainerFanClub(void);
 
 static void RecordCyclingRoadResults(u32, u8);
-static void LoadLinkPartnerObjectEventSpritePalette(u8, u8, u8);
+static void LoadLinkPartnerObjectEventSpritePalette(u16, u8, u8);
 static void Task_PetalburgGymSlideOpenRoomDoors(u8);
 static void PetalburgGymSetDoorMetatiles(u8, u16);
 static void Task_PCTurnOnEffect(u8);
@@ -512,7 +512,7 @@ void SpawnLinkPartnerObjectEvent(void)
     };
     u8 myLinkPlayerNumber;
     u8 playerFacingDirection;
-    u8 linkSpriteId;
+    u16 linkSpriteId;
     u8 i;
 
     myLinkPlayerNumber = GetMultiplayerId();
@@ -573,7 +573,7 @@ void SpawnLinkPartnerObjectEvent(void)
     }
 }
 
-static void LoadLinkPartnerObjectEventSpritePalette(u8 graphicsId, u8 localEventId, u8 paletteNum)
+static void LoadLinkPartnerObjectEventSpritePalette(u16 graphicsId, u8 localEventId, u8 paletteNum)
 {
     u8 adjustedPaletteNum;
     // Note: This temp var is necessary; paletteNum += 6 doesn't match.
@@ -1048,25 +1048,35 @@ static void PCTurnOnEffect_SetMetatile(s16 isScreenOn, s8 dx, s8 dy)
 {
     u16 metatileId = 0;
     if (isScreenOn)
+{
+    // Screen is on, set it off
+    if ((gMapHeader.region == REGION_HOENN) && gSpecialVar_0x8004 == PC_LOCATION_OTHER)
+        metatileId = METATILE_Building_PC_Off;
+    else if (gSpecialVar_0x8004 == PC_LOCATION_BRENDANS_HOUSE)
+        metatileId = METATILE_BrendansMaysHouse_BrendanPC_Off;
+    else if (gSpecialVar_0x8004 == PC_LOCATION_MAYS_HOUSE)
+        metatileId = METATILE_BrendansMaysHouse_MayPC_Off;
+
+    if ((gMapHeader.region == REGION_SEVII || gMapHeader.region == REGION_KANTO || gMapHeader.region == REGION_JOHTO) && gSpecialVar_0x8004 == PC_LOCATION_OTHER)
+    metatileId = METATILE_KantoInside_PC_Off;
+
+}
+else
+{
+    // Screen is off, set it on
+    if ((gMapHeader.region == REGION_HOENN) && gSpecialVar_0x8004 == PC_LOCATION_OTHER)
     {
-        // Screen is on, set it off
-        if (gSpecialVar_0x8004 == PC_LOCATION_OTHER)
-            metatileId = METATILE_Building_PC_Off;
-        else if (gSpecialVar_0x8004 == PC_LOCATION_BRENDANS_HOUSE)
-            metatileId = METATILE_BrendansMaysHouse_BrendanPC_Off;
-        else if (gSpecialVar_0x8004 == PC_LOCATION_MAYS_HOUSE)
-            metatileId = METATILE_BrendansMaysHouse_MayPC_Off;
+        metatileId = METATILE_Building_PC_On;
     }
-    else
-    {
-        // Screen is off, set it on
-        if (gSpecialVar_0x8004 == PC_LOCATION_OTHER)
-            metatileId = METATILE_Building_PC_On;
-        else if (gSpecialVar_0x8004 == PC_LOCATION_BRENDANS_HOUSE)
-            metatileId = METATILE_BrendansMaysHouse_BrendanPC_On;
-        else if (gSpecialVar_0x8004 == PC_LOCATION_MAYS_HOUSE)
-            metatileId = METATILE_BrendansMaysHouse_MayPC_On;
-    }
+    else if (gSpecialVar_0x8004 == PC_LOCATION_BRENDANS_HOUSE)
+        metatileId = METATILE_BrendansMaysHouse_BrendanPC_On;
+    else if (gSpecialVar_0x8004 == PC_LOCATION_MAYS_HOUSE)
+        metatileId = METATILE_BrendansMaysHouse_MayPC_On;
+
+    if ((gMapHeader.region == REGION_SEVII || gMapHeader.region == REGION_KANTO || gMapHeader.region == REGION_JOHTO) && gSpecialVar_0x8004 == PC_LOCATION_OTHER)
+        metatileId = METATILE_KantoInside_PC_On;
+}
+
     MapGridSetMetatileIdAt(gSaveBlock1Ptr->pos.x + dx + MAP_OFFSET, gSaveBlock1Ptr->pos.y + dy + MAP_OFFSET, metatileId | MAPGRID_COLLISION_MASK);
 }
 
@@ -1100,15 +1110,19 @@ static void PCTurnOffEffect(void)
         break;
     }
 
-    if (gSpecialVar_0x8004 == PC_LOCATION_OTHER)
-        metatileId = METATILE_Building_PC_Off;
-    else if (gSpecialVar_0x8004 == PC_LOCATION_BRENDANS_HOUSE)
-        metatileId = METATILE_BrendansMaysHouse_BrendanPC_Off;
-    else if (gSpecialVar_0x8004 == PC_LOCATION_MAYS_HOUSE)
-        metatileId = METATILE_BrendansMaysHouse_MayPC_Off;
+    if ((gMapHeader.region == REGION_HOENN) && gSpecialVar_0x8004 == PC_LOCATION_OTHER)
+    metatileId = METATILE_Building_PC_Off;
+else if (gSpecialVar_0x8004 == PC_LOCATION_BRENDANS_HOUSE)
+    metatileId = METATILE_BrendansMaysHouse_BrendanPC_Off;
+else if (gSpecialVar_0x8004 == PC_LOCATION_MAYS_HOUSE)
+    metatileId = METATILE_BrendansMaysHouse_MayPC_Off;
 
-    MapGridSetMetatileIdAt(gSaveBlock1Ptr->pos.x + dx + MAP_OFFSET, gSaveBlock1Ptr->pos.y + dy + MAP_OFFSET, metatileId | MAPGRID_COLLISION_MASK);
-    DrawWholeMapView();
+if ((gMapHeader.region == REGION_SEVII || gMapHeader.region == REGION_KANTO || gMapHeader.region == REGION_JOHTO) && gSpecialVar_0x8004 == PC_LOCATION_OTHER)
+    metatileId = METATILE_KantoInside_PC_Off;
+
+MapGridSetMetatileIdAt(gSaveBlock1Ptr->pos.x + dx + MAP_OFFSET, gSaveBlock1Ptr->pos.y + dy + MAP_OFFSET, metatileId | MAPGRID_COLLISION_MASK);
+DrawWholeMapView();
+
 }
 
 void DoLotteryCornerComputerEffect(void)
@@ -4269,4 +4283,24 @@ void SetPlayerGotFirstFans(void)
 u8 Script_TryGainNewFanFromCounter(void)
 {
     return TryGainNewFanFromCounter(gSpecialVar_0x8004);
+}
+
+void OlderHaircutBrother(void)
+{
+    u8 haircutLevel = 0;
+
+    u16 random = Random() % 100;
+    if (random >= 30)
+        haircutLevel++;
+    if (random >= 80)
+        haircutLevel++;
+
+    AdjustFriendship(&gPlayerParty[gSpecialVar_0x8004], FRIENDSHIP_EVENT_OLDER_HAIRCUT_BROTHER_0 + haircutLevel);
+    gSpecialVar_Result = haircutLevel;
+}
+
+void PlayChosenMonCry(void)
+{
+    u32 species = GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPECIES, NULL);
+    PlayCry_Script(species, 0);
 }

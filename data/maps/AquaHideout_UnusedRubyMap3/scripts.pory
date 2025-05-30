@@ -1,0 +1,22 @@
+mapscripts AquaHideout_UnusedRubyMap3_MapScripts {
+    
+}
+
+script CeladonCondominium2_Text_DevOffice {
+    msgbox("Development Room -\nCurrently for rent", MSGBOX_SIGN)
+    end
+}
+
+script CeladonCondominium2_Text_MeetingRoom {
+    msgbox("Meeting Room", MSGBOX_SIGN)
+    end
+}
+
+script CeladonCondominium2_Text_Appartment1 {
+    msgbox("Appartement 101", MSGBOX_SIGN)
+    end
+}
+script CeladonCondominium2_Text_Appartment2 {
+    msgbox("Appartement 201", MSGBOX_SIGN)
+    end
+}

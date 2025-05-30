@@ -1,0 +1,31 @@
+mapscripts Route114_Pub_MapScripts {}
+
+script Route114_Pub_Text_Vendor{
+    lock
+    faceplayer
+	message(format("= Welcome welcome,\nWhat should I get you?"))
+	waitmessage
+	pokemart(Route114PubItems)
+	msgbox("Have a good day!")
+	release
+}
+
+mart Route114PubItems {
+	ITEM_PEWTER_CRUNCHIES
+	ITEM_SANDWICH
+    ITEM_BERRY_JUICE
+	ITEM_SODA_POP
+	ITEM_LEMONADE
+	ITEM_FRESH_WATER
+    ITEM_LAVA_COOKIE
+}
+
+script Route114_Pub_Text_Kindler {
+    msgbox("I asked for a spicy sauce, but turned\nout it's way too spicy for me!\lI can't handle it!", MSGBOX_NPC)
+    end
+}
+
+script Route114_Pub_Text_Hiker {
+    msgbox("I'll eat a quick meal and I'm up on to\nthe mountains again! You should eat\ltoo, you look so thin.", MSGBOX_NPC)
+    end
+}

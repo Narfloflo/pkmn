@@ -1,0 +1,66 @@
+mapscripts SproutTower_MapScripts {}
+
+script SproutTower_Text_Falkner {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_WINONA_2)){
+        msgbox(format("Hi!\nI came to SPROUT TOWER to train my\lPOKéMON.\lOh you want to enter VIOLET's GYM?\lUnfortunatly it's closed.\lMy dad went to a journey and left me\lhis POKéMON.\lI'm supposed to take the lead, but I'm\lnot ready yet.\lWell if you want we can have a match\lthough.\lWhat do you think?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT)==1){
+            goto(SproutTower_Text_FalknerFight)
+        }else{
+            msgbox(format("Oh ok!\nWell I'll keep training with the MONKS\lthen!"), MSGBOX_NPC)
+            end
+        }
+    }elif(defeated(TRAINER_WINONA_2)){
+        goto(SproutTower_Text_FalknerRematch)
+    }
+    
+    release
+    end
+}
+
+script SproutTower_Text_FalknerFight {
+    trainerbattle_single(TRAINER_WINONA_2, "Nice!\nHere we go!", "I need to keep training!")
+    release
+    end
+}
+
+script SproutTower_Text_FalknerRematch {
+    msgbox(format("I keep training but I'm not totally\nsynchronized with my POKéMON.\lIt's a bit frustrating.\lMmmmh maybe you can help me being\lcloser to my team?"),MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        cleartrainerflag(TRAINER_WINONA_2)
+        trainerbattle_single(TRAINER_WINONA_2, "Nice!\nHere we go!", "I need to keep training!")
+    }else{
+        msgbox(format("You know where to find me if you change your mind."))
+    }
+    release
+    end
+}
+
+script SproutTower_Text_BellsprooutFrame {
+    msgbox("{PLAYER}: Oh there is something hidden\nbehind this frame...\lSome kind of mecanism.\l“It will lead you to the entrance”\lShould I activate that?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1){
+        warpteleport(MAP_SPROUT_TOWER, 8,57)
+    }else{
+        msgbox("{PLAYER}: Humm... I better not.",MSGBOX_DEFAULT)
+        end
+    }
+}
+
+script SproutTower_Text_Sage1 {
+    trainerbattle_single(TRAINER_BENJAMIN_3,"Welcome to SPROUT TOWER.\nWe are here to test you.","Humm... You are good!")
+    msgbox("This place is dedicated to training and\nmeditation. Don't disturb our peace\lplease.", MSGBOX_NPC)
+    end
+}
+
+script SproutTower_Text_Sage2 {
+    trainerbattle_single(TRAINER_BENJAMIN_4,"Welcome to SPROUT TOWER.\nWe are here to test you.","Humm... You are good!")
+    msgbox("This place is dedicated to training and\nmeditation. Don't disturb our peace\lplease.", MSGBOX_NPC)
+    end
+}
+
+script SproutTower_Text_Sage3 {
+    trainerbattle_single(TRAINER_PABLO_2,"Welcome to SPROUT TOWER.\nWe are here to test you.","Humm... You are good!")
+    msgbox("This place is dedicated to training and\nmeditation. Don't disturb our peace\lplease.", MSGBOX_NPC)
+    end
+}

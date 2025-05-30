@@ -612,6 +612,32 @@ gSongTable::
 	song ph_nurse_blend, 2, 2
 	song ph_nurse_held, 2, 2
 	song ph_nurse_solo, 2, 2
+	song mus_gsc_ecruteak, 0, 0
+	song mus_route34, 0, 0
+	song mus_gsc_burned_tower, 0, 0
+	song mus_vs_johto_wild, 0, 0
+	song mus_gsc_surf 0, 0
+	song mus_gsc_kimono 0, 0
+	song mus_chrono_zeal 0, 0
+	song mus_chrono_silent_light 0, 0
+	song mus_gsc_goldenrod 0, 0
+	song mus_gsc_ilex_forest 0, 0
+	song mus_route30 0, 0
+	song mus_gsc_cherrygrove 0, 0
+	song mus_new_bark 0, 0
+	song mus_gsc_route29 0, 0
+	song mus_gsc_park 0, 0
+	song mus_route27 0, 0
+	song mus_intro_champion 0, 0
+	song mus_vs_giogio 0, 0
+	song mus_vs_johto_trainer 0, 0
+	song mus_gsc_cycling 0, 0
+	song mus_elms_lab 0, 0
+	song mus_encounter_kimono 0, 0
+	song mus_chrono_leene_square 0, 0
+	song mus_sprout_tower 0, 0
+	song mus_vs_johto_leader 0, 0
+	song mus_encounter_sage 0, 0
 
 	.align 2
 dummy_song_header:

@@ -1,0 +1,32 @@
+mapscripts MossdeepCity_Gate_MapScripts {}
+
+script MossdeepCity_Gate_Text_Policeman {
+    msgbox("Welcome to MOSSDEEP SPATIAL CENTER", MSGBOX_NPC)
+    end
+}
+
+script MossdeepCity_Gate_Text_Man {
+    msgbox("I'm a representant of the Spatial\nCenter.\lHOENN's authorities gave us the mission\lto explore space and study everything\lrelated to it.", MSGBOX_NPC)
+    end
+}
+
+script MossdeepCity_Gate_Text_Scientist1 {
+    lock
+    faceplayer
+    msgbox("I'm working on a big telescope.\nI think I saw something in space\llooking like this :")
+    showmonpic(SPECIES_DEOXYS, 10,3)
+    delay(100)
+    hidemonpic
+    release
+    end
+}
+
+script MossdeepCity_Gate_Text_Scientist2 {
+    msgbox("Heard about JAMES WEBB?\nWell our telescope is gonna be much\lbetter!\lI hope...", MSGBOX_NPC)
+    end
+}
+
+script MossdeepCity_Gate_Text_Man2 {
+    msgbox("So much things to do...\nI'm pulling my hair so hard!\lArrrg!", MSGBOX_NPC)
+    end
+}

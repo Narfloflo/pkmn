@@ -1,1 +1,56 @@
 mapscripts SlateportCity_Wharehouse_MapScripts {}
+
+script SlateportCityWarehouse_Text_Policeman{
+    lock
+    faceplayer
+    msgbox(format("I'm sorry to tell you that you cannot go further. It's restricted to people working here."))
+    release
+    end
+}
+
+script SlateportCityWarehouse_Text_Sailor{
+    lock
+    faceplayer
+    msgbox(format("Hey, what are you doing here ? I thought people couldn't run inside freely !"))
+    release
+    end
+}
+
+script SlateportCityWarehouse_Text_Worker{
+    lock
+    faceplayer
+    msgbox(format("You know Capt. STERNS ? He was working here before, and moved to the HARBOR because he got funds from DEVON for a Research and Development program."))
+    release
+    end
+}
+
+script SlateportCityWarehouse_Text_SalaryMan{
+    lock
+    faceplayer
+    msgbox(format("I'm trying to learn every specificities the SHIPS have because I'll sell them across the WORLD. But it's very complicated..."))
+    release
+    end
+}
+
+script SlateportCityWarehouse_Text_Scientist1{
+    lock
+    faceplayer
+    msgbox(format("You know the big sound the SHIPS those when they leave the DOCKS ? I'm trying to find the right frequency to avoid disturbing the POKéMON. But it's hard because the best frequeces are the one ZUBAT are using."))
+    release
+    end
+}
+
+script SlateportCityWarehouse_Text_Scientist2{
+    lock
+    faceplayer
+    msgbox(format("Oh I can see that you have a POKéDEX ! PROF BIRCH gave it to you ? You have to run some errands for him right ? Hahaha, he never changes !"))
+    release
+    end
+}
+
+script SlateportCityWarehouse_Text_Scientist3_4{
+    lock
+    msgbox(format(".....................................\n{PLAYER} : This person seems very busy."))
+    release
+    end
+}

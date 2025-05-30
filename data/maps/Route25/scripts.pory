@@ -1,0 +1,68 @@
+mapscripts Route25_MapScripts {}
+
+script Route25_Text_Youngster {
+    trainerbattle_single(TRAINER_CAMERON_4, "I've been training hard on Route 25!\nLet's see how strong you are !", "Wow, your POKéMON are unbeatable !")
+    msgbox(format("I'll keep pushing my limits and become an even stronger TRAINER !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route25_Text_Camper {
+    trainerbattle_single(TRAINER_JACKI_2, "Camping out here is great!\nA battle will make it even better !", "My camping trip didn't go as planned...")
+    msgbox(format("I'll continue my journey, and maybe find a better camping spot !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route25_Text_Picnicker {
+    trainerbattle_single(TRAINER_JACKI_3, "My boyfriend and I broke up recently.\nHe was so lame !", "What what what ?!")
+    msgbox(format("I lost but my boyfriend is way weaker than me. But he keep bragging around as if he was a top TRAINER !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route25_Text_Hiker {
+    trainerbattle_single(TRAINER_JACKI_4, "Boooh ! You haven't seen me right ?", "I haven't seen my defeat...")
+    msgbox(format("I'm training around here. I heard there are some rare POKéMON around here !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route25_Text_VillaSign {
+    lock
+    msgbox(format("SEA COTTAGE\nBILL leaves here !\pBut there is also written that BILL left for SEVII ISLANDS"))
+    release
+    end
+}
+
+script Route25_Text_Girl {
+    lock
+    faceplayer
+    checkplayergender
+    goto_if_eq(VAR_RESULT, MALE, Route25_Text_GirlIfBoy)
+    goto_if_eq(VAR_RESULT, FEMALE, Route25_Text_GirlIfGirl)
+    end
+}
+
+script Route25_Text_GirlIfGirl {
+    msgbox(format("You know this place is where lovers are meeting each other. I'm telling you just in case. Now leave, I'm waiting for my prince ! He should be a great TRAINER !"))
+    release
+    end
+}
+
+script Route25_Text_GirlIfBoy {
+    lock
+    msgbox(format("Oh my ! You beat all those TRAINERS ? You really are skilled ! You deserve a kiss !"), MSGBOX_AUTOCLOSE)
+    applymovement(5, Route25_Move)
+    playse(SE_M_ATTRACT)
+    waitse
+    goto(Route_Text_BeenKissed)
+    release
+    end
+}
+movement Route25_Move {
+    emote_heart
+}
+
+script Route_Text_BeenKissed {
+    lock
+    msgbox(format("You are my prince !"))
+    release
+    end
+}

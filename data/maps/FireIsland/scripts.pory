@@ -1,0 +1,24 @@
+mapscripts FireIsland_MapScripts { 
+        MAP_SCRIPT_ON_LOAD{
+        call_if_set(FLAG_UNUSED_0x02A, FireIsland_Event_OpenDoor)
+        end
+    }
+}
+
+script FireIsland_Text_Hiker {
+    if(flag(FLAG_UNUSED_0x02A) ==TRUE){
+        msgbox("Look! I managed to create an opening in\nthis mountain!\lBy the way, I don't know  why but this\lplace feel warmer now don't you think?",MSGBOX_NPC)
+        end
+    }else{
+    lock
+    faceplayer
+    msgbox("This mountain is intriguing!\nI'm pretty sure there is a way to dig\linside. But I need to know the perfect\lside to use my tools.\lIt may take some time...")
+    release
+    end    
+    } 
+}
+
+script FireIsland_Event_OpenDoor {
+    setmetatile(35,51, METATILE_General_CaveEntrance_Bottom, FALSE)
+    setmetatile(35,50, METATILE_General_CaveEntrance_Top, FALSE)
+}

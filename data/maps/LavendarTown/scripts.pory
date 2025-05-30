@@ -1,0 +1,62 @@
+mapscripts LavendarTown_MapScripts {}
+
+script LavenderTown_Text_CitySign {
+    lock
+    msgbox(format("LAVENDAR TOWN\nThe Noble Purple Town"))
+    release
+    end
+}
+
+script LavenderTown_Text_Channeler {
+    lock
+    faceplayer
+    msgbox(format("Ghosts appeared in the POKéMON TOWER. I think they're the spirits of POKéMON that the ROCKETS killed."))
+    release
+    end
+}
+
+script LavenderTown_Text_Girl {
+    lock
+    faceplayer
+    msgbox(format("My MOM told me that I can see things. For example there is a big entity over your head. But I guess i'ts a prank right ?"))
+    release
+    end
+}
+
+script LavenderTown_Text_VolunteerSign {
+    lock
+    msgbox(format("LAVENDAR Volunteer POKéMON House"))
+    release
+    end
+}
+
+script LavenderTown_Text_pkmnTowerSign {
+    lock
+    msgbox(format("May the souls of POKéMON rest easy.\nPOKéMON TOWER"))
+    release
+    end
+}
+
+script LavenderTown_Text_Guy {
+    lock
+    faceplayer
+    msgbox(format("This town is known as the grave site of POKéMON. Memorial services are held in POKéMON TOWER."))
+    release
+    end
+}
+
+script LavenderTown_Text_Birdkeeper {
+    lock
+    faceplayer
+    msgbox(format("I flew here as soon as I've learned that my sweet SPEAROW was sick... I guess now he isn't."))
+    release
+    end
+}
+
+script LavenderTown_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("Heard about Mr. FUJI ? He's a good guy that take care of the sick POKéMON."))
+    release
+    end
+}

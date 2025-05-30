@@ -2,106 +2,53 @@ NewMap1_MapScripts::
 	.byte 0
 
 
-NewMap1_Text_RestaurantKid::
+ForgottenIslandInside_Text_Hiker::
+	msgbox ForgottenIslandInside_Text_Hiker_Text_0, MSGBOX_NPC
+	end
+
+
+ForgottenIslandInside_Text_OldWoman::
+	msgbox ForgottenIslandInside_Text_OldWoman_Text_0, MSGBOX_NPC
+	end
+
+
+ForgottenIslandInside_Text_Blackbelt::
+	msgbox ForgottenIslandInside_Text_Blackbelt_Text_0, MSGBOX_NPC
+	end
+
+
+ForgottenIslandInside_Text_LadyVendor::
 	lock
 	faceplayer
-	msgbox NewMap1_Text_RestaurantKid_Text_0
-	release
-	end
-
-
-NewMap1_Text_GuyInSuit::
-	lock
-	msgbox NewMap1_Text_GuyInSuit_Text_0
-	release
-	end
-
-
-NewMap1_Text_Cook::
-	lock
-	faceplayer
-	msgbox NewMap1_Text_Cook_Text_0
-	release
-	end
-
-
-NewMap1_Text_Vendor::
-	lock
-	message NewMap1_Text_Vendor_Text_0
+	msgbox ForgottenIslandInside_Text_LadyVendor_Text_0, MSGBOX_DEFAULT
 	waitmessage
-	pokemart FoodItems
-	msgbox NewMap1_Text_Vendor_Text_1
+	pokemart ForgottenIslandInsideMart
+	msgbox ForgottenIslandInside_Text_LadyVendor_Text_1, MSGBOX_AUTOCLOSE
 	release
-	return
+	end
 
 
 	.align 2
-FoodItems:
-	.2byte ITEM_SANDWICH
-	.2byte ITEM_MOOMOO_MILK
-	.2byte ITEM_LEMONADE
+ForgottenIslandInsideMart:
 	.2byte ITEM_BERRY_JUICE
+	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_RAWST_BERRY
+	.2byte ITEM_CHERI_BERRY
+	.2byte ITEM_SITRUS_BERRY
+	.2byte ITEM_MOOMOO_MILK
 	.2byte ITEM_NONE
 
-NewMap1_Text_RestaurantKidF::
-	lock
-	faceplayer
-	msgbox NewMap1_Text_RestaurantKidF_Text_0
-	release
-	end
+ForgottenIslandInside_Text_Hiker_Text_0:
+	.string "Hey kid! You came from HOENN's mainland\nright?\lFinally someone came here!\lI went to explore the mountains south\lof PACIFIDLOG and found this villages\lyears ago!\lI got married to this beautiful lady\lbut I miss civilisation!\lAnyway, glad to talk to some Hoennian\lfellow!$"
 
+ForgottenIslandInside_Text_OldWoman_Text_0:
+	.string "Did you know that this place was\noriginally a big city. The biggest city\lin HOENN, or what it was called back\lthere.\lOn the western point of the island\lthere is a tower that was link\lto another one we called the SKY\lPILLAR.\lNo idea why our ancestors built this...$"
 
-NewMap1_Text_GameKid::
-	lock
-	faceplayer
-	msgbox NewMap1_Text_GameKid_Text_0
-	release
-	end
+ForgottenIslandInside_Text_Blackbelt_Text_0:
+	.string "I'm meditating all the days.\nThis is amazing!$"
 
+ForgottenIslandInside_Text_LadyVendor_Text_0:
+	.string "Oh hello!\pDo you need anything?$"
 
-NewMap1_Text_RestaurantKid_Text_0:
-	.string "So basically, I'm here everyday eating\n"
-	.string "the same stuff\p"
-	.string "I need a proper life...$"
-
-NewMap1_Text_GuyInSuit_Text_0:
-	.string "EMPLOYEE: Can I take your order\n"
-	.string "please?\p"
-	.string "GUY in the suit: I'll have Two number 9s,\n"
-	.string "number 9 large. Number 6, extra dip !\l"
-	.string "Number 7, extra d-7. Two 45s, one 40\l"
-	.string "cheese. Extra extra large cheese soda.\l"
-	.string "Number 9 dip, extra 6. 45 cheese, 69\l"
-	.string "aaah ! 7-Eleven, and a large soda!\p"
-	.string "{PLAYER}: YUCK!$"
-
-NewMap1_Text_Cook_Text_0:
-	.string "Welcome in the one and only FAST FOOD\n"
-	.string "chain of HOENN !\p"
-	.string "Our restaurants are so similar that we\n"
-	.string "can swear it's always the same\l"
-	.string "location, but duplicated !\p"
-	.string "{PLAYER}: I think it is. The developer\n"
-	.string "is fucking lazy!$"
-
-NewMap1_Text_Vendor_Text_0:
-	.string "Welcome to HOENN BURGER, what can I get\n"
-	.string "you ?$"
-
-NewMap1_Text_Vendor_Text_1:
-	.string "Come again soon.$"
-
-NewMap1_Text_RestaurantKidF_Text_0:
-	.string "I don't care what people think. I'm here\n"
-	.string "to gain the most weight possible and\l"
-	.string "beat a SNORLAX.\p"
-	.string "{PLAYER}: What the fuck ?$"
-
-NewMap1_Text_GameKid_Text_0:
-	.string "Kid: Humm yes ? You wanna try my brand\n"
-	.string "new NINTENDO SWITCH ?\p"
-	.string "{PLAYER}: Hell yeah !\p"
-	.string "Kid: Well no way I'm letting a dirty\n"
-	.string "TRAINER like you touching my device.\l"
-	.string "Screw you !\p"
-	.string "{PLAYER}: Selfish bastard...$"
+ForgottenIslandInside_Text_LadyVendor_Text_1:
+	.string "Hope to see you soon!$"

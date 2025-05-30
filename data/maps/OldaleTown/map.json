@@ -71,8 +71,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
-      "x": 11,
-      "y": 19,
+      "x": 8,
+      "y": 21,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
@@ -83,8 +83,8 @@
       "flag": "FLAG_HIDE_OLDALE_TOWN_RIVAL"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
-      "x": 17,
+      "graphics_id": "OBJ_EVENT_GFX_RANCHER",
+      "x": 18,
       "y": 24,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -92,20 +92,20 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OldaleTown_Text_Farmer",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POOCHYENA",
-      "x": 7,
-      "y": 29,
+      "x": 12,
+      "y": 5,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OldaleTown_Text_Poochyena",
       "flag": "0"
     },
     {
@@ -118,20 +118,20 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Watchman",
+      "script": "OldaleTown_Text_Boy",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
-      "x": 2,
-      "y": 24,
+      "x": 12,
+      "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_UP_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OldaleTown_Text_ExpertM",
       "flag": "0"
     }
   ],
@@ -144,14 +144,14 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 15,
-      "y": 12,
+      "x": 24,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_HOUSE2",
       "dest_warp_id": "0"
     },
     {
-      "x": 23,
+      "x": 15,
       "y": 14,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_POKEMON_CENTER_1F",
@@ -165,8 +165,8 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 24,
-      "y": 27,
+      "x": 17,
+      "y": 21,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_HOUSE2",
       "dest_warp_id": "3"
@@ -175,22 +175,8 @@
       "x": 6,
       "y": 16,
       "elevation": 0,
-      "dest_map": "MAP_HOUSE",
+      "dest_map": "MAP_OLDALE_TOWN_MOVE_LEARNER",
       "dest_warp_id": "0"
-    },
-    {
-      "x": 18,
-      "y": 6,
-      "elevation": 0,
-      "dest_map": "MAP_PUB",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 29,
-      "y": 12,
-      "elevation": 0,
-      "dest_map": "MAP_HOUSE",
-      "dest_warp_id": "10"
     }
   ],
   "coord_events": [
@@ -205,8 +191,8 @@
     },
     {
       "type": "trigger",
-      "x": 8,
-      "y": 19,
+      "x": 11,
+      "y": 21,
       "elevation": 3,
       "var": "VAR_OLDALE_RIVAL_STATE",
       "var_value": "1",
@@ -215,7 +201,7 @@
     {
       "type": "trigger",
       "x": 9,
-      "y": 19,
+      "y": 21,
       "elevation": 3,
       "var": "VAR_OLDALE_RIVAL_STATE",
       "var_value": "1",
@@ -224,11 +210,47 @@
     {
       "type": "trigger",
       "x": 10,
-      "y": 19,
+      "y": 21,
       "elevation": 3,
       "var": "VAR_OLDALE_RIVAL_STATE",
       "var_value": "1",
       "script": "OldaleTown_EventScript_RivalTrigger3"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "OldaleTown_EventScript_FarmerQuestnotComplete"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "OldaleTown_EventScript_FarmerQuestnotComplete"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "OldaleTown_EventScript_FarmerQuestnotComplete"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_FORTREE_CITY_STATE",
+      "var_value": "5",
+      "script": "OldaleTown_Text_QuestFailedWontReturn"
     }
   ],
   "bg_events": [
@@ -242,7 +264,7 @@
     },
     {
       "type": "sign",
-      "x": 24,
+      "x": 16,
       "y": 14,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
@@ -258,7 +280,7 @@
     },
     {
       "type": "sign",
-      "x": 25,
+      "x": 17,
       "y": 14,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
@@ -282,11 +304,11 @@
     },
     {
       "type": "sign",
-      "x": 15,
-      "y": 18,
+      "x": 4,
+      "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Verdanturf_Hospital_Door"
+      "script": "OldaleTown_Text_MoveLearnerSign"
     },
     {
       "type": "sign",
@@ -300,6 +322,22 @@
       "type": "sign",
       "x": 5,
       "y": 28,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 29,
+      "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Verdanturf_Hospital_Door"

@@ -1,1 +1,9 @@
 mapscripts SecretCitytoJunction_MapScripts {}
+
+script SecretCitytoJunction_Text_Maniac {
+    lock
+    faceplayer
+    msgbox(format("If you continue further you will reach a forest and then you will move to a ROUTE between 118 and 119."))
+    release
+    end
+}

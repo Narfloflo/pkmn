@@ -1,1 +1,6 @@
 mapscripts DesertPathtoSecretCity_MapScripts {}
+
+script DesertPathtoSecretCity_Text_Sign {
+    msgbox("{PLAYER}: The... Guardian...\nWatching... Over us...\lThe rest is history...", MSGBOX_SIGN)
+    end
+}

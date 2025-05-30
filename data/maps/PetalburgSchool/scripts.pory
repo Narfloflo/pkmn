@@ -1,0 +1,23 @@
+mapscripts PetalburgSchool_MapScripts {}
+
+script PetalburgSchool_Text_Teacher {
+    msgbox("Hello, you have a POKéDEX? So are you a\nrookie or an expert of POKéMON?\lAnyway, feel free to read the\lblackboard if you think you forgot\lsomething.", MSGBOX_NPC)
+    end
+}
+
+script PetalburgSchool_Text_Salaryman {
+    msgbox("I got fired from my agency... So now I\nneed to learn the basics of POKéMON if\lI want to travel in the world to find\lanother job.\lI heard they are recruiting in KANTO.", MSGBOX_NPC)
+    end
+}
+script PetalburgSchool_Text_Girl {
+    msgbox("My current goal is to beat the GYM\nLEADER!\lHe was so mean with Pappy! I'm gonna\lteach him who's the boss.", MSGBOX_NPC)
+    end
+}
+script PetalburgSchool_Text_BugCatcher {
+    msgbox("The NEST BALL is the best to catch BUG\nPOKéMON!\lBut it's a bit more expensive than the\lregular POKéBALL!\lIt's a big bummer!", MSGBOX_NPC)
+    end
+}
+script PetalburgSchool_Text_Blackboard {
+    msgbox("{PLAYER}: It's the blackboard....\nHmmmm....\lIt's written that Sunny Day boosts\lFire-type moves.\lIt’s a great combo with Flamethrower!\lI should keep that in mind!", MSGBOX_SIGN)
+    end
+}

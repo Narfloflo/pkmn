@@ -476,30 +476,8 @@ PetalburgWoods_Text_TrainerTipsPP:
 
 `
 
-script PetalburgWoods_EventScript_Tree {
-	lock
-	msgbox(format("This tree is odd..."))
-	call_if_set(FLAG_DEFEATED_MOSSDEEP_GYM,PetalburgWoods_EventScript_TriggerCelebi)
-	release
+script PetalburgWoods_Text_Treecko {
+	playmoncry(SPECIES_TREECKO, CRY_MODE_NORMAL)
+	msgbox("Driiiiii!", MSGBOX_NPC)
 	end
-}
-
-script PetalburgWoods_EventScript_TriggerCelebi {
-	lock
-    msgbox(format("{PLAYER}: Huh? Something is shining here... I can investigate a little more?"), MSGBOX_YESNO)
-        if(var(VAR_RESULT) !=0){
-            msgbox("{PLAYER}: What?!")
-            call(WarpToCelebi)
-        }else{
-            msgbox("Humm... Not today so.")
-        }
-	release
-	end
-}
-
-script WarpToCelebi{
-    fadescreen(FADE_TO_BLACK)
-    delay(5)
-    warp(MAP_CELEBI_CHAMBER, 5, 4)
-    fadescreen(FADE_FROM_BLACK)
 }

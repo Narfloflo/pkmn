@@ -1,0 +1,77 @@
+mapscripts Route40_MapScripts {}
+
+script Route40_Text_Worker{
+    lock
+    faceplayer
+    msgbox(format("We are digging in the hills. There is a place across they want to build a thing like a BATTLE TOWER or something."))
+    release
+    end
+}
+
+script Route40_Text_Fisherman{
+    lock
+    faceplayer
+    msgbox(format("Best place to fish is here.\pYeah, I have nothing to say, goodbye."))
+    release
+    end
+}
+
+script Route40_Text_Fisherman2{
+    lock
+    faceplayer
+    msgbox(format("I don't know how I end up here, but that's a really good place to fish !"))
+    release
+    end
+}
+
+script Route40_Text_SwimmerF{
+    lock
+    faceplayer
+    msgbox(format("I don't know if the water is cold, but all my friend are in the sea, so..."))
+    release
+    end
+}
+
+script Route40_Text_SwimmerF2{
+    lock
+    faceplayer
+    msgbox(format("I was floatting and I drift there. I'm not scared but wow ! It could be worse."))
+    release
+    end
+}
+
+script Route40_Text_Machoke {
+    lock
+    faceplayer
+    playmoncry(SPECIES_MACHOKE, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox(format("Choky!"))   
+    release
+    end
+}
+
+script Route40_Text_SwimmerM1 {
+    trainerbattle_single(TRAINER_DIANA_3, "Hey","Damn")
+    msgbox("I lost!", MSGBOX_NPC)
+    end
+}
+script Route40_Text_SwimmerM2 {
+    trainerbattle_single(TRAINER_DIANA_4, "Hey","Damn")
+    msgbox("I lost!", MSGBOX_NPC)
+    end
+}
+script Route40_Text_SwimmerM3 {
+    trainerbattle_single(TRAINER_AMY_AND_LIV_2, "Hey","Damn")
+    msgbox("I lost!", MSGBOX_NPC)
+    end
+}
+script Route40_Text_SwimmerM4 {
+    trainerbattle_single(TRAINER_AMY_AND_LIV_3, "Hey","Damn")
+    msgbox("I lost!", MSGBOX_NPC)
+    end
+}
+script Route40_Text_SwimmerF3 {
+    trainerbattle_single(TRAINER_AMY_AND_LIV_4, "Hey","Damn")
+    msgbox("I lost!", MSGBOX_NPC)
+    end
+}

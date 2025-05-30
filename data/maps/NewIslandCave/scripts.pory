@@ -1,0 +1,6 @@
+mapscripts NewIslandCave_MapScripts {}
+
+script NewIslandCave_Text_Scientist {
+    msgbox("Huh what?\nWho are you?\lWhere are we?\lDo you ARCEUS?\lI saw his smile! His love changed me!\lHuh? What you are still here?\lWhat do you want?\lARCEUS! Deliver us!", MSGBOX_NPC)
+    end
+}

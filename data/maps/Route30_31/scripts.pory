@@ -1,0 +1,36 @@
+mapscripts Route30_31_MapScripts {}
+
+
+script Route3031_Text_Hiker {
+    msgbox("I swear I should have taken a lantern\nwith me to explore the DARK CAVE...\lWhat?! POKéMON can learn such a MOVE?!\lImpressive!", MSGBOX_NPC)
+    end
+}
+
+script Route3031_Text_RouteSign {
+    msgbox("ROUTE 30\nVIOLET CITY - CHERRYGROVE CITY", MSGBOX_SIGN)
+    end
+}
+
+script Route3031_Text_Youngster {
+    trainerbattle_single(TRAINER_KATELYN_2, "Hey are you going to VIOLET SCHOOL?", "Oh wow!")
+    msgbox("Oh my! You really are tough!\nYou learn all of that in school?", MSGBOX_NPC)
+    end
+}
+
+script Route3031_Text_Camper {
+    trainerbattle_single(TRAINER_KATELYN_3, "I'm trying to camp here. But you\ndisturb me!", "No no! My campfire!")
+    msgbox("There are a few places where we can\ncamp in JOHTO.\lBut the middle of the road seems like a\lbad idea.", MSGBOX_NPC)
+    end
+}
+
+script Route3031_Text_BugCatcher {
+    trainerbattle_single(TRAINER_KATELYN_4, "There are only weaks BUG POKéMON\nhere...", "You destroyed my team!")
+    msgbox("Heard about the NATIONAL PARC? I think\nyou can catch a few strong BUG POKéMON!", MSGBOX_NPC)
+    end
+}
+
+script Route3031_Text_Youngster2 {
+    trainerbattle_single(TRAINER_BENJAMIN_2, "Wanna go see MR. POKéMON?", "Oh wow!\nLooks like I'm out of POKéMON!")
+    msgbox("MR. POKéMON is an old man living alone.\nI think he has that hobby of catching\lPOKéMON. Can't judge him, I'm the same.", MSGBOX_NPC)
+    end
+}

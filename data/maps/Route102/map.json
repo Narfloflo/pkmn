@@ -143,16 +143,16 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
-      "x": 5,
-      "y": 31,
+      "graphics_id": "OBJ_EVENT_GFX_AROMA",
+      "x": 6,
+      "y": 27,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "NULL",
+      "script": "Route102_Text_Aroma",
       "flag": "0"
     },
     {
@@ -165,11 +165,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route102_Text_Baldman",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FARMER",
+      "graphics_id": "OBJ_EVENT_GFX_RANCHER",
       "x": 40,
       "y": 25,
       "elevation": 0,
@@ -178,11 +178,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route102_Text_Farmer2",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FARMER",
+      "graphics_id": "OBJ_EVENT_GFX_RANCHER",
       "x": 66,
       "y": 8,
       "elevation": 0,
@@ -191,18 +191,24 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route102_Text_Farmer",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TORCHIC",
+      "x": 43,
+      "y": 37,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route102_Text_Torchic",
       "flag": "0"
     }
   ],
   "warp_events": [
-    {
-      "x": 62,
-      "y": 5,
-      "elevation": 0,
-      "dest_map": "MAP_LABS",
-      "dest_warp_id": "0"
-    },
     {
       "x": 12,
       "y": 17,
@@ -221,15 +227,15 @@
       "x": 56,
       "y": 32,
       "elevation": 0,
-      "dest_map": "MAP_LUXURIOUS_MANSION",
+      "dest_map": "MAP_ROUTE102INDOOR",
       "dest_warp_id": "0"
     },
     {
       "x": 33,
       "y": 26,
       "elevation": 0,
-      "dest_map": "MAP_HOUSE",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_ROUTE102INDOOR",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
@@ -265,7 +271,7 @@
       "y": 34,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Route102_Text_MineSign"
     },
     {
       "type": "sign",
@@ -273,15 +279,7 @@
       "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 24,
-      "y": 5,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Route102_Text_MineSign"
     },
     {
       "type": "secret_base",
@@ -324,7 +322,7 @@
     {
       "type": "sign",
       "x": 62,
-      "y": 13,
+      "y": 15,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Verdanturf_Hospital_Door"
@@ -344,6 +342,20 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "secret_base",
+      "x": 6,
+      "y": 30,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_TREE4_1"
+    },
+    {
+      "type": "secret_base",
+      "x": 5,
+      "y": 30,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_TREE2_1"
     }
   ]
 }

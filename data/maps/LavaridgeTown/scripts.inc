@@ -5,6 +5,7 @@ LavaridgeTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LavaridgeTown_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LavaridgeTown_OnFrame
 	.byte 0
+	
 
 LavaridgeTown_OnTransition:
 	setflag FLAG_VISITED_LAVARIDGE_TOWN
@@ -14,6 +15,8 @@ LavaridgeTown_OnTransition:
 	call Common_EventScript_SetupRivalOnBikeGfxId
 	call_if_eq VAR_LAVARIDGE_TOWN_STATE, 1, LavaridgeTown_EventScript_CheckSetRivalPos
 	call_if_eq VAR_LAVARIDGE_TOWN_STATE, 1, LavaridgeTown_EventScript_HideMapNamePopup
+	clearflag FLAG_FORCE_MIRAGE_TOWER_VISIBLE
+	setvar VAR_JAGGED_PASS_ASH_WEATHER, 0
 	end
 
 LavaridgeTown_EventScript_ClearLavaridgeWhiteOut::
@@ -407,3 +410,113 @@ LavaridgeTown_Text_HerbShopSign:
 	.string "POKéMON HERB SHOP\n"
 	.string "“Bitter taste--better cure!”$"
 
+LavaridgeTown_Text_Beauty::
+	lock
+	faceplayer
+	msgbox LavaridgeTown_Text_Beauty_Text_0
+	release
+	end
+
+
+LavaridgeTown_Text_SchoolGirl::
+	lock
+	faceplayer
+	msgbox LavaridgeTown_Text_SchoolGirl_Text_0
+	release
+	end
+
+
+LavaridgeTown_Text_SchoolBoy::
+	lock
+	faceplayer
+	msgbox LavaridgeTown_Text_SchoolBoy_Text_0
+	release
+	end
+
+
+LavaridgeTown_Text_WarriorF::
+	lock
+	faceplayer
+	msgbox LavaridgeTown_Text_WarriorF_Text_0
+	release
+	end
+
+
+LavaridgeTown_Text_Abra::
+	lock
+	faceplayer
+	playmoncry SPECIES_ABRA, CRY_MODE_NORMAL
+	msgbox LavaridgeTown_Text_Abra_Text_0
+	release
+	end
+
+
+LavaridgeTown_Text_AbraOwner::
+	lock
+	faceplayer
+	release
+	msgbox LavaridgeTown_Text_AbraOwner_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq LavaridgeTown_Text_AbraOwner_2
+	msgbox LavaridgeTown_Text_AbraOwner_Text_2, MSGBOX_NPC
+LavaridgeTown_Text_AbraOwner_1:
+	release
+	end
+
+LavaridgeTown_Text_AbraOwner_2:
+	msgbox LavaridgeTown_Text_AbraOwner_Text_1, MSGBOX_AUTOCLOSE
+	warpteleport MAP_ROUTE112, 20, 40
+	goto LavaridgeTown_Text_AbraOwner_1
+
+
+LavaridgeTown_Text_RestoSign::
+	msgbox LavaridgeTown_Text_RestoSign_Text_0, MSGBOX_SIGN
+	end
+
+
+LavaridgeTown_Text_Spoink::
+	playmoncry SPECIES_SPOINK, CRY_MODE_NORMAL
+	msgbox LavaridgeTown_Text_Spoink_Text_0, MSGBOX_NPC
+	end
+
+
+LavaridgeTown_Text_Beauty_Text_0:
+	.string "Best experience ever. I think I'll rest a\n"
+	.string "few minutes...\p"
+	.string "ZZzzzzzzzzz....$"
+
+LavaridgeTown_Text_SchoolGirl_Text_0:
+	.string "We have a lot of field work to do at\n"
+	.string "SCHOOL. We have to go to the CAVE to\l"
+	.string "study POKéMON. But they are wild and\l"
+	.string "dangerous !$"
+
+LavaridgeTown_Text_SchoolBoy_Text_0:
+	.string "This CAVE is a place where we are\n"
+	.string "TRAINING against FIRE TYPE POKéMON.\l"
+	.string "But we lack WATER POKéMON, so most of\l"
+	.string "the time we get defeated...$"
+
+LavaridgeTown_Text_WarriorF_Text_0:
+	.string "Here is LAVARIDGE TOWN SCHOOL. It's not\n"
+	.string "as famous as the one in RUSTBORO CITY,\l"
+	.string "but we are still pretty popular in\l"
+	.string "HOENN!$"
+
+LavaridgeTown_Text_Abra_Text_0:
+	.string "Braaa!$"
+
+LavaridgeTown_Text_AbraOwner_Text_0:
+	.string "Hello dear kid.\nI'm the LAVARIDGE TELEPORTER GUY.\lAs you can see this town is secluded,\land people are using my ABRA to get out\lof here quickly.\lDo you want to use my services?$"
+
+LavaridgeTown_Text_AbraOwner_Text_1:
+	.string "Alright, it will be quick.\nYou'll get telepoted to ROUTE 112.\lSee you!$"
+
+LavaridgeTown_Text_AbraOwner_Text_2:
+	.string "See you around!$"
+
+LavaridgeTown_Text_RestoSign_Text_0:
+	.string "LAVARIDGE SALOON\n“Come have a good cold one!”$"
+
+LavaridgeTown_Text_Spoink_Text_0:
+	.string "Grui Gruik?$"

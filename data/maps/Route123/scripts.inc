@@ -1,11 +1,3 @@
-Route123_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Route123_OnTransition
-	.byte 0
-
-Route123_OnTransition:
-	special SetRoute123Weather
-	end
-
 Route123_EventScript_GigaDrainGirl::
 	lock
 	faceplayer
@@ -196,3 +188,104 @@ Route123_Text_RouteSignMtPyre:
 Route123_Text_BerryMastersHouse:
 	.string "BERRY MASTER'S HOUSE$"
 
+Route123_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route123_MapScripts_MAP_SCRIPT_ON_TRANSITION
+	.byte 0
+
+Route123_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+	special SetRoute123Weather
+	gettime
+	compare VAR_0x8003, TIME_DAY
+	goto_if_eq Route123_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
+	return
+
+Route123_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
+	setflag FLAG_TEMP_A
+	setflag FLAG_TEMP_B
+	call_if_set FLAG_TEMP_A, Route123_Event_DusclopsHidden
+	call_if_set FLAG_TEMP_B, Route123_Event_DusclopsHidden
+	return
+
+
+Route123_Event_DusclopsHidden::
+	removeobject 46
+	removeobject 45
+	end
+
+
+Route123_Text_Dusclops::
+	lock
+	faceplayer
+	playmoncry SPECIES_DUSCLOPS, CRY_MODE_ENCOUNTER
+	msgbox Route123_Text_Dusclops_Text_0
+	waitmoncry
+	setwildbattle SPECIES_DUSCLOPS, 55
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_eq Route123_Text_Dusclops_2
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq Route123_Text_Dusclops_3
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq Route123_Text_Dusclops_4
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq Route123_Text_Dusclops_5
+Route123_Text_Dusclops_1:
+	return
+
+Route123_Text_Dusclops_2:
+	removeobject 45
+	goto Route123_Text_Dusclops_1
+
+Route123_Text_Dusclops_3:
+	removeobject 45
+	goto Route123_Text_Dusclops_1
+
+Route123_Text_Dusclops_4:
+	removeobject 45
+	goto Route123_Text_Dusclops_1
+
+Route123_Text_Dusclops_5:
+	removeobject 45
+	goto Route123_Text_Dusclops_1
+
+
+Route123_Text_Dusclops2::
+	lock
+	faceplayer
+	playmoncry SPECIES_DUSCLOPS, CRY_MODE_ENCOUNTER
+	msgbox Route123_Text_Dusclops_Text_0
+	waitmoncry
+	setwildbattle SPECIES_DUSCLOPS, 55
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_eq Route123_Text_Dusclops2_2
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq Route123_Text_Dusclops2_3
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq Route123_Text_Dusclops2_4
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq Route123_Text_Dusclops2_5
+Route123_Text_Dusclops2_1:
+	return
+
+Route123_Text_Dusclops2_2:
+	removeobject 46
+	goto Route123_Text_Dusclops2_1
+
+Route123_Text_Dusclops2_3:
+	removeobject 46
+	goto Route123_Text_Dusclops2_1
+
+Route123_Text_Dusclops2_4:
+	removeobject 46
+	goto Route123_Text_Dusclops2_1
+
+Route123_Text_Dusclops2_5:
+	removeobject 46
+	goto Route123_Text_Dusclops2_1
+
+
+Route123_Text_Dusclops_Text_0:
+	.string "Looooops !$"

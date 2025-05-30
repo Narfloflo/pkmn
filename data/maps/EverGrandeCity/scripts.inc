@@ -35,3 +35,26 @@ EverGrandeCity_Text_CitySign:
 	.string "“The paradise of flowers, the sea,\n"
 	.string "and POKéMON.”$"
 
+EverGrandeCity_Text_PolicemanEnter::
+	lock
+	faceplayer
+	msgbox EverGrandeCity_Text_PolicemanEnter_Text_0
+	release
+	end
+
+
+EverGrandeCity_Text_PolicemanExit::
+	lock
+	faceplayer
+	msgbox EverGrandeCity_Text_PolicemanExit_Text_0
+	release
+	end
+
+
+EverGrandeCity_Text_PolicemanEnter_Text_0:
+	.string "Here is the entrance of the VICTORY\n"
+	.string "ROAD. Good luck !$"
+
+EverGrandeCity_Text_PolicemanExit_Text_0:
+	.string "Congratulations ! The POKéMON LEAGUE\n"
+	.string "is just a bit NORTH down this mountain.$"

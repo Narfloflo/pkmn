@@ -1,0 +1,91 @@
+mapscripts Route34_MapScripts {}
+
+script Route34_Text_Jeanlouis {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_ROSE_2)){
+        goto(Route34_Text_JeanlouisFight)
+    }else{
+        goto(Route34_Text_JeanlouisRematch)
+    }
+    release
+    end
+}
+
+script Route34_Text_JeanlouisFight {
+    msgbox(format("I'm patrolling around here. Criminality in JOHTO is low, what about a quick battle ?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        trainerbattle_single(TRAINER_ROSE_2, "You are defying the authorities ?", "I'll keep an eye on you punk !")
+    }else{
+        msgbox(format("Yes, you fear the authorities!"))
+    }
+    release
+    end
+}
+
+script Route34_Text_JeanlouisRematch {
+    msgbox(format("You are still around doing mischieves? Do you have some time for a BATTLE ?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+    cleartrainerflag(TRAINER_ROSE_2)
+    trainerbattle_single(TRAINER_ROSE_2, "I can't lose again !", "I'll keep an eye on you punk !")
+    }else{
+        msgbox(format("Yes, you fear the authorities !"))
+    }
+    release
+    end
+}
+
+script Route34_Text_Pokefan {
+    trainerbattle_double(TRAINER_ROBERT_2, "Hey!","Arg","Nope")
+    msgbox("Damn!", MSGBOX_NPC)
+    end
+}
+
+script Route34_Text_Youngster {
+    trainerbattle_single(TRAINER_ROBERT_3, "Hey!","Arg")
+    msgbox("Damn!", MSGBOX_NPC)
+    end
+}
+
+script Route34_Text_Picnicker {
+    trainerbattle_double(TRAINER_ROBERT_4, "Hey!","Arg","Nope")
+    msgbox("Damn!", MSGBOX_NPC)
+    end
+}
+
+script Route34_Text_Cooltrainer {
+    trainerbattle_single(TRAINER_LAO_2, "Hey!","Arg")
+    msgbox("Damn!", MSGBOX_NPC)
+    end
+}
+
+script Route34_Text_LittleKid {
+    msgbox("I'm looking for an ABRA.\nBut everytime I get close to it, it\luses TELEPORT!", MSGBOX_NPC)
+    end
+}
+
+script Route34_Text_LittleGirl {
+    lock
+    faceplayer
+    msgbox("Hey! Looks like you beat all my friend\non ROUTE 34?\lYou want me to call them to have a\lrematch?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1){
+        playse(SE_POKENAV_CALL)
+        waitse
+        cleartrainerflag(TRAINER_ROBERT_2)
+        cleartrainerflag(TRAINER_ROBERT_3)
+        cleartrainerflag(TRAINER_ROBERT_4)
+        cleartrainerflag(TRAINER_LAO_2)
+        playse(SE_POKENAV_HANG_UP)
+        waitse
+        msgbox("It's done!\nThey'll pretend they've never fought\lwith you. Teehee!\l{PLAYER}: Urgh!")
+    }else{
+        msgbox("No? Ok no worry.\nThey should train some more anyway and\llearn the basics of battle in school.")
+    }
+    release
+    end
+}
+
+script Route34_Text_Girl {
+    msgbox("You find our secret training place!\nYou are lucky I'm still not a TRAINER\lYET.\lYou'll see in a few years, you'll\lsee...", MSGBOX_NPC)
+    end
+}

@@ -1,0 +1,11 @@
+mapscripts Route104_Houses_MapScripts {}
+
+script Route104_Houses_Text_OldWoman {
+    msgbox("Hello, you wanna cross the\nPetalburgWoods?\lI think there are rare POKéMON inside.\lLike a TREECKO I think.\lMy memory is fading...", MSGBOX_NPC)
+    end
+}
+
+script Route104_Houses_Text_Pokemaniac {
+    msgbox("I wish I had a rare POKéMON...\n{PLAYER}: Why not crawling in the\lgrasses?", MSGBOX_NPC)
+    end
+}

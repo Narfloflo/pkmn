@@ -1,0 +1,33 @@
+mapscripts Route43_MapScripts {}
+
+script Route43_Text_RouteSign {
+    lock
+    faceplayer
+    msgbox(format("ROUTE 43\pLAKE OF RAGE - MAHOGANY TOWN"))
+    release
+    end
+}
+
+script Route43_Text_Camper{
+    trainerbattle_single(TRAINER_LYDIA_4,"Are you going to LAKE OF RAGE?", "Wow, what strength!" )
+    msgbox("I'm going to camp in LAKE of RAGE", MSGBOX_YESNO)
+    end
+}
+
+script Route43_Text_Picnicker{
+    trainerbattle_single(TRAINER_ISAAC_2,"Hey do you have a baby POKéMON?", "You just blast me!" )
+    msgbox("A baby POKéMON can somtimes inherit a\nmove from its father, even one that it\lwouldn't normally learn.", MSGBOX_YESNO)
+    end
+}
+
+script Route43_Text_Cooltrainer{
+    trainerbattle_single(TRAINER_ISAAC_3,"Do you use differents POKéMON TYPES?\nLet's see that!", "Well yep, indeed you are." )
+    msgbox("It's OK for people to like different\ntypes of POKéMON.\lPOKéMON isn't just about having the\lmost powerful one.", MSGBOX_YESNO)
+    end
+}
+
+script Route43_Text_Youngster{
+    trainerbattle_single(TRAINER_ISAAC_4,"Let's see if you have some rare\nPOKéMON!", "Rare and strong they are!" )
+    msgbox("What else do I like besides POKéMON?\nShorts I guess?", MSGBOX_YESNO)
+    end
+}

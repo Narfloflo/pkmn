@@ -3,9 +3,9 @@
   "name": "Route118_119Junction",
   "layout": "LAYOUT_ROUTE118_119JUNCTION",
   "music": "MUS_ROUTE119",
-  "region_map_section": "MAPSEC_ROUTE_7",
+  "region_map_section": "MAPSEC_FIVE_ISLE_MEADOW",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_OCEAN_ROUTE",
   "allow_cycling": true,
   "allow_escaping": false,
@@ -25,15 +25,47 @@
     }
   ],
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+      "x": 15,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route118_119Junction_Text_Fisherman",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GYARADOS_SURFING",
+      "x": 18,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route118_119Junction_Text_Gyarados",
+      "flag": "0"
+    }
   ],
   "warp_events": [
     {
-      "x": 15,
+      "x": 13,
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_SECRET_CITYTO_JUNCTION",
       "dest_warp_id": "3"
+    },
+    {
+      "x": 14,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_SECRET_CITYTO_JUNCTION",
+      "dest_warp_id": "4"
     }
   ],
   "coord_events": [

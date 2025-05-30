@@ -1,0 +1,88 @@
+mapscripts MtMoon_MapScripts {}
+
+script MtMoon_Text_Brock {
+   lock
+    faceplayer
+    if(!defeated(TRAINER_ROXANNE_4)){
+        msgbox(format("Hi, I'm looking for some FOSSILS. I heard we can find some here in MT. MOON. I've create a team to gather some. It's financed by CINNABAR LAB. Oh you are a TRAINER ? You want a quick battle ?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT)==1){
+            goto(MtMoon_Text_BrockFight)
+        }else{
+            msgbox(format("No problem. I have to search for FOSSILS anyway."))
+        }
+    }elif(defeated(TRAINER_ROXANNE_4)){
+        goto(MtMoon_Text_BrockRematch)
+    }
+    release
+    end
+}
+
+script MtMoon_Text_BrockFight {
+    trainerbattle_single(TRAINER_ROXANNE_4, "I'm always ready for that !", "You really are strong !")
+    release
+    end
+}
+
+script MtMoon_Text_BrockRematch {
+    msgbox(format("We didn't manage to find a lot of FOSSILS, but it's okay, we didn't had so much hope. Oh you want a rematch ?"),MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        cleartrainerflag(TRAINER_ROXANNE_4)
+        trainerbattle_single(TRAINER_ROXANNE_4, "I'm always ready for that !", "You really are strong !")
+    }else{
+        msgbox(format("No problem. I have to search for FOSSILS anyway."))
+    }
+    release
+    end
+} 
+
+script MtMoon_Text_DiggingManiac {
+    lock
+    faceplayer
+    msgbox(format("With BROCK we are looking for FOSSILS. I even check for some MOON STONES."))
+    release
+    end
+}
+
+script MtMoon_Text_Lass {
+    trainerbattle_single(TRAINER_JOHN_AND_JAY_2, "Help ! Too much ZUBATS !!", "They were in my hair !")
+    msgbox(format("I really hate these kids of vampire. Where are we ? Twilight ? Gosh !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script MtMoon_Text_Youngster {
+    trainerbattle_single(TRAINER_JOHN_AND_JAY_3, "I'm searching for ancient POKéMON FOSSILS !\nLet's battle first !", "My fossil hunt took an unexpected turn...")
+    msgbox(format("My brother told me that in CINNABAR we can revive FOSSILS. So I'm looking for some !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script MtMoon_Text_Nerd {
+    trainerbattle_single(TRAINER_JOHN_AND_JAY_4, "I love rare and odd Pokémon!\nLet's see if yours are interesting!", "That's quite an oddity !")
+    msgbox(format("I need to find stronger POKéMON !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script MtMoon_Text_BugCatcher {
+    trainerbattle_single(TRAINER_JEFFREY_2, "I'm strong, I'll show you !", "Mommy !!!")
+    msgbox(format("I not a bully, I swear !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script MtMoon_Text_Lass2 {
+    trainerbattle_single(TRAINER_JEFFREY_3, "I'm lost here can you help me ?", "What ?!")
+    msgbox(format("How do I get out of here ? Now I don't even have a POKéMON to help me reach the exit !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script MtMoon_Text_Hiker {
+    trainerbattle_single(TRAINER_JEFFREY_4, "Hold on! My GEODUDE can withstand any attack!", "My GEODUDE couldn't hold on...")
+    msgbox(format("I'll keep training my rock-hard team until we become unstoppable!"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script MtMoon_Text_FossilGuy {
+    lock
+    faceplayer
+    msgbox(format("Huh, hello. A prick stole my FOSSIL a few time ago. Then another girl stole the second one. I have nothing left. Leave me alone in my misery..."))
+    release
+    end
+}

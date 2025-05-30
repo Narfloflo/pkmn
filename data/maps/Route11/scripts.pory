@@ -1,0 +1,63 @@
+mapscripts Route11_MapScripts {}
+
+script Route11_Text_Youngster {
+    trainerbattle_single(TRAINER_CALVIN_2, "Wanna see a wonderful team ?", "Yours was much better...")
+    msgbox(format("There are some strange POKéMON around here. I mean, sometimes I feel drowsy and when I wake up, it's like my dreams were eaten !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route11_Text_Camper {
+    trainerbattle_single(TRAINER_CALVIN_3, "I've got the best camping spot !", "You spoiled it all !")
+    msgbox(format("There was a big POKéMON block the path. It was sleeping so deeply. Yeah like me after a big lunch !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route11_Text_Picnicker {
+    trainerbattle_single(TRAINER_CALVIN_4, "I've got a big sandwich.\nDo you want it ?", "Here take it.")
+    msgbox(format("Me and my POKéMON (you just totally crushed) are wandering to find the best spot to eat sandwiches. You should do it too !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route11_Text_Gambler {
+    trainerbattle_single(TRAINER_ELLIOT_2, "SPADES or DIAMONDS ?", "You just beat my ACES")
+    msgbox(format("Don't tell the cops I gave you money because you beat me. What it's not gambling it's the rule ? I call that racket then !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route11_Text_Policeman {
+    lock
+    faceplayer
+    msgbox(format("Gambling outside of the GAME CORNER is forbidden in KANTO. We arrest every shady persons that are gambling illegally. So be careful kid, we have an eye on you !"))
+    release
+    end
+}
+
+script Route11_Text_Policeman2 {
+    lock
+    msgbox(format("What about this card game ? You are making money out of it right ?"))
+    release
+    end
+}
+
+script Route11_Text_Gambler2 {
+    lock
+    msgbox(format("... But it's a genuine TRADING CARD GAME ! It's just about POKéMON !..."))
+    release
+    end
+}
+
+script Route11_Text_Worker {
+    lock
+    faceplayer
+    msgbox(format("I'm looking for some MAGNEMITE or MAGNETON to help me in my everydays jobs !"))
+    release
+    end
+}
+
+script Route11_Text_Worker2 {
+    lock
+    faceplayer
+    msgbox(format("No I'm not a TRAINER. I've been beating a few months ago by some young lads, and now I'm in a total depression..."))
+    release
+    end
+}

@@ -1593,3 +1593,59 @@ PetalburgCity_Gym_Text_NormanRematchNeedTwoMons:
 	.string "Sorry, but you'll have to come back\n"
 	.string "with at least two POKéMON.$"
 
+Petalburg_Gym_Text_RematchGuy::
+	lock
+	faceplayer
+	msgbox Petalburg_Gym_Text_RematchGuy_Text_0
+	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, Petalburg_Gym_Text_RematchGuy_2
+	msgbox Petalburg_Gym_Text_RematchGuy_Text_1
+Petalburg_Gym_Text_RematchGuy_1:
+	release
+	end
+
+Petalburg_Gym_Text_RematchGuy_2:
+	goto Petalburg_Gym_Text_RematchGuyYesNo
+	goto Petalburg_Gym_Text_RematchGuy_1
+
+
+Petalburg_Gym_Text_RematchGuyYesNo::
+	msgbox Petalburg_Gym_Text_RematchGuyYesNo_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq Petalburg_Gym_Text_RematchGuyYesNo_1
+	msgbox Petalburg_Gym_Text_RematchGuyYesNo_Text_1
+	release
+	end
+
+Petalburg_Gym_Text_RematchGuyYesNo_1:
+	cleartrainerflag TRAINER_MARY
+	cleartrainerflag TRAINER_RANDALL
+	cleartrainerflag TRAINER_GEORGE
+	cleartrainerflag TRAINER_ALEXIA
+	cleartrainerflag TRAINER_PARKER
+	cleartrainerflag TRAINER_BERKE
+	cleartrainerflag TRAINER_JODY
+	fadescreen FADE_TO_BLACK
+	playse SE_SUCCESS
+	delay 60
+	warp MAP_PETALBURG_CITY_GYM, 4, 111
+	fadescreen FADE_FROM_BLACK
+	release
+	end
+
+
+Petalburg_Gym_Text_RematchGuy_Text_0:
+	.string "Hello, I'm the Rematch Man, I can ask all\n"
+	.string "the TRAINERS of the GYM to rematch\l"
+	.string "you if you want.$"
+
+Petalburg_Gym_Text_RematchGuy_Text_1:
+	.string "Hummmm. Get the BADGE first and come to\n"
+	.string "see me after will you ?$"
+
+Petalburg_Gym_Text_RematchGuyYesNo_Text_0:
+	.string "So {PLAYER}, should I ask the\n"
+	.string "TRAINERS to have a rematch with you ?$"
+
+Petalburg_Gym_Text_RematchGuyYesNo_Text_1:
+	.string "Well I'm not moving if you change your\n"
+	.string "mind !$"

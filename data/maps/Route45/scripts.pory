@@ -1,0 +1,17 @@
+mapscripts Route45_MapScripts {}
+
+script Route45_Text_Sign {
+    lock
+    faceplayer
+    msgbox(format("ROUTE 46\nMOUNTAIN RD. AHEAD"))
+    release
+    end
+}
+
+script Route45_Text_Hiker {
+    lock
+    faceplayer
+    msgbox("You can't climb ledges. But you can\njump down them to take a shortcut.\lAlthought there are a few slops\laround...\lI wonder if we can get over them...")
+    release
+    end
+}

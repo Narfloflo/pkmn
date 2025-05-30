@@ -9,6 +9,8 @@
 #include "sound.h"
 #include "constants/map_types.h"
 #include "constants/songs.h"
+#include "constants/region_map_sections.h"
+
 
 // this file's functions
 static void MovePlayerOnMachBike(u8, u16, u16);
@@ -981,9 +983,23 @@ void GetOnOffBike(u8 transitionFlags)
     }
     else
     {
+        if (gMapHeader.region == REGION_KANTO)
+        {
+        SetPlayerAvatarTransitionFlags(transitionFlags);
+        Overworld_SetSavedMusic(MUS_RG_CYCLING);
+        Overworld_ChangeMusicTo(MUS_RG_CYCLING);
+        }
+        else if (gMapHeader.region == REGION_JOHTO)
+        {
+        SetPlayerAvatarTransitionFlags(transitionFlags);
+        Overworld_SetSavedMusic(MUS_GSC_CYCLING);
+        Overworld_ChangeMusicTo(MUS_GSC_CYCLING);
+        }else
+        {
         SetPlayerAvatarTransitionFlags(transitionFlags);
         Overworld_SetSavedMusic(MUS_CYCLING);
         Overworld_ChangeMusicTo(MUS_CYCLING);
+        }
     }
 }
 

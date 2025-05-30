@@ -1,0 +1,66 @@
+mapscripts RustboroCity_SchoolLobby_MapScripts {}
+
+script RustboroCitySchoolLobby_Text_Teacher {
+    msgbox("The stairs lead to the ADMINISTRATIVE\nfloor.\lIt is obviously forbidden for you and\levery students.", MSGBOX_NPC)
+    end
+}
+
+script RustboroCitySchoolLobby_Text_Lass {
+    msgbox("I can't wait to study every forms of\nPOKéMON there are.\lI heard that in some REGIONS a same\lspecies have a different form than our.", MSGBOX_NPC)
+    end
+}
+
+script RustboroCitySchoolLobby_Text_SchoolKidF {
+    msgbox("It's the BREEDING classroom. I heard\nthat a specialist of POKéMON EGGS\lshould come. What's his name again?\lELM I guess?\lI can't wait!", MSGBOX_NPC)
+    end
+}
+
+script RustboroCitySchoolLobby_Text_Youngster {
+    lock
+    msgbox(format("DRAGON TYPE is the best, except DRAGON and ICE MOVES, nothing can harm them!"))
+    release
+    end
+}
+
+script RustboroCitySchoolLobby_Text_LassJR {
+    lock
+    msgbox(format("Forget DRAGON TYPE. I'm pretty sure another TYPE that we don't even know can crush these beasts."))
+    release
+    end
+}
+
+script RustboroCitySchoolLobby_Trigger_SchoolKidM {
+    lock
+    applymovement(6, RustboroCitySchoolLobby_Move_SchoolKidM)
+    waitmovement(6)
+    msgbox(format("Wait! This classroom isn't open yet. We can't go inside for the moment."))
+    applymovement(OBJ_EVENT_ID_PLAYER, RustboroCitySchoolLobby_Move_Player)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    release
+    end
+}
+
+movement RustboroCitySchoolLobby_Move_Player {
+    walk_down
+    step_end
+}
+movement RustboroCitySchoolLobby_Move_SchoolKidM {
+    face_original_direction
+    jump_in_place_left
+    step_end
+}
+
+script RustboroCitySchoolLobby_Text_SchoolKidM {
+    lock
+    faceplayer
+    msgbox(format("This classroom isn't open yet. A specialist of POKéBALL crafting should intervene. But when..."))
+    release
+    end
+}
+
+script RustboroCitySchoolLobby_Text_ClassSign {
+    lock
+    msgbox(format("GENERAL TEACHINGS CLASSROOM"))
+    release
+    end
+}

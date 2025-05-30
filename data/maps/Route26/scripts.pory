@@ -1,0 +1,42 @@
+mapscripts Route26_MapScripts {}
+
+script Route26_Text_CooltrainerM {
+    trainerbattle_single(TRAINER_JESSICA_4, "Hey are you going to the POKéMON LEAGUE ?", "Wow ! That was powerful !")
+    msgbox(format("Throught the gate north we can go to the POKéMON LEAGUE. YEAH the LEAGUE of KANTO, not HOENN obviously."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route26_Text_CooltrainerF {
+    trainerbattle_single(TRAINER_WINSTON_2, "I don't get it, we are in KANTO right ?", "I'm so lost here.")
+    msgbox(format("I crossed a few water in NEW BARK TOWN and then we are in KANTO. But when we want to take a ship to move in KANTO, it's taking so much time. I don't get it."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route26_Text_Hiker {
+    trainerbattle_single(TRAINER_STEVE_4, "I'm not a rookie trainer !", "I feel like a rookie...")
+    msgbox(format("The HIKER CLUB sent me to MT. SILVER. It's a place really dangerous and not registred on any maps !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route26_Text_Man {
+    lock
+    faceplayer
+    msgbox(format("Huh oh ! You want to say a goodbye to a kind guy ? Well hello !"))
+    release
+    end
+}
+
+script Route26_Text_Fisherman {
+    call_if_unset(FLAG_TEMP_1, Route26_Text_FishermanFight)
+    if(flag(FLAG_TEMP_1)== TRUE){
+    msgbox(format("I know I know..."),MSGBOX_AUTOCLOSE)
+    end
+    }
+}
+
+script Route26_Text_FishermanFight {
+    trainerbattle_single(TRAINER_DYLAN_2, "Wanna see my fresh fishes ?", "Plouff !")
+    setflag(FLAG_TEMP_1)
+    cleartrainerflag(TRAINER_DYLAN_2)
+    end
+}

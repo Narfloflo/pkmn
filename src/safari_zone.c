@@ -24,9 +24,13 @@ struct PokeblockFeeder
 #define NUM_POKEBLOCK_FEEDERS 10
 
 extern const u8 SafariZone_EventScript_TimesUp[];
+extern const u8 SafariZone_EventScript_TimesUpKanto[];
 extern const u8 SafariZone_EventScript_RetirePrompt[];
+extern const u8 SafariZone_EventScript_RetirePromptKanto[];
 extern const u8 SafariZone_EventScript_OutOfBallsMidBattle[];
+extern const u8 SafariZone_EventScript_OutOfBallsMidBattleKanto[];
 extern const u8 SafariZone_EventScript_OutOfBalls[];
+extern const u8 SafariZone_EventScript_OutOfBallsKanto[];
 
 EWRAM_DATA u8 gNumSafariBalls = 0;
 EWRAM_DATA static u16 sSafariZoneStepCounter = 0;
@@ -83,15 +87,26 @@ bool8 SafariZoneTakeStep(void)
     sSafariZoneStepCounter--;
     if (sSafariZoneStepCounter == 0)
     {
-        ScriptContext_SetupScript(SafariZone_EventScript_TimesUp);
-        return TRUE;
+        if (gMapHeader.region == REGION_KANTO){
+            ScriptContext_SetupScript(SafariZone_EventScript_TimesUpKanto);
+            return TRUE;
+        }else{
+            ScriptContext_SetupScript(SafariZone_EventScript_TimesUp);
+            return TRUE;  
+        }
+        
     }
     return FALSE;
 }
 
 void SafariZoneRetirePrompt(void)
 {
-    ScriptContext_SetupScript(SafariZone_EventScript_RetirePrompt);
+    if (gMapHeader.region == REGION_KANTO){
+        ScriptContext_SetupScript(SafariZone_EventScript_RetirePromptKanto);
+    }else{
+       ScriptContext_SetupScript(SafariZone_EventScript_RetirePrompt); 
+    }
+    
 }
 
 void CB2_EndSafariBattle(void)
@@ -109,6 +124,19 @@ void CB2_EndSafariBattle(void)
         WarpIntoMap();
         gFieldCallback = FieldCB_ReturnToFieldNoScriptCheckMusic;
         SetMainCallback2(CB2_LoadMap);
+    }
+    else if (gBattleOutcome == B_OUTCOME_NO_SAFARI_BALLS || gMapHeader.region == REGION_KANTO)
+    {
+        RunScriptImmediately(SafariZone_EventScript_OutOfBallsMidBattleKanto);
+        WarpIntoMap();
+        gFieldCallback = FieldCB_ReturnToFieldNoScriptCheckMusic;
+        SetMainCallback2(CB2_LoadMap);
+    }
+    else if (gBattleOutcome == B_OUTCOME_CAUGHT || gMapHeader.region == REGION_KANTO)
+    {
+        ScriptContext_SetupScript(SafariZone_EventScript_OutOfBallsKanto);
+        ScriptContext_Stop();
+        SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
     }
     else if (gBattleOutcome == B_OUTCOME_CAUGHT)
     {

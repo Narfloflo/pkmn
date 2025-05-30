@@ -1,0 +1,53 @@
+mapscripts PalletTown_MapScripts {}
+
+script PalletTown_Text_Fatman {
+    lock
+    faceplayer
+    msgbox(format("Look ! They've built a POKéMART here in PALLET TOWN. But there is no POKéCENTER... So what are we supposed to do if we want to rest ? Sleep at RED's MOM ?"))
+    release
+    end
+}
+
+script PalletTown_Text_CitySign {
+    lock
+    msgbox(format("PALLET TOWN\nShades of your journey await !"))
+    release
+    end
+}
+
+script PalletTown_Text_RedSign {
+    lock
+    msgbox(format("RED's House"))
+    release
+    end
+}
+
+script PalletTown_Text_BlueSign {
+    lock
+    msgbox(format("Prof OAK's House"))
+    release
+    end
+}
+
+script PalletTown_Text_GreenSign {
+    lock
+    msgbox(format("LEAF's House"))
+    release
+    end
+}
+
+script PalletTown_Text_Woman {
+    lock
+    faceplayer
+    msgbox(format("I raise POKéMON too, but they serve as my private guard !"))
+    release
+    end
+}
+
+script PalletTown_Text_OldWoman {
+    lock
+    faceplayer
+    msgbox(format("Since RED, BLUE and GREEN became so famous, PALLET TOWN is booming in population ! We have three more houses ! That massive even for us !"))
+    release
+    end
+}

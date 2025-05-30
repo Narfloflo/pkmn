@@ -66,6 +66,9 @@
 #include "constants/songs.h"
 #include "constants/trainer_hill.h"
 #include "constants/weather.h"
+#include "item.h"
+#include "constants/items.h"
+#include "dns.h"
 
 struct CableClubPlayer
 {
@@ -173,6 +176,7 @@ static void TransitionMapMusic(void);
 static u8 GetAdjustedInitialTransitionFlags(struct InitialPlayerAvatarState *, u16, u8);
 static u8 GetAdjustedInitialDirection(struct InitialPlayerAvatarState *, u8, u16, u8);
 static u16 GetCenterScreenMetatileBehavior(void);
+static bool8 CanLearnFlashInParty(void);
 
 static const u8 sMapsecToRegion[];
 
@@ -971,6 +975,19 @@ bool32 Overworld_IsBikingAllowed(void)
         return TRUE;
 }
 
+static bool8 CanLearnFlashInParty(void)
+{
+    u8 i;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (!GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL))
+            break;
+        if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) && CanMonLearnTMHM(&gPlayerParty[i], ITEM_HM05 - ITEM_TM01))
+            return TRUE;
+    }
+    return FALSE;
+}
+
 // Flash level of 0 is fully bright
 // Flash level of 1 is the largest flash radius
 // Flash level of 7 is the smallest flash radius
@@ -1156,6 +1173,10 @@ void Overworld_PlaySpecialMapMusic(void)
             music = gSaveBlock1Ptr->savedMusic;
         else if (GetCurrentMapType() == MAP_TYPE_UNDERWATER)
             music = MUS_UNDERWATER;
+        else if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && gMapHeader.region == REGION_KANTO)
+        music = MUS_RG_SURF;
+         else if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && (gMapHeader.region == REGION_JOHTO || gMapHeader.region == REGION_SEVII ))
+        music = MUS_GSC_SURF;
         else if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
             music = MUS_SURF;
     }
@@ -1186,6 +1207,11 @@ static void TransitionMapMusic(void)
                 return;
             if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
                 newMusic = MUS_SURF;
+            if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && gMapHeader.region == REGION_KANTO)
+                newMusic = MUS_RG_SURF;
+            if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && (gMapHeader.region == REGION_JOHTO || gMapHeader.region == REGION_SEVII))
+                newMusic = MUS_GSC_SURF;
+                
         }
         if (newMusic != currentMusic)
         {
@@ -1458,6 +1484,7 @@ void CB1_Overworld(void)
 
 static void OverworldBasic(void)
 {
+    DnsApplyFilters();
     ScriptContext_RunScript();
     RunTasks();
     AnimateSprites();
@@ -3220,11 +3247,7 @@ static void SpriteCB_LinkPlayer(struct Sprite *sprite)
     }
 }
 
-enum {
-    REGION_HOENN,
-    REGION_KANTO,
-    REGION_SEVII
-};
+
 
 static const u8 sMapsecToRegion[] = {
     [MAPSEC_LITTLEROOT_TOWN]            = REGION_HOENN,
@@ -3330,12 +3353,14 @@ static const u8 sMapsecToRegion[] = {
     [MAPSEC_ROUTE_2]                    = REGION_KANTO,
     [MAPSEC_ROUTE_3]                    = REGION_KANTO,
     [MAPSEC_ROUTE_4]                    = REGION_KANTO,
+    [MAPSEC_ROUTE_4_POKECENTER]         = REGION_KANTO,
     [MAPSEC_ROUTE_5]                    = REGION_KANTO,
     [MAPSEC_ROUTE_6]                    = REGION_KANTO,
     [MAPSEC_ROUTE_7]                    = REGION_KANTO,
     [MAPSEC_ROUTE_8]                    = REGION_KANTO,
     [MAPSEC_ROUTE_9]                    = REGION_KANTO,
     [MAPSEC_ROUTE_10]                   = REGION_KANTO,
+    [MAPSEC_ROUTE_10_POKECENTER]        = REGION_KANTO,
     [MAPSEC_ROUTE_11]                   = REGION_KANTO,
     [MAPSEC_ROUTE_12]                   = REGION_KANTO,
     [MAPSEC_ROUTE_13]                   = REGION_KANTO,
@@ -3437,5 +3462,33 @@ static const u8 sMapsecToRegion[] = {
     [MAPSEC_DESERT_UNDERPASS]           = REGION_HOENN,
     [MAPSEC_ALTERING_CAVE]              = REGION_HOENN,
     [MAPSEC_NAVEL_ROCK]                 = REGION_SEVII,
-    [MAPSEC_TRAINER_HILL]               = REGION_HOENN
+    [MAPSEC_TRAINER_HILL]               = REGION_HOENN,
+    [MAPSEC_NEWBARK]                    = REGION_JOHTO,
+    [MAPSEC_CHERRYGROVE]                = REGION_JOHTO,
+    [MAPSEC_VIOLET_CITY]                = REGION_JOHTO,
+    [MAPSEC_AZALEA_TOWN]                = REGION_JOHTO,
+    [MAPSEC_GOLDENROD_CITY]             = REGION_JOHTO,
+    [MAPSEC_ECRUTEAK_CITY]              = REGION_JOHTO,
+    [MAPSEC_OLIVINE_CITY]               = REGION_JOHTO,
+    [MAPSEC_CIANWOOD_CITY]              = REGION_JOHTO,
+    [MAPSEC_MAHOGANY_TOWN]              = REGION_JOHTO,
+    [MAPSEC_BLACKTHORNE_CITY]           = REGION_JOHTO,
+    [MAPSEC_ROUTE_29]                   = REGION_JOHTO,
+    [MAPSEC_ROUTE_3031]                 = REGION_JOHTO,
+    [MAPSEC_ROUTE_32]                   = REGION_JOHTO,
+    [MAPSEC_ROUTE_33]                   = REGION_JOHTO,
+    [MAPSEC_ROUTE_34]                   = REGION_JOHTO,
+    [MAPSEC_ROUTE_35]                   = REGION_JOHTO,
+    [MAPSEC_ROUTE_36]                   = REGION_JOHTO,
+    [MAPSEC_ROUTE_37]                   = REGION_JOHTO,
+    [MAPSEC_ROUTE_38]                   = REGION_JOHTO,
+    [MAPSEC_ROUTE_39]                   = REGION_JOHTO,
+    [MAPSEC_ROUTE_40]                   = REGION_JOHTO,
+    [MAPSEC_ROUTE_41]                   = REGION_JOHTO,
+    [MAPSEC_ROUTE_42]                   = REGION_JOHTO,
+    [MAPSEC_ROUTE_43]                   = REGION_JOHTO,
+    [MAPSEC_ROUTE_44]                   = REGION_JOHTO,
+    [MAPSEC_ROUTE_45]                   = REGION_JOHTO,
+    [MAPSEC_ROUTE_46]                   = REGION_JOHTO,
+    [MAPSEC_LAKE_OF_RAGE]               = REGION_JOHTO,
 };

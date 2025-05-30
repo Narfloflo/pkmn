@@ -1,0 +1,41 @@
+mapscripts Route29_MapScripts {}
+
+script Route29_Text_TeachyTVGuy {
+    lock
+    faceplayer
+    msgbox(format("Hey young TRAINER ! You don't know me ? No ? But I'm the guy on the TV ! I'm teaching every basics to new TRAINERS. What you are already a CHAMPION ?! Well sorry to disturb you then..."))
+    release
+    end
+}
+
+script Route29_Text_Youngster {
+    lock
+    faceplayer
+    msgbox(format("Yo. How are your POKéMON ? If they're weak and not ready for battle, keep out of the grass."))
+    release
+    end
+}
+
+script Route29_Text_BugCatcher {
+    lock
+    faceplayer
+    msgbox(format("I'm waiting for POKéMON that appear only at night."))
+    release
+    end
+}
+
+script Route29_Text_Lass {
+    lock
+    faceplayer
+    msgbox(format("See those ledges ? It's scary to jump off them. But you can go to NEW BARK without walking through the grass."))
+    release
+    end
+}
+
+script Route29_Text_SignCherrygrove {
+    lock
+    faceplayer
+    msgbox(format("ROUTE 29\p CHERRYGROVE CITY - NEW BARK TOWN"))
+    release
+    end
+}

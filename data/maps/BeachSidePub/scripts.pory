@@ -1,0 +1,37 @@
+mapscripts BeachSidePub_MapScripts {}
+
+script BeachSidePub_Text_Vendor{
+    lock
+    faceplayer
+	message(format("Welcome!\nI only sell ICE CREAM. The best of\lHOENN!"))
+	waitmessage
+	pokemart(BeachSidePub_RestoPubItems)
+	msgbox("See you again!")
+	release
+	end
+}
+
+mart BeachSidePub_RestoPubItems {
+    ITEM_STBRICECREAM
+	ITEM_BLKICECREAM
+	ITEM_WHTICECREAM
+	ITEM_NONE
+}
+
+script BeachSidePub_Text_Swimmer {
+	msgbox("I'm taking a break to eat an ICE CREAM!", MSGBOX_NPC)
+	end
+}
+
+script BeachSidePub_Text_Sailor {
+	lock
+	msgbox("Budweiser... No, too lame..\nCider... Pffft I'm not from GALAR!\l...........")
+	faceplayer
+	msgbox("...........\lWould you mind?\lI'm chosing my drink.")
+	end
+}
+
+script BeachSidePub_Text_Tuber {
+	msgbox("You know where the best ICE CREAM are\nmade?\lYeah me neither...\lThat's a big debate here!", MSGBOX_NPC)
+	end
+}

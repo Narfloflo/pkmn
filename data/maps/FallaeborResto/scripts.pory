@@ -1,0 +1,25 @@
+mapscripts FallaeborResto_MapScripts {}
+
+script FallarborResto_Text_Vendor{
+    lock
+    faceplayer
+	message(format("Welcome,\nWe don't have much but it's tasty!"))
+	waitmessage
+	pokemart(FallarborResto_RestoPubItems)
+	msgbox("Don't choke yourself while eating. We\nare not responsible of that.")
+	release
+}
+
+mart FallarborResto_RestoPubItems {
+    ITEM_SANDWICH
+	ITEM_LAVA_COOKIE
+	ITEM_SODA_POP
+	ITEM_LEMONADE
+	ITEM_MOOMOO_MILK
+	ITEM_FRESH_WATER
+    ITEM_NONE
+}
+script FallarborResto_Text_OldMan {
+	msgbox("I heard that there is also a restaurant\non ROUTE 115. I don't know why.\lI mean, there is everything we need\lhere.", MSGBOX_NPC)
+	end
+}

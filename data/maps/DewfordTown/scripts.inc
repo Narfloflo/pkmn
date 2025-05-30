@@ -948,6 +948,41 @@ Dewford_Text_TrainingGround::
 	end
 
 
+Dewford_Text_Battle::
+	lock
+	msgbox Dewford_Text_Battle_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, DewfordBattleRun
+	waitmovement OBJ_EVENT_ID_PLAYER
+	release
+	end
+
+
+DewfordBattleRun:
+	walk_fast_down
+	step_end
+
+Dewford_Event_SchoolClosed::
+	gettime
+	compare VAR_0x8003, TIME_NIGHT
+	goto_if_eq Dewford_Event_SchoolClosed_2
+	compare VAR_0x8003, TIME_MIDNIGHT
+	goto_if_eq Dewford_Event_SchoolClosed_2
+	release
+	end
+
+Dewford_Event_SchoolClosed_2:
+	lock
+	msgbox Dewford_Event_SchoolClosed_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, Dewford_Move_Stepback
+	waitmovement 0
+	release
+	end
+
+
+Dewford_Move_Stepback:
+	walk_right
+	step_end
+
 Dewford_Text_BeachVendor_Text_0:
 	.string "Hello there, need anything ?$"
 
@@ -1016,3 +1051,11 @@ Dewford_Text_Doll_Text_0:
 
 Dewford_Text_TrainingGround_Text_0:
 	.string "TRAINING GROUND at the left$"
+
+Dewford_Text_Battle_Text_0:
+	.string "HEY !\n"
+	.string "Get out of here ! We are in a middle of a\l"
+	.string "BATTLE !$"
+
+Dewford_Event_SchoolClosed_Text_0:
+	.string "{PLAYER}: The SCHOOL is closed during\nthe night...$"

@@ -3,7 +3,7 @@
   "name": "DewfordToSlateportCave2",
   "layout": "LAYOUT_DEWFORD_TO_SLATEPORT_CAVE2",
   "music": "MUS_MT_PYRE_EXTERIOR",
-  "region_map_section": "MAPSEC_ROUTE_4",
+  "region_map_section": "MAPSEC_KINDLE_ROAD",
   "requires_flash": true,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",

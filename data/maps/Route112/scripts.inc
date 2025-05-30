@@ -126,9 +126,9 @@ Route112_Text_CantLetAnyonePassUntilTheyreBack:
 	.string "we're not to let anyone pass, right.$"
 
 Route112_Text_NotEasyToGetBackToLavaridge:
-	.string "Eh, I'd like to get to MAUVILLE, but if\n"
-	.string "I went down these ledges, it'd be no\l"
-	.string "easy matter to get back to LAVARIDGE.$"
+	.string "I left LAVARIDGE throught this cave, but\n"
+	.string "if I want to come back I have to take\l"
+	.string "the CABLE CAR again!$"
 
 Route112_Text_MtChimneyCableCarSign:
 	.string "MT. CHIMNEY CABLE CAR\n"
@@ -143,3 +143,19 @@ Route112_Text_RouteSignLavaridge:
 	.string "ROUTE 112\n"
 	.string "{LEFT_ARROW} LAVARIDGE TOWN$"
 
+Route112_Text_SignPub::
+	msgbox Route112_Text_SignPub_Text_0, MSGBOX_NPC
+	end
+
+
+Route112_Text_Marill::
+	playmoncry SPECIES_MARILL, CRY_MODE_NORMAL
+	msgbox Route112_Text_Marill_Text_0, MSGBOX_NPC
+	end
+
+
+Route112_Text_SignPub_Text_0:
+	.string "The fiery PUB\n“We cook with natural heat!”$"
+
+Route112_Text_Marill_Text_0:
+	.string "Ruuu Ruuuh!$"

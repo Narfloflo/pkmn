@@ -1,29 +1,24 @@
 BeachSide2_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, BeachSide2_MapScripts_MAP_SCRIPT_ON_TRANSITION
 	.byte 0
 
-SailorToHoenn2::
-	lock
-	faceplayer
-	msgbox SailorToHoenn2_Text_0, MSGBOX_YESNO
-	compare VAR_RESULT, 0
-	goto_if_ne SailorToHoenn2_2
-	msgbox SailorToHoenn2_Text_2
-SailorToHoenn2_1:
-	release
-	end
-
-SailorToHoenn2_2:
-	msgbox SailorToHoenn2_Text_1
-	call WarpToHoenn2
-	goto SailorToHoenn2_1
-
-
-WarpToHoenn2::
-	fadescreen FADE_TO_BLACK
-	delay 5
-	warp MAP_BEACH_SIDE, 76, 43
-	fadescreen FADE_FROM_BLACK
+BeachSide2_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+	gettime
+	compare VAR_0x8003, TIME_NIGHT
+	goto_if_eq BeachSide2_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
+	compare VAR_0x8003, TIME_MIDNIGHT
+	goto_if_eq BeachSide2_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 	return
+
+BeachSide2_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
+	setflag FLAG_TEMP_1
+	call_if_set FLAG_TEMP_1, OlivineCity_Event_RemoveObject
+	return
+
+
+OlivineCity_Event_RemoveObject::
+	removeobject 11
+	end
 
 
 OlivineCity_Text_SignHarbour::
@@ -71,6 +66,22 @@ OlivineCity_Text_Artist::
 	end
 
 
+OlivineCity_Text_OldHouse::
+	lock
+	faceplayer
+	msgbox OlivineCity_Text_OldHouse_Text_0
+	release
+	end
+
+
+OlivineCity_Text_OldMan::
+	lock
+	faceplayer
+	msgbox OlivineCity_Text_OldMan_Text_0
+	release
+	end
+
+
 OlivineCity_Text_Maniac::
 	lock
 	faceplayer
@@ -90,17 +101,31 @@ OlivineCity_Text_LighthouseGuard::
 OlivineCity_Text_Woman::
 	lock
 	faceplayer
-	msgbox OlivineCity_Text_Woman_Text_0
+	checktrainerflag TRAINER_NORMAN_2
+	goto_if 1, OlivineCity_Text_Woman_2
+	msgbox OlivineCity_Text_Woman_Text_1
+OlivineCity_Text_Woman_1:
 	release
 	end
+
+OlivineCity_Text_Woman_2:
+	msgbox OlivineCity_Text_Woman_Text_0
+	goto OlivineCity_Text_Woman_1
 
 
 OlivineCity_Text_Girl::
 	lock
 	faceplayer
-	msgbox OlivineCity_Text_Girl_Text_0
+	checktrainerflag TRAINER_NORMAN_2
+	goto_if 1, OlivineCity_Text_Girl_2
+	msgbox OlivineCity_Text_Girl_Text_1
+OlivineCity_Text_Girl_1:
 	release
 	end
+
+OlivineCity_Text_Girl_2:
+	msgbox OlivineCity_Text_Girl_Text_0
+	goto OlivineCity_Text_Girl_1
 
 
 OlivineCity_Text_Fisherman::
@@ -111,14 +136,44 @@ OlivineCity_Text_Fisherman::
 	end
 
 
-SailorToHoenn2_Text_0:
-	.string "Want to go Back to HOENN ?$"
+OlivineCity_Text_Cook::
+	lock
+	faceplayer
+	message OlivineCity_Text_Cook_Text_0
+	waitmessage
+	pokemart OlivineCityCook
+	msgbox OlivineCity_Text_Cook_Text_1
+	release
+	return
 
-SailorToHoenn2_Text_1:
-	.string "Here we go !$"
 
-SailorToHoenn2_Text_2:
-	.string "I'm standing right here !$"
+	.align 2
+OlivineCityCook:
+	.2byte ITEM_PEWTER_CRUNCHIES
+	.2byte ITEM_SANDWICH
+	.2byte ITEM_SODA_POP
+	.2byte ITEM_NONE
+
+OlivineCity_Text_MilkGuy::
+	lock
+	faceplayer
+	message OlivineCity_Text_MilkGuy_Text_0
+	waitmessage
+	pokemart OlivineCityMilker
+	msgbox OlivineCity_Text_Cook_Text_1
+	release
+	return
+
+
+	.align 2
+OlivineCityMilker:
+	.2byte ITEM_MOOMOO_MILK
+	.2byte ITEM_NONE
+
+OlivineCity_JasmineHouse::
+	msgbox OlivineCity_JasmineHouse_Text_0, MSGBOX_NPC
+	return
+
 
 OlivineCity_Text_SignHarbour_Text_0:
 	.string "OLIVINE PORT\p"
@@ -136,7 +191,7 @@ OlivineCity_Text_LighthouseSign_Text_0:
 	.string "Also known as the GLITTER LIGHTHOUSE$"
 
 OlivineCity_Text_PokedexBoy_Text_0:
-	.string "Wow, you have a POKéDEX!\p"
+	.string "Wow, you have a POKéDEX!\n"
 	.string "That is just so awesome.$"
 
 OlivineCity_Text_SignCity_Text_0:
@@ -146,6 +201,14 @@ OlivineCity_Text_SignCity_Text_0:
 OlivineCity_Text_Artist_Text_0:
 	.string "I love the sea at sunset! I can paint it\n"
 	.string "all day long.$"
+
+OlivineCity_Text_OldHouse_Text_0:
+	.string "{PLAYER} : I used to live here... SIGH !\p"
+	.string "What it has already been sold ?!$"
+
+OlivineCity_Text_OldMan_Text_0:
+	.string "Hello {PLAYER} ! It's been a while\n"
+	.string "since you move in HOENN. How are you ?$"
 
 OlivineCity_Text_Maniac_Text_0:
 	.string "Hummm yes? Oh you want to have access\n"
@@ -157,14 +220,41 @@ OlivineCity_Text_LighthouseGuard_Text_0:
 	.string "authorized crew only.$"
 
 OlivineCity_Text_Woman_Text_0:
-	.string "My little sister is a tough TRAINER. I\n"
-	.string "bet one day she will be a CHAMPION.$"
+	.string "{PLAYER}! JASMINE told me you\n"
+	.string "defeated her? She said she still has a\l"
+	.string "long way to become a GYM LEADER. But\l"
+	.string "she won't give up!$"
+
+OlivineCity_Text_Woman_Text_1:
+	.string "Hey {PLAYER} it's been a while ! You\n"
+	.string "know that JASMINE has been training\l"
+	.string "really hard since you moved ? She\l"
+	.string "missed you really much...$"
 
 OlivineCity_Text_Girl_Text_0:
-	.string "One of my friend is so strong, even\n"
-	.string "STONE types POKEMON can't harm her.$"
+	.string "{PLAYER} you went to MONT MORTAR\n"
+	.string "already?! What you defeat JASMINE?!\l"
+	.string "Our plan was perfect! You must be\l"
+	.string "really tough!$"
+
+OlivineCity_Text_Girl_Text_1:
+	.string "{PLAYER} you are back ! JASMINE is\n"
+	.string "training in MONT MORTAR, I heard. You\l"
+	.string "should try to meet her there !$"
 
 OlivineCity_Text_Fisherman_Text_0:
 	.string "Hmpfff! I went to the Restaurant and\n"
-	.string "ate too much. I feel like a SNORLAX; i\l"
-	.string "need to REST.$"
+	.string "ate too much. I feel like a SNORLAX;\p"
+	.string "I need to REST.$"
+
+OlivineCity_Text_Cook_Text_0:
+	.string "Hey there, I sell a few snacks.$"
+
+OlivineCity_Text_Cook_Text_1:
+	.string "Please come again!$"
+
+OlivineCity_Text_MilkGuy_Text_0:
+	.string "Hey there, I sell some MILK!$"
+
+OlivineCity_JasmineHouse_Text_0:
+	.string "JASMINE's House$"

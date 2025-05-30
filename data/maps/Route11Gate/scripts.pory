@@ -1,0 +1,27 @@
+mapscripts Route11Gate_MapScripts {}
+
+
+script Route11Gate_Text_Policeman1 {
+    msgbox("Don't you think it's hard to think\nup good names for POKéMON?\pEspecially if you've caught a\nwhole bunch?\pIn LAVENDER TOWN, there's a man\nwho rates POKéMON nicknames.\pHe can even help you rename your\nPOKéMON, too.", MSGBOX_NPC)
+    end
+}
+script Route11Gate_Text_Policeman2 {
+    msgbox("If you're aiming to reach LAVENDER\nTOWN, take ROCK TUNNEL.\pYou can get to ROCK TUNNEL from\nCERULEAN CITY.", MSGBOX_NPC)
+    end
+}
+script Route11Gate_Text_WhatABreathtakingView {
+    msgbox("Let's see what the binoculars have\nto show…\pWhat a breathtaking view!", MSGBOX_NPC)
+    end
+}
+script Route11Gate_Text_RockTunnelGoodRouteToLavender {
+    msgbox("Let's see what the binoculars have\nto show…\pTo get to LAVENDER TOWN from\nCERULEAN CITY…\pROCK TUNNEL appears to be a good\nroute to take.", MSGBOX_NPC)
+    end
+}
+script Route11Gate_Text_Scientist {
+    msgbox("There are items on the ground that\nmay be hidden from view.\pUse the ITEMFINDER to detect any\nhidden items close to you.\pThe machine is a bit limited.\nIt can't pinpoint item locations.\pWhat it does is show the direction\nwhere the item is.\pUse it to get your bearings, then\nsearch the suspect area by hand.", MSGBOX_NPC)
+    end
+}
+script Route11Gate_Text_Youngster {
+    msgbox("I traded my NIDORINA, but I don't think\nit was worth it...", MSGBOX_NPC)
+    end
+}

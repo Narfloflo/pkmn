@@ -1,0 +1,44 @@
+mapscripts Route14_MapScripts {}
+
+script Route14_Text_Birdkeeper {
+    trainerbattle_single(TRAINER_JESSICA_2, "I always go with bird POKéMON !", "Out of power !")
+    msgbox(format("I wish I could fly like PIDGEY and PIDGEOTTO..."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route14_Text_Thug {
+    trainerbattle_single(TRAINER_CINDY_2, "You cant understand me.", "No ! My babies !!")
+    msgbox(format("You can't understand my love for pink POKéMON. But I still have to keep some dirty bastards to scare the kids !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route14_Text_Biker1 {
+    trainerbattle_single(TRAINER_CINDY_3, "Give me your money.", "Ahah, here take mine.")
+    msgbox(format("I was joking about the money !"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route14_Text_Biker2 {
+    trainerbattle_single(TRAINER_CINDY_4, "I'm a member of the KANTO WHEELS.", "And I'm about to get expel...")
+    msgbox(format("It's cool you made your POKéMON so strong! Might us right! And you know it!"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route14_Text_Beauty {
+    trainerbattle_single(TRAINER_THALIA_2, "Do you want to POKéMON with me?", "What, it's over already ?")
+    msgbox(format("I don't know anything about POKéMON. I just like cool ones!"), MSGBOX_AUTOCLOSE)
+    end
+}
+script Route14_Text_Worker {
+    msgbox("Oh hello there! We just built a new\nentrance for the SAFARI ZONE!\lSince it is sooooo famous and will\lalways be, it's will be good for\lbusiness.\lRight?", MSGBOX_NPC)
+    end
+}
+script Route14_Text_Youngster {
+    msgbox("Two minutes ago I was in the SAFARI\nZONE. But I took an exit and I'm here!\lI don't really want to pay ¥500 to get\lback to FUSCHIA.\lI have to walk then...", MSGBOX_NPC)
+    end
+}
+
+script Route14_Text_SafariSign {
+    msgbox("SAFARI ZONE Alternate Entrance", MSGBOX_SIGN)
+    end
+}

@@ -1,0 +1,17 @@
+mapscripts Route2Doors_MapScripts {}
+
+script ViridianForest_Text_Oldman {
+    lock
+    faceplayer
+    msgbox(format("I had an EEVEE, I thought it could evolve in a forest environment, but no..."))
+    release
+    end
+}
+
+script ViridianForest_Text_Woman {
+    lock
+    faceplayer
+    msgbox(format("VIRIDIAN FOREST is quite a natural maze. Be careful !"))
+    release
+    end
+}

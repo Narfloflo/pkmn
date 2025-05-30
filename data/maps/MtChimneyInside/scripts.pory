@@ -1,0 +1,16 @@
+mapscripts MtChimneyInside_MapScripts {}
+
+script MtChimneyInside_Text_Hiker {
+    trainerbattle_single(TRAINER_WILTON_4, "You enjoy heating places too ?", "I'm sweating so much !")
+    msgbox(format("A friend of mine told me that it refreshing to spent some time in a very hot place. But I think he was talking about a SPA or something like that !"))
+    release
+    end
+}
+
+script MtChimneyInside_Text_MagmaGrunt {
+    lock
+    faceplayer
+    msgbox(format("Huh, I ran away from TEAM MAGMA. I mean, putting some oil into a volcano ?! I just thought that we would increase the land mass because of the melting poles. But no... I'm so dumb..."))
+    release
+    end
+}

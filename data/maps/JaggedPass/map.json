@@ -104,6 +104,19 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "JaggedPass_EventScript_Julio",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPOINK",
+      "x": 14,
+      "y": 36,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -111,15 +124,15 @@
       "x": 14,
       "y": 53,
       "elevation": 3,
-      "dest_map": "MAP_ROUTE112",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_LAVARIDGE_TOWN",
+      "dest_warp_id": "8"
     },
     {
       "x": 15,
       "y": 53,
       "elevation": 3,
-      "dest_map": "MAP_ROUTE112",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_LAVARIDGE_TOWN",
+      "dest_warp_id": "9"
     },
     {
       "x": 13,
@@ -167,8 +180,8 @@
     },
     {
       "type": "weather",
-      "x": 18,
-      "y": 17,
+      "x": 14,
+      "y": 53,
       "elevation": 3,
       "weather": "COORD_EVENT_WEATHER_SUNNY"
     },
@@ -223,6 +236,13 @@
       "var": "VAR_JAGGED_PASS_STATE",
       "var_value": "1",
       "script": "JaggedPass_EventScript_OpenMagmaHideout"
+    },
+    {
+      "type": "weather",
+      "x": 15,
+      "y": 53,
+      "elevation": 3,
+      "weather": "COORD_EVENT_WEATHER_SUNNY"
     }
   ],
   "bg_events": [
@@ -236,8 +256,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 11,
-      "y": 37,
+      "x": 12,
+      "y": 38,
       "elevation": 3,
       "item": "ITEM_GREAT_BALL",
       "flag": "FLAG_HIDDEN_ITEM_JAGGED_PASS_GREAT_BALL"

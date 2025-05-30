@@ -1,0 +1,48 @@
+mapscripts MahoganyTown_MapScripts {}
+
+script MahoganyTown_Text_Oldwoman {
+    lock
+    faceplayer
+    msgbox(format("Did you know that MAHOGANY TOWN used to be a NINJA TOWN ? I heard that KOGA's original clan is from here. What you don't know KOGA ? Your lack of culture will lead you to your end kid."))
+    release
+    end
+}
+
+script MahoganyTown_Text_Man {
+    lock
+    faceplayer
+    msgbox(format("The LAKE OF RAGE up there bring a lot of tourists here !"))
+    release
+    end
+}
+
+script MahoganyTown_Text_Man2 {
+    lock
+    faceplayer
+    msgbox(format("Since you came this far, take the time to do some sightseeing. You should head north and check out LAKE OF RAGE right now."))
+    release
+    end
+}
+
+script MahoganyTown_Text_GymSign {
+    msgbox("MAHOGANY TOWN\nPOKéMON GYM LEADER: PRYCE\lThe Teacher of Winter's Harshness", MSGBOX_SIGN)
+    end
+}
+
+script MahoganyTown_Text_Inn {
+    msgbox("MAHOGANY TOWN INN\nRest your soul and your body", MSGBOX_SIGN)
+    end
+}
+
+script MahoganyTown_Text_TownSign {
+    lock
+    faceplayer
+    msgbox(format("MAHOGANY TOWN\pWelcome to the Home of the Ninja"))
+    release
+    end
+}
+
+script MahoganyTown_Text_MartSign {
+    msgbox("MAHOGANY TOWN Old Market.\nCome have a taste of the RAGE CANDY!", MSGBOX_SIGN)
+    end
+}

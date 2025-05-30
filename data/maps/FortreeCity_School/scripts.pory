@@ -1,0 +1,18 @@
+mapscripts FortreeCity_School_MapScripts {}
+
+script FortreeCity_School_Youngster {
+    msgbox("I really hate SWAGGER!\nMy POKéMON always hurt itself while\lconfused.", MSGBOX_NPC)
+    end
+}
+script FortreeCity_School_Teacher {
+    msgbox("WINONA studied here. She really was the\nbest!\lShe learnt a lot on a hill, where a lot\lof FLYING types POKéMON are living.", MSGBOX_NPC)
+    end
+}
+script FortreeCity_School_Lass {
+    msgbox("I had a BIKE but it's lost somewhere in\nthe bushes...", MSGBOX_NPC)
+    end
+}
+script FortreeCity_School_SmallGirl {
+    msgbox("I have a golden MAGIKARP! Can you\nbelieve that?", MSGBOX_NPC)
+    end
+}

@@ -3,7 +3,7 @@
   "name": "NewMap3",
   "layout": "LAYOUT_NEW_MAP3",
   "music": "MUS_ROUTE119",
-  "region_map_section": "MAPSEC_ROUTE_11",
+  "region_map_section": "MAPSEC_GREEN_PATH",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_OCEAN_ROUTE",
@@ -19,8 +19,8 @@
       "direction": "left"
     },
     {
-      "map": "MAP_ROUTE129",
-      "offset": 7,
+      "map": "MAP_ROUTE128",
+      "offset": -17,
       "direction": "right"
     }
   ],

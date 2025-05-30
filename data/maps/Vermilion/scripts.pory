@@ -42,7 +42,7 @@ script SailorToHoenn{
  script KVermilion_Text_BuildingOnThisLand {
     lock
     faceplayer
-    msgbox(format("I'm putting up a building on this plot of land. I own it all.\pMy MACHOP were helping me tamping the land, but TEAM ROCKET stole them..."))
+    msgbox(format("I'm putting up a building on this plot of land. I own it all.\pMy MACHOP is helping me tamping the land."))
     release
     end
  }
@@ -87,7 +87,7 @@ script SailorToHoenn{
  script Vermilion_Text_Fisherman {
      lock
      msgbox(format("Hope I'll get something other than a MAGIKARP.."))
-     applymovement(11, Exclamation)
+     applymovement(7, Exclamation)
      waitmovement(0)
      msgbox(format("Oh ! another MAGIKARP..."))
      release
@@ -99,34 +99,25 @@ movement Exclamation {
    walk_in_place_down
 }
 
-script GetAway {
-   lock
-   applymovement(4, GuyUp)
-   applymovement(3, GuyDown)
-   waitmovement(0)
-   msgbox(format("The road here is closed. The DUGLETTS are making a mess.\pWe are investigating the place."))
-   applymovement(OBJ_EVENT_ID_PLAYER, ReturnLeft)
-   waitmovement(0)
-   release
-   end
-}
-
-movement ReturnLeft {
-    walk_left
-}
-
-script Vermilion_Text_GuyUp {
+script Vermilion_Text_Policeman {
     lock
     faceplayer
-    msgbox(format("The road here is closed. The DUGLETTS are making a mess.\pWe are investigating the place."))
+    msgbox(format("You know there was a big POKéMON blocking the path. But a young TRAINER caught it ! I'm amazed."))
     release
     end
 }
 
-script Vermilion_Text_GuyDown {
+script Vermilion_Text_Hiker {
     lock
     faceplayer
-    msgbox(format("The road here is closed. The DUGLETTS are making a mess.\pWe are investigating the place."))
+    msgbox(format("It's incredible ! The DIGLETTS dug this long tunnel !It goes right to VIRIDIAN CITY !"))
+    release
+    end
+}
+
+script Vermilion_Text_DiglettsCave {
+    lock
+    msgbox(format("DIGLETT'S CAVE"))
     release
     end
 }
@@ -139,19 +130,78 @@ script Vermilion_Text_Camper {
     end
 }
 
-movement GuyUp {
-    walk_in_place_up
+script Vermilion_Text_Boy {
+    lock
+    faceplayer
+    msgbox(format("It's the residential area of VERMILION CITY. I think LT. SURGE is living somewhere here."))
+    release
+    end
 }
 
-movement GuyDown {
-    walk_in_place_down
-}
+
 
 script Watchman {
     lock
     faceplayer
     msgbox(format("Humm... Oh you want the time? Here it is."))
     call(PlayersHouse_2F_EventScript_WallClock)
+    release
+    end
+}
+
+script Vermilion_Text_Machop {
+    lock
+    faceplayer
+    playmoncry(SPECIES_MACHOP, CRY_MODE_NORMAL)
+    msgbox(format("Guooh gogogoh!\p{PLAYER}: A MACHOP is growling while stomping the ground flat."))
+    release
+    end
+}
+
+script Vermilion_Text_Worker {
+    lock
+    faceplayer
+    msgbox(format("The GYM is closed for now. LT. SURGE wants to make some new ajustments before reopening."))
+    release
+    end
+}
+
+script Vermilion_Text_SailorToSevii {
+    lock
+    faceplayer
+    msgbox(format("I'm sorry but the FERRY to SEVII ISLANDS is late... And I don't think you have a ticket either right ?"))
+    release
+    end
+}
+
+script Vermilion_Text_WomanToSevii {
+    lock
+    faceplayer
+    msgbox(format("So basically, we've waited for a few hours to get in VERMILION from JOHTO because the FERRY service is a mess ! And now we are told that it's the same for SEVII ISLANDS ?! I'm exausted..."))
+    release
+    end
+}
+
+script Vermilion_Text_ManToSevii {
+    lock
+    faceplayer
+    msgbox(format("I tried to book an HOTEL in CELADON but it's full... An another bad news like that and my wife is gonna take her GYARADOS to blast this city..."))
+    release
+    end
+}
+
+script Vermilion_Text_BoyToSevii {
+    lock
+    faceplayer
+    msgbox(format("I don't care if we are in JOHTO, VERMILION or somewhere else as long as I have my GAMEBOY with me.\pCrap !\nMy battery is running low !"))
+    release
+    end
+}
+
+script Vermilion_Text_OldWomanToSevii {
+    lock
+    faceplayer
+    msgbox(format("I was happy to go to SEVII ISLAND because I heard that there are some nice SPA built close to a volcano.\pWhat there is the same in HOENN ?! What are we doing here so !"))
     release
     end
 }

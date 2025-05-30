@@ -78,6 +78,40 @@ const u8 gItemEffect_MoomooMilk[7] = {
     [6] = 100, // Amount of HP to recover
 };
 
+const u8 gItemEffect_Sandwich[10] = {
+    [4] = ITEM4_HEAL_HP,
+    [5] = ITEM5_FRIENDSHIP_ALL,
+    [6] = 50, // Amount of HP to recover
+    [7] = 5,  // Friendship change, low
+    [8] = 10,  // Friendship change, mid
+    [9] = 15, // Friendship change, high
+};
+
+const u8 gItemEffect_PewterCrunchies[10] = {
+    [3] = ITEM3_STATUS_ALL,
+    [4] = ITEM4_HEAL_HP,
+    [5] = ITEM5_FRIENDSHIP_ALL,
+    [6] = 50, // Amount of HP to recover
+    [7] = 5,  // Friendship change, low
+    [8] = 10,  // Friendship change, mid
+    [9] = 15, // Friendship change, high
+};
+
+const u8 gItemEffect_Casteliacone[10] = {
+    [3] = ITEM3_STATUS_ALL,
+    [4] = ITEM4_HEAL_HP,
+    [5] = ITEM5_FRIENDSHIP_ALL,
+    [6] = 10, // Amount of HP to recover
+    [7] = 5,  // Friendship change, low
+    [8] = 10,  // Friendship change, mid
+    [9] = 15, // Friendship change, high
+};
+
+const u8 gItemEffect_RageCandy[10] = {
+    [4] = ITEM4_HEAL_HP,
+    [6] = 30, // Amount of HP to recover
+};
+
 const u8 gItemEffect_EnergyPowder[10] = {
     [4] = ITEM4_HEAL_HP,
     [5] = ITEM5_FRIENDSHIP_ALL,
@@ -292,10 +326,6 @@ const u8 gItemEffect_WaterStone[6] = {
     [4] = ITEM4_EVO_STONE,
 };
 
-const u8 gItemEffect_MetalCoat[6] = {
-    [4] = ITEM4_EVO_STONE,
-};
-
 const u8 gItemEffect_LeafStone[6] = {
     [4] = ITEM4_EVO_STONE,
 };
@@ -457,6 +487,12 @@ const u8 *const gItemEffectTable[] =
     [ITEM_HONDEW_BERRY - ITEM_POTION]  = gItemEffect_HondewBerry,
     [ITEM_GREPA_BERRY - ITEM_POTION]   = gItemEffect_GrepaBerry,
     [ITEM_TAMATO_BERRY - ITEM_POTION]  = gItemEffect_TamatoBerry,
-    [ITEM_METAL_COAT - ITEM_POTION]  = gItemEffect_MetalCoat,
+    [ITEM_SANDWICH - ITEM_POTION]  = gItemEffect_Sandwich,
+    [ITEM_PEWTER_CRUNCHIES - ITEM_POTION]  = gItemEffect_PewterCrunchies,
+    [ITEM_CASTELIACONE - ITEM_POTION]  = gItemEffect_Casteliacone,
+    [ITEM_STBRICECREAM - ITEM_POTION]  = gItemEffect_Casteliacone,
+    [ITEM_BLKICECREAM - ITEM_POTION]  = gItemEffect_Casteliacone,
+    [ITEM_WHTICECREAM - ITEM_POTION]  = gItemEffect_Casteliacone,
+    [ITEM_RAGE_CANDY - ITEM_POTION]  = gItemEffect_RageCandy,
     [LAST_BERRY_INDEX - ITEM_POTION]   = NULL
 };

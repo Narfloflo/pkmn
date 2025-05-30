@@ -311,10 +311,206 @@ Route101_Text_PondKid::
 Route101_Text_Jenkins::
 	lock
 	faceplayer
-	msgbox Route101_Text_Jenkins_Text_0
+	checktrainerflag TRAINER_GRUNT_UNUSED
+	goto_if 1, Route101_Text_Jenkins_1
+	msgbox Route101_Text_Jenkins_Text_1
+	applymovement 7, JenkinsFarmMove
+	waitmovement 7
+	applymovement OBJ_EVENT_ID_PLAYER, JenkinsKick
+	playse SE_EFFECTIVE
+	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement 7, JenkinsReturn
+	waitmovement 7
 	release
 	end
 
+Route101_Text_Jenkins_1:
+	msgbox Route101_Text_Jenkins_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, JenkinsLeave
+	waitmovement OBJ_EVENT_ID_PLAYER
+	release
+	end
+
+
+Route101_Text_Jenkins2::
+	lock
+	faceplayer
+	checktrainerflag TRAINER_GRUNT_UNUSED
+	goto_if 1, Route101_Text_Jenkins2_1
+	msgbox Route101_Text_Jenkins_Text_1
+	applymovement 7, JenkinsFarmMove2
+	waitmovement 7
+	applymovement OBJ_EVENT_ID_PLAYER, JenkinsKick
+	playse SE_EFFECTIVE
+	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement 7, JenkinsReturn2
+	waitmovement 7
+	release
+	end
+
+Route101_Text_Jenkins2_1:
+	msgbox Route101_Text_Jenkins_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, JenkinsLeave
+	waitmovement OBJ_EVENT_ID_PLAYER
+	release
+	end
+
+
+JenkinsFarmMove:
+	walk_up
+	walk_up
+	face_player
+	step_end
+
+JenkinsFarmMove2:
+	walk_right
+	walk_up
+	walk_up
+	face_player
+	step_end
+
+JenkinsKick:
+	jump_up
+	face_up
+	step_end
+
+JenkinsReturn:
+	walk_down
+	walk_down
+	step_end
+
+JenkinsReturn2:
+	walk_left
+	walk_down
+	walk_down
+	step_end
+
+JenkinsLeave:
+	walk_up
+	step_end
+
+Route101_Text_SignFarmJenkins::
+	lock
+	faceplayer
+	msgbox Route101_Text_SignFarmJenkins_Text_0
+	release
+	end
+
+
+Route101_Text_SignSchool::
+	lock
+	faceplayer
+	msgbox Route101_Text_SignSchool_Text_0
+	release
+	end
+
+
+Route101_Text_SignFarm::
+	lock
+	faceplayer
+	msgbox Route101_Text_SignFarm_Text_0
+	release
+	end
+
+
+Route101_Text_Teacher::
+	lock
+	faceplayer
+	msgbox Route101_Text_Teacher_Text_0
+	release
+	end
+
+
+Route101_Text_Farmer::
+	lock
+	faceplayer
+	msgbox Route101_Text_Farmer_Text_0
+	release
+	end
+
+
+Route101_Text_Woman::
+	lock
+	faceplayer
+	msgbox Route101_Text_Woman_Text_0
+	release
+	end
+
+
+Route101_Text_JenkinsTrainer::
+	trainerbattle_single TRAINER_GRUNT_UNUSED, Route101_Text_JenkinsIntro, Route101_Text_JenkinsOutro
+	msgbox Route101_Text_JenkinsTrainer_Text_0
+	release
+	end
+
+
+Route101_Text_SchoolKid::
+	lock
+	faceplayer
+	msgbox Route101_Text_SchoolKid_Text_0
+	release
+	end
+
+
+Route101_Text_Girl::
+	lock
+	faceplayer
+	msgbox Route101_Text_Girl_Text_0
+	release
+	end
+
+
+Route101_Text_OldWoman::
+	lock
+	faceplayer
+	goto_if_set FLAG_IS_CHAMPION, Route101_Text_OldWoman_1
+	msgbox Route101_Text_OldWoman_Text_2
+	release
+	end
+
+Route101_Text_OldWoman_1:
+	msgbox Route101_Text_OldWoman_Text_0
+	waitmessage
+	pokemart Route101Mart
+	msgbox Route101_Text_OldWoman_Text_1
+	release
+	end
+
+
+	.align 2
+Route101Mart:
+	.2byte ITEM_LEFTOVERS
+	.2byte ITEM_SANDWICH
+	.2byte ITEM_BERRY_JUICE
+	.2byte ITEM_NONE
+
+Route101_Event_SchoolClosed::
+	gettime
+	compare VAR_0x8003, TIME_NIGHT
+	goto_if_eq Route101_Event_SchoolClosed_2
+	compare VAR_0x8003, TIME_MIDNIGHT
+	goto_if_eq Route101_Event_SchoolClosed_2
+	release
+	end
+
+Route101_Event_SchoolClosed_2:
+	lock
+	applymovement 8, Route101_Move_DirectorTriggered
+	msgbox Route101_Event_SchoolClosed_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route101_Move_Stepback
+	waitmovement 0
+	release
+	end
+
+
+Route101_Move_DirectorTriggered:
+	emote_exclamation_mark
+	jump_in_place_right
+	step_end
+
+Route101_Move_Stepback:
+	walk_down
+	step_end
 
 Route101_Text_PondKid_Text_0:
 	.string "The existence is nothing but a mere\n"
@@ -323,11 +519,77 @@ Route101_Text_PondKid_Text_0:
 	.string "{PLAYER} : How old are you ?!$"
 
 Route101_Text_Jenkins_Text_0:
-	.string "Look kid : Here are my crops. If you\n"
+	.string "Leave !$"
+
+Route101_Text_Jenkins_Text_1:
+	.string "Look kid, here is my property. If you\n"
 	.string "don't get out here quickly, I'll spank\l"
 	.string "your ass so hard, you'll need surgery.\p"
 	.string "{PLAYER}: I have a creature call a\n"
 	.string "POKEMON. I don't think you scare me.\p"
 	.string "JENKINS: What? How dare you speak to\n"
 	.string "me like that !?\p"
-	.string "Dirty brat!...$"
+	.string "Dirty brat!...\p"
+	.string "GET OUT !$"
+
+Route101_Text_SignFarmJenkins_Text_0:
+	.string "PRIVATE PROPERTY OF MR. JENKINS\p"
+	.string "MOVE OR I'LL MAKE YOU MOVE !$"
+
+Route101_Text_SignSchool_Text_0:
+	.string "LITTLEROOT TOWN SCHOOL$"
+
+Route101_Text_SignFarm_Text_0:
+	.string "COMMUNAL FARM$"
+
+Route101_Text_Teacher_Text_0:
+	.string "Yes this building is a SCHOOL.\p"
+	.string "What you thought that every TRAINER\n"
+	.string "went to RUSTBORO CITY to learn the\l"
+	.string "basic ?\n"
+	.string "Oh come on !$"
+
+Route101_Text_Farmer_Text_0:
+	.string "Humpf...\n"
+	.string "We are taking care of the crops\l"
+	.string "and we are seeding some other fields\l"
+	.string "too. But sometime WILD POKéMON jump on\l"
+	.string "us.$"
+
+Route101_Text_Woman_Text_0:
+	.string "Hello young TRAINER !\n"
+	.string "I heard a guy somewhere is willing to\l"
+	.string "give a POKéMON.\p"
+	.string "You should try to ask around !$"
+
+Route101_Text_JenkinsTrainer_Text_0:
+	.string "Leave me and my crops alone...$"
+
+Route101_Text_SchoolKid_Text_0:
+	.string "Mister JENKINS told me he could train\nme and turn me into a true man !\lBut as you can see I'm just in the\lGRASS looking for some seeds for his\lcrops...$"
+
+Route101_Text_Girl_Text_0:
+	.string "You will see that we manage to build\n"
+	.string "some houses all around the roads.\p"
+	.string "Yeah we are not all homeless people!$"
+
+Route101_Text_OldWoman_Text_0:
+	.string "My furnisher came back with a lot of\n"
+	.string "supply. Have a look.$"
+
+Route101_Text_OldWoman_Text_1:
+	.string "Come back again!$"
+
+Route101_Text_OldWoman_Text_2:
+	.string "Hello rookie!\n"
+	.string "I'm actually out of stocks. Come back\l"
+	.string "later$"
+
+Route101_Event_SchoolClosed_Text_0:
+	.string "Humm... The SCHOOL is closed during the\nnight...\lCome back later.$"
+
+Route101_Text_JenkinsIntro::
+	.string "How ??\nHow did you get here ?!$"
+
+Route101_Text_JenkinsOutro::
+	.string "Yeah you can laugh...$"

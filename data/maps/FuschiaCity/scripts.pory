@@ -1,0 +1,171 @@
+mapscripts FuschiaCity_MapScripts {}
+
+script Fuschia_Text_Oldman {
+    lock
+    faceplayer
+    msgbox(format("SAFARI ZONE has a zoo in front of the entrance. Out back is the SAFARI GAME for catching POKéMON."))
+    release
+    end
+}
+
+script Fuschia_Text_Kurt {
+    lock
+    faceplayer
+    msgbox(format("KURT: Where's SHURA ? I said I'd meet her here."))
+    release
+    end
+}
+
+script Fuschia_Text_Youngster {
+    lock
+    faceplayer
+    msgbox(format("That item ball in there is really a POKéMON."))
+    release
+    end
+}
+
+script Fuschia_Text_Bugcatcher {
+    lock
+    faceplayer
+    msgbox(format("Did you try the SAFARI GAME? Some POKéMON can only be caught there."))
+    release
+    end
+}
+
+script Fuschia_Sign_Lapras {
+    lock
+    faceplayer
+    msgbox(format("Name: LAPRAS\nA.K.A the king of the seas."))
+    showmonpic(SPECIES_LAPRAS, 10,3)
+    waitbuttonpress
+    hidemonpic
+    release
+    end
+}
+
+script Fuschia_Sign_Kabuto {
+    lock
+    faceplayer
+    msgbox(format("Name: KABUTO\nA POKéMON that was resurrected from a fossil."))
+    showmonpic(SPECIES_KABUTO, 10,3)
+    waitbuttonpress
+    hidemonpic
+    release
+    end
+}
+
+script Fuschia_Sign_Kangaskhan {
+    lock
+    faceplayer
+    msgbox(format("Name: KANGASKHAN\nA maternal POKéMON that raises its young in a pouch on its belly."))
+    showmonpic(SPECIES_KANGASKHAN, 10,3)
+    waitbuttonpress
+    hidemonpic
+    release
+    end
+}
+
+script Fuschia_Sign_Voltorb {
+    lock
+    faceplayer
+    msgbox(format("Name: VOLTORB\nThe very image of a POKéBALL."))
+    showmonpic(SPECIES_VOLTORB, 10,3)
+    waitbuttonpress
+    hidemonpic
+    release
+    end
+}
+
+script Fuschia_Sign_Chansey {
+    lock
+    faceplayer
+    msgbox(format("Name: CHANSEY\nCatching one is all up to chance."))
+    showmonpic(SPECIES_CHANSEY, 10,3)
+    waitbuttonpress
+    hidemonpic
+    release
+    end
+}
+
+script Fuschia_Sign_Slowpoke {
+    lock
+    faceplayer
+    msgbox(format("Name: SLOWPOKE\nFriendly and very slow moving."))
+    showmonpic(SPECIES_SLOWPOKE, 10,3)
+    waitbuttonpress
+    hidemonpic
+    release
+    end
+}
+
+script Fuschia_Sign_FuchsiaSign {
+    lock
+    faceplayer
+    msgbox(format("FUCHSIA CITY\nBehold! It's passion pink!"))
+    release
+    end
+}
+
+script Fuschia_Sign_SafariZone {
+    lock
+    faceplayer
+    msgbox(format("POKéMON Paradise\nSafari Zone"))
+    release
+    end
+}
+
+script Fuschia_Text_Camper {
+    lock
+    faceplayer
+    msgbox(format("It's the residential area of FUCHSIA CITY. I heard tourists are hosted here."))
+    release
+    end
+}
+
+script Fuschia_Sign_WardenHome {
+    lock
+    faceplayer
+    msgbox(format("Safari Zone\nWarden's home"))
+    release
+    end
+}
+
+script Fuschia_Sign_SafariGate {
+    lock
+    faceplayer
+    msgbox(format("Safari Game\nPOKéMON-u-Catch !"))
+    release
+    end
+}
+
+script Fuschia_Text_Cooltrainer {
+    lock
+    faceplayer
+    msgbox(format("I wonder if there are rare POKéMON in the SAFARI ZONE.\lYes ?\pWell I'm going there right now !"))
+    release
+    end
+}
+
+script Fuschia_Text_Man {
+    lock
+    faceplayer
+    msgbox(format("KOGA our GYM LEADER left for his ancestors' home village. It's in JOHTO I think !"))
+    release
+    end
+}
+
+script Fuschia_Text_Lass {
+    lock
+    faceplayer
+    msgbox(format("I wish I could catch a CHANSEY... SIGH !"))
+    release
+    end
+}
+
+script Fuschia_Sign_Gym {
+    lock
+    faceplayer
+    msgbox(format("FUCHSIA CITY\nPOKéMON GYM\lLEADER: KOGA\pThe poisonous ninja master !"))
+    release
+    end
+}

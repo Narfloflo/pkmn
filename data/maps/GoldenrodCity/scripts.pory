@@ -1,0 +1,225 @@
+mapscripts GoldenrodCity_MapScripts {}
+
+script GoldenrodCity_Text_Lass {
+    lock
+    faceplayer
+    msgbox(format("The RADIO TOWER in GOLDENROD CITY is a landmark."))
+    release
+    end
+}
+
+script GoldenrodCity_Text_GoldenroDptStore {
+    lock
+    faceplayer
+    msgbox(format("Full Selection of POKéMON Goods !\pGOLDENROD CITY DEPT. STORE"))
+    release
+    end
+}
+
+script GoldenrodCity_Text_TownSign {
+    lock
+    faceplayer
+    msgbox(format("GOLDENROD CITY\pThe Festive City of Opulent Charm"))
+    release
+    end
+}
+
+script GoldenrodCity_Text_CafeSign {
+    lock
+    faceplayer
+    msgbox(format("GOLDENROD CITY CAFÉ"))
+    release
+    end
+}
+
+
+script GoldenrodCity_Text_Guy {
+    lock
+    faceplayer
+    msgbox(format("I heard this is a new STORE that has been built, but I think it's still empty."))
+    release
+    end
+}
+
+script GoldenrodCity_Text_StoreSign {
+    lock
+    faceplayer
+    msgbox(format("TO SELL\nIf you are interested, please call the 555-XXX-XXX and ask for DAVID GOODENOUGH"))
+    release
+    end
+}
+
+script GoldenrodCity_Text_StationSign {
+    lock
+    faceplayer
+    msgbox(format("GOLDENROD CITY STATION"))
+    release
+    end
+}
+
+
+script GoldenrodCity_Text_WorkerStation {
+    lock
+    faceplayer
+    msgbox(format("Hi, the STATION is not opened yet, we are still building the RAILWAY..."))
+    release
+    end
+}
+
+script GoldenrodCity_Text_ShadyGuy {
+    lock
+    faceplayer
+    msgbox(format("Eheheh ! You know that the UNDERGROUND of GOLDENROD CITY are full of shady guys ? You can get in trouble if you are not careful."))
+    release
+    end
+}
+
+script GoldenrodCity_Text_CasinoSign {
+    lock
+    faceplayer
+    msgbox(format("You Playground !\nGOLDENROD CITY GAME CORNER"))
+    release
+    end
+}
+
+script GoldenrodCity_Text_CasinoGuy {
+    lock
+    faceplayer
+    checkitem(ITEM_COIN_CASE)
+    goto_if_eq(VAR_RESULT, 0, GoldenrodCity_Text_CasinoGuyNoCase)
+    msgbox(format("Psst. I'm selling a COIN CASE if you need one. Oh you already have one ? Damn it !"))
+    release
+    end
+}
+
+script GoldenrodCity_Text_CasinoGuyNoCase {
+    lock
+    faceplayer
+    msgbox(format("Oh you don't want one because you can get one for free ?! Well scram wanker !"))
+    release
+    end
+}
+
+script GoldenrodCity_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("Whew ! This is one big town. I don't know where anything is."))
+    release
+    end
+}
+
+script GoldenrodCity_Text_UndergroundSign {
+    lock
+    faceplayer
+    msgbox(format("UNDERGROUND ENTRANCE"))
+    release
+    end
+}
+
+script GoldenrodCity_Text_BillGirlfriend {
+    lock
+    faceplayer
+    msgbox(format("My boyfriend BILL's family is living here. But BILL is nowhere to be found..."))
+    release
+    end
+}
+
+script GoldenrodCity_Text_GoldenrodCityRadioSign {
+    lock
+    faceplayer
+    msgbox(format("GOLDENROD CITY RADIO TOWER"))
+    release
+    end
+}
+
+script GoldenrodCity_Text_FatMan {
+    lock
+    faceplayer
+    msgbox(format("Pretty sure that if we SURF forward, we can reach OLIVINE CITY."))
+    release
+    end
+}
+
+script GoldenrodCity_Text_RadioGuard {
+    lock
+    faceplayer
+    msgbox(format("Here is the RADIO TOWER. Every radio show you can listen is recorded here. What you don't have a RADIO ? Pfff, where are you from..."))
+    release
+    end
+}
+
+script GoldenrodCity_Text_RailwayWorker {
+    lock
+    faceplayer
+    msgbox(format("Yeah we are digging a lot here. It's a tough work but we are connecting people here !"))
+    release
+    end
+}
+
+script GoldenrodCity_Text_Camper {
+    lock
+    faceplayer
+    msgbox(format("WHITNEY stomp me like five time with her MILTANK. But I'll manage to beat here with my new team !"))
+    release
+    end
+}
+
+script GoldenrodCity_Text_Lass2 {
+    lock
+    faceplayer
+    msgbox(format("I want to be a GYM TRAINER. I hope WHITNEY will think I'm good enough for the GYM..."))
+    release
+    end
+}
+
+script GoldenrodCity_Text_Youngster {
+    lock
+    faceplayer
+    msgbox(format("People are all in line, so there must be something good here no ?"))
+    release
+    end
+}
+
+script GoldenrodCity_Text_FlowerSign {
+    lock
+    faceplayer
+    msgbox(format("Blooming Beautiful\nFLOWER SHOP"))
+    release
+    end
+}
+
+script GoldenrodCity_Text_Scientist {
+    lock
+    faceplayer
+    msgbox(format("I'm here to survey the RAILWAY construction. I need to measure if there is to much noises and if it disturb the neighborhood."))
+    release
+    end
+}
+
+script GoldenrodCity_Text_GymSign {
+    lock
+    faceplayer
+    msgbox(format("GOLDENROD CITY POKéMON GYM LEADER: WHITNEY\nThe Incredibly Strong MILTANK !"))
+    release
+    end
+}
+script GoldenrodCity_Text_Thug{
+    trainerbattle_single(TRAINER_TRENT_4,"Are you in a hurry?\nNo?\lWell, let's fight!", "Outch outch! Sorry..." )
+    msgbox("AZALEA is just a few miles away. You\ncan't really miss it.\lWhat's good to see?\lHmmm... The well and KURT I think?", MSGBOX_NPC)
+    end
+}
+script GoldenrodCity_Text_Pokemaniac1{
+    trainerbattle_single(TRAINER_SAWYER_2,"Are you in a hurry?\nNo?\lWell, let's fight!", "Outch outch! Sorry..." )
+    msgbox("AZALEA is just a few miles away. You\ncan't really miss it.\lWhat's good to see?\lHmmm... The well and KURT I think?", MSGBOX_NPC)
+    end
+}
+script GoldenrodCity_Text_Pokemaniac2{
+    trainerbattle_single(TRAINER_SAWYER_3,"Are you in a hurry?\nNo?\lWell, let's fight!", "Outch outch! Sorry..." )
+    msgbox("AZALEA is just a few miles away. You\ncan't really miss it.\lWhat's good to see?\lHmmm... The well and KURT I think?", MSGBOX_NPC)
+    end
+}
+
+script GoldenrodCity_Text_BillHouseSign{
+    msgbox("BILL's HOUSE", MSGBOX_SIGN)
+    end
+}

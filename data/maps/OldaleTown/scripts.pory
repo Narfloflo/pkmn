@@ -317,6 +317,7 @@ OldaleTown_Movement_RivalExit:
 	walk_down
 	walk_down
 	walk_down
+	walk_down
 	step_end
 
 OldaleTown_Movement_WatchRivalExit:
@@ -400,3 +401,220 @@ OldaleTown_Text_TownSign:
 	.string "“Where things start off scarce.”$"
 
 `
+
+script OldaleTown_Text_Poochyena {
+	lock
+	faceplayer
+	playmoncry(SPECIES_POOCHYENA, CRY_MODE_NORMAL)
+	waitmoncry
+	msgbox(format("Booh!\p{PLAYER}: This POOCHYENA is GROWLING to scare the WILD POKéMON."))
+	release
+	end
+}
+
+script OldaleTown_Text_Farmer {
+	goto_if_eq(VAR_FORTREE_CITY_STATE, 5, OldaleTown_Text_FarmerQuestFailed)
+	goto_if_eq(VAR_FORTREE_CITY_STATE, 4, OldaleTown_Text_FarmerTamed)
+	goto_if_eq(VAR_FORTREE_CITY_STATE, 3, OldaleTown_Text_FarmerGavePokemon)
+	goto_if_eq(VAR_FORTREE_CITY_STATE, 2, OldaleTown_Text_FarmerDoneQuest)
+	goto_if_eq(VAR_FORTREE_CITY_STATE, 1, OldaleTown_Text_FarmerAcceptQuest)
+	goto_if_eq(VAR_FORTREE_CITY_STATE, 0, OldaleTown_Text_FarmerAskingforHelp)
+}
+
+script OldaleTown_Text_FarmerAskingforHelp {
+	lock
+	faceplayer
+	msgbox("Hey you! I, had a beautiful POKéMON\nbut it went crazy in my house!\lCan you go and calm it please?", MSGBOX_YESNO)
+	if(var(VAR_RESULT) == TRUE){
+		msgbox("Oh thanks you!\nIt should help a rookie like you!")
+		setvar(VAR_FORTREE_CITY_STATE, 1)
+	}else{
+		msgbox("Ah ok, well I think it could help a\nrookie like you but anyway...", MSGBOX_NPC)
+		end
+	}
+	release
+	end
+}
+
+script OldaleTown_Text_FarmerAcceptQuest {
+	msgbox("My house is just here above.", MSGBOX_NPC)
+	end
+}
+
+script OldaleTown_Text_FarmerDoneQuest {
+	msgbox("Oh! You beat my ZIGZAGOON?\nThanks you!\lOh wait here is a reward for you!", MSGBOX_NPC)
+	clearflag(FLAG_UNUSED_0x02C)
+	setflag(FLAG_UNUSED_0x02D)
+	switch(var(VAR_STARTER_MON)){
+			case 0: call(OldaleTown_Text_FarmerGiveTorchic)
+			case 1: call(OldaleTown_Text_FarmerGiveMudkip)
+			case 2: call(OldaleTown_Text_FarmerGiveTreecko)
+		}
+	end
+}
+
+script OldaleTown_Text_FarmerGiveTreecko {
+	givemon(SPECIES_TREECKO, 10)
+	setvar(VAR_FORTREE_CITY_STATE, 3)
+	msgbox("I found this one around, but I'm not a\ngood TRAINER, so you should have it.", MSGBOX_NPC)
+	playfanfare(MUS_OBTAIN_ITEM)
+	message("{PLAYER} received a POKéMON")
+	waitfanfare
+	release
+	end
+}
+
+script OldaleTown_Text_FarmerGiveTorchic {
+	givemon(SPECIES_TORCHIC, 10)
+	setvar(VAR_FORTREE_CITY_STATE, 3)
+	msgbox("I found this one around, but I'm not a\ngood TRAINER, so you should have it.", MSGBOX_NPC)
+	playfanfare(MUS_OBTAIN_ITEM)
+	message("{PLAYER} received a POKéMON")
+	waitfanfare
+	release
+	end
+}
+
+script OldaleTown_Text_FarmerGiveMudkip {
+	givemon(SPECIES_MUDKIP, 10)
+	setvar(VAR_FORTREE_CITY_STATE, 3)
+	msgbox("I found this one around, but I'm not a\ngood TRAINER, so you should have it.", MSGBOX_NPC)
+	playfanfare(MUS_OBTAIN_ITEM)
+	message("{PLAYER} received a POKéMON")
+	waitfanfare
+	release
+	end
+}
+
+script OldaleTown_Text_FarmerGavePokemon {
+	msgbox("Hey {PLAYER}! How is my little guy?\nI'm sure he is stronger with you now.", MSGBOX_NPC)
+	end
+}
+
+script OldaleTown_Text_FarmerTamed {
+	msgbox("My POKéMON went wild but I finally\ncould calm him down!", MSGBOX_NPC)
+	end
+}
+
+script OldaleTown_Text_FarmerQuestFailed {
+	msgbox("What you ran away?\nYou left my Ziggy? But it was a simple\ltask!\lAnyway. I'll do it myself...", MSGBOX_NPC)
+	end
+}
+
+script OldaleTown_Text_QuestFailedWontReturn {
+	msgbox("{PLAYER}: I better not go back there\nyet...", MSGBOX_NPC)
+	applymovement(OBJ_EVENT_ID_PLAYER, OldaleTown_Move_QuestFailedWontReturn)
+	waitmovement(0)
+	end
+}
+movement OldaleTown_Move_QuestFailedWontReturn {
+	walk_down
+	step_end
+}
+
+script OldaleTown_Text_ExpertM {
+	lock
+	faceplayer
+	checkplayergender
+	goto_if_eq(VAR_RESULT, MALE, OldaleTown_Text_ExpertM_GonnafightMay)
+	goto_if_eq(VAR_RESULT, FEMALE, OldaleTown_Text_ExpertM_GonnafightBrendan)
+	end
+}
+
+script OldaleTown_Text_ExpertM_GonnafightMay {
+	if(flag(FLAG_ADVENTURE_STARTED) == FALSE){
+		switch(var(VAR_STARTER_MON)){
+			case 0: call(OldaleTown_Text_ExpertM_GonnafightMayTreecko)
+			case 1: call(OldaleTown_Text_ExpertM_GonnafightMayTorchic)
+			case 2: call(OldaleTown_Text_ExpertM_GonnafightMayMudkip)
+		}
+		end
+	}else{
+		msgbox("Hello {PLAYER}!\nHope you enjoy your life in LITTLEROOT!",MSGBOX_NPC)
+		end
+	}
+}
+
+script OldaleTown_Text_ExpertM_GonnafightMayTreecko {
+	msgbox("Oh you are {PLAYER}? You want an\nadvice?\lYour TREECKO won't last long against\lTORCHIC and MUDKIP MAY has in her team.\lYeah, it's great to be BIRCH's\ldaughter.", MSGBOX_NPC)
+	end
+}
+
+script OldaleTown_Text_ExpertM_GonnafightMayTorchic {
+	msgbox("Oh you are {PLAYER}? You want an\nadvice?\lYour TORCHIC won't last long against\lthe TREECKO and MUDKIP MAY has in her\lteam.\lYeah, it's great to be BIRCH's\ldaughter.", MSGBOX_NPC)
+	end
+}
+
+script OldaleTown_Text_ExpertM_GonnafightMayMudkip {
+	msgbox("Oh you are {PLAYER}? You want an\nadvice?\lI think you can fight MAY without\ldifficulties with your MUDKIP\lagainst her TORCHIC and TREECKO.\lYeah, it's great to be BIRCH's\ldaughter.\lBut I hope you'll beat this spoiled\lbrat!", MSGBOX_NPC)
+	end
+}
+
+script OldaleTown_Text_ExpertM_GonnafightBrendan {
+	if(flag(FLAG_ADVENTURE_STARTED) == FALSE){
+		switch(var(VAR_STARTER_MON)){
+			case 0: call(OldaleTown_Text_ExpertM_GonnafightBrendanTreecko)
+			case 1: call(OldaleTown_Text_ExpertM_GonnafightBrendanTorchic)
+			case 2: call(OldaleTown_Text_ExpertM_GonnafightBrendanMudkip)
+		}
+		end
+	}else{
+		msgbox("Hello {PLAYER}!\nHope you enjoy your life in LITTLEROOT!",MSGBOX_NPC)
+		end
+	}
+}
+
+script OldaleTown_Text_ExpertM_GonnafightBrendanTreecko {
+	msgbox("Oh you are {PLAYER}? You want an\nadvice?\lYour TREECKO won't last long against\lTORCHIC and MUDKIP BRENDAN has in his team.\lYeah, it's great to be BIRCH's son .", MSGBOX_NPC)
+	end
+}
+
+script OldaleTown_Text_ExpertM_GonnafightBrendanTorchic {
+	msgbox("Oh you are {PLAYER}? You want an\nadvice?\lYour TORCHIC won't last long against\lthe TREECKO and MUDKIP BRENDAN has in his\lteam.\lYeah, it's great to be BIRCH's son.", MSGBOX_NPC)
+	end
+}
+
+script OldaleTown_Text_ExpertM_GonnafightBrendanMudkip {
+	msgbox("Oh you are {PLAYER}? You want an\nadvice?\lI think you can fight BRENDAN without\ldifficulties with your MUDKIP\lagainst her TORCHIC and TREECKO.\lYeah, it's great to be BIRCH's son.\lBut I hope you'll beat this spoiled\lbrat!", MSGBOX_NPC)
+	end
+}
+
+script OldaleTown_Text_Boy{
+	if(flag(FLAG_IS_CHAMPION) == TRUE){
+	msgbox("Hey! Heard about the old lady who lives\na bit north from here? I heard she left\lher home finally to dig somewhere...", MSGBOX_NPC)
+	end	
+	}elif(flag(FLAG_BADGE05_GET)){
+		msgbox("Hey! You got PETALBURG's BADGE?\nThat means now you can use SURF!\lWhy don't you check a bit north, there\lis a river that leads to ROUTE 117!",MSGBOX_NPC)
+		end
+	}else{
+		msgbox("Hey! Oldale is a pretty boring city.\nBut it's at the junction bitween ROUTE\l102 and 103. There are a few places\laround that are not reachable yet!\lI won't tell you more now haha!",MSGBOX_NPC)
+		end
+	}
+	
+}
+
+script OldaleTown_Text_MoveLearnerSign {
+	msgbox("MOVE LEARNER's HOUSE", MSGBOX_SIGN)
+	end
+}
+
+script OldaleTown_EventScript_FarmerQuestnotComplete {
+	if(var(VAR_FORTREE_CITY_STATE) == 2){
+	lock
+	msgbox("{PLAYER}: Oh wait, I should get back to\nthe farmer!")
+	applymovement(OBJ_EVENT_ID_PLAYER ,OldaleTown_EventScript_FarmerQuestnotCompleteMovePlayer)
+	waitmovement(0)
+	releaseall
+	end	
+	}else{
+		release
+		end
+	}
+	release
+	end
+}
+
+movement OldaleTown_EventScript_FarmerQuestnotCompleteMovePlayer {
+	walk_left
+	step_end
+}

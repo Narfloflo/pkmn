@@ -17,11 +17,6 @@
       "map": "MAP_PACIFIDLOG_TOWN",
       "offset": 0,
       "direction": "emerge"
-    },
-    {
-      "map": "MAP_UNDERWATER_ROUTE131",
-      "offset": 0,
-      "direction": "right"
     }
   ],
   "object_events": [

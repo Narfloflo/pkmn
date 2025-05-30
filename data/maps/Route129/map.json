@@ -29,11 +29,6 @@
       "direction": "dive"
     },
     {
-      "map": "MAP_NEW_MAP3",
-      "offset": -7,
-      "direction": "left"
-    },
-    {
       "map": "MAP_ICE_PATH",
       "offset": 43,
       "direction": "down"
@@ -41,7 +36,7 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMING_ATHLETE_M",
       "x": 30,
       "y": 12,
       "elevation": 1,
@@ -54,7 +49,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMING_ATHLETE_F",
       "x": 6,
       "y": 8,
       "elevation": 1,

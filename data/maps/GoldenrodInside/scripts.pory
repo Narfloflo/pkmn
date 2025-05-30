@@ -1,0 +1,49 @@
+mapscripts GoldenrodInside_MapScripts {}
+
+script GoldenrodInside_Text_Whitney {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_BRAWLY_3)){
+        msgbox(format("I know, I closed the GYM and people are lining up to fight me. They will be disappointed because I'm having a snack. Huh, you still are looking for murder ?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT)==1){
+            goto(GoldenrodInside_Text_WhitneyFight)
+        }else{
+            msgbox(format("My sweets are waiting for me !"))
+        }
+    }elif(defeated(TRAINER_BRAWLY_3)){
+        goto(GoldenrodInside_Text_WhitneyRematch)
+    }
+    
+    release
+    end
+}
+
+script GoldenrodInside_Text_WhitneyFight {
+    trainerbattle_single(TRAINER_BRAWLY_3, "Haha I'll crush you so hard !", "You really are strong !")
+    release
+    end
+}
+
+script GoldenrodInside_Text_WhitneyRematch {
+    msgbox(format("I'm ordering a tea and a cheesecake. Wanna fight again while I'm waiting for it ?"),MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        cleartrainerflag(TRAINER_BRAWLY_3)
+        trainerbattle_single(TRAINER_BRAWLY_3, "Haha I'll crush you so hard !", "You really are strong !")
+    }else{
+        msgbox(format("You know where to find me if you change your mind."))
+    }
+    release
+    end
+}
+
+script GoldenrodInside_Text_WhitneyFriend {
+    lock
+    faceplayer
+    msgbox(format("I don't know what to choose. Curry or Spaghetti ? Either way, it's not very cute right ?"))
+    release
+    end
+}
+script GoldenrodInside_Text_BillMom{
+    msgbox("Oh hello!\nYou are looking for my son? I think he\lhis stuck somewhere. On an island...\lKNOT ISLAND maybe?\lI don't know.\lIt's been a while.", MSGBOX_NPC)
+    end
+}

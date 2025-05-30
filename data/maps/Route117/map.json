@@ -24,13 +24,8 @@
       "direction": "right"
     },
     {
-      "map": "MAP_ROUTE110",
-      "offset": 60,
-      "direction": "right"
-    },
-    {
       "map": "MAP_ROUTE117JUNCTION103",
-      "offset": 2,
+      "offset": 0,
       "direction": "down"
     }
   ],
@@ -115,8 +110,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PIKACHU",
-      "x": 43,
-      "y": 10,
+      "x": 44,
+      "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -140,7 +135,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "graphics_id": "OBJ_EVENT_GFX_BREEDER_F",
       "x": 8,
       "y": 10,
       "elevation": 3,
@@ -153,7 +148,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FARMER",
+      "graphics_id": "OBJ_EVENT_GFX_BREEDER_M",
       "x": 32,
       "y": 36,
       "elevation": 3,
@@ -257,7 +252,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_MANIAC",
       "x": 40,
       "y": 27,
       "elevation": 3,
@@ -270,7 +265,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "graphics_id": "OBJ_EVENT_GFX_LASS_JR",
       "x": 56,
       "y": 35,
       "elevation": 3,
@@ -283,7 +278,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "graphics_id": "OBJ_EVENT_GFX_LASS_SR",
       "x": 55,
       "y": 35,
       "elevation": 3,
@@ -309,7 +304,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_F",
       "x": 70,
       "y": 27,
       "elevation": 3,
@@ -322,7 +317,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_4",
+      "graphics_id": "OBJ_EVENT_GFX_BATTLEGIRL",
       "x": 39,
       "y": 6,
       "elevation": 3,
@@ -362,8 +357,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
-      "x": 58,
-      "y": 10,
+      "x": 18,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -375,8 +370,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
-      "x": 48,
-      "y": 8,
+      "x": 52,
+      "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -387,42 +382,16 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 74,
-      "y": 55,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route117_EventScript_LostGuy",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_F",
-      "x": 18,
-      "y": 72,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_RIGHT_LEFT_UP",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route117_EventScript_RunningWoman",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
       "x": 28,
-      "y": 41,
+      "y": 42,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route117_Text_Beauty",
       "flag": "0"
     },
     {
@@ -435,7 +404,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route117_Text_Fatman",
       "flag": "0"
     }
   ],
@@ -451,40 +420,34 @@
       "x": 43,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_SCHOOLS",
+      "dest_map": "MAP_ROUTE117SCHOOL",
       "dest_warp_id": "0"
     },
     {
       "x": 68,
       "y": 20,
       "elevation": 0,
-      "dest_map": "MAP_PUB",
+      "dest_map": "MAP_ROUTE117_INDOOR",
       "dest_warp_id": "0"
     },
     {
-      "x": 35,
-      "y": 39,
+      "x": 20,
+      "y": 40,
       "elevation": 0,
-      "dest_map": "MAP_FAST_FOOD",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 25,
-      "y": 79,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE110_SEASIDE_CYCLING_ROAD_SOUTH_ENTRANCE",
-      "dest_warp_id": "4"
-    },
-    {
-      "x": 22,
-      "y": 79,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE110_SEASIDE_CYCLING_ROAD_SOUTH_ENTRANCE",
-      "dest_warp_id": "6"
+      "dest_map": "MAP_ROUTE117_INDOOR",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 43,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route117_Event_SchoolClosed"
+    }
   ],
   "bg_events": [
     {
@@ -521,13 +484,6 @@
     },
     {
       "type": "secret_base",
-      "x": 78,
-      "y": 53,
-      "elevation": 0,
-      "secret_base_id": "SECRET_BASE_YELLOW_CAVE3_1"
-    },
-    {
-      "type": "secret_base",
       "x": 62,
       "y": 31,
       "elevation": 0,
@@ -547,6 +503,54 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route117_Text_SchoolSign"
+    },
+    {
+      "type": "sign",
+      "x": 28,
+      "y": 40,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 61,
+      "y": 23,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 68,
+      "y": 26,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 53,
+      "y": 23,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 77,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 35,
+      "y": 39,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
     }
   ]
 }

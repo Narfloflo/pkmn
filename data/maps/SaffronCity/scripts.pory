@@ -1,0 +1,196 @@
+mapscripts SaffronCity_MapScripts {}
+
+script SaffronCity_Text_ManPidgeot {
+    lock
+    faceplayer
+    msgbox(format("I flew here on my PIDGEOT when I read about SILPH.\pIt's already over? I missed the media action..."))
+    release
+    end
+}
+
+script SaffronCity_Text_FanClubGirl {
+    lock
+    faceplayer
+    msgbox(format("This FAN CLUB...\nNo one here has a clue!\pHow could they not recognize\nthe brilliance that is LANCE?\pHe stands for justice!\nHe's cool, and yet passionate!\lHe's the greatest, LANCE!"))
+    release
+    end
+}
+
+script SaffronCity_Text_Youngster {
+    lock
+    faceplayer
+    msgbox(format("Yeah! TEAM ROCKET is gone!\nIt's safe to go out again!"))
+    release
+    end
+}
+
+script SaffronCity_Text_ManImpressed {
+    lock
+    faceplayer
+    if(defeated(TRAINER_RED)){
+        msgbox(format("You beat RED?! You are so strong! Amazing!"))
+    } else{
+      msgbox(format("Haven't you heard the news? A boy named RED beat TEAM ROCKET all alone!\pThat's amazing!"))  
+    }
+    release
+    end
+}
+
+script SaffronCity_Text_Dojo {
+    msgbox("FIGHTING DOJO")
+    release
+    end
+}
+
+script SaffronCity_Text_SaffronGym {
+    msgbox("SAFFRON CITY POKéMON GYM\nLEADER: SABRINA\lThe Master of PSYCHIC POKéMON!")
+    release
+    end
+}
+
+script SaffronCity_Text_SilphCo {
+    msgbox("SILPH CO. OFFICE BUILDING")
+    release
+    end
+}
+
+script SaffronCity_Text_Lass {
+    lock
+    faceplayer
+    msgbox(format("People fled from here in droves\nwhen those ROCKETS came.\pThey should be flocking back to\nSAFFRON now."))
+    release
+    end
+}
+
+script SaffronCity_Text_Boy {
+    lock
+    faceplayer
+    msgbox(format("I saw the ROCKET BOSS escaping SILPH's building."))
+    release
+    end
+}
+
+script SaffronCity_Text_SaffronSign {
+    msgbox("SAFFRON CITY\nShining, Golden Land of Commerce")
+    release
+    end
+}
+
+script SaffronCity_Text_FanClub {
+    msgbox("1st floor:\nPOKéMON TRAINER FAN CLUB")
+    release
+    end
+}
+
+script SaffronCity_Text_SilphDesc {
+    msgbox("SILPH's latest product!\nRelease to be determined...")
+    release
+    end
+}
+
+script SaffronCity_Text_PsychicHouse {
+    msgbox("MR. PSYCHIC'S HOUSE")
+    release
+    end
+}
+
+script SaffronCity_Text_MagnetTrain {
+    msgbox(format("Soon, the MAGNET TRAIN will be build here to link KANTO and JOHTO."))
+    release
+    end
+}
+
+script SaffronCity_Text_Pigdeot {
+    lock
+    faceplayer
+    playmoncry(SPECIES_PIDGEOT, CRY_MODE_NORMAL)
+    msgbox(format("PIDGEOT: Bi bibii!"))
+    release
+    end
+}
+
+script SaffronCity_Text_Salaryman {
+    lock
+    msgbox(format("I hope there is a job for me... Since the RUSTURF TUNNEL incident, DEVON haven't been keen on me..."))
+    release
+    end
+}
+
+script SaffronCity_Text_ManMagnetTrain {
+    lock
+    faceplayer
+    msgbox(format("They are building a TRAIN that go to JOHTO. They are renovating the old POWER PLANT too. I hope the POKéMON living there are well..."))
+    release
+    end
+}
+
+script SaffronCity_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("Well it was a big ruckus in the SILPH Co building.\pAll those thieves in black left in panic. Good riddance!"))
+    release
+    end
+}
+
+script SaffronCity_Text_RunningBoy {
+    lock
+    faceplayer
+    msgbox(format("Now that TEAM ROCKET is gone, SAFFRON CITY can be a safe place.\pI can't wait to start investing. Money is gonna flow here again!"))
+    release
+    end
+}
+
+script SaffronCity_Text_Boy2 {
+    lock
+    faceplayer
+    msgbox(format("A few things are gonna change around with the MAGNET TRAIN. But It's not soon to be usable."))
+    release
+    end
+}
+
+script SaffronCity_Text_Worker {
+    lock
+    msgbox(format("Come on lads! You need to prepare the ground with DIGLETT! It's easier that way!"))
+    release
+    end
+}
+
+script SaffronCity_Text_Scientist {
+    lock
+    faceplayer
+    msgbox(format("Yes we are building the MAGNET TRAIN terminus here in SAFFRON CITY. There is only another way for none TRAINERS to go in JOHTO, it's the SHIP. But the cost is high..."))
+    release
+    end
+}
+
+script SaffronCity_Text_Policeman {
+    lock
+    faceplayer
+    msgbox(format("This place is still under construction. Sorry I can't let you pass."))
+    release
+    end
+}
+
+script SaffronCity_Text_Policeman2 {
+    lock
+    faceplayer
+    msgbox(format("With the recents events we can't allow people to enter the SILPH CO. freely."))
+    release
+    end
+}
+
+script SaffronCity_Text_GymGuy {
+    lock
+    faceplayer
+    msgbox(format("The guy in front of the DOJO think I want to eye challenge him. But That's wrong ! Now I'm stuck with him. I'm too scare to move an inch..."))
+    release
+    end
+}
+
+script SaffronCity_Text_BlackBelt {
+    lock
+    faceplayer
+    msgbox(format("The guy in front of the GYM is such a master at eye challenge. I don't think I'll win... ARRRRRG !"))
+    release
+    end
+}

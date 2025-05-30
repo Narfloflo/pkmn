@@ -131,6 +131,21 @@ static const u8 sDoorAnimTiles_TrainerHillLobbyElevator[] = INCBIN_U8("graphics/
 static const u16 sDoorNullPalette48[16] = {};
 static const u8 sDoorAnimTiles_TrainerHillRoofElevator[] = INCBIN_U8("graphics/door_anims/trainer_hill_roof_elevator.4bpp");
 static const u16 sDoorNullPalette49[16] = {};
+static const u8 sDoorAnimTiles_KantoGeneral[] = INCBIN_U8("graphics/door_anims/generalKantoBig.4bpp");
+static const u16 sDoorNullPalette50[16] = {};
+static const u8 sDoorAnimTiles_KantoGeneralBricks[] = INCBIN_U8("graphics/door_anims/generalKantoBricks.4bpp");
+static const u8 sDoorAnimTiles_KantoGeneralGreyRoof[] = INCBIN_U8("graphics/door_anims/generalKantoGreyRoof.4bpp");
+static const u8 sDoorAnimTiles_CeladonMartDoors[] = INCBIN_U8("graphics/door_anims/CeladonMartDoors.4bpp");
+static const u8 sDoorAnimTiles_GoldenrodMartDoors[] = INCBIN_U8("graphics/door_anims/CeladonMartDoors.4bpp");
+static const u16 sDoorNullPalette51[16] = {};
+static const u8 sDoorAnimTiles_KantoGeneralMartSlide[] = INCBIN_U8("graphics/door_anims/sliding_single_pokemart.4bpp");
+static const u8 sDoorAnimTiles_KantoGeneralCenterSlide[] = INCBIN_U8("graphics/door_anims/sliding_single_pokecenter.4bpp");
+static const u8 sDoorAnimTiles_GenericBuildingInside[] = INCBIN_U8("graphics/door_anims/genericBuilding_inside.4bpp");
+static const u8 sDoorAnimTiles_AzaleaBrownHouse[] = INCBIN_U8("graphics/door_anims/Azalea.4bpp");
+
+
+
+
 
 static const struct DoorAnimFrame sDoorOpenAnimFrames[] =
 {
@@ -167,6 +182,7 @@ static const struct DoorAnimFrame sBigDoorCloseAnimFrames[] =
     {4, -1},
     {0, 0},
 };
+
 
 static const u8 sDoorAnimPalettes_General[] = {1, 1, 1, 1, 1, 1, 1, 1};
 static const u8 sDoorAnimPalettes_PokeCenter[] = {1, 1, 1, 1, 1, 1, 1, 1};
@@ -219,6 +235,16 @@ static const u8 sDoorAnimPalettes_BattleDomePreBattleRoom[] = {9, 9, 7, 7, 7, 7,
 static const u8 sDoorAnimPalettes_BattleTentInterior[] = {9, 9, 9, 9, 9, 9, 9, 9};
 static const u8 sDoorAnimPalettes_TrainerHillLobbyElevator[] = {7, 7, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_TrainerHillRoofElevator[] = {9, 9, 7, 7, 7, 7, 7, 7};
+static const u8 sDoorAnimPalettes_KantoGeneral[] = {3, 3, 3, 3, 2, 2, 2, 2};
+static const u8 sDoorAnimPalettes_KantoGeneralBricks[] = {5, 5, 5, 5, 2, 2, 2, 2};
+static const u8 sDoorAnimPalettes_KantoGeneralGreyRoof[] = {5, 5, 5, 5, 2, 2, 2, 2};
+static const u8 sDoorAnimPalettes_KantoGeneralMartSlide[] = {3, 3, 3, 3, 3, 3, 3, 3};
+static const u8 sDoorAnimPalettes_KantoGeneralCenterSlide[] = {2, 2, 2, 2, 3, 3, 3, 3};
+static const u8 sDoorAnimPalettes_CeladonMartDoors[] = {10, 10, 8, 8, 3, 3, 3, 3};
+static const u8 sDoorAnimPalettes_GoldenrodMartDoors[] = {8, 8, 8, 8, 3, 3, 3, 3};
+static const u8 sDoorAnimPalettes_GenericBuildingInside[] = {6, 6, 6, 6, 9, 9, 9, 9};
+static const u8 sDoorAnimPalettes_AzaleaBrownHouse[] = {12, 12, 12, 12, 2, 2, 2, 2};
+
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
@@ -240,6 +266,7 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_Lilycove_Door,                                DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_Lilycove, sDoorAnimPalettes_Lilycove},
     {METATILE_Lilycove_Door_Wooden,                         DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_LilycoveWooden, sDoorAnimPalettes_LilycoveWooden},
     {METATILE_Mossdeep_Door,                                DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_Mossdeep, sDoorAnimPalettes_Mossdeep},
+    {METATILE_LavaridgeTown_Door,                           DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_Mossdeep, sDoorAnimPalettes_Mossdeep},
     {METATILE_Sootopolis_Door_PeakedRoof,                   DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_SootopolisPeakedRoof, sDoorAnimPalettes_SootopolisPeakedRoof},
     {METATILE_Sootopolis_Door,                              DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_Sootopolis, sDoorAnimPalettes_Sootopolis},
     {METATILE_EverGrande_Door_PokemonLeague,                DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_PokemonLeague, sDoorAnimPalettes_PokemonLeague},
@@ -277,6 +304,16 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_BattleTent_Door,                              DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_BattleTentInterior, sDoorAnimPalettes_BattleTentInterior},
     {METATILE_TrainerHill_Door_Elevator_Lobby,              DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillLobbyElevator, sDoorAnimPalettes_TrainerHillLobbyElevator},
     {METATILE_TrainerHill_Door_Elevator_Roof,               DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillRoofElevator, sDoorAnimPalettes_TrainerHillRoofElevator},
+    {METATILE_GenericBuilding_inside_door,                  DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_GenericBuildingInside, sDoorAnimPalettes_GenericBuildingInside},
+    {METATILE_KantoGeneral_KantoGeneralDoor,                DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_KantoGeneral, sDoorAnimPalettes_KantoGeneral},
+    {METATILE_KantoGeneral_KantoGeneralDoorBricks,          DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_KantoGeneralBricks, sDoorAnimPalettes_KantoGeneralBricks},
+    {METATILE_KantoGeneral_KantoGeneralDoorGreyRoof,        DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_KantoGeneralGreyRoof, sDoorAnimPalettes_KantoGeneralGreyRoof},
+    {METATILE_KantoGeneral_KantoGeneralDoorGRCerulean,      DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_KantoGeneralGreyRoof, sDoorAnimPalettes_KantoGeneralGreyRoof},
+    {METATILE_KantoGeneral_CeladonMartDoors,                DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_CeladonMartDoors, sDoorAnimPalettes_CeladonMartDoors},
+    {METATILE_KantoGeneral_GoldenrodMartDoors,              DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_GoldenrodMartDoors, sDoorAnimPalettes_GoldenrodMartDoors},
+    {METATILE_KantoGeneral_KantoGeneralMartSlide,           DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_KantoGeneralMartSlide, sDoorAnimPalettes_KantoGeneralMartSlide},
+    {METATILE_KantoGeneral_KantoGeneralCenterSlide,         DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_KantoGeneralCenterSlide, sDoorAnimPalettes_KantoGeneralCenterSlide},
+    {METATILE_Ecruteak_AzaleaBrownHouse,                    DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_AzaleaBrownHouse, sDoorAnimPalettes_AzaleaBrownHouse},
     {},
 };
 

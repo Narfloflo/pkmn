@@ -1,0 +1,175 @@
+mapscripts Underwater_Route131_MapScripts {}
+
+script AlphRuinsCave_Text_Scientist {
+    msgbox("This panel makes no sense!\nWhat do you mean it's a child play?!\lI have a PHD!", MSGBOX_NPC)
+    applymovement(2, AlphRuinsCave_Move_Scientist)
+    end
+}
+movement AlphRuinsCave_Move_Scientist {
+        face_original_direction
+        step_end
+}
+
+script AlphRuinsCave_Text_Hiker {
+    msgbox("Scientist called the HIKER CLUB in case\nof landsliding.\lSo far nothing is happening, and I\ldon't think that anything will happen\lsoon.", MSGBOX_NPC)
+    end
+}
+
+script AlphRuinsCave_Text_Gambler {
+    msgbox("The atmosphere here...\nIt reminds me of the worst place I've\lbeen to:\lThe foul smell, the sensation of being\lwatch, the feeling of being surrounded\lby undead...\l.......................................\lYes! That's exactly a retirement home!", MSGBOX_NPC)
+    end
+}
+script AlphRuinsCave_Text_Youngster {
+    msgbox("I think there are ghost around here...", MSGBOX_NPC)
+    end
+}
+script AlphRuinsCave_Text_Channeler {
+    msgbox("The statues... It's like it looking at\nme...\lMay ARCEUS bless my soul.", MSGBOX_NPC)
+    end
+}
+script AlphRuins_Text_Panel {
+    msgbox("{PLAYER}: Hmmm...\nIt's an old panel. Looks like a\lpuzzle...\lHow old am I to do stuff like that\lseriously?", MSGBOX_NPC)
+    end
+}
+
+script AlphRuins_Text_A_Statue {
+    msgbox("{PLAYER}: It looks like a... A?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_B_Statue {
+    msgbox("{PLAYER}: It looks like a... B?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_C_Statue {
+    msgbox("{PLAYER}: It looks like a... C?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_D_Statue {
+    msgbox("{PLAYER}: It looks like a... D?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_E_Statue {
+    msgbox("{PLAYER}: It looks like a... E?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_F_Statue {
+    msgbox("{PLAYER}: It looks like a... F?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_G_Statue {
+    msgbox("{PLAYER}: It looks like a... G?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_H_Statue {
+    msgbox("{PLAYER}: It looks like a... H?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_I_Statue {
+    msgbox("{PLAYER}: It looks like a... I?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_J_Statue {
+    msgbox("{PLAYER}: It looks like a... J?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_K_Statue {
+    msgbox("{PLAYER}: It looks like a... K?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_L_Statue {
+    msgbox("{PLAYER}: It looks like a... L?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_M_Statue {
+    msgbox("{PLAYER}: It looks like a... M?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_N_Statue {
+    msgbox("{PLAYER}: It looks like a... N?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_O_Statue {
+    msgbox("{PLAYER}: It looks like a... O?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_P_Statue {
+    msgbox("{PLAYER}: It looks like a... P?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_Q_Statue {
+    msgbox("{PLAYER}: It looks like a... Q?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_R_Statue {
+    msgbox("{PLAYER}: It looks like a... R?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_S_Statue {
+    msgbox("{PLAYER}: It looks like a... S?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_T_Statue {
+    msgbox("{PLAYER}: It looks like a... T?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_U_Statue {
+    msgbox("{PLAYER}: It looks like a... U?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_V_Statue {
+    msgbox("{PLAYER}: It looks like a... V?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_W_Statue {
+    msgbox("{PLAYER}: It looks like a... W?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_X_Statue {
+    msgbox("{PLAYER}: It looks like a... X?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_Y_Statue {
+    msgbox("{PLAYER}: It looks like a... Y?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_Z_Statue {
+    msgbox("{PLAYER}: It looks like a... Z?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_Question_Statue {
+    msgbox("{PLAYER}: It looks like a... Question mark?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}script AlphRuins_Text_Exclamation_Statue {
+    msgbox("{PLAYER}: It looks like an... Exclamation mark?\nWhat's that?", MSGBOX_NPC)
+    setwildbattle(SPECIES_UNOWN, 25)
+    dowildbattle
+    end
+}

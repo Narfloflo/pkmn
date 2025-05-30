@@ -1,0 +1,16 @@
+mapscripts Route18Doors_MapScripts {}
+
+script Route18_EastEntrance_2F_Text_PalletTownInWest{
+    msgbox("Let's see what the binoculars have\nto show…\pPALLET TOWN is in the west.", MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route18_EastEntrance_2F_Text_PeopleSwimming{
+    msgbox("Let's see what the binoculars have\nto show…\pThere are people swimming.", MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route18_EastEntrance_1F_Text_Guard{
+    msgbox("CYCLING ROAD is all uphill from\nhere.", MSGBOX_NPC)
+    end
+}

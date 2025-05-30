@@ -1,0 +1,30 @@
+mapscripts CinnabarMart_MapScripts {}
+
+script CinnabarMart_Vendor {
+    lock
+    faceplayer
+	msgbox(format("Welcome!\p How may I serve you?"))
+	waitmessage
+	pokemart(CinnabarMartItems)
+	msgbox("Please come again!")
+	release
+    end
+}
+
+mart CinnabarMartItems {
+    ITEM_ULTRA_BALL
+	ITEM_SUPER_POTION
+	ITEM_HYPER_POTION
+	ITEM_REVIVE
+	ITEM_FULL_HEAL
+    ITEM_ESCAPE_ROPE
+    ITEM_MAX_REPEL
+}
+
+script CinnabarMart_Text_Scientist {
+    lock
+    faceplayer
+    msgbox(format("It never hurts to have extra items!"))
+    release
+    end
+}

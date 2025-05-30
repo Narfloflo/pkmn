@@ -1,0 +1,15 @@
+raw`Desert_MapScripts::
+	.byte 0
+`
+script Desert_Text_Hiker {
+    lock
+    faceplayer
+    msgbox(format("Don't get me wrong, there are treasure here, I know it!"))
+    release
+    end
+}
+
+ script Deser_Text_Scientist {
+	msgbox("I'm close to it!\nI know! The mystery behind this place\lis somewhere. I can feel it!\lFinally this operation isn't a total\ldisaster.\l(Maybe for the three people who\ldisappeared without a trace, sadly.)", MSGBOX_NPC)
+	end
+} 

@@ -1,0 +1,12 @@
+mapscripts Route33_MapScripts {}
+
+script Route33_Text_Sign {
+ msgbox("ROUTE 33", MSGBOX_NPC)
+ end   
+}
+
+script Route33_Text_Hiker{
+    trainerbattle_single(TRAINER_JACKSON_4,"Are you in a hurry?\nNo?\lWell, let's fight!", "Outch outch! Sorry..." )
+    msgbox("AZALEA is just a few miles away. You\ncan't really miss it.\lWhat's good to see?\lHmmm... The well and KURT I think?", MSGBOX_NPC)
+    end
+}

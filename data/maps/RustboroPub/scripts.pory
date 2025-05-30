@@ -1,0 +1,59 @@
+mapscripts RustboroPub_MapScripts {
+	MAP_SCRIPT_ON_TRANSITION
+	{
+		gettime
+		if (var(VAR_0x8003) == TIME_NIGHT)
+			{
+				setflag(FLAG_TEMP_1)
+				call_if_set(FLAG_TEMP_1,  RustboroPub_Event_SchoolGirls)
+       		}
+			if (var(VAR_0x8003) == TIME_DAY)
+			{
+				setflag(FLAG_TEMP_1)
+				call_if_set(FLAG_TEMP_2,  RustboroPub_Event_Salaryman)
+       		}
+	}
+}
+
+script RustboroPub_Text_Vendor{
+    lock
+    faceplayer
+	message("Oh a kid!\pNo booze for you.")
+	waitmessage
+	pokemart(RustboroPub_PubItems)
+	msgbox("Don't forget to drink with moderation.")
+	release
+}
+
+mart RustboroPub_PubItems {
+    ITEM_SANDWICH
+	ITEM_SODA_POP
+	ITEM_LEMONADE
+	ITEM_FRESH_WATER
+	ITEM_PEWTER_CRUNCHIES
+    ITEM_LAVA_COOKIE
+}
+
+script RustboroPub_Event_SchoolGirls{
+	removeobject(2)
+	removeobject(3)
+	end
+}
+
+script RustboroPub_Event_Salaryman{
+	removeobject(4)
+	end
+}
+
+script RustboroPub_Text_Lassjr{
+	msgbox("What?\nNo I'm not skipping class. I'm actually\lstudying while eating.\lClever huh?", MSGBOX_NPC)
+	end
+}
+script RustboroPub_Text_Lasssr{
+	msgbox("I'm trying to figure the best way to\nchase after a POOCHYENA without noise.\lIt's for my fieldsearch class!", MSGBOX_NPC)
+	end
+}
+script RustboroPub_Text_Salaryman{
+	msgbox("Sigh... I'm so fed up with my job...\nIt's exhausting...", MSGBOX_NPC)
+	end
+}

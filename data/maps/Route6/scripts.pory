@@ -1,57 +1,106 @@
 mapscripts Route6_MapScripts {
 }
 
-script Route6_Text_RedBattle {
-    trainerbattle_single(TRAINER_RED, Red_Intro, Red_Outro, Mewtwo)
-    msgbox(PostbattleRed, MSGBOX_AUTOCLOSE)
+
+
+script Route6_Text_Door {
+    lock
+    msgbox(format("The UNDERGROUND is close until further notice. Thanks."))
     release
     end
 }
 
-text Red_Intro{
-    "...................\p!!!"
-}
-
-text Red_Outro{
-    "?!"
-}
-
-text PostbattleRed {  
-    format("..........................")
-}
-
-script Mewtwo {
-    special(PlayerFaceTrainerAfterBattle)
-    waitmovement(0)
-    msgbox("{PLAYER}: Huh? I can have it ?")
-    call(GiveMewtwo)
-    release
+script Route6_Text_BugCatcher1 {
+    trainerbattle_single(TRAINER_ABIGAIL_2, "hey ! Wanna see some bugs ?", "Oh wow !")
+    msgbox(format("I'm trying to find something good\nthat's not a BUG POKéMON, but..."), MSGBOX_AUTOCLOSE)
     end
 }
 
-script GiveMewtwo {
-    givemon(SPECIES_MEWTWO, 70)
-    playfanfare(MUS_OBTAIN_ITEM)
-    if(var(MON_GIVEN_TO_PARTY)){
-        msgbox("You received a POKéMON!")
-        
-    }elif(var(MON_GIVEN_TO_PC)){
-        msgbox(format("You received a POKéMON!\pIt was sent to the PC."))
-    }
-    return
-}
-
-script Route6_Text_Pika {
+script Route6_Text_BugCatcher2 {
     lock
     faceplayer
-    playmoncry(SPECIES_PIKACHU, CRY_MODE_NORMAL)
-    msgbox(format("Pika! Pi-piii!\p{PLAYER}: This bastard look tough... I'm in deep shit..."))
+	if(flag(FLAG_TEMP_1)== TRUE){
+		msgbox(format("Thanks you ! I will be careful now !"))
+		release
+		end
+	}else{
+	msgbox("Oh no some POKéMON is running after me !\p HELP !", MSGBOX_NPC)
+    call(Route6_EventScript_Butterfree)	
+	}
+	end
+}
+
+
+script Route6_EventScript_Butterfree{
+	playmoncry(SPECIES_BUTTERFREE, CRY_MODE_ENCOUNTER)
+	waitmoncry
+	setwildbattle(SPECIES_BUTTERFREE, 65)
+	dowildbattle
+	specialvar(VAR_RESULT, GetBattleOutcome)
+	if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+		setflag(FLAG_TEMP_1)
+		applymovement(2,Route6_Move_BugCatcher)
+		waitmovement(0)
+		msgbox(format("Thanks you ! I will be careful now !"))
+		release
+		
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_WON){
+		setflag(FLAG_TEMP_1)
+		applymovement(2,Route6_Move_BugCatcher)
+		waitmovement(0)
+		msgbox(format("Thanks you ! I will be careful now !"))
+		release
+		
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_RAN){
+		setflag(FLAG_TEMP_1)
+		applymovement(2,Route6_Move_BugCatcher)
+		waitmovement(0)
+		msgbox(format("Well, at least it leave me alone !"))
+		release
+		
+	}
+	elif(var(VAR_RESULT) == B_OUTCOME_PLAYER_TELEPORTED){
+		setflag(FLAG_TEMP_1)
+		applymovement(2,Route6_Move_BugCatcher)
+		waitmovement(0)
+		msgbox(format("Well, at least it leave me alone !"))
+		release
+	}
+	end
+}
+
+movement Route6_Move_BugCatcher {
+	face_player
+	step_end
+}
+
+script Route6_Text_Camper {
+    trainerbattle_single(TRAINER_ABIGAIL_3, "I eat a lot of vitamins.\nIt makes me strong !", "Seems like it's not enough...")
+    msgbox(format("I should bring more POKéMON with\nme. I'll feel safer that way."), MSGBOX_AUTOCLOSE)
+    end
+
+}
+
+script Route6_Text_Picnicker {
+    trainerbattle_single(TRAINER_ABIGAIL_4, "You look weak.\nI'll beat you !", "Oh wait don't hit me !")
+    msgbox(format("I want to get stronger.\nWhat's your secret ?"), MSGBOX_AUTOCLOSE)
+    end
+
+}
+
+script Route6_Text_UndergroundSign {
+    lock
+    msgbox(format("UNDERGROUND PATH\nCERULEAN CITY - VERMILION CITY"))
     release
     end
 }
 
-script Route6_Remove_Pika {
-    if(defeated(TRAINER_RED)){
-        removeobject(2)
-    }
+script Route6_Text_Fisherman {
+    lock
+    faceplayer
+    msgbox(format("Oh yeah I'm fishing.\pWhat you thought I had something more interesting to say ? I have a proper life, I'm not a random NPC !"))
+    release
+    end
 }

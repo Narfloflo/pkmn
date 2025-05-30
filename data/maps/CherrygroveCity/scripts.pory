@@ -1,0 +1,71 @@
+mapscripts CherrygroveCity_MapScripts {}
+
+script CherrygroveCity_Text_Youngster {
+    lock
+    faceplayer
+    msgbox(format("Hey ! They built this recently. I think they are selling ICE CREAMS !"))
+    release
+    end
+}
+
+script CherrygroveCity_Text_CitySign {
+    lock
+    msgbox(format("CHERRYGROVE CITY\nThe City of Cute, Fragrant Flowers."))
+    release
+    end
+}
+
+script CherrygroveCity_Text_GuideSign {
+    lock
+    msgbox(format("GUIDE GENT'S HOUSE"))
+    release
+    end
+}
+
+script CherrygroveCity_Text_RestoSign {
+    lock
+    msgbox(format("CHERRYGROVE SEASIDE RESTAURANT"))
+    release
+    end
+}
+
+script CherrygroveCity_Text_Kid {
+    lock
+    faceplayer
+    msgbox(format("I love contemplating the sea... If we SURF throught it, I'm sure we can reach VIOLET CITY."))
+    release
+    end
+}
+
+script CherrygroveCity_Text_Lass {
+    lock
+    faceplayer
+    msgbox(format("It would be great if POKéMON could follow us."))
+    release
+    end
+}
+
+script CherrygroveCity_Text_Man {
+    lock
+    faceplayer
+    msgbox(format("We built this area because we didn't had enough houses. People were living in VIOLET CITY."))
+    release
+    end
+}
+
+script CherrygroveCity_Text_Fisherman {
+    lock
+    faceplayer
+    msgbox(format("In CHERRYGROVE we can fish good POKéMON. No I'm not doing this to eat them ! Except if it looks like a shrimp..."))
+    release
+    end
+}
+
+script CherrygroveCity_Text_Wooper {
+    lock
+    faceplayer
+    playmoncry(SPECIES_WOOPER, CRY_MODE_NORMAL)
+    msgbox(format("{PLAYER}: ... THIS ?"))
+    release
+    end
+}

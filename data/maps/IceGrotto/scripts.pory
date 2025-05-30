@@ -1,0 +1,57 @@
+mapscripts IceGrotto_MapScripts {}
+
+script IceGrotto_Text_Pryce {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_WINONA_3)){
+        msgbox("Huh, a kid...\nYou want to go to MAHOGANY's GYM?\lWell it's closed. I'm training now. I\lheard the new CHAMPION of KANTO is some\lstrong kid.\lHuh, wait, you can help me. Do you\lwanna train with me?", MSGBOX_YESNO)
+        if(var(VAR_RESULT)==1){
+            goto(IceGrotto_Text_PryceFight)
+        }else{
+            msgbox("Well let that old man die then!")
+        }
+    }elif(defeated(TRAINER_WINONA_3)){
+        goto(IceGrotto_Text_PryceRematch)
+    }
+    
+    release
+    end
+}
+
+script IceGrotto_Text_PryceFight {
+    trainerbattle_single(TRAINER_WINONA_3, "Be careful of frostbites!", "I'm amazed!")
+    release
+    end
+}
+
+script IceGrotto_Text_PryceRematch {
+    msgbox("I'm not good enough...\nI need to train myself harder!\lWanna help me?",MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        cleartrainerflag(TRAINER_WINONA_3)
+        trainerbattle_single(TRAINER_WINONA_3, "Be careful of frostbites!", "I'm amazed!")
+    }else{
+        msgbox("You know where to find me if you\nchange your mind.")
+    }
+    release
+    end
+}
+
+script IceGrotto_Text_RematchGuy{
+    lock
+    faceplayer
+    msgbox("Who am I?\nJust your friendly neighborhood\lRematch guy!\lIf you want I can ask all the TRAINERS\lin ROUTE 43 to offer\lyou a rematch.\lWhat do you think?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1){
+        playse(SE_POKENAV_CALL)
+        waitse
+        cleartrainerflag(TRAINER_EDWIN_4)
+        cleartrainerflag(TRAINER_LYDIA_2)
+        cleartrainerflag(TRAINER_LYDIA_3)
+        playse(SE_POKENAV_HANG_UP)
+        waitse
+        msgbox("Alright done! I asked them to pretend\nthey've never seen you before.", MSGBOX_NPC)
+    }else{
+        msgbox("Well if you can't train, don't blame\nme!", MSGBOX_NPC)
+    }
+    release
+    end
+}

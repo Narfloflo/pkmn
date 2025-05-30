@@ -1,0 +1,25 @@
+mapscripts AquaHideout_UnusedRubyMap2_MapScripts {}
+
+script ViridianForest_Text_Youngster {
+    trainerbattle_single(TRAINER_FERNANDO_3, "Hey you came for some battle ?", "And another defeat...")
+    msgbox(format("All my friends are gone now. There are just a few."),MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ViridianForest_Text_Lass {
+    trainerbattle_single(TRAINER_FERNANDO_4, "I found a PIKACHU, wanna see it ?", "Oh rude !")
+    msgbox(format("I heard some places have ELECTRIK POKéMON only."),MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ViridianForest_Text_BugCatcher1 {
+    trainerbattle_single(TRAINER_DALTON_2, "Hey there are a lots of BUGS here", "Watch where you put your step !")
+    msgbox(format("Ssh ! You'll scare the bugs away !"),MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ViridianForest_Text_BugCatcher2 {
+    trainerbattle_single(TRAINER_DALTON_3, "Haha I'm the last one here !\nLet's fight !", "I'm beaten again !")
+    msgbox(format("Sometimes, you can find stuff on the ground ! I'm looking for the stuff I dropped !"),MSGBOX_AUTOCLOSE)
+    end
+}

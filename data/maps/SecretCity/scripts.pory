@@ -27,7 +27,7 @@ raw
         faceplayer
         applymovement(4,SecretCity_Move_Hicker)
         waitmovement(0)
-        msgbox(format("Oh ! You made it that far! You must be a strong TRAINER!\pHave you seen the ruins in the DESERT? We used to live here years ago."))
+        msgbox(format("Oh! You made it that far! You must be a strong TRAINER!\pHave you seen the ruins in the DESERT? We used to live here years ago."))
         release
         end
     }

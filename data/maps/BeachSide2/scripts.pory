@@ -1,27 +1,20 @@
-raw`BeachSide2_MapScripts::
-	.byte 0
 
-`
-script SailorToHoenn2{ 
-    lock
-    faceplayer
-        msgbox("Want to go Back to HOENN ?", MSGBOX_YESNO)
-        if(var(VAR_RESULT) !=0){
-            msgbox("Here we go !")
-            call(WarpToHoenn2)
-        } else{
-            msgbox("I'm standing right here !")
+
+mapscripts BeachSide2_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION
+            {
+                gettime
+                if (var(VAR_0x8003) == TIME_NIGHT || var(VAR_0x8003) == TIME_MIDNIGHT){
+                setflag(FLAG_TEMP_1)
+                call_if_set(FLAG_TEMP_1, OlivineCity_Event_RemoveObject)
+            }
         }
-    release
+}
+
+script OlivineCity_Event_RemoveObject {
+    removeobject(11)
     end
 }
- 
- script WarpToHoenn2{
-    fadescreen(FADE_TO_BLACK)
-    delay(5)
-    warp(MAP_BEACH_SIDE, 76, 43)
-    fadescreen(FADE_FROM_BLACK)
- }
 
 script OlivineCity_Text_SignHarbour {
     lock
@@ -48,7 +41,7 @@ script OlivineCity_Text_LighthouseSign {
 script OlivineCity_Text_PokedexBoy {
     lock
     faceplayer
-    msgbox(format("Wow, you have a POKéDEX!\pThat is just so awesome."))
+    msgbox(format("Wow, you have a POKéDEX!\nThat is just so awesome."))
     release
     end
 }
@@ -64,6 +57,22 @@ script OlivineCity_Text_Artist {
     lock
     faceplayer
     msgbox(format("I love the sea at sunset! I can paint it all day long."))
+    release
+    end
+}
+
+script OlivineCity_Text_OldHouse {
+    lock
+    faceplayer
+    msgbox(format("{PLAYER} : I used to live here... SIGH !\pWhat it has already been sold ?!"))
+    release
+    end
+}
+
+script OlivineCity_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("Hello {PLAYER} ! It's been a while since you move in HOENN. How are you ?"))
     release
     end
 }
@@ -87,7 +96,11 @@ script OlivineCity_Text_LighthouseGuard {
 script OlivineCity_Text_Woman {
     lock
     faceplayer
-    msgbox(format("My little sister is a tough TRAINER. I bet one day she will be a CHAMPION."))
+    if(defeated(TRAINER_NORMAN_2)==true){
+    msgbox(format("{PLAYER}! JASMINE told me you defeated her? She said she still has a long way to become a GYM LEADER. But she won't give up!"))
+    }else{
+        msgbox(format("Hey {PLAYER} it's been a while ! You know that JASMINE has been training really hard since you moved ? She missed you really much..."))
+    }
     release
     end
 }
@@ -95,7 +108,11 @@ script OlivineCity_Text_Woman {
 script OlivineCity_Text_Girl {
     lock
     faceplayer
-    msgbox(format("One of my friend is so strong, even STONE types POKEMON can't harm her."))
+    if(defeated(TRAINER_NORMAN_2)==true){
+    msgbox(format("{PLAYER} you went to MONT MORTAR already?! What you defeat JASMINE?! Our plan was perfect! You must be really tough!"))
+    }else{
+        msgbox(format("{PLAYER} you are back ! JASMINE is training in MONT MORTAR, I heard. You should try to meet her there !"))
+    }
     release
     end
  }
@@ -103,7 +120,43 @@ script OlivineCity_Text_Girl {
 script OlivineCity_Text_Fisherman {
     lock
     faceplayer
-    msgbox(format("Hmpfff! I went to the Restaurant and ate too much. I feel like a SNORLAX; i need to REST."))
+    msgbox(format("Hmpfff! I went to the Restaurant and ate too much. I feel like a SNORLAX;\pI need to REST."))
     release
     end
+}
+
+script OlivineCity_Text_Cook {
+    lock
+    faceplayer
+    message(format("Hey there, I sell a few snacks."))
+    waitmessage
+    pokemart(OlivineCityCook)
+    msgbox(format("Please come again!"))
+    release
+}
+
+mart OlivineCityCook{
+    ITEM_PEWTER_CRUNCHIES
+    ITEM_SANDWICH
+    ITEM_SODA_POP
+    ITEM_NONE
+}
+
+script OlivineCity_Text_MilkGuy {
+    lock
+    faceplayer
+    message(format("Hey there, I sell some MILK!"))
+    waitmessage
+    pokemart(OlivineCityMilker)
+    msgbox(format("Please come again!"))
+    release
+}
+
+mart OlivineCityMilker{
+    ITEM_MOOMOO_MILK
+    ITEM_NONE
+}
+
+script OlivineCity_JasmineHouse{
+    msgbox("JASMINE's House", MSGBOX_NPC)
 }

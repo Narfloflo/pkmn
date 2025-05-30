@@ -1,0 +1,6 @@
+mapscripts Route105_CaveExit_MapScripts {MAP_SCRIPT_ON_TRANSITION:Route105_CaveExit_OnResume}
+
+script Route105_CaveExit_OnResume {
+    setdivewarp(MAP_UNDERWATER_ROUTE105BIS,4,2)
+    end
+}

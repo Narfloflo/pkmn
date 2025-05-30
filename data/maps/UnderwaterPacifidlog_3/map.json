@@ -3,7 +3,7 @@
   "name": "UnderwaterPacifidlog_3",
   "layout": "LAYOUT_UNDERWATER_PACIFIDLOG_3",
   "music": "MUS_CAVE_OF_ORIGIN",
-  "region_map_section": "MAPSEC_ONE_ISLAND",
+  "region_map_section": "MAPSEC_OUTCAST_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_FOG_HORIZONTAL",
   "map_type": "MAP_TYPE_UNDERGROUND",

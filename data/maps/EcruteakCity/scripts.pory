@@ -1,0 +1,110 @@
+mapscripts EcruteakCity_MapScripts {}
+
+script EcruteakCity_Text_Kimono {
+    lock
+    faceplayer
+    msgbox(format("Here is the DANCE THEATER. You can enjoy some traditional dances inside. My colleagues are also TRAINERS. Be careful !"))
+    release
+    end
+}
+
+script EcruteakCity_Text_Sage {
+    lock
+    faceplayer
+    msgbox(format("The way to the TIN TOWER is closed, except for a TRAINER with a pure heart (But I don't think it exist...)."))
+    release
+    end
+}
+
+script EcruteakCity_Text_Sage2 {
+    lock
+    faceplayer
+    msgbox(format("Hello ! The GYM is closed. Yeah I know... MORTIMER isn't inside so, what's the point of opening it..."))
+    release
+    end
+}
+
+script EcruteakCity_Text_WomanBeforeTower {
+    lock
+    faceplayer
+    msgbox(format("This tower is really gloomy. It give me chills... Brrrrrrrr !"))
+    release
+    end
+}
+
+script EcruteakCity_Text_Girl {
+    lock
+    faceplayer
+    msgbox(format("I'm about to practice my dancing skills in the DANCE THEATER. You think I'll need my EEVEE ?"))
+    release
+    end
+}
+
+script EcruteakCity_Text_BaldingMan {
+    lock
+    faceplayer
+    msgbox(format("ECRUTEAK use to have two towers : One in the east and another one in the west."))
+    release
+    end
+}
+
+script EcruteakCity_Text_FatMan1 {
+    lock
+    faceplayer
+    msgbox(format("In OLIVINE CITY there is a POKéMON named AMPHY that enlight the sea from the LIGHTHOUSE. I heard a girl named JASMINE is really close to this POKéMON."))
+    release
+    end
+}
+
+script EcruteakCity_Text_Maniac {
+    lock
+    faceplayer
+    msgbox(format("I'm only here so sometime, but it feel like I've been trapped into a time portal. Look at this architecture !"))
+    release
+    end
+}
+
+script EcruteakCity_Text_OldMan {
+    lock
+    faceplayer
+    msgbox(format("I don't know why we are no rebuilding the BRASS TOWER.\pI mean look at this mess !"))
+    release
+    end
+}
+
+script EcruteakCity_Text_BurnTower {
+    lock
+    msgbox(format("BURNED TOWER\nIt was destroyed by a mysterious fire. Please stay away, as it is unsafe."))
+    release
+    end
+}
+
+script EcruteakCity_Text_DanceTheater {
+    lock
+    msgbox(format("ECRUTEAK DANCE THEATER"))
+    release
+    end
+}
+
+script EcruteakCity_Text_CitySign {
+    lock
+    msgbox(format("ECRUTEAK CITY\nA Historical City where the Past meets the Present."))
+    release
+    end
+}
+
+script EcruteakCity_Text_GymSign {
+    lock
+    msgbox(format("ECRUTEAK CITY POKéMON GYM LEADER: MORTY\pThe Mystic Seer of the Future."))
+    release
+    end
+}
+
+script EcruteakCity_Text_Eevee {
+    lock
+    faceplayer
+    playmoncry(SPECIES_EEVEE, CRY_MODE_NORMAL)
+    msgbox(format("Eeeevee !"))
+    release
+    end
+}

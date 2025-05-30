@@ -1,0 +1,48 @@
+mapscripts SlateportDocks2_MapScripts {}
+
+script SlateportDocks_Text_Worker {
+    lock
+    faceplayer
+    msgbox(format("I have to fix the warehouse. Somehow, they decide to build it close to a WILD POKéMON nest!"))
+    release
+    end
+}
+
+script SlateportDocks_Text_Sailor {
+    lock
+    faceplayer
+    msgbox(format("This extension of SLATEPORT CITY was built to assure international shipping!"))
+    release
+    end
+}
+
+script SlateportDocks_Text_Camper {
+    lock
+    faceplayer
+    msgbox(format("Mmmpf! I was recruit to prevent WILD POKéMON from running into the CITY but all my TEAM is out..."))
+    release
+    end
+}
+
+script SlateportDocks_Text_Woman {
+    lock
+    faceplayer
+    msgbox(format("I really want to go to KANTO, but the SAILOR inside can't unless you are strong enough or have a TICKET. But They sold it all..."))
+    release
+    end
+}
+
+
+script SlateportDocks_Text_Worker2 {
+    msgbox("I'm sorry but I can't let you in the\nLIGHTHOUSE.", MSGBOX_NPC)
+    end
+}
+
+script SlateportDocks_Text_LighthouseSign {
+    msgbox("SLATEPORT LIGHTHOUSE", MSGBOX_SIGN)
+    end
+}
+script SlateportDocks_Text_DocksSign {
+    msgbox("SLATPORT DOCKS\n“We will travel you to the world!”", MSGBOX_SIGN)
+    end
+}

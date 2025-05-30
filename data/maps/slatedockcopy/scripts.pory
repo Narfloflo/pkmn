@@ -1,42 +1,109 @@
 raw`slatedockcopy_MapScripts::
 	.byte 0
 `
-script SailorToKanto{ 
+script SlateportDocksInside_Text_Sailor {
     lock
     faceplayer
-    if(flag(FLAG_DEFEATED_MOSSDEEP_GYM)) {
-        msgbox(format("So you beat all the CHAMPIONS of HOENN, good. I can take you to KANTO, only if you want."), MSGBOX_YESNO)
-        if(var(VAR_RESULT) !=0){
-            msgbox("Please, come in !")
-            applymovement(1, moveToShip)
-            applymovement(OBJ_EVENT_ID_PLAYER, MoveInShip)
-            waitmovement(0)
-
-            call(WarpToKanto)
-        } else{
-            msgbox("Another time then !")
-        }
-     } else {
-        msgbox(format("I'm sorry but I can't take you to KANTO. You haven't receive all the BADGES. Come once you have them all."))
+    if (flag(FLAG_IS_CHAMPION)) {
+        call(SlateportDocksInside_Text_Choice)
+        release
+        end
+    }else{
+        msgbox("I'm sorry but I can't take you to\nKANTO. You don't have a TICKET and you\lare a nobody.\pSorry.", MSGBOX_NPC)
+        end
     }
     release
     end
 }
- 
- script WarpToKanto{
+
+script SlateportDocksInside_Text_Choice {
+    msgbox("Oh! The famous TRAINER {PLAYER}!\nIt would be an honour to bring you to\lKANTO or JOHTO!\lAre you willing to go onboard?", MSGBOX_AUTOCLOSE)
+    multichoice(20, 8, MULTI_UNUSED_9, TRUE)
+    switch(var(VAR_RESULT)) {
+        case 0: call(SlateportDocksInside_Text_WarpToJohto)
+        case 1: call(SlateportDocksInside_Text_WarpToKanto)
+        case 2: call(SlateportDocksInside_Text_Exit)
+    }
+    return
+}
+
+script SlateportDocksInside_Text_Exit {
+    msgbox("Another time then!", MSGBOX_NPC)
+    end
+}
+
+ script SlateportDocksInside_Text_WarpToKanto{
+    msgbox("Please, come in!", MSGBOX_AUTOCLOSE)
+    applymovement(1, SlateportDocksInside_Move_moveToShip)
+    applymovement(OBJ_EVENT_ID_PLAYER, SlateportDocksInside_Move_MoveInShip)
+    waitmovement(0)
     fadescreen(FADE_TO_BLACK)
     playse(SE_RG_SS_ANNE_HORN)
-    delay(60)
-    warp(MAP_VERMILION, 16, 45)
+    waitse
+    delay(12)
+    warp(MAP_VERMILION, 16, 51)
     fadescreen(FADE_FROM_BLACK)
+    end
  }
- movement moveToShip {
+ 
+ script SlateportDocksInside_Text_WarpToJohto{
+    msgbox("Please, come in!", MSGBOX_AUTOCLOSE)
+    applymovement(1, SlateportDocksInside_Move_moveToShip)
+    applymovement(OBJ_EVENT_ID_PLAYER, SlateportDocksInside_Move_MoveInShip)
+    waitmovement(0)
+    fadescreen(FADE_TO_BLACK)
+    playse(SE_RG_SS_ANNE_HORN)
+    waitse
+    delay(12)
+    warp(MAP_OLIVINE_CITY_PORT, 6, 16)
+    fadescreen(FADE_FROM_BLACK)
+    end
+ }
+
+  movement SlateportDocksInside_Move_moveToShip {
     walk_left
     face_right
     step_end
  }
- movement MoveInShip {
+ movement SlateportDocksInside_Move_MoveInShip {
      walk_up *2
      set_invisible
      step_end
  }
+
+ script SlateportDocksInside_Text_Salaryman {
+    msgbox("I need a ticket to JOHTO, but\napparently the boat is full...", MSGBOX_NPC)
+    end
+}
+
+script SlateportDocksInside_Text_Beauty {
+    lock
+    faceplayer
+    if(flag(FLAG_IS_CHAMPION)) {
+    msgbox(format("Oh seems like you are strong enough to go to KANTO freely ! Amazing Right ?"))
+    } else {
+    msgbox(format("Hello, you want a ticket for KANTO ? Well unfortunatly we sold them all..."))
+    }
+    release
+    end
+}
+
+script SlateportDocksInside_Text_Man2 {
+    lock
+    faceplayer
+      if(flag(FLAG_IS_CHAMPION)){
+        msgbox(format("I'M REALLY MAD RIGHT NOW ! WHERE IS THE FERRY !!???"))
+    } elif(flag(FLAG_DEFEATED_SOOTOPOLIS_GYM)){
+        msgbox(format("My friend is coming in a minute... Yeah in a minute...\pSIGH !"))
+    } elif(flag(FLAG_DEFEATED_FORTREE_GYM)){
+        msgbox(format("Huh I think there is something wrong with the FERRY ! I'm starting to lose my temper !!"))
+    } elif(flag(FLAG_DEFEATED_PETALBURG_GYM)) {
+    msgbox(format("It seems that the FERRY is delayed. But it's fine, I can wait a bit longer for my friend."))
+    } elif(flag(FLAG_DEFEATED_DEWFORD_GYM)) {
+    msgbox(format("Hi, I'm waiting for a friend coming from KANTO. He should come in a few minutes..."))
+    } else {
+        msgbox(format("Hi, I'm waiting for a friend coming from KANTO. He should come in a few minutes..."))
+    }
+    release
+    end
+}

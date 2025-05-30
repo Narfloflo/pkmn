@@ -32,11 +32,16 @@
       "map": "MAP_UNDERWATER_ROUTE128",
       "offset": 0,
       "direction": "dive"
+    },
+    {
+      "map": "MAP_NEW_MAP3",
+      "offset": 17,
+      "direction": "left"
     }
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMING_ATHLETE_M",
       "x": 35,
       "y": 33,
       "elevation": 1,
@@ -49,7 +54,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMING_ATHLETE_F",
       "x": 78,
       "y": 24,
       "elevation": 1,

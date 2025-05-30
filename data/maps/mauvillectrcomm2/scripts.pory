@@ -1,0 +1,25 @@
+mapscripts mauvillectrcomm2_MapScripts {}
+
+script mauvillectrcomm2_Text_RichGuy {
+    lock
+    faceplayer
+    msgbox("My brother is a real geek:\nHe is stuck in the MALL with his\lGameBoy and he proposes to exchange\lyour own POKéMON for your own POKéMON.\lYeah weird I know... I don't see the\lpoint.")
+    release
+    end
+}
+
+script mauvillectrcomm2_Text_Aroma {
+    lock
+    faceplayer
+    msgbox(format("Our electricity is generated under the\ncity by an old generator.\lI'm a bit scared if it explode...!"))
+    release
+    end
+}
+
+script mauvillectrcomm2_Text_ScientistF {
+    lock
+    faceplayer
+    msgbox(format("You can find a lot of ELECTRIC POKéMON\nunder MAUVILLE."))
+    release
+    end
+}

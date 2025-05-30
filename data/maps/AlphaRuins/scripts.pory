@@ -1,0 +1,27 @@
+mapscripts AlphaRuins_MapScripts {}
+
+script AlphRuins_Text_Center {
+    msgbox("Ruins of Alph\nResearch Center\lThe Authority On The Ruins of Alph", MSGBOX_SIGN)
+    end
+}
+
+script AlphRuins_Text_Engineer {
+    msgbox("I'm trying to break the boulders here.\nBut I feel something odd around...\lLike a milions eyes watching me...\lGlups!", MSGBOX_NPC)
+    end
+}
+
+script AlphRuins_Text_Scientist1 {
+    msgbox("We've been investigating this site for\n7 years.\lYet we have made any major\lbreakthrough.", MSGBOX_NPC)
+    end
+}
+
+script AlphRuins_Text_Scientist2 {
+    msgbox("There are some panel in the differents\nruins.\lWe can't figure this out...", MSGBOX_NPC)
+    end
+}
+
+script AlphRuins_Text_Thief{
+    trainerbattle_single(TRAINER_TRENT_2,"Are you in a hurry?\nNo?\lWell, let's fight!", "Outch outch! Sorry..." )
+    msgbox("AZALEA is just a few miles away. You\ncan't really miss it.\lWhat's good to see?\lHmmm... The well and KURT I think?", MSGBOX_NPC)
+    end
+}

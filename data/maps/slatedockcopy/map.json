@@ -3,7 +3,7 @@
   "name": "slatedockcopy",
   "layout": "LAYOUT_SLATEDOCKCOPY",
   "music": "MUS_RG_SS_ANNE",
-  "region_map_section": "MAPSEC_ROUTE_9",
+  "region_map_section": "MAPSEC_SLATEPORT_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -15,16 +15,16 @@
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR_KANTO",
       "x": 8,
       "y": 9,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SailorToKanto",
+      "script": "SlateportDocksInside_Text_Sailor",
       "flag": "0"
     },
     {
@@ -39,6 +39,45 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+      "x": 4,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SlateportDocksInside_Text_Beauty",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SALARYMAN",
+      "x": 13,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SlateportDocksInside_Text_Salaryman",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
+      "x": 2,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SlateportDocksInside_Text_Man2",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -46,15 +85,15 @@
       "x": 11,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_SLATEPORT_DOCKS2",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_SLATEPORT_CITY",
+      "dest_warp_id": "24"
     },
     {
       "x": 10,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_SLATEPORT_DOCKS2",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_SLATEPORT_CITY",
+      "dest_warp_id": "24"
     }
   ],
   "coord_events": [

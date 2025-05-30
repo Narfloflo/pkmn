@@ -2,8 +2,8 @@
   "id": "MAP_SECRET_CITY",
   "name": "SecretCity",
   "layout": "LAYOUT_SECRET_CITY",
-  "music": "MUS_RG_SEVII_45",
-  "region_map_section": "MAPSEC_PALLET_TOWN",
+  "music": "MUS_PETALBURG",
+  "region_map_section": "MAPSEC_SEVEN_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_DROUGHT",
   "map_type": "MAP_TYPE_TOWN",
@@ -82,8 +82,8 @@
   ],
   "warp_events": [
     {
-      "x": 22,
-      "y": 11,
+      "x": 23,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_DESERTPKMN",
       "dest_warp_id": "0"
@@ -110,11 +110,18 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 24,
-      "y": 6,
+      "x": 23,
+      "y": 5,
       "elevation": 0,
       "dest_map": "MAP_SECRET_GYM",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 12,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_SECRETHOUSE",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
@@ -128,6 +135,54 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "SecretCity_Text_LocationSign"
+    },
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 24,
+      "y": 17,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
+    },
+    {
+      "type": "sign",
+      "x": 20,
+      "y": 17,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
     }
   ]
 }

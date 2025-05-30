@@ -8,13 +8,6 @@ Mossdeep__EventScript_SpaceStation::
 	return
 
 
-Mossdeep__EventScript_MohaBattle::
-	trainerbattle_single TRAINER_MOHA, Moha_Intro, Moha_Outro
-	msgbox PostbattleMoha, MSGBOX_AUTOCLOSE
-	waitmessage
-	end
-
-
 Mossdeep__Text_Seagate::
 	lock
 	msgbox Mossdeep__Text_Seagate_Text_0
@@ -54,6 +47,35 @@ Mossdeep__Text_Attendant::
 	end
 
 
+Mossdeep__Text_School::
+	lock
+	msgbox Mossdeep__Text_School_Text_0
+	release
+	end
+
+
+Mossdeep__Event_SchoolClosed::
+	gettime
+	compare VAR_0x8003, TIME_NIGHT
+	goto_if_eq Mossdeep__Event_SchoolClosed_2
+	compare VAR_0x8003, TIME_MIDNIGHT
+	goto_if_eq Mossdeep__Event_SchoolClosed_2
+	release
+	end
+
+Mossdeep__Event_SchoolClosed_2:
+	lock
+	msgbox Mossdeep__Event_SchoolClosed_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, Mossdeep__Move_Stepback
+	waitmovement 0
+	release
+	end
+
+
+Mossdeep__Move_Stepback:
+	walk_down
+	step_end
+
 Mossdeep__EventScript_SpaceStation_Text_0:
 	.string "Space Stations.\nBe Aware of the wild Pokemons !$"
 
@@ -77,15 +99,13 @@ Mossdeep__Text_Sailor_Text_0:
 
 Mossdeep__Text_Attendant_Text_0:
 	.string "Hello.\p"
-	.string "This ship is strictly reserved for none\n"
-	.string "TRAINERS. We can't take you onboard.\p"
+	.string "This ship is strictly reserved for\n"
+	.string "regular persons. We can't take you\l"
+	.string "onboard.\p"
 	.string "I'm sorry.$"
 
-Moha_Intro::
-	.string "I'm so fricking rich !$"
+Mossdeep__Text_School_Text_0:
+	.string "MOSSDEEP SCHOOL$"
 
-Moha_Outro::
-	.string "But I'm so weak...$"
-
-PostbattleMoha::
-	.string "I'll ask my dad to buy me\na KYOGRE next time.$"
+Mossdeep__Event_SchoolClosed_Text_0:
+	.string "{PLAYER}: The SCHOOL is closed during\nthe night...$"

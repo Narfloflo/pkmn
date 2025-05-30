@@ -1,0 +1,37 @@
+mapscripts Route118_119Junction_MapScripts {}
+
+script Route118_119Junction_Text_Fisherman {
+    if(var(FLAG_BADGE05_GET) == FALSE){
+        call(Route118_119Junction_Text_Fisherman_MovetoMauville)
+        end
+    }else{
+       msgbox("Hey kid! Have you seen my dear SUSHI?\nSo beautiful!\lAnd to say that it was a mere MAGIKARP\ljust a few months ago.", MSGBOX_NPC)
+       end
+    }
+}
+
+script Route118_119Junction_Text_Gyarados {
+    playmoncry(SPECIES_GYARADOS, CRY_MODE_NORMAL)
+    msgbox("SUSHI: Grooooowaa!", MSGBOX_NPC)
+    end
+}
+
+script Route118_119Junction_Text_Fisherman_MovetoMauville {
+    lock
+    faceplayer
+    msgbox("Wow kid! You came from this forest!\nIt's like huge! I wont put my legs\linside.\lAnyway, you look stuck here.\lDo you want to ride with my lovely\lSUSHI to ROUTE 118?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == TRUE){
+        msgbox("Alright! let's go SUSHI!", MSGBOX_DEFAULT)
+        playmoncry(SPECIES_GYARADOS, CRY_MODE_NORMAL)
+        waitmoncry
+        fadescreen(FADE_TO_BLACK)
+        warp(MAP_ROUTE118, 15, 14)
+        fadescreen(FADE_FROM_BLACK)
+        release
+        end
+    }else{
+       msgbox("Ah I see! You are trying to find the\nbest place to fish right?\lA true master!", MSGBOX_NPC)
+       release
+       end
+    }
+}

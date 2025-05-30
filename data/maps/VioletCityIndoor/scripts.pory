@@ -1,0 +1,36 @@
+mapscripts VioletCityIndoor_MapScripts {}
+
+script VioletCityInside_Text_KrisMom {
+    msgbox("Oh hello!\nDo you go to EARL's SCHOOL? No?\lYou probably don't know my daughter\lKRIS.\lShe's the best student! We are very\lproud of her in VIOLET CITY!", MSGBOX_NPC)
+    end
+}
+
+script VioletCityInside_Text_LittleBoy {
+    msgbox("I want a POKéMON to TRADE it but my\ndad says I'm too young...\lSIGH...", MSGBOX_NPC)
+    release
+    end
+}
+
+script VioletCityInside_Text_BaldMan {
+    msgbox("You know that traded POKéMON grow\nquicker?\lYeah?\lAnd that you need certains BADGES\lotherwise they won't obey you?\lYEAH?!\lDamn it!\lKids nowadays are so smart!", MSGBOX_NPC)
+    end
+}
+
+script VioletCityInside_Text_Birdkeeper {
+    msgbox("The ZEPHYR BADGE is named after an\nancient god of the west wind.\lVery fitting for the FLYING type GYM.", MSGBOX_NPC)
+    end
+}
+script VioletCityInside_Text_Lass {
+    msgbox("BELLSPROUT is a popular POKéMON in this\ntown.\lIt doesn't do well against our GYM\lLEADER, though...", MSGBOX_NPC)
+    end
+}
+
+script VioletCityInside_Text_Lady {
+    msgbox("I heard of a dancing tree.\nOdd isn't it?", MSGBOX_NPC)
+    end
+}
+
+script VioletCityInside_Text_Cooltrainer {
+    msgbox("WALKNER, FALKNER's dad is currently\ntraveling around the world.\lThat's why the GYM is closed.\lI wonder where he is currently?", MSGBOX_NPC)
+    end
+}

@@ -1,0 +1,31 @@
+mapscripts PewterMart_MapScripts {}
+
+script Pewter_Mart_Youngster {
+    lock
+    faceplayer
+    msgbox(format("Wow! A shady guy got me to buy this really weird fish POKéMON! It's totally weak and it cost $500!"))
+    release
+    end
+}
+
+script PewterMart_Vendor {
+    lock
+    faceplayer
+	msgbox(format("Welcome!\p How may I serve you?"))
+	waitmessage
+	pokemart(PewterMartItems)
+	msgbox("Please come again!")
+	release
+    end
+}
+
+mart PewterMartItems {
+    ITEM_POKE_BALL
+	ITEM_SUPER_POTION
+	ITEM_REVIVE
+	ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+    ITEM_ESCAPE_ROPE
+    ITEM_REPEL
+    ITEM_HARBOR_MAIL
+}

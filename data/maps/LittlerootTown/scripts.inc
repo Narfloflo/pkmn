@@ -1019,3 +1019,137 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
 
+LittlerootTown_Event_HeadingtoRoute101::
+	compare VAR_BIRCH_LAB_STATE, 3
+	goto_if_lt LittlerootTown_Event_HeadingtoRoute101_2
+	releaseall
+	end
+
+LittlerootTown_Event_HeadingtoRoute101_2:
+	lockall
+	msgbox LittlerootTown_Event_HeadingtoRoute101_Text_0, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_NoPokemon
+	waitmovement OBJ_EVENT_ID_PLAYER
+	releaseall
+	end
+
+
+LittlerootTown_Movement_NoPokemon:
+	walk_down
+	step_end
+
+LittlerootTown_Event_Momcalling::
+	lockall
+	msgbox LittlerootTown_Event_Momcalling_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_NoShoes
+	waitmovement OBJ_EVENT_ID_PLAYER
+	releaseall
+	end
+
+
+LittlerootTown_Movement_NoShoes:
+	walk_up
+	step_end
+
+LittlerootTown_Text_Vendor::
+	lock
+	faceplayer
+	message LittlerootTown_Text_Vendor_Text_0
+	waitmessage
+	pokemart LittlerootTownMart
+	msgbox LittlerootTown_Text_Vendor_Text_1
+	release
+	end
+
+
+	.align 2
+LittlerootTownMart:
+	.2byte ITEM_SILK_SCARF
+	.2byte ITEM_LAVA_COOKIE
+	.2byte ITEM_NONE
+
+LittlerootTown_Text_Littlegirl::
+	lock
+	faceplayer
+	msgbox LittlerootTown_Text_Littlegirl_Text_0
+	release
+	end
+
+
+LittlerootTown_Text_MarketSign::
+	lock
+	msgbox LittlerootTown_Text_MarketSign_Text_0
+	release
+	end
+
+
+LittlerootTown_Text_Woman::
+	lock
+	faceplayer
+	goto_if_set FLAG_IS_CHAMPION, LittlerootTown_Text_Woman_1
+	msgbox LittlerootTown_Text_Woman_Text_1
+	release
+	end
+
+LittlerootTown_Text_Woman_1:
+	msgbox LittlerootTown_Text_Woman_Text_0
+	release
+	end
+
+
+LittlerootTown_Text_Artist::
+	lock
+	faceplayer
+	msgbox LittlerootTown_Text_Artist_Text_0
+	release
+	end
+
+
+LittlerootTown_Text_Littleboy::
+	lock
+	faceplayer
+	msgbox LittlerootTown_Text_Littleboy_Text_0
+	release
+	end
+
+
+LittlerootTown_Event_HeadingtoRoute101_Text_0:
+	.string "{PLAYER} : Yeah I don't think going\n"
+	.string "outside without a POKéMON is a good\l"
+	.string "thing.$"
+
+LittlerootTown_Event_Momcalling_Text_0:
+	.string "{PLAYER} : Is it my MOM calling me ?$"
+
+LittlerootTown_Text_Vendor_Text_0:
+	.string "Hi I'm selling a few things.\nHave a look.$"
+
+LittlerootTown_Text_Vendor_Text_1:
+	.string "Come again.$"
+
+LittlerootTown_Text_Littlegirl_Text_0:
+	.string "This place is the MARKET PLACE.\n"
+	.string "But since it's a small TOWN, there is\l"
+	.string "only one vendor.$"
+
+LittlerootTown_Text_MarketSign_Text_0:
+	.string "LITTLEROOT TOWN MARKET$"
+
+LittlerootTown_Text_Woman_Text_0:
+	.string "Hello neighbor, I hope you enjoy your\n"
+	.string "new life here !\p"
+	.string "{PLAYER} : Well, yeah I saved the\n"
+	.string "World and became HOENN Champion, so...$"
+
+LittlerootTown_Text_Woman_Text_1:
+	.string "Hello neighbor, I hope you enjoy your\n"
+	.string "new life here !$"
+
+LittlerootTown_Text_Artist_Text_0:
+	.string "Oh hello, I'm tending my garden.\n"
+	.string "I hope I'll have some BERRIES soon.$"
+
+LittlerootTown_Text_Littleboy_Text_0:
+	.string "Hey !\n"
+	.string "I'm running all around because I'm not\l"
+	.string "old enough to go to SCHOOL.$"

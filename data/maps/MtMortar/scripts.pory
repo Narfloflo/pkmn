@@ -1,0 +1,59 @@
+mapscripts MtMortar_MapScripts {}
+
+script MtMortar_Text_Jasmine {
+    lock
+    faceplayer
+    if(!defeated(TRAINER_NORMAN_2)){
+        msgbox(format("{PLAYER}! You are back in JOHTO?!\nSo how are you doing?\l....................\lWow I'm impressed! What about me?\lWell I'm training here because I\lwant to become a GYM lEADER!\lSince you left OLIVINE I've heard\lthat you became a TRAINER. So I\lwanted to become one too!\lSo, is HOENN's CHAMPION gonna help\lme achieve my dream?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT)==1){
+            goto(MtMortar_Text_JasmineFight)
+        }else{
+            msgbox(format("Oh you meanie!"))
+        }
+    }elif(defeated(TRAINER_NORMAN_2)){
+        goto(MtMortar_Text_JasmineRematch)
+    }
+    
+    release
+    end
+}
+
+script MtMortar_Text_JasmineFight {
+    trainerbattle_single(TRAINER_NORMAN_2, "Yeah! A proper fight !", "I lost... But I'm not sad haha!",MtMortar_Text_JasminePostFight)
+    release
+    end
+}
+
+script MtMortar_Text_JasminePostFight {
+    msgbox(format("You really are strong. I still\nhave a long way to become a GYM\lLEADER.\l{PLAYER} you know you are really\lstrong for a simple TRAINER! I'm\lpretty sure in a few months you'll\lbe a GYM LEADER. Just send a mail\lto the LEAGUE, they'll approuve it\lI'm sure. I'll even support you!\lJASMINE: Thanks you {PLAYER}! You\lare the best!\lI'll still be training here until\lI learn something new!\lThanks again!"))
+}
+
+script MtMortar_Text_JasmineRematch {
+    msgbox(format("{PLAYER}, I'm still training, but\nI admit that fighting against you\lwould help me improve my skills.\lWould you help me?"),MSGBOX_YESNO)
+    if(var(VAR_RESULT)==1){
+        cleartrainerflag(TRAINER_NORMAN_2)
+        trainerbattle_single(TRAINER_NORMAN_2, "Let me show you how I handle this\nsituation!", "I lose again...")
+    }else{
+        msgbox(format("Oh ok, it's fine. I'll be there just in case you change your mind."))
+    }
+    release
+    end
+}
+
+script MtMortar_Text_Maniac1 {
+    trainerbattle_single(TRAINER_CORY_2, "Are you lost?","Oh not again!")
+    msgbox("I came to explore MT. MORTAR, but I got\nblasted by a KARATE master, then by\lyou.\lGrumbl...", MSGBOX_NPC)
+    end
+}
+
+script MtMortar_Text_Maniac2 {
+    trainerbattle_single(TRAINER_CORY_3, "Are you also here to train?","I don't think you need to train harder!")
+    msgbox("There's a karate dude that battled me.\nHe was ridiculously good.\lHe just thrashed us silly. He went\lsomewhere saying it was for his\ltraining.\lI wonder how he is?", MSGBOX_NPC)
+    end
+}
+
+script MtMortar_Text_Blackbelt {
+    trainerbattle_single(TRAINER_CORY_4, "You will help me in my training.\nEn garde!","Yet another kid smashed me.")
+    msgbox("I bow to you.", MSGBOX_NPC)
+    end
+}

@@ -1,0 +1,6 @@
+mapscripts BlackAzaleaInside_MapScripts {}
+
+script AzaleaTownMart_Text_Man {
+    msgbox("If only KURT could industrialized his\nBALLS crafting...", MSGBOX_NPC)
+    end
+}

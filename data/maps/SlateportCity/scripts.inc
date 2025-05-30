@@ -40,13 +40,13 @@ SlateportCity_EventScript_EnterSlateport::
 	return
 
 SlateportCity_EventScript_MovePeopleForSternInterview::
-	setobjectxyperm LOCALID_CAPT_STERN, 28, 13
-	setobjectxyperm LOCALID_OLD_WOMAN, 25, 13
-	setobjectxyperm LOCALID_RICH_BOY, 25, 14
-	setobjectxyperm LOCALID_COOK, 27, 16
-	setobjectxyperm LOCALID_GIRL, 28, 16
-	setobjectxyperm LOCALID_FAT_MAN, 29, 16
-	setobjectxyperm LOCALID_MAN_1, 31, 14
+	setobjectxyperm LOCALID_CAPT_STERN, 52, 13
+	setobjectxyperm LOCALID_OLD_WOMAN, 49, 13
+	setobjectxyperm LOCALID_RICH_BOY, 49, 14
+	setobjectxyperm LOCALID_COOK, 51, 16
+	setobjectxyperm LOCALID_GIRL, 52, 16
+	setobjectxyperm LOCALID_FAT_MAN, 53, 16
+	setobjectxyperm LOCALID_MAN_1, 55, 14
 	setobjectmovementtype LOCALID_CAPT_STERN, MOVEMENT_TYPE_FACE_DOWN
 	setobjectmovementtype LOCALID_OLD_WOMAN, MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT
 	setobjectmovementtype LOCALID_RICH_BOY, MOVEMENT_TYPE_FACE_UP_AND_RIGHT
@@ -60,12 +60,12 @@ SlateportCity_EventScript_SetReadyForScottScene::
 	setflag FLAG_HIDE_MAP_NAME_POPUP
 	getplayerxy VAR_0x8004, VAR_0x8005
 	goto_if_eq VAR_0x8004, 30, SlateportCity_EventScript_MoveScottLeft
-	setobjectxyperm LOCALID_SCOTT, 23, 27
+	setobjectxyperm LOCALID_SCOTT, 47, 27
 	setobjectmovementtype LOCALID_SCOTT, MOVEMENT_TYPE_FACE_RIGHT
 	return
 
 SlateportCity_EventScript_MoveScottLeft::
-	setobjectxyperm LOCALID_SCOTT, 22, 27
+	setobjectxyperm LOCALID_SCOTT, 46, 27
 	setobjectmovementtype LOCALID_SCOTT, MOVEMENT_TYPE_FACE_RIGHT
 	return
 
@@ -101,7 +101,7 @@ SlateportCity_EventScript_ScottScene::
 	applymovement LOCALID_SCOTT, SlateportCity_Movement_ScottExit
 	waitmovement 0
 	removeobject LOCALID_SCOTT
-	setobjectxyperm LOCALID_SCOTT, 10, 12
+	setobjectxyperm LOCALID_SCOTT, 34, 12
 	setobjectmovementtype LOCALID_SCOTT, MOVEMENT_TYPE_FACE_DOWN
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	setvar VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 2
@@ -897,13 +897,13 @@ SlateportCity_EventScript_ScottBattleTentScene::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	opendoor 10, 12
+	opendoor 34, 12
 	waitdooranim
 	addobject LOCALID_SCOTT
 	applymovement OBJ_EVENT_ID_PLAYER, SlateportCity_Movement_PushPlayerDown
 	applymovement LOCALID_SCOTT, SlateportCity_Movement_ScottExitBattleTent
 	waitmovement 0
-	closedoor 10, 12
+	closedoor 34, 12
 	waitdooranim
 	msgbox SlateportCity_Text_TakingBattleTentChallenge, MSGBOX_DEFAULT
 	closemessage
@@ -1383,3 +1383,182 @@ SlateportCity_Text_TakingBattleTentChallenge:
 	.string "After all, a tough TRAINER is\n"
 	.string "the perfect fit for the BATTLE TENT!\p"
 	.string "Give it your best effort!$"
+
+SlateportCity_Text_SchoolBoyM::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_SchoolBoyM_Text_0
+	release
+	end
+
+
+SlateportCity_Text_Fisherman::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_Fisherman_Text_0
+	release
+	end
+
+
+SlateportCity_Text_OldWomanTeacher::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_OldWomanTeacher_Text_0
+	release
+	end
+
+
+SlateportCity_Text_Girl::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_Girl_Text_0
+	release
+	end
+
+
+SlateportCity_Text_Artist::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_Artist_Text_0
+	release
+	end
+
+
+SlateportCity_Text_DevonMan::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_DevonMan_Text_0
+	release
+	end
+
+
+SlateportCity_Text_Sailor::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_Sailor_Text_0
+	release
+	end
+
+
+SlateportCity_Text_Boy::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_Boy_Text_0
+	release
+	end
+
+
+SlateportCity_Text_LittleGirl::
+	lock
+	msgbox SlateportCity_Text_LittleGirl_Text_0
+	playmoncry SPECIES_AZURILL, CRY_MODE_NORMAL
+	waitmoncry
+	msgbox SlateportCity_Text_LittleGirl_Text_1
+	release
+	end
+
+
+SlateportCity_Text_WorkingSailor::
+	msgbox SlateportCity_Text_WorkingSailor_Text_0, MSGBOX_NPC
+	end
+
+
+SlateportCity_Text_RestaurantSign::
+	msgbox SlateportCity_Text_RestaurantSign_Text_0, MSGBOX_SIGN
+	end
+
+
+SlateportCity_Text_SchoolSign::
+	msgbox SlateportCity_Text_SchoolSign_Text_0, MSGBOX_SIGN
+	end
+
+
+SlateportCity_Event_SchoolClosed::
+	gettime
+	compare VAR_0x8003, TIME_NIGHT
+	goto_if_eq SlateportCity_Event_SchoolClosed_2
+	compare VAR_0x8003, TIME_MIDNIGHT
+	goto_if_eq SlateportCity_Event_SchoolClosed_2
+	release
+	end
+
+SlateportCity_Event_SchoolClosed_2:
+	lock
+	applymovement 37, SlateportCity_Move_DirectorTriggered
+	msgbox SlateportCity_Event_SchoolClosed_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, SlateportCity_Move_Stepback
+	waitmovement 0
+	release
+	end
+
+
+SlateportCity_Move_DirectorTriggered:
+	emote_exclamation_mark
+	face_original_direction
+	jump_in_place_right
+	step_end
+
+SlateportCity_Move_Stepback:
+	walk_right
+	step_end
+
+SlateportCity_Text_SchoolBoyM_Text_0:
+	.string "I wish one day I'll be able to swim on my\n"
+	.string "POKéMON back and move in some tropical\l"
+	.string "place.$"
+
+SlateportCity_Text_Fisherman_Text_0:
+	.string "My fishes are fresh from the morning,\n"
+	.string "every morning ! I have TUNA, SALMONS\l"
+	.string "and all !\p"
+	.string "{PLAYER} : TUNA ? What is that$"
+
+SlateportCity_Text_OldWomanTeacher_Text_0:
+	.string "Here is SLATEPORT CITY SCHOOL.\n"
+	.string "Looking at you, I don't think you need\l"
+	.string "basics teachings.$"
+
+SlateportCity_Text_Girl_Text_0:
+	.string "You know that this SHIPYARD is famous\n"
+	.string "even in KANTO and JOHTO ? We can\l"
+	.string "thanks CAPT. STERN for that !$"
+
+SlateportCity_Text_Artist_Text_0:
+	.string "I sell paintings for those who can truly\n"
+	.string "recognize my creativity. I don't think\l"
+	.string "you can. Youu don't have that.. SPARK in\l"
+	.string "your eyes.$"
+
+SlateportCity_Text_DevonMan_Text_0:
+	.string "I'm here for an errand. But there are\n"
+	.string "too much stalls on this MARKET. And I\l"
+	.string "don't remember what I had to buy...$"
+
+SlateportCity_Text_Sailor_Text_0:
+	.string "These DOCKS are restricted. You know\n"
+	.string "that it's here that we SAILORS sail\l"
+	.string "from REGION to REGION ?$"
+
+SlateportCity_Text_Boy_Text_0:
+	.string "There is a small LABORATORY somewhere\n"
+	.string "here. I heard they update you POKéDEX.\l"
+	.string "I don't have one so I'm not sure...$"
+
+SlateportCity_Text_LittleGirl_Text_0:
+	.string "One day we will swim throught the\n"
+	.string "currents!$"
+
+SlateportCity_Text_LittleGirl_Text_1:
+	.string "Ri-rill !$"
+
+SlateportCity_Text_WorkingSailor_Text_0:
+	.string "Here is where we receive the cargo for\nthe market.\lBut as you can see, there is no boat\lnow.$"
+
+SlateportCity_Text_RestaurantSign_Text_0:
+	.string "SLATEPORT RESTAURANT\n“The Very best of the Sea!”$"
+
+SlateportCity_Text_SchoolSign_Text_0:
+	.string "SLATEPORT SCHOOL\n“Either you become a Sailor either you\lbecome a Champion”$"
+
+SlateportCity_Event_SchoolClosed_Text_0:
+	.string "Humm... The SCHOOL is closed during the\nnight...\lCome back later.$"

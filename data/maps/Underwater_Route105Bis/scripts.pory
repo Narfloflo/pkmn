@@ -1,0 +1,8 @@
+mapscripts Underwater_Route105Bis_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION:Underwater_Route105Bis_OnResume
+}
+
+script Underwater_Route105Bis_OnResume{
+    setdivewarp(MAP_ROUTE105_CAVE_ENTRANCE,6,3)
+    end
+}

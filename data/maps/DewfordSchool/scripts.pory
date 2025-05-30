@@ -1,0 +1,33 @@
+mapscripts DewfordSchool_MapScripts {}
+
+script DewfordSchool_Text_Tuber {
+    msgbox("You know, the training grounds are the\nbest place to train againt FIGHT\lPOKéMON.", MSGBOX_NPC)
+    end   
+}
+
+script DewfordSchool_Text_LassJr {
+    msgbox("I think the GRANITE CAVE expand into\nthe training grounds and some says even\lin ROUTE 105.\lBut it's so dark there, so I don't know\lanybody who went there...", MSGBOX_NPC)
+    end   
+}
+
+script DewfordSchool_Text_SchoolKidM {
+    msgbox("There is a CAVE in the\ntraining grounds. An old hag is keep\lthe entry. She says that we have to\lbeat BRAWLY if we want to enter it...\l{PLAYER}: Is that how you speak of your\lelder?", MSGBOX_NPC)
+    end   
+}
+
+script DewfordSchool_Text_SchoolKidF {
+    msgbox("Shush!\nI'm listening to the teacher!\l...................\lNo I'm kidding, I'm bore...", MSGBOX_NPC)
+    end   
+}
+
+script DewfordSchool_Text_Teacher {
+    lock
+    msgbox(".... And this is how you catch a\nMAGIKARP!\lRemember, patience is the clue!")
+    release
+    end   
+}
+
+script DewfordSchool_Text_Blackboard {
+    msgbox("{PLAYER}: It's the\nblackboard....\lHmmmm....\lIt's written that when breeding, if I\lgive a parent an Everstone, the baby\lhas a higher chance to inherit its\lNature!\lI should keep that in mind!", MSGBOX_SIGN)
+    end
+}

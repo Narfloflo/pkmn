@@ -70,6 +70,12 @@ Schools_Text_StudentM2::
 	end
 
 
+Schools101_Text_Girl::
+	lock
+	msgbox Schools101_Text_Girl_Text_0, MSGBOX_NPC
+	end
+
+
 Schools_Text_Teacher_Text_0:
 	.string "I only wish the kids would pay\n"
 	.string "attention in the class...$"
@@ -119,3 +125,6 @@ Schools_Text_StudentM2_Text_0:
 	.string "GYARADOS and ravage the world.\p"
 	.string "Nobody would defy me.\p"
 	.string "{PLAYER}: OKAY... Well I'm leaving...$"
+
+Schools101_Text_Girl_Text_0:
+	.string "You know, some POKéMON only appear at\nnight!\lSo you better keep your eyes opened if\lyou wanna catch them all!$"

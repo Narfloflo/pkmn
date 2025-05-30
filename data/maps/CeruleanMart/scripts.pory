@@ -1,0 +1,41 @@
+mapscripts CeruleanMart_MapScripts {}
+
+
+script CeruleanMart_Text_Man {
+    lock
+    faceplayer
+    msgbox(format("Use REPEL to keep bugs and weak POKéMON away. Put your strongest POKéMON at the top of the list for best results !"))
+    release
+    end
+}
+
+script CeruleanMart_Text_Beauty {
+    lock
+    faceplayer
+    msgbox(format("Have you seen any RARE CANDY ? It's supposed to make POKéMON go up one level !"))
+    release
+    end
+}
+
+script CeruleanMart_Vendor {
+    lock
+    faceplayer
+	msgbox(format("Welcome!\p How may I serve you?"))
+	waitmessage
+	pokemart(CeruleanMartItems)
+	msgbox("Please come again!")
+	release
+    end
+}
+
+mart CeruleanMartItems {
+    ITEM_ULTRA_BALL
+	ITEM_SUPER_POTION
+	ITEM_HYPER_POTION
+	ITEM_REVIVE
+	ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+    ITEM_BURN_HEAL
+    ITEM_HARBOR_MAIL
+    ITEM_ESCAPE_ROPE
+}

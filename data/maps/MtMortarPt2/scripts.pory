@@ -1,0 +1,13 @@
+mapscripts MtMortarPt2_MapScripts {}
+
+script MtMortarPt2_Text_Maniac1 {
+    trainerbattle_single(TRAINER_EDWIN_2, "Hey","Damn")
+    msgbox("I lost!", MSGBOX_NPC)
+    end
+}
+
+script MtMortarPt2_Text_Maniac2 {
+    trainerbattle_single(TRAINER_EDWIN_3, "Hey","Damn")
+    msgbox("I lost!", MSGBOX_NPC)
+    end
+}

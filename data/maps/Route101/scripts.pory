@@ -313,7 +313,204 @@ script Route101_Text_PondKid {
 script Route101_Text_Jenkins {
      lock
     faceplayer
-    msgbox(format("Look kid : Here are my crops. If you don't get out here quickly, I'll spank your ass so hard, you'll need surgery.\p{PLAYER}: I have a creature call a POKEMON. I don't think you scare me.\pJENKINS: What? How dare you speak to me like that !?\pDirty brat!..."))
+	if(defeated(TRAINER_GRUNT_UNUSED)){
+		msgbox(format("Leave !"))
+		applymovement(OBJ_EVENT_ID_PLAYER,JenkinsLeave)
+		waitmovement(OBJ_EVENT_ID_PLAYER)
+		release
+		end
+	}else{
+    msgbox(format("Look kid, here is my property. If you don't get out here quickly, I'll spank your ass so hard, you'll need surgery.\p{PLAYER}: I have a creature call a POKEMON. I don't think you scare me.\pJENKINS: What? How dare you speak to me like that !?\pDirty brat!...\p GET OUT !"))
+	applymovement(7, JenkinsFarmMove)
+	waitmovement(7)
+	applymovement(OBJ_EVENT_ID_PLAYER, JenkinsKick)
+	playse(SE_EFFECTIVE)
+	waitmovement(OBJ_EVENT_ID_PLAYER)
+	applymovement(7, JenkinsReturn)
+	waitmovement(7)
     release
     end
+	}
+}
+
+script Route101_Text_Jenkins2 {
+    lock
+    faceplayer
+	if(defeated(TRAINER_GRUNT_UNUSED)){
+		msgbox(format("Leave !"))
+		applymovement(OBJ_EVENT_ID_PLAYER,JenkinsLeave)
+		waitmovement(OBJ_EVENT_ID_PLAYER)
+		release
+		end
+	} else{ 
+	msgbox(format("Look kid, here is my property. If you don't get out here quickly, I'll spank your ass so hard, you'll need surgery.\p{PLAYER}: I have a creature call a POKEMON. I don't think you scare me.\pJENKINS: What? How dare you speak to me like that !?\pDirty brat!...\p GET OUT !"))
+	applymovement(7, JenkinsFarmMove2)
+	waitmovement(7)
+	applymovement(OBJ_EVENT_ID_PLAYER, JenkinsKick)
+	playse(SE_EFFECTIVE)
+	waitmovement(OBJ_EVENT_ID_PLAYER)
+	applymovement(7, JenkinsReturn2)
+	waitmovement(7)
+    release
+    end
+	}
+   
+}
+
+movement JenkinsFarmMove {
+	walk_up
+	walk_up
+	face_player
+}
+
+movement JenkinsFarmMove2 {
+	walk_right
+	walk_up *2
+	face_player
+}
+
+movement JenkinsKick {
+	jump_up
+	face_up
+}
+
+movement JenkinsReturn {
+	walk_down *2
+}
+
+movement JenkinsReturn2 {
+	walk_left
+	walk_down *2
+}
+
+movement JenkinsLeave {
+	walk_up
+}
+script Route101_Text_SignFarmJenkins{
+    lock
+    faceplayer
+    msgbox(format("PRIVATE PROPERTY OF MR. JENKINS\pMOVE OR I'LL MAKE YOU MOVE !"))
+    release
+    end
+}
+
+script Route101_Text_SignSchool{
+    lock
+    faceplayer
+    msgbox(format("LITTLEROOT TOWN SCHOOL"))
+    release
+    end
+}
+
+script Route101_Text_SignFarm{
+    lock
+    faceplayer
+    msgbox(format("COMMUNAL FARM"))
+    release
+    end
+}
+
+script Route101_Text_Teacher{
+    lock
+    faceplayer
+    msgbox(format("Yes this building is a SCHOOL.\pWhat you thought that every TRAINER went to RUSTBORO CITY to learn the basic ?\nOh come on !"))
+    release
+    end
+}
+
+script Route101_Text_Farmer{
+    lock
+    faceplayer
+    msgbox(format("Humpf...\nWe are taking care of the crops\land we are seeding some other fields\ltoo. But sometime WILD POKéMON jump on\lus."))
+    release
+    end
+}
+
+script Route101_Text_Woman{
+    lock
+    faceplayer
+    msgbox(format("Hello young TRAINER !\nI heard a guy somewhere is willing to give a POKéMON.\pYou should try to ask around !"))
+    release
+    end
+}
+
+script Route101_Text_JenkinsTrainer {
+	trainerbattle_single(TRAINER_GRUNT_UNUSED, Route101_Text_JenkinsIntro, Route101_Text_JenkinsOutro)
+	msgbox(format("Leave me and my crops alone..."))
+	release
+	end
+}
+
+text Route101_Text_JenkinsIntro {
+	"How ??\nHow did you get here ?!"
+}
+
+text Route101_Text_JenkinsOutro {
+	"Yeah you can laugh..."
+}  
+
+script Route101_Text_SchoolKid{
+    lock
+    faceplayer
+    msgbox("Mister JENKINS told me he could train\nme and turn me into a true man !\lBut as you can see I'm just in the\lGRASS looking for some seeds for his\lcrops...")
+    release
+    end
+}
+
+script Route101_Text_Girl{
+    lock
+    faceplayer
+    msgbox(format("You will see that we manage to build some houses all around the roads.\pYeah we are not all homeless people!"))
+    release
+    end
+}
+
+script Route101_Text_OldWoman{
+    lock
+    faceplayer
+	if(flag(FLAG_IS_CHAMPION)){
+		msgbox(format("My furnisher came back with a lot of supply. Have a look."))
+		waitmessage
+		pokemart(Route101Mart)
+		msgbox(format("Come back again!"))
+		release
+		end
+	}else{
+		msgbox(format("Hello rookie!\nI'm actually out of stocks. Come back later"))
+    release
+    end
+	}
+    
+}
+
+mart Route101Mart{
+    ITEM_LEFTOVERS
+    ITEM_SANDWICH
+    ITEM_BERRY_JUICE
+}
+
+script Route101_Event_SchoolClosed {
+	gettime
+	if (var(VAR_0x8003) == TIME_NIGHT || var(VAR_0x8003) == TIME_MIDNIGHT){
+		lock
+		applymovement(8, Route101_Move_DirectorTriggered)
+		msgbox("Humm... The SCHOOL is closed during the\nnight...\lCome back later.")
+		applymovement(OBJ_EVENT_ID_PLAYER, Route101_Move_Stepback)
+		waitmovement(0)
+		release
+		end
+	}
+	release
+	end
+}
+
+movement Route101_Move_DirectorTriggered {
+	emote_exclamation_mark
+	jump_in_place_right
+	step_end
+}
+
+movement Route101_Move_Stepback {
+	walk_down
+	step_end
 }

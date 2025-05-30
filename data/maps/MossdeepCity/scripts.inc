@@ -433,3 +433,53 @@ MossdeepCity_Text_SootopolisNewGymLeader:
 	.string "People tell me the new LEADER once\n"
 	.string "mentored WALLACE.$"
 
+MossdeepCity_Text_Policeman::
+	lock
+	faceplayer
+	msgbox MossdeepCity_Text_Policeman_Text_0
+	release
+	end
+
+
+MossdeepCity_Text_Youngster::
+	lock
+	faceplayer
+	msgbox MossdeepCity_Text_Youngster_Text_0
+	release
+	end
+
+
+MossdeepCity_Text_LassJr::
+	lock
+	faceplayer
+	msgbox MossdeepCity_Text_LassJr_Text_0
+	release
+	end
+
+
+MossdeepCity_Text_RestaurantSign::
+	msgbox MossdeepCity_Text_RestaurantSign_Text_0, MSGBOX_SIGN
+	end
+
+
+MossdeepCity_Text_Policeman_Text_0:
+	.string "We should have an entire corps of\n"
+	.string "POLICE TRAINERS when some lunatics are\l"
+	.string "planning crazy moves.\l"
+	.string "{PLAYER}: Or the GYM LEADERS can\l"
+	.string "move\l"
+	.string "their asses.$"
+
+MossdeepCity_Text_Youngster_Text_0:
+	.string "There are a few POKéMON around\n"
+	.string "the SPACE STATION.\l"
+	.string "I don't think they are that\l"
+	.string "dangerous since they are close a city.$"
+
+MossdeepCity_Text_LassJr_Text_0:
+	.string "Some people living on this ISLAND are\n"
+	.string "working in the SPACE CENTER. I hope I\l"
+	.string "will work there one day.$"
+
+MossdeepCity_Text_RestaurantSign_Text_0:
+	.string "MOSSDEEP Restaurant$"

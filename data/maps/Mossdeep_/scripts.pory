@@ -7,27 +7,6 @@ script Mossdeep__EventScript_SpaceStation {
     releaseall
 }
 
-script Mossdeep__EventScript_MohaBattle {
-    
-    trainerbattle_single(TRAINER_MOHA, Moha_Intro, Moha_Outro)
-    msgbox(PostbattleMoha, MSGBOX_AUTOCLOSE)
-    waitmessage
-    end
-
-}
-
-text Moha_Intro{
-    "I'm so fricking rich !"
-}
-
-text Moha_Outro{
-    "But I'm so weak..."
-}
-
-text PostbattleMoha{
-    "I'll ask my dad to buy me\na KYOGRE next time."
-}
-
 script Mossdeep__Text_Seagate {
     lock
     msgbox(format("Gate to the MOSSDEEP docks"))
@@ -62,7 +41,33 @@ script Mossdeep__Text_Sailor {
 script Mossdeep__Text_Attendant {
     lock
     faceplayer
-    msgbox(format("Hello.\pThis ship is strictly reserved for none TRAINERS. We can't take you onboard.\pI'm sorry."))
+    msgbox(format("Hello.\pThis ship is strictly reserved for regular persons. We can't take you onboard.\pI'm sorry."))
     releaseall
     end
+}
+
+script Mossdeep__Text_School {
+    lock
+    msgbox(format("MOSSDEEP SCHOOL"))
+    release
+    end
+}
+
+script Mossdeep__Event_SchoolClosed {
+	gettime
+	if (var(VAR_0x8003) == TIME_NIGHT || var(VAR_0x8003) == TIME_MIDNIGHT){
+		lock
+		msgbox("{PLAYER}: The SCHOOL is closed during\nthe night...")
+		applymovement(OBJ_EVENT_ID_PLAYER, Mossdeep__Move_Stepback)
+		waitmovement(0)
+		release
+		end
+	}
+	release
+	end
+}
+
+movement Mossdeep__Move_Stepback {
+	walk_down
+	step_end
 }

@@ -56,19 +56,13 @@ mart FallarborMarketVendor3 {
 }
 
 script FallarborMarket_Text_Girl {
-    lock
-    faceplayer
-    msgbox(format("I'm glad we have a market here in FALLARBORTOWN.\pIt has nothing to do with the one in LILYCOVECITY, but it's fine."))
-    release
+    msgbox("I'm glad we have a market here in\nFALLARBOR.\lIt has nothing to do with the one in\lLILYCOVE, but it's fine.", MSGBOX_NPC)
     end
 }
 
 
 script FallarborMarket_Text_OldMan {
-    lock
-    faceplayer
-    msgbox(format("Wahaha! Welcome kid, welcome! I'm the owner of the FALLARBORTOWN market! It opened recently, and we have some pretty rare ITEMS that are great for a TRAINER like you.\pHave a good look at our ITEMS!"))
-    release
+    msgbox("Wahaha!\nWelcome kid, welcome! I'm the\lowner of the FALLARBOR market!\lIt opened recently, and we have some\lpretty rare ITEMS that are great for a\lTRAINER like you.\lHave a good look at our ITEMS!", MSGBOX_NPC)
     end
 }
 
@@ -77,7 +71,7 @@ script FallarborMarket_Text_Kirlia {
     faceplayer
     waitse
     playmoncry(SPECIES_KIRLIA, CRY_MODE_NORMAL)
-    msgbox(format("Lia! Li li!\p{PLAYER}: There is something strange between this POKEMON and the old man..."))
+    msgbox("Lia! Li li!\n{PLAYER}: There is something strange\lbetween this POKEMON and the old man...", MSGBOX_NPC)
     waitmoncry
     release
     end

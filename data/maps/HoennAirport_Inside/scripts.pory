@@ -1,0 +1,96 @@
+mapscripts HoennAirport_Inside_MapScripts {}
+
+script HoennAirport_Text_Hostress{
+    lock
+    faceplayer
+    msgbox(format("Welcome to HOENN AIRLINE did you have a reservation ? No ? Well we can't allow you to use our ABRA service to travel.\pHave a nice day."))
+    release
+    end
+}
+
+script HoennAirport_Text_Policeman{
+    lock
+    faceplayer
+    msgbox(format("{PLAYER} : This area is restricted to authorized people only. Yeah I know !"))
+    release
+    end
+}
+
+script HoennAirport_Text_Artist{
+    lock
+    msgbox(format("Why is my flight not announce yet ?"))
+    release
+    end
+}
+
+script HoennAirport_Text_Beauty{
+    lock
+    faceplayer
+    msgbox(format("The ABRA service is really conveniant, it takes you everywhere ! Even in RHODES, but except for the COLOSSEUM who really want to visit this place..."))
+    release
+    end
+}
+
+script HoennAirport_Text_Camper{
+    lock
+    faceplayer
+    msgbox(format("It's the first time I'm gonna get teleported without being fainted! I so excited !"))
+    release
+    end
+}
+
+script HoennAirport_Text_Beauty2{
+    lock
+    faceplayer
+    msgbox(format("I came here for shopping but I'm a bit disappointed, I thought HOENN had way more stuff. I'm going back to KANTO."))
+    release
+    end
+}
+
+script HoennAirport_Text_FatMan{
+    lock
+    faceplayer
+    msgbox(format("I swear I came with my daughter..."))
+    release
+    end
+}
+
+script HoennAirport_Text_OldWoman{
+    lock
+    faceplayer
+    msgbox(format("Sigh... Taking the SHIP is way more interesting than that !"))
+    release
+    end
+}
+
+script HoennAirport_Text_FightGirl{
+    lock
+    faceplayer
+    msgbox(format("HOENN is known for it formidable training grounds. I will train like never here !"))
+    release
+    end
+}
+
+script HoennAirport_Text_OldMan{
+    lock
+    faceplayer
+    msgbox(format("I spend my time having meeting here and there. What an incredible life I have !"))
+    release
+    end
+}
+
+script HoennAirport_Text_Girl{
+    lock
+    faceplayer
+    msgbox(format("We are taking a bus to travel to HOENN, but I don't think there is a place were the cars are driving right ?"))
+    release
+    end
+}
+
+script HoennAirport_Text_Boy{
+    lock
+    faceplayer
+    msgbox(format("I wish the journey will be fine and we are not being stuck in some alternate dimension !"))
+    release
+    end
+}

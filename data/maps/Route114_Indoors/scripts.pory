@@ -1,0 +1,16 @@
+mapscripts Route114_Indoors_MapScripts {}
+
+script Route114_Indoors_Text_Kindler {
+    msgbox("No I'm not outside burning thing.\nCan I laze around please?", MSGBOX_NPC)
+    end
+}
+
+script Route114_Indoors_Text_HikerKanto {
+    msgbox("I come from JOHTO. I came to see my\nfriend and tell him about the\lvery unsuspicious HIKERS CLUB.\lWhat are we?\lWell, just a HIKER group. We love the\lmountain.\lYep that's all!\lGoodbye now.", MSGBOX_NPC)
+    end
+}
+
+script Route114_Indoors_Text_Hiker {
+    msgbox("You know the HIKER CLUB?\nNever heard of that.\lI hope that's not something like the\lTEAM WATER or something.\lA bunch of losers really.", MSGBOX_NPC)
+    end
+}

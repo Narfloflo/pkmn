@@ -1,0 +1,6 @@
+mapscripts Route36Door_MapScripts {}
+
+script Route36Doors_Text_Policeman {
+    msgbox("Things a really calm. But now that they\nare building the MAGNET TRAIN, it\lshould become more busy.", MSGBOX_NPC)
+    end
+}

@@ -1,0 +1,8 @@
+mapscripts MtChimneyEntrance_MapScripts {}
+
+script MtChimneyEntrance_Text_Picknicker {
+    trainerbattle_single(TRAINER_WILTON_3, "I went for a walk and end up here.\nSomething went wrong...", "Oh you blast me !")
+    msgbox(format("I thought I could found a great valley, but there is only lava here..."))
+    release
+    end
+}
