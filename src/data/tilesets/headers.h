@@ -64,6 +64,7 @@ const struct Tileset gTileset_Mauville =
     .callback = InitTilesetAnim_Mauville,
 };
 
+
 const struct Tileset gTileset_Lavaridge =
 {
     .isCompressed = TRUE,
@@ -1388,3 +1389,14 @@ const struct Tileset gTileset_RadioTower =
     .callback = NULL,
 };
 
+
+const struct Tileset gTileset_NewMauville =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_NewMauville,
+    .palettes = gTilesetPalettes_NewMauville,
+    .metatiles = gMetatiles_NewMauville,
+    .metatileAttributes = gMetatileAttributes_NewMauville,
+    .callback = InitTilesetAnim_NewMauville,
+};

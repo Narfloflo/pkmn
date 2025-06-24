@@ -25,7 +25,7 @@ script CinnabarIsland_Text_CitySign {
 
 script CinnabarIsland_Text_LabSign {
     lock
-    msgbox(format("POKéMON lab"))
+    msgbox(format("POKéMON LAB"))
     release
     end
 }
@@ -33,7 +33,7 @@ script CinnabarIsland_Text_LabSign {
 script CinnabarIsland_Text_Scientist {
     lock
     faceplayer
-    msgbox(format("Here is the POKéMON LAB. We have a technology that revive FOSSILS. Yeah like DEVON ! (They stole everything from us...)"))
+    msgbox(format("Here is the POKéMON LAB. We have a technology that revive FOSSILS. Yeah like DEVON! (They stole everything from us...)"))
     release
     end
 }
@@ -48,7 +48,12 @@ script CinnabarIsland_Text_Fisherman {
 script CinnabarIsland_Text_Hiker {
     lock
     faceplayer
-    msgbox(format("Beware ! There are a lot of powerful FIRE POKéMON up there !"))
+    msgbox(format("Beware! There are a lot of powerful FIRE POKéMON up there!"))
     release
+    end
+}
+
+script CinnabarIsland_Text_GymSign {
+    msgbox("CINNABAR ISLAND POKéMON GYM\nLEADER: BLAINE\lThe Hotheaded Quiz Master!", MSGBOX_SIGN)
     end
 }

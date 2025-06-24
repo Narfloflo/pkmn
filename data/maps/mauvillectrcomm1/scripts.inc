@@ -111,9 +111,7 @@ MauvilleUnderground_Text_Worker2::
 
 MauvilleUnderground_Text_Machop::
 	lock
-	faceplayer
 	playmoncry SPECIES_MACHOP, CRY_MODE_NORMAL
-	waitmoncry
 	msgbox MauvilleUnderground_Text_Machop_Text_0
 	playse SE_EFFECTIVE
 	waitse

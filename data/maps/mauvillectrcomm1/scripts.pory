@@ -88,9 +88,7 @@ script MauvilleUnderground_Text_Worker2 {
 
 script MauvilleUnderground_Text_Machop {
     lock
-    faceplayer
     playmoncry(SPECIES_MACHOP, CRY_MODE_NORMAL)
-    waitmoncry
     msgbox(format("Chooo Chammm!"))
     playse(SE_EFFECTIVE)
     waitse

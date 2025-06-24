@@ -2603,3 +2603,22 @@ const u16 gTilesetPalettes_LavaridgeTown[][16] =
 };
 
 const u32 gTilesetTiles_LavaridgeTown[] = INCBIN_U32("data/tilesets/secondary/lavaridge_town/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_NewMauville[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/new_mauville/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/new_mauville/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/new_mauville/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/new_mauville/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/new_mauville/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/new_mauville/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/new_mauville/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/new_mauville/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/new_mauville/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/new_mauville/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/new_mauville/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/new_mauville/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/new_mauville/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_NewMauville[] = INCBIN_U32("data/tilesets/secondary/new_mauville/tiles.4bpp.lz");

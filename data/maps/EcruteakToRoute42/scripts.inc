@@ -3,6 +3,8 @@ EcruteakToRoute42_MapScripts::
 
 
 EcruteakToRoute42_Text_ReloadGuy::
+	lock
+	faceplayer
 	msgbox EcruteakToRoute42_Text_ReloadGuy_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, 1
 	goto_if_eq EcruteakToRoute42_Text_ReloadGuy_2

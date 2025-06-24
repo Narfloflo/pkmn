@@ -360,3 +360,6 @@ const u16 gMetatileAttributes_RadioTower[] = INCBIN_U16("data/tilesets/secondary
 
 const u16 gMetatiles_LavaridgeTown[] = INCBIN_U16("data/tilesets/secondary/lavaridge_town/metatiles.bin");
 const u16 gMetatileAttributes_LavaridgeTown[] = INCBIN_U16("data/tilesets/secondary/lavaridge_town/metatile_attributes.bin");
+
+const u16 gMetatiles_NewMauville[] = INCBIN_U16("data/tilesets/secondary/new_mauville/metatiles.bin");
+const u16 gMetatileAttributes_NewMauville[] = INCBIN_U16("data/tilesets/secondary/new_mauville/metatile_attributes.bin");

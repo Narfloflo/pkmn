@@ -37,6 +37,7 @@ struct TrainerMonNoItemDefaultMoves
     u16 iv;
     u8 lvl;
     u16 species;
+    u8 nickname[POKEMON_NAME_LENGTH + 1];
 };
 
 struct TrainerMonItemDefaultMoves
@@ -45,6 +46,7 @@ struct TrainerMonItemDefaultMoves
     u8 lvl;
     u16 species;
     u16 heldItem;
+    u8 nickname[POKEMON_NAME_LENGTH + 1];
 };
 
 struct TrainerMonNoItemCustomMoves
@@ -53,6 +55,7 @@ struct TrainerMonNoItemCustomMoves
     u8 lvl;
     u16 species;
     u16 moves[MAX_MON_MOVES];
+    u8 nickname[POKEMON_NAME_LENGTH + 1];
 };
 
 struct TrainerMonItemCustomMoves
@@ -62,6 +65,7 @@ struct TrainerMonItemCustomMoves
     u16 species;
     u16 heldItem;
     u16 moves[MAX_MON_MOVES];
+    u8 nickname[POKEMON_NAME_LENGTH + 1];
 };
 
 #define NO_ITEM_DEFAULT_MOVES(party) { .NoItemDefaultMoves = party }, .partySize = ARRAY_COUNT(party), .partyFlags = 0

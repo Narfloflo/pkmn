@@ -64,6 +64,21 @@ Route11_Text_Worker2::
 	end
 
 
+Route11_Text_DiglettsCave::
+	lock
+	msgbox Route11_Text_DiglettsCave_Text_0
+	release
+	end
+
+
+Route11_Text_Hiker::
+	lock
+	faceplayer
+	msgbox Route11_Text_Hiker_Text_0
+	release
+	end
+
+
 Route11_Text_Youngster_Text_0:
 	.string "Wanna see a wonderful team ?$"
 
@@ -119,19 +134,27 @@ Route11_Text_Policeman_Text_0:
 	.string "eye on you !$"
 
 Route11_Text_Policeman2_Text_0:
-	.string "What about this card game ? You are\n"
-	.string "making money out of it right ?$"
+	.string "What about this card game? You are\n"
+	.string "making money out of it right?$"
 
 Route11_Text_Gambler2_Text_0:
-	.string "... But it's a genuine TRADING CARD GAME\n"
-	.string "! It's just about POKéMON !...$"
+	.string "... But it's a genuine TRADING CARD GAME!\n"
+	.string "It's just about POKéMON!...$"
 
 Route11_Text_Worker_Text_0:
 	.string "I'm looking for some MAGNEMITE or\n"
 	.string "MAGNETON to help me in my everydays\l"
-	.string "jobs !$"
+	.string "jobs!$"
 
 Route11_Text_Worker2_Text_0:
 	.string "No I'm not a TRAINER. I've been beating\n"
 	.string "a few months ago by some young lads,\l"
 	.string "and now I'm in a total depression...$"
+
+Route11_Text_DiglettsCave_Text_0:
+	.string "DIGLETT'S CAVE$"
+
+Route11_Text_Hiker_Text_0:
+	.string "It's incredible! The DIGLETTS dug this\n"
+	.string "long tunnel! It goes right to VIRIDIAN\l"
+	.string "CITY!$"

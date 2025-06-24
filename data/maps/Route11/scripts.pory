@@ -34,14 +34,14 @@ script Route11_Text_Policeman {
 
 script Route11_Text_Policeman2 {
     lock
-    msgbox(format("What about this card game ? You are making money out of it right ?"))
+    msgbox(format("What about this card game? You are making money out of it right?"))
     release
     end
 }
 
 script Route11_Text_Gambler2 {
     lock
-    msgbox(format("... But it's a genuine TRADING CARD GAME ! It's just about POKéMON !..."))
+    msgbox(format("... But it's a genuine TRADING CARD GAME! It's just about POKéMON!..."))
     release
     end
 }
@@ -49,7 +49,7 @@ script Route11_Text_Gambler2 {
 script Route11_Text_Worker {
     lock
     faceplayer
-    msgbox(format("I'm looking for some MAGNEMITE or MAGNETON to help me in my everydays jobs !"))
+    msgbox(format("I'm looking for some MAGNEMITE or MAGNETON to help me in my everydays jobs!"))
     release
     end
 }
@@ -58,6 +58,22 @@ script Route11_Text_Worker2 {
     lock
     faceplayer
     msgbox(format("No I'm not a TRAINER. I've been beating a few months ago by some young lads, and now I'm in a total depression..."))
+    release
+    end
+}
+
+
+script Route11_Text_DiglettsCave {
+    lock
+    msgbox(format("DIGLETT'S CAVE"))
+    release
+    end
+}
+
+script Route11_Text_Hiker {
+    lock
+    faceplayer
+    msgbox(format("It's incredible! The DIGLETTS dug this long tunnel! It goes right to VIRIDIAN CITY!"))
     release
     end
 }

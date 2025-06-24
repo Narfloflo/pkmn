@@ -35,7 +35,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SLOWPOKE",
-      "x": 32,
+      "x": 39,
       "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -61,8 +61,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SLOWPOKE",
-      "x": 8,
-      "y": 4,
+      "x": 10,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -87,8 +87,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SLOWPOKE",
-      "x": 25,
-      "y": 7,
+      "x": 24,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -180,15 +180,15 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 12,
-      "y": 5,
+      "x": 13,
+      "y": 4,
       "elevation": 0,
       "dest_map": "MAP_KURT_HOUSE",
       "dest_warp_id": "0"
     },
     {
       "x": 34,
-      "y": 16,
+      "y": 15,
       "elevation": 0,
       "dest_map": "MAP_BLACK_AZALEA_INSIDE",
       "dest_warp_id": "0"
@@ -206,6 +206,13 @@
       "elevation": 0,
       "dest_map": "MAP_SLOWPOKE_WELL",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 12,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_KURT_HOUSE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -222,8 +229,8 @@
     },
     {
       "type": "sign",
-      "x": 9,
-      "y": 5,
+      "x": 10,
+      "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "AzaleaTown_Sign_KurtHouse"
@@ -247,7 +254,7 @@
     {
       "type": "sign",
       "x": 28,
-      "y": 16,
+      "y": 15,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Verdanturf_Hospital_Door"
@@ -262,8 +269,8 @@
     },
     {
       "type": "sign",
-      "x": 35,
-      "y": 17,
+      "x": 30,
+      "y": 15,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "AzaleaTown_Sign_CharcoalKiln"
@@ -275,6 +282,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
+    },
+    {
+      "type": "sign",
+      "x": 42,
+      "y": 16,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verdanturf_Hospital_Door"
     }
   ]
 }

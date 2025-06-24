@@ -790,19 +790,6 @@
     "SafariZoneKantoNorth",
     "SafariZoneKantoEast",
     "HiddenVillage"
-    
-  ],
-  "gMapGroup_KantoDungeon": [
-    "AquaHideout_UnusedRubyMap2",
-    "DiglettsCave",
-    "MtMoon",
-    "seafoamIslands",
-    "CeruleanCave",
-    "RockTunnel",
-    "KantoUndergrounds",
-    "KantoUndergroundDoors",
-    "CinnabarPkmnMansion",
-    "KantoPowerPlant"
   ],
   "gMapGroup_KantoIndoor": [
     "SaffronGateSouth",
@@ -860,6 +847,18 @@
     "Route12Gate",
     "Route11Gate"
   ],
+  "gMapGroup_KantoDungeon": [
+    "AquaHideout_UnusedRubyMap2",
+    "DiglettsCave",
+    "MtMoon",
+    "seafoamIslands",
+    "CeruleanCave",
+    "RockTunnel",
+    "KantoUndergrounds",
+    "KantoUndergroundDoors",
+    "CinnabarPkmnMansion",
+    "KantoPowerPlant"
+  ],
   "gMapGroup_Johto": [
     "NewBarkTown",
     "CherrygroveCity",
@@ -872,8 +871,6 @@
     "BlackthornCity",
     "MahoganyTown",
     "LakeofRage",
-    "CelebiChamber",
-    "BurnedTowerTop",
     "EcruteakGates",
     "JohtoHoennPath",
     "NationalPark",
@@ -895,9 +892,12 @@
     "Route43",
     "Route44",
     "VraiRoute45",
-    "Route45"
-  ],"gMapGroup_JohtoDungeon": [
+    "Route45",
+    "EcruteakNorth"
+  ],
+  "gMapGroup_JohtoDungeon": [
     "SproutTower",
+    "BurnedTowerTop",
     "BurnedTower",
     "SlowpokeWell",
     "SlowpokeWellB2F",
@@ -913,12 +913,12 @@
     "WhirlIslands",
     "Route104_Prototype",
     "MtMortar",
-    "MtMortarPt2"
+    "MtMortarPt2",
+    "CelebiChamber"
   ],
   "gMapGroup_JohtoIndoor": [
     "CianwoodInside",
     "OlivineCityPort",
-    "OlivineCityMart",
     "CaveOfOrigin_UnusedRubySapphireMap2",
     "CaveOfOrigin_UnusedRubySapphireMap3",
     "Route104_PrototypePrettyPetalFlowerShop",
@@ -926,7 +926,6 @@
     "Route30Inside",
     "MahoganyInside",
     "LakeofRageInside",
-    "GoldenRodMart",
     "JohtoPokecenter",
     "NationalPakrDoors",
     "EcruteakKimono",
@@ -938,11 +937,13 @@
     "GoldenrodInside",
     "BlackAzaleaInside",
     "GoldenrodGameCorner",
-    "SlateportDocks",
     "VioletCityIndoor",
     "PacifidlogDungeon_Underwater",
     "NewMap1CherrygroveMart",
     "VioletMart",
+    "GoldenRodMart",
+    "SlateportDocks",
+    "OlivineCityMart",
     "VioletPkmnCenter",
     "AzaleaPkmnCenter",
     "GoldenrodPkmnCenter",
@@ -965,6 +966,7 @@
     "GoldenrodIndoor",
     "GoldenrodRenamer",
     "GoldenrodInside2",
-    "Route36Door"
+    "Route36Door",
+    "Route46Gate"
   ]
 }

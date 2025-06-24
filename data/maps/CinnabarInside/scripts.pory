@@ -1,1 +1,62 @@
 mapscripts CinnabarInside_MapScripts {}
+
+script CinnabarInside_Text_PhotoOfLabFounderDrFuji {
+    msgbox("A photo of the LAB's founder…\nDR. FUJI?!", MSGBOX_SIGN)
+    end
+}
+
+script CinnabarInside_Text_PokemonLab_Entrance_Text_StudyMonsExtensively {
+    msgbox("We study POKéMON extensively\nevery day.\pPeople often bring us rare POKéMON\nfor examination.", MSGBOX_NPC)
+    end
+}
+
+script CinnabarInside_Text_Entrance_Text_MeetingRoomSign {
+    msgbox("POKéMON LAB\nMeeting Room", MSGBOX_SIGN)
+    end
+}
+
+script CinnabarInside_Text_RAndDRoomSign {
+    msgbox("POKéMON LAB\nR & D Room", MSGBOX_SIGN)
+    end
+}
+
+script CinnabarInside_Text_TestingRoomSign {
+    msgbox("POKéMON LAB\nTesting Room", MSGBOX_SIGN)
+    end
+}
+
+script CinnabarInside_Text_FoundFossilInMtMoon {
+    msgbox("I found this most remarkable fossil\ninside MT. MOON.\pI think it's of a rare, prehistoric\nPOKéMON.", MSGBOX_NPC)
+    end
+}
+
+script CinnabarInside_Text_AnAmberPipe {
+    msgbox("An amber pipe!", MSGBOX_SIGN)
+    end
+}
+
+script CinnabarInside_Text_EeveeCanEvolveIntroThreeMons {
+    msgbox("EEVEE can evolve into one of five\nkinds of POKéMON.", MSGBOX_NPC)
+    end
+}
+
+script CinnabarInside_Text_LegendaryBirdEmail {
+    msgbox("There's an e-mail message.\p… … …\pThere are three legendary bird\nPOKéMON.\pThey are ARTICUNO, ZAPDOS, and\nMOLTRES.\pTheir whereabouts are unknown.\pWe plan to explore the cavern\nclose to CERULEAN.\pFrom: POKéMON RESEARCH TEAM…", MSGBOX_NPC)
+    end
+}
+
+
+script CinnabarInside_Text_GuyGivingContext {
+    msgbox("Now that TEAM ROCKET is gone and that\nthey release some of our scientist, we\lcan focus on exploration!\pBLAINE for example is looking into the\lSEAFOAM CAVE, I've heard.\lBROCK is helping us finding fossils in\lMT. MOON.\lAnd I guess our CHAMPION was around\lCERULEAN CAVE at some point.", MSGBOX_NPC)
+    end
+}
+
+script CinnabarInside_Text_Gentleman {
+    msgbox("BLAINE and I are friends. I used to\nfight in the GYM alongside him.\lA few months ago a three kids blasted\lthrough the GYM and kick our butts.\pI've decided to retire then.", MSGBOX_NPC)
+    end
+}
+
+script CinnabarInside_Text_OldLady {
+    msgbox("I don't know if it's because I'm\ngetting older, but I'm shaking more and\lmore.\lIt's like the ground was about to\lburst!\pStrange isn't it?", MSGBOX_NPC)
+    end
+}

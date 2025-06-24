@@ -456,7 +456,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spoink = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Skarmory = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_VIGOROTH,
+    .paletteTag = OBJ_EVENT_PAL_TAG_POOCHYENA,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 512,
     .width = 32,

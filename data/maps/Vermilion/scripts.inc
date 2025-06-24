@@ -110,21 +110,6 @@ Vermilion_Text_Policeman::
 	end
 
 
-Vermilion_Text_Hiker::
-	lock
-	faceplayer
-	msgbox Vermilion_Text_Hiker_Text_0
-	release
-	end
-
-
-Vermilion_Text_DiglettsCave::
-	lock
-	msgbox Vermilion_Text_DiglettsCave_Text_0
-	release
-	end
-
-
 Vermilion_Text_Camper::
 	lock
 	faceplayer
@@ -267,14 +252,6 @@ Vermilion_Text_Policeman_Text_0:
 	.string "You know there was a big POKéMON\n"
 	.string "blocking the path. But a young TRAINER\l"
 	.string "caught it ! I'm amazed.$"
-
-Vermilion_Text_Hiker_Text_0:
-	.string "It's incredible ! The DIGLETTS dug this\n"
-	.string "long tunnel !It goes right to VIRIDIAN\l"
-	.string "CITY !$"
-
-Vermilion_Text_DiglettsCave_Text_0:
-	.string "DIGLETT'S CAVE$"
 
 Vermilion_Text_Camper_Text_0:
 	.string "I heard that a guy here is giving free\n"

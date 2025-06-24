@@ -1,6 +1,8 @@
 mapscripts EcruteakToRoute42_MapScripts {}
 
 script EcruteakToRoute42_Text_ReloadGuy{
+    lock
+    faceplayer
     msgbox("Who am I?\nJust your friendly neighborhood\lRematch guy!\lIf you want I can ask all the TRAINERS\lin ROUTE 42 and MT. MORTAR to offer\lyou a rematch.\lWhat do you think?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == 1){
         playse(SE_POKENAV_CALL)

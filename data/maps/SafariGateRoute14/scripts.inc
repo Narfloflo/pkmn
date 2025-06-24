@@ -55,7 +55,7 @@ SafariGateRoute14_Entrance_EventScript_ReturnToSafariZone::
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, SafariGateRoute14_Entrance_Movement_ReEnter
 	waitmovement 0
-	warp MAP_SAFARI_ZONE_KANTO, 71, 44
+	warp MAP_SAFARI_ZONE_KANTO_EAST, 39, 48
 	waitstate
 	end
 
@@ -124,7 +124,7 @@ SafariGateRoute14_Entrance_EventScript_TryEnterSafariZone::
 	call_if_eq VAR_TEMP_2, 2, SafariGateRoute14_Entrance_EventScript_EnterSafariZoneLeft
 	special EnterSafariMode
 	setvar VAR_MAUVILLE_CITY_STATE, 2
-	warp MAP_SAFARI_ZONE_KANTO, 71, 44
+	warp MAP_SAFARI_ZONE_KANTO_EAST, 39, 48
 	waitstate
 	end
 

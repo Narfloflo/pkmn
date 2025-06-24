@@ -85,9 +85,9 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER_KANTO",
       "x": 28,
-      "y": 12,
+      "y": 10,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -125,8 +125,8 @@
       "dest_warp_id": "1"
     },
     {
-      "x": 26,
-      "y": 10,
+      "x": 24,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_ROUTE27INDOOR",
       "dest_warp_id": "0"

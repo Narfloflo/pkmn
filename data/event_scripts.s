@@ -1712,3 +1712,7 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route12Gate/scripts.inc"
 
 	.include "data/maps/Route11Gate/scripts.inc"
+
+	.include "data/maps/EcruteakNorth/scripts.inc"
+
+	.include "data/maps/Route46Gate/scripts.inc"

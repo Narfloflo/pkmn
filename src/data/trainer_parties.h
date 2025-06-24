@@ -14783,7 +14783,8 @@ static const struct TrainerMonItemCustomMoves sParty_Red[] = {
     .lvl = 100,
     .species = SPECIES_PIKACHU,
     .heldItem = ITEM_LIGHT_BALL,
-    .moves = {MOVE_THUNDERBOLT, MOVE_IRON_TAIL, MOVE_VOLT_TACKLE, MOVE_FAKE_OUT}
+    .moves = {MOVE_THUNDERBOLT, MOVE_IRON_TAIL, MOVE_VOLT_TACKLE, MOVE_FAKE_OUT},
+    .nickname = _("JEAN LUC")
     },
     {
     .iv = 250,
@@ -14805,6 +14806,7 @@ static const struct TrainerMonItemCustomMoves sParty_Red[] = {
     .species = SPECIES_BLASTOISE,
     .heldItem = ITEM_FOCUS_BAND,
     .moves = {MOVE_HYDRO_PUMP, MOVE_BLIZZARD, MOVE_WATER_SPOUT, MOVE_SUPERPOWER}
+    .nickname = _("BIG MAN")
     },
     {
     .iv = 250,

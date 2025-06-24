@@ -115,7 +115,7 @@
     },
     {
       "x": 1,
-      "y": 17,
+      "y": 20,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_TO_ROUTE42",
       "dest_warp_id": "1"

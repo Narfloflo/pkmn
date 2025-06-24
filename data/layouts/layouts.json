@@ -33,7 +33,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "secondary_tileset": "gTileset_NewMauville",
       "border_filepath": "data/layouts/MauvilleCity/border.bin",
       "blockdata_filepath": "data/layouts/MauvilleCity/map.bin"
     },
@@ -309,7 +309,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "secondary_tileset": "gTileset_NewMauville",
       "border_filepath": "data/layouts/Route110/border.bin",
       "blockdata_filepath": "data/layouts/Route110/map.bin"
     },
@@ -5452,7 +5452,7 @@
     {
       "id": "LAYOUT_BEACH_SIDE2",
       "name": "BeachSide2_Layout",
-      "width": 50,
+      "width": 55,
       "height": 50,
       "border_width": 2,
       "border_height": 2,
@@ -7149,7 +7149,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_KantoGeneral",
-      "secondary_tileset": "gTileset_IslandsKanto",
+      "secondary_tileset": "gTileset_Blackthorn",
       "border_filepath": "data/layouts/Route45/border.bin",
       "blockdata_filepath": "data/layouts/Route45/map.bin"
     },
@@ -7473,7 +7473,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_KantoGeneral",
-      "secondary_tileset": "gTileset_Pallet",
+      "secondary_tileset": "gTileset_NewBark",
       "border_filepath": "data/layouts/Route27/border.bin",
       "blockdata_filepath": "data/layouts/Route27/map.bin"
     },
@@ -7809,7 +7809,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_KantoInside",
-      "secondary_tileset": "gTileset_KantoResto",
+      "secondary_tileset": "gTileset_TrueLabKanto",
       "border_filepath": "data/layouts/CinnabarInside/border.bin",
       "blockdata_filepath": "data/layouts/CinnabarInside/map.bin"
     },
@@ -8897,7 +8897,7 @@
       "id": "LAYOUT_ECRUTEAK_TO_ROUTE42",
       "name": "EcruteakToRoute42_Layout",
       "width": 13,
-      "height": 8,
+      "height": 32,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_KantoInside",
@@ -8933,7 +8933,7 @@
       "id": "LAYOUT_ECRUTEAK_TO_ROUTE38",
       "name": "EcruteakToRoute38_Layout",
       "width": 13,
-      "height": 8,
+      "height": 32,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_KantoInside",
@@ -9192,6 +9192,30 @@
       "secondary_tileset": "gTileset_KantoResto",
       "border_filepath": "data/layouts/Route11Gate/border.bin",
       "blockdata_filepath": "data/layouts/Route11Gate/map.bin"
+    },
+    {
+      "id": "LAYOUT_ECRUTEAK_NORTH",
+      "name": "EcruteakNorth_Layout",
+      "width": 28,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_KantoGeneral",
+      "secondary_tileset": "gTileset_NewEcruteak",
+      "border_filepath": "data/layouts/EcruteakNorth/border.bin",
+      "blockdata_filepath": "data/layouts/EcruteakNorth/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE46GATE",
+      "name": "Route46Gate_Layout",
+      "width": 9,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_KantoInside",
+      "secondary_tileset": "gTileset_KantoResto",
+      "border_filepath": "data/layouts/Route46Gate/border.bin",
+      "blockdata_filepath": "data/layouts/Route46Gate/map.bin"
     }
   ]
 }

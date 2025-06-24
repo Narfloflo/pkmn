@@ -98,7 +98,7 @@ mart MauvilleBigMart_Mart_NewVendor2 {
 script MauvilleBigMart_Text_NewVendor3 {
     lock
     faceplayer
-    msgbox(format("Welcome!\n Let me check your BADGES\pHow may I serve you?"))
+    msgbox(format("Welcome!\nLet me check your BADGES\pHow may I serve you?"))
 	if(flag(FLAG_BADGE08_GET) == TRUE){
 		pokemart(Bagde8Vendor)
 		

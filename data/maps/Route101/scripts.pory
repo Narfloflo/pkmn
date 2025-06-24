@@ -465,30 +465,6 @@ script Route101_Text_Girl{
     end
 }
 
-script Route101_Text_OldWoman{
-    lock
-    faceplayer
-	if(flag(FLAG_IS_CHAMPION)){
-		msgbox(format("My furnisher came back with a lot of supply. Have a look."))
-		waitmessage
-		pokemart(Route101Mart)
-		msgbox(format("Come back again!"))
-		release
-		end
-	}else{
-		msgbox(format("Hello rookie!\nI'm actually out of stocks. Come back later"))
-    release
-    end
-	}
-    
-}
-
-mart Route101Mart{
-    ITEM_LEFTOVERS
-    ITEM_SANDWICH
-    ITEM_BERRY_JUICE
-}
-
 script Route101_Event_SchoolClosed {
 	gettime
 	if (var(VAR_0x8003) == TIME_NIGHT || var(VAR_0x8003) == TIME_MIDNIGHT){

@@ -102,7 +102,7 @@
     },
     {
       "x": 29,
-      "y": 17,
+      "y": 16,
       "elevation": 0,
       "dest_map": "MAP_NEW_BARK_INSIDE",
       "dest_warp_id": "2"
@@ -131,14 +131,14 @@
     {
       "type": "sign",
       "x": 27,
-      "y": 17,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NewBarkTown_Text_ElmHouse"
     },
     {
       "type": "sign",
-      "x": 17,
+      "x": 20,
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",

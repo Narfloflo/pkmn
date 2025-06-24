@@ -97,7 +97,13 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 47,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE46GATE",
+      "dest_warp_id": "1"
+    }
   ],
   "coord_events": [
 

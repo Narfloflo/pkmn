@@ -416,6 +416,10 @@
 // gTileset_MossdeepGym
 #define METATILE_MossdeepGym_YellowArrow_Right  0x250
 
+// gTileset_NewMauville
+#define METATILE_NewMauville_Door              0x2AC
+#define METATILE_NewMauville_Door_CyclingRoad  0x289
+
 // gTileset_Pacifidlog
 #define METATILE_Pacifidlog_Door                               0x21A
 #define METATILE_Pacifidlog_FloatingLogs_HorizontalLeft        0x250

@@ -107,21 +107,6 @@ script Vermilion_Text_Policeman {
     end
 }
 
-script Vermilion_Text_Hiker {
-    lock
-    faceplayer
-    msgbox(format("It's incredible ! The DIGLETTS dug this long tunnel !It goes right to VIRIDIAN CITY !"))
-    release
-    end
-}
-
-script Vermilion_Text_DiglettsCave {
-    lock
-    msgbox(format("DIGLETT'S CAVE"))
-    release
-    end
-}
-
 script Vermilion_Text_Camper {
     lock
     faceplayer
@@ -137,7 +122,6 @@ script Vermilion_Text_Boy {
     release
     end
 }
-
 
 
 script Watchman {

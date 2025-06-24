@@ -32,8 +32,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_KANTO",
-      "x": 57,
-      "y": 5,
+      "x": 49,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -137,8 +137,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 1,
-      "y": 7,
+      "x": 7,
+      "y": 6,
       "elevation": 0,
       "item": "ITEM_WATER_STONE",
       "flag": "FLAG_TEMP_2"

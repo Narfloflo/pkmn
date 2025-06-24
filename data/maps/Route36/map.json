@@ -128,13 +128,6 @@
       "elevation": 0,
       "dest_map": "MAP_NATIONAL_PAKR_DOORS",
       "dest_warp_id": "3"
-    },
-    {
-      "x": 54,
-      "y": 30,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE36DOOR",
-      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
