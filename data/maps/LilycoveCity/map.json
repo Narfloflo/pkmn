@@ -287,8 +287,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 16,
-      "y": 43,
+      "x": 6,
+      "y": 45,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -300,8 +300,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR_KANTO",
-      "x": 16,
-      "y": 44,
+      "x": 6,
+      "y": 46,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
@@ -391,7 +391,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS_SR",
-      "x": 36,
+      "x": 37,
       "y": 48,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -404,7 +404,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS_JR",
-      "x": 35,
+      "x": 36,
       "y": 48,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -577,7 +577,7 @@
       "dest_warp_id": "2"
     },
     {
-      "x": 27,
+      "x": 28,
       "y": 47,
       "elevation": 0,
       "dest_map": "MAP_LILYCOVE_RESTO",
@@ -675,8 +675,8 @@
     },
     {
       "type": "sign",
-      "x": 6,
-      "y": 51,
+      "x": 15,
+      "y": 53,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LilycoveCity_EventScript_HarborSign"
@@ -723,8 +723,8 @@
     },
     {
       "type": "sign",
-      "x": 39,
-      "y": 55,
+      "x": 38,
+      "y": 54,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LilycoveCity_Text_SchoolSign"
@@ -771,8 +771,8 @@
     },
     {
       "type": "sign",
-      "x": 11,
-      "y": 44,
+      "x": 35,
+      "y": 54,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Verdanturf_Hospital_Door"
@@ -803,7 +803,7 @@
     },
     {
       "type": "sign",
-      "x": 41,
+      "x": 42,
       "y": 47,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
