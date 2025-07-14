@@ -14825,12 +14825,12 @@
               {
                 "min_level": 35,
                 "max_level": 40,
-                "species": "SPECIES_VULPIX"
+                "species": "SPECIES_TORKOAL"
               },
               {
                 "min_level": 35,
                 "max_level": 40,
-                "species": "SPECIES_VULPIX"
+                "species": "SPECIES_TORKOAL"
               },
               {
                 "min_level": 35,
@@ -15003,7 +15003,7 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_NOSEPASS"
+                "species": "SPECIES_WHISMUR"
               }
             ]
           },
@@ -15028,12 +15028,12 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_NOSEPASS"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_NOSEPASS"
               }
             ]
           }

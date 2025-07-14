@@ -163,6 +163,7 @@ gSpecials::
 	def_special GetRivalSonDaughterString
 	def_special SetHiddenItemFlag
 	def_special CableCarWarp
+	def_special CableCarWarpBis
 	def_special CableCar
 	def_special Overworld_PlaySpecialMapMusic
 	def_special StartWallClock

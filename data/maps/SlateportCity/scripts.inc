@@ -1561,4 +1561,4 @@ SlateportCity_Text_SchoolSign_Text_0:
 	.string "SLATEPORT SCHOOL\n“Either you become a Sailor either you\lbecome a Champion”$"
 
 SlateportCity_Event_SchoolClosed_Text_0:
-	.string "Humm... The SCHOOL is closed during the\nnight...\lCome back later.$"
+	.string "Humm… The SCHOOL is closed during the\nnight…\lCome back later.$"

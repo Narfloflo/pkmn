@@ -21,22 +21,15 @@ script Route27_Text_CooltrainerF {
 }
 
 script Route27_Text_Fisherman {
-    lock
-    faceplayer
-    call_if_unset(FLAG_TEMP_1, Route27_Text_FishermanFight)
-    if(flag(FLAG_TEMP_1)== TRUE){
-    msgbox(format("Somewhere there is a way to go to MT. SILVER!"),MSGBOX_AUTOCLOSE)
-    end
+    if (flag(FLAG_TEMP_1)) {
+        msgbox("Hang on!\nMy line's snagged!", MSGBOX_AUTOCLOSE)
+        end
     }
-    release
-    end
-}
-
-script Route27_Text_FishermanFight {
-    trainerbattle_single(TRAINER_DYLAN_2, "I'm a master fisherman!\nShall I show you?", "I think I'm still a novice...")
+    trainerbattle_single(TRAINER_DYLAN_2, "Yeah!\nI got a bite here!", "Tch!\nJust a small fry…")
+    msgbox(format("Hang on!\nMy line's snagged!"),MSGBOX_AUTOCLOSE)
     setflag(FLAG_TEMP_1)
-    cleartrainerflag(TRAINER_DYLAN_2)
-    end
+    cleartrainerflag(TRAINER_DYLAN_2) 
+    end   
 }
 
 script Route27_Text_Whirlpool4 {

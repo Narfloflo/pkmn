@@ -239,6 +239,11 @@ FallarborTown_Move_Stepback:
 	walk_down
 	step_end
 
+FallarborTown_Text_PubSign::
+	msgbox FallarborTown_Text_PubSign_Text_0, MSGBOX_SIGN
+	end
+
+
 FallarborTown_Text_Farmer_Text_0:
 	.string "The soil is so rich here. We have all the\n"
 	.string "best crops of HOENN.\p"
@@ -299,10 +304,13 @@ FallarborTown_Text_PokefanF_Text_0:
 	.string "with my PIKACHU.$"
 
 FallarborTown_Text_ScientistManDialogue_Text_0:
-	.string "...\nYes obviously...\lWe can invest into that technology...\lWhat about this processor?\l...\lDEVON can grant you some funds\l...\l{PLAYER}: They look busy.$"
+	.string "…\nYes obviously…\lWe can invest into that technology…\lWhat about this processor?\l…\lDEVON can grant you some funds\l…\l{PLAYER}: They look busy.$"
 
 FallarborTown_Text_MarketSign_Text_0:
 	.string "FALLARBOR LOCAL MARKET\n“We have local products and TRAINERS'\lITEMS too!”$"
 
 FallarborTown_Event_SchoolClosed_Text_0:
-	.string "{PLAYER}: The SCHOOL is closed during\nthe night...$"
+	.string "{PLAYER}: The SCHOOL is closed during\nthe night…$"
+
+FallarborTown_Text_PubSign_Text_0:
+	.string "The good old pub\n“Come and get the best meals!”$"

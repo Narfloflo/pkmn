@@ -933,6 +933,14 @@ void CableCarWarp(void)
         SetWarpDestination(MAP_GROUP(MT_CHIMNEY_CABLE_CAR_STATION), MAP_NUM(MT_CHIMNEY_CABLE_CAR_STATION), WARP_ID_NONE, 6, 4);
 }
 
+void CableCarWarpBis(void)
+{
+    if (gSpecialVar_0x8004 != 0)
+        SetWarpDestination(MAP_GROUP(ROUTE112_CABLE_CAR_STATIONTO_LAVARIDGE), MAP_NUM(ROUTE112_CABLE_CAR_STATIONTO_LAVARIDGE), WARP_ID_NONE, 6, 4);
+    else
+        SetWarpDestination(MAP_GROUP(LAVARIDGE_CABLE_CAR), MAP_NUM(LAVARIDGE_CABLE_CAR), WARP_ID_NONE, 6, 4);
+}
+
 void SetHiddenItemFlag(void)
 {
     FlagSet(gSpecialVar_0x8004);

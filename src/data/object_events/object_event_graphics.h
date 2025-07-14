@@ -255,11 +255,14 @@ const u16 gObjectEventPal_SSTidal[] = INCBIN_U16("graphics/object_events/palette
 
 
 const u32 gObjectEventPic_Policeman[] = INCBIN_U32("graphics/object_events/pics/people/policeman.4bpp");
+const u32 gObjectEventPic_PolicemanKanto[] = INCBIN_U32("graphics/object_events/pics/people/policemanKanto.4bpp");
 const u32 gObjectEventPic_ScientistF[] = INCBIN_U32("graphics/object_events/pics/people/scientist_f.4bpp");
 const u32 gObjectEventPic_Warrior[] = INCBIN_U32("graphics/object_events/pics/people/old_warrior.4bpp");
 const u32 gObjectEventPic_WarriorF[] = INCBIN_U32("graphics/object_events/pics/people/old_warrior_f.4bpp");
 const u32 gObjectEventPic_RangerF[] = INCBIN_U32("graphics/object_events/pics/people/ranger_f.4bpp");
+const u32 gObjectEventPic_RangerF2[] = INCBIN_U32("graphics/object_events/pics/people/ranger_f_kanto.4bpp");
 const u32 gObjectEventPic_RangerM[] = INCBIN_U32("graphics/object_events/pics/people/ranger_m.4bpp");
+const u32 gObjectEventPic_RangerM2[] = INCBIN_U32("graphics/object_events/pics/people/ranger_m_kanto.4bpp");
 const u32 gObjectEventPic_Farmer[] = INCBIN_U32("graphics/object_events/pics/people/farmer.4bpp");
 const u32 gObjectEventPic_Girl4[] = INCBIN_U32("graphics/object_events/pics/people/girl_4.4bpp");
 const u32 gObjectEventPic_BugCatcherKanto[] = INCBIN_U32("graphics/object_events/pics/people/bug_catcher_kanto.4bpp");
@@ -411,6 +414,7 @@ const u32 gObjectEventPic_Gyarados[] = INCBIN_U32("graphics/object_events/pics/p
 const u32 gObjectEventPic_Wailmer[] = INCBIN_U32("graphics/object_events/pics/pokemon/wailmer.4bpp");
 const u32 gObjectEventPic_Spoink[] = INCBIN_U32("graphics/object_events/pics/pokemon/spoink.4bpp");
 const u32 gObjectEventPic_Skarmory[] = INCBIN_U32("graphics/object_events/pics/pokemon/skarmory.4bpp");
+const u32 gObjectEventPic_OldWoman2[] = INCBIN_U32("graphics/object_events/pics/people/old_woman_kanto.4bpp");
 
 
 const u32 gFieldEffectObjectPic_Sparkle[] = INCBIN_U32("graphics/field_effects/pics/sparkle.4bpp");

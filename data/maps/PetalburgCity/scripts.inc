@@ -1063,4 +1063,4 @@ PetalburgCity_Text_SchoolSign_Text_0:
 	.string "PETALBURG SCHOOL\n“Last school before la creme de la\lcreme in RUSTBORO”$"
 
 PetalburgCity_Event_SchoolClosed_Text_0:
-	.string "Humm... The SCHOOL is closed during the\nnight...\lCome back later.$"
+	.string "Humm… The SCHOOL is closed during the\nnight…\lCome back later.$"

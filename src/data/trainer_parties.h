@@ -14805,7 +14805,7 @@ static const struct TrainerMonItemCustomMoves sParty_Red[] = {
     .lvl = 100,
     .species = SPECIES_BLASTOISE,
     .heldItem = ITEM_FOCUS_BAND,
-    .moves = {MOVE_HYDRO_PUMP, MOVE_BLIZZARD, MOVE_WATER_SPOUT, MOVE_SUPERPOWER}
+    .moves = {MOVE_HYDRO_PUMP, MOVE_BLIZZARD, MOVE_WATER_SPOUT, MOVE_SUPERPOWER},
     .nickname = _("BIG MAN")
     },
     {

@@ -19,3 +19,16 @@ mapscripts VioletPkmnCenter_MapScripts {}
     release
     end
 }
+
+script VioletPkmnCenter_Text_Gentleman {
+   msgbox("Justice will always prevail!\nNever forget that.", MSGBOX_NPC)
+   end 
+}
+script VioletPkmnCenter_Text_Kid {
+   msgbox("A guy named BILL create the PC STORAGE\nSYSTEM.\lWhat? A woman named LANETTE improved\lit?\pI never knew that!", MSGBOX_NPC)
+   end 
+}
+script VioletPkmnCenter_Text_Youngster {
+   msgbox("Oh wahoo!\nYou have a lot of BADGES! Pretty sure\lyour POKéMON always obeys you!", MSGBOX_NPC)
+   end 
+}

@@ -447,23 +447,13 @@ script LavaridgeTown_Text_Abra {
 	lock
 	faceplayer
 	playmoncry(SPECIES_ABRA, CRY_MODE_NORMAL)
-	msgbox(format("Braaa!"))
+	msgbox(format("ABRA: Braaa!"))
 	release
 	end
 }
 
 script LavaridgeTown_Text_AbraOwner {
-	lock
-	faceplayer
-	release
-	msgbox("Hello dear kid.\nI'm the LAVARIDGE TELEPORTER GUY.\lAs you can see this town is secluded,\land people are using my ABRA to get out\lof here quickly.\lDo you want to use my services?", MSGBOX_YESNO)
-	if(var(VAR_RESULT) == TRUE){
-		msgbox("Alright, it will be quick.\nYou'll get telepoted to ROUTE 112.\lSee you!", MSGBOX_AUTOCLOSE)
-		warpteleport(MAP_ROUTE112, 20,40)
-	}else{
-		msgbox("See you around!", MSGBOX_NPC)
-	}
-	release
+	msgbox("This ABRA is my friend.\nWith his ability to TELEPORT, I can be\lin MAUVILLE in a flash!", MSGBOX_NPC)
 	end
 }
 
@@ -476,4 +466,32 @@ script LavaridgeTown_Text_Spoink {
 	playmoncry(SPECIES_SPOINK, CRY_MODE_NORMAL)
 	msgbox("Grui Gruik?", MSGBOX_NPC)
 	end	
+}
+
+script LavaridgeTown_Event_SchoolClosed {
+	gettime
+	if (var(VAR_0x8003) == TIME_NIGHT || var(VAR_0x8003) == TIME_MIDNIGHT){
+		lock
+		applymovement(10, LavaridgeTown_Move_DirectorTriggered)
+		msgbox("Humm… The SCHOOL is closed during the\nnight…\lCome back later.")
+		applymovement(OBJ_EVENT_ID_PLAYER, LavaridgeTown_Move_Stepback)
+		waitmovement(0)
+		release
+		end
+	}
+	release
+	end
+}
+
+
+movement LavaridgeTown_Move_DirectorTriggered {
+	emote_exclamation_mark
+	face_original_direction
+	jump_in_place_left
+	step_end
+}
+
+movement LavaridgeTown_Move_Stepback {
+	walk_down
+	step_end
 }

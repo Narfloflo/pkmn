@@ -156,7 +156,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN_2",
       "x": 16,
       "y": 25,
       "elevation": 0,
@@ -273,7 +273,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMANKANTO",
       "x": 41,
       "y": 24,
       "elevation": 0,

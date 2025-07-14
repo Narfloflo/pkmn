@@ -19,3 +19,12 @@ mapscripts CianwoodPkmnCenter_MapScripts {}
     release
     end
 }
+
+script CianwoodPkmnCenter_Text_BlackBelt {
+    msgbox("I love showing off the POKéMON that\nI've raised.\lDon't you?\lI'm going to get into a bunch of\lBATTLES, and show off my POKéMON!", MSGBOX_NPC)
+    end
+}
+script CianwoodPkmnCenter_Text_Fisherman {
+    msgbox("There's a guy who was taking pictures\nof your POKéMON.\lHe seams fishy. No joke intended\lobviously.", MSGBOX_NPC)
+    end
+}

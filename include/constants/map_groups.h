@@ -134,6 +134,7 @@
 #define MAP_LAVARIDGE_TOWN_CAVE              (7 | (4 << 8))
 #define MAP_LAVARIDGE_TOWN_CAVE2             (8 | (4 << 8))
 #define MAP_LAVARIDGE_RESTO                  (9 | (4 << 8))
+#define MAP_LAVARIDGE_CABLE_CAR              (10 | (4 << 8))
 
 // gMapGroup_IndoorFallarbor
 #define MAP_FALLARBOR_TOWN_MART                    (0 | (5 << 8))
@@ -357,9 +358,10 @@
 #define MAP_SECRET_CITYTO_JUNCTION           (7 | (19 << 8))
 
 // gMapGroup_IndoorRoute112
-#define MAP_ROUTE112_CABLE_CAR_STATION   (0 | (20 << 8))
-#define MAP_MT_CHIMNEY_CABLE_CAR_STATION (1 | (20 << 8))
-#define MAP_ROUTE112PUB                  (2 | (20 << 8))
+#define MAP_ROUTE112_CABLE_CAR_STATION             (0 | (20 << 8))
+#define MAP_MT_CHIMNEY_CABLE_CAR_STATION           (1 | (20 << 8))
+#define MAP_ROUTE112PUB                            (2 | (20 << 8))
+#define MAP_ROUTE112_CABLE_CAR_STATIONTO_LAVARIDGE (3 | (20 << 8))
 
 // gMapGroup_IndoorRoute114
 #define MAP_ROUTE114_FOSSIL_MANIACS_HOUSE  (0 | (21 << 8))

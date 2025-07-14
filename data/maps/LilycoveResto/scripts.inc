@@ -92,25 +92,25 @@ LilycoveResto_Text_OldMan_Text_0:
 	.string "Eating this plate make me feel young\nagain!\lI can't stop eating!$"
 
 LilycoveResto_Text_OldMan_Text_1:
-	.string "Arg! A heart attack!\n...................\l...................\lI'll be fine$"
+	.string "Arg! A heart attack!\n……………………………………\l……………………………………\lI'll be fine$"
 
 LilycoveResto_Text_Sailor1_Text_0:
-	.string "My mate from KANTO is gone...\nI'm a bit sad, but that's the sailor\llife you know.$"
+	.string "My mate from KANTO is gone…\nI'm a bit sad, but that's the sailor\llife you know.$"
 
 LilycoveResto_Text_Sailor1_Text_1:
 	.string "My mate here is going back to KANTO\nsoon!\lSo we're celebrating his last days here!$"
 
 LilycoveResto_Text_Sailor2_Text_0:
-	.string "Soon I'll be gone... hic\nI miss my land!... hic\lYou cannot understand... hic$"
+	.string "Soon I'll be gone… hic\nI miss my land!… hic\lYou cannot understand… hic$"
 
 LilycoveResto_Text_LassJrLeavemeAlone_Text_0:
 	.string "Oh come on! You guys can't leave me\nalone?$"
 
 LilycoveResto_Text_LassJrBastard_Text_0:
-	.string "Oh my ARCEUS.\nThe boy over there is such a prick!\lHe's so obsessed by me! I can't...\lI need a strong POKéMON to punch him.$"
+	.string "Oh my ARCEUS.\nThe boy over there is such a prick!\lHe's so obsessed by me! I can't…\lI need a strong POKéMON to punch him.$"
 
 LilycoveResto_Text_Youngster_Text_0:
 	.string "This girl over there is my waifu, but\nshe don't know that yet.$"
 
 LilycoveResto_Text_KidM_Text_0:
-	.string "= I ate too much sugar! I can't stop\nrunning!$"
+	.string "I ate too much sugar! I can't stop\nrunning!$"

@@ -19,3 +19,16 @@ mapscripts GoldenrodPkmnCenter_MapScripts {}
     release
     end
 }
+
+script GoldenrodPkmnCenter_Text_Kid {
+    msgbox("I'm trying to level up because my\nfriends and I are meeting in a\lCOLOSSEUM BATTLE!", MSGBOX_NPC)
+    end
+}
+script GoldenrodPkmnCenter_Text_Lass {
+    msgbox("A higher level POKéMON doesn't always\nwin.\lAfter all, it may have a type\ldis-advantage.\pI don't think there is a single POKéMON\lthat is the toughest.\p{PLAYER}: You should see\lRAYQUAZA…", MSGBOX_NPC)
+    end
+}
+script GoldenrodPkmnCenter_Text_Kimono {
+    msgbox("Oh my, your pack looks so heavy!\nOh! Do you happen to have something\lnamed EON MAIL?\lWhat, they don't produce it anymore?\lMy daughter will be disappointed…", MSGBOX_NPC)
+    end
+}

@@ -407,6 +407,12 @@ $(OBJEVENTGFXDIR)/people/youngster.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/policeman.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/policemanKanto.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
+$(OBJEVENTGFXDIR)/people/old_woman_kanto.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
 $(OBJEVENTGFXDIR)/people/scientist_f.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4		
 
@@ -419,8 +425,14 @@ $(OBJEVENTGFXDIR)/people/old_warrior_f.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/ranger_f.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/ranger_f_kanto.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
 $(OBJEVENTGFXDIR)/people/ranger_m.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4		
+
+$(OBJEVENTGFXDIR)/people/ranger_m_kanto.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4	
 
 $(OBJEVENTGFXDIR)/people/farmer.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4

@@ -108,4 +108,4 @@ Mossdeep__Text_School_Text_0:
 	.string "MOSSDEEP SCHOOL$"
 
 Mossdeep__Event_SchoolClosed_Text_0:
-	.string "{PLAYER}: The SCHOOL is closed during\nthe night...$"
+	.string "{PLAYER}: The SCHOOL is closed during\nthe night…$"

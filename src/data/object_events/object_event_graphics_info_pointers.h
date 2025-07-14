@@ -142,6 +142,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HotSpringsO
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSTidal;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Policeman;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PolicemanKanto;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ScientistF;
 
@@ -149,7 +150,9 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Warrior;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WarriorF;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RangerF;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RangerF2;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RangerM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RangerM2;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Farmer;
 
@@ -305,6 +308,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gyarados;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Wailmer;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spoink;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Skarmory;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldWoman2;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SubmarineShadow;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PichuDoll;
@@ -558,11 +562,14 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
 
     
     [OBJ_EVENT_GFX_POLICEMAN] =                &gObjectEventGraphicsInfo_Policeman,
+    [OBJ_EVENT_GFX_POLICEMANKANTO] =                &gObjectEventGraphicsInfo_PolicemanKanto,
     [OBJ_EVENT_GFX_SCIENTIST_F] =              &gObjectEventGraphicsInfo_ScientistF,
     [OBJ_EVENT_GFX_WARRIOR] =                  &gObjectEventGraphicsInfo_Warrior,
     [OBJ_EVENT_GFX_WARRIOR_F] =                &gObjectEventGraphicsInfo_WarriorF,
     [OBJ_EVENT_GFX_RANGER_F] =                &gObjectEventGraphicsInfo_RangerF,
+    [OBJ_EVENT_GFX_RANGER_F_2] =                &gObjectEventGraphicsInfo_RangerF2,
     [OBJ_EVENT_GFX_RANGER_M] =                &gObjectEventGraphicsInfo_RangerM,
+    [OBJ_EVENT_GFX_RANGER_M_2] =                &gObjectEventGraphicsInfo_RangerM2,
     [OBJ_EVENT_GFX_FARMER] =                  &gObjectEventGraphicsInfo_Farmer,
     [OBJ_EVENT_GFX_GIRL_4] =                  &gObjectEventGraphicsInfo_Girl4,
     [OBJ_EVENT_GFX_BUG_CATCHER_KANTO] =       &gObjectEventGraphicsInfo_BugCatcherKanto,
@@ -714,6 +721,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_WAILMER] =        &gObjectEventGraphicsInfo_Wailmer,
     [OBJ_EVENT_GFX_SPOINK] =        &gObjectEventGraphicsInfo_Spoink,
     [OBJ_EVENT_GFX_SKARMORY] =        &gObjectEventGraphicsInfo_Skarmory,
+    [OBJ_EVENT_GFX_OLD_WOMAN_2] =        &gObjectEventGraphicsInfo_OldWoman2,
 
 
     [OBJ_EVENT_GFX_SUBMARINE_SHADOW] =         &gObjectEventGraphicsInfo_SubmarineShadow,

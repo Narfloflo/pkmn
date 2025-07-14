@@ -22,5 +22,21 @@ AzaleaPkmnCenter_Text_Nurse::
 	end
 
 
+AzaleaPkmnCenter_Text_Woman::
+	msgbox AzaleaPkmnCenter_Text_Woman_Text_0, MSGBOX_NPC
+	end
+
+
+AzaleaPkmnCenter_Text_Gentleman::
+	msgbox AzaleaPkmnCenter_Text_Gentleman_Text_0, MSGBOX_NPC
+	end
+
+
 AzaleaPkmnCenter_Text_Nurse_Text_0:
 	.string "I'll take your POKéMON for a\nfew moments.$"
+
+AzaleaPkmnCenter_Text_Woman_Text_0:
+	.string "Do you know about APRICORNS?\nWell it's not the season anymore. But,\lCrack one open, hollow it out and fit\lit with a special device.\lThen you can catch POKéMON with it.\pBefore POKéBALLS were invented,\leveryone used APRICORNS.$"
+
+AzaleaPkmnCenter_Text_Gentleman_Text_0:
+	.string "Do you use HM moves?\nYou know that POKéMON can use these\lmoves even if they are fainted.\pSo strange…\lI mean I could FLY with my fainted\lPIDGEOT.$"

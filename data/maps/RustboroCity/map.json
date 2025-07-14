@@ -798,8 +798,8 @@
     },
     {
       "type": "sign",
-      "x": 51,
-      "y": 24,
+      "x": 50,
+      "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "RustboroCity_EventScript_TrainersSchoolSign"

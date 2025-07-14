@@ -22,5 +22,29 @@ CherrygrovePkmnCenter_Text_Nurse::
 	end
 
 
+CherrygrovePkmnCenter_Text_FatMan::
+	msgbox CherrygrovePkmnCenter_Text_FatMan_Text_0, MSGBOX_NPC
+	end
+
+
+CherrygrovePkmnCenter_Text_Woman::
+	msgbox CherrygrovePkmnCenter_Text_Woman_Text_0, MSGBOX_NPC
+	end
+
+
+CherrygrovePkmnCenter_Text_Gentleman::
+	msgbox CherrygrovePkmnCenter_Text_Gentleman_Text_0, MSGBOX_NPC
+	end
+
+
 CherrygrovePkmnCenter_Text_Nurse_Text_0:
 	.string "I'll take your POKéMON for a\nfew moments.$"
+
+CherrygrovePkmnCenter_Text_FatMan_Text_0:
+	.string "You know that the services are free?\nReally? Oh well, excuse me.$"
+
+CherrygrovePkmnCenter_Text_Woman_Text_0:
+	.string "There is no place to TRADE here?\nI'm wondering why?$"
+
+CherrygrovePkmnCenter_Text_Gentleman_Text_0:
+	.string "The PC is free for any TRAINER to use.\nYou knew that already?\lWell I sound like a rookie...$"

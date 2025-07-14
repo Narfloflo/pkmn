@@ -19,18 +19,18 @@ LilycoveCity_OnLoad:
 	end
 
 LilycoveCity_EventScript_SetWailmerMetatiles::
-	setmetatile 76, 12, METATILE_Lilycove_Wailmer0, TRUE
-	setmetatile 77, 12, METATILE_Lilycove_Wailmer1, TRUE
-	setmetatile 76, 13, METATILE_Lilycove_Wailmer2, TRUE
-	setmetatile 77, 13, METATILE_Lilycove_Wailmer3, TRUE
-	setmetatile 76, 14, METATILE_Lilycove_Wailmer0_Alt, TRUE
-	setmetatile 77, 14, METATILE_Lilycove_Wailmer1_Alt, TRUE
-	setmetatile 76, 15, METATILE_Lilycove_Wailmer2, TRUE
-	setmetatile 77, 15, METATILE_Lilycove_Wailmer3, TRUE
-	setmetatile 77, 16, METATILE_Lilycove_Wailmer0_Alt, TRUE
-	setmetatile 78, 16, METATILE_Lilycove_Wailmer1_Alt, TRUE
-	setmetatile 77, 17, METATILE_Lilycove_Wailmer2, TRUE
-	setmetatile 78, 17, METATILE_Lilycove_Wailmer3, TRUE
+	setmetatile 76, 12, METATILE_General_CalmWater, TRUE
+	setmetatile 77, 12, METATILE_General_CalmWater, TRUE
+	setmetatile 76, 13, METATILE_General_CalmWater, TRUE
+	setmetatile 77, 13, METATILE_General_CalmWater, TRUE
+	setmetatile 76, 14, METATILE_General_CalmWater, TRUE
+	setmetatile 77, 14, METATILE_General_CalmWater, TRUE
+	setmetatile 76, 15, METATILE_General_CalmWater, TRUE
+	setmetatile 77, 15, METATILE_General_CalmWater, TRUE
+	setmetatile 77, 16, METATILE_General_CalmWater, TRUE
+	setmetatile 78, 16, METATILE_General_CalmWater, TRUE
+	setmetatile 77, 17, METATILE_General_CalmWater, TRUE
+	setmetatile 78, 17, METATILE_General_CalmWater, TRUE
 	return
 
 LilycoveCity_EventScript_BerryGentleman::
@@ -770,7 +770,7 @@ script LilycoveCity_Text_Teacher{
 }
 
 script LilycoveCity_Text_Lass{
-	msgbox("I don't know if I should go relax to\nthe beach or not...", MSGBOX_NPC)
+	msgbox("I don't know if I should go relax to\nthe beach or not…", MSGBOX_NPC)
 	end
 }
 script LilycoveCity_Text_LassSr {
@@ -800,7 +800,7 @@ script LilycoveCity_Text_Beauty {
 	end
 }
 script LilycoveCity_Text_Painter {
-	msgbox("Hey! You don't know me?\nI'm the famous VORNET! The painter!\lYou don't know me? I come from KALOS.\lCome on! you surely know me!\lKids nowadays..", MSGBOX_NPC)
+	msgbox("Hey! You don't know me?\nI'm the famous VORNET! The painter!\lYou don't know me? I come from KALOS.\lCome on! you surely know me!\lKids nowadays…", MSGBOX_NPC)
 	end
 }
 
@@ -810,7 +810,7 @@ script LilycoveCity_Event_SchoolClosed {
 		lock
 		lock
 		applymovement(23, LilycoveCity_Move_DirectorTriggered)
-		msgbox("Humm... The SCHOOL is closed during the\nnight...\lCome back later.")
+		msgbox("Humm… The SCHOOL is closed during the\nnight…\lCome back later.")
 		applymovement(OBJ_EVENT_ID_PLAYER, LilycoveCity_Move_Stepback)
 		waitmovement(0)
 		release

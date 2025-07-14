@@ -1128,8 +1128,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 10,
-      "y": 113,
+      "x": 15,
+      "y": 114,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route111_EventScript_WinstrateHouseSign"

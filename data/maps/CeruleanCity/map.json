@@ -75,7 +75,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMANKANTO",
       "x": 30,
       "y": 12,
       "elevation": 0,
@@ -88,7 +88,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMANKANTO",
       "x": 32,
       "y": 12,
       "elevation": 0,

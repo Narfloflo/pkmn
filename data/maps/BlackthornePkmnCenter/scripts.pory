@@ -19,3 +19,13 @@ mapscripts BlackthornePkmnCenter_MapScripts {}
     release
     end
 }
+script BlackthornePkmnCenter_Text_Woman {
+    msgbox("I taught a HM to my POKéMON, but he\ncouldn't forget it. So I went to the\lMOVE DELETER to it forget.", MSGBOX_NPC)
+    end
+}script BlackthornePkmnCenter_Text_Man {
+    msgbox("Oh wow! You seem very close to your\nPOKéMON!", MSGBOX_NPC)
+    end
+}script BlackthornePkmnCenter_Text_Gentleman {
+    msgbox("Deep inside far off INDIGO PLATEAU is\nthe POKéMON LEAGUE of KANTO.\lThe best TRAINERS gather there from\laroung JOHTO and KANTO.\pOh there is also a LEAGUE in HOENN?\lI've never been there.", MSGBOX_NPC)
+    end
+}

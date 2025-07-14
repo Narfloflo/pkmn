@@ -19,3 +19,11 @@ mapscripts EcruteakPkmnCenter_MapScripts {}
     release
     end
 }
+script EcruteakPkmnCenter_Text_GymGuy {
+    msgbox("BILL is always visiting his folks in\nGOLDENROD CITY.\lSometimes he gives POKéMON to the\lTRAINERS he meets.", MSGBOX_NPC)
+    end
+}
+script EcruteakPkmnCenter_Text_FatMan {
+    msgbox("The way the KIMONO GIRLS dance is\nmarvelous.\lJust like the way they use their\lPOKéMON.", MSGBOX_NPC)
+    end
+}

@@ -154,8 +154,16 @@ Route112_Text_Marill::
 	end
 
 
+Route112_Text_Worker::
+	msgbox Route112_Text_Worker_Text_0, MSGBOX_NPC
+	end
+
+
 Route112_Text_SignPub_Text_0:
 	.string "The fiery PUB\n“We cook with natural heat!”$"
 
 Route112_Text_Marill_Text_0:
 	.string "Ruuu Ruuuh!$"
+
+Route112_Text_Worker_Text_0:
+	.string "Oh yes, you can't access the CABLE CAR\nyet!\lSome crazy guys just vandalized it.\pSo if you want to go to LAVARIDGE, you\lhave to move to MT. CHIMNEY.$"

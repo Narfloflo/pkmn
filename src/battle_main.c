@@ -1974,7 +1974,13 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     u32 personalityValue;
     u8 fixedIV;
     u8 partySize = 0;
+    bool8 hasCustomNickname = FALSE;
+    bool8 hasValidNickname = FALSE;
+    // Variable supprimée car plus nécessaire
+    // bool8 hasCustomNickname = FALSE;
 
+    // [... tout le code de calcul de dynamicLevel reste identique ...]
+    
     for (i = 0; i < PARTY_SIZE; i++)
     {
         if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) == SPECIES_NONE)
@@ -2052,8 +2058,6 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     if (trainerNum == TRAINER_SECRET_BASE)
         return 0;
 
-    
-
     if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && !(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER | BATTLE_TYPE_EREADER_TRAINER | BATTLE_TYPE_TRAINER_HILL)))
     {
         if (firstTrainer == TRUE)
@@ -2074,6 +2078,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
         for (i = 0; i < monsCount; i++)
         {
             int rand_diff = Random() % 5;
+            // Variable supprimée car plus nécessaire
+            // hasCustomNickname = FALSE;
 
             switch (rand_diff)
             {
@@ -2092,54 +2098,96 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             case 4:
                 rand_diff = -2;
             }
-            {
 
-                if (gTrainers[trainerNum].doubleBattle == TRUE)
-                    personalityValue = 0x80;
-                else if (gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
-                    personalityValue = 0x78;
-                else
-                    personalityValue = 0x88;
+            if (gTrainers[trainerNum].doubleBattle == TRUE)
+                personalityValue = 0x80;
+            else if (gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
+                personalityValue = 0x78;
+            else
+                personalityValue = 0x88;
 
-                for (j = 0; gTrainers[trainerNum].trainerName[j] != EOS; j++)
-                    nameHash += gTrainers[trainerNum].trainerName[j];
+            for (j = 0; gTrainers[trainerNum].trainerName[j] != EOS; j++)
+                nameHash += gTrainers[trainerNum].trainerName[j];
 
                 switch (gTrainers[trainerNum].partyFlags)
                 {
                 case 0:
                 {
                     const struct TrainerMonNoItemDefaultMoves *partyData = gTrainers[trainerNum].party.NoItemDefaultMoves;
-
+    
                     for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
                         nameHash += gSpeciesNames[partyData[i].species][j];
-
+    
                     personalityValue += nameHash << 8;
                     fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                     if (partyData[i].lvl >= dynamicLevel)
                         CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                     else
                         CreateMon(&party[i], partyData[i].species, dynamicLevel, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
-
+    
+                    // Vérification robuste du nickname
+                    hasValidNickname = FALSE;
+                    for (j = 0; j < POKEMON_NAME_LENGTH; j++)
+                    {
+                        if (partyData[i].nickname[j] != 0 && 
+                            partyData[i].nickname[j] != EOS && 
+                            partyData[i].nickname[j] != ' ')
+                        {
+                            hasValidNickname = TRUE;
+                            break;
+                        }
+                        if (partyData[i].nickname[j] == EOS)
+                            break;
+                    }
+                    
+                    if (hasValidNickname)
+                    {
                         SetMonData(&party[i], MON_DATA_NICKNAME, partyData[i].nickname);
+                    }
+                    else
+                    {
+                        SetMonData(&party[i], MON_DATA_NICKNAME, gSpeciesNames[partyData[i].species]);
+                    }
                     break;
                 }
                 case F_TRAINER_PARTY_CUSTOM_MOVESET:
                 {
                     const struct TrainerMonNoItemCustomMoves *partyData = gTrainers[trainerNum].party.NoItemCustomMoves;
-
+    
                     for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
                         nameHash += gSpeciesNames[partyData[i].species][j];
-
+    
                     personalityValue += nameHash << 8;
                     fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
-                   if (partyData[i].lvl >= dynamicLevel)
+                    if (partyData[i].lvl >= dynamicLevel)
                         CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                     else
                         CreateMon(&party[i], partyData[i].species, dynamicLevel, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
-
+    
+                    // Vérification robuste du nickname
+                    hasValidNickname = FALSE;
+                    for (j = 0; j < POKEMON_NAME_LENGTH; j++)
+                    {
+                        if (partyData[i].nickname[j] != 0 && 
+                            partyData[i].nickname[j] != EOS && 
+                            partyData[i].nickname[j] != ' ')
+                        {
+                            hasValidNickname = TRUE;
+                            break;
+                        }
+                        if (partyData[i].nickname[j] == EOS)
+                            break;
+                    }
+                    
+                    if (hasValidNickname)
+                    {
                         SetMonData(&party[i], MON_DATA_NICKNAME, partyData[i].nickname);
-                    break;
-
+                    }
+                    else
+                    {
+                        SetMonData(&party[i], MON_DATA_NICKNAME, gSpeciesNames[partyData[i].species]);
+                    }
+    
                     for (j = 0; j < MAX_MON_MOVES; j++)
                     {
                         SetMonData(&party[i], MON_DATA_MOVE1 + j, &partyData[i].moves[j]);
@@ -2150,63 +2198,102 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 case F_TRAINER_PARTY_HELD_ITEM:
                 {
                     const struct TrainerMonItemDefaultMoves *partyData = gTrainers[trainerNum].party.ItemDefaultMoves;
-
+    
                     for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
                         nameHash += gSpeciesNames[partyData[i].species][j];
-
+    
                     personalityValue += nameHash << 8;
                     fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                     if (partyData[i].lvl >= dynamicLevel)
                         CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                     else
                         CreateMon(&party[i], partyData[i].species, dynamicLevel, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
-
+    
+                    // Vérification robuste du nickname
+                    hasValidNickname = FALSE;
+                    for (j = 0; j < POKEMON_NAME_LENGTH; j++)
+                    {
+                        if (partyData[i].nickname[j] != 0 && 
+                            partyData[i].nickname[j] != EOS && 
+                            partyData[i].nickname[j] != ' ')
+                        {
+                            hasValidNickname = TRUE;
+                            break;
+                        }
+                        if (partyData[i].nickname[j] == EOS)
+                            break;
+                    }
+                    
+                    if (hasValidNickname)
+                    {
                         SetMonData(&party[i], MON_DATA_NICKNAME, partyData[i].nickname);
-                    break;
-
+                    }
+                    else
+                    {
+                        SetMonData(&party[i], MON_DATA_NICKNAME, gSpeciesNames[partyData[i].species]);
+                    }
+    
                     SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
                     break;
                 }
                 case F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM:
                 {
                     const struct TrainerMonItemCustomMoves *partyData = gTrainers[trainerNum].party.ItemCustomMoves;
-
+    
                     for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
                         nameHash += gSpeciesNames[partyData[i].species][j];
-
+    
                     personalityValue += nameHash << 8;
                     fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                     if (partyData[i].lvl >= dynamicLevel)
                         CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                     else
                         CreateMon(&party[i], partyData[i].species, dynamicLevel, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
-                        
+                    
+                    // Vérification robuste du nickname
+                    hasValidNickname = FALSE;
+                    for (j = 0; j < POKEMON_NAME_LENGTH; j++)
+                    {
+                        if (partyData[i].nickname[j] != 0 && 
+                            partyData[i].nickname[j] != EOS && 
+                            partyData[i].nickname[j] != ' ')
+                        {
+                            hasValidNickname = TRUE;
+                            break;
+                        }
+                        if (partyData[i].nickname[j] == EOS)
+                            break;
+                    }
+                    
+                    if (hasValidNickname)
+                    {
                         SetMonData(&party[i], MON_DATA_NICKNAME, partyData[i].nickname);
-                    break;
-
+                    }
+                    else
+                    {
+                        SetMonData(&party[i], MON_DATA_NICKNAME, gSpeciesNames[partyData[i].species]);
+                    }
+    
                     SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
-
+    
                     for (j = 0; j < MAX_MON_MOVES; j++)
                     {
                         SetMonData(&party[i], MON_DATA_MOVE1 + j, &partyData[i].moves[j]);
                         SetMonData(&party[i], MON_DATA_PP1 + j, &gBattleMoves[partyData[i].moves[j]].pp);
                     }
                     break;
-                }
-
-                    dynamicLevel -= rand_diff + PartyLevelAdjust;
-                    
-
-                   
-                }
-                gBattleTypeFlags |= gTrainers[trainerNum].doubleBattle;
             }
-    
-        }
-    
-    }
-}
+            }
 
+            // Plus besoin de logique globale - chaque cas gère son nickname
+            
+            dynamicLevel -= rand_diff + PartyLevelAdjust;
+            gBattleTypeFlags |= gTrainers[trainerNum].doubleBattle;
+        }
+    }
+    
+    return monsCount; // Il faut retourner le nombre de Pokémon créés
+}
 // Unused
 static void HBlankCB_Battle(void)
 {

@@ -329,4 +329,4 @@ Route117_Text_Fatman_Text_0:
 	.string "So amazing!$"
 
 Route117_Event_SchoolClosed_Text_0:
-	.string "Humm... The SCHOOL is closed during the\nnight...\lCome back later.$"
+	.string "Humm… The SCHOOL is closed during the\nnight…\lCome back later.$"

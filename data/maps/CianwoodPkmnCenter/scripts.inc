@@ -22,5 +22,21 @@ CianwoodPkmnCenter_Text_Nurse::
 	end
 
 
+CianwoodPkmnCenter_Text_BlackBelt::
+	msgbox CianwoodPkmnCenter_Text_BlackBelt_Text_0, MSGBOX_NPC
+	end
+
+
+CianwoodPkmnCenter_Text_Fisherman::
+	msgbox CianwoodPkmnCenter_Text_Fisherman_Text_0, MSGBOX_NPC
+	end
+
+
 CianwoodPkmnCenter_Text_Nurse_Text_0:
 	.string "I'll take your POKéMON for a\nfew moments.$"
+
+CianwoodPkmnCenter_Text_BlackBelt_Text_0:
+	.string "I love showing off the POKéMON that\nI've raised.\lDon't you?\lI'm going to get into a bunch of\lBATTLES, and show off my POKéMON!$"
+
+CianwoodPkmnCenter_Text_Fisherman_Text_0:
+	.string "There's a guy who was taking pictures\nof your POKéMON.\lHe seams fishy. No joke intended\lobviously.$"

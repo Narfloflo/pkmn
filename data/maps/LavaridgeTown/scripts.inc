@@ -452,21 +452,8 @@ LavaridgeTown_Text_Abra::
 
 
 LavaridgeTown_Text_AbraOwner::
-	lock
-	faceplayer
-	release
-	msgbox LavaridgeTown_Text_AbraOwner_Text_0, MSGBOX_YESNO
-	compare VAR_RESULT, TRUE
-	goto_if_eq LavaridgeTown_Text_AbraOwner_2
-	msgbox LavaridgeTown_Text_AbraOwner_Text_2, MSGBOX_NPC
-LavaridgeTown_Text_AbraOwner_1:
-	release
+	msgbox LavaridgeTown_Text_AbraOwner_Text_0, MSGBOX_NPC
 	end
-
-LavaridgeTown_Text_AbraOwner_2:
-	msgbox LavaridgeTown_Text_AbraOwner_Text_1, MSGBOX_AUTOCLOSE
-	warpteleport MAP_ROUTE112, 20, 40
-	goto LavaridgeTown_Text_AbraOwner_1
 
 
 LavaridgeTown_Text_RestoSign::
@@ -479,6 +466,35 @@ LavaridgeTown_Text_Spoink::
 	msgbox LavaridgeTown_Text_Spoink_Text_0, MSGBOX_NPC
 	end
 
+
+LavaridgeTown_Event_SchoolClosed::
+	gettime
+	compare VAR_0x8003, TIME_NIGHT
+	goto_if_eq LavaridgeTown_Event_SchoolClosed_2
+	compare VAR_0x8003, TIME_MIDNIGHT
+	goto_if_eq LavaridgeTown_Event_SchoolClosed_2
+	release
+	end
+
+LavaridgeTown_Event_SchoolClosed_2:
+	lock
+	applymovement 10, LavaridgeTown_Move_DirectorTriggered
+	msgbox LavaridgeTown_Event_SchoolClosed_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, LavaridgeTown_Move_Stepback
+	waitmovement 0
+	release
+	end
+
+
+LavaridgeTown_Move_DirectorTriggered:
+	emote_exclamation_mark
+	face_original_direction
+	jump_in_place_left
+	step_end
+
+LavaridgeTown_Move_Stepback:
+	walk_down
+	step_end
 
 LavaridgeTown_Text_Beauty_Text_0:
 	.string "Best experience ever. I think I'll rest a\n"
@@ -504,19 +520,16 @@ LavaridgeTown_Text_WarriorF_Text_0:
 	.string "HOENN!$"
 
 LavaridgeTown_Text_Abra_Text_0:
-	.string "Braaa!$"
+	.string "ABRA: Braaa!$"
 
 LavaridgeTown_Text_AbraOwner_Text_0:
-	.string "Hello dear kid.\nI'm the LAVARIDGE TELEPORTER GUY.\lAs you can see this town is secluded,\land people are using my ABRA to get out\lof here quickly.\lDo you want to use my services?$"
-
-LavaridgeTown_Text_AbraOwner_Text_1:
-	.string "Alright, it will be quick.\nYou'll get telepoted to ROUTE 112.\lSee you!$"
-
-LavaridgeTown_Text_AbraOwner_Text_2:
-	.string "See you around!$"
+	.string "This ABRA is my friend.\nWith his ability to TELEPORT, I can be\lin MAUVILLE in a flash!$"
 
 LavaridgeTown_Text_RestoSign_Text_0:
 	.string "LAVARIDGE SALOON\n“Come have a good cold one!”$"
 
 LavaridgeTown_Text_Spoink_Text_0:
 	.string "Grui Gruik?$"
+
+LavaridgeTown_Event_SchoolClosed_Text_0:
+	.string "Humm… The SCHOOL is closed during the\nnight…\lCome back later.$"

@@ -148,7 +148,7 @@
     {
       "id": "LAYOUT_LAVARIDGE_TOWN",
       "name": "LavaridgeTown_Layout",
-      "width": 40,
+      "width": 60,
       "height": 30,
       "border_width": 2,
       "border_height": 2,
@@ -5452,7 +5452,7 @@
     {
       "id": "LAYOUT_BEACH_SIDE2",
       "name": "BeachSide2_Layout",
-      "width": 55,
+      "width": 57,
       "height": 50,
       "border_width": 2,
       "border_height": 2,
@@ -7720,7 +7720,7 @@
     {
       "id": "LAYOUT_GOLDENROD_INSIDE",
       "name": "GoldenrodInside_Layout",
-      "width": 70,
+      "width": 35,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
@@ -7744,7 +7744,7 @@
     {
       "id": "LAYOUT_BLACK_AZALEA_INSIDE",
       "name": "BlackAzaleaInside_Layout",
-      "width": 58,
+      "width": 31,
       "height": 10,
       "border_width": 2,
       "border_height": 2,
@@ -9216,6 +9216,30 @@
       "secondary_tileset": "gTileset_KantoResto",
       "border_filepath": "data/layouts/Route46Gate/border.bin",
       "blockdata_filepath": "data/layouts/Route46Gate/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE112_CABLE_CAR_STATIONTO_LAVARIDGE",
+      "name": "Route112_CableCarStationtoLavaridge_Layout",
+      "width": 13,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Route112_CableCarStationtoLavaridge/border.bin",
+      "blockdata_filepath": "data/layouts/Route112_CableCarStationtoLavaridge/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAVARIDGE_CABLE_CAR",
+      "name": "Lavaridge_CableCar_Layout",
+      "width": 13,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Lavaridge_CableCar/border.bin",
+      "blockdata_filepath": "data/layouts/Lavaridge_CableCar/map.bin"
     }
   ]
 }

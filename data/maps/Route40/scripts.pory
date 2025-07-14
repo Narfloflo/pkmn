@@ -19,7 +19,7 @@ script Route40_Text_Fisherman{
 script Route40_Text_Fisherman2{
     lock
     faceplayer
-    msgbox(format("I don't know how I end up here, but that's a really good place to fish !"))
+    msgbox(format("I don't know how I end up here, but that's a really good place to fish!"))
     release
     end
 }
@@ -44,7 +44,6 @@ script Route40_Text_Machoke {
     lock
     faceplayer
     playmoncry(SPECIES_MACHOKE, CRY_MODE_NORMAL)
-    waitmoncry
     msgbox(format("Choky!"))   
     release
     end

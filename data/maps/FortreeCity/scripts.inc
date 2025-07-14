@@ -214,7 +214,7 @@ FortreeCity_Text_SchoolboyM_Text_0:
 	.string "You cannot realize of strong we are in\nFORTREE!\lNo I'm not talking about POKéMON skill,\lbut real strength: I mean we are always\lclimbing on trees!$"
 
 FortreeCity_Text_GirlOnTree_Text_0:
-	.string "I'm totally lost on all those trees!\nI can figure where my houose is\lanymore...$"
+	.string "I'm totally lost on all those trees!\nI can figure where my house is\lanymore…$"
 
 FortreeCity_Event_SchoolClosed_Text_0:
-	.string "Humm... The SCHOOL is closed during the\nnight...\lCome back later.$"
+	.string "Humm… The SCHOOL is closed during the\nnight…\lCome back later.$"

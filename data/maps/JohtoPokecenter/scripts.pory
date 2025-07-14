@@ -19,3 +19,16 @@ mapscripts JohtoPokecenter_MapScripts {}
     release
     end
 }
+
+script CherrygrovePkmnCenter_Text_FatMan {
+   msgbox("You know that the services are free?\nReally? Oh well, excuse me.", MSGBOX_NPC)
+   end 
+}
+script CherrygrovePkmnCenter_Text_Woman {
+   msgbox("There is no place to TRADE here?\nI'm wondering why?", MSGBOX_NPC)
+   end 
+}
+script CherrygrovePkmnCenter_Text_Gentleman {
+   msgbox("The PC is free for any TRAINER to use.\nYou knew that already?\lWell I sound like a rookie...", MSGBOX_NPC)
+   end 
+}

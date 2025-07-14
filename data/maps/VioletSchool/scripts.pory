@@ -1,1 +1,28 @@
 mapscripts VioletSchool_MapScripts {}
+
+
+script VioletSchool_Text_Blackboard {
+    msgbox("The blackboard is full of things you\nalready knows.", MSGBOX_SIGN)
+    end
+}
+script VioletSchool_Text_Teacher {
+    msgbox("Hello youngster. Have you done your\nhomework?\l……… ……… ……… ………\lOh wahoo so much BADGES!! I guess you\ldon't need to do your homework.", MSGBOX_NPC)
+    end
+}
+
+script VioletSchool_Text_Kris {
+    msgbox("{PLAYER}: ……… ……… ……… ……… ……… ……… ………\pKRIS : ……… ……… ……… ……… ………… ……… ………", MSGBOX_NPC)
+    end
+}
+script VioletSchool_Text_Bugcatcher {
+    msgbox("I'm taking notes of the teacher's\nlecture.\lI'd better copy the stuff on the\lblackboard too.", MSGBOX_NPC)
+    end
+}
+script VioletSchool_Text_Youngster {
+    msgbox("A POKéMON holding a BERRY will heal\nitself in BATTLE.\lMany other items can be held by\lPOKéMON…\lIt sure is tough taking notes…", MSGBOX_NPC)
+    end
+}
+script VioletSchool_Text_Kid {
+    msgbox("Oh no, I'm note taking notes.\nThe teacher told me to prevent anybody\lfrom moving upstairs.", MSGBOX_NPC)
+    end
+}

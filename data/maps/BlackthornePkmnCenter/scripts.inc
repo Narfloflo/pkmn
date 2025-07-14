@@ -22,5 +22,29 @@ BlackthornePkmnCenter_Text_Nurse::
 	end
 
 
+BlackthornePkmnCenter_Text_Woman::
+	msgbox BlackthornePkmnCenter_Text_Woman_Text_0, MSGBOX_NPC
+	end
+
+
+BlackthornePkmnCenter_Text_Man::
+	msgbox BlackthornePkmnCenter_Text_Man_Text_0, MSGBOX_NPC
+	end
+
+
+BlackthornePkmnCenter_Text_Gentleman::
+	msgbox BlackthornePkmnCenter_Text_Gentleman_Text_0, MSGBOX_NPC
+	end
+
+
 BlackthornePkmnCenter_Text_Nurse_Text_0:
 	.string "I'll take your POKéMON for a\nfew moments.$"
+
+BlackthornePkmnCenter_Text_Woman_Text_0:
+	.string "I taught a HM to my POKéMON, but he\ncouldn't forget it. So I went to the\lMOVE DELETER to it forget.$"
+
+BlackthornePkmnCenter_Text_Man_Text_0:
+	.string "Oh wow! You seem very close to your\nPOKéMON!$"
+
+BlackthornePkmnCenter_Text_Gentleman_Text_0:
+	.string "Deep inside far off INDIGO PLATEAU is\nthe POKéMON LEAGUE of KANTO.\lThe best TRAINERS gather there from\laroung JOHTO and KANTO.\pOh there is also a LEAGUE in HOENN?\lI've never been there.$"

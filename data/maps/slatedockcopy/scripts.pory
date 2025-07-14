@@ -80,7 +80,7 @@ script SlateportDocksInside_Text_Beauty {
     lock
     faceplayer
     if(flag(FLAG_IS_CHAMPION)) {
-    msgbox(format("Oh seems like you are strong enough to go to KANTO freely ! Amazing Right ?"))
+    msgbox(format("Oh seems like you are strong enough to go to KANTO freely! Amazing Right?"))
     } else {
     msgbox(format("Hello, you want a ticket for KANTO ? Well unfortunatly we sold them all..."))
     }

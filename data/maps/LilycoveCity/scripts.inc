@@ -19,18 +19,18 @@ LilycoveCity_OnLoad:
 	end
 
 LilycoveCity_EventScript_SetWailmerMetatiles::
-	setmetatile 76, 12, METATILE_Lilycove_Wailmer0, TRUE
-	setmetatile 77, 12, METATILE_Lilycove_Wailmer1, TRUE
-	setmetatile 76, 13, METATILE_Lilycove_Wailmer2, TRUE
-	setmetatile 77, 13, METATILE_Lilycove_Wailmer3, TRUE
-	setmetatile 76, 14, METATILE_Lilycove_Wailmer0_Alt, TRUE
-	setmetatile 77, 14, METATILE_Lilycove_Wailmer1_Alt, TRUE
-	setmetatile 76, 15, METATILE_Lilycove_Wailmer2, TRUE
-	setmetatile 77, 15, METATILE_Lilycove_Wailmer3, TRUE
-	setmetatile 77, 16, METATILE_Lilycove_Wailmer0_Alt, TRUE
-	setmetatile 78, 16, METATILE_Lilycove_Wailmer1_Alt, TRUE
-	setmetatile 77, 17, METATILE_Lilycove_Wailmer2, TRUE
-	setmetatile 78, 17, METATILE_Lilycove_Wailmer3, TRUE
+	setmetatile 76, 12, METATILE_General_CalmWater, TRUE
+	setmetatile 77, 12, METATILE_General_CalmWater, TRUE
+	setmetatile 76, 13, METATILE_General_CalmWater, TRUE
+	setmetatile 77, 13, METATILE_General_CalmWater, TRUE
+	setmetatile 76, 14, METATILE_General_CalmWater, TRUE
+	setmetatile 77, 14, METATILE_General_CalmWater, TRUE
+	setmetatile 76, 15, METATILE_General_CalmWater, TRUE
+	setmetatile 77, 15, METATILE_General_CalmWater, TRUE
+	setmetatile 77, 16, METATILE_General_CalmWater, TRUE
+	setmetatile 78, 16, METATILE_General_CalmWater, TRUE
+	setmetatile 77, 17, METATILE_General_CalmWater, TRUE
+	setmetatile 78, 17, METATILE_General_CalmWater, TRUE
 	return
 
 LilycoveCity_EventScript_BerryGentleman::
@@ -851,7 +851,7 @@ LilycoveCity_Text_Teacher_Text_0:
 	.string "Here is LILYCOVE's SCHOOL.\nWe teach you to become the very best!$"
 
 LilycoveCity_Text_Lass_Text_0:
-	.string "I don't know if I should go relax to\nthe beach or not...$"
+	.string "I don't know if I should go relax to\nthe beach or not…$"
 
 LilycoveCity_Text_LassSr_Text_0:
 	.string "We should go to the big MART!\nThey sell DOLLS!$"
@@ -872,10 +872,10 @@ LilycoveCity_Text_Beauty_Text_0:
 	.string "I came from MAUVILLE just to go to the\nMUSEUM.\lBut now I'm really exhausted!$"
 
 LilycoveCity_Text_Painter_Text_0:
-	.string "Hey! You don't know me?\nI'm the famous VORNET! The painter!\lYou don't know me? I come from KALOS.\lCome on! you surely know me!\lKids nowadays..$"
+	.string "Hey! You don't know me?\nI'm the famous VORNET! The painter!\lYou don't know me? I come from KALOS.\lCome on! you surely know me!\lKids nowadays…$"
 
 LilycoveCity_Event_SchoolClosed_Text_0:
-	.string "Humm... The SCHOOL is closed during the\nnight...\lCome back later.$"
+	.string "Humm… The SCHOOL is closed during the\nnight…\lCome back later.$"
 
 LilycoveCity_Text_Wailmer_Text_0:
 	.string "Wahuuu!$"

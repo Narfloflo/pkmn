@@ -30,20 +30,20 @@ script LilycoveResto_Text_OldMan {
 	msgbox("Eating this plate make me feel young\nagain!\lI can't stop eating!", MSGBOX_NPC)
 	applymovement(4, Exclamation)
 	waitmovement(0)
-	message("Arg! A heart attack!\n...................\l...................\lI'll be fine")
+	message("Arg! A heart attack!\n……………………………………\l……………………………………\lI'll be fine")
 	end
 }
 
 script LilycoveResto_Text_Sailor1 {
 	if(flag(FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE)== TRUE){
-		msgbox("My mate from KANTO is gone...\nI'm a bit sad, but that's the sailor\llife you know."MSGBOX_NPC)
+		msgbox("My mate from KANTO is gone…\nI'm a bit sad, but that's the sailor\llife you know."MSGBOX_NPC)
 		end
 	}
 	msgbox("My mate here is going back to KANTO\nsoon!\lSo we're celebrating his last days here!", MSGBOX_NPC)
 	end
 }
 script LilycoveResto_Text_Sailor2 {
-	msgbox("Soon I'll be gone... hic\nI miss my land!... hic\lYou cannot understand... hic", MSGBOX_NPC)
+	msgbox("Soon I'll be gone… hic\nI miss my land!… hic\lYou cannot understand… hic", MSGBOX_NPC)
 	end
 }
 
@@ -59,7 +59,7 @@ script LilycoveResto_Text_LassJrLeavemeAlone {
 }
 
 script LilycoveResto_Text_LassJrBastard {
-	msgbox("Oh my ARCEUS.\nThe boy over there is such a prick!\lHe's so obsessed by me! I can't...\lI need a strong POKéMON to punch him.", MSGBOX_NPC)
+	msgbox("Oh my ARCEUS.\nThe boy over there is such a prick!\lHe's so obsessed by me! I can't…\lI need a strong POKéMON to punch him.", MSGBOX_NPC)
 	end
 }
 
@@ -69,6 +69,6 @@ script LilycoveResto_Text_Youngster {
 }
 
 script LilycoveResto_Text_KidM {
-	msgbox("= I ate too much sugar! I can't stop\nrunning!", MSGBOX_NPC)
+	msgbox("I ate too much sugar! I can't stop\nrunning!", MSGBOX_NPC)
 	end
 }

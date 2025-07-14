@@ -154,3 +154,8 @@ script Route112_Text_Marill {
 	msgbox("Ruuu Ruuuh!", MSGBOX_NPC)
 	end
 }
+
+script Route112_Text_Worker {
+ msgbox("Oh yes, you can't access the CABLE CAR\nyet!\lSome crazy guys just vandalized it.\pSo if you want to go to LAVARIDGE, you\lhave to move to MT. CHIMNEY.", MSGBOX_NPC)
+ end   
+}

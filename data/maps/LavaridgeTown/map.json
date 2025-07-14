@@ -12,13 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_ROUTE112",
-      "offset": -40,
-      "direction": "right"
-    }
-  ],
+  "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
@@ -139,7 +133,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WARRIOR_F",
-      "x": 16,
+      "x": 15,
       "y": 21,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -178,7 +172,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 3,
+      "x": 4,
       "y": 21,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
@@ -204,8 +198,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ABRA",
-      "x": 31,
-      "y": 9,
+      "x": 44,
+      "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -217,10 +211,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
-      "x": 32,
-      "y": 9,
+      "x": 43,
+      "y": 10,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -258,8 +252,8 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 23,
-      "y": 14,
+      "x": 33,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_LAVARIDGE_TOWN_MART",
       "dest_warp_id": "0"
@@ -294,7 +288,7 @@
     },
     {
       "x": 13,
-      "y": 21,
+      "y": 20,
       "elevation": 0,
       "dest_map": "MAP_SCHOOLS",
       "dest_warp_id": "18"
@@ -315,10 +309,24 @@
     },
     {
       "x": 30,
-      "y": 15,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_LAVARIDGE_RESTO",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 45,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_LAVARIDGE_CABLE_CAR",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 46,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_LAVARIDGE_CABLE_CAR",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
@@ -330,6 +338,15 @@
       "var": "TRIGGER_RUN_IMMEDIATELY",
       "var_value": "0",
       "script": "LavaridgeTown_EventScript_HotSpringsTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "LavaridgeTown_Event_SchoolClosed"
     }
   ],
   "bg_events": [
@@ -351,8 +368,8 @@
     },
     {
       "type": "sign",
-      "x": 25,
-      "y": 14,
+      "x": 35,
+      "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
@@ -375,8 +392,8 @@
     },
     {
       "type": "sign",
-      "x": 24,
-      "y": 14,
+      "x": 34,
+      "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
@@ -414,10 +431,18 @@
     {
       "type": "sign",
       "x": 30,
-      "y": 17,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LavaridgeTown_Text_RestoSign"
+    },
+    {
+      "type": "sign",
+      "x": 11,
+      "y": 21,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
     }
   ]
 }

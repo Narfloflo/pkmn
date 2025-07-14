@@ -19,3 +19,12 @@ mapscripts AzaleaPkmnCenter_MapScripts {}
     release
     end
 }
+
+script AzaleaPkmnCenter_Text_Woman {
+    msgbox("Do you know about APRICORNS?\nWell it's not the season anymore. But,\lCrack one open, hollow it out and fit\lit with a special device.\lThen you can catch POKéMON with it.\pBefore POKéBALLS were invented,\leveryone used APRICORNS.", MSGBOX_NPC)
+    end
+}
+script AzaleaPkmnCenter_Text_Gentleman {
+    msgbox("Do you use HM moves?\nYou know that POKéMON can use these\lmoves even if they are fainted.\pSo strange…\lI mean I could FLY with my fainted\lPIDGEOT.", MSGBOX_NPC)
+    end
+}

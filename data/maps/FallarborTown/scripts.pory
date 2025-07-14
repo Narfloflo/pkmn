@@ -209,7 +209,7 @@ script FallarborTown_Text_PokefanF {
 
 script FallarborTown_Text_ScientistManDialogue {
     lock
-    msgbox("...\nYes obviously...\lWe can invest into that technology...\lWhat about this processor?\l...\lDEVON can grant you some funds\l...\l{PLAYER}: They look busy.")
+    msgbox("…\nYes obviously…\lWe can invest into that technology…\lWhat about this processor?\l…\lDEVON can grant you some funds\l…\l{PLAYER}: They look busy.")
     release
     end
 }
@@ -223,7 +223,7 @@ script FallarborTown_Event_SchoolClosed {
 	gettime
 	if (var(VAR_0x8003) == TIME_NIGHT || var(VAR_0x8003) == TIME_MIDNIGHT){
 		lock
-		msgbox("{PLAYER}: The SCHOOL is closed during\nthe night...")
+		msgbox("{PLAYER}: The SCHOOL is closed during\nthe night…")
 		applymovement(OBJ_EVENT_ID_PLAYER, FallarborTown_Move_Stepback)
 		waitmovement(0)
 		release
@@ -236,4 +236,9 @@ script FallarborTown_Event_SchoolClosed {
 movement FallarborTown_Move_Stepback {
 	walk_down
 	step_end
+}
+
+script FallarborTown_Text_PubSign {
+    msgbox("The good old pub\n“Come and get the best meals!”", MSGBOX_SIGN)
+    end
 }

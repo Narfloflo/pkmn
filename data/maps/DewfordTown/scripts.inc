@@ -1058,4 +1058,4 @@ Dewford_Text_Battle_Text_0:
 	.string "BATTLE !$"
 
 Dewford_Event_SchoolClosed_Text_0:
-	.string "{PLAYER}: The SCHOOL is closed during\nthe night...$"
+	.string "{PLAYER}: The SCHOOL is closed during\nthe night…$"

@@ -154,7 +154,7 @@ SlateportDocksInside_Text_Salaryman_Text_0:
 
 SlateportDocksInside_Text_Beauty_Text_0:
 	.string "Oh seems like you are strong enough to\n"
-	.string "go to KANTO freely ! Amazing Right ?$"
+	.string "go to KANTO freely! Amazing Right?$"
 
 SlateportDocksInside_Text_Beauty_Text_1:
 	.string "Hello, you want a ticket for KANTO ? Well\n"

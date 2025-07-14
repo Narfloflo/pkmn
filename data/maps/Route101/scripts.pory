@@ -314,7 +314,7 @@ script Route101_Text_Jenkins {
      lock
     faceplayer
 	if(defeated(TRAINER_GRUNT_UNUSED)){
-		msgbox(format("Leave !"))
+		msgbox(format("Leave!"))
 		applymovement(OBJ_EVENT_ID_PLAYER,JenkinsLeave)
 		waitmovement(OBJ_EVENT_ID_PLAYER)
 		release
@@ -337,7 +337,7 @@ script Route101_Text_Jenkins2 {
     lock
     faceplayer
 	if(defeated(TRAINER_GRUNT_UNUSED)){
-		msgbox(format("Leave !"))
+		msgbox(format("Leave!"))
 		applymovement(OBJ_EVENT_ID_PLAYER,JenkinsLeave)
 		waitmovement(OBJ_EVENT_ID_PLAYER)
 		release
@@ -389,7 +389,7 @@ movement JenkinsLeave {
 script Route101_Text_SignFarmJenkins{
     lock
     faceplayer
-    msgbox(format("PRIVATE PROPERTY OF MR. JENKINS\pMOVE OR I'LL MAKE YOU MOVE !"))
+    msgbox(format("PRIVATE PROPERTY OF MR. JENKINS\pMOVE OR I'LL MAKE YOU MOVE!"))
     release
     end
 }
@@ -413,7 +413,7 @@ script Route101_Text_SignFarm{
 script Route101_Text_Teacher{
     lock
     faceplayer
-    msgbox(format("Yes this building is a SCHOOL.\pWhat you thought that every TRAINER went to RUSTBORO CITY to learn the basic ?\nOh come on !"))
+    msgbox(format("Yes this building is a SCHOOL.\pWhat you thought that every TRAINER went to RUSTBORO CITY to learn the basic?\nOh come on!"))
     release
     end
 }
@@ -421,7 +421,7 @@ script Route101_Text_Teacher{
 script Route101_Text_Farmer{
     lock
     faceplayer
-    msgbox(format("Humpf...\nWe are taking care of the crops\land we are seeding some other fields\ltoo. But sometime WILD POKéMON jump on\lus."))
+    msgbox(format("Humpf…\nWe are taking care of the crops\land we are seeding some other fields\ltoo. But sometime WILD POKéMON jump on\lus."))
     release
     end
 }
@@ -429,30 +429,30 @@ script Route101_Text_Farmer{
 script Route101_Text_Woman{
     lock
     faceplayer
-    msgbox(format("Hello young TRAINER !\nI heard a guy somewhere is willing to give a POKéMON.\pYou should try to ask around !"))
+    msgbox(format("Hello young TRAINER !\nI heard a guy somewhere is willing to give a POKéMON.\pYou should try to ask around!"))
     release
     end
 }
 
 script Route101_Text_JenkinsTrainer {
 	trainerbattle_single(TRAINER_GRUNT_UNUSED, Route101_Text_JenkinsIntro, Route101_Text_JenkinsOutro)
-	msgbox(format("Leave me and my crops alone..."))
+	msgbox(format("Leave me and my crops alone…"))
 	release
 	end
 }
 
 text Route101_Text_JenkinsIntro {
-	"How ??\nHow did you get here ?!"
+	"How??\nHow did you get here?!"
 }
 
 text Route101_Text_JenkinsOutro {
-	"Yeah you can laugh..."
+	"Yeah you can laugh…"
 }  
 
 script Route101_Text_SchoolKid{
     lock
     faceplayer
-    msgbox("Mister JENKINS told me he could train\nme and turn me into a true man !\lBut as you can see I'm just in the\lGRASS looking for some seeds for his\lcrops...")
+    msgbox("Mister JENKINS told me he could train\nme and turn me into a true man !\lBut as you can see I'm just in the\lGRASS looking for some seeds for his\lcrops…")
     release
     end
 }
@@ -470,7 +470,7 @@ script Route101_Event_SchoolClosed {
 	if (var(VAR_0x8003) == TIME_NIGHT || var(VAR_0x8003) == TIME_MIDNIGHT){
 		lock
 		applymovement(8, Route101_Move_DirectorTriggered)
-		msgbox("Humm... The SCHOOL is closed during the\nnight...\lCome back later.")
+		msgbox("Humm… The SCHOOL is closed during the\nnight…\lCome back later.")
 		applymovement(OBJ_EVENT_ID_PLAYER, Route101_Move_Stepback)
 		waitmovement(0)
 		release

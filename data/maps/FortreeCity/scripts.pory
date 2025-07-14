@@ -174,7 +174,7 @@ script FortreeCity_Text_SchoolboyM {
 script FortreeCity_Text_GirlOnTree {
     lock
     faceplayer
-    msgbox("I'm totally lost on all those trees!\nI can figure where my houose is\lanymore...")
+    msgbox("I'm totally lost on all those trees!\nI can figure where my house is\lanymore…")
     release
     end
 }
@@ -185,7 +185,7 @@ script FortreeCity_Event_SchoolClosed {
 		lock
 		lock
 		applymovement(8, FortreeCity_Move_DirectorTriggered)
-		msgbox("Humm... The SCHOOL is closed during the\nnight...\lCome back later.")
+		msgbox("Humm… The SCHOOL is closed during the\nnight…\lCome back later.")
 		applymovement(OBJ_EVENT_ID_PLAYER, FortreeCity_Move_Stepback)
 		waitmovement(0)
 		release
