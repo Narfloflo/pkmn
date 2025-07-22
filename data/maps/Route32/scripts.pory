@@ -96,3 +96,8 @@ script Route32_Text_Camper {
     msgbox("If you want to avoid the POKéMON, just\ndon't walk in the grass.", MSGBOX_NPC)
     end
 }
+
+script Route32_Text_Engineer {
+    msgbox("What am I doing?\nWell I'm cutting the trees because we\lare going to build the railways for the\lMAGNET TRAIN.", MSGBOX_NPC)
+    end
+}

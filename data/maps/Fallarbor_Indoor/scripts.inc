@@ -83,7 +83,7 @@ Fallarbor_Indoor_Text_Farmer_Text_0:
 	.string "of crops in HOENN!$"
 
 Fallarbor_Indoor_Text_Woman_Text_0:
-	.string "ZZzzzzzz...\n"
+	.string "ZZzzzzzz…\n"
 	.string "{PLAYER}: Well, looks like I have\l"
 	.string "to let her sleep.$"
 
@@ -102,13 +102,13 @@ Fallarbor_Indoor_Text_ScientistF_Text_0:
 	.string "understand the future!\l"
 	.string "{PLAYER}: You can admit you just\l"
 	.string "have no job and you are spending\l"
-	.string "your time doing nothing...\l"
+	.string "your time doing nothing…\l"
 	.string "I personally drop out of school to\l"
-	.string "catch wild creatures, so...$"
+	.string "catch wild creatures, so…$"
 
 Fallarbor_Indoor_Text_LassSr_Text_0:
 	.string "I really want to be graduate and\n"
-	.string "leave this place...\l"
+	.string "leave this place…\l"
 	.string "Volcanic ashes are making me sick,\l"
 	.string "I have to shower every hour!\l"
-	.string "It's disgusting...$"
+	.string "It's disgusting…$"

@@ -34,12 +34,8 @@ Route11_Pub_Text_Camper::
 
 
 Route11_Pub_Text_Numel::
-	lock
-	faceplayer
 	playmoncry SPECIES_NUMEL, CRY_MODE_NORMAL
-	waitmoncry
-	msgbox Route11_Pub_Text_Numel_Text_0, MSGBOX_DEFAULT
-	release
+	msgbox Route11_Pub_Text_Numel_Text_0, MSGBOX_NPC
 	end
 
 
@@ -56,4 +52,4 @@ Route11_Pub_Text_Camper_Text_0:
 	.string "You know that you can't run into\nLAVARIDGE like that?\lIf you wanna go inside, you need to go\lontop of MT. CHIMNEY. And if you wanna\lgo outside, you need to take a cave.$"
 
 Route11_Pub_Text_Numel_Text_0:
-	.string "Melllo!\p{PLAYER}: I've never seen a POKémON\nstuffing so much spice sauce in its\lmouth!$"
+	.string "NUMEL: Melllo!\p{PLAYER}: I've never seen a POKémON\nstuffing so much spice sauce in its\lmouth!$"

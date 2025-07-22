@@ -9508,14 +9508,14 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_WINONA_4] =
     {
-        .trainerClass = TRAINER_CLASS_LEADER,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_LEADER_WINONA,
-        .trainerName = _("WINONA"),
+        .trainerClass = TRAINER_CLASS_COOLTRAINER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_BOY_KANTO,
+        .trainerPic = TRAINER_PIC_COOLTRAINERKANTOM,
+        .trainerName = _("RYU"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE},
-        .doubleBattle = TRUE,
+        .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_RISKY,
-        .party = ITEM_CUSTOM_MOVES(sParty_Winona4),
+        .party = ITEM_DEFAULT_MOVES(sParty_Winona4),
     },
 
     [TRAINER_WINONA_5] =
@@ -9532,14 +9532,14 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_TATE_AND_LIZA_2] =
     {
-        .trainerClass = TRAINER_CLASS_LEADER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_LEADER_TATE_AND_LIZA,
-        .trainerName = _("TATE&LIZA"),
+        .trainerClass = TRAINER_CLASS_COOLTRAINER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_LASS_KANTO,
+        .trainerPic = TRAINER_PIC_COOLTRAINERKANTOF,
+        .trainerName = _("YUMIKO"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE},
-        .doubleBattle = TRUE,
+        .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = ITEM_CUSTOM_MOVES(sParty_TateAndLiza2),
+        .party = ITEM_DEFAULT_MOVES(sParty_TateAndLiza2),
     },
 
     [TRAINER_TATE_AND_LIZA_3] =
@@ -10038,8 +10038,8 @@ const struct Trainer gTrainers[] = {
     {
         .trainerClass = TRAINER_CLASS_HIKER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_HIKER,
-        .trainerName = _("SAWYER"),
+        .trainerPic = TRAINER_PIC_KINDLER,
+        .trainerName = _("BRAD"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,

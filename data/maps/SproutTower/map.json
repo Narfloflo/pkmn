@@ -3,7 +3,7 @@
   "name": "SproutTower",
   "layout": "LAYOUT_SPROUT_TOWER",
   "music": "MUS_GSC_SPROUT_TOWER",
-  "region_map_section": "MAPSEC_SEVII_ISLE_23",
+  "region_map_section": "MAPSEC_LOST_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

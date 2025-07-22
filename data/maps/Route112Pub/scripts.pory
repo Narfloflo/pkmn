@@ -30,11 +30,7 @@ script Route11_Pub_Text_Camper {
 }
 
 script Route11_Pub_Text_Numel {
-	lock
-	faceplayer
 	playmoncry(SPECIES_NUMEL, CRY_MODE_NORMAL)
-	waitmoncry
-	msgbox("Melllo!\p{PLAYER}: I've never seen a POKémON\nstuffing so much spice sauce in its\lmouth!", MSGBOX_DEFAULT)
-	release
+	msgbox("NUMEL: Melllo!\p{PLAYER}: I've never seen a POKémON\nstuffing so much spice sauce in its\lmouth!", MSGBOX_NPC)
 	end
 }

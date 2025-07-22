@@ -61,7 +61,20 @@ BlackthornCity_Text_DragonDenSign::
 BlackthornCity_Text_OldMan::
 	lock
 	faceplayer
-	msgbox BlackthornCity_Text_OldMan_Text_0
+	msgbox BlackthornCity_Text_OldMan_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, TRUE
+	goto_if_eq BlackthornCity_Text_OldMan_2
+	msgbox BlackthornCity_Text_OldMan_Text_2, MSGBOX_AUTOCLOSE
+	release
+	end
+
+	release
+	end
+
+BlackthornCity_Text_OldMan_2:
+	msgbox BlackthornCity_Text_OldMan_Text_1, MSGBOX_AUTOCLOSE
+	delay 3
+	warp MAP_DRAGON_DEN, 2, 3
 	release
 	end
 
@@ -116,10 +129,13 @@ BlackthornCity_Text_DragonDenSign_Text_0:
 	.string "DRAGON's DEN AHEAD$"
 
 BlackthornCity_Text_OldMan_Text_0:
-	.string "Only those who have prove themselves\n"
-	.string "can enter here.\p"
-	.string "{PLAYER}: I rode a fucking RAYQUAZA,\n"
-	.string "what do you want ?$"
+	.string "Only those who have prove themselves\ncan enter here.\lOh you are the HOENN CHAMPION?\lOk I'll let you in if you want huhuhuh!\l$"
+
+BlackthornCity_Text_OldMan_Text_1:
+	.string "Well see you then!\nHuhuhuh!$"
+
+BlackthornCity_Text_OldMan_Text_2:
+	.string "Huh huh huh, feel unworthy?$"
 
 BlackthornCity_Text_Man2_Text_0:
 	.string "You defeated CLAIR?\nThat's amazing!\lI've never heard of her losing to\lanyone other than LANCE, her cousin.\lHeard about him?\lHe was beaten recently. I think he went\lto exil...$"

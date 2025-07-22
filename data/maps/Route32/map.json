@@ -80,7 +80,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ENGINEER",
       "x": 19,
-      "y": 58,
+      "y": 56,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -93,9 +93,9 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_KANTO",
       "x": 17,
-      "y": 58,
+      "y": 56,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -145,7 +145,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_2",
       "x": 9,
-      "y": 54,
+      "y": 52,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -157,10 +157,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NURSE_KANTO",
-      "x": 17,
+      "x": 16,
       "y": 56,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -204,7 +204,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route32_Text_Engineer",
       "flag": "0"
     }
   ],
@@ -218,24 +218,7 @@
     }
   ],
   "coord_events": [
-    {
-      "type": "trigger",
-      "x": 17,
-      "y": 57,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 18,
-      "y": 58,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
-    }
+
   ],
   "bg_events": [
     {

@@ -200,6 +200,13 @@
       "elevation": 0,
       "dest_map": "MAP_BLACKTHORNE",
       "dest_warp_id": "4"
+    },
+    {
+      "x": 26,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_DRAGON_DEN",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

@@ -29,7 +29,7 @@ script Fallarbor_Indoor_Text_Farmer {
 script Fallarbor_Indoor_Text_Woman {
     lock
     faceplayer
-    msgbox(format("ZZzzzzzz...\n{PLAYER}: Well, looks like I have\lto let her sleep."))
+    msgbox(format("ZZzzzzzz…\n{PLAYER}: Well, looks like I have\lto let her sleep."))
     release
     end
 }
@@ -46,7 +46,7 @@ script Fallarbor_Indoor_Text_Boy {
 script Fallarbor_Indoor_Text_ScientistF {
     lock
     faceplayer
-    msgbox(format("Time to drink a coffee and I'm\nback to work!\lWe are observing the sky to\lunderstand the future!\l{PLAYER}: You can admit you just\lhave no job and you are spending\lyour time doing nothing...\lI personally drop out of school to\lcatch wild creatures, so..."))
+    msgbox(format("Time to drink a coffee and I'm\nback to work!\lWe are observing the sky to\lunderstand the future!\l{PLAYER}: You can admit you just\lhave no job and you are spending\lyour time doing nothing…\lI personally drop out of school to\lcatch wild creatures, so…"))
     release
     end
 }
@@ -55,7 +55,7 @@ script Fallarbor_Indoor_Text_ScientistF {
 script Fallarbor_Indoor_Text_LassSr {
     lock
     faceplayer
-    msgbox(format("I really want to be graduate and\nleave this place...\lVolcanic ashes are making me sick,\lI have to shower every hour!\lIt's disgusting..."))
+    msgbox(format("I really want to be graduate and\nleave this place…\lVolcanic ashes are making me sick,\lI have to shower every hour!\lIt's disgusting…"))
     release
     end
 }

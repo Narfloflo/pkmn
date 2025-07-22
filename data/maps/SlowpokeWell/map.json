@@ -3,7 +3,7 @@
   "name": "SlowpokeWell",
   "layout": "LAYOUT_SLOWPOKE_WELL",
   "music": "MUS_WEATHER_GROUDON",
-  "region_map_section": "MAPSEC_AZALEA_TOWN",
+  "region_map_section": "MAPSEC_ALTERING_CAVE_FRLG",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",

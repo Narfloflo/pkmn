@@ -1720,3 +1720,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route112_CableCarStationtoLavaridge/scripts.inc"
 
 	.include "data/maps/Lavaridge_CableCar/scripts.inc"
+
+	.include "data/maps/DragonDen/scripts.inc"

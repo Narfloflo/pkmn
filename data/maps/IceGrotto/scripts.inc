@@ -92,7 +92,7 @@ IceGrotto_Text_PryceRematch_Text_1:
 	.string "You know where to find me if you\nchange your mind.$"
 
 IceGrotto_Text_RematchGuy_Text_0:
-	.string "Who am I?\nJust your friendly neighborhood\lRematch guy!\lIf you want I can ask all the TRAINERS\lin ROUTE 43 to offer\lyou a rematch.\lWhat do you think?$"
+	.string "Who am I?\nJust your friendly neighborhood\lRematch guy!\lIf you want I can ask all the TRAINERS\lin ROUTE 44 to offer\lyou a rematch.\lWhat do you think?$"
 
 IceGrotto_Text_RematchGuy_Text_1:
 	.string "Alright done! I asked them to pretend\nthey've never seen you before.$"

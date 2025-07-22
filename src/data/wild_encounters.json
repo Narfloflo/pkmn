@@ -15524,7 +15524,7 @@
               {
                 "min_level": 45,
                 "max_level": 65,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_WAILORD"
               },
               {
                 "min_level": 45,
@@ -18730,7 +18730,7 @@
               {
                 "min_level": 35,
                 "max_level": 40,
-                "species": "SPECIES_HERACROSS"
+                "species": "SPECIES_GLOOM"
               },
               {
                 "min_level": 35,
@@ -18750,7 +18750,7 @@
               {
                 "min_level": 35,
                 "max_level": 40,
-                "species": "SPECIES_ROSELIA"
+                "species": "SPECIES_CACTURNE"
               },
               {
                 "min_level": 35,
@@ -18765,17 +18765,17 @@
               {
                 "min_level": 35,
                 "max_level": 40,
-                "species": "SPECIES_SHIFTRY"
+                "species": "SPECIES_BRELOOM"
               },
               {
                 "min_level": 35,
                 "max_level": 40,
-                "species": "SPECIES_BEEDRILL"
+                "species": "SPECIES_HERACROSS"
               },
               {
                 "min_level": 35,
                 "max_level": 40,
-                "species": "SPECIES_VENOMOTH"
+                "species": "SPECIES_HERACROSS"
               }
             ]
           }
@@ -31565,6 +31565,95 @@
                 "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_STARMIE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_DRAGON_DEN",
+          "base_label": "gDragonDen0",
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_DRATINI"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_DRAGONAIR"
               }
             ]
           }

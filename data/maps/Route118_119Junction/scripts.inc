@@ -3,8 +3,7 @@ Route118_119Junction_MapScripts::
 
 
 Route118_119Junction_Text_Fisherman::
-	compare FLAG_BADGE05_GET, FALSE
-	goto_if_eq Route118_119Junction_Text_Fisherman_1
+	goto_if_unset FLAG_BADGE05_GET, Route118_119Junction_Text_Fisherman_1
 	msgbox Route118_119Junction_Text_Fisherman_Text_0, MSGBOX_NPC
 	end
 

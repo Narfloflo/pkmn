@@ -6677,7 +6677,7 @@
       "id": "LAYOUT_ROUTE41",
       "name": "Route41_Layout",
       "width": 60,
-      "height": 40,
+      "height": 45,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_KantoGeneral",
@@ -6689,7 +6689,7 @@
       "id": "LAYOUT_CIANWOOD_CITY",
       "name": "CianwoodCity_Layout",
       "width": 40,
-      "height": 40,
+      "height": 45,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_KantoGeneral",
@@ -9240,6 +9240,18 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/Lavaridge_CableCar/border.bin",
       "blockdata_filepath": "data/layouts/Lavaridge_CableCar/map.bin"
+    },
+    {
+      "id": "LAYOUT_DRAGON_DEN",
+      "name": "DragonDen_Layout",
+      "width": 55,
+      "height": 41,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_KantoGeneral",
+      "secondary_tileset": "gTileset_RockTunnel",
+      "border_filepath": "data/layouts/DragonDen/border.bin",
+      "blockdata_filepath": "data/layouts/DragonDen/map.bin"
     }
   ]
 }

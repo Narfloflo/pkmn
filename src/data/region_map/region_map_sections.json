@@ -1194,7 +1194,7 @@
     },
     {
       "map_section": "MAPSEC_MEMORIAL_PILLAR",
-      "name": "MEMORIAL PILLAR",
+      "name": "THUNDER PEAK",
       "x": 17,
       "y": 9,
       "width": 1,
@@ -1202,7 +1202,7 @@
     },
     {
       "map_section": "MAPSEC_OUTCAST_ISLAND",
-      "name": "OUTCAST ISLAND",
+      "name": "FORGOTTEN ISLE",
       "x": 17,
       "y": 11,
       "width": 3,
@@ -1218,7 +1218,7 @@
     },
     {
       "map_section": "MAPSEC_WATER_PATH",
-      "name": "WATER PATH",
+      "name": "ICE CHENAL",
       "x": 25,
       "y": 11,
       "width": 1,
@@ -1226,7 +1226,7 @@
     },
     {
       "map_section": "MAPSEC_RUIN_VALLEY",
-      "name": "BIRDS NEST",
+      "name": "STORMY MT.",
       "x": 14,
       "y": 0,
       "width": 1,
@@ -1282,15 +1282,15 @@
     },
     {
       "map_section": "MAPSEC_SEVII_ISLE_24",
-      "name": "ROUTE 38",
-      "x": 9,
-      "y": 38,
-      "width": 4,
+      "name": "ROUTE 48",
+      "x": 0,
+      "y": 0,
+      "width": 1,
       "height": 1
     },
     {
       "map_section": "MAPSEC_NAVEL_ROCK_FRLG",
-      "name": "NAVEL ROCK",
+      "name": "MT. MORTAR",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1314,7 +1314,7 @@
     },
     {
       "map_section": "MAPSEC_ICEFALL_CAVE",
-      "name": "ICEFALL CAVE",
+      "name": "FROSTFALL CAVE",
       "x": 24,
       "y": 12,
       "width": 2,
@@ -1346,7 +1346,7 @@
     },
     {
       "map_section": "MAPSEC_LOST_CAVE",
-      "name": "LOST CAVE",
+      "name": "SPROUT TOWER",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1354,7 +1354,7 @@
     },
     {
       "map_section": "MAPSEC_PATTERN_BUSH",
-      "name": "PATTERN BUSH",
+      "name": "BURNED TOWER",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1362,7 +1362,7 @@
     },
     {
       "map_section": "MAPSEC_ALTERING_CAVE_FRLG",
-      "name": "ALTERING CAVE",
+      "name": "SLOWPOKE WELL",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1370,7 +1370,7 @@
     },
     {
       "map_section": "MAPSEC_TANOBY_CHAMBERS",
-      "name": "TANOBY CHAMBERS",
+      "name": "ILEX FOREST",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1378,7 +1378,7 @@
     },
     {
       "map_section": "MAPSEC_THREE_ISLE_PATH",
-      "name": "THREE ISLE PATH",
+      "name": "UNION CAVE",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1386,7 +1386,7 @@
     },
     {
       "map_section": "MAPSEC_TANOBY_KEY",
-      "name": "TANOBY KEY",
+      "name": "RUINS OF ALPH",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1394,7 +1394,7 @@
     },
     {
       "map_section": "MAPSEC_BIRTH_ISLAND_FRLG",
-      "name": "BIRTH ISLAND",
+      "name": "DARK CAVE",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1402,7 +1402,7 @@
     },
     {
       "map_section": "MAPSEC_MONEAN_CHAMBER",
-      "name": "MONEAN CHAMBER",
+      "name": "ICE PATH",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1410,7 +1410,7 @@
     },
     {
       "map_section": "MAPSEC_LIPTOO_CHAMBER",
-      "name": "LIPTOO CHAMBER",
+      "name": "TOHJO FALLS",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1418,7 +1418,7 @@
     },
     {
       "map_section": "MAPSEC_WEEPTH_CHAMBER",
-      "name": "WEEPTH CHAMBER",
+      "name": "WHIRL ISLANDS",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1426,7 +1426,7 @@
     },
     {
       "map_section": "MAPSEC_DILFORD_CHAMBER",
-      "name": "DILFORD CHAMBER",
+      "name": "NATIONAL PARK",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1434,7 +1434,7 @@
     },
     {
       "map_section": "MAPSEC_SCUFIB_CHAMBER",
-      "name": "SCUFIB CHAMBER",
+      "name": "ROUTE 47",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1442,7 +1442,7 @@
     },
     {
       "map_section": "MAPSEC_RIXY_CHAMBER",
-      "name": "RIXY CHAMBER",
+      "name": "DRAGON DEN",
       "x": 0,
       "y": 0,
       "width": 1,

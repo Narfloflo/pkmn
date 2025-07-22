@@ -1,7 +1,7 @@
 mapscripts Route118_119Junction_MapScripts {}
 
 script Route118_119Junction_Text_Fisherman {
-    if(var(FLAG_BADGE05_GET) == FALSE){
+    if(flag(FLAG_BADGE05_GET) == FALSE){
         call(Route118_119Junction_Text_Fisherman_MovetoMauville)
         end
     }else{

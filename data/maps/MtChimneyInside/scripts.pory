@@ -14,3 +14,14 @@ script MtChimneyInside_Text_MagmaGrunt {
     release
     end
 }
+script MtChimneyInside_Text_Kindler {
+    trainerbattle_single(TRAINER_SAWYER_2, "Do you know that there is an exit\nleading to FALLARBOR?", "Oh wow!\nYou are real fire!")
+    msgbox("Yes you can go to FALLARBOR, but there\nis a slope to climb. And I don't have\lBIKE nor a HIKER equipment.", MSGBOX_DEFAULT)
+    release
+    end
+}
+script MtChimneyInside_Text_Numel {
+    playmoncry(SPECIES_NUMEL, CRY_MODE_NORMAL)
+    msgbox("NUMEL: Gutchooo!", MSGBOX_NPC)
+    end
+}

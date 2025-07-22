@@ -3,7 +3,7 @@
   "name": "WhirlIslands",
   "layout": "LAYOUT_WHIRL_ISLANDS",
   "music": "MUS_GSC_ILEX_FOREST",
-  "region_map_section": "MAPSEC_SEVII_ISLE_23",
+  "region_map_section": "MAPSEC_WEEPTH_CHAMBER",
   "requires_flash": true,
   "weather": "WEATHER_SHADE",
   "map_type": "MAP_TYPE_UNDERGROUND",

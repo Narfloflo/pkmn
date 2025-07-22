@@ -3,7 +3,7 @@
   "name": "NationalPakrDoors",
   "layout": "LAYOUT_NATIONAL_PAKR_DOORS",
   "music": "MUS_GSC_GOLDENROD",
-  "region_map_section": "MAPSEC_SEVII_ISLE_23",
+  "region_map_section": "MAPSEC_DILFORD_CHAMBER",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

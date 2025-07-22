@@ -3,19 +3,19 @@ mapscripts Route27_MapScripts {}
 script Route27_Text_FatGuy {
  lock
  faceplayer
- msgbox(format("Hey ! You are in KANTO now. It's crazy right ?"))
+ msgbox(format("Hey! You are in KANTO now. It's crazy right?"))
  release
  end
 }
 
 script Route27_Text_CooltrainerM {
-    trainerbattle_single(TRAINER_STEVE_2, "I'm on my way to because a CHAMPION !","Oh that quite don't help...")
-    msgbox(format("I want to be the very best. But losing to a kid doesn't help... I feel like a NPC..."), MSGBOX_AUTOCLOSE)
+    trainerbattle_single(TRAINER_STEVE_2, "I'm on my way to because a CHAMPION !","Oh that quite don't help…")
+    msgbox(format("I want to be the very best. But losing to a kid doesn't help… I feel like a NPC…"), MSGBOX_AUTOCLOSE)
     end
 }
 
 script Route27_Text_CooltrainerF {
-    trainerbattle_single(TRAINER_STEVE_3, "Help me gaining some XP please.","Looks like you gain XP...")
+    trainerbattle_single(TRAINER_STEVE_3, "Help me gaining some XP please.","Looks like you gain XP…")
     msgbox(format("We are suppose to be the toughest TRAINERS in KANTO and JOHTO. Who are you ?"), MSGBOX_AUTOCLOSE)
     end
 }
@@ -38,7 +38,7 @@ script Route27_Text_Whirlpool4 {
     if(var(VAR_RESULT)== TRUE){
         goto(Route27_Text_RemoveWhirlpool4)
     }else{
-        msgbox(format("It's a vicious WHIRLPOOL, maybe we can remove it..."),MSGBOX_AUTOCLOSE)
+        msgbox(format("It's a vicious WHIRLPOOL, maybe we can remove it…"),MSGBOX_AUTOCLOSE)
     }
     release
     end
@@ -56,6 +56,6 @@ script Route27_Text_RemoveWhirlpool4 {
 }
 
 script Route27_Text_Hiker {
-    msgbox("I'm puzzled...\nIf I jump the ledge here, if I wanna go\lback in KANTO I'd need to go through\lthe TOHJO CAVE.\lBut I need WATERFALL, and my POKéMON\lare all of ROCK TYPE!\lAlso, If I want to go to JOHTO, I need\lSURF...\lArrrrrg! What to do!", MSGBOX_NPC)
+    msgbox("I'm puzzled…\nIf I jump the ledge here, if I wanna go\lback in KANTO I'd need to go through\lthe TOHJO CAVE.\lBut I need WATERFALL, and my POKéMON\lare all of ROCK TYPE!\lAlso, If I want to go to JOHTO, I need\lSURF…\lArrrrrg! What to do!", MSGBOX_NPC)
     end
 }

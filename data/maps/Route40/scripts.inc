@@ -46,7 +46,6 @@ Route40_Text_Machoke::
 	lock
 	faceplayer
 	playmoncry SPECIES_MACHOKE, CRY_MODE_NORMAL
-	waitmoncry
 	msgbox Route40_Text_Machoke_Text_0
 	release
 	end
@@ -93,7 +92,7 @@ Route40_Text_Fisherman_Text_0:
 
 Route40_Text_Fisherman2_Text_0:
 	.string "I don't know how I end up here, but\n"
-	.string "that's a really good place to fish !$"
+	.string "that's a really good place to fish!$"
 
 Route40_Text_SwimmerF_Text_0:
 	.string "I don't know if the water is cold, but all\n"

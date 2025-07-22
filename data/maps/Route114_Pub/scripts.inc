@@ -35,11 +35,11 @@ Route114_Pub_Text_Hiker::
 
 
 Route114_Pub_Text_Vendor_Text_0:
-	.string "= Welcome welcome,\n"
+	.string "Welcome welcome,\n"
 	.string "What should I get you?$"
 
 Route114_Pub_Text_Vendor_Text_1:
-	.string "Have a good day!$"
+	.string "Don't choke yourself while eating. We\nare not responsible of that.$"
 
 Route114_Pub_Text_Kindler_Text_0:
 	.string "I asked for a spicy sauce, but turned\nout it's way too spicy for me!\lI can't handle it!$"

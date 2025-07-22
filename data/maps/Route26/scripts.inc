@@ -29,19 +29,15 @@ Route26_Text_Man::
 
 
 Route26_Text_Fisherman::
-	call_if_unset FLAG_TEMP_1, Route26_Text_FishermanFight
-	goto_if_set FLAG_TEMP_1, Route26_Text_Fisherman_1
-	return
-
-Route26_Text_Fisherman_1:
-	msgbox Route26_Text_Fisherman_Text_0, MSGBOX_AUTOCLOSE
-	end
-
-
-Route26_Text_FishermanFight::
-	trainerbattle_single TRAINER_DYLAN_2, Route26_Text_FishermanFight_Text_0, Route26_Text_FishermanFight_Text_1
+	goto_if_set FLAG_TEMP_1, Route26_Text_Fisherman_2
+	trainerbattle_single TRAINER_DYLAN_2, Route26_Text_Fisherman_Text_1, Route26_Text_Fisherman_Text_2
+	msgbox Route26_Text_Fisherman_Text_3, MSGBOX_AUTOCLOSE
 	setflag FLAG_TEMP_1
 	cleartrainerflag TRAINER_DYLAN_2
+	end
+
+Route26_Text_Fisherman_2:
+	msgbox Route26_Text_Fisherman_Text_0, MSGBOX_AUTOCLOSE
 	end
 
 
@@ -84,10 +80,14 @@ Route26_Text_Man_Text_0:
 	.string "kind guy ? Well hello !$"
 
 Route26_Text_Fisherman_Text_0:
-	.string "I know I know...$"
+	.string "Hang on!\nMy line's snagged!$"
 
-Route26_Text_FishermanFight_Text_0:
-	.string "Wanna see my fresh fishes ?$"
+Route26_Text_Fisherman_Text_1:
+	.string "Yeah!\nI got a bite here!$"
 
-Route26_Text_FishermanFight_Text_1:
-	.string "Plouff !$"
+Route26_Text_Fisherman_Text_2:
+	.string "Tch!\nJust a small fry…$"
+
+Route26_Text_Fisherman_Text_3:
+	.string "Hang on!\n"
+	.string "My line's snagged!$"

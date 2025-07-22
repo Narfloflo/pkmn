@@ -28,22 +28,14 @@ Route20_Text_Swimmer2::
 
 Route20_Text_Fisherman::
 	goto_if_set FLAG_TEMP_1, Route20_Text_Fisherman_2
-	goto Route20_Text_FishermanFight
-	release
+	trainerbattle_single TRAINER_DYLAN_2, Route20_Text_Fisherman_Text_1, Route20_Text_Fisherman_Text_2
+	msgbox Route20_Text_Fisherman_Text_3, MSGBOX_AUTOCLOSE
+	setflag FLAG_TEMP_1
+	cleartrainerflag TRAINER_DYLAN_2
 	end
 
 Route20_Text_Fisherman_2:
-	lock
-	faceplayer
 	msgbox Route20_Text_Fisherman_Text_0, MSGBOX_AUTOCLOSE
-	release
-	end
-
-
-Route20_Text_FishermanFight::
-	trainerbattle_single TRAINER_DYLAN_2, Route20_Text_FishermanFight_Text_0, Route20_Text_FishermanFight_Text_1
-	setflag FLAG_TEMP_1
-	cleartrainerflag TRAINER_DYLAN_2
 	end
 
 
@@ -87,12 +79,14 @@ Route20_Text_Swimmer2_Text_2:
 	.string "SEAFOAM used to be one Island !$"
 
 Route20_Text_Fisherman_Text_0:
-	.string "I doesn't matter if I lost. With the\n"
-	.string "power of friendship I'll be the best\l"
-	.string "fisherman ever !$"
+	.string "Hang on!\nMy line's snagged!$"
 
-Route20_Text_FishermanFight_Text_0:
-	.string "I got a beautiful POKéMON.\nWanna see it ?$"
+Route20_Text_Fisherman_Text_1:
+	.string "Yeah!\nI got a bite here!$"
 
-Route20_Text_FishermanFight_Text_1:
-	.string "NIGERUNDAYOOOO !$"
+Route20_Text_Fisherman_Text_2:
+	.string "Tch!\nJust a small fry…$"
+
+Route20_Text_Fisherman_Text_3:
+	.string "Hang on!\n"
+	.string "My line's snagged!$"

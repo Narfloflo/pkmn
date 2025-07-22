@@ -19,7 +19,7 @@ script LakeofRage_Text_OldMan {
 script LakeofRage_Text_Man {
     lock
     faceplayer
-    msgbox(format("There is a strange guy inside this house. He says things like HIDDEN POWER or stuff like that..."))
+    msgbox(format("There is a strange guy inside this house. He says things like HIDDEN POWER or stuff like that…"))
     release
     end
 }
@@ -27,7 +27,7 @@ script LakeofRage_Text_Man {
 script LakeofRage_Text_Lass {
     lock
     faceplayer
-    msgbox(format("I'm pretty sure you can encounter GYARADOS in the water. Legends says that. But I can only see MAGIKARP..."))
+    msgbox(format("I'm pretty sure you can encounter GYARADOS in the water. Legends says that. But I can only see MAGIKARP…"))
     release
     end
 }
@@ -35,7 +35,7 @@ script LakeofRage_Text_Lass {
 script LakeofRage_Text_Camper {
     lock
     faceplayer
-    msgbox(format("I heard that there were a real place here with houses and stuff. But some GYARADOS went mad and destroyed this place. The RAIN that came after flood the place and create the LAKE OF RAGE. Maybe if we could DIVE we could see some ruins..."))
+    msgbox(format("I heard that there were a real place here with houses and stuff. But some GYARADOS went mad and destroyed this place. The RAIN that came after flood the place and create the LAKE OF RAGE. Maybe if we could DIVE we could see some ruins…"))
     release
     end
 }

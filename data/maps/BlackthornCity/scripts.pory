@@ -59,7 +59,18 @@ script BlackthornCity_Text_DragonDenSign {
 script BlackthornCity_Text_OldMan {
     lock
     faceplayer
-    msgbox(format("Only those who have prove themselves can enter here.\p{PLAYER}: I rode a fucking RAYQUAZA, what do you want ?"))
+    msgbox("Only those who have prove themselves\ncan enter here.\lOh you are the HOENN CHAMPION?\lOk I'll let you in if you want huhuhuh!\l", MSGBOX_YESNO)
+    if(var(VAR_RESULT)== TRUE){
+         msgbox("Well see you then!\nHuhuhuh!", MSGBOX_AUTOCLOSE)
+         delay(3)
+         warp(MAP_DRAGON_DEN, 2,3)
+         release
+         end
+    }else{
+        msgbox("Huh huh huh, feel unworthy?", MSGBOX_AUTOCLOSE)
+         release
+         end
+    }
     release
     end
 }

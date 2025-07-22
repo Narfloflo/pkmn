@@ -1429,7 +1429,7 @@ static u8 TrySetupObjectEventSprite(struct ObjectEventTemplate *objectEventTempl
     }
     else if (paletteSlot == PALSLOT_NPC_SPECIAL)
     {
-        LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, paletteSlot);
+        _PatchObjectPalette(graphicsInfo->paletteTag, paletteSlot);
     }
     else if (paletteSlot >= 16)
     {

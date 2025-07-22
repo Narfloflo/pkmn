@@ -3,19 +3,15 @@ Route42_MapScripts::
 
 
 Route42_Text_Fisherman::
-	call_if_unset FLAG_TEMP_1, Route42_Text_FishermanFight
-	goto_if_set FLAG_TEMP_1, Route42_Text_Fisherman_1
-	return
-
-Route42_Text_Fisherman_1:
-	msgbox Route42_Text_Fisherman_Text_0, MSGBOX_AUTOCLOSE
-	end
-
-
-Route42_Text_FishermanFight::
-	trainerbattle_single TRAINER_DYLAN_2, Route42_Text_FishermanFight_Text_0, Route42_Text_FishermanFight_Text_1
+	goto_if_set FLAG_TEMP_1, Route42_Text_Fisherman_2
+	trainerbattle_single TRAINER_DYLAN_2, Route42_Text_Fisherman_Text_1, Route42_Text_Fisherman_Text_2
+	msgbox Route42_Text_Fisherman_Text_3, MSGBOX_AUTOCLOSE
 	setflag FLAG_TEMP_1
 	cleartrainerflag TRAINER_DYLAN_2
+	end
+
+Route42_Text_Fisherman_2:
+	msgbox Route42_Text_Fisherman_Text_0, MSGBOX_AUTOCLOSE
 	end
 
 
@@ -45,14 +41,17 @@ Route42_Text_MtMortarSign::
 
 
 Route42_Text_Fisherman_Text_0:
-	.string "I will go to LAKE of RAGE to catch more\n"
-	.string "GYARADOS!$"
+	.string "Hang on!\nMy line's snagged!$"
 
-Route42_Text_FishermanFight_Text_0:
-	.string "Hop hop! If you have a few minutes I'll\nshow you my fishes!$"
+Route42_Text_Fisherman_Text_1:
+	.string "Yeah!\nI got a bite here!$"
 
-Route42_Text_FishermanFight_Text_1:
-	.string "They weren't that fresh!$"
+Route42_Text_Fisherman_Text_2:
+	.string "Tch!\nJust a small fry…$"
+
+Route42_Text_Fisherman_Text_3:
+	.string "Hang on!\n"
+	.string "My line's snagged!$"
 
 Route42_Text_Monk_Text_0:
 	.string "I'm meditating here because I'm suppose\n"

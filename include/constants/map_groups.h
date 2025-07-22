@@ -880,6 +880,7 @@
 #define MAP_MT_MORTAR                   (16 | (39 << 8))
 #define MAP_MT_MORTAR_PT2               (17 | (39 << 8))
 #define MAP_CELEBI_CHAMBER              (18 | (39 << 8))
+#define MAP_DRAGON_DEN                  (19 | (39 << 8))
 
 // gMapGroup_JohtoIndoor
 #define MAP_CIANWOOD_INSIDE                             (0 | (40 << 8))

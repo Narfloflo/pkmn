@@ -37,19 +37,15 @@ Route44_Text_Camper::
 
 
 Route44_Text_Fisherman::
-	call_if_unset FLAG_TEMP_1, Route44_Text_FishermanFight
-	goto_if_set FLAG_TEMP_1, Route44_Text_Fisherman_1
-	return
-
-Route44_Text_Fisherman_1:
-	msgbox Route44_Text_Fisherman_Text_0, MSGBOX_AUTOCLOSE
-	end
-
-
-Route44_Text_FishermanFight::
-	trainerbattle_single TRAINER_DYLAN_2, Route44_Text_FishermanFight_Text_0, Route44_Text_FishermanFight_Text_1
+	goto_if_set FLAG_TEMP_1, Route44_Text_Fisherman_2
+	trainerbattle_single TRAINER_DYLAN_2, Route44_Text_Fisherman_Text_1, Route44_Text_Fisherman_Text_2
+	msgbox Route44_Text_Fisherman_Text_3, MSGBOX_AUTOCLOSE
 	setflag FLAG_TEMP_1
 	cleartrainerflag TRAINER_DYLAN_2
+	end
+
+Route44_Text_Fisherman_2:
+	msgbox Route44_Text_Fisherman_Text_0, MSGBOX_AUTOCLOSE
 	end
 
 
@@ -89,11 +85,14 @@ Route44_Text_Camper_Text_2:
 	.string "If a POKémON has different colors from\nusual, it's more valuable.\lWhat? You mean that's not true?$"
 
 Route44_Text_Fisherman_Text_0:
-	.string "I will go to LAKE of RAGE to catch more\n"
-	.string "GYARADOS!$"
+	.string "Hang on!\nMy line's snagged!$"
 
-Route44_Text_FishermanFight_Text_0:
-	.string "What a chilly weather, right?$"
+Route44_Text_Fisherman_Text_1:
+	.string "Yeah!\nI got a bite here!$"
 
-Route44_Text_FishermanFight_Text_1:
-	.string "Brrrr! You warmed the entire\nenvironment!$"
+Route44_Text_Fisherman_Text_2:
+	.string "Tch!\nJust a small fry…$"
+
+Route44_Text_Fisherman_Text_3:
+	.string "Hang on!\n"
+	.string "My line's snagged!$"

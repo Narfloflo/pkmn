@@ -3,10 +3,10 @@ mapscripts Route114_Pub_MapScripts {}
 script Route114_Pub_Text_Vendor{
     lock
     faceplayer
-	message(format("= Welcome welcome,\nWhat should I get you?"))
+	message(format("Welcome welcome,\nWhat should I get you?"))
 	waitmessage
 	pokemart(Route114PubItems)
-	msgbox("Have a good day!")
+	msgbox("Don't choke yourself while eating. We\nare not responsible of that.")
 	release
 }
 
