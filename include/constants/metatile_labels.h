@@ -833,6 +833,9 @@
 #define METATILE_Underwater_FloorShadow  0x228
 #define METATILE_Underwater_RockWall     0x21E
 
+// gTileset_lavendar
+#define METATILE_lavendar_LavendarHouseDoor  0x276
+
 // Other
 #define METATILE_RS_MossdeepGym_RedArrow_Down   0x205
 #define METATILE_RS_MossdeepGym_RedArrow_Left   0x20C

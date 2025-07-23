@@ -55,7 +55,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_6",
-      "x": 11,
+      "x": 14,
       "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -68,7 +68,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS_KANTO",
-      "x": 7,
+      "x": 9,
       "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
@@ -82,7 +82,7 @@
   ],
   "warp_events": [
     {
-      "x": 6,
+      "x": 7,
       "y": 9,
       "elevation": 0,
       "dest_map": "MAP_LAVENDAR_TOWN",

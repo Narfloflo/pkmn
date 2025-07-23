@@ -16,7 +16,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_NURSE_KANTO",
-      "x": 6,
+      "x": 7,
       "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -29,7 +29,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CHANSEY",
-      "x": 7,
+      "x": 8,
       "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -43,7 +43,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN_KANTO",
       "x": 0,
-      "y": 7,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -55,7 +55,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_8",
-      "x": 7,
+      "x": 5,
       "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_DOWN_AND_UP",
@@ -68,7 +68,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_KANTO",
-      "x": 10,
+      "x": 11,
       "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -82,7 +82,7 @@
   ],
   "warp_events": [
     {
-      "x": 6,
+      "x": 7,
       "y": 9,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY",

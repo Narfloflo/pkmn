@@ -1,1 +1,26 @@
 mapscripts LavenderMrFujiHouse_MapScripts {}
+
+script LavendarMrFujiHouse_Text_Psyduck {
+    playmoncry(SPECIES_PSYDUCK, CRY_MODE_NORMAL)
+    msgbox("PSYDUCK: Kwak?\pThe PSYDUCK is chokeg while being hugged\nby the kid.", MSGBOX_NPC)
+    end
+}
+
+script LavendarMrFujiHouse_Text_Youngster {
+    msgbox("MR. FUJI had been praying alone\nfor CUBONE's mother.", MSGBOX_NPC)
+    end
+}
+
+script LavendarMrFujiHouse_Text_MrFuji {
+    msgbox("Who are you?\p… … … … … … … … … … … … … … … … … … … …\l… … … … … … … … … … … … … … … … … … … …\pOh you too are on a POKéDEX quest?\lThe former CHAMPION, BLUE was on this\lquest too.\lI saw him in the POKéMON TOWER…\lYou should go see him, maybe he will\lhelp you in your quest.", MSGBOX_NPC)
+    end
+}
+
+script LavendarMrFujiHouse_Text_Girl {
+    msgbox("This is really MR. FUJI's house.\pHe's really kind.\pHe looks after abandoned and\norphaned POKéMON.", MSGBOX_NPC)
+    end
+}
+script LavendarMrFujiHouse_Text_Boy {
+    msgbox("It's so warm!\nPOKéMON are so nice to hug.", MSGBOX_NPC)
+    end
+}

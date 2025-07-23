@@ -16,7 +16,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_NURSE_KANTO",
-      "x": 6,
+      "x": 7,
       "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -29,7 +29,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CHANSEY",
-      "x": 7,
+      "x": 8,
       "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -42,7 +42,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_6",
-      "x": 1,
+      "x": 2,
       "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_RIGHT",
@@ -55,7 +55,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_KANTO",
-      "x": 11,
+      "x": 14,
       "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -69,7 +69,7 @@
   ],
   "warp_events": [
     {
-      "x": 6,
+      "x": 7,
       "y": 9,
       "elevation": 0,
       "dest_map": "MAP_VIRIDIAN_CITY",

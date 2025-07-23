@@ -133,6 +133,7 @@ static const u16 sDoorNullPalette48[16] = {};
 static const u8 sDoorAnimTiles_TrainerHillRoofElevator[] = INCBIN_U8("graphics/door_anims/trainer_hill_roof_elevator.4bpp");
 static const u16 sDoorNullPalette49[16] = {};
 static const u8 sDoorAnimTiles_KantoGeneral[] = INCBIN_U8("graphics/door_anims/generalKantoBig.4bpp");
+static const u8 sDoorAnimTiles_Lavendar[] = INCBIN_U8("graphics/door_anims/lavendar.4bpp");
 static const u16 sDoorNullPalette50[16] = {};
 static const u8 sDoorAnimTiles_KantoGeneralBricks[] = INCBIN_U8("graphics/door_anims/generalKantoBricks.4bpp");
 static const u8 sDoorAnimTiles_KantoGeneralGreyRoof[] = INCBIN_U8("graphics/door_anims/generalKantoGreyRoof.4bpp");
@@ -238,6 +239,7 @@ static const u8 sDoorAnimPalettes_BattleTentInterior[] = {9, 9, 9, 9, 9, 9, 9, 9
 static const u8 sDoorAnimPalettes_TrainerHillLobbyElevator[] = {7, 7, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_TrainerHillRoofElevator[] = {9, 9, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_KantoGeneral[] = {3, 3, 3, 3, 2, 2, 2, 2};
+static const u8 sDoorAnimPalettes_Lavendar[] = {12, 12, 12, 12, 9, 9, 9, 9};
 static const u8 sDoorAnimPalettes_KantoGeneralBricks[] = {5, 5, 5, 5, 2, 2, 2, 2};
 static const u8 sDoorAnimPalettes_KantoGeneralGreyRoof[] = {5, 5, 5, 5, 2, 2, 2, 2};
 static const u8 sDoorAnimPalettes_KantoGeneralMartSlide[] = {3, 3, 3, 3, 3, 3, 3, 3};
@@ -310,6 +312,7 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_TrainerHill_Door_Elevator_Roof,               DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillRoofElevator, sDoorAnimPalettes_TrainerHillRoofElevator},
     {METATILE_GenericBuilding_inside_door,                  DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_GenericBuildingInside, sDoorAnimPalettes_GenericBuildingInside},
     {METATILE_KantoGeneral_KantoGeneralDoor,                DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_KantoGeneral, sDoorAnimPalettes_KantoGeneral},
+    {METATILE_lavendar_LavendarHouseDoor,                   DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Lavendar, sDoorAnimPalettes_Lavendar},
     {METATILE_KantoGeneral_KantoGeneralDoorBricks,          DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_KantoGeneralBricks, sDoorAnimPalettes_KantoGeneralBricks},
     {METATILE_KantoGeneral_KantoGeneralDoorGreyRoof,        DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_KantoGeneralGreyRoof, sDoorAnimPalettes_KantoGeneralGreyRoof},
     {METATILE_KantoGeneral_KantoGeneralDoorGRCerulean,      DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_KantoGeneralGreyRoof, sDoorAnimPalettes_KantoGeneralGreyRoof},

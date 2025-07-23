@@ -8212,7 +8212,7 @@
     {
       "id": "LAYOUT_VIOLET_PKMN_CENTER",
       "name": "VioletPkmnCenter_Layout",
-      "width": 12,
+      "width": 15,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
@@ -8224,7 +8224,7 @@
     {
       "id": "LAYOUT_AZALEA_PKMN_CENTER",
       "name": "AzaleaPkmnCenter_Layout",
-      "width": 12,
+      "width": 15,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
@@ -8236,7 +8236,7 @@
     {
       "id": "LAYOUT_GOLDENROD_PKMN_CENTER",
       "name": "GoldenrodPkmnCenter_Layout",
-      "width": 12,
+      "width": 15,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
@@ -8248,7 +8248,7 @@
     {
       "id": "LAYOUT_ECRUTEAK_PKMN_CENTER",
       "name": "EcruteakPkmnCenter_Layout",
-      "width": 12,
+      "width": 15,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
@@ -8260,7 +8260,7 @@
     {
       "id": "LAYOUT_OLIVINE_PKMN_CENTER",
       "name": "OlivinePkmnCenter_Layout",
-      "width": 12,
+      "width": 15,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
@@ -8272,7 +8272,7 @@
     {
       "id": "LAYOUT_CIANWOOD_PKMN_CENTER",
       "name": "CianwoodPkmnCenter_Layout",
-      "width": 12,
+      "width": 15,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
@@ -8284,7 +8284,7 @@
     {
       "id": "LAYOUT_MAHOGANY_PKMN_CENTER",
       "name": "MahoganyPkmnCenter_Layout",
-      "width": 12,
+      "width": 15,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
@@ -8296,7 +8296,7 @@
     {
       "id": "LAYOUT_BLACKTHORNE_PKMN_CENTER",
       "name": "BlackthornePkmnCenter_Layout",
-      "width": 12,
+      "width": 15,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
@@ -8320,7 +8320,7 @@
     {
       "id": "LAYOUT_CELADON_PKMN_CENTER",
       "name": "CeladonPkmnCenter_Layout",
-      "width": 12,
+      "width": 15,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
@@ -8332,7 +8332,7 @@
     {
       "id": "LAYOUT_SAFFRON_PKMN_CENTER",
       "name": "SaffronPkmnCenter_Layout",
-      "width": 12,
+      "width": 15,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
@@ -8344,7 +8344,7 @@
     {
       "id": "LAYOUT_CERULEAN_PKMN_CENTER",
       "name": "CeruleanPkmnCenter_Layout",
-      "width": 12,
+      "width": 15,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
@@ -8356,7 +8356,7 @@
     {
       "id": "LAYOUT_LAVENDAR_PKMN_CENTER",
       "name": "LavendarPkmnCenter_Layout",
-      "width": 12,
+      "width": 15,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
@@ -8368,7 +8368,7 @@
     {
       "id": "LAYOUT_ROUTE10PKMN_CENTER",
       "name": "Route10PkmnCenter_Layout",
-      "width": 12,
+      "width": 15,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
@@ -8380,7 +8380,7 @@
     {
       "id": "LAYOUT_FUCHSIA_PKMN_CENTER",
       "name": "FuchsiaPkmnCenter_Layout",
-      "width": 12,
+      "width": 15,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
@@ -8392,7 +8392,7 @@
     {
       "id": "LAYOUT_PEWTER_PKMN_CENTER",
       "name": "PewterPkmnCenter_Layout",
-      "width": 12,
+      "width": 15,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
@@ -8404,7 +8404,7 @@
     {
       "id": "LAYOUT_VIRIDIAN_PKMN_CENTER",
       "name": "ViridianPkmnCenter_Layout",
-      "width": 12,
+      "width": 15,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
@@ -8416,7 +8416,7 @@
     {
       "id": "LAYOUT_CINNABAR_PKMN_CENTER",
       "name": "CinnabarPkmnCenter_Layout",
-      "width": 12,
+      "width": 15,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
@@ -8428,7 +8428,7 @@
     {
       "id": "LAYOUT_ROUTE3PKMN_CENTER",
       "name": "Route3PkmnCenter_Layout",
-      "width": 12,
+      "width": 15,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
