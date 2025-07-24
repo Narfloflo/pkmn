@@ -20,19 +20,19 @@ Route44_Text_IcePath::
 
 Route44_Text_Cooltrainer::
 	trainerbattle_single TRAINER_EDWIN_4, Route44_Text_Cooltrainer_Text_0, Route44_Text_Cooltrainer_Text_1
-	msgbox Route44_Text_Cooltrainer_Text_2, MSGBOX_YESNO
+	msgbox Route44_Text_Cooltrainer_Text_2, MSGBOX_NPC
 	end
 
 
 Route44_Text_Youngster::
 	trainerbattle_single TRAINER_LYDIA_2, Route44_Text_Youngster_Text_0, Route44_Text_Youngster_Text_1
-	msgbox Route44_Text_Youngster_Text_2, MSGBOX_YESNO
+	msgbox Route44_Text_Youngster_Text_2, MSGBOX_NPC
 	end
 
 
 Route44_Text_Camper::
 	trainerbattle_single TRAINER_LYDIA_3, Route44_Text_Camper_Text_0, Route44_Text_Camper_Text_1
-	msgbox Route44_Text_Camper_Text_2, MSGBOX_YESNO
+	msgbox Route44_Text_Camper_Text_2, MSGBOX_NPC
 	end
 
 

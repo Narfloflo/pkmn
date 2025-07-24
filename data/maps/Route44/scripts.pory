@@ -18,19 +18,19 @@ script Route44_Text_IcePath {
 
 script Route44_Text_Cooltrainer{
     trainerbattle_single(TRAINER_EDWIN_4,"Let me see how strong you are!", "Oh wow!" )
-    msgbox("Wow. You have a lot of BADGES.\nNo wonder you're so tough.\lI wonder if ECRUTEAK GYM's MORTY is\lstill in training?\lWhat? He's spending his time in the\lDANCING HALL?\lI'll get my revenge!", MSGBOX_YESNO)
+    msgbox("Wow. You have a lot of BADGES.\nNo wonder you're so tough.\lI wonder if ECRUTEAK GYM's MORTY is\lstill in training?\lWhat? He's spending his time in the\lDANCING HALL?\lI'll get my revenge!", MSGBOX_NPC)
     end
 }
 
 script Route44_Text_Youngster{
     trainerbattle_single(TRAINER_LYDIA_2,"I have the ambition of being the\nstrongest TRAINER!\lLet's fight!", "I still have a long way attending me." )
-    msgbox("It's important to have conviction on\nyour side.", MSGBOX_YESNO)
+    msgbox("It's important to have conviction on\nyour side.", MSGBOX_NPC)
     end
 }
 
 script Route44_Text_Camper{
     trainerbattle_single(TRAINER_LYDIA_3,"Have you ever seen a SHINY POKéMON?", "I'm still weak..." )
-    msgbox("If a POKémON has different colors from\nusual, it's more valuable.\lWhat? You mean that's not true?", MSGBOX_YESNO)
+    msgbox("If a POKémON has different colors from\nusual, it's more valuable.\lWhat? You mean that's not true?", MSGBOX_NPC)
     end
 }
 

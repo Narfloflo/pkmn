@@ -90,7 +90,7 @@ CinnabarInside_Text_LegendaryBirdEmail_Text_0:
 	.string "There's an e-mail message.\p… … …\pThere are three legendary bird\nPOKéMON.\pThey are ARTICUNO, ZAPDOS, and\nMOLTRES.\pTheir whereabouts are unknown.\pWe plan to explore the cavern\nclose to CERULEAN.\pFrom: POKéMON RESEARCH TEAM…$"
 
 CinnabarInside_Text_GuyGivingContext_Text_0:
-	.string "Now that TEAM ROCKET is gone and that\nthey release some of our scientist, we\lcan focus on exploration!\pBLAINE for example is looking into the\lSEAFOAM CAVE, I've heard.\lBROCK is helping us finding fossils in\lMT. MOON.\lAnd I guess our CHAMPION was around\lCERULEAN CAVE at some point.$"
+	.string "Now that TEAM ROCKET is gone and that\nthey release some of our scientist, we\lcan focus on exploration!\pBLAINE for example is looking into the\nSEAFOAM CAVE, I've heard.\lBROCK is helping us finding fossils in\nMT. MOON.\pAnd I guess our CHAMPION was around\nCERULEAN CAVE at some point.$"
 
 CinnabarInside_Text_Gentleman_Text_0:
 	.string "BLAINE and I are friends. I used to\nfight in the GYM alongside him.\lA few months ago a three kids blasted\lthrough the GYM and kick our butts.\pI've decided to retire then.$"

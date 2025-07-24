@@ -4,13 +4,20 @@
 #include "field_camera.h"
 #include "fieldmap.h"
 #include "metatile_behavior.h"
+#include "overworld.h"
 #include "task.h"
 #include "constants/songs.h"
 #include "constants/metatile_labels.h"
+#include "constants/region_map_sections.h"
 
 #define DOOR_SOUND_NORMAL  0
 #define DOOR_SOUND_SLIDING 1
 #define DOOR_SOUND_ARENA   2
+
+static u8 GetCurrentRegion(void)
+{
+    return gMapHeader.region;
+}
 
 struct DoorGraphics
 {
@@ -19,6 +26,7 @@ struct DoorGraphics
     u8 size;
     const void *tiles;
     const void *palettes;
+    
 };
 
 struct DoorAnimFrame
@@ -132,22 +140,48 @@ static const u8 sDoorAnimTiles_TrainerHillLobbyElevator[] = INCBIN_U8("graphics/
 static const u16 sDoorNullPalette48[16] = {};
 static const u8 sDoorAnimTiles_TrainerHillRoofElevator[] = INCBIN_U8("graphics/door_anims/trainer_hill_roof_elevator.4bpp");
 static const u16 sDoorNullPalette49[16] = {};
-static const u8 sDoorAnimTiles_KantoGeneral[] = INCBIN_U8("graphics/door_anims/generalKantoBig.4bpp");
-static const u8 sDoorAnimTiles_Lavendar[] = INCBIN_U8("graphics/door_anims/lavendar.4bpp");
+static const u8 sDoorAnimTiles_KantoGeneral[] = INCBIN_U8("graphics/door_anims/generalKanto.4bpp");
+static const u8 sDoorAnimTiles_Lavendar[] = INCBIN_U8("graphics/door_anims/lavender.4bpp");
+static const u8 sDoorAnimTiles_Saffron[] = INCBIN_U8("graphics/door_anims/saffron.4bpp");
 static const u16 sDoorNullPalette50[16] = {};
-static const u8 sDoorAnimTiles_KantoGeneralBricks[] = INCBIN_U8("graphics/door_anims/generalKantoBricks.4bpp");
-static const u8 sDoorAnimTiles_KantoGeneralGreyRoof[] = INCBIN_U8("graphics/door_anims/generalKantoGreyRoof.4bpp");
+static const u8 sDoorAnimTiles_KantoDouble[] = INCBIN_U8("graphics/door_anims/sliding_double.4bpp");
+static const u8 sDoorAnimTiles_SaffronDouble[] = INCBIN_U8("graphics/door_anims/silph_co.4bpp");
+static const u8 sDoorAnimTiles_Cerulean[] = INCBIN_U8("graphics/door_anims/cerulean.4bpp");
+static const u8 sDoorAnimTiles_Pallet[] = INCBIN_U8("graphics/door_anims/pallet.4bpp");
+static const u8 sDoorAnimTiles_Viridan[] = INCBIN_U8("graphics/door_anims/viridian.4bpp");
+static const u8 sDoorAnimTiles_OaksLab[] = INCBIN_U8("graphics/door_anims/oaks_lab.4bpp");
+static const u8 sDoorAnimTiles_Pewter[] = INCBIN_U8("graphics/door_anims/pewter.4bpp");
+static const u8 sDoorAnimTiles_CinnabarLab[] = INCBIN_U8("graphics/door_anims/cinnabar_lab.4bpp");
+static const u8 sDoorAnimTiles_Fuchsia[] = INCBIN_U8("graphics/door_anims/fuchsia.4bpp");
+static const u8 sDoorAnimTiles_SafariZoneKanto[] = INCBIN_U8("graphics/door_anims/safari_zone_kanto.4bpp");
+static const u8 sDoorAnimTiles_Sevii123[] = INCBIN_U8("graphics/door_anims/sevii_123.4bpp");
+static const u8 sDoorAnimTiles_SeviiDayCare[] = INCBIN_U8("graphics/door_anims/four_island_day_care.4bpp");
 static const u8 sDoorAnimTiles_CeladonMartDoors[] = INCBIN_U8("graphics/door_anims/CeladonMartDoors.4bpp");
 static const u8 sDoorAnimTiles_GoldenrodMartDoors[] = INCBIN_U8("graphics/door_anims/CeladonMartDoors.4bpp");
 static const u16 sDoorNullPalette51[16] = {};
-static const u8 sDoorAnimTiles_KantoGeneralMartSlide[] = INCBIN_U8("graphics/door_anims/sliding_single_pokemart.4bpp");
-static const u8 sDoorAnimTiles_KantoGeneralCenterSlide[] = INCBIN_U8("graphics/door_anims/sliding_single_pokecenter.4bpp");
+static const u8 sDoorAnimTiles_Vermilion[] = INCBIN_U8("graphics/door_anims/vermilion.4bpp");
+static const u8 sDoorAnimTiles_Mahogany[] = INCBIN_U8("graphics/door_anims/vermilion.4bpp");
+static const u8 sDoorAnimTiles_KantoGeneralCenterSlide[] = INCBIN_U8("graphics/door_anims/sliding_single.4bpp");
 static const u8 sDoorAnimTiles_GenericBuildingInside[] = INCBIN_U8("graphics/door_anims/genericBuilding_inside.4bpp");
-static const u8 sDoorAnimTiles_AzaleaBrownHouse[] = INCBIN_U8("graphics/door_anims/Azalea.4bpp");
+static const u8 sDoorAnimTiles_Cherrygrove[] = INCBIN_U8("graphics/door_anims/cerulean.4bpp");
 
 
 
+static const struct DoorAnimFrame sKantoDoorOpenAnimFrames[] =
+{
+    {4, -1},      // Fermée
+    {4, 0},       // Mi-ouverte
+    {4, 0x100},   // Ouverte
+    {0, 0},       // Fin
+};
 
+static const struct DoorAnimFrame sKantoDoorCloseAnimFrames[] =
+{
+    {4, 0x100},   // Ouverte
+    {4, 0},       // Mi-ouverte
+    {4, -1},      // Fermée
+    {0, 0},       // Fin
+};
 
 static const struct DoorAnimFrame sDoorOpenAnimFrames[] =
 {
@@ -238,16 +272,28 @@ static const u8 sDoorAnimPalettes_BattleDomePreBattleRoom[] = {9, 9, 7, 7, 7, 7,
 static const u8 sDoorAnimPalettes_BattleTentInterior[] = {9, 9, 9, 9, 9, 9, 9, 9};
 static const u8 sDoorAnimPalettes_TrainerHillLobbyElevator[] = {7, 7, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_TrainerHillRoofElevator[] = {9, 9, 7, 7, 7, 7, 7, 7};
-static const u8 sDoorAnimPalettes_KantoGeneral[] = {3, 3, 3, 3, 2, 2, 2, 2};
-static const u8 sDoorAnimPalettes_Lavendar[] = {12, 12, 12, 12, 9, 9, 9, 9};
-static const u8 sDoorAnimPalettes_KantoGeneralBricks[] = {5, 5, 5, 5, 2, 2, 2, 2};
-static const u8 sDoorAnimPalettes_KantoGeneralGreyRoof[] = {5, 5, 5, 5, 2, 2, 2, 2};
-static const u8 sDoorAnimPalettes_KantoGeneralMartSlide[] = {3, 3, 3, 3, 3, 3, 3, 3};
-static const u8 sDoorAnimPalettes_KantoGeneralCenterSlide[] = {2, 2, 2, 2, 3, 3, 3, 3};
+static const u8 sDoorAnimPalettes_KantoGeneral[] = {2, 2, 2, 2, 2, 2, 2, 2};
+static const u8 sDoorAnimPalettes_Lavendar[] = {9, 9, 9, 9, 9, 9, 9, 9};
+static const u8 sDoorAnimPalettes_Saffron[] = {8, 8, 8, 8, 8, 8, 8, 8};
+static const u8 sDoorAnimPalettes_KantoDouble[] = {3, 3, 3, 3, 3, 3, 3, 3};
+static const u8 sDoorAnimPalettes_SaffronDouble[] = {3, 3, 3, 3, 3, 3, 3, 3};
+static const u8 sDoorAnimPalettes_Cerulean[] = {12, 12, 12, 12, 12, 12, 12, 12};
+static const u8 sDoorAnimPalettes_Pallet[] = {8, 8, 8, 8, 8, 8, 8, 8};
+static const u8 sDoorAnimPalettes_Viridian[] = {8, 8, 8, 8, 8, 8, 8, 8};
+static const u8 sDoorAnimPalettes_OaksLab[] = {10, 10, 10, 10, 10, 10, 10, 10};
+static const u8 sDoorAnimPalettes_Pewter[] = {8, 8, 8, 8, 8, 8, 8, 8};
+static const u8 sDoorAnimPalettes_CinnabarLab[] = {3, 3, 3, 3, 3, 3, 3, 3};
+static const u8 sDoorAnimPalettes_Fuchsia[] = {8, 8, 8, 8, 8, 8, 8, 8};
+static const u8 sDoorAnimPalettes_SafariZoneKanto[] = {9, 9, 9, 9, 9, 9, 9, 9};
+static const u8 sDoorAnimPalettes_Sevii123[] = {5, 5, 5, 5, 5, 5, 5, 5};
+static const u8 sDoorAnimPalettes_SeviiDayCare[] = {3, 3, 3, 3, 3, 3, 3, 3};
+static const u8 sDoorAnimPalettes_Vermilion[] = {9, 9, 9, 9, 9, 9, 9, 9};
+static const u8 sDoorAnimPalettes_Mahogany[] = {8, 8, 8, 8, 8, 8, 8, 8};
+static const u8 sDoorAnimPalettes_KantoGeneralCenterSlide[] = {3, 3, 3, 3, 3, 3, 3, 3};
 static const u8 sDoorAnimPalettes_CeladonMartDoors[] = {10, 10, 8, 8, 3, 3, 3, 3};
 static const u8 sDoorAnimPalettes_GoldenrodMartDoors[] = {8, 8, 8, 8, 3, 3, 3, 3};
 static const u8 sDoorAnimPalettes_GenericBuildingInside[] = {6, 6, 6, 6, 9, 9, 9, 9};
-static const u8 sDoorAnimPalettes_AzaleaBrownHouse[] = {12, 12, 12, 12, 2, 2, 2, 2};
+static const u8 sDoorAnimPalettes_Cherrygrove[] = {2, 2, 2, 2, 2, 2, 2, 2};
 
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
@@ -313,14 +359,25 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_GenericBuilding_inside_door,                  DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_GenericBuildingInside, sDoorAnimPalettes_GenericBuildingInside},
     {METATILE_KantoGeneral_KantoGeneralDoor,                DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_KantoGeneral, sDoorAnimPalettes_KantoGeneral},
     {METATILE_lavendar_LavendarHouseDoor,                   DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Lavendar, sDoorAnimPalettes_Lavendar},
-    {METATILE_KantoGeneral_KantoGeneralDoorBricks,          DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_KantoGeneralBricks, sDoorAnimPalettes_KantoGeneralBricks},
-    {METATILE_KantoGeneral_KantoGeneralDoorGreyRoof,        DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_KantoGeneralGreyRoof, sDoorAnimPalettes_KantoGeneralGreyRoof},
-    {METATILE_KantoGeneral_KantoGeneralDoorGRCerulean,      DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_KantoGeneralGreyRoof, sDoorAnimPalettes_KantoGeneralGreyRoof},
+    {METATILE_Kanto_saffron,                                DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Saffron, sDoorAnimPalettes_Saffron},
+    {METATILE_KantoGeneral_KantoGeneralDouble,              DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_KantoDouble, sDoorAnimPalettes_KantoDouble},
+    {METATILE_Kanto_silph_co,                               DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_SaffronDouble, sDoorAnimPalettes_KantoDouble},
+    {METATILE_Cerulean_Cerulean,                            DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Cerulean, sDoorAnimPalettes_Cerulean},
+    {METATILE_Pallet_pallet,                                DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Pallet, sDoorAnimPalettes_Pallet},
+    {METATILE_PalletTown_ViridianHouseDoor,                   DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Viridan, sDoorAnimPalettes_Viridian},
+    {METATILE_Pallet_oaks_lab,                              DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_OaksLab, sDoorAnimPalettes_OaksLab},
+    {METATILE_Pewter_PewterDoor,                            DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Pewter, sDoorAnimPalettes_Pewter},
+    {METATILE_Cinnabar_CinnabarLab,                         DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_CinnabarLab, sDoorAnimPalettes_CinnabarLab},
+    {METATILE_Fuschia_FuschiaDoor,                          DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Fuchsia, sDoorAnimPalettes_Fuchsia},
+    {METATILE_Fuschia_SafariDoor,                           DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_SafariZoneKanto, sDoorAnimPalettes_SafariZoneKanto},
+    {METATILE_IslandTown_IslandDoor,                        DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Sevii123, sDoorAnimPalettes_Sevii123},
+    {METATILE_IslandsKanto_IslandsKantoDoor,                DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_SeviiDayCare, sDoorAnimPalettes_SeviiDayCare},
     {METATILE_KantoGeneral_CeladonMartDoors,                DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_CeladonMartDoors, sDoorAnimPalettes_CeladonMartDoors},
     {METATILE_KantoGeneral_GoldenrodMartDoors,              DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_GoldenrodMartDoors, sDoorAnimPalettes_GoldenrodMartDoors},
-    {METATILE_KantoGeneral_KantoGeneralMartSlide,           DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_KantoGeneralMartSlide, sDoorAnimPalettes_KantoGeneralMartSlide},
+    {METATILE_Vermilion_VermilionDoor,                      DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Vermilion, sDoorAnimPalettes_Vermilion},
+    {METATILE_Mahogany_MahoganyDoor,                        DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Mahogany, sDoorAnimPalettes_Mahogany},
     {METATILE_KantoGeneral_KantoGeneralCenterSlide,         DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_KantoGeneralCenterSlide, sDoorAnimPalettes_KantoGeneralCenterSlide},
-    {METATILE_Ecruteak_AzaleaBrownHouse,                    DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_AzaleaBrownHouse, sDoorAnimPalettes_AzaleaBrownHouse},
+    {METATILE_Cerulean_CherrygroveDoor,                  DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Cherrygrove, sDoorAnimPalettes_Cherrygrove},
     {},
 };
 
@@ -332,29 +389,62 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 
 static void CopyDoorTilesToVram(const struct DoorGraphics *gfx, const struct DoorAnimFrame *frame)
 {
-    if (gfx->size == 2)
-        CpuFastCopy(gfx->tiles + frame->offset, (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_TILE_START_SIZE2)), 16 * TILE_SIZE_4BPP);
+    // Utilise la fonction GetCurrentRegion() avec les parenthèses
+    if (GetCurrentRegion() == REGION_SEVII || GetCurrentRegion() == REGION_KANTO || GetCurrentRegion() == REGION_JOHTO)
+    {
+        // Portes Kanto/Johto : toujours 8 tiles (16x16)
+        CpuFastCopy(gfx->tiles + frame->offset, 
+                    (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_TILE_START_SIZE1)), 
+                    8 * TILE_SIZE_4BPP);
+    }
     else
-        CpuFastCopy(gfx->tiles + frame->offset, (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_TILE_START_SIZE1)), 8 * TILE_SIZE_4BPP);
+    {
+        // Comportement standard Emerald pour Hoenn
+        if (gfx->size == 2)
+            CpuFastCopy(gfx->tiles + frame->offset, 
+                        (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_TILE_START_SIZE2)), 
+                        16 * TILE_SIZE_4BPP);
+        else
+            CpuFastCopy(gfx->tiles + frame->offset, 
+                        (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_TILE_START_SIZE1)), 
+                        8 * TILE_SIZE_4BPP);
+    }
 }
 
 static void BuildDoorTiles(u16 *tiles, u16 tileNum, const u8 *paletteNums)
 {
     int i;
     u16 tile;
-
-    // Only the first 4 tiles of each metatile (bottom layer) actually use the door tiles
-    for (i = 0; i < 4; i++)
+    
+    // Pour Kanto, on n'utilise que 4 tiles mais il faut initialiser les 8
+    if (GetCurrentRegion() == REGION_SEVII || GetCurrentRegion() == REGION_KANTO || GetCurrentRegion() == REGION_JOHTO)
     {
-        tile = *(paletteNums++) << 12;
-        tiles[i] = tile | (tileNum + i);
+        // Les 4 premiers tiles utilisent l'animation
+        for (i = 0; i < 4; i++)
+        {
+            tile = paletteNums[i % 4] << 12;
+            tiles[i] = tile | (tileNum + i);
+        }
+        // Les 4 tiles restants doivent être transparents (tile 0)
+        for (i = 4; i < 8; i++)
+        {
+            tile = paletteNums[i % 4] << 12;  // Garde la même palette
+            tiles[i] = tile | 0;  // Tile 0 = transparent
+        }
     }
-
-    // The remaining layers are left as tile 0 (with the same palette)
-    for (; i < 8; i++)
+    else
     {
-        tile = *(paletteNums++) << 12;
-        tiles[i] = tile;
+        // Comportement standard Emerald
+        for (i = 0; i < 4; i++)
+        {
+            tile = *(paletteNums++) << 12;
+            tiles[i] = tile | (tileNum + i);
+        }
+        for (; i < 8; i++)
+        {
+            tile = *(paletteNums++) << 12;
+            tiles[i] = tile;
+        }
     }
 }
 
@@ -362,31 +452,34 @@ static void DrawCurrentDoorAnimFrame(const struct DoorGraphics *gfx, u32 x, u32 
 {
     u16 tiles[24];
 
-    if (gfx->size == 2)
+    // Pour Kanto, force toujours une porte 16x16 (1 metatile)
+    if (GetCurrentRegion() == REGION_SEVII || GetCurrentRegion() == REGION_KANTO || GetCurrentRegion() == REGION_JOHTO)
     {
-        // Top left metatile
+        // Dessine seulement 1 metatile (16x16) à la position y (pas y-1)
+        BuildDoorTiles(&tiles[0], DOOR_TILE_START_SIZE1 + 0, &paletteNums[0]);
+        DrawDoorMetatileAt(x, y, &tiles[0]);
+    }
+    else if (gfx->size == 2)
+    {
+        // Portes 32x32 Hoenn (2x2 metatiles)
         BuildDoorTiles(&tiles[8], DOOR_TILE_START_SIZE2 + 0, &paletteNums[0]);
         DrawDoorMetatileAt(x, y - 1, &tiles[8]);
 
-        // Bottom left metatile
         BuildDoorTiles(&tiles[8], DOOR_TILE_START_SIZE2 + 4, &paletteNums[4]);
         DrawDoorMetatileAt(x, y, &tiles[8]);
 
-        // Top right metatile
         BuildDoorTiles(&tiles[8], DOOR_TILE_START_SIZE2 + 8, &paletteNums[0]);
         DrawDoorMetatileAt(x + 1, y - 1, &tiles[8]);
 
-        // Bottom right metatile
         BuildDoorTiles(&tiles[8], DOOR_TILE_START_SIZE2 + 12, &paletteNums[4]);
         DrawDoorMetatileAt(x + 1, y, &tiles[8]);
     }
     else
     {
-        // Top metatile
+        // Portes 16x32 standard Hoenn (1x2 metatiles)
         BuildDoorTiles(&tiles[0], DOOR_TILE_START_SIZE1 + 0, &paletteNums[0]);
         DrawDoorMetatileAt(x, y - 1, &tiles[0]);
 
-        // Bottom metatile
         BuildDoorTiles(&tiles[0], DOOR_TILE_START_SIZE1 + 4, &paletteNums[4]);
         DrawDoorMetatileAt(x, y, &tiles[0]);
     }
@@ -394,13 +487,22 @@ static void DrawCurrentDoorAnimFrame(const struct DoorGraphics *gfx, u32 x, u32 
 
 static void DrawClosedDoorTiles(const struct DoorGraphics *gfx, u32 x, u32 y)
 {
-    CurrentMapDrawMetatileAt(x, y - 1);
-    CurrentMapDrawMetatileAt(x, y);
-
-    if (gfx->size == 2)
+    if (GetCurrentRegion() == REGION_SEVII || GetCurrentRegion() == REGION_KANTO || GetCurrentRegion() == REGION_JOHTO)
     {
-        CurrentMapDrawMetatileAt(x + 1, y - 1);
-        CurrentMapDrawMetatileAt(x + 1, y);
+        // Pour Kanto, dessine seulement 1 metatile à la position y
+        CurrentMapDrawMetatileAt(x, y);
+    }
+    else
+    {
+        // Comportement standard Emerald - dessine 2 metatiles en hauteur
+        CurrentMapDrawMetatileAt(x, y - 1);
+        CurrentMapDrawMetatileAt(x, y);
+
+        if (gfx->size == 2)
+        {
+            CurrentMapDrawMetatileAt(x + 1, y - 1);
+            CurrentMapDrawMetatileAt(x + 1, y);
+        }
     }
 }
 
@@ -509,7 +611,18 @@ static void DrawOpenedDoor(const struct DoorGraphics *gfx, u32 x, u32 y)
 {
     gfx = GetDoorGraphics(gfx, MapGridGetMetatileIdAt(x, y));
     if (gfx != NULL)
-        DrawDoor(gfx, GetLastDoorFrame(sDoorOpenAnimFrames, sDoorOpenAnimFrames), x, y);
+    {
+        const struct DoorAnimFrame *frames;
+        if (GetCurrentRegion() == REGION_SEVII || GetCurrentRegion() == REGION_KANTO || GetCurrentRegion() == REGION_JOHTO)
+        {
+            frames = sKantoDoorOpenAnimFrames;
+        }
+        else
+        {
+            frames = sDoorOpenAnimFrames;
+        }
+        DrawDoor(gfx, GetLastDoorFrame(frames, frames), x, y);
+    }
 }
 
 static s8 StartDoorOpenAnimation(const struct DoorGraphics *gfx, u32 x, u32 y)
@@ -521,10 +634,20 @@ static s8 StartDoorOpenAnimation(const struct DoorGraphics *gfx, u32 x, u32 y)
     }
     else
     {
-        if (gfx->size == 2)
-            return StartDoorAnimationTask(gfx, sBigDoorOpenAnimFrames, x, y);
+        // Vérifie la région pour choisir les bonnes frames
+        if (GetCurrentRegion() == REGION_SEVII || GetCurrentRegion() == REGION_KANTO || GetCurrentRegion() == REGION_JOHTO)
+        {
+            // Pour Kanto/Johto, utilise toujours les frames 16x16
+            return StartDoorAnimationTask(gfx, sKantoDoorOpenAnimFrames, x, y);
+        }
         else
-            return StartDoorAnimationTask(gfx, sDoorOpenAnimFrames, x, y);
+        {
+            // Comportement standard Emerald
+            if (gfx->size == 2)
+                return StartDoorAnimationTask(gfx, sBigDoorOpenAnimFrames, x, y);
+            else
+                return StartDoorAnimationTask(gfx, sDoorOpenAnimFrames, x, y);
+        }
     }
 }
 
@@ -534,7 +657,18 @@ static s8 StartDoorCloseAnimation(const struct DoorGraphics *gfx, u32 x, u32 y)
     if (gfx == NULL)
         return -1;
     else
-        return StartDoorAnimationTask(gfx, sDoorCloseAnimFrames, x, y);
+    {
+        // Vérifie la région pour choisir les bonnes frames
+        if (GetCurrentRegion() == REGION_SEVII || GetCurrentRegion() == REGION_KANTO || GetCurrentRegion() == REGION_JOHTO)
+        {
+            return StartDoorAnimationTask(gfx, sKantoDoorCloseAnimFrames, x, y);
+        }
+        else
+        {
+            // Pour Hoenn, utilise toujours les frames standard (pas de distinction size pour close)
+            return StartDoorAnimationTask(gfx, sDoorCloseAnimFrames, x, y);
+        }
+    }
 }
 
 static s8 GetDoorSoundType(const struct DoorGraphics *gfx, u32 x, u32 y)

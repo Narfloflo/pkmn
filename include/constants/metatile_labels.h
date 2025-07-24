@@ -144,6 +144,13 @@
 #define METATILE_Cave_ShoalCave_DirtPile_Small           0x35A
 #define METATILE_Cave_WallOnWater_Bottom                 0x264
 
+// gTileset_Cerulean
+#define METATILE_Cerulean_Cerulean         0x28C
+#define METATILE_Cerulean_CherrygroveDoor  0x27B
+
+// gTileset_Cinnabar
+#define METATILE_Cinnabar_CinnabarLab  0x22D
+
 // gTileset_Contest
 #define METATILE_Contest_CounterFlap_Bottom  0x2D9
 #define METATILE_Contest_CounterFlap_Top     0x2D1
@@ -220,7 +227,9 @@
 #define METATILE_Fortree_WoodBridge1_Top                   0x297
 
 // gTileset_Fuschia
+#define METATILE_Fuschia_FuschiaDoor      0x23F
 #define METATILE_Fuschia_ReflectiveWater  0x2B4
+#define METATILE_Fuschia_SafariDoor       0x252
 
 // gTileset_General
 #define METATILE_General_BlueCaveIndent        0x1B0
@@ -283,21 +292,25 @@
 #define METATILE_InsideShip_IntactDoor_Bottom_Locked    0x233
 #define METATILE_InsideShip_IntactDoor_Bottom_Unlocked  0x22B
 
+// gTileset_IslandTown
+#define METATILE_IslandTown_IslandDoor  0x2A7
+
+// gTileset_IslandsKanto
+#define METATILE_IslandsKanto_IslandsKantoDoor  0x239
+
 // gTileset_Kanto
 #define METATILE_Kanto_saffron   0x203
 #define METATILE_Kanto_silph_co  0x236
 
 // gTileset_KantoGeneral
-#define METATILE_KantoGeneral_CeladonMartDoors            0x286
-#define METATILE_KantoGeneral_GoldenrodMartDoors          0x2C4
-#define METATILE_KantoGeneral_KantoGeneralCenterSlide     0x062
-#define METATILE_KantoGeneral_KantoGeneralDoor            0x03D
-#define METATILE_KantoGeneral_KantoGeneralDoorBricks      0x02E
-#define METATILE_KantoGeneral_KantoGeneralDoorGRCerulean  0x277
-#define METATILE_KantoGeneral_KantoGeneralDoorGreyRoof    0x27E
-#define METATILE_KantoGeneral_KantoGeneralMartSlide       0x074
-#define METATILE_KantoGeneral_ReflectiveWater             0x1AE
-#define METATILE_KantoGeneral_sliding_double              0x15B
+#define METATILE_KantoGeneral_CeladonMartDoors          0x286
+#define METATILE_KantoGeneral_GoldenrodMartDoors        0x2C4
+#define METATILE_KantoGeneral_KantoGeneralCenterSlide   0x062
+#define METATILE_KantoGeneral_KantoGeneralDoor          0x03D
+#define METATILE_KantoGeneral_KantoGeneralDoorGreyRoof  0x27E
+#define METATILE_KantoGeneral_KantoGeneralDouble        0x15B
+#define METATILE_KantoGeneral_KantoGeneralMartSlide     0x074
+#define METATILE_KantoGeneral_ReflectiveWater           0x1AE
 
 // gTileset_KantoInside
 #define METATILE_KantoInside_PC_Off  0x062
@@ -340,6 +353,9 @@
 #define METATILE_LilycoveMuseum_Painting3_Right  0x261
 #define METATILE_LilycoveMuseum_Painting4_Left   0x262
 #define METATILE_LilycoveMuseum_Painting4_Right  0x263
+
+// gTileset_Mahogany
+#define METATILE_Mahogany_MahoganyDoor  0x2A2
 
 // gTileset_Mauville
 #define METATILE_Mauville_DeepSand_BottomMid  0x259
@@ -442,6 +458,9 @@
 #define METATILE_Pallet_oaks_lab  0x23C
 #define METATILE_Pallet_pallet    0x223
 
+// gTileset_PalletTown
+#define METATILE_PalletTown_ViridianHouseDoor  0x253
+
 // gTileset_Petalburg
 #define METATILE_Petalburg_Door_BirchsLab   0x249
 #define METATILE_Petalburg_Door_Littleroot  0x248
@@ -456,6 +475,9 @@
 #define METATILE_PetalburgGym_SlidingDoor_Frame2  0x21A
 #define METATILE_PetalburgGym_SlidingDoor_Frame3  0x21B
 #define METATILE_PetalburgGym_SlidingDoor_Frame4  0x21C
+
+// gTileset_Pewter
+#define METATILE_Pewter_PewterDoor  0x24E
 
 // gTileset_PokemonCenter
 #define METATILE_PokemonCenter_CounterBarrier            0x25D
@@ -832,6 +854,9 @@
 // gTileset_Underwater
 #define METATILE_Underwater_FloorShadow  0x228
 #define METATILE_Underwater_RockWall     0x21E
+
+// gTileset_Vermilion
+#define METATILE_Vermilion_VermilionDoor  0x251
 
 // gTileset_lavendar
 #define METATILE_lavendar_LavendarHouseDoor  0x276

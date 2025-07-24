@@ -47,7 +47,7 @@ script CinnabarInside_Text_LegendaryBirdEmail {
 
 
 script CinnabarInside_Text_GuyGivingContext {
-    msgbox("Now that TEAM ROCKET is gone and that\nthey release some of our scientist, we\lcan focus on exploration!\pBLAINE for example is looking into the\lSEAFOAM CAVE, I've heard.\lBROCK is helping us finding fossils in\lMT. MOON.\lAnd I guess our CHAMPION was around\lCERULEAN CAVE at some point.", MSGBOX_NPC)
+    msgbox("Now that TEAM ROCKET is gone and that\nthey release some of our scientist, we\lcan focus on exploration!\pBLAINE for example is looking into the\nSEAFOAM CAVE, I've heard.\lBROCK is helping us finding fossils in\nMT. MOON.\pAnd I guess our CHAMPION was around\nCERULEAN CAVE at some point.", MSGBOX_NPC)
     end
 }
 
