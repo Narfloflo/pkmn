@@ -3,15 +3,7 @@ mapscripts EcruteakCity_MapScripts {}
 script EcruteakCity_Text_Kimono {
     lock
     faceplayer
-    msgbox(format("Here is the DANCE THEATER. You can enjoy some traditional dances inside. My colleagues are also TRAINERS. Be careful !"))
-    release
-    end
-}
-
-script EcruteakCity_Text_Sage {
-    lock
-    faceplayer
-    msgbox(format("The way to the TIN TOWER is closed, except for a TRAINER with a pure heart (But I don't think it exist...)."))
+    msgbox(format("Here is the DANCE THEATER. You can enjoy some traditional dances inside. My colleagues are also TRAINERS. Be careful!"))
     release
     end
 }
@@ -19,7 +11,7 @@ script EcruteakCity_Text_Sage {
 script EcruteakCity_Text_Sage2 {
     lock
     faceplayer
-    msgbox(format("Hello ! The GYM is closed. Yeah I know... MORTIMER isn't inside so, what's the point of opening it..."))
+    msgbox(format("Hello ! The GYM is closed. Yeah I know… MORTIMER isn't inside so, what's the point of opening it…"))
     release
     end
 }
@@ -27,7 +19,7 @@ script EcruteakCity_Text_Sage2 {
 script EcruteakCity_Text_WomanBeforeTower {
     lock
     faceplayer
-    msgbox(format("This tower is really gloomy. It give me chills... Brrrrrrrr !"))
+    msgbox(format("This tower is really gloomy. It give me chills… Brrrrrrrr !"))
     release
     end
 }
@@ -35,7 +27,7 @@ script EcruteakCity_Text_WomanBeforeTower {
 script EcruteakCity_Text_Girl {
     lock
     faceplayer
-    msgbox(format("I'm about to practice my dancing skills in the DANCE THEATER. You think I'll need my EEVEE ?"))
+    msgbox(format("I'm about to practice my dancing skills in the DANCE THEATER. You think I'll need my EEVEE?"))
     release
     end
 }
@@ -59,7 +51,7 @@ script EcruteakCity_Text_FatMan1 {
 script EcruteakCity_Text_Maniac {
     lock
     faceplayer
-    msgbox(format("I'm only here so sometime, but it feel like I've been trapped into a time portal. Look at this architecture !"))
+    msgbox(format("I'm only here so sometime, but it feel like I've been trapped into a time portal. Look at this architecture!"))
     release
     end
 }
@@ -67,7 +59,7 @@ script EcruteakCity_Text_Maniac {
 script EcruteakCity_Text_OldMan {
     lock
     faceplayer
-    msgbox(format("I don't know why we are no rebuilding the BRASS TOWER.\pI mean look at this mess !"))
+    msgbox(format("I don't know why we are no rebuilding the BRASS TOWER.\pI mean look at this mess!"))
     release
     end
 }
@@ -104,7 +96,7 @@ script EcruteakCity_Text_Eevee {
     lock
     faceplayer
     playmoncry(SPECIES_EEVEE, CRY_MODE_NORMAL)
-    msgbox(format("Eeeevee !"))
+    msgbox(format("EEVEE: Grahuu!"))
     release
     end
 }

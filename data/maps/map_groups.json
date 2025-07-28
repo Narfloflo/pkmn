@@ -538,8 +538,7 @@
     "FireIsland1F",
     "FireIsland2F",
     "FireIsland3F",
-    "Route119Jungle",
-    "FishingClub"
+    "Route119Jungle"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
@@ -932,6 +931,7 @@
     "JohtoPokecenter",
     "NationalPakrDoors",
     "EcruteakKimono",
+    "FishingClub",
     "AlphaRuinsDoors",
     "AlphRuins",
     "ElmLab",

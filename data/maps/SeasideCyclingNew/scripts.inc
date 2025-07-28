@@ -39,7 +39,6 @@ Ranch_Text_Miltank::
 	lock
 	faceplayer
 	playmoncry SPECIES_MILTANK, CRY_MODE_NORMAL
-	waitmoncry
 	msgbox Ranch_Text_Miltank_Text_0
 	release
 	end
@@ -62,4 +61,4 @@ Ranch_Text_Vendor_Text_1:
 	.string "Have a good day!$"
 
 Ranch_Text_Miltank_Text_0:
-	.string "Moooh$"
+	.string "MILTANK: Moooh$"

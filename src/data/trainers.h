@@ -6688,10 +6688,10 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_JACKSON_4] =
     {
-        .trainerClass = TRAINER_CLASS_PKMN_RANGER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_POKEMON_RANGER_M,
-        .trainerName = _("JACKSON"),
+        .trainerClass = TRAINER_CLASS_HIKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_BOY_KANTO,
+        .trainerPic = TRAINER_PIC_HIKER,
+        .trainerName = _("TSUTOMU"),
         .items = {ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_SETUP_FIRST_TURN,

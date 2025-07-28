@@ -241,3 +241,7 @@ script CeladonCity_Text_GymSign {
     msgbox("CELADON CITY POKéMON GYM\nLEADER: ERIKA\lThe Nature-Loving Princess!",MSGBOX_SIGN)
     end
 }
+script CeladonCity_Text_Resto {
+    msgbox("CELADON CITY Restaurant",MSGBOX_SIGN)
+    end
+}

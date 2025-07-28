@@ -260,6 +260,11 @@ CeladonCity_Text_GymSign::
 	end
 
 
+CeladonCity_Text_Resto::
+	msgbox CeladonCity_Text_Resto_Text_0, MSGBOX_SIGN
+	end
+
+
 CeladonCity_Text_MenAreTrash_Text_0:
 	.string "Oh no ! You get out of here, you criminal\n"
 	.string "boy !!$"
@@ -407,3 +412,6 @@ CeladonCity_Text_GameCornerSign2_Text_0:
 
 CeladonCity_Text_GymSign_Text_0:
 	.string "CELADON CITY POKéMON GYM\nLEADER: ERIKA\lThe Nature-Loving Princess!$"
+
+CeladonCity_Text_Resto_Text_0:
+	.string "CELADON CITY Restaurant$"

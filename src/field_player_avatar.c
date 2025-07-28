@@ -637,13 +637,39 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
     if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && (heldKeys & B_BUTTON) && FlagGet(FLAG_SYS_B_DASH)
      && IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) == 0)
     {
+        if (PlayerIsMovingOnRockStairs(direction))
+            PlayerWalkFast(direction);
+        else
         PlayerRun(direction);
         gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
         return;
     }
     else
-    {
+    {   
+        if (PlayerIsMovingOnRockStairs(direction))
+            PlayerWalkSlow(direction);
+        else
         PlayerWalkNormal(direction);
+    }
+}
+
+bool32 PlayerIsMovingOnRockStairs(u8 direction)
+{
+    struct ObjectEvent * objectEvent;
+    s16 x, y;
+
+    objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
+    x = objectEvent->currentCoords.x;
+    y = objectEvent->currentCoords.y;
+    switch (direction)
+    {
+    case DIR_NORTH:
+        return MetatileBehavior_IsRockStairs(MapGridGetMetatileBehaviorAt(x, y));
+    case DIR_SOUTH:
+        MoveCoords(DIR_SOUTH, &x, &y);
+        return MetatileBehavior_IsRockStairs(MapGridGetMetatileBehaviorAt(x, y));
+    default:
+        return FALSE;
     }
 }
 
@@ -877,6 +903,8 @@ static void PlayerAvatarTransition_ReturnToField(struct ObjectEvent *objEvent)
     gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_CONTROLLABLE;
 }
 
+
+
 void UpdatePlayerAvatarTransitionState(void)
 {
     gPlayerAvatar.tileTransitionState = T_NOT_MOVING;
@@ -969,6 +997,11 @@ void PlayerRideWaterCurrent(u8 direction)
 void PlayerWalkFaster(u8 direction)
 {
     PlayerSetAnimId(GetWalkFasterMovementAction(direction), COPY_MOVE_WALK);
+}
+
+void PlayerWalkSlow(u8 direction)
+{
+    PlayerSetAnimId(GetWalkSlowMovementAction(direction), COPY_MOVE_WALK);
 }
 
 static void PlayerRun(u8 direction)

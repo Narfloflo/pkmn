@@ -4,3 +4,7 @@ script EcruteakToRoute38_Text_Police{
     msgbox("This ROUTE leads to OLIVINE and also\nthe MOOMOO FARM!\lBut I think you already know that.", MSGBOX_NPC)
     end
 }
+script EcruteakToRoute38_Text_OldWoman{
+    msgbox("My sister is planting crops in ROUTE\n38.\lI can't help her, my back is too\lpainful…", MSGBOX_NPC)
+    end
+}

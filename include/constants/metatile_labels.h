@@ -1,6 +1,9 @@
 #ifndef GUARD_METATILE_LABELS_H
 #define GUARD_METATILE_LABELS_H
 
+// gTileset_Azalea
+#define METATILE_Azalea_AzaleaDoor  0x29C
+
 // gTileset_BattleArena
 #define METATILE_BattleArena_Door  0x21B
 
@@ -107,6 +110,9 @@
 #define METATILE_BikeShop_Wall_Top_Left            0x29D
 #define METATILE_BikeShop_Wall_Top_Right           0x29E
 
+// gTileset_Blackthorn
+#define METATILE_Blackthorn_BlackthornDoor  0x29A
+
 // gTileset_BrendansMaysHouse
 #define METATILE_BrendansMaysHouse_BookOnTable       0x293
 #define METATILE_BrendansMaysHouse_BookOnTableRight  0x294
@@ -150,6 +156,9 @@
 
 // gTileset_Cinnabar
 #define METATILE_Cinnabar_CinnabarLab  0x22D
+
+// gTileset_Condominium
+#define METATILE_Condominium_Door  0x308
 
 // gTileset_Contest
 #define METATILE_Contest_CounterFlap_Bottom  0x2D9
@@ -318,6 +327,9 @@
 #define METATILE_KantoInside_TV_Off  0x035
 #define METATILE_KantoInside_TV_On   0x061
 
+// gTileset_KantoResto
+#define METATILE_KantoResto_Door 0x2E0
+
 // gTileset_Lavaridge
 #define METATILE_Lavaridge_AshGrass             0x207
 #define METATILE_Lavaridge_CaveEntrance_Bottom  0x25E
@@ -355,7 +367,7 @@
 #define METATILE_LilycoveMuseum_Painting4_Right  0x263
 
 // gTileset_Mahogany
-#define METATILE_Mahogany_MahoganyDoor  0x2A2
+#define METATILE_Mahogany_MahoganyDoor  0x298
 
 // gTileset_Mauville
 #define METATILE_Mauville_DeepSand_BottomMid  0x259
@@ -854,6 +866,9 @@
 // gTileset_Underwater
 #define METATILE_Underwater_FloorShadow  0x228
 #define METATILE_Underwater_RockWall     0x21E
+
+// gTileset_Underground
+#define METATILE_Underground_Door 0x2CB
 
 // gTileset_Vermilion
 #define METATILE_Vermilion_VermilionDoor  0x251

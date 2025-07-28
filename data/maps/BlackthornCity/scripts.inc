@@ -100,6 +100,16 @@ BlackthornCity_Text_Dratini::
 	end
 
 
+BlackthornCity_Text_Cooltrainer::
+	msgbox BlackthornCity_Text_Cooltrainer_Text_0, MSGBOX_NPC
+	end
+
+
+BlackthornCity_Sign_MoveDeleter::
+	msgbox BlackthornCity_Sign_MoveDeleter_Text_0, MSGBOX_SIGN
+	end
+
+
 BlackthornCity_Text_TownSign_Text_0:
 	.string "BLACKTHORN CITY\p"
 	.string "A Quiet Mountain Retreat$"
@@ -144,4 +154,10 @@ BlackthornCity_Text_Man2_Text_1:
 	.string "Are you looking for CLAIR?\nI think she went to a CAVE somewhere to\ltrain.\lShe's so strong and fierce. Actually\lshe scares me a lot!$"
 
 BlackthornCity_Text_Dratini_Text_0:
-	.string "Graaor!$"
+	.string "DRATINI: Graaor!$"
+
+BlackthornCity_Text_Cooltrainer_Text_0:
+	.string "There is an cave over here, above.\nI'm sure it's an exit from DRAGON DEN:\lWe can hear growls coming from it!$"
+
+BlackthornCity_Sign_MoveDeleter_Text_0:
+	.string "MOVE DELETER House$"

@@ -39,14 +39,14 @@ Route39_Text_Cooltrainer::
 
 
 Route39_Text_Sailor::
-	trainerbattle_single TRAINER_JENNY_4, Route39_Text_Cooltrainer_Text_0, Route39_Text_Cooltrainer_Text_1
-	msgbox Route39_Text_Sailor_Text_0, MSGBOX_NPC
+	trainerbattle_single TRAINER_JENNY_4, Route39_Text_Sailor_Text_0, Route39_Text_Sailor_Text_1
+	msgbox Route39_Text_Sailor_Text_2, MSGBOX_NPC
 	end
 
 
 Route39_Text_PokefanF::
-	trainerbattle_single TRAINER_DIANA_2, Route39_Text_Cooltrainer_Text_0, Route39_Text_Cooltrainer_Text_1
-	msgbox Route39_Text_PokefanF_Text_0, MSGBOX_NPC
+	trainerbattle_single TRAINER_DIANA_2, Route39_Text_PokefanF_Text_0, Route39_Text_PokefanF_Text_1
+	msgbox Route39_Text_PokefanF_Text_2, MSGBOX_NPC
 	end
 
 
@@ -66,18 +66,30 @@ Route39_Text_Girl_Text_0:
 	.string "life.$"
 
 Route39_Text_Cooltrainer_Text_0:
-	.string "Hey$"
+	.string "Let me see what you are capable of with\nPOKéMON!$"
 
 Route39_Text_Cooltrainer_Text_1:
-	.string "Damn$"
+	.string "Oh you have potential!$"
 
 Route39_Text_Cooltrainer_Text_2:
 	.string "You know how POKéMON have different\nabilities?\lYes?\lWell looks like you went to school...$"
 
 Route39_Text_Sailor_Text_0:
+	.string "I just got back to OLIVINE.\nSo how about a POKéMON battle?$"
+
+Route39_Text_Sailor_Text_1:
+	.string "Awaaargh!$"
+
+Route39_Text_Sailor_Text_2:
 	.string "My POKéMON were caught and raised\noverseas.\lThey're my companions on those long\lvoyages.$"
 
 Route39_Text_PokefanF_Text_0:
+	.string "Such a darling!\pLet's show our POKéMON together at the\lsame time.$"
+
+Route39_Text_PokefanF_Text_1:
+	.string "I don't mind losing.$"
+
+Route39_Text_PokefanF_Text_2:
 	.string "Do you know about baby POKéMON? I bet\nthey're just adorable!$"
 
 Route39_Text_RouteSign_Text_0:

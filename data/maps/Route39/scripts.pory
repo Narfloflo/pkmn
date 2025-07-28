@@ -26,19 +26,19 @@ script Route39_Event_RemoveObjects {
 }
 
 script Route39_Text_Cooltrainer {
-    trainerbattle_single(TRAINER_JENNY_3, "Hey","Damn")
+    trainerbattle_single(TRAINER_JENNY_3, "Let me see what you are capable of with\nPOKéMON!","Oh you have potential!")
     msgbox("You know how POKéMON have different\nabilities?\lYes?\lWell looks like you went to school...", MSGBOX_NPC)
     end
 }
 
 script Route39_Text_Sailor {
-    trainerbattle_single(TRAINER_JENNY_4, "Hey","Damn")
+    trainerbattle_single(TRAINER_JENNY_4, "I just got back to OLIVINE.\nSo how about a POKéMON battle?","Awaaargh!")
     msgbox("My POKéMON were caught and raised\noverseas.\lThey're my companions on those long\lvoyages.", MSGBOX_NPC)
     end
 }
 
 script Route39_Text_PokefanF {
-    trainerbattle_single(TRAINER_DIANA_2, "Hey","Damn")
+    trainerbattle_single(TRAINER_DIANA_2, "Such a darling!\pLet's show our POKéMON together at the\lsame time.","I don't mind losing.")
     msgbox("Do you know about baby POKéMON? I bet\nthey're just adorable!", MSGBOX_NPC)
     end
 }

@@ -24,12 +24,12 @@ script Route34_Text_JeanlouisFight {
 }
 
 script Route34_Text_JeanlouisRematch {
-    msgbox(format("You are still around doing mischieves? Do you have some time for a BATTLE ?"), MSGBOX_YESNO)
+    msgbox(format("You are still around doing mischieves? Do you have some time for a BATTLE?"), MSGBOX_YESNO)
     if(var(VAR_RESULT)==1){
     cleartrainerflag(TRAINER_ROSE_2)
-    trainerbattle_single(TRAINER_ROSE_2, "I can't lose again !", "I'll keep an eye on you punk !")
+    trainerbattle_single(TRAINER_ROSE_2, "I can't lose again!", "I'll keep an eye on you punk!")
     }else{
-        msgbox(format("Yes, you fear the authorities !"))
+        msgbox(format("Yes, you fear the authorities!"))
     }
     release
     end

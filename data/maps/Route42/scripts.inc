@@ -41,17 +41,18 @@ Route42_Text_MtMortarSign::
 
 
 Route42_Text_Fisherman_Text_0:
-	.string "Hang on!\nMy line's snagged!$"
+	.string "I want to become the TRAINER CHAMP\nusing the POKéMON I caught.\lThat's the best part of fishing!$"
 
 Route42_Text_Fisherman_Text_1:
-	.string "Yeah!\nI got a bite here!$"
+	.string "Let me demonstrate the power of the\nPOKéMON I caught!$"
 
 Route42_Text_Fisherman_Text_2:
-	.string "Tch!\nJust a small fry…$"
+	.string "What? That's not right.$"
 
 Route42_Text_Fisherman_Text_3:
-	.string "Hang on!\n"
-	.string "My line's snagged!$"
+	.string "I want to become the TRAINER CHAMP\n"
+	.string "using the POKéMON I caught.\l"
+	.string "That's the best part of fishing!$"
 
 Route42_Text_Monk_Text_0:
 	.string "I'm meditating here because I'm suppose\n"

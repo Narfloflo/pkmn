@@ -160,7 +160,12 @@ static const u8 sDoorAnimTiles_CeladonMartDoors[] = INCBIN_U8("graphics/door_ani
 static const u8 sDoorAnimTiles_GoldenrodMartDoors[] = INCBIN_U8("graphics/door_anims/CeladonMartDoors.4bpp");
 static const u16 sDoorNullPalette51[16] = {};
 static const u8 sDoorAnimTiles_Vermilion[] = INCBIN_U8("graphics/door_anims/vermilion.4bpp");
-static const u8 sDoorAnimTiles_Mahogany[] = INCBIN_U8("graphics/door_anims/vermilion.4bpp");
+static const u8 sDoorAnimTiles_Mahogany[] = INCBIN_U8("graphics/door_anims/mahogany.4bpp");
+static const u8 sDoorAnimTiles_Blackthorn[] = INCBIN_U8("graphics/door_anims/blackthorn.4bpp");
+static const u8 sDoorAnimTiles_Azalea[] = INCBIN_U8("graphics/door_anims/azalea.4bpp");
+static const u8 sDoorAnimTiles_Condominium[] = INCBIN_U8("graphics/door_anims/condominium.4bpp");
+static const u8 sDoorAnimTiles_KantoResto[] = INCBIN_U8("graphics/door_anims/kanto_resto.4bpp");
+static const u8 sDoorAnimTiles_Underground[] = INCBIN_U8("graphics/door_anims/underground.4bpp");
 static const u8 sDoorAnimTiles_KantoGeneralCenterSlide[] = INCBIN_U8("graphics/door_anims/sliding_single.4bpp");
 static const u8 sDoorAnimTiles_GenericBuildingInside[] = INCBIN_U8("graphics/door_anims/genericBuilding_inside.4bpp");
 static const u8 sDoorAnimTiles_Cherrygrove[] = INCBIN_U8("graphics/door_anims/cerulean.4bpp");
@@ -289,6 +294,11 @@ static const u8 sDoorAnimPalettes_Sevii123[] = {5, 5, 5, 5, 5, 5, 5, 5};
 static const u8 sDoorAnimPalettes_SeviiDayCare[] = {3, 3, 3, 3, 3, 3, 3, 3};
 static const u8 sDoorAnimPalettes_Vermilion[] = {9, 9, 9, 9, 9, 9, 9, 9};
 static const u8 sDoorAnimPalettes_Mahogany[] = {8, 8, 8, 8, 8, 8, 8, 8};
+static const u8 sDoorAnimPalettes_Blackthorn[] = {8, 8, 8, 8, 8, 8, 8, 8};
+static const u8 sDoorAnimPalettes_Azalea[] = {8, 8, 8, 8, 8, 8, 8, 8};
+static const u8 sDoorAnimPalettes_Condominium[] = {6, 6, 6, 6, 6, 6, 6, 6};
+static const u8 sDoorAnimPalettes_KantoResto[] = {6, 6, 6, 6, 6, 6, 6, 6};
+static const u8 sDoorAnimPalettes_Underground[] = {8, 8, 8, 8, 8, 8, 8, 8};
 static const u8 sDoorAnimPalettes_KantoGeneralCenterSlide[] = {3, 3, 3, 3, 3, 3, 3, 3};
 static const u8 sDoorAnimPalettes_CeladonMartDoors[] = {10, 10, 8, 8, 3, 3, 3, 3};
 static const u8 sDoorAnimPalettes_GoldenrodMartDoors[] = {8, 8, 8, 8, 3, 3, 3, 3};
@@ -363,8 +373,11 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_KantoGeneral_KantoGeneralDouble,              DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_KantoDouble, sDoorAnimPalettes_KantoDouble},
     {METATILE_Kanto_silph_co,                               DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_SaffronDouble, sDoorAnimPalettes_KantoDouble},
     {METATILE_Cerulean_Cerulean,                            DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Cerulean, sDoorAnimPalettes_Cerulean},
+    {METATILE_Condominium_Door,                             DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Condominium, sDoorAnimPalettes_Condominium},
+    {METATILE_KantoResto_Door,                              DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_KantoResto, sDoorAnimPalettes_KantoResto},
+    {METATILE_Underground_Door,                             DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Underground, sDoorAnimPalettes_Underground},
     {METATILE_Pallet_pallet,                                DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Pallet, sDoorAnimPalettes_Pallet},
-    {METATILE_PalletTown_ViridianHouseDoor,                   DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Viridan, sDoorAnimPalettes_Viridian},
+    {METATILE_PalletTown_ViridianHouseDoor,                 DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Viridan, sDoorAnimPalettes_Viridian},
     {METATILE_Pallet_oaks_lab,                              DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_OaksLab, sDoorAnimPalettes_OaksLab},
     {METATILE_Pewter_PewterDoor,                            DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Pewter, sDoorAnimPalettes_Pewter},
     {METATILE_Cinnabar_CinnabarLab,                         DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_CinnabarLab, sDoorAnimPalettes_CinnabarLab},
@@ -376,8 +389,10 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_KantoGeneral_GoldenrodMartDoors,              DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_GoldenrodMartDoors, sDoorAnimPalettes_GoldenrodMartDoors},
     {METATILE_Vermilion_VermilionDoor,                      DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Vermilion, sDoorAnimPalettes_Vermilion},
     {METATILE_Mahogany_MahoganyDoor,                        DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Mahogany, sDoorAnimPalettes_Mahogany},
+    {METATILE_Blackthorn_BlackthornDoor,                    DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Blackthorn, sDoorAnimPalettes_Blackthorn},
+    {METATILE_Azalea_AzaleaDoor,                            DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Azalea, sDoorAnimPalettes_Azalea},
     {METATILE_KantoGeneral_KantoGeneralCenterSlide,         DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_KantoGeneralCenterSlide, sDoorAnimPalettes_KantoGeneralCenterSlide},
-    {METATILE_Cerulean_CherrygroveDoor,                  DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Cherrygrove, sDoorAnimPalettes_Cherrygrove},
+    {METATILE_Cerulean_CherrygroveDoor,                     DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Cherrygrove, sDoorAnimPalettes_Cherrygrove},
     {},
 };
 

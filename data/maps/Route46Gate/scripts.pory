@@ -1,1 +1,6 @@
 mapscripts Route46Gate_MapScripts {}
+
+script Route46Gate_Text_Policeman {
+    msgbox("You can't climb ledges…\nWell actually, there are bumpy slopes,\lbut I don't see how you can climb that.", MSGBOX_NPC)
+    end
+}

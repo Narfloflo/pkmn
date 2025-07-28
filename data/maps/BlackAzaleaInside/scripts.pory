@@ -1,6 +1,16 @@
 mapscripts BlackAzaleaInside_MapScripts {}
 
 script AzaleaTownMart_Text_Man {
-    msgbox("If only KURT could industrialized his\nBALLS crafting...", MSGBOX_NPC)
+    msgbox("If only KURT could industrialized his\nBALLS crafting…", MSGBOX_NPC)
+    end
+}
+
+script AzaleaCharcoalKiln_Text_Kid {
+    msgbox("My master is producing CHARCOAL with\nthe wood from ILEX FOREST.\lHis brother is there with FARFETCH'D to\lcut trees.", MSGBOX_NPC)
+    end
+}
+
+script AzaleaCharcoalKiln_Text_Master {
+    msgbox("I let my brother use the ability to cut\nof my FARFETCH'd.\lI know he wont lose my lovely Bird!", MSGBOX_NPC)
     end
 }

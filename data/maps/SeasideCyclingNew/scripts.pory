@@ -37,8 +37,7 @@ script Ranch_Text_Miltank {
     lock
     faceplayer
     playmoncry(SPECIES_MILTANK, CRY_MODE_NORMAL)
-    waitmoncry
-    msgbox(format("Moooh"))
+    msgbox(format("MILTANK: Moooh"))
     release
     end
 }    

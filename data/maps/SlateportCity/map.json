@@ -894,17 +894,17 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 39,
+      "x": 37,
       "y": 65,
       "elevation": 0,
-      "dest_map": "MAP_SAFFRON_CITY",
+      "dest_map": "MAP_BLACKTHORN_CITY",
       "dest_warp_id": "0"
     },
     {
       "x": 38,
-      "y": 70,
+      "y": 71,
       "elevation": 0,
-      "dest_map": "MAP_PALLET_TOWN",
+      "dest_map": "MAP_MAHOGANY_TOWN",
       "dest_warp_id": "1"
     },
     {
@@ -1065,7 +1065,7 @@
     },
     {
       "type": "sign",
-      "x": 38,
+      "x": 37,
       "y": 71,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -1137,7 +1137,7 @@
     },
     {
       "type": "sign",
-      "x": 37,
+      "x": 36,
       "y": 65,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",

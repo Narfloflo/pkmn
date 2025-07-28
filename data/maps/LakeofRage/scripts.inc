@@ -11,10 +11,7 @@ LakeofRage_Text_FishingGuruSign::
 
 
 LakeofRage_Text_OldMan::
-	lock
-	faceplayer
-	msgbox LakeofRage_Text_OldMan_Text_0
-	release
+	msgbox LakeofRage_Text_OldMan_Text_0, MSGBOX_NPC
 	end
 
 
@@ -57,23 +54,23 @@ LakeofRage_Text_Fisherman_2:
 
 LakeofRage_Text_Fisherman2::
 	goto_if_set FLAG_TEMP_B, LakeofRage_Text_Fisherman2_2
-	trainerbattle_single TRAINER_DYLAN_2, LakeofRage_Text_Fisherman_Text_1, LakeofRage_Text_Fisherman_Text_2
-	msgbox LakeofRage_Text_Fisherman_Text_3, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_DYLAN_2, LakeofRage_Text_Fisherman2_Text_1, LakeofRage_Text_Fisherman2_Text_2
+	msgbox LakeofRage_Text_Fisherman2_Text_3, MSGBOX_AUTOCLOSE
 	setflag FLAG_TEMP_B
 	cleartrainerflag TRAINER_DYLAN_2
 	end
 
 LakeofRage_Text_Fisherman2_2:
-	msgbox LakeofRage_Text_Fisherman_Text_0, MSGBOX_AUTOCLOSE
+	msgbox LakeofRage_Text_Fisherman2_Text_0, MSGBOX_AUTOCLOSE
 	end
 
 
 LakeofRage_Text_FishingGuruSign_Text_0:
 	.string "Fishing Guru's HOUSE\p"
-	.string "We except a list of RECORDS here !$"
+	.string "We except a list of RECORDS here!$"
 
 LakeofRage_Text_OldMan_Text_0:
-	.string "Hahaha ! The MAGIKARP are bitting !$"
+	.string "Hahaha!\pThe MAGIKARP are bitting!$"
 
 LakeofRage_Text_Man_Text_0:
 	.string "There is a strange guy inside this\n"
@@ -95,14 +92,27 @@ LakeofRage_Text_Camper_Text_0:
 	.string "some ruins…$"
 
 LakeofRage_Text_Fisherman_Text_0:
-	.string "Hang on!\nMy line's snagged!$"
+	.string "OK I have some good POKéMON. But now I\ncan't catch any good one…$"
 
 LakeofRage_Text_Fisherman_Text_1:
-	.string "Yeah!\nI got a bite here!$"
+	.string "No matter what I do, I sometime caught\nalways the same POKéMON…$"
 
 LakeofRage_Text_Fisherman_Text_2:
-	.string "Tch!\nJust a small fry…$"
+	.string "It's tragic but that's life…$"
 
 LakeofRage_Text_Fisherman_Text_3:
-	.string "Hang on!\n"
-	.string "My line's snagged!$"
+	.string "OK I have some good POKéMON. But now I\n"
+	.string "can't catch any good one…$"
+
+LakeofRage_Text_Fisherman2_Text_0:
+	.string "I won't lose as an angler! I catch\nPOKéMON all day.$"
+
+LakeofRage_Text_Fisherman2_Text_1:
+	.string "Hey there are only MAGIKARP here!$"
+
+LakeofRage_Text_Fisherman2_Text_2:
+	.string "I might be an expert angler, but I\nstink as a POKéMON TRAINER…$"
+
+LakeofRage_Text_Fisherman2_Text_3:
+	.string "I won't lose as an angler! I catch\n"
+	.string "POKéMON all day.$"

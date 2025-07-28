@@ -10,14 +10,6 @@ EcruteakCity_Text_Kimono::
 	end
 
 
-EcruteakCity_Text_Sage::
-	lock
-	faceplayer
-	msgbox EcruteakCity_Text_Sage_Text_0
-	release
-	end
-
-
 EcruteakCity_Text_Sage2::
 	lock
 	faceplayer
@@ -115,26 +107,21 @@ EcruteakCity_Text_Kimono_Text_0:
 	.string "Here is the DANCE THEATER. You can\n"
 	.string "enjoy some traditional dances inside.\l"
 	.string "My colleagues are also TRAINERS. Be\l"
-	.string "careful !$"
-
-EcruteakCity_Text_Sage_Text_0:
-	.string "The way to the TIN TOWER is closed,\n"
-	.string "except for a TRAINER with a pure heart\l"
-	.string "(But I don't think it exist...).$"
+	.string "careful!$"
 
 EcruteakCity_Text_Sage2_Text_0:
-	.string "Hello ! The GYM is closed. Yeah I know...\n"
+	.string "Hello ! The GYM is closed. Yeah I know…\n"
 	.string "MORTIMER isn't inside so, what's the\l"
-	.string "point of opening it...$"
+	.string "point of opening it…$"
 
 EcruteakCity_Text_WomanBeforeTower_Text_0:
 	.string "This tower is really gloomy. It give me\n"
-	.string "chills... Brrrrrrrr !$"
+	.string "chills… Brrrrrrrr !$"
 
 EcruteakCity_Text_Girl_Text_0:
 	.string "I'm about to practice my dancing skills\n"
 	.string "in the DANCE THEATER. You think I'll\l"
-	.string "need my EEVEE ?$"
+	.string "need my EEVEE?$"
 
 EcruteakCity_Text_BaldingMan_Text_0:
 	.string "ECRUTEAK use to have two towers : One\n"
@@ -151,12 +138,12 @@ EcruteakCity_Text_FatMan1_Text_0:
 EcruteakCity_Text_Maniac_Text_0:
 	.string "I'm only here so sometime, but it feel\n"
 	.string "like I've been trapped into a time\l"
-	.string "portal. Look at this architecture !$"
+	.string "portal. Look at this architecture!$"
 
 EcruteakCity_Text_OldMan_Text_0:
 	.string "I don't know why we are no rebuilding\n"
 	.string "the BRASS TOWER.\p"
-	.string "I mean look at this mess !$"
+	.string "I mean look at this mess!$"
 
 EcruteakCity_Text_BurnTower_Text_0:
 	.string "BURNED TOWER\n"
@@ -177,4 +164,4 @@ EcruteakCity_Text_GymSign_Text_0:
 	.string "The Mystic Seer of the Future.$"
 
 EcruteakCity_Text_Eevee_Text_0:
-	.string "Eeeevee !$"
+	.string "EEVEE: Grahuu!$"

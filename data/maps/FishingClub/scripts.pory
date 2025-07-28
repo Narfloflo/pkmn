@@ -1,0 +1,15 @@
+mapscripts FishingClub_MapScripts {}
+
+script TinTowerGate_Text_Sage {
+    msgbox("The way to the TIN TOWER is closed,\nexcept for a TRAINER with a pure heart.", MSGBOX_NPC)
+    end
+}
+
+script TinTowerGate_Text_OldMan {
+    msgbox("Two towers…\nTwo POKéMON…\pBut when one burned down, both POKéMON\lflew away, never to return.", MSGBOX_NPC)
+    end
+}
+script TinTowerGate_Text_Kimono {
+    msgbox("The TIN TOWER ahead is a nine-tier\ntower of divine beauty.\pIt soothes the soul of all who see it.", MSGBOX_NPC)
+    end
+}

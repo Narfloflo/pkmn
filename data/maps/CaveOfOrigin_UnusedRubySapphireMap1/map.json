@@ -158,7 +158,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FATMANKANTO",
+      "graphics_id": "OBJ_EVENT_GFX_SUPER_NERD",
       "x": 43,
       "y": 19,
       "elevation": 0,
@@ -412,15 +412,6 @@
       "type": "trigger",
       "x": 23,
       "y": 33,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "ViridianSongs_EventMove_Upstairs"
-    },
-    {
-      "type": "trigger",
-      "x": 47,
-      "y": 2,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",

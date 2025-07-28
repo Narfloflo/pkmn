@@ -9178,8 +9178,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Jackson4[] = {
     {
     .iv = 80,
     .lvl = 37,
-    .species = SPECIES_BRELOOM,
-    }
+    .species = SPECIES_HERACROSS,
+    },
+    {
+    .iv = 80,
+    .lvl = 37,
+    .species = SPECIES_MACHAMP,
+    },{
+    .iv = 80,
+    .lvl = 37,
+    .species = SPECIES_GRAVELER,
+    },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Jackson5[] = {

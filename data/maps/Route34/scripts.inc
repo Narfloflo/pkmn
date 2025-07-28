@@ -35,14 +35,14 @@ Route34_Text_JeanlouisRematch::
 	msgbox Route34_Text_JeanlouisRematch_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, 1
 	goto_if_eq Route34_Text_JeanlouisRematch_2
-	msgbox Route34_Text_JeanlouisRematch_Text_2
+	msgbox Route34_Text_JeanlouisFight_Text_3
 Route34_Text_JeanlouisRematch_1:
 	release
 	end
 
 Route34_Text_JeanlouisRematch_2:
 	cleartrainerflag TRAINER_ROSE_2
-	trainerbattle_single TRAINER_ROSE_2, Route34_Text_JeanlouisRematch_Text_1, Route34_Text_JeanlouisFight_Text_2
+	trainerbattle_single TRAINER_ROSE_2, Route34_Text_JeanlouisRematch_Text_1, Route34_Text_JeanlouisRematch_Text_2
 	goto Route34_Text_JeanlouisRematch_1
 
 
@@ -120,13 +120,13 @@ Route34_Text_JeanlouisFight_Text_3:
 
 Route34_Text_JeanlouisRematch_Text_0:
 	.string "You are still around doing mischieves?\n"
-	.string "Do you have some time for a BATTLE ?$"
+	.string "Do you have some time for a BATTLE?$"
 
 Route34_Text_JeanlouisRematch_Text_1:
-	.string "I can't lose again !$"
+	.string "I can't lose again!$"
 
 Route34_Text_JeanlouisRematch_Text_2:
-	.string "Yes, you fear the authorities !$"
+	.string "I'll keep an eye on you punk!$"
 
 Route34_Text_Pokefan_Text_0:
 	.string "Hey!$"

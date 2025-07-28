@@ -1400,3 +1400,15 @@ bool8 MetatileBehavior_IsTrainerHillTimer(u8 metatileBehavior)
     else
         return FALSE;
 }
+
+bool8 MetatileBehavior_IsRockStairs(u8 metatileBehavior)
+{
+    bool8 result = FALSE;
+
+    if (metatileBehavior == MB_ROCK_STAIRS)
+        result = TRUE;
+    else
+        result = FALSE;
+
+    return result;
+}

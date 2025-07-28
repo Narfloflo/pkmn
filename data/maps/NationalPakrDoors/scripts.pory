@@ -35,3 +35,18 @@ script NationalParkDoors_Text_BugsyRematch {
     release
     end
 }
+
+script NationalParkDoors_Text_BugCatcher {
+    msgbox("I heard that BUGSY want to organize a\nBUG CATCHING CONTEST.\lThat would be nice!", MSGBOX_NPC)
+    end
+}
+
+script NationalParkDoors_Text_Policeman {
+    msgbox("Some POKéMON can only be seen in the\nPARK.", MSGBOX_NPC)
+    end
+}
+
+script NationalParkDoors_Text_Youngster {
+    msgbox("I wanted to catch some POKéMON but I'm\nout of BALLS and I gave all my money to\lsome TRAINERS I lost against…", MSGBOX_NPC)
+    end
+}

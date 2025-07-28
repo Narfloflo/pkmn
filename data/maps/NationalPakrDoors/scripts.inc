@@ -50,6 +50,21 @@ NationalParkDoors_Text_BugsyRematch_2:
 	goto NationalParkDoors_Text_BugsyRematch_1
 
 
+NationalParkDoors_Text_BugCatcher::
+	msgbox NationalParkDoors_Text_BugCatcher_Text_0, MSGBOX_NPC
+	end
+
+
+NationalParkDoors_Text_Policeman::
+	msgbox NationalParkDoors_Text_Policeman_Text_0, MSGBOX_NPC
+	end
+
+
+NationalParkDoors_Text_Youngster::
+	msgbox NationalParkDoors_Text_Youngster_Text_0, MSGBOX_NPC
+	end
+
+
 NationalParkDoors_Text_Bugsy_Text_0:
 	.string "Hello, I'm currently dealing with this\n"
 	.string "guy here because I want to create a\l"
@@ -75,3 +90,12 @@ NationalParkDoors_Text_BugsyRematch_Text_0:
 NationalParkDoors_Text_BugsyRematch_Text_1:
 	.string "You know where to find me if you change\n"
 	.string "your mind.$"
+
+NationalParkDoors_Text_BugCatcher_Text_0:
+	.string "I heard that BUGSY want to organize a\nBUG CATCHING CONTEST.\lThat would be nice!$"
+
+NationalParkDoors_Text_Policeman_Text_0:
+	.string "Some POKéMON can only be seen in the\nPARK.$"
+
+NationalParkDoors_Text_Youngster_Text_0:
+	.string "I wanted to catch some POKéMON but I'm\nout of BALLS and I gave all my money to\lsome TRAINERS I lost against…$"

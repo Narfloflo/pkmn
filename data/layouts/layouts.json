@@ -6100,12 +6100,12 @@
     {
       "id": "LAYOUT_FISHING_CLUB",
       "name": "FishingClub_Layout",
-      "width": 15,
-      "height": 7,
+      "width": 48,
+      "height": 20,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding",
+      "primary_tileset": "gTileset_KantoInside",
+      "secondary_tileset": "gTileset_Pagoda",
       "border_filepath": "data/layouts/FishingClub/border.bin",
       "blockdata_filepath": "data/layouts/FishingClub/map.bin"
     },

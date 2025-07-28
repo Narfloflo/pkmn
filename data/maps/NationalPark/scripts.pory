@@ -1,1 +1,39 @@
 mapscripts NationalPark_MapScripts {}
+
+script NationalPark_Text_Beauty {
+    msgbox("Huh? What?\nOh no I'm just trying to write a letter\lto my mom.\lYou should do the same.", MSGBOX_NPC)
+    end
+}
+script NationalPark_Text_Woman {
+    msgbox("My friend keeps a MARILL! I find them\nvery endearing.\lOh, I wish for a MARILL of my own…", MSGBOX_NPC)
+    end
+}
+script NationalPark_Text_Picnicker {
+    msgbox("I need to find a SCYTHER. I'll be\ninvincible!", MSGBOX_NPC)
+    end
+}
+script NationalPark_Text_Youngster {
+    msgbox("I heard a SNORLAX was roaming around.\nBut that's crazy right?", MSGBOX_NPC)
+    end
+}
+script NationalPark_Text_Bugcatcher {
+    msgbox("I'm the real deal when it's about\ncatching BUGS!", MSGBOX_NPC)
+    end
+}
+script NationalPark_Text_GbaBoy1 {
+    msgbox("I'm playing against a friend.\nIt's wireless. It's crazy how\ltechnology evolved!", MSGBOX_NPC)
+    end
+}
+script NationalPark_Text_GbaBoy2 {
+    msgbox("I always come to the PARK but I don't\nwalk in the GRASS.\lImagine what would happens to my\lgameboy is I'm getting attacked.", MSGBOX_NPC)
+    end
+}
+script NationalPark_Text_Lass {
+    msgbox("I want to become a teacher, but I have\nto teach first my MEOWTH to obey…", MSGBOX_NPC)
+    end
+}
+script NationalPark_Text_Meowth {
+    playmoncry(SPECIES_MEOWTH, CRY_MODE_NORMAL)
+    msgbox("MEOWTH: Meow!", MSGBOX_NPC)
+    end
+}

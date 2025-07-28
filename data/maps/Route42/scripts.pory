@@ -3,11 +3,11 @@ mapscripts Route42_MapScripts {}
 
 script Route42_Text_Fisherman {
     if (flag(FLAG_TEMP_1)) {
-        msgbox("Hang on!\nMy line's snagged!", MSGBOX_AUTOCLOSE)
+        msgbox("I want to become the TRAINER CHAMP\nusing the POKéMON I caught.\lThat's the best part of fishing!", MSGBOX_AUTOCLOSE)
         end
     }
-    trainerbattle_single(TRAINER_DYLAN_2, "Yeah!\nI got a bite here!", "Tch!\nJust a small fry…")
-    msgbox(format("Hang on!\nMy line's snagged!"),MSGBOX_AUTOCLOSE)
+    trainerbattle_single(TRAINER_DYLAN_2, "Let me demonstrate the power of the\nPOKéMON I caught!", "What? That's not right.")
+    msgbox(format("I want to become the TRAINER CHAMP\nusing the POKéMON I caught.\lThat's the best part of fishing!"),MSGBOX_AUTOCLOSE)
     setflag(FLAG_TEMP_1)
     cleartrainerflag(TRAINER_DYLAN_2) 
     end   

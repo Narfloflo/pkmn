@@ -15,6 +15,7 @@ void PlayerWalkNormal(u8 direction);
 void PlayerWalkFast(u8 direction);
 void PlayerRideWaterCurrent(u8 direction);
 void PlayerWalkFaster(u8 direction);
+void PlayerWalkSlow(u8 direction);
 void PlayerOnBikeCollide(u8 direction);
 void PlayerFaceDirection(u8 direction);
 void PlayerTurnInPlace(u8 direction);
@@ -64,5 +65,6 @@ bool32 IsPlayerSpinExitActive(void);
 void SetPlayerInvisibility(bool8 invisible);
 u8 player_get_pos_including_state_based_drift(s16 *x, s16 *y);
 void StartFishing(u8 rod);
+bool32 PlayerIsMovingOnRockStairs(u8 direction);
 
 #endif // GUARD_FIELD_PLAYER_AVATAR_H

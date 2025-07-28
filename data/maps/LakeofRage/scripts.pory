@@ -3,16 +3,13 @@ mapscripts LakeofRage_MapScripts {}
 script LakeofRage_Text_FishingGuruSign {
     lock
     faceplayer
-    msgbox(format("Fishing Guru's HOUSE\pWe except a list of RECORDS here !"))
+    msgbox(format("Fishing Guru's HOUSE\pWe except a list of RECORDS here!"))
     release
     end
 }
 
 script LakeofRage_Text_OldMan {
-    lock
-    faceplayer
-    msgbox(format("Hahaha ! The MAGIKARP are bitting !"))
-    release
+    msgbox("Hahaha!\pThe MAGIKARP are bitting!", MSGBOX_NPC)
     end
 }
 
@@ -42,11 +39,11 @@ script LakeofRage_Text_Camper {
 
 script LakeofRage_Text_Fisherman {
      if (flag(FLAG_TEMP_A)) {
-        msgbox("Hang on!\nMy line's snagged!", MSGBOX_AUTOCLOSE)
+        msgbox("OK I have some good POKéMON. But now I\ncan't catch any good one…", MSGBOX_AUTOCLOSE)
         end
     }
-    trainerbattle_single(TRAINER_DYLAN_2, "Yeah!\nI got a bite here!", "Tch!\nJust a small fry…")
-    msgbox(format("Hang on!\nMy line's snagged!"),MSGBOX_AUTOCLOSE)
+    trainerbattle_single(TRAINER_DYLAN_2, "No matter what I do, I sometime caught\nalways the same POKéMON…", "It's tragic but that's life…")
+    msgbox(format("OK I have some good POKéMON. But now I\ncan't catch any good one…"),MSGBOX_AUTOCLOSE)
     setflag(FLAG_TEMP_A)
     cleartrainerflag(TRAINER_DYLAN_2) 
     end   
@@ -54,11 +51,11 @@ script LakeofRage_Text_Fisherman {
 
 script LakeofRage_Text_Fisherman2 {
     if (flag(FLAG_TEMP_B)) {
-        msgbox("Hang on!\nMy line's snagged!", MSGBOX_AUTOCLOSE)
+        msgbox("I won't lose as an angler! I catch\nPOKéMON all day.", MSGBOX_AUTOCLOSE)
         end
     }
-    trainerbattle_single(TRAINER_DYLAN_2, "Yeah!\nI got a bite here!", "Tch!\nJust a small fry…")
-    msgbox(format("Hang on!\nMy line's snagged!"),MSGBOX_AUTOCLOSE)
+    trainerbattle_single(TRAINER_DYLAN_2, "Hey there are only MAGIKARP here!", "I might be an expert angler, but I\nstink as a POKéMON TRAINER…")
+    msgbox(format("I won't lose as an angler! I catch\nPOKéMON all day."),MSGBOX_AUTOCLOSE)
     setflag(FLAG_TEMP_B)
     cleartrainerflag(TRAINER_DYLAN_2) 
     end   

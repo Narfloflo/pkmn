@@ -91,7 +91,16 @@ script BlackthornCity_Text_Dratini{
     faceplayer
     playmoncry(SPECIES_DRATINI, CRY_MODE_NORMAL)
     waitmoncry
-    msgbox("Graaor!", MSGBOX_NPC)
+    msgbox("DRATINI: Graaor!", MSGBOX_NPC)
     release
+    end
+}
+
+script BlackthornCity_Text_Cooltrainer {
+    msgbox("There is an cave over here, above.\nI'm sure it's an exit from DRAGON DEN:\lWe can hear growls coming from it!", MSGBOX_NPC)
+    end
+}
+script BlackthornCity_Sign_MoveDeleter {
+    msgbox("MOVE DELETER House", MSGBOX_SIGN)
     end
 }

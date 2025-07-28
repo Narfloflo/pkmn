@@ -27,8 +27,8 @@
       "x": 3,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_ECRUTEAK_CITY",
-      "dest_warp_id": "12"
+      "dest_map": "MAP_FISHING_CLUB",
+      "dest_warp_id": "5"
     }
   ],
   "coord_events": [

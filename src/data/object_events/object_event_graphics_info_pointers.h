@@ -39,6 +39,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugCatcher;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PsychicM;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SchoolKidM;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Maniac;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SuperNerd;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HexManiac;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RayquazaStill;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerM;
@@ -722,6 +723,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SPOINK] =        &gObjectEventGraphicsInfo_Spoink,
     [OBJ_EVENT_GFX_SKARMORY] =        &gObjectEventGraphicsInfo_Skarmory,
     [OBJ_EVENT_GFX_OLD_WOMAN_2] =        &gObjectEventGraphicsInfo_OldWoman2,
+    [OBJ_EVENT_GFX_SUPER_NERD] =        &gObjectEventGraphicsInfo_SuperNerd,
 
 
     [OBJ_EVENT_GFX_SUBMARINE_SHADOW] =         &gObjectEventGraphicsInfo_SubmarineShadow,
